@@ -93,7 +93,7 @@ atmosphere with a dark gradient overlay to keep text at 4.5:1 contrast.
 
 ### 4. Try It (CTA) + Footer
 - Big headline "Ready to meet your plants?" with a primary "Start Identifying" button and a drag-and-drop mini zone that navigates to `/classify` with the chosen file.
-- Footer: links, disclaimer ("Identification is probabilistic. Never eat or use a plant based only on this result."), credits (GBIF, iNaturalist), copyright "[Team / Developer Names]".
+- Footer: links, disclaimer ("Identification is probabilistic. Never eat or use a plant based only on this result."), credits (GBIF, iNaturalist).
 
 Implement parallax with Framer Motion `useScroll` and `useTransform`. Disable parallax and blur under `prefers-reduced-motion`.
 
@@ -131,7 +131,7 @@ reliability diagram, dataset split summary. Show "TBD" if a value is missing. Ne
 
 ### `/about`, `/help`, 404
 About: objective, dataset and licenses, model architecture, methodology flowchart, privacy
-note, team ([Team / Developer Names], [College / Department]). Help: photo tips (single leaf
+note, team (team and contributor credits). Help: photo tips (single leaf
 or flower, good light, plain background, fill the frame), supported formats, FAQ accordion, limits
 (110-130 species only), disclaimers. A friendly leaf-themed 404.
 

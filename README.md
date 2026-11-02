@@ -6,8 +6,6 @@ confidence score, similar-species suggestions with match percentages, a
 Grad-CAM explanation, and full species details. Indian plants are the focus,
 with global coverage.
 
-> Developed by **[Team / Developer Names]**, **[College / Department]**
-
 ---
 
 ## ✨ Features
