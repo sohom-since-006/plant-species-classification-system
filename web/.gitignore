@@ -1,0 +1,13 @@
+# Build info
+*.tsbuildinfo
+
+# Compiled config declarations (from tsc -b)
+*.config.d.ts
+*.config.js
+vite.config.d.ts
+vite.config.js
+vitest.config.d.ts
+vitest.config.js
+tailwind.config.d.ts
+tailwind.config.js
+

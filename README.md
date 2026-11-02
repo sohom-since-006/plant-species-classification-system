@@ -3,7 +3,7 @@
 An ML-powered web app that identifies plant species from a photo of a leaf,
 flower, fruit, or the whole plant. It returns the species with a calibrated
 confidence score, similar-species suggestions with match percentages, a
-Grad-CAM explanation, and full species details. Indian plants are the focus,
+attention heatmap (CAM) explanation, and full species details. Indian plants are the focus,
 with global coverage.
 
 ---
@@ -14,7 +14,7 @@ with global coverage.
 - Classification of ~130 species (about 70 Indian, 60 global)
 - Calibrated confidence with Top-3 predictions
 - Similar-species engine with ML %, Visual Match %, and Final Match %
-- Grad-CAM heatmap showing what the model looked at
+- Attention heatmap (CAM) showing what the model looked at
 - "Not a plant / unknown" rejection and genus-level fallback
 - Species library with search and filters
 - Prediction history, batch classification, and feedback

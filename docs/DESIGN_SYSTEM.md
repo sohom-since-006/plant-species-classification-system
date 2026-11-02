@@ -101,7 +101,17 @@ Tailwind: `fontFamily: { heading: ["'Instrument Serif'", 'serif'], body: ["'Barl
   pointer-events: none;
 }
 ```
-Dark-mode `--glass-edge-hi` is 0.45 for `.liquid-glass` and 0.5 for `-strong`; mid is 0.15 and 0.2 respectively. Set per-class overrides if you want exact parity.
+Dark-mode `--glass-edge-hi` is 0.45 for `.liquid-glass` and 0.5 for `-strong`; mid is 0.15 and 0.2 respectively. Per-class overrides for `.liquid-glass-strong`:
+```css
+.liquid-glass-strong {
+  --glass-edge-hi: rgba(255,255,255,0.50);
+  --glass-edge-mid: rgba(255,255,255,0.20);
+}
+:root[data-theme="light"] .liquid-glass-strong {
+  --glass-edge-hi: rgba(0,0,0,0.28);
+  --glass-edge-mid: rgba(0,0,0,0.10);
+}
+```
 
 ## Components
 | Component | Spec |

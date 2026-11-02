@@ -1,0 +1,214 @@
+import React from 'react';
+
+type IconProps = React.SVGProps<SVGSVGElement>;
+
+const defaults: IconProps = {
+  width: 24,
+  height: 24,
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 2,
+  strokeLinecap: 'round' as const,
+  strokeLinejoin: 'round' as const,
+  'aria-hidden': true,
+};
+
+export function ArrowUpRight(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M7 17L17 7" />
+      <path d="M7 7h10v10" />
+    </svg>
+  );
+}
+
+export function Play(props: IconProps) {
+  return (
+    <svg {...defaults} fill="currentColor" stroke="none" {...props}>
+      <polygon points="6 4 20 12 6 20" />
+    </svg>
+  );
+}
+
+export function Clock(props: IconProps) {
+  return (
+    <svg {...defaults} strokeWidth={1.5} {...props}>
+      <circle cx={12} cy={12} r={9} />
+      <path d="M12 7v5l3 2" />
+    </svg>
+  );
+}
+
+export function Globe(props: IconProps) {
+  return (
+    <svg {...defaults} strokeWidth={1.5} {...props}>
+      <circle cx={12} cy={12} r={9} />
+      <line x1={3} y1={12} x2={21} y2={12} />
+      <path d="M12 3a15.3 15.3 0 0 1 4 9 15.3 15.3 0 0 1-4 9 15.3 15.3 0 0 1-4-9 15.3 15.3 0 0 1 4-9z" />
+    </svg>
+  );
+}
+
+export function ImageIcon(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <rect x={3} y={3} width={18} height={18} rx={2} />
+      <circle cx={8.5} cy={8.5} r={1.5} />
+      <path d="M21 15l-5-5L5 21" />
+    </svg>
+  );
+}
+
+export function Movie(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <rect x={2} y={2} width={20} height={20} rx={2.18} ry={2.18} />
+      <line x1={7} y1={2} x2={7} y2={22} />
+      <line x1={17} y1={2} x2={17} y2={22} />
+      <line x1={2} y1={12} x2={22} y2={12} />
+      <line x1={2} y1={7} x2={7} y2={7} />
+      <line x1={2} y1={17} x2={7} y2={17} />
+      <line x1={17} y1={7} x2={22} y2={7} />
+      <line x1={17} y1={17} x2={22} y2={17} />
+    </svg>
+  );
+}
+
+export function Lightbulb(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M9 18h6" />
+      <path d="M10 22h4" />
+      <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+    </svg>
+  );
+}
+
+export function Leaf(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.25 3.75 1.25 3.75" />
+      <path d="M12 15l-1.5-4.5" />
+    </svg>
+  );
+}
+
+export function Camera(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+      <circle cx={12} cy={13} r={4} />
+    </svg>
+  );
+}
+
+export function Upload(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="17 8 12 3 7 8" />
+      <line x1={12} y1={3} x2={12} y2={15} />
+    </svg>
+  );
+}
+
+export function Sun(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <circle cx={12} cy={12} r={5} />
+      <line x1={12} y1={1} x2={12} y2={3} />
+      <line x1={12} y1={21} x2={12} y2={23} />
+      <line x1={4.22} y1={4.22} x2={5.64} y2={5.64} />
+      <line x1={18.36} y1={18.36} x2={19.78} y2={19.78} />
+      <line x1={1} y1={12} x2={3} y2={12} />
+      <line x1={21} y1={12} x2={23} y2={12} />
+      <line x1={4.22} y1={19.78} x2={5.64} y2={18.36} />
+      <line x1={18.36} y1={5.64} x2={19.78} y2={4.22} />
+    </svg>
+  );
+}
+
+export function Moon(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  );
+}
+
+export function Search(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <circle cx={11} cy={11} r={8} />
+      <line x1={21} y1={21} x2={16.65} y2={16.65} />
+    </svg>
+  );
+}
+
+export function History(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M1 4v6h6" />
+      <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+      <polyline points="12 7 12 12 16.5 14.5" />
+    </svg>
+  );
+}
+
+export function BarChart(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <line x1={18} y1={20} x2={18} y2={10} />
+      <line x1={12} y1={20} x2={12} y2={4} />
+      <line x1={6} y1={20} x2={6} y2={14} />
+    </svg>
+  );
+}
+
+export function Info(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <circle cx={12} cy={12} r={10} />
+      <line x1={12} y1={16} x2={12} y2={12} />
+      <line x1={12} y1={8} x2={12.01} y2={8} />
+    </svg>
+  );
+}
+
+export function ThumbsUp(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
+      <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+    </svg>
+  );
+}
+
+export function ThumbsDown(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z" />
+      <path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17" />
+    </svg>
+  );
+}
+
+export function Menu(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <line x1={3} y1={6} x2={21} y2={6} />
+      <line x1={3} y1={12} x2={21} y2={12} />
+      <line x1={3} y1={18} x2={21} y2={18} />
+    </svg>
+  );
+}
+
+export function X(props: IconProps) {
+  return (
+    <svg {...defaults} {...props}>
+      <line x1={18} y1={6} x2={6} y2={18} />
+      <line x1={6} y1={6} x2={18} y2={18} />
+    </svg>
+  );
+}

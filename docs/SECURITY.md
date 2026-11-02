@@ -21,8 +21,8 @@ Public website, anonymous users, optional accounts, user-uploaded images, public
 - Auth: email confirmation on, strong password minimum, Google OAuth with exact redirect URLs.
 
 ## Uploads
-- Allow-list: `image/jpeg`, `image/png`, `image/webp`; max 10 MB; verify by decoding (not just by extension).
-- Re-encode via canvas before any storage upload: strips EXIF/GPS metadata and any embedded payload; downscale to max 1024 px.
+- Allow-list: `image/jpeg`, `image/png`, `image/webp`; max 10 MB client-side for classification; verify by decoding (not just by extension).
+- Re-encode via canvas before any storage upload: strips EXIF/GPS metadata and any embedded payload; downscale to max 1024 px. After re-encoding, the file size fits within the 5 MB Supabase storage bucket limit.
 - Never render user filenames as HTML.
 
 ## Web Security

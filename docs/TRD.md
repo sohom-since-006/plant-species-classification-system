@@ -38,7 +38,7 @@ Deliberate look-alike pairs: Tulsi/Sweet basil/Mint, Jasmine/Night jasmine, Fran
   - Phase 2: 20-30 epochs, full fine-tune, lr 2e-4 (backbone), 1e-3 (head).
   - Label smoothing 0.1, mixup/cutmix p=0.3, early stopping on validation loss.
 - Augmentation: random resized crop (0.5-1.0), flips, rotation, color jitter, blur, perspective, random erasing.
-- Calibration: fit a single temperature T on the validation set; store in `model_meta.json`.
+- Calibration: fit a single temperature T on the validation set; `04_evaluate.py` writes T, tau and thresholds to its output, and `05_export_onnx.py` assembles the final `model_meta.json`.
 - Class-balanced sampling if the min/max class ratio is below 0.5.
 
 ## 5. Inference Contract (browser)

@@ -36,6 +36,7 @@ htmlcov/
 ml/data/raw/
 ml/data/processed/
 ml/checkpoints/
+ml/runs/
 *.pt
 *.pth
 

@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-muted: rgba(255,255,255,0.8);
+  --fg-subtle: rgba(255,255,255,0.6);
+  --glass-fill: rgba(255,255,255,0.01);
+  --glass-edge-hi: rgba(255,255,255,0.45);
+  --glass-edge-mid: rgba(255,255,255,0.15);
+  --glass-inset: rgba(255,255,255,0.10);
+  --accent: #6EE7A8;
+  --warn: #F5C26B;
+  --danger: #F27C7C;
+  --cta-bg: #ffffff;
+  --cta-fg: #000000;
+}
+
+:root[data-theme="light"] {
+  --bg: #F8F9FA;
+  --fg: #0B0B0C;
+  --fg-muted: rgba(11,11,12,0.65);
+  --fg-subtle: rgba(11,11,12,0.5);
+  --glass-fill: rgba(0,0,0,0.02);
+  --glass-edge-hi: rgba(0,0,0,0.22);
+  --glass-edge-mid: rgba(0,0,0,0.08);
+  --glass-inset: rgba(255,255,255,0.7);
+  --accent: #1F7A4D;
+  --warn: #B7791F;
+  --danger: #C53030;
+  --cta-bg: #0B0B0C;
+  --cta-fg: #ffffff;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Barlow', sans-serif;
+}
+
+/* ─── Glass classes ────────────────────────────────────────────── */
+
+.liquid-glass {
+  background: var(--glass-fill);
+  background-blend-mode: luminosity;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px var(--glass-inset);
+  position: relative;
+  overflow: hidden;
+}
+.liquid-glass::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    var(--glass-edge-hi) 0%, var(--glass-edge-mid) 20%,
+    transparent 40%, transparent 60%,
+    var(--glass-edge-mid) 80%, var(--glass-edge-hi) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.liquid-glass-strong {
+  --glass-edge-hi: rgba(255,255,255,0.50);
+  --glass-edge-mid: rgba(255,255,255,0.20);
+  background: var(--glass-fill);
+  background-blend-mode: luminosity;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px var(--glass-inset);
+  position: relative;
+  overflow: hidden;
+}
+:root[data-theme="light"] .liquid-glass-strong {
+  --glass-edge-hi: rgba(0,0,0,0.28);
+  --glass-edge-mid: rgba(0,0,0,0.10);
+}
+.liquid-glass-strong::before {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(180deg,
+    var(--glass-edge-hi) 0%, var(--glass-edge-mid) 20%,
+    transparent 40%, transparent 60%,
+    var(--glass-edge-mid) 80%, var(--glass-edge-hi) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ─── Aurora background animations ─────────────────────────────── */
+
+@keyframes aurora-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(80px, 40px) scale(1.15); }
+}
+@keyframes aurora-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-60px, -30px) scale(1.1); }
+}
+@keyframes aurora-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, -50px) scale(1.2); }
+}
+
+/* ─── Focus ring ───────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Reduced motion ───────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
