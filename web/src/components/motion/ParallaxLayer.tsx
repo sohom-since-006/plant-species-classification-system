@@ -1,13 +1,43 @@
-import type { ReactNode } from 'react';
+import { useRef, type ReactNode } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export type ParallaxLayerProps = {
-  speed?: number;
+  speed?: number; // e.g. 0.2, 0.5, -0.3
   children: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 };
 
-export function ParallaxLayer({ children, className = '' }: ParallaxLayerProps) {
-  // Phase 1 shell: renders children, motion hooked up in Phase 2
-  return <div className={className}>{children}</div>;
-}
+export function ParallaxLayer({
+  speed = 0.2,
+  children,
+  className = '',
+  style = {},
+}: ParallaxLayerProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  const yMovement = speed * 150;
+  const y = useTransform(scrollYProgress, [0, 1], [-yMovement, yMovement]);
+
+  if (prefersReducedMotion) {
+    return (
+      <div ref={ref} className={className} style={style}>
+        {children}
+      </div>
+    );
+  }
+
+  return (
+    <motion.div ref={ref} className={className} style={{ y, ...style }}>
+      {children}
+    </motion.div>
+  );
+}

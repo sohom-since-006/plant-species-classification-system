@@ -2,23 +2,25 @@ import { Link } from 'react-router-dom';
 
 const footerLinks = [
   { to: '/', label: 'Home' },
-  { to: '/classify', label: 'Classify' },
+  { to: '/classify', label: 'Identify' },
   { to: '/explore', label: 'Explore' },
+  { to: '/history', label: 'History' },
+  { to: '/dashboard', label: 'Dashboard' },
   { to: '/about', label: 'About' },
   { to: '/help', label: 'Help' },
 ];
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-[var(--glass-edge-mid)]">
-      <div className="mx-auto max-w-[1200px] px-8 md:px-16 lg:px-20 py-10">
+    <footer className="mt-auto border-t border-[var(--glass-edge-mid)] bg-[var(--bg)]/40 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-6">
             {footerLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-xs font-body text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
+                className="text-xs font-body font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
               >
                 {link.label}
               </Link>
@@ -30,7 +32,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <p className="text-xs font-body text-[var(--fg-subtle)] leading-relaxed max-w-prose">
+          <p className="text-xs font-body text-[var(--fg-subtle)] leading-relaxed max-w-2xl">
             ⚠️ Identification is probabilistic. Never eat or use a plant based only on this result.
             Medicinal information is educational only and is not medical advice.
           </p>
@@ -40,7 +42,7 @@ export function Footer() {
               href="https://www.gbif.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--fg-muted)] hover:text-[var(--fg)] underline"
+              className="text-[var(--fg-muted)] hover:text-[var(--fg)] underline transition-colors"
             >
               GBIF
             </a>{' '}
@@ -49,7 +51,7 @@ export function Footer() {
               href="https://www.inaturalist.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--fg-muted)] hover:text-[var(--fg)] underline"
+              className="text-[var(--fg-muted)] hover:text-[var(--fg)] underline transition-colors"
             >
               iNaturalist
             </a>
@@ -60,4 +62,3 @@ export function Footer() {
     </footer>
   );
 }
-

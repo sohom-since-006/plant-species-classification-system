@@ -6,7 +6,6 @@ import { ArrowUpRight, Menu, X } from '@/components/icons';
 
 const links = [
   { to: '/', label: 'Home' },
-  { to: '/classify', label: 'Identify' },
   { to: '/explore', label: 'Explore' },
   { to: '/history', label: 'History' },
   { to: '/dashboard', label: 'Dashboard' },
@@ -14,7 +13,7 @@ const links = [
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `px-3 py-1.5 text-sm font-body font-medium transition-colors rounded-full ${
+  `px-3.5 py-1.5 text-sm font-body font-medium transition-colors rounded-full ${
     isActive ? 'text-[var(--fg)]' : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
   }`;
 
@@ -24,18 +23,18 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16" role="navigation">
-        <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Monogram */}
           <Link
             to="/"
-            className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0"
-            aria-label="Home"
+            className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0 hover:scale-105 transition-transform"
+            aria-label="Plant Species Classification System Home"
           >
             <span className="font-heading italic text-2xl leading-none text-[var(--fg)]">P</span>
           </Link>
 
           {/* Center nav pill — hidden on mobile */}
-          <div className="hidden md:flex liquid-glass rounded-full p-1.5 items-center gap-0.5">
+          <div className="hidden md:flex liquid-glass rounded-full p-1.5 items-center gap-1">
             {links.map((link) => (
               <NavLink key={link.to} to={link.to} className={navLinkClass} end={link.to === '/'}>
                 {link.label}
@@ -67,7 +66,7 @@ export function Navbar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] md:hidden" role="dialog" aria-modal="true">
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
           <div className="absolute top-0 right-0 h-full w-72 liquid-glass-strong p-6 flex flex-col gap-6">
@@ -111,4 +110,3 @@ export function Navbar() {
     </>
   );
 }
-
