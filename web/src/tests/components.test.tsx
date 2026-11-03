@@ -42,3 +42,4 @@ describe('Landing Page & Layout Components', () => {
     expect(screen.getByText(/Three steps from leaf to insight/i)).toBeInTheDocument();
   });
 });
+

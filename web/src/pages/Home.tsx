@@ -471,9 +471,17 @@ export function Home() {
       {/* ─────────────────────────────────────────────────────────────
           4. TRY IT (CTA) SECTION (drag & drop mini zone)
       ───────────────────────────────────────────────────────────── */}
-      <section className="relative py-28 px-6 md:px-12 lg:px-16 flex flex-col items-center justify-center text-center overflow-hidden">
-        {/* Background glow atmosphere */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-emerald-950/20 to-[var(--bg)] pointer-events-none" />
+      <section className="relative py-32 px-6 md:px-12 lg:px-16 flex flex-col items-center justify-center text-center overflow-hidden">
+        {/* Background CTA video atmosphere */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <FadingVideo
+            src={MEDIA.cta}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Dark contrast overlay for guaranteed text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
           <Reveal>
