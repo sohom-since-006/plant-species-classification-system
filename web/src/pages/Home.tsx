@@ -84,12 +84,12 @@ export function Home() {
           />
         </motion.div>
 
-        {/* Dark contrast overlay for text readability (>= 4.5:1 contrast) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/95 pointer-events-none" />
+        {/* Contrast overlay — tuned to keep video lively & visible while protecting text */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/70 pointer-events-none" />
 
         {/* Hero Content Container */}
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center pt-16 md:pt-12"
+          className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center pt-16 md:pt-12 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
           style={{
             opacity: prefersReducedMotion ? 1 : heroOpacity,
             y: prefersReducedMotion ? 0 : heroY,
@@ -224,7 +224,7 @@ export function Home() {
         </motion.div>
 
         {/* Contrast overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75 pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -480,10 +480,10 @@ export function Home() {
           />
         </div>
 
-        {/* Dark contrast overlay for guaranteed text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/75 to-black/95 pointer-events-none" />
+        {/* Contrast overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75 pointer-events-none" />
 
-        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+        <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           <Reveal>
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-heading italic text-white tracking-[-2px]">
               Ready to meet your plants?
