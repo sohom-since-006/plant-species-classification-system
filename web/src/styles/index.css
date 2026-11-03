@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root,
-:root[data-theme="dark"] {
+:root {
   --bg: #000000;
   --fg: #ffffff;
   --fg-muted: rgba(255,255,255,0.8);
@@ -17,22 +16,6 @@
   --danger: #F27C7C;
   --cta-bg: #ffffff;
   --cta-fg: #000000;
-}
-
-:root[data-theme="light"] {
-  --bg: #F8F9FA;
-  --fg: #0B0B0C;
-  --fg-muted: rgba(11,11,12,0.65);
-  --fg-subtle: rgba(11,11,12,0.5);
-  --glass-fill: rgba(0,0,0,0.02);
-  --glass-edge-hi: rgba(0,0,0,0.22);
-  --glass-edge-mid: rgba(0,0,0,0.08);
-  --glass-inset: rgba(255,255,255,0.7);
-  --accent: #1F7A4D;
-  --warn: #B7791F;
-  --danger: #C53030;
-  --cta-bg: #0B0B0C;
-  --cta-fg: #ffffff;
 }
 
 html, body {
@@ -80,10 +63,6 @@ html, body {
   box-shadow: 4px 4px 4px rgba(0,0,0,0.05), inset 0 1px 1px var(--glass-inset);
   position: relative;
   overflow: hidden;
-}
-:root[data-theme="light"] .liquid-glass-strong {
-  --glass-edge-hi: rgba(0,0,0,0.28);
-  --glass-edge-mid: rgba(0,0,0,0.10);
 }
 .liquid-glass-strong::before {
   content: '';

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Toggle } from '@/components/ui/Toggle';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { ArrowUpRight, Menu, X } from '@/components/icons';
 
@@ -47,11 +46,10 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Right: theme toggle + mobile menu */}
-          <div className="flex items-center gap-2">
-            <Toggle />
+          {/* Right: mobile menu toggle */}
+          <div className="flex items-center gap-2 md:hidden">
             <button
-              className="liquid-glass h-10 w-10 rounded-full flex items-center justify-center md:hidden text-[var(--fg)]"
+              className="liquid-glass h-10 w-10 rounded-full flex items-center justify-center text-[var(--fg)]"
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
               type="button"
