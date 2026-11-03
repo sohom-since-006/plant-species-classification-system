@@ -340,7 +340,7 @@ export function Home() {
       ───────────────────────────────────────────────────────────── */}
       <section
         id="how-it-works"
-        className="relative min-h-screen w-full py-28 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative min-h-screen w-full pt-16 pb-24 px-6 md:px-12 lg:px-16 overflow-hidden"
       >
         {/* Floating leaf silhouettes drifting at 0.2x, 0.5x, 0.8x depths */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -360,7 +360,7 @@ export function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Section Heading */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <Reveal>
               <div className="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">
                 // Workflow
@@ -372,9 +372,9 @@ export function Home() {
           </div>
 
           {/* Sticky Stacking Cards */}
-          <div className="space-y-12">
+          <div className="space-y-8">
             {/* Step 1: Upload */}
-            <div className="sticky top-28 liquid-glass-strong rounded-[2rem] p-8 md:p-12 border border-white/15 backdrop-blur-2xl shadow-2xl">
+            <div className="sticky top-20 liquid-glass-strong rounded-[2rem] p-6 md:p-10 border border-white/15 backdrop-blur-2xl shadow-2xl">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <div className="max-w-md">
                   <div className="text-5xl md:text-6xl font-heading italic text-emerald-400/80 mb-2">
@@ -399,7 +399,7 @@ export function Home() {
             </div>
 
             {/* Step 2: Analyze */}
-            <div className="sticky top-32 liquid-glass-strong rounded-[2rem] p-8 md:p-12 border border-white/15 backdrop-blur-2xl shadow-2xl">
+            <div className="sticky top-24 liquid-glass-strong rounded-[2rem] p-6 md:p-10 border border-white/15 backdrop-blur-2xl shadow-2xl">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <div className="max-w-md">
                   <div className="text-5xl md:text-6xl font-heading italic text-emerald-400/80 mb-2">
@@ -429,7 +429,7 @@ export function Home() {
             </div>
 
             {/* Step 3: Understand */}
-            <div className="sticky top-36 liquid-glass-strong rounded-[2rem] p-8 md:p-12 border border-white/15 backdrop-blur-2xl shadow-2xl">
+            <div className="sticky top-28 liquid-glass-strong rounded-[2rem] p-6 md:p-10 border border-white/15 backdrop-blur-2xl shadow-2xl">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <div className="max-w-md">
                   <div className="text-5xl md:text-6xl font-heading italic text-emerald-400/80 mb-2">
