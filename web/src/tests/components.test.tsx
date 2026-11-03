@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { PageHero } from '@/components/layout/PageHero';
 import { Home } from '@/pages/Home';
 
 describe('Landing Page & Layout Components', () => {
@@ -40,6 +41,26 @@ describe('Landing Page & Layout Components', () => {
     expect(screen.getAllByText(/Start Identifying/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Plant science/i)).toBeInTheDocument();
     expect(screen.getByText(/Three steps from leaf to insight/i)).toBeInTheDocument();
+  });
+
+  it('renders PageHero with synchronized title and badge', () => {
+    render(
+      <BrowserRouter>
+        <PageHero
+          badge="TEST BADGE"
+          title="Test Page Title"
+          italicSubtitle="Botanical Subtitle"
+          description="Test description text"
+        />
+      </BrowserRouter>,
+    );
+
+    expect(screen.getByText('TEST BADGE')).toBeInTheDocument();
+    expect(screen.getByText('Test')).toBeInTheDocument();
+    expect(screen.getByText('Page')).toBeInTheDocument();
+    expect(screen.getByText('Title')).toBeInTheDocument();
+    expect(screen.getByText('Botanical Subtitle')).toBeInTheDocument();
+    expect(screen.getByText('Test description text')).toBeInTheDocument();
   });
 });
 

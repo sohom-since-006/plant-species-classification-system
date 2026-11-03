@@ -4,7 +4,7 @@ import { UploadZone } from '@/components/ui/UploadZone';
 import { ConfidenceRing } from '@/components/ui/ConfidenceRing';
 import { MatchBar } from '@/components/ui/MatchBar';
 import { SolidButton } from '@/components/ui/SolidButton';
-import { Sparkles, ArrowUpRight, Camera, ShieldAlert } from '@/components/icons';
+import { Camera, Info, Leaf, Lightbulb } from '@/components/icons';
 
 export function Classify() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -28,7 +28,7 @@ export function Classify() {
     setTimeout(() => {
       setIsAnalyzing(false);
       setResult({
-        commonName: 'Shoeblackplant (Hibiscus)',
+        commonName: 'Chinese Hibiscus',
         scientificName: 'Hibiscus rosa-sinensis',
         confidence: 0.94,
         family: 'Malvaceae',
@@ -177,7 +177,11 @@ export function Classify() {
                             {result.scientificName}
                           </p>
                         </div>
-                        <ConfidenceRing score={result.confidence} size={76} />
+                        <ConfidenceRing
+                          value={result.confidence}
+                          tier="high"
+                          size={76}
+                        />
                       </div>
 
                       <p className="text-sm font-body text-[var(--fg-muted)] leading-relaxed">
@@ -192,8 +196,8 @@ export function Classify() {
                         {result.topMatches.map((m) => (
                           <MatchBar
                             key={m.name}
-                            name={m.name}
-                            score={m.score}
+                            label={m.name}
+                            value={m.score}
                           />
                         ))}
                       </div>
@@ -219,7 +223,7 @@ export function Classify() {
 
         {/* Safety & Medical Disclaimer as required by AGENTS.md Rule 8 */}
         <div className="liquid-glass rounded-2xl p-6 flex items-start gap-4 text-xs font-body text-[var(--fg-muted)]">
-          <ShieldAlert className="w-5 h-5 text-[var(--warn)] shrink-0 mt-0.5" />
+          <Info className="w-5 h-5 text-[var(--warn)] shrink-0 mt-0.5" />
           <p>
             <strong className="text-[var(--fg)]">Botanical Safety Notice:</strong>{' '}
             Automated visual classification is probabilistic. Never ingest, touch, or use any wild or unfamiliar plant for medicinal or culinary purposes based solely on an automated model prediction.
@@ -229,7 +233,7 @@ export function Classify() {
         {/* Features / Capabilities grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="liquid-glass rounded-2xl p-6 space-y-3">
-            <Sparkles className="w-6 h-6 text-[var(--accent)]" />
+            <Leaf className="w-6 h-6 text-[var(--accent)]" />
             <h3 className="font-heading italic text-xl text-[var(--fg)]">Zero Cloud Uploads</h3>
             <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
               Your images remain strictly on your local browser. No cloud calls, no data tracking, and full privacy offline.
@@ -243,7 +247,7 @@ export function Classify() {
             </p>
           </div>
           <div className="liquid-glass rounded-2xl p-6 space-y-3">
-            <ArrowUpRight className="w-6 h-6 text-[var(--accent)]" />
+            <Lightbulb className="w-6 h-6 text-[var(--accent)]" />
             <h3 className="font-heading italic text-xl text-[var(--fg)]">Botanical Lineage</h3>
             <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
               Integrates GBIF taxonomy hierarchies, distinguishing subtle botanical look-alikes with honest confidence bounds.
