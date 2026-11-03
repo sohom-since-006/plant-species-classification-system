@@ -84,8 +84,8 @@ export function Home() {
           />
         </motion.div>
 
-        {/* Contrast overlay — tuned to keep video lively & visible while protecting text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/70 pointer-events-none" />
+        {/* Contrast overlay — kept light and cinematic so the video is bright & clearly visible */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/55 pointer-events-none" />
 
         {/* Hero Content Container */}
         <motion.div
@@ -223,8 +223,8 @@ export function Home() {
           />
         </motion.div>
 
-        {/* Contrast overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75 pointer-events-none" />
+        {/* Contrast overlay — transparent enough to let vibrant greenery show through */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60 pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -480,8 +480,8 @@ export function Home() {
           />
         </div>
 
-        {/* Contrast overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/40 to-black/75 pointer-events-none" />
+        {/* Contrast overlay — transparent enough to let vibrant greenery show through */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60 pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           <Reveal>
