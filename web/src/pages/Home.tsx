@@ -218,19 +218,19 @@ export function Home() {
         ref={capRef}
         className="relative min-h-screen w-full py-28 px-6 md:px-12 lg:px-16 flex flex-col justify-center overflow-hidden"
       >
-        {/* Background video with subtle 0.2x parallax */}
+        {/* Background video with subtle 0.2x parallax and soft depth-of-field blur */}
         <motion.div
           className="absolute inset-0 w-full h-[120%] pointer-events-none -top-[10%]"
           style={{ y: prefersReducedMotion ? '0%' : capVideoY }}
         >
           <FadingVideo
             src={MEDIA.capabilities}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </motion.div>
 
-        {/* Contrast overlay — transparent enough to let vibrant greenery show through */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60 pointer-events-none" />
+        {/* Contrast overlay — deeper black tint for enhanced text and card legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 pointer-events-none" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -358,19 +358,19 @@ export function Home() {
         ref={howRef}
         className="relative min-h-screen w-full pt-8 pb-20 px-6 md:px-12 lg:px-16 overflow-hidden"
       >
-        {/* Background How-It-Works video atmosphere (boomerang seamless loop) */}
+        {/* Background How-It-Works video atmosphere (boomerang seamless loop with soft blur) */}
         <motion.div
           className="absolute inset-0 w-full h-[120%] pointer-events-none -top-[10%]"
           style={{ y: prefersReducedMotion ? '0%' : howVideoY }}
         >
           <FadingVideo
             src={MEDIA.howItWorks}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </motion.div>
 
-        {/* Contrast overlay — transparent enough that the video shows, dark enough for >4.5:1 card contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/65 pointer-events-none" />
+        {/* Contrast overlay — deeper black tint for enhanced card legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/85 pointer-events-none" />
 
         {/* Floating leaf silhouettes drifting at 0.2x, 0.5x, 0.8x depths at lowered opacity */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -511,16 +511,16 @@ export function Home() {
           4. TRY IT (CTA) SECTION (drag & drop mini zone)
       ───────────────────────────────────────────────────────────── */}
       <section className="relative py-32 px-6 md:px-12 lg:px-16 flex flex-col items-center justify-center text-center overflow-hidden">
-        {/* Background CTA video atmosphere */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
+        {/* Background CTA video atmosphere with soft blur */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <FadingVideo
             src={MEDIA.cta}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </div>
 
-        {/* Contrast overlay — transparent enough to let vibrant greenery show through */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/60 pointer-events-none" />
+        {/* Contrast overlay — deeper black tint for enhanced text and mini-zone contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           <ScrollBlur className="text-center">

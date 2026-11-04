@@ -96,8 +96,14 @@ describe('Mock ML Pipeline Determinism & Schema', () => {
   });
 
   it('hashes deterministically: same input always produces same fixture', () => {
-    const fileA = new File(['test-bytes-1'], 'leaf-sample.jpg', { type: 'image/jpeg' });
-    const fileB = new File(['test-bytes-1'], 'leaf-sample.jpg', { type: 'image/jpeg' });
+    const fileA = new File(['test-bytes-1'], 'leaf-sample.jpg', {
+      type: 'image/jpeg',
+      lastModified: 1700000000000,
+    });
+    const fileB = new File(['test-bytes-1'], 'leaf-sample.jpg', {
+      type: 'image/jpeg',
+      lastModified: 1700000000000,
+    });
 
     const hashA = hashImageInput(fileA);
     const hashB = hashImageInput(fileB);
