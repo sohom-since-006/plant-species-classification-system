@@ -73,7 +73,7 @@ export function History() {
         {/* KPI Summary Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
               Total Scans
             </p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
@@ -81,7 +81,7 @@ export function History() {
             </p>
           </div>
           <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
               Avg. Confidence
             </p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-1">
@@ -89,7 +89,7 @@ export function History() {
             </p>
           </div>
           <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
               Families
             </p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
@@ -97,7 +97,7 @@ export function History() {
             </p>
           </div>
           <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
               Storage
             </p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
@@ -109,7 +109,7 @@ export function History() {
         {/* Action bar */}
         {items.length > 0 && (
           <div className="flex items-center justify-between pt-2">
-            <p className="text-xs font-mono uppercase tracking-wider text-[var(--fg-muted)]">
+            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-muted)]">
               Recent Identifications ({items.length})
             </p>
             <button

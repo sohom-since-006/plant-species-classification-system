@@ -24,11 +24,11 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
           {/* Family tag and tier badge */}
           <div className="flex items-center gap-2.5 flex-wrap">
             {topSpecies && !isUnknown ? (
-              <span className="text-xs font-mono uppercase text-[var(--accent)] tracking-wider">
+              <span className="text-xs font-body font-semibold uppercase text-[var(--accent)] tracking-wider">
                 Family: {topSpecies.family}
               </span>
             ) : (
-              <span className="text-xs font-mono uppercase text-amber-400 tracking-wider">
+              <span className="text-xs font-body font-semibold uppercase text-amber-400 tracking-wider">
                 Botanical Scan
               </span>
             )}
@@ -110,7 +110,7 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
 
       {/* ─── Top-3 Probability Breakdown ─────────────────────────── */}
       <div className="space-y-3 pt-2">
-        <div className="flex items-center justify-between text-xs font-mono uppercase text-[var(--fg-muted)] tracking-wider">
+        <div className="flex items-center justify-between text-xs font-body font-semibold uppercase text-[var(--fg-muted)] tracking-wider">
           <span>Top Candidate Matches</span>
           <span>Probability</span>
         </div>

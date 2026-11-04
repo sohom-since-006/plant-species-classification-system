@@ -282,7 +282,7 @@ export function Classify() {
             {/* Bilingual Names & Taxonomy */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5">
-                <p className="text-[10px] font-mono uppercase text-white/50">Regional Names</p>
+                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">Regional Names</p>
                 <p>
                   <strong className="text-white">Hindi:</strong> {topSpecies.namesHindi || '—'}
                 </p>
@@ -293,15 +293,15 @@ export function Classify() {
               </div>
 
               <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5">
-                <p className="text-[10px] font-mono uppercase text-white/50">Taxonomy & Origin</p>
+                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">Taxonomy & Origin</p>
                 <div className="flex flex-wrap gap-1.5 pt-0.5">
-                  <span className="px-2 py-0.5 rounded bg-white/10 font-mono text-[10px]">
+                  <span className="px-2 py-0.5 rounded bg-white/10 font-body text-[11px]">
                     Genus: {topSpecies.genus}
                   </span>
-                  <span className="px-2 py-0.5 rounded bg-white/10 font-mono text-[10px] capitalize">
+                  <span className="px-2 py-0.5 rounded bg-white/10 font-body text-[11px] capitalize">
                     Type: {topSpecies.plantType}
                   </span>
-                  <span className="px-2 py-0.5 rounded bg-white/10 font-mono text-[10px] capitalize">
+                  <span className="px-2 py-0.5 rounded bg-white/10 font-body text-[11px] capitalize">
                     Origin: {topSpecies.origin}
                   </span>
                 </div>
@@ -310,7 +310,7 @@ export function Classify() {
 
             {/* Identifying Features */}
             <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
-              <p className="text-xs font-mono uppercase tracking-wider text-[var(--accent)] font-semibold">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--accent)]">
                 Identifying Botanical Features
               </p>
               <ul className="list-disc list-inside space-y-1.5 text-white/80 leading-relaxed">
@@ -323,7 +323,7 @@ export function Classify() {
             {/* Habitat & Distribution */}
             {topSpecies.habitat && (
               <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1">
-                <p className="text-[10px] font-mono uppercase text-white/50">
+                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
                   Natural Habitat & Distribution
                 </p>
                 <p className="leading-relaxed">{topSpecies.habitat}</p>
@@ -332,7 +332,7 @@ export function Classify() {
 
             {/* Traditional Uses with safety flag */}
             <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
-              <p className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-emerald-400">
                 Traditional & Practical Uses
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
@@ -347,7 +347,7 @@ export function Classify() {
 
             {/* Care Tips */}
             <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
-              <p className="text-xs font-mono uppercase tracking-wider text-teal-300 font-semibold">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-teal-300">
                 Cultivation & Care Tips
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">

@@ -83,16 +83,19 @@ html, body {
 /* ─── Aurora background animations ─────────────────────────────── */
 
 @keyframes aurora-drift-1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(80px, 40px) scale(1.15); }
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(60px, 35px, 0) scale(1.12); }
+  100% { transform: translate3d(100px, -20px, 0) scale(1.05); }
 }
 @keyframes aurora-drift-2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-60px, -30px) scale(1.1); }
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-70px, -40px, 0) scale(1.15); }
+  100% { transform: translate3d(-30px, 30px, 0) scale(0.95); }
 }
 @keyframes aurora-drift-3 {
-  0%   { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(40px, -50px) scale(1.2); }
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(50px, -60px, 0) scale(1.18); }
+  100% { transform: translate3d(-40px, -20px, 0) scale(1.02); }
 }
 
 /* ─── Focus ring ───────────────────────────────────────────────── */

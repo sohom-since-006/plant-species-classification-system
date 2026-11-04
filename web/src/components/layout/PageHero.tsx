@@ -87,7 +87,7 @@ export function PageHero({
         {/* Optional Badge */}
         {badge && (
           <Reveal delay={0.1} className="mb-4">
-            <span className="liquid-glass inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-medium tracking-wide uppercase text-[var(--accent)]">
+            <span className="liquid-glass inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-body font-semibold tracking-wider uppercase text-[var(--accent)]">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
               {badge}
             </span>
