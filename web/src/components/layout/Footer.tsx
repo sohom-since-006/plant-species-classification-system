@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ScrollBlur } from '@/components/motion/ScrollBlur';
 
 const footerLinks = [
   { to: '/', label: 'Home' },
@@ -13,7 +14,7 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-[var(--glass-edge-mid)] bg-[var(--bg)]/40 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-12">
+      <ScrollBlur className="max-w-7xl mx-auto px-8 lg:px-16 py-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8">
           <div className="flex flex-wrap gap-6">
             {footerLinks.map((link) => (
@@ -58,7 +59,7 @@ export function Footer() {
             .
           </p>
         </div>
-      </div>
+      </ScrollBlur>
     </footer>
   );
 }
