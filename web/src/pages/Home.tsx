@@ -77,19 +77,36 @@ export function Home() {
         ref={heroRef}
         className="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden"
       >
-        {/* Background video at 120% scale with parallax drift */}
+        {/* Background video at 120% scale with parallax drift & adjusted center-weighted crop */}
         <motion.div
           className="absolute left-1/2 top-0 -translate-x-1/2 w-[120%] h-[120%] pointer-events-none"
           style={{ y: prefersReducedMotion ? '0%' : heroVideoY }}
         >
           <FadingVideo
             src={MEDIA.hero}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[68%_top]"
           />
         </motion.div>
 
-        {/* Contrast overlay — kept light and cinematic so the video is bright & clearly visible */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/55 pointer-events-none" />
+        {/* Deep forest-green tinted overlay — no pure black anywhere in the hero */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(var(--overlay-tint-rgb), 0.45) 0%, rgba(var(--overlay-tint-rgb), 0.22) 50%, rgba(var(--overlay-tint-rgb), 0.52) 100%)',
+          }}
+        />
+
+        {/* Soft emerald/teal radial glow on left side behind text area (15-20% opacity, slow drift) */}
+        <div
+          className="absolute top-[18%] left-[-8%] md:left-[2%] w-[580px] h-[580px] rounded-full pointer-events-none blur-[120px] will-change-transform"
+          style={{
+            background: 'radial-gradient(circle, #10B981 0%, #14B8A6 45%, transparent 70%)',
+            animation: prefersReducedMotion ? 'none' : 'hero-glow-drift 24s ease-in-out infinite alternate',
+            opacity: prefersReducedMotion ? 0.18 : undefined,
+          }}
+          aria-hidden="true"
+        />
 
         {/* Hero Content Container — calibrated so it stays sharp for the first 28% of scroll, then blurs out */}
         <ScrollBlur
@@ -106,29 +123,40 @@ export function Home() {
             </div>
           </Reveal>
 
-          {/* Headline (BlurText, max-w-5xl, 2 lines desktop) */}
-          <div className="max-w-5xl mx-auto">
+          {/* Headline, Tagline & Subtitle with soft radial dark-green text scrim */}
+          <div className="relative max-w-5xl mx-auto">
+            {/* Soft text scrim: blurred radial dark-green gradient for guaranteed >= 4.5:1 contrast */}
+            <div
+              className="absolute -inset-x-8 -inset-y-6 -z-10 rounded-full blur-3xl pointer-events-none opacity-85"
+              style={{
+                background:
+                  'radial-gradient(ellipse at center, rgba(var(--overlay-tint-rgb), 0.80) 0%, rgba(var(--overlay-tint-rgb), 0.50) 65%, transparent 85%)',
+              }}
+              aria-hidden="true"
+            />
+
+            {/* Headline (BlurText, max-w-5xl, 2 lines desktop) */}
             <BlurText
               text="Plant Species Classification System"
               className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic leading-[0.85] tracking-[-3px] md:tracking-[-4px] text-white"
             />
+
+            {/* Tagline directly under it */}
+            <Reveal delay={0.3} className="mt-4">
+              <p className="font-heading italic text-2xl md:text-3xl text-emerald-300">
+                Know Every Plant You Meet
+              </p>
+            </Reveal>
+
+            {/* Subtitle (delay 0.8) */}
+            <Reveal delay={0.8} className="mt-5 max-w-2xl mx-auto">
+              <p className="text-sm md:text-base font-body font-light text-white/90 leading-relaxed">
+                Upload a photo of a leaf, flower, or whole plant. Get the species, an honest
+                confidence score, look-alike matches, and everything worth knowing, with no sign-up
+                and no photo ever leaving your device.
+              </p>
+            </Reveal>
           </div>
-
-          {/* Tagline directly under it */}
-          <Reveal delay={0.3} className="mt-4">
-            <p className="font-heading italic text-2xl md:text-3xl text-emerald-300">
-              Know Every Plant You Meet
-            </p>
-          </Reveal>
-
-          {/* Subtitle (delay 0.8) */}
-          <Reveal delay={0.8} className="mt-5 max-w-2xl">
-            <p className="text-sm md:text-base font-body font-light text-white/80 leading-relaxed">
-              Upload a photo of a leaf, flower, or whole plant. Get the species, an honest
-              confidence score, look-alike matches, and everything worth knowing, with no sign-up
-              and no photo ever leaving your device.
-            </p>
-          </Reveal>
 
           {/* CTAs (delay 1.1) */}
           <Reveal delay={1.1} className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -229,8 +257,14 @@ export function Home() {
           />
         </motion.div>
 
-        {/* Contrast overlay — deeper black tint for enhanced text and card legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 pointer-events-none" />
+        {/* Contrast overlay — deep forest-green tint (no pure black) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(var(--overlay-tint-rgb), 0.72) 0%, rgba(var(--overlay-tint-rgb), 0.48) 50%, rgba(var(--overlay-tint-rgb), 0.80) 100%)',
+          }}
+        />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -369,8 +403,14 @@ export function Home() {
           />
         </motion.div>
 
-        {/* Contrast overlay — deeper black tint for enhanced card legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/85 pointer-events-none" />
+        {/* Contrast overlay — deep forest-green tint (no pure black) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(var(--overlay-tint-rgb), 0.76) 0%, rgba(var(--overlay-tint-rgb), 0.54) 50%, rgba(var(--overlay-tint-rgb), 0.84) 100%)',
+          }}
+        />
 
         {/* Floating leaf silhouettes drifting at 0.2x, 0.5x, 0.8x depths at lowered opacity */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -519,8 +559,14 @@ export function Home() {
           />
         </div>
 
-        {/* Contrast overlay — deeper black tint for enhanced text and mini-zone contrast */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 pointer-events-none" />
+        {/* Contrast overlay — deep forest-green tint (no pure black) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(var(--overlay-tint-rgb), 0.70) 0%, rgba(var(--overlay-tint-rgb), 0.48) 50%, rgba(var(--overlay-tint-rgb), 0.80) 100%)',
+          }}
+        />
 
         <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
           <ScrollBlur className="text-center">
