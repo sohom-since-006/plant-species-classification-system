@@ -412,22 +412,6 @@ export function Home() {
           }}
         />
 
-        {/* Floating leaf silhouettes drifting at 0.2x, 0.5x, 0.8x depths at lowered opacity */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Depth 1: 0.2x */}
-          <div className="absolute top-[15%] left-[5%] text-emerald-500/5 w-32 h-32 transform -rotate-12">
-            <Leaf className="w-full h-full" aria-hidden="true" />
-          </div>
-          {/* Depth 2: 0.5x */}
-          <div className="absolute top-[45%] right-[8%] text-emerald-400/8 w-48 h-48 transform rotate-45">
-            <Leaf className="w-full h-full" aria-hidden="true" />
-          </div>
-          {/* Depth 3: 0.8x */}
-          <div className="absolute bottom-[10%] left-[12%] text-emerald-300/5 w-40 h-40 transform -rotate-45">
-            <Leaf className="w-full h-full" aria-hidden="true" />
-          </div>
-        </div>
-
         <div className="relative z-10 max-w-5xl mx-auto">
           {/* Section Heading */}
           <ScrollBlur className="text-center mb-6">
