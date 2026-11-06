@@ -390,7 +390,7 @@ export function Home() {
       <section
         id="how-it-works"
         ref={howRef}
-        className="relative min-h-screen w-full pt-8 pb-20 px-6 md:px-12 lg:px-16 overflow-hidden"
+        className="relative min-h-screen w-full pt-12 pb-48 md:pb-60 lg:pb-72 px-6 md:px-12 lg:px-16 overflow-hidden"
       >
         {/* Background How-It-Works video atmosphere (boomerang seamless loop with soft blur) */}
         <motion.div
