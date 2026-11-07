@@ -1,6 +1,7 @@
 import { formatPercent } from '@/lib/format';
 import { Leaf } from '@/components/icons';
 import { MOCK_LOOKALIKES } from '@/data/mockSpecies';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import type { SimilarMatch } from '@/types/prediction';
 import type { Species } from '@/types/species';
 
@@ -96,36 +97,38 @@ export function SimilarSpecies({
         <p className="text-xs font-mono uppercase tracking-wider text-[var(--fg-muted)]">
           Comparative Match Strength
         </p>
-        <div className="space-y-3">
+        <Stagger className="space-y-3">
           {similarMatches.map((match) => {
             const spec = speciesMap.get(match.speciesId);
             const label = spec ? spec.commonName : `Species #${match.speciesId}`;
             return (
-              <div key={match.speciesId} className="space-y-1.5">
-                <div className="flex justify-between text-xs">
-                  <span className="text-white/90 font-medium">{label}</span>
-                  <span className="font-mono text-xs text-[var(--accent)]">
-                    {formatPercent(match.final, 1)}
-                  </span>
+              <StaggerItem key={match.speciesId}>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-white/90 font-medium">{label}</span>
+                    <span className="font-mono text-xs text-[var(--accent)]">
+                      {formatPercent(match.final, 1)}
+                    </span>
+                  </div>
+                  <div className="h-2 bg-white/10 rounded-full overflow-hidden w-full flex">
+                    {/* ML component (60%) */}
+                    <div
+                      className="h-full bg-emerald-500 opacity-90 transition-all duration-700"
+                      style={{ width: `${Math.min(100, match.ml * 60)}%` }}
+                      title={`ML Prob: ${formatPercent(match.ml, 1)}`}
+                    />
+                    {/* Visual component (40%) */}
+                    <div
+                      className="h-full bg-teal-400 opacity-75 transition-all duration-700"
+                      style={{ width: `${Math.min(100, match.visual * 40)}%` }}
+                      title={`Visual Cosine: ${formatPercent(match.visual, 1)}`}
+                    />
+                  </div>
                 </div>
-                <div className="h-2 bg-white/10 rounded-full overflow-hidden w-full flex">
-                  {/* ML component (60%) */}
-                  <div
-                    className="h-full bg-emerald-500 opacity-90 transition-all duration-700"
-                    style={{ width: `${Math.min(100, match.ml * 60)}%` }}
-                    title={`ML Prob: ${formatPercent(match.ml, 1)}`}
-                  />
-                  {/* Visual component (40%) */}
-                  <div
-                    className="h-full bg-teal-400 opacity-75 transition-all duration-700"
-                    style={{ width: `${Math.min(100, match.visual * 40)}%` }}
-                    title={`Visual Cosine: ${formatPercent(match.visual, 1)}`}
-                  />
-                </div>
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </Stagger>
         <div className="flex items-center justify-end gap-4 text-[10px] font-mono text-white/60 pt-1">
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-sm bg-emerald-500" />

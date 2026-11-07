@@ -1,5 +1,15 @@
 export type Tier = 'high' | 'medium' | 'low' | 'unknown';
 
+export type PipelineStage = 'preprocess' | 'inference' | 'postprocess' | 'similar' | 'cam';
+
+export interface PipelineStageEvent {
+  stage: PipelineStage;
+  progress: number; // 0 to 1
+  label: string;
+  photoIndex: number;
+  totalPhotos: number;
+}
+
 export interface Prediction {
   speciesId: number;
   prob: number;

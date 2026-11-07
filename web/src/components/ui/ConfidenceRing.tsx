@@ -1,4 +1,5 @@
 import type { Tier } from '@/types/prediction';
+import { CountUp } from '@/components/motion/CountUp';
 
 export type ConfidenceRingProps = {
   value: number; // 0 to 1
@@ -7,6 +8,7 @@ export type ConfidenceRingProps = {
   strokeWidth?: number;
   className?: string;
   showLabel?: boolean;
+  animateCountUp?: boolean;
 };
 
 const tierColors: Record<Tier, string> = {
@@ -23,6 +25,7 @@ export function ConfidenceRing({
   strokeWidth = 6,
   className = '',
   showLabel,
+  animateCountUp = true,
 }: ConfidenceRingProps) {
   const clamped = Math.max(0, Math.min(1, value));
   const percentInt = Math.round(clamped * 100);
@@ -96,7 +99,11 @@ export function ConfidenceRing({
           className="flex items-baseline justify-center font-body font-semibold tracking-tight text-white"
           style={{ fontSize: numberFontSize }}
         >
-          <span>{percentInt}</span>
+          {animateCountUp ? (
+            <CountUp value={percentInt} />
+          ) : (
+            <span>{percentInt}</span>
+          )}
           <span
             className="font-normal opacity-80"
             style={{ fontSize: percentFontSize, marginLeft: '1px' }}

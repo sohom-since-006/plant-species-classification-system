@@ -115,9 +115,10 @@ export function UploadSection({
             inputRef.current?.click();
           }
         }}
+        data-glow=""
         className={`liquid-glass rounded-3xl border-2 border-dashed p-10 md:p-14 text-center flex flex-col items-center justify-center gap-4 transition-all cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] group ${
           isDragging
-            ? 'border-[var(--accent)] bg-emerald-500/10 scale-[1.01]'
+            ? 'border-[var(--accent)] bg-emerald-500/15 shadow-[0_0_30px_rgba(110,231,168,0.25)] scale-[1.01]'
             : 'border-white/15 hover:border-[var(--accent)]'
         }`}
       >

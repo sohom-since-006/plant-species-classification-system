@@ -91,3 +91,4 @@ export function initCursorGlow(): () => void {
     document.removeEventListener('pointerleave', onPointerLeave);
   };
 }
+

@@ -2,6 +2,7 @@ import { ConfidenceRing } from '@/components/ui/ConfidenceRing';
 import { TierBadge } from '@/components/ui/TierBadge';
 import { MatchBar } from '@/components/ui/MatchBar';
 import { Info, Leaf, Lightbulb } from '@/components/icons';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import type { ClassificationResult } from '@/types/prediction';
 import type { Species } from '@/types/species';
 
@@ -114,22 +115,23 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
           <span>Top Candidate Matches</span>
           <span>Probability</span>
         </div>
-        <div className="space-y-2.5">
+        <Stagger className="space-y-2.5">
           {result.top3.map((pred, idx) => {
             const spec = candidateSpecies[idx];
             const displayName = spec
               ? `${spec.commonName} (${spec.scientificName})`
               : `Species #${pred.speciesId}`;
             return (
-              <MatchBar
-                key={`${pred.speciesId}-${idx}`}
-                label={displayName}
-                value={pred.prob}
-                showDecimals
-              />
+              <StaggerItem key={`${pred.speciesId}-${idx}`}>
+                <MatchBar
+                  label={displayName}
+                  value={pred.prob}
+                  showDecimals
+                />
+              </StaggerItem>
             );
           })}
-        </div>
+        </Stagger>
       </div>
 
       {/* ─── Safety copy from docs/PRODUCT.md & Rule 8 ───────────── */}

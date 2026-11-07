@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Tabs } from '@/components/ui/Tabs';
@@ -7,16 +8,20 @@ import { useToast } from '@/components/ui/useToast';
 import { CameraCapture } from '@/features/classify/CameraCapture';
 import { UploadSection, type SampleImage } from '@/features/classify/UploadSection';
 import { MultiPhotoTray, type PhotoItem } from '@/features/classify/MultiPhotoTray';
+import { ScanOverlay } from '@/features/classify/ScanOverlay';
+import { StagePanel } from '@/features/classify/StagePanel';
 import { ResultCard } from '@/features/classify/ResultCard';
 import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
 import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { useHistoryStore } from '@/features/history/useHistoryStore';
 import { MOCK_SPECIES, getSpeciesById } from '@/data/mockSpecies';
-import { getMockResult, isMockMode } from '@/ml/mock';
-import type { ClassificationResult, SavedPrediction } from '@/types/prediction';
+import { isMockMode } from '@/ml/mock';
+import { runClassificationPipeline, STAGE_LABELS } from '@/ml/pipelineRunner';
+import type { ClassificationResult, SavedPrediction, PipelineStage } from '@/types/prediction';
 import type { Species } from '@/types/species';
 import { ArrowUpRight, History, Leaf } from '@/components/icons';
+import { springDefault, easeOutExpo, DURATION_PAGE, DURATION_BASE, usePrefersReducedMotion } from '@/lib/motion';
 
 const SAMPLE_SPECIMENS: SampleImage[] = [
   {
@@ -49,15 +54,24 @@ export function Classify() {
   const location = useLocation();
   const { showToast } = useToast();
   const addPrediction = useHistoryStore((state) => state.addPrediction);
+  const prefersReduced = usePrefersReducedMotion();
 
   const [photos, setPhotos] = useState<PhotoItem[]>([]);
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [currentStage, setCurrentStage] = useState<PipelineStage>('preprocess');
+  const [stageProgress, setStageProgress] = useState(0);
+  const [stageLabel, setStageLabel] = useState(STAGE_LABELS.preprocess);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  const [error, setError] = useState<string | null>(null);
+  const [isDone, setIsDone] = useState(false);
+
   const [result, setResult] = useState<ClassificationResult | null>(null);
   const [forcedFixture, setForcedFixture] = useState<number | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   // Species Lookup Map
   const speciesMap = useMemo(() => {
@@ -81,10 +95,13 @@ export function Classify() {
     }
   }, [location.state, photos.length]);
 
-  // Clean up object URLs on unmount
+  // Clean up object URLs and abort controller on unmount
   useEffect(() => {
     return () => {
       photos.forEach((p) => URL.revokeObjectURL(p.previewUrl));
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+      }
     };
   }, [photos]);
 
@@ -106,6 +123,8 @@ export function Classify() {
       setForcedFixture(forcedIdx);
     }
     setResult(null);
+    setIsDone(false);
+    setError(null);
     setIsSaved(false);
   };
 
@@ -116,12 +135,13 @@ export function Classify() {
       return prev.filter((p) => p.id !== id);
     });
     setResult(null);
+    setIsDone(false);
+    setError(null);
     setIsSaved(false);
   };
 
   const handleSampleSelect = async (sample: SampleImage) => {
     try {
-      // Create a deterministic mock file from sample image name
       const file = new File(['sample-plant-specimen-bytes'], `${sample.name}.jpg`, {
         type: 'image/jpeg',
         lastModified: 1700000000000,
@@ -135,31 +155,79 @@ export function Classify() {
       ]);
       setForcedFixture(sample.fixtureIndex);
       setResult(null);
+      setIsDone(false);
+      setError(null);
       setIsSaved(false);
     } catch {
       showToast('Could not load sample specimen.');
     }
   };
 
-  const handleIdentify = () => {
+  const handleIdentify = async () => {
     if (photos.length === 0) return;
-    setIsAnalyzing(true);
-    setResult(null);
 
-    // Simulate on-device ONNX inference duration
-    setTimeout(() => {
-      setIsAnalyzing(false);
-      const primaryPhoto = photos[0]!.file;
-      const res = getMockResult(primaryPhoto, forcedFixture);
+    setIsAnalyzing(true);
+    setError(null);
+    setIsDone(false);
+    setResult(null);
+    setStageProgress(0);
+    setCurrentStage('preprocess');
+    setStageLabel(STAGE_LABELS.preprocess);
+    setCurrentPhotoIndex(0);
+
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+
+    try {
+      const photoFiles = photos.map((p) => p.file);
+      const res = await runClassificationPipeline(
+        photoFiles,
+        (event) => {
+          setCurrentStage(event.stage);
+          setStageProgress(event.progress);
+          setStageLabel(event.label);
+          setCurrentPhotoIndex(event.photoIndex);
+        },
+        {
+          signal: controller.signal,
+          forcedFixture,
+          minDisplayTimeMs: 1600,
+        },
+      );
+
+      setIsDone(true);
       setResult(res);
       setIsSaved(false);
-    }, 1100);
+    } catch (err: unknown) {
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        setIsAnalyzing(false);
+        return;
+      }
+      const message =
+        err instanceof Error ? err.message : 'An unexpected classification error occurred.';
+      setError(message);
+    } finally {
+      setIsAnalyzing(false);
+      abortControllerRef.current = null;
+    }
+  };
+
+  const handleCancel = () => {
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+    }
+    setIsAnalyzing(false);
+    setError(null);
   };
 
   const handleReset = () => {
+    handleCancel();
     photos.forEach((p) => URL.revokeObjectURL(p.previewUrl));
     setPhotos([]);
     setResult(null);
+    setIsDone(false);
+    setError(null);
     setForcedFixture(undefined);
     setIsSaved(false);
   };
@@ -199,33 +267,26 @@ export function Classify() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Draw card background
-    ctx.fillStyle = '#0a0a0c';
+    // Dark canvas background
+    ctx.fillStyle = '#05130b';
     ctx.fillRect(0, 0, 800, 600);
 
-    // Border
-    ctx.strokeStyle = '#27272a';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(20, 20, 760, 560);
+    // Decorative header line
+    ctx.fillStyle = '#6ee7a8';
+    ctx.fillRect(0, 0, 800, 6);
 
-    // Header branding
-    ctx.fillStyle = '#6EE7A8';
-    ctx.font = 'bold 14px monospace';
-    ctx.fillText('PLANT SPECIES CLASSIFICATION SYSTEM', 50, 60);
-
-    // Title & Scientific Name
-    const topId = result.top3[0]?.speciesId;
-    const topSpecies = topId ? getSpeciesById(topId) : undefined;
-    const commonName = topSpecies ? topSpecies.commonName : 'Unrecognized Specimen';
-    const sciName = topSpecies ? topSpecies.scientificName : 'Unknown taxon';
-
+    // Title & Taxonomy
     ctx.fillStyle = '#ffffff';
-    ctx.font = 'italic 32px serif';
-    ctx.fillText(commonName, 50, 110);
+    ctx.font = 'bold 32px sans-serif';
+    ctx.fillText(topSpecies?.commonName || 'Plant Specimen Scan', 50, 70);
 
-    ctx.fillStyle = '#6EE7A8';
-    ctx.font = 'italic 20px serif';
-    ctx.fillText(sciName, 50, 145);
+    ctx.fillStyle = '#6ee7a8';
+    ctx.font = 'italic 20px sans-serif';
+    ctx.fillText(topSpecies?.scientificName || 'Botanical Classification', 50, 105);
+
+    ctx.fillStyle = '#a1a1aa';
+    ctx.font = '14px monospace';
+    ctx.fillText(`Family: ${topSpecies?.family || 'Taxonomic Class'}`, 50, 140);
 
     // Confidence & Tier
     const probPct = Math.round((result.top3[0]?.prob ?? 0) * 100);
@@ -281,8 +342,10 @@ export function Classify() {
           <div className="space-y-6 pt-2 font-body text-xs text-white/80">
             {/* Bilingual Names & Taxonomy */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5">
-                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">Regional Names</p>
+              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5" data-glow="">
+                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
+                  Regional Names
+                </p>
                 <p>
                   <strong className="text-white">Hindi:</strong> {topSpecies.namesHindi || '—'}
                 </p>
@@ -292,8 +355,10 @@ export function Classify() {
                 </p>
               </div>
 
-              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5">
-                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">Taxonomy & Origin</p>
+              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1.5" data-glow="">
+                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
+                  Taxonomy &amp; Origin
+                </p>
                 <div className="flex flex-wrap gap-1.5 pt-0.5">
                   <span className="px-2 py-0.5 rounded bg-white/10 font-body text-[11px]">
                     Genus: {topSpecies.genus}
@@ -309,7 +374,7 @@ export function Classify() {
             </div>
 
             {/* Identifying Features */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
+            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
               <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--accent)]">
                 Identifying Botanical Features
               </p>
@@ -322,18 +387,18 @@ export function Classify() {
 
             {/* Habitat & Distribution */}
             {topSpecies.habitat && (
-              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1">
+              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1" data-glow="">
                 <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
-                  Natural Habitat & Distribution
+                  Natural Habitat &amp; Distribution
                 </p>
                 <p className="leading-relaxed">{topSpecies.habitat}</p>
               </div>
             )}
 
             {/* Traditional Uses with safety flag */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
+            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
               <p className="text-xs font-body font-semibold uppercase tracking-wider text-emerald-400">
-                Traditional & Practical Uses
+                Traditional &amp; Practical Uses
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
                 {topSpecies.uses.map((use, idx) => (
@@ -346,9 +411,9 @@ export function Classify() {
             </div>
 
             {/* Care Tips */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2">
+            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
               <p className="text-xs font-body font-semibold uppercase tracking-wider text-teal-300">
-                Cultivation & Care Tips
+                Cultivation &amp; Care Tips
               </p>
               <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
                 {topSpecies.careTips.map((tip, idx) => (
@@ -362,7 +427,7 @@ export function Classify() {
               <div className="liquid-glass rounded-xl p-4 border border-rose-500/30 bg-rose-950/20 text-rose-200 flex items-start gap-3">
                 <span className="text-base" aria-hidden="true">⚠️</span>
                 <div>
-                  <p className="font-semibold text-xs text-rose-100">Toxicity & Precautions</p>
+                  <p className="font-semibold text-xs text-rose-100">Toxicity &amp; Precautions</p>
                   <p className="text-[11px] leading-relaxed mt-0.5">{topSpecies.toxicityNote}</p>
                 </div>
               </div>
@@ -400,6 +465,8 @@ export function Classify() {
     ];
   }, [result, topSpecies, speciesMap, photos]);
 
+  const activePhoto = photos[currentPhotoIndex] || photos[0];
+
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
       {/* Hidden file input for adding angle to multi-photo tray */}
@@ -434,8 +501,8 @@ export function Classify() {
       />
 
       {/* Main Container */}
-      <div className="max-w-4xl mx-auto px-6 md:px-12 space-y-8">
-        {/* Visible Demo Mode Badge (Requirement 10) */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-8">
+        {/* Visible Demo Mode Badge */}
         {isMockMode && (
           <div className="liquid-glass rounded-full px-4 py-1.5 flex items-center justify-between text-xs border border-amber-500/30 bg-amber-950/20 text-amber-200">
             <div className="flex items-center gap-2">
@@ -457,7 +524,7 @@ export function Classify() {
               sampleImages={SAMPLE_SPECIMENS}
             />
           ) : (
-            /* Multi-Photo Tray & Controls */
+            /* Active Specimen Tray & Scan View */
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <div>
@@ -466,64 +533,139 @@ export function Classify() {
                     Upload up to 3 angles for higher classification accuracy.
                   </p>
                 </div>
-                <button
-                  onClick={handleReset}
-                  className="text-xs font-mono text-white/60 hover:text-white underline"
-                  type="button"
-                >
-                  Clear all
-                </button>
+                {!isAnalyzing && !result && (
+                  <button
+                    onClick={handleReset}
+                    className="text-xs font-mono text-white/60 hover:text-white underline"
+                    type="button"
+                  >
+                    Clear all
+                  </button>
+                )}
               </div>
 
-              {/* Photo Tray */}
-              <MultiPhotoTray
-                photos={photos}
-                onRemovePhoto={removePhoto}
-                onAddClick={() => fileInputRef.current?.click()}
-                onCameraClick={() => setIsCameraOpen(true)}
-              />
+              {/* Multi-Photo Tray (Shown when idle or editing) */}
+              {!isAnalyzing && !result && (
+                <MultiPhotoTray
+                  photos={photos}
+                  onRemovePhoto={removePhoto}
+                  onAddClick={() => fileInputRef.current?.click()}
+                  onCameraClick={() => setIsCameraOpen(true)}
+                />
+              )}
 
-              {/* Identify Action Trigger */}
-              {!result && (
+              {/* ─── Analyzing or Error State: Active Scanning Preview ──── */}
+              {(isAnalyzing || error) && activePhoto && (
+                <div className="space-y-6">
+                  {/* Photo Preview with ScanOverlay */}
+                  <div className="relative aspect-[4/3] max-h-96 w-full rounded-2xl overflow-hidden liquid-glass border border-white/15 shadow-2xl bg-black/40">
+                    <img
+                      src={activePhoto.previewUrl}
+                      alt="Active Specimen Scan"
+                      className="w-full h-full object-cover"
+                    />
+                    <ScanOverlay
+                      isScanning={isAnalyzing}
+                      stage={currentStage}
+                      progress={stageProgress}
+                      photoIndex={currentPhotoIndex}
+                      totalPhotos={photos.length}
+                      hasError={Boolean(error)}
+                      isDone={isDone}
+                      imageSeed={activePhoto.file.name}
+                    />
+                  </div>
+
+                  {/* Stage Progress Panel */}
+                  <StagePanel
+                    isAnalyzing={isAnalyzing}
+                    progress={stageProgress}
+                    stageLabel={stageLabel}
+                    photoIndex={currentPhotoIndex}
+                    totalPhotos={photos.length}
+                    error={error}
+                    onCancel={handleCancel}
+                    onRetry={handleIdentify}
+                  />
+                </div>
+              )}
+
+              {/* ─── Identify Action Trigger (Only when idle) ─────────── */}
+              {!isAnalyzing && !result && !error && (
                 <div className="pt-2">
-                  <SolidButton
-                    onClick={handleIdentify}
-                    disabled={isAnalyzing}
-                    className="w-full py-4 text-sm justify-center rounded-2xl shadow-xl hover:scale-[1.01] transition-transform"
-                  >
-                    {isAnalyzing ? (
-                      <div className="flex items-center gap-3">
-                        <div className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin" />
-                        <span>Analyzing botanical traits on-device...</span>
-                      </div>
-                    ) : (
+                  <motion.div whileTap={{ scale: 0.98 }}>
+                    <SolidButton
+                      onClick={handleIdentify}
+                      data-glow=""
+                      className="w-full py-4 text-sm justify-center rounded-2xl shadow-xl hover:scale-[1.01] transition-transform"
+                    >
                       <div className="flex items-center gap-2 font-medium">
                         <Leaf className="w-4 h-4" />
                         <span>Identify Plant Specimen</span>
                         <ArrowUpRight className="w-4 h-4 ml-1" />
                       </div>
-                    )}
-                  </SolidButton>
+                    </SolidButton>
+                  </motion.div>
                 </div>
               )}
             </div>
           )}
 
-          {/* ─── Results & Tabs Container ─────────────────────────── */}
+          {/* ─── Results Reveal Sequence ───────────────────────────── */}
           {result && (
-            <div className="pt-8 border-t border-white/10 space-y-10 animate-fade-in">
-              {/* Primary Result Card */}
-              <ResultCard
-                result={result}
-                topSpecies={topSpecies}
-                candidateSpecies={candidateSpecies}
-              />
+            <motion.div
+              initial={prefersReduced ? false : { opacity: 0 }}
+              animate={prefersReduced ? false : { opacity: 1 }}
+              transition={{ duration: DURATION_PAGE }}
+              className="pt-8 border-t border-white/10 space-y-10"
+            >
+              {/* Photo + Result Card Side-by-Side Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Locked Specimen Photo on the left */}
+                <motion.div
+                  layout={!prefersReduced}
+                  initial={prefersReduced ? false : { opacity: 0, scale: 0.95 }}
+                  animate={prefersReduced ? false : { opacity: 1, scale: 1 }}
+                  transition={springDefault}
+                  className="lg:col-span-5 relative rounded-2xl overflow-hidden liquid-glass border border-white/15 aspect-[4/3] shadow-2xl bg-black/40"
+                >
+                  <img
+                    src={photos[0]?.previewUrl}
+                    alt="Classified Specimen"
+                    className="w-full h-full object-cover"
+                  />
+                  <ScanOverlay
+                    isScanning={false}
+                    isDone={true}
+                    progress={1.0}
+                    photoIndex={0}
+                    totalPhotos={photos.length}
+                    imageSeed={photos[0]?.file.name}
+                  />
+                </motion.div>
+
+                {/* Primary Result Card Sliding in from right */}
+                <motion.div
+                  layout={!prefersReduced}
+                  initial={prefersReduced ? false : { opacity: 0, x: 24 }}
+                  animate={prefersReduced ? false : { opacity: 1, x: 0 }}
+                  transition={{ duration: DURATION_PAGE, ease: easeOutExpo }}
+                  className="lg:col-span-7"
+                >
+                  <ResultCard
+                    result={result}
+                    topSpecies={topSpecies}
+                    candidateSpecies={candidateSpecies}
+                  />
+                </motion.div>
+              </div>
 
               {/* Action Buttons: Save, Download, Classify Another */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <SolidButton
                   onClick={handleSaveToHistory}
                   disabled={isSaved}
+                  data-glow=""
                   className="text-xs px-4 py-2.5 rounded-full"
                 >
                   <History className="w-3.5 h-3.5 mr-1.5" />
@@ -532,6 +674,7 @@ export function Classify() {
 
                 <button
                   onClick={handleDownloadResultImage}
+                  data-glow=""
                   className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white hover:text-[var(--accent)] border border-white/15 transition-all hover:scale-105"
                   type="button"
                 >
@@ -540,6 +683,7 @@ export function Classify() {
 
                 <button
                   onClick={handleReset}
+                  data-glow=""
                   className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white/80 hover:text-white border border-white/15 ml-auto transition-colors"
                   type="button"
                 >
@@ -548,10 +692,15 @@ export function Classify() {
               </div>
 
               {/* Multi-Tab Deep Dive: Details, Similar, Heatmap, Feedback */}
-              <div className="pt-4 border-t border-white/10">
+              <motion.div
+                initial={prefersReduced ? false : { opacity: 0, y: 16 }}
+                animate={prefersReduced ? false : { opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: DURATION_BASE, ease: easeOutExpo }}
+                className="pt-4 border-t border-white/10"
+              >
                 <Tabs tabs={tabItems} defaultIndex={0} />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )}
         </div>
       </div>
