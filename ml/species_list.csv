@@ -1,0 +1,113 @@
+id,common_name,scientific_name,family,genus,type,origin,hindi_name,bengali_name,notes
+0,Tulsi,Ocimum tenuiflorum,Lamiaceae,Ocimum,Herb,Native,तुलसी,তুলসী,Deliberate look-alike pair with Sweet basil and Mint
+1,Neem,Azadirachta indica,Meliaceae,Azadirachta,Tree,Native,नीम,নিম,Sacred and medicinal tree
+2,Aloe vera,Aloe vera,Asphodelaceae,Aloe,Succulent,Introduced,घृतकुमारी,ঘৃতকুমারী,Medicinal succulent
+3,Turmeric,Curcuma longa,Zingiberaceae,Curcuma,Herb,Native,हल्दी,হলুদ,Medicinal rhizomatous crop
+4,Ginger,Zingiber officinale,Zingiberaceae,Zingiber,Herb,Introduced,अदरक,আদা,Medicinal rhizome
+5,Ashwagandha,Withania somnifera,Solanaceae,Withania,Shrub,Native,अश्वगंधा,অশ্বগন্ধা,Medicinal shrub (Indian ginseng)
+6,Giloy,Tinospora cordifolia,Menispermaceae,Tinospora,Climber,Native,गिलोय,গুলঞ্চ,Medicinal climbing shrub (Heart-leaved moonseed)
+7,Brahmi,Bacopa monnieri,Plantaginaceae,Bacopa,Herb,Native,ब्राह्मी,ব্রাহ্মী শাক,Medicinal aquatic herb (Water hyssop)
+8,Amla,Phyllanthus emblica,Phyllanthaceae,Phyllanthus,Tree,Native,आंवला,আমলকী,Medicinal tree (Indian gooseberry)
+9,Curry leaf,Murraya koenigii,Rutaceae,Murraya,Tree,Native,कढ़ी पत्ता,কারি পাতা,Culinary and medicinal aromatic tree
+10,Moringa,Moringa oleifera,Moringaceae,Moringa,Tree,Native,सहजन,সজনে,Drumstick tree
+11,Bael,Aegle marmelos,Rutaceae,Aegle,Tree,Native,बेल,বেল,Sacred and medicinal tree (Golden apple)
+12,Arjuna,Terminalia arjuna,Combretaceae,Terminalia,Tree,Native,अर्जुन,অর্জুন,Medicinal tree bark
+13,Ashoka,Saraca asoca,Fabaceae,Saraca,Tree,Native,अशोक,অশোক,Sacred flowering tree (Sita ashoka)
+14,Betel,Piper betle,Piperaceae,Piper,Vine,Native,पान,পান,Sacred aromatic vine
+15,Lemongrass,Cymbopogon citratus,Poaceae,Cymbopogon,Grass,Native,लेमनग्रास,লেমনগ্রাস,Aromatic medicinal grass
+16,Mint,Mentha spicata,Lamiaceae,Mentha,Herb,Introduced,पुदीना,পুদিনা,Spearmint. Vague group resolved to M. spicata. Look-alike pair with Tulsi
+17,Peepal,Ficus religiosa,Moraceae,Ficus,Tree,Native,पीपल,অশ্বত্থ,Sacred fig. Look-alike pair with Banyan and Rubber plant
+18,Banyan,Ficus benghalensis,Moraceae,Ficus,Tree,Native,बरगद,বট,National tree. Look-alike pair with Peepal and Rubber plant
+19,Kalmegh,Andrographis paniculata,Acanthaceae,Andrographis,Herb,Native,कालमेघ,কালমেঘ,Medicinal herb (King of bitters)
+20,Hibiscus,Hibiscus rosa-sinensis,Malvaceae,Hibiscus,Shrub,Introduced,गुड़हल,জবা,China rose / Shoe flower
+21,Marigold,Tagetes erecta,Asteraceae,Tagetes,Herb,Introduced,गेंदा,গাঁদা,African marigold. Vague group resolved to T. erecta
+22,Jasmine,Jasminum sambac,Oleaceae,Jasminum,Shrub,Native,मोगरा,বেল ফুল,Arabian jasmine / Mogra. Vague group resolved to J. sambac. Look-alike pair with Night jasmine
+23,Lotus,Nelumbo nucifera,Nelumbonaceae,Nelumbo,Aquatic,Native,कमल,পদ্ম,Sacred aquatic lotus; National flower of India
+24,Rose,Rosa chinensis,Rosaceae,Rosa,Shrub,Introduced,गुलाब,গোলাপ,China rose. Vague group resolved to R. chinensis
+25,Frangipani,Plumeria rubra,Apocynaceae,Plumeria,Tree,Introduced,चम्पा,কাঠগোলাপ,Red frangipani / Temple tree. Look-alike pair with Oleander
+26,Oleander,Nerium oleander,Apocynaceae,Nerium,Shrub,Introduced,कनेर,করবী,Toxic ornamental shrub. Look-alike pair with Frangipani
+27,Bougainvillea,Bougainvillea spectabilis,Nyctaginaceae,Bougainvillea,Climber,Introduced,बोगनवेलिया,বাগানবিলাস,Great bougainvillea ornamental
+28,Tuberose,Polianthes tuberosa,Asparagaceae,Polianthes,Herb,Introduced,रजनीगंधा,রজনীগন্ধা,Accepted GBIF name Polianthes tuberosa (syn. Agave amica)
+29,Night jasmine,Nyctanthes arbor-tristis,Oleaceae,Nyctanthes,Tree,Native,पारिजात,শিউলি,Parijat / Shiuli. Look-alike pair with Arabian jasmine
+30,Gulmohar,Delonix regia,Fabaceae,Delonix,Tree,Introduced,गुलमोहर,কৃষ্ণচূড়া,Flamboyant flame tree
+31,Periwinkle,Catharanthus roseus,Apocynaceae,Catharanthus,Herb,Introduced,सदाबहार,নয়নতারা,Madagascar periwinkle (Sadabahar)
+32,Ixora,Ixora coccinea,Rubiaceae,Ixora,Shrub,Native,रुक्मिणी,রঙ্গন,Jungle geranium / Rangan
+33,Lantana,Lantana camara,Verbenaceae,Lantana,Shrub,Invasive,रायमुनिया,লান্টানা,Invasive flowering shrub
+34,Cockscomb,Celosia argentea,Amaranthaceae,Celosia,Herb,Native,मुर्गा कलगी,মোরগঝুঁটি,Silver cockscomb / Plumed cockscomb
+35,Crossandra,Crossandra infundibuliformis,Acanthaceae,Crossandra,Shrub,Native,प्रियदर्शी,কনকচাঁপা,Firecracker flower. TODO(verify) vernacular usage
+36,Canna,Canna indica,Cannaceae,Canna,Herb,Introduced,सर्वजया,সর্বজয়া,Indian shot / Canna lily
+37,Balsam,Impatiens balsamina,Balsaminaceae,Impatiens,Herb,Native,गुल मेहँदी,দোপাট্টি,Garden balsam / Rose balsam
+38,Amaltas,Cassia fistula,Fabaceae,Cassia,Tree,Native,अमलतास,সোনালু,Golden shower tree
+39,Palash,Butea monosperma,Fabaceae,Butea,Tree,Native,पलाश,পলাশ,Flame of the forest / Bastard teak
+40,Mango,Mangifera indica,Anacardiaceae,Mangifera,Tree,Native,आम,আম,National fruit of India
+41,Coconut,Cocos nucifera,Arecaceae,Cocos,Tree,Native,नारियल,নারকেল,Coconut palm
+42,Banana,Musa acuminata,Musaceae,Musa,Herb,Native,केला,কলা,Wild ancestor of eating banana. Vague group resolved to M. acuminata
+43,Papaya,Carica papaya,Caricaceae,Carica,Tree,Introduced,पपीता,পেঁপে,Tropical fruit tree
+44,Guava,Psidium guajava,Myrtaceae,Psidium,Tree,Introduced,अमरूद,পেয়ারা,Common guava
+45,Pomegranate,Punica granatum,Lythraceae,Punica,Tree,Introduced,अनार,বেদানা,Pomegranate
+46,Jackfruit,Artocarpus heterophyllus,Moraceae,Artocarpus,Tree,Native,कटहल,কাঁঠাল,Jackfruit tree
+47,Tamarind,Tamarindus indica,Fabaceae,Tamarindus,Tree,Introduced,इमली,তেঁতুল,Tamarind tree
+48,Jamun,Syzygium cumini,Myrtaceae,Syzygium,Tree,Native,जामुन,জাম,Black plum / Java plum
+49,Sapota,Manilkara zapota,Sapotaceae,Manilkara,Tree,Introduced,चीकू,সবেদা,Chikoo / Sapodilla
+50,Custard apple,Annona squamosa,Annonaceae,Annona,Tree,Introduced,शरीफा,আতা,Sugar apple / Sharifa
+51,Lemon,Citrus limon,Rutaceae,Citrus,Tree,Introduced,नींबू,লেবু,Cultivated lemon
+52,Teak,Tectona grandis,Lamiaceae,Tectona,Tree,Native,सागौन,সেগুন,High-value timber tree
+53,Sal,Shorea robusta,Dipterocarpaceae,Shorea,Tree,Native,साल,শাল,Hardwood timber tree
+54,Bamboo,Bambusa vulgaris,Poaceae,Bambusa,Grass,Native,बांस,বাঁশ,Common bamboo. Vague group resolved to B. vulgaris
+55,Areca palm,Areca catechu,Arecaceae,Areca,Tree,Native,सुपारी,সুপারি,Betel nut palm
+56,Date palm,Phoenix dactylifera,Arecaceae,Phoenix,Tree,Introduced,खजूर,খেজুর,True date palm. Vague group resolved to P. dactylifera
+57,Silk cotton,Bombax ceiba,Malvaceae,Bombax,Tree,Native,सेमल,শিমুল,Red silk-cotton tree / Semal
+58,Rain tree,Samanea saman,Fabaceae,Samanea,Tree,Introduced,विलायती सिरिस,রেইনট্রি,Shade canopy tree
+59,Eucalyptus,Eucalyptus globulus,Myrtaceae,Eucalyptus,Tree,Introduced,नीलगिरी,ইউক্যালিপটাস,Tasmanian blue gum. Vague group resolved to E. globulus
+60,Rice,Oryza sativa,Poaceae,Oryza,Grass,Native,धान,ধান,Asian rice cereal crop. Vague group resolved to O. sativa
+61,Wheat,Triticum aestivum,Poaceae,Triticum,Grass,Introduced,गेहूं,গম,Common bread wheat. Vague group resolved to T. aestivum
+62,Maize,Zea mays,Poaceae,Zea,Grass,Introduced,मक्का,ভুট্টা,Corn crop
+63,Sugarcane,Saccharum officinarum,Poaceae,Saccharum,Grass,Introduced,गन्ना,আখ,Sugar crop grass
+64,Tea,Camellia sinensis,Theaceae,Camellia,Shrub,Native,चाय,চা,Tea plant. Vague group resolved to C. sinensis
+65,Cotton,Gossypium hirsutum,Malvaceae,Gossypium,Shrub,Introduced,कपास,তুলা,Upland cotton. Vague group resolved to G. hirsutum
+66,Mustard,Brassica juncea,Brassicaceae,Brassica,Herb,Native,सरसों,সর্ষে,Indian mustard / Brown mustard. Vague group resolved to B. juncea
+67,Tomato,Solanum lycopersicum,Solanaceae,Solanum,Herb,Introduced,टमाटर,টমেটো,Common tomato vegetable
+68,Chilli,Capsicum annuum,Solanaceae,Capsicum,Herb,Introduced,मिर्च,লঙ্কা,Hot pepper / Chilli
+69,Brinjal,Solanum melongena,Solanaceae,Solanum,Herb,Native,बैंगन,বেগুন,Eggplant / Aubergine
+70,Okra,Abelmoschus esculentus,Malvaceae,Abelmoschus,Herb,Introduced,भिंडी,ঢেঁড়শ,Lady's finger
+71,Potato,Solanum tuberosum,Solanaceae,Solanum,Herb,Introduced,आलू,আলু,Tuber vegetable crop
+72,Onion,Allium cepa,Amaryllidaceae,Allium,Herb,Introduced,प्याज़,পেঁয়াজ,Bulb vegetable
+73,Coriander,Coriandrum sativum,Apiaceae,Coriandrum,Herb,Introduced,धनिया,ধনে,Culinary herb
+74,Spinach,Spinacia oleracea,Amaranthaceae,Spinacia,Herb,Introduced,पालक,পালং শাক,Leafy green vegetable
+75,Bottle gourd,Lagenaria siceraria,Cucurbitaceae,Lagenaria,Climber,Native,लौकी,লাউ,Calabash / Lauki
+76,Pumpkin,Cucurbita moschata,Cucurbitaceae,Cucurbita,Climber,Introduced,कद्दू,কুমড়ো,Butternut squash / Indian pumpkin
+77,Cucumber,Cucumis sativus,Cucurbitaceae,Cucumis,Climber,Native,खीरा,শসা,Common cucumber
+78,Peanut,Arachis hypogaea,Fabaceae,Arachis,Herb,Introduced,मूंगफली,চিনাবাদাম,Groundnut / Peanut
+79,Jute,Corchorus olitorius,Malvaceae,Corchorus,Herb,Native,पटसन,পাট,Tossa jute / Nalita. Vague group resolved to C. olitorius
+80,Money plant,Epipremnum aureum,Araceae,Epipremnum,Vine,Introduced,मनी प्लांट,মানি প্ল্যান্ট,Golden pothos. Vague group resolved to E. aureum. TODO(verify) vernacular usage
+81,Snake plant,Dracaena trifasciata,Asparagaceae,Dracaena,Herb,Introduced,स्नेक प्लांट,স্নেক প্ল্যান্ট,Mother-in-law's tongue. Vague group resolved to D. trifasciata. TODO(verify) vernacular transliteration
+82,Spider plant,Chlorophytum comosum,Asparagaceae,Chlorophytum,Herb,Introduced,स्पाइडर प्लांट,স্পাইডার প্ল্যান্ট,TODO(verify) vernacular transliteration
+83,Monstera,Monstera deliciosa,Araceae,Monstera,Vine,Introduced,मॉन्स्टेरा,মনস্টেরা,Swiss cheese plant. TODO(verify) vernacular transliteration
+84,Peace lily,Spathiphyllum wallisii,Araceae,Spathiphyllum,Herb,Introduced,पीस लिली,পিস লিলি,TODO(verify) vernacular transliteration
+85,Rubber plant,Ficus elastica,Moraceae,Ficus,Tree,Native,रबर प्लांट,রবার গাছ,Rubber fig. Vague group resolved to F. elastica. Look-alike pair with Banyan and Peepal
+86,Jade plant,Crassula ovata,Crassulaceae,Crassula,Succulent,Introduced,जेड प्लांट,জেড প্ল্যান্ট,Money tree / Jade plant. Vague group resolved to C. ovata. TODO(verify) vernacular transliteration
+87,Prickly pear,Opuntia ficus-indica,Cactaceae,Opuntia,Cactus,Introduced,नागफनी,নাগফণী,Barbary fig. Vague group resolved to O. ficus-indica
+88,Boston fern,Nephrolepis exaltata,Nephrolepidaceae,Nephrolepis,Fern,Introduced,बोस्टन फर्न,বোস্টন ফার্ন,Sword fern. Vague group resolved to N. exaltata. TODO(verify) vernacular transliteration
+89,Aglaonema,Aglaonema commutatum,Araceae,Aglaonema,Herb,Introduced,एग्लोनिमा,অ্যাগ্লোনেমা,Chinese evergreen. Vague group resolved to A. commutatum. TODO(verify) vernacular transliteration
+90,Dieffenbachia,Dieffenbachia seguine,Araceae,Dieffenbachia,Herb,Introduced,डम्ब केन,ডাম্ব কেন,Dumb cane. Vague group resolved to D. seguine. TODO(verify) vernacular transliteration
+91,Zebra plant,Haworthiopsis attenuata,Asphodelaceae,Haworthiopsis,Succulent,Introduced,ज़ेबरा हॉवर्थिया,জেব্রা হাওয়ার্থিয়া,Zebra haworthia. Vague group resolved from Aloe-type succulents to H. attenuata. TODO(verify) vernacular transliteration
+92,Sunflower,Helianthus annuus,Asteraceae,Helianthus,Herb,Introduced,सूरजमुखी,সূর্যমুখী,Common annual sunflower
+93,Daisy,Bellis perennis,Asteraceae,Bellis,Herb,Introduced,डेज़ी,ডেইজি,English daisy / Common daisy. Vague group resolved to B. perennis. TODO(verify) vernacular transliteration
+94,Dandelion,Taraxacum officinale,Asteraceae,Taraxacum,Herb,Introduced,सिंहपर्णी,সিংহপর্ণী,Common dandelion
+95,Lavender,Lavandula angustifolia,Lamiaceae,Lavandula,Shrub,Introduced,लैवेंडर,ল্যাভেন্ডার,English lavender. Vague group resolved to L. angustifolia. TODO(verify) vernacular transliteration
+96,Rosemary,Salvia rosmarinus,Lamiaceae,Salvia,Shrub,Introduced,रोज़मेरी,রোজমেরি,Aromatic culinary herb. TODO(verify) vernacular transliteration
+97,Sweet basil,Ocimum basilicum,Lamiaceae,Ocimum,Herb,Native,मीठी तुलसी,মিষ্টি তুলসী,Culinary basil. Look-alike pair with Tulsi and Mint
+98,Tulip,Tulipa gesneriana,Liliaceae,Tulipa,Herb,Introduced,ट्यूलिप,টিউলিপ,Garden tulip. Vague group resolved to T. gesneriana. TODO(verify) vernacular transliteration
+99,Daffodil,Narcissus pseudonarcissus,Amaryllidaceae,Narcissus,Herb,Introduced,डैफोडिल,ড্যাফোডিল,Wild daffodil. Vague group resolved to N. pseudonarcissus. TODO(verify) vernacular transliteration
+100,Lily,Lilium lancifolium,Liliaceae,Lilium,Herb,Introduced,टाइगर लिली,টাইগার লিলি,Tiger lily. Vague group resolved to L. lancifolium. TODO(verify) vernacular transliteration
+101,Dahlia,Dahlia pinnata,Asteraceae,Dahlia,Herb,Introduced,डहलिया,ডালিয়া,Garden dahlia. Vague group resolved to D. pinnata. TODO(verify) vernacular transliteration
+102,Zinnia,Zinnia elegans,Asteraceae,Zinnia,Herb,Introduced,जीनिया,জিনিয়া,Youth-and-age zinnia. Vague group resolved to Z. elegans. TODO(verify) vernacular transliteration
+103,Cosmos,Cosmos bipinnatus,Asteraceae,Cosmos,Herb,Introduced,कॉस्मॉस,কসমস,Garden cosmos. Vague group resolved to C. bipinnatus. TODO(verify) vernacular transliteration
+104,Chrysanthemum,Chrysanthemum indicum,Asteraceae,Chrysanthemum,Herb,Native,गुलदाउदी,চন্দ্রমল্লিকা,Indian chrysanthemum. Vague group resolved to C. indicum
+105,Gerbera,Gerbera jamesonii,Asteraceae,Gerbera,Herb,Introduced,जरबेरा,জার্বেরা,Barberton daisy. Vague group resolved to G. jamesonii. TODO(verify) vernacular transliteration
+106,Orchid,Phalaenopsis amabilis,Orchidaceae,Phalaenopsis,Epiphyte,Introduced,मून ऑर्किड,মুন অর্কিড,Moon orchid / Moth orchid. Vague group resolved to P. amabilis. TODO(verify) vernacular transliteration
+107,Water hyacinth,Pontederia crassipes,Pontederiaceae,Pontederia,Aquatic,Invasive,जलकुंभी,কচুরিপানা,Accepted GBIF name Pontederia crassipes (syn. Eichhornia crassipes)
+108,Sensitive plant,Mimosa pudica,Fabaceae,Mimosa,Herb,Introduced,छुईमुई,লজ্জাবতী,Touch-me-not / Shameplant
+109,Parthenium,Parthenium hysterophorus,Asteraceae,Parthenium,Herb,Invasive,गाजर घास,গাজর ঘাস,Carrot grass / Santa Maria feverfew
+110,Clover,Trifolium repens,Fabaceae,Trifolium,Herb,Introduced,तिपतिया घास,তিপাত্তা ঘাস,White clover. Vague group resolved to T. repens. TODO(verify) vernacular names
+111,Oak,Quercus robur,Fagaceae,Quercus,Tree,Introduced,बलूत,ওক গাছ,English oak / Pedunculate oak. Vague group resolved to Q. robur. TODO(verify) vernacular names

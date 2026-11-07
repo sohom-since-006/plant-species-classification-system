@@ -33,8 +33,7 @@ wheels/
 htmlcov/
 
 # ML Raw Datasets & Checkpoints
-ml/data/raw/
-ml/data/processed/
+ml/data/
 ml/checkpoints/
 ml/runs/
 *.pt
