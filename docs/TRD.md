@@ -4,6 +4,7 @@
 | Area | Choice |
 |---|---|
 | Frontend | React 18, Vite, TypeScript (strict), Tailwind CSS, Framer Motion, React Router |
+| Charts & Maps (PROPOSED) | Recharts (charts), react-simple-maps or lightweight GeoJSON SVG (maps) - requires user approval before installing |
 | State/data | TanStack Query, Zustand (UI state) |
 | Inference | onnxruntime-web (WASM, WebGL where available) |
 | Backend | Supabase (Postgres, Auth, Storage, RLS) |
@@ -84,3 +85,48 @@ Top-1, Top-5, macro precision/recall/F1, per-class table, confusion matrix, top 
 
 ## 12. Environments
 `.env`: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`. Nothing else is secret on the client. The service-role key is never in the repo or the frontend.
+
+## 13. Species Distribution Pipeline (Where It's Found)
+- Script: `ml/06_build_distribution.py` queries the GBIF occurrence API using aggregation facets (`facet=country`, `facet=stateProvince`, `facet=month&limit=0`) for each species in `ml/species_list.csv`.
+- Output: `web/public/data/species_distribution.json` (compact, coarse data only; no individual GPS points or sensitive location coordinates).
+- Schema:
+```json
+{
+  "version": "1.0",
+  "generated_at": "ISO-8601",
+  "species": {
+    "<species_id>": {
+      "scientific_name": "Ocimum tenuiflorum",
+      "common_name": "Tulsi",
+      "total_records": 12450,
+      "countries": { "IN": 8200, "NP": 450, "BD": 320, "TH": 190 },
+      "indian_states": { "Uttar Pradesh": 1420, "West Bengal": 1100, "Maharashtra": 980 },
+      "seasonality": [120, 150, 310, 450, 600, 720, 890, 940, 810, 520, 310, 180]
+    }
+  }
+}
+```
+- Frontend usage: species detail page (`/species/:slug`) and the Details tab in classification results render a choropleth density map (darker = more sightings), a top regional "Found in" list, and a 12-month seasonality area/bar chart.
+
+## 14. Motion & Animation Technical Contracts
+- **Scan Animation Contract (`ScanAnimation`):**
+  - Triggered during image classification. Visual elements: sweeping laser scan line, pulsating corner brackets, faint perspective grid, glowing structural keypoints.
+  - Text cycling strictly follows real pipeline phases:
+    1. Preprocess: "Reading image"
+    2. Model inference: "Detecting structure"
+    3. Postprocess: "Matching species"
+    4. Calibration & explainability: "Calibrating confidence"
+  - Display budget: Minimum 250 ms per stage to avoid visual flicker. When inference completes, transitions cleanly to a staged result reveal.
+  - Accessibility: Under `prefers-reduced-motion: reduce`, scan sweeps, grids, and particle pulses are bypassed; displays a calm static progress bar or immediate result.
+- **Interactive Live Background Performance Budget (`ParticleBackground`):**
+  - Renders drifting glowing spores (dark mode) or golden pollen granules (light mode) on an HTML5 `<canvas>`.
+  - Resolution capping: Canvas Device Pixel Ratio is clamped to `min(window.devicePixelRatio, 1.5)`.
+  - Particle limit: Maximum 50 particles.
+  - Power & Tab Visibility: Listens to the Page Visibility API (`visibilitychange`); the `requestAnimationFrame` loop pauses completely when `document.hidden === true`.
+  - Touch Fallback: On devices with `@media (hover: none)`, pointer attraction/repulsion calculations are disabled in favor of passive, low-velocity organic drift.
+  - Reduced Motion: Renders a single static particle distribution on mount without running an animation loop.
+- **Cursor Glow Spotlight Contract (`CursorGlow`):**
+  - Highlights card surfaces and hairline glass edges relative to cursor location.
+  - Managed by a single passive `pointermove` listener on `window`, scheduled via `requestAnimationFrame`.
+  - Injects `--mouse-x` and `--mouse-y` coordinates into active card styles.
+  - Entirely disabled on touch devices (`@media (hover: none)`).

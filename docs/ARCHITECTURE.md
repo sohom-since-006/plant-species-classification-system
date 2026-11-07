@@ -20,7 +20,7 @@
 ```
 
 ## 2. Two Pipelines
-**Offline (your laptop, once):** species list -> download images -> clean/split -> train -> evaluate -> export ONNX + metadata -> copy into `web/public/models/`.
+**Offline (your laptop, once):** species list -> download images -> clean/split -> train -> evaluate -> export ONNX + metadata -> build coarse distribution (`06_build_distribution.py`) -> copy artifacts into `web/public/models/` and `web/public/data/`.
 **Online (user's browser):** load model -> classify on-device -> optionally save history/feedback to Supabase.
 
 ## 3. Frontend Modules
@@ -32,6 +32,9 @@ web/src/
     classify/     UploadZone, CameraCapture, ResultCard, ConfidenceRing,
                   SimilarSpecies, HeatmapView, FeedbackPanel, MultiPhotoTray
     species/      SpeciesGrid, SpeciesFilters, SpeciesInfo
+    distribution/ DistributionMap, SeasonalityChart, FoundInList, useDistribution
+    charts/       AccuracyChart, FamilyBreakdown, SplitChart, HistoryTimeline
+                  (PROPOSED: Recharts, react-simple-maps pending user approval)
     history/      HistoryList, HistoryStore
     dashboard/    MetricsCards, ConfusionMatrix, ClassTable, CalibrationChart
     auth/         AuthModal, useSession
@@ -44,13 +47,14 @@ web/src/
     cam.ts        class activation map
     fuse.ts       multi-photo fusion
   components/
-    ui/           GlassCard, GlassButton, Badge, Tabs, Toggle, Modal, Toast
-    motion/       BlurText, FadingVideo, ParallaxLayer, Reveal
+    ui/           GlassCard, GlassButton, CursorGlow, Badge, Tabs, Toggle, Modal, Toast
+    motion/       BlurText, FadingVideo, ParallaxLayer, Reveal,
+                  ScanAnimation, ParticleBackground, presets.ts
     layout/       Navbar, Footer, PageBackground
-  lib/            supabase.ts, theme.ts, format.ts, csv.ts
-  styles/         index.css (glass classes, tokens)
+  lib/            supabase.ts, theme.ts, format.ts, csv.ts, cursorGlow.ts
+  styles/         index.css (glass classes, tokens, glow variables)
   config/         media.ts (video URLs), constants.ts
-  types/
+  types/          species.ts, distribution.ts, ml.ts
 ```
 
 ## 4. ML Runtime Details
@@ -60,14 +64,14 @@ web/src/
 - Inference results are plain JSON, so the UI is testable without the model.
 
 ## 5. Data Flow: Identify
-1. UI sends image(s) to the worker.
+1. UI displays `ScanAnimation` while sending image(s) to the worker, progressing through real pipeline stages ("Reading image" -> "Detecting structure" -> "Matching species" -> "Calibrating confidence") with a 250 ms minimum display time per stage.
 2. The worker preprocesses, runs ONNX, returns logits/embedding/features.
 3. `postprocess` applies T, tiers, and the unknown rule. `similar` ranks look-alikes. `cam` builds the heatmap.
-4. The UI fetches the species record from Supabase (TanStack Query cache; static JSON fallback bundled at build).
+4. The UI fetches species record and distribution data (`species_distribution.json` / Supabase cache) and triggers a staged result reveal.
 5. If the user chose "save": a row goes to `predictions` (Supabase if logged in, otherwise IndexedDB).
 
 ## 6. Resilience
-- Species details have a bundled `species.json` fallback, so identification works if Supabase is down.
+- Species details have a bundled `species.json` and `species_distribution.json` fallback, so identification and distribution mapping work offline and if Supabase is down.
 - Model load failure shows a retry card.
 - Unsupported browsers get a clear message.
 
@@ -87,3 +91,6 @@ CSS variables on `:root[data-theme="dark"|"light"]`, toggled by `theme.ts`, pers
 | Supabase | Auth + DB + storage in one free tier |
 | CAM instead of Grad-CAM | Exact for GAP+linear heads, runs without gradients |
 | Static species fallback | Resilience and instant first paint |
+| Coarse regional distribution JSON | Compact payload (<300 KB), zero GPS coordinate privacy risks, high speed |
+| Shared pointer listener for cursor glow | High visual fidelity with zero DOM event listener proliferation |
+| Visibility-aware particle background | Organic spore/pollen atmosphere with zero background tab battery drain |

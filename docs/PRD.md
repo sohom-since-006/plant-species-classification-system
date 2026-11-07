@@ -25,6 +25,7 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 - Native mobile apps
 - Social features or user-to-user sharing
 - Full UI translation (only Hindi/Bengali species names in v1)
+- Exact GPS coordinate tracking or live pin-mapping (coarse regional/country/state occurrence facets only for privacy and compact payload)
 
 ## 5. Users
 | Persona | Need |
@@ -56,13 +57,20 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 | F17 | Optional auth (email, Google); guests allowed | P2 |
 | F18 | About, Help/FAQ, 404 pages | P1 |
 | F19 | Share/download result as image | P2 |
+| F20 | "Where it's found" distribution: coarse map, "Found in" regional list, seasonality chart | P1 |
+| F21 | Statistics graphs: Dashboard metrics/split/calibration, History tiers over time, Explore family counts | P1 |
+| F22 | Scan animation: sweeping scan line, brackets, grid, glowing points, stage text, staged reveal | P1 |
+| F23 | Global motion system: page transitions, staggered reveals, tab crossfades, count-ups, spring modals | P1 |
+| F24 | Interactive live background: drifting spores (dark) / pollen (light), cursor reaction, visibility pause | P1 |
+| F25 | Cursor glow: interactive card and button edge/surface spotlight via shared pointer listener | P1 |
 
 ## 7. Non-Functional Requirements
 - Performance: first model load under 5 s on broadband; inference under 2 s on a mid-range laptop.
+- Motion budget: 60 fps target; live background canvas capped at DPR 1.5 and 50 particles; pauses when tab is hidden.
 - Model size: ONNX under 25 MB.
-- Accessibility: WCAG 2.1 AA, keyboard navigable, reduced-motion support.
+- Accessibility: WCAG 2.1 AA, keyboard navigable, reduced-motion support (disables scan animation, particle drift, parallax).
 - Responsive: 360 px to 1920 px.
-- Privacy: images are processed on-device; uploading is opt-in.
+- Privacy: images are processed on-device; uploading is opt-in; distribution uses coarse regional counts without exact coordinates.
 - Reliability: graceful errors for bad files, no WebGL/WASM support, offline model failure.
 
 ## 8. Success Metrics
