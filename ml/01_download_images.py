@@ -1,36 +1,34 @@
-"""01_download_images.py - Download and prepare botanical training images.
+"""01_download_images.py - Parallel botanical training image downloader.
 
 Fetches research-grade, openly licensed plant images (CC0, CC-BY, CC-BY-NC) from
 GBIF (iNaturalist Research-grade Observations dataset) for species listed in
-ml/species_list.csv. Resizes images so the longer side is at most 512 px, saves
-them to ml/data/raw/<id>_<slug>/<n>.jpg, and writes provenance credits to
+ml/species_list.csv. Image downloading and Pillow resizing run concurrently across
+a ThreadPoolExecutor (default 8 workers). GBIF API queries remain polite and sequential.
+Resizes images so the longer side is at most 512 px, saves them to
+ml/data/raw/<id>_<slug>/<n>.jpg, and writes provenance credits to
 ml/data/dataset_credits.csv.
 """
 
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import csv
 import io
 import logging
 import random
 import re
 import shutil
+import sys
 import time
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import requests
 from PIL import Image, UnidentifiedImageError
+from requests.adapters import HTTPAdapter
 from tqdm import tqdm
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-)
-logger = logging.getLogger("download_images")
 
 USER_AGENT = (
     "PlantSpeciesClassifierBot/1.0 (academic botanical research; contact: none)"
@@ -39,6 +37,47 @@ GBIF_API_BASE = "https://api.gbif.org/v1"
 MIN_FREE_DISK_GB = 15.0
 DEFAULT_TARGET_PER_SPECIES = 300
 MAX_PER_SPECIES = 400
+DEFAULT_WORKERS = 8
+
+logger = logging.getLogger("download_images")
+
+
+class TqdmLoggingHandler(logging.Handler):
+    """Logging handler that emits messages through tqdm.write to preserve clean progress bars."""
+
+    def emit(self, record: logging.LogRecord) -> None:
+        try:
+            msg = self.format(record)
+            tqdm.write(msg, file=sys.stderr)
+            self.flush()
+        except Exception:  # noqa: BLE001
+            self.handleError(record)
+
+
+def setup_logging(out_dir: Path) -> None:
+    """Configure logging to write to console via tqdm and to ml/data/download.log."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    log_file = out_dir / "download.log"
+
+    logger.setLevel(logging.INFO)
+    logger.handlers.clear()
+
+    # Formatter
+    fmt = logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S"
+    )
+
+    # Console handler
+    console_handler = TqdmLoggingHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(fmt)
+    logger.addHandler(console_handler)
+
+    # File handler
+    file_handler = logging.FileHandler(log_file, encoding="utf-8")
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(fmt)
+    logger.addHandler(file_handler)
 
 
 def check_disk_space(target_path: Path, min_gb: float = MIN_FREE_DISK_GB) -> bool:
@@ -234,13 +273,28 @@ def load_existing_credits(
     return downloaded_urls, downloaded_occurrences, counts_by_species
 
 
-def download_and_save_image(
+@dataclass(frozen=True)
+class ImageJobMeta:
+    """Metadata for an image download job."""
+
+    species_id: int
+    slug: str
+    occurrence_key: int
+    creator: str
+    norm_lic: str
+    source_url: str
+
+
+def download_and_process_image_worker(
     session: requests.Session,
     image_url: str,
-    dest_path: Path,
     max_dim: int = 512,
-) -> bool:
-    """Download an image, verify with Pillow, resize max side to 512px, and save as RGB JPEG."""
+) -> tuple[bool, bytes | None]:
+    """Worker task: download image, verify with Pillow, resize max side <= 512px, encode to JPEG.
+
+    Returns:
+        (True, jpeg_bytes) on success, (False, None) on failure. Never raises.
+    """
     # Attempt optimized variant if URL is from iNaturalist S3 original
     urls_to_try = [image_url]
     if "inaturalist-open-data.s3.amazonaws.com" in image_url and image_url.endswith(
@@ -253,42 +307,39 @@ def download_and_save_image(
     for attempt_url in urls_to_try:
         for attempt in range(3):
             try:
-                resp = session.get(attempt_url, timeout=20)
+                resp = session.get(attempt_url, timeout=15)
                 if resp.status_code == 200 and resp.content:
                     content = resp.content
                     break
                 if resp.status_code == 404:
                     break
             except requests.RequestException:
-                delay = 2**attempt
-                time.sleep(delay)
+                time.sleep(2**attempt)
         if content:
             break
 
     if not content:
-        return False
+        return False, None
 
     try:
         with Image.open(io.BytesIO(content)) as raw_img:
-            # Force decode and verify integrity
             raw_img.load()
             rgb_img = raw_img.convert("RGB")
 
-        # Resize preserving aspect ratio so longer side is at most 512 px
         rgb_img.thumbnail((max_dim, max_dim), Image.Resampling.LANCZOS)
 
-        dest_path.parent.mkdir(parents=True, exist_ok=True)
-        rgb_img.save(dest_path, "JPEG", quality=90, optimize=True)
-        return True
+        bio = io.BytesIO()
+        rgb_img.save(bio, "JPEG", quality=90, optimize=True)
+        return True, bio.getvalue()
     except (OSError, SyntaxError, UnidentifiedImageError) as exc:
-        logger.debug("Failed to decode/save image from %s: %s", image_url, exc)
-        return False
+        logger.debug("Image decode error from %s: %s", image_url, exc)
+        return False, None
 
 
 def parse_args() -> argparse.Namespace:
     """Parse CLI arguments."""
     parser = argparse.ArgumentParser(
-        description="Download botanical training images from GBIF/iNaturalist."
+        description="Parallel botanical training image downloader (GBIF / iNaturalist)."
     )
     parser.add_argument(
         "--species-ids",
@@ -307,6 +358,12 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=DEFAULT_TARGET_PER_SPECIES,
         help=f"Target number of images per species (default {DEFAULT_TARGET_PER_SPECIES}, max {MAX_PER_SPECIES}).",
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=DEFAULT_WORKERS,
+        help=f"Number of concurrent worker threads for image downloads (default {DEFAULT_WORKERS}).",
     )
     parser.add_argument(
         "--dry-run",
@@ -353,14 +410,18 @@ def parse_species_filter(filter_str: str | None) -> set[int] | None:
 
 
 def main() -> None:
-    """Run GBIF botanical image download pipeline."""
+    """Run parallel botanical image download pipeline."""
     args = parse_args()
     random.seed(args.seed)
 
     target_per_species = min(max(args.per_species, 1), MAX_PER_SPECIES)
+    num_workers = max(1, args.workers)
     out_dir: Path = args.out
     raw_dir = out_dir / "raw"
     credits_file = out_dir / "dataset_credits.csv"
+
+    # Initialize logging with file and clean tqdm console handler
+    setup_logging(out_dir)
 
     # Pre-flight disk space check
     check_disk_space(out_dir, min_gb=MIN_FREE_DISK_GB)
@@ -382,14 +443,20 @@ def main() -> None:
         selected_species = selected_species[: args.limit_species]
 
     logger.info(
-        "Selected %d species to process (target per species: %d)",
+        "Selected %d species to process (target per species: %d, workers: %d)",
         len(selected_species),
         target_per_species,
+        num_workers,
     )
 
-    # Setup session
+    # Setup session with connection pooling sized to workers
     session = requests.Session()
     session.headers.update({"User-Agent": USER_AGENT})
+    adapter = HTTPAdapter(
+        pool_connections=num_workers * 2, pool_maxsize=num_workers * 2, max_retries=1
+    )
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
 
     # Resolve iNaturalist dataset key
     dataset_key = get_inaturalist_dataset_key(session)
@@ -416,148 +483,203 @@ def main() -> None:
                     ]
                 )
 
-    # Track final counts
     final_counts: dict[int, int] = {}
     total_newly_downloaded = 0
 
-    species_pbar = tqdm(selected_species, desc="Overall Species", unit="sp")
-    for sp in species_pbar:
-        sid = int(sp["id"])
-        common_name = sp["common_name"]
-        sci_name = sp["scientific_name"]
-        slug = f"{sid}_{make_slug(sci_name)}"
-        species_dir = raw_dir / slug
+    run_start_time = time.time()
 
-        species_pbar.set_postfix_str(f"{common_name} ({sci_name})")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
+        species_pbar = tqdm(selected_species, desc="Overall Species", unit="sp")
+        for sp in species_pbar:
+            sid = int(sp["id"])
+            common_name = sp["common_name"]
+            sci_name = sp["scientific_name"]
+            slug = f"{sid}_{make_slug(sci_name)}"
+            species_dir = raw_dir / slug
 
-        # Determine existing downloaded images for this species
-        existing_images: list[Path] = []
-        if species_dir.exists():
-            existing_images = sorted(
-                species_dir.glob("*.jpg"),
-                key=lambda p: int(p.stem) if p.stem.isdigit() else 999999,
+            species_pbar.set_postfix_str(f"{common_name} ({sci_name})")
+
+            # Determine existing downloaded images for this species
+            existing_images: list[Path] = []
+            if species_dir.exists():
+                existing_images = sorted(
+                    species_dir.glob("*.jpg"),
+                    key=lambda p: int(p.stem) if p.stem.isdigit() else 999999,
+                )
+
+            current_count = max(len(existing_images), counts_by_species.get(sid, 0))
+            final_counts[sid] = current_count
+
+            if current_count >= target_per_species:
+                continue
+
+            # Resolve taxonKey in GBIF
+            taxon_key, _ = resolve_species_taxon(session, sci_name)
+            if not taxon_key:
+                logger.error("Could not resolve taxonKey for '%s'. Skipping.", sci_name)
+                continue
+
+            # Page through occurrences and submit download tasks
+            next_file_idx = len(existing_images) + 1
+            offset = 0
+            page_size = 100
+            end_of_records = False
+
+            sp_download_bar = tqdm(
+                total=target_per_species,
+                initial=current_count,
+                desc=f"sp {sid:03d} {sci_name[:18]}",
+                unit="img",
+                leave=False,
             )
 
-        current_count = max(len(existing_images), counts_by_species.get(sid, 0))
-        final_counts[sid] = current_count
+            active_futures: set[
+                concurrent.futures.Future[tuple[bool, bytes | None]]
+            ] = set()
+            fut_to_meta: dict[
+                concurrent.futures.Future[tuple[bool, bytes | None]], ImageJobMeta
+            ] = {}
+            queued_urls: set[str] = set()
 
-        if current_count >= target_per_species:
-            continue
+            while current_count < target_per_species:
+                # Top up worker pool with candidates if backlog is low
+                if (
+                    len(active_futures) < num_workers * 3
+                    and not end_of_records
+                    and offset < 1000
+                ):
+                    search_url = f"{GBIF_API_BASE}/occurrence/search"
+                    params = {
+                        "datasetKey": dataset_key,
+                        "taxonKey": taxon_key,
+                        "mediaType": "StillImage",
+                        "occurrenceStatus": "PRESENT",
+                        "limit": page_size,
+                        "offset": offset,
+                    }
 
-        # Resolve taxonKey in GBIF
-        taxon_key, _ = resolve_species_taxon(session, sci_name)
-        if not taxon_key:
-            logger.error("Could not resolve taxonKey for '%s'. Skipping.", sci_name)
-            continue
+                    results: list[dict[str, Any]] = []
+                    for attempt in range(3):
+                        try:
+                            time.sleep(0.12)  # Polite pacing for GBIF API
+                            resp = session.get(search_url, params=params, timeout=15)
+                            resp.raise_for_status()
+                            data = resp.json()
+                            results = data.get("results", [])
+                            end_of_records = data.get("endOfRecords", False)
+                            break
+                        except requests.RequestException:
+                            time.sleep(2**attempt)
+                            end_of_records = False
 
-        # Page through occurrences
-        next_file_idx = len(existing_images) + 1
-        offset = 0
-        page_size = 100
-        species_done = False
+                    offset += page_size
 
-        sp_download_bar = tqdm(
-            total=target_per_species,
-            initial=current_count,
-            desc=f"sp {sid:03d} {sci_name[:18]}",
-            unit="img",
-            leave=False,
-        )
+                    if not results:
+                        end_of_records = True
 
-        while not species_done and current_count < target_per_species:
-            search_url = f"{GBIF_API_BASE}/occurrence/search"
-            params = {
-                "datasetKey": dataset_key,
-                "taxonKey": taxon_key,
-                "mediaType": "StillImage",
-                "occurrenceStatus": "PRESENT",
-                "limit": page_size,
-                "offset": offset,
-            }
+                    for occ in results:
+                        occ_key = occ.get("key")
+                        if not occ_key:
+                            continue
 
-            results: list[dict[str, Any]] = []
-            for attempt in range(3):
-                try:
-                    time.sleep(0.12)  # Polite pacing between API requests
-                    resp = session.get(search_url, params=params, timeout=15)
-                    resp.raise_for_status()
-                    data = resp.json()
-                    results = data.get("results", [])
-                    end_of_records = data.get("endOfRecords", False)
+                        occ_license = occ.get("license")
+                        media_list = occ.get("media", [])
+
+                        for media_item in media_list:
+                            m_type = media_item.get("type", "")
+                            m_format = media_item.get("format", "")
+                            if m_type != "StillImage" and not m_format.startswith(
+                                "image/"
+                            ):
+                                continue
+
+                            raw_lic = media_item.get("license") or occ_license
+                            norm_lic = normalize_license(raw_lic)
+                            if not norm_lic:
+                                continue
+
+                            image_url = media_item.get("identifier")
+                            if (
+                                not image_url
+                                or image_url in downloaded_urls
+                                or image_url in queued_urls
+                            ):
+                                continue
+
+                            creator = (
+                                media_item.get("creator")
+                                or media_item.get("rightsHolder")
+                                or occ.get("recordedBy")
+                                or "Unknown"
+                            )
+
+                            if args.dry_run:
+                                current_count += 1
+                                sp_download_bar.update(1)
+                                downloaded_urls.add(image_url)
+                                if current_count >= target_per_species:
+                                    break
+                                continue
+
+                            queued_urls.add(image_url)
+                            meta = ImageJobMeta(
+                                species_id=sid,
+                                slug=slug,
+                                occurrence_key=occ_key,
+                                creator=creator,
+                                norm_lic=norm_lic,
+                                source_url=image_url,
+                            )
+                            fut = executor.submit(
+                                download_and_process_image_worker,
+                                session,
+                                image_url,
+                                512,
+                            )
+                            active_futures.add(fut)
+                            fut_to_meta[fut] = meta
+
+                        if args.dry_run and current_count >= target_per_species:
+                            break
+
+                if args.dry_run:
                     break
-                except requests.RequestException:
-                    delay = 2**attempt
-                    time.sleep(delay)
-                    end_of_records = False
 
-            if not results:
-                break
-
-            for occ in results:
-                if current_count >= target_per_species:
-                    species_done = True
+                if not active_futures:
+                    # No active tasks and no more records available
                     break
 
-                occ_key = occ.get("key")
-                if not occ_key:
-                    continue
+                # Wait for at least one worker task to complete
+                done, _ = concurrent.futures.wait(
+                    active_futures,
+                    timeout=0.2,
+                    return_when=concurrent.futures.FIRST_COMPLETED,
+                )
 
-                occ_license = occ.get("license")
-                media_list = occ.get("media", [])
+                for fut in done:
+                    active_futures.remove(fut)
+                    meta = fut_to_meta.pop(fut)
 
-                for media_item in media_list:
-                    if current_count >= target_per_species:
-                        species_done = True
-                        break
+                    try:
+                        success, jpeg_bytes = fut.result()
+                    except Exception as exc:  # noqa: BLE001
+                        logger.debug("Worker error for %s: %s", meta.source_url, exc)
+                        success, jpeg_bytes = False, None
 
-                    # Check media type
-                    m_type = media_item.get("type", "")
-                    m_format = media_item.get("format", "")
-                    if m_type != "StillImage" and not m_format.startswith("image/"):
-                        continue
-
-                    # Validate license (media item license overrides occurrence license)
-                    raw_lic = media_item.get("license") or occ_license
-                    norm_lic = normalize_license(raw_lic)
-                    if not norm_lic:
-                        continue  # Skip unapproved licenses
-
-                    image_url = media_item.get("identifier")
-                    if not image_url or image_url in downloaded_urls:
-                        continue
-
-                    creator = (
-                        media_item.get("creator")
-                        or media_item.get("rightsHolder")
-                        or occ.get("recordedBy")
-                        or "Unknown"
-                    )
-
-                    if args.dry_run:
+                    if success and jpeg_bytes and current_count < target_per_species:
                         current_count += 1
-                        sp_download_bar.update(1)
-                        downloaded_urls.add(image_url)
-                        continue
+                        dest_file = species_dir / f"{next_file_idx}.jpg"
+                        dest_file.parent.mkdir(parents=True, exist_ok=True)
+                        dest_file.write_bytes(jpeg_bytes)
 
-                    dest_file = species_dir / f"{next_file_idx}.jpg"
-                    rel_file_path = f"raw/{slug}/{next_file_idx}.jpg"
-
-                    success = download_and_save_image(
-                        session=session,
-                        image_url=image_url,
-                        dest_path=dest_file,
-                        max_dim=512,
-                    )
-
-                    if success:
-                        current_count += 1
+                        rel_file_path = f"raw/{slug}/{next_file_idx}.jpg"
                         next_file_idx += 1
                         total_newly_downloaded += 1
                         sp_download_bar.update(1)
-                        downloaded_urls.add(image_url)
-                        downloaded_occurrences.add((sid, occ_key))
+                        downloaded_urls.add(meta.source_url)
+                        downloaded_occurrences.add((sid, meta.occurrence_key))
 
-                        # Log credit to CSV immediately
+                        # Safely record credit row from main thread
                         with open(
                             credits_file, mode="a", newline="", encoding="utf-8"
                         ) as cf:
@@ -566,21 +688,23 @@ def main() -> None:
                                 [
                                     sid,
                                     rel_file_path,
-                                    occ_key,
-                                    creator,
-                                    norm_lic,
-                                    image_url,
+                                    meta.occurrence_key,
+                                    meta.creator,
+                                    meta.norm_lic,
+                                    meta.source_url,
                                 ]
                             )
+                            cf.flush()
 
-                    time.sleep(0.08)  # Polite pacing between image downloads
+            # Clean up any leftover futures for this species
+            for fut in active_futures:
+                fut.cancel()
 
-            offset += page_size
-            if end_of_records or offset >= 1000:
-                break
+            sp_download_bar.close()
+            final_counts[sid] = current_count
 
-        sp_download_bar.close()
-        final_counts[sid] = current_count
+    elapsed_time = time.time() - run_start_time
+    speed_ips = total_newly_downloaded / elapsed_time if elapsed_time > 0 else 0.0
 
     # Print summary table
     print("\n" + "=" * 82)
@@ -610,9 +734,11 @@ def main() -> None:
 
     print("=" * 82)
     logger.info(
-        "Summary: %d images newly downloaded across %d species.",
+        "Finished: %d images newly downloaded across %d species in %.2fs (%.2f images/sec).",
         total_newly_downloaded,
         len(selected_species),
+        elapsed_time,
+        speed_ips,
     )
 
     if deficient_species:
