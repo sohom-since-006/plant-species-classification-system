@@ -96,3 +96,4 @@ export function TopCountriesChart({ countries, className = '' }: TopCountriesCha
 }
 
 export default TopCountriesChart;
+

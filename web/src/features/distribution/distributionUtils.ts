@@ -203,3 +203,4 @@ export function formatMonthSeasonality(months: number[] | undefined | null): Mon
     count: Math.max(0, count),
   }));
 }
+

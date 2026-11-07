@@ -38,3 +38,4 @@ export function useDistribution(speciesId: number | undefined | null) {
     error: query.error,
   };
 }
+

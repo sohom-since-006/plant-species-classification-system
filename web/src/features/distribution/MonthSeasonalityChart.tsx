@@ -91,3 +91,4 @@ export function MonthSeasonalityChart({ months, className = '' }: MonthSeasonali
 }
 
 export default MonthSeasonalityChart;
+

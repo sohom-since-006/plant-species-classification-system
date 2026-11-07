@@ -17,3 +17,4 @@ export const CHART_THEME = {
   danger: 'rgba(244, 63, 94, 0.85)',
   warning: 'rgba(245, 158, 11, 0.85)',
 };
+

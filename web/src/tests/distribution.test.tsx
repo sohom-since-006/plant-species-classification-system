@@ -214,3 +214,4 @@ describe('DistributionPanel - Data & Empty States', () => {
     expect(screen.getByText(/GBIF \(Global Biodiversity Information Facility\)/i)).toBeInTheDocument();
   });
 });
+

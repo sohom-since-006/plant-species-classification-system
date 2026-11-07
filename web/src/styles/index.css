@@ -51,10 +51,24 @@
   --spore-color: rgba(31, 122, 77, 0.55);
 }
 
-html, body {
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
   font-family: 'Barlow', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 /* ─── Glass classes ────────────────────────────────────────────── */
