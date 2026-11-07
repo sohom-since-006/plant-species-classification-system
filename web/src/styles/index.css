@@ -18,6 +18,37 @@
   --cta-fg: #000000;
   --overlay-tint: #041c11;
   --overlay-tint-rgb: 4, 28, 17;
+
+  /* Glow tokens */
+  --glow-color: rgba(110, 231, 168, 0.15);
+  --glow-edge: rgba(110, 231, 168, 0.45);
+  --glow-radius: 280px;
+  --spore-color: rgba(110, 231, 168, 0.65);
+}
+
+:root[data-theme="light"],
+.light {
+  --bg: #F4F6F0;
+  --fg: #0B0B0C;
+  --fg-muted: rgba(11, 11, 12, 0.75);
+  --fg-subtle: rgba(11, 11, 12, 0.55);
+  --glass-fill: rgba(255, 255, 255, 0.65);
+  --glass-edge-hi: rgba(255, 255, 255, 0.85);
+  --glass-edge-mid: rgba(0, 0, 0, 0.08);
+  --glass-inset: rgba(255, 255, 255, 0.50);
+  --accent: #1F7A4D;
+  --warn: #B7791F;
+  --danger: #C53030;
+  --cta-bg: #0B0B0C;
+  --cta-fg: #ffffff;
+  --overlay-tint: #eaf3ed;
+  --overlay-tint-rgb: 234, 243, 237;
+
+  /* Light mode glow tokens */
+  --glow-color: rgba(31, 122, 77, 0.12);
+  --glow-edge: rgba(31, 122, 77, 0.35);
+  --glow-radius: 280px;
+  --spore-color: rgba(31, 122, 77, 0.55);
 }
 
 html, body {
@@ -82,6 +113,51 @@ html, body {
   pointer-events: none;
 }
 
+/* ─── Cursor glow & spotlight ─────────────────────────────────── */
+
+@media (hover: hover) and (pointer: fine) {
+  [data-glow] {
+    --mx: -9999px;
+    --my: -9999px;
+    position: relative;
+  }
+
+  /* Radial surface glow */
+  .liquid-glass[data-glow]::after,
+  .liquid-glass-strong[data-glow]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      var(--glow-radius, 280px) circle at var(--mx, -9999px) var(--my, -9999px),
+      var(--glow-color) 0%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .liquid-glass[data-glow]:hover::after,
+  .liquid-glass-strong[data-glow]:hover::after {
+    opacity: 1;
+  }
+
+  /* Brighter glow on the hairline border using the accent token */
+  .liquid-glass[data-glow]:hover::before,
+  .liquid-glass-strong[data-glow]:hover::before {
+    background: radial-gradient(
+      var(--glow-radius, 280px) circle at var(--mx, -9999px) var(--my, -9999px),
+      var(--glow-edge) 0%,
+      var(--glass-edge-hi) 40%,
+      var(--glass-edge-mid) 80%,
+      transparent 100%
+    );
+  }
+}
+
 /* ─── Aurora background animations ─────────────────────────────── */
 
 @keyframes aurora-drift-1 {
@@ -103,6 +179,17 @@ html, body {
   0%   { transform: translate3d(0, 0, 0) scale(1); opacity: 0.16; }
   50%  { transform: translate3d(30px, -25px, 0) scale(1.14); opacity: 0.22; }
   100% { transform: translate3d(-20px, 20px, 0) scale(1.05); opacity: 0.17; }
+}
+
+/* ─── Shimmer animation ────────────────────────────────────────── */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* ─── Focus ring ───────────────────────────────────────────────── */

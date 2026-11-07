@@ -18,6 +18,7 @@
   --cta-fg: #000000;
   --glow-color: rgba(110, 231, 168, 0.15);
   --glow-edge: rgba(110, 231, 168, 0.45);
+  --glow-radius: 280px;
   --spore-color: rgba(110, 231, 168, 0.65);
 }
 :root[data-theme="light"] {
@@ -36,6 +37,7 @@
   --cta-fg: #ffffff;
   --glow-color: rgba(31, 122, 77, 0.12);
   --glow-edge: rgba(31, 122, 77, 0.35);
+  --glow-radius: 280px;
   --spore-color: rgba(183, 121, 31, 0.55);
 }
 html, body { background: var(--bg); color: var(--fg); font-family: 'Barlow', sans-serif; }

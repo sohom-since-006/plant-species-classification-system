@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import { ArrowUpRight, Search, Info } from '@/components/icons';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 
 const SPECIES_DATA = [
   {
@@ -119,68 +120,72 @@ export function Explore() {
       {/* Main Content Area */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-8">
         {/* Category Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-2">
+        <Stagger className="flex flex-wrap items-center justify-center gap-2">
           {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all ${
-                selectedCategory === cat
-                  ? 'bg-[var(--cta-bg)] text-[var(--cta-fg)] font-semibold shadow-sm'
-                  : 'liquid-glass text-[var(--fg-muted)] hover:text-[var(--fg)]'
-              }`}
-            >
-              {cat}
-            </button>
+            <StaggerItem key={cat}>
+              <button
+                type="button"
+                onClick={() => setSelectedCategory(cat)}
+                data-glow=""
+                className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider transition-all ${
+                  selectedCategory === cat
+                    ? 'bg-[var(--cta-bg)] text-[var(--cta-fg)] font-semibold shadow-sm'
+                    : 'liquid-glass text-[var(--fg-muted)] hover:text-[var(--fg)]'
+                }`}
+              >
+                {cat}
+              </button>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         {/* Species Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+        <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
           {filteredSpecies.map((species) => (
-            <Link
-              key={species.slug}
-              to={`/species/${species.slug}`}
-              className="group liquid-glass-strong rounded-3xl overflow-hidden flex flex-col transition-all hover:scale-[1.01] hover:border-[var(--accent)]"
-            >
-              {/* Image banner */}
-              <div className="relative w-full h-56 bg-black/40 overflow-hidden">
-                <img
-                  src={species.imageUrl}
-                  alt={species.commonName}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <span className="absolute top-4 right-4 liquid-glass px-3 py-1 rounded-full text-[11px] font-mono uppercase text-[var(--accent)]">
-                  {species.family}
-                </span>
-              </div>
-
-              {/* Text content */}
-              <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                <div>
-                  <h3 className="font-heading italic text-2xl text-[var(--fg)] group-hover:text-[var(--accent)] transition-colors">
-                    {species.commonName}
-                  </h3>
-                  <p className="font-heading italic text-sm text-[var(--fg-muted)]">
-                    {species.scientificName}
-                  </p>
-                  <p className="mt-3 text-xs font-body text-[var(--fg-muted)] line-clamp-2 leading-relaxed">
-                    {species.description}
-                  </p>
-                </div>
-
-                <div className="pt-3 border-t border-[var(--glass-edge-mid)] flex items-center justify-between text-xs font-mono text-[var(--fg-subtle)]">
-                  <span>Origin: {species.origin}</span>
-                  <span className="flex items-center gap-1 text-[var(--accent)] group-hover:translate-x-0.5 transition-transform">
-                    Details <ArrowUpRight className="w-3.5 h-3.5" />
+            <StaggerItem key={species.slug}>
+              <Link
+                to={`/species/${species.slug}`}
+                data-glow=""
+                className="group liquid-glass-strong rounded-3xl overflow-hidden flex flex-col transition-all hover:scale-[1.01] hover:border-[var(--accent)] h-full"
+              >
+                {/* Image banner */}
+                <div className="relative w-full h-56 bg-black/40 overflow-hidden">
+                  <img
+                    src={species.imageUrl}
+                    alt={species.commonName}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-4 right-4 liquid-glass px-3 py-1 rounded-full text-[11px] font-mono uppercase text-[var(--accent)]">
+                    {species.family}
                   </span>
                 </div>
-              </div>
-            </Link>
+
+                {/* Text content */}
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                  <div>
+                    <h3 className="font-heading italic text-2xl text-[var(--fg)] group-hover:text-[var(--accent)] transition-colors">
+                      {species.commonName}
+                    </h3>
+                    <p className="font-heading italic text-sm text-[var(--fg-muted)]">
+                      {species.scientificName}
+                    </p>
+                    <p className="mt-3 text-xs font-body text-[var(--fg-muted)] line-clamp-2 leading-relaxed">
+                      {species.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-[var(--glass-edge-mid)] flex items-center justify-between text-xs font-mono text-[var(--fg-subtle)]">
+                    <span>Origin: {species.origin}</span>
+                    <span className="flex items-center gap-1 text-[var(--accent)] group-hover:translate-x-0.5 transition-transform">
+                      Details <ArrowUpRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         {/* Botanical Safety Disclaimer */}
         <div className="liquid-glass rounded-2xl p-6 flex items-start gap-4 text-xs font-body text-[var(--fg-muted)] mt-12">

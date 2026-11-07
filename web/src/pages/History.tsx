@@ -4,6 +4,8 @@ import { PageHero } from '@/components/layout/PageHero';
 import { ConfidenceRing } from '@/components/ui/ConfidenceRing';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { ArrowUpRight, Clock, Camera, Info, X } from '@/components/icons';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import { CountUp } from '@/components/motion/CountUp';
 
 const INITIAL_HISTORY = [
   {
@@ -71,40 +73,54 @@ export function History() {
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-8">
         {/* KPI Summary Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
-              Total Scans
-            </p>
-            <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
-              {items.length}
-            </p>
-          </div>
-          <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
-              Avg. Confidence
-            </p>
-            <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-1">
-              {items.length > 0 ? '92.2%' : '—'}
-            </p>
-          </div>
-          <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
-              Families
-            </p>
-            <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
-              {items.length > 0 ? '4' : '0'}
-            </p>
-          </div>
-          <div className="liquid-glass rounded-2xl p-4 text-center">
-            <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
-              Storage
-            </p>
-            <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
-              Local
-            </p>
-          </div>
-        </div>
+        <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <StaggerItem>
+            <div className="liquid-glass rounded-2xl p-4 text-center" data-glow="">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
+                Total Scans
+              </p>
+              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
+                <CountUp value={items.length} />
+              </p>
+            </div>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="liquid-glass rounded-2xl p-4 text-center" data-glow="">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
+                Avg. Confidence
+              </p>
+              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-1">
+                {items.length > 0 ? (
+                  <>
+                    <CountUp value={92.2} decimals={1} />%
+                  </>
+                ) : (
+                  '—'
+                )}
+              </p>
+            </div>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="liquid-glass rounded-2xl p-4 text-center" data-glow="">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
+                Families
+              </p>
+              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
+                <CountUp value={items.length > 0 ? 4 : 0} />
+              </p>
+            </div>
+          </StaggerItem>
+          <StaggerItem>
+            <div className="liquid-glass rounded-2xl p-4 text-center" data-glow="">
+              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
+                Storage
+              </p>
+              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
+                Local
+              </p>
+            </div>
+          </StaggerItem>
+        </Stagger>
 
         {/* Action bar */}
         {items.length > 0 && (
@@ -115,6 +131,7 @@ export function History() {
             <button
               type="button"
               onClick={clearHistory}
+              data-glow=""
               className="flex items-center gap-1.5 text-xs font-mono text-[var(--danger)] hover:opacity-80 transition-opacity"
             >
               <X className="w-3.5 h-3.5" />
@@ -125,12 +142,13 @@ export function History() {
 
         {/* History items */}
         {items.length > 0 ? (
-          <div className="space-y-4">
+          <Stagger className="space-y-4">
             {items.map((item) => (
-              <div
-                key={item.id}
-                className="liquid-glass-strong rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-[var(--glass-edge-hi)] transition-colors"
-              >
+              <StaggerItem key={item.id}>
+                <div
+                  data-glow=""
+                  className="liquid-glass-strong rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-[var(--glass-edge-hi)] transition-colors"
+                >
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl overflow-hidden bg-black/40 shrink-0 border border-[var(--glass-edge-mid)]">
                     <img
@@ -184,8 +202,9 @@ export function History() {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
         ) : (
           <div className="liquid-glass rounded-3xl p-12 text-center space-y-4">
             <Camera className="w-10 h-10 text-[var(--fg-subtle)] mx-auto" />

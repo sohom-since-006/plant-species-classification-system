@@ -1,3 +1,6 @@
+import { useLocation } from 'react-router-dom';
+import { LiveBackground } from '@/components/layout/LiveBackground';
+
 export type PageBackgroundProps = {
   className?: string;
 };
@@ -7,11 +10,15 @@ export type PageBackgroundProps = {
  * Features soft emerald (#10b981 / #6ee7a8) and teal (#14b8a6 / #2dd4bf) glows
  * drifting slowly (26s - 38s), overlaid with an organic leaf-vein grid and microscopic noise texture.
  *
+ * App pages (everything except the landing page) render the LiveBackground spore canvas.
  * GPU-friendly: Animates transform only using translate3d and scale.
  * Respects prefers-reduced-motion (stops drifting).
- * Dark mode keeps luminance low to maintain >10:1 contrast with text.
+ * Dark mode keeps luminance balanced to maintain >10:1 contrast with text while avoiding flat black.
  */
 export function PageBackground({ className = '' }: PageBackgroundProps) {
+  const location = useLocation();
+  const isLandingPage = location.pathname === '/';
+
   return (
     <div
       className={`fixed inset-0 -z-10 overflow-hidden pointer-events-none select-none ${className}`}
@@ -20,11 +27,20 @@ export function PageBackground({ className = '' }: PageBackgroundProps) {
       {/* ─── Base Canvas ────────────────────────────────────────────── */}
       <div className="absolute inset-0 bg-[var(--bg)] transition-colors duration-500" />
 
+      {/* ─── Deep Botanical Undertone (eliminates flat black) ──────── */}
+      <div
+        className="absolute inset-0 opacity-30 dark:opacity-35 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse at 50% -10%, rgba(16, 185, 129, 0.18) 0%, rgba(4, 28, 17, 0.10) 50%, transparent 80%)',
+        }}
+      />
+
       {/* ─── Aurora Layer ───────────────────────────────────────────── */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Blob 1: Deep Emerald Glow (Top Left / Center) */}
         <div
-          className="absolute w-[680px] h-[680px] rounded-full blur-[130px] opacity-30 dark:opacity-30 will-change-transform"
+          className="absolute w-[680px] h-[680px] rounded-full blur-[130px] opacity-35 dark:opacity-35 will-change-transform"
           style={{
             background: 'radial-gradient(circle, #10B981 0%, #047857 45%, transparent 70%)',
             top: '-15%',
@@ -35,7 +51,7 @@ export function PageBackground({ className = '' }: PageBackgroundProps) {
 
         {/* Blob 2: Vibrant Teal / Cyan Glow (Bottom Right) */}
         <div
-          className="absolute w-[620px] h-[620px] rounded-full blur-[140px] opacity-25 dark:opacity-28 will-change-transform"
+          className="absolute w-[620px] h-[620px] rounded-full blur-[140px] opacity-30 dark:opacity-32 will-change-transform"
           style={{
             background: 'radial-gradient(circle, #14B8A6 0%, #0F766E 50%, transparent 70%)',
             bottom: '-10%',
@@ -46,7 +62,7 @@ export function PageBackground({ className = '' }: PageBackgroundProps) {
 
         {/* Blob 3: Soft Mint / Sage Glow (Center Left Drift) */}
         <div
-          className="absolute w-[520px] h-[520px] rounded-full blur-[120px] opacity-20 dark:opacity-25 will-change-transform"
+          className="absolute w-[520px] h-[520px] rounded-full blur-[120px] opacity-25 dark:opacity-28 will-change-transform"
           style={{
             background: 'radial-gradient(circle, #34D399 0%, #059669 40%, transparent 70%)',
             top: '35%',
@@ -55,6 +71,9 @@ export function PageBackground({ className = '' }: PageBackgroundProps) {
           }}
         />
       </div>
+
+      {/* ─── Spore Canvas (App pages only; Landing keeps its video reel) ─── */}
+      {!isLandingPage && <LiveBackground />}
 
       {/* ─── Leaf-Vein Botanical Pattern Overlay ─────────────────────── */}
       <svg

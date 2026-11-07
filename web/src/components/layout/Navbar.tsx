@@ -26,6 +26,7 @@ export function Navbar() {
           {/* Monogram */}
           <Link
             to="/"
+            data-glow=""
             className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0 hover:scale-105 transition-transform"
             aria-label="Plant Species Classification System Home"
           >
@@ -33,9 +34,15 @@ export function Navbar() {
           </Link>
 
           {/* Center nav pill — hidden on mobile */}
-          <div className="hidden md:flex liquid-glass rounded-full p-1.5 items-center gap-1">
+          <div className="hidden md:flex liquid-glass rounded-full p-1.5 items-center gap-1" data-glow="">
             {links.map((link) => (
-              <NavLink key={link.to} to={link.to} className={navLinkClass} end={link.to === '/'}>
+              <NavLink
+                key={link.to}
+                to={link.to}
+                data-glow=""
+                className={navLinkClass}
+                end={link.to === '/'}
+              >
                 {link.label}
               </NavLink>
             ))}
@@ -53,6 +60,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
               type="button"
+              data-glow=""
             >
               <Menu className="w-5 h-5" aria-hidden="true" />
             </button>

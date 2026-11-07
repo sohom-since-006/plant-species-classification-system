@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Clock, Play, BarChart, Lightbulb, Leaf } from '@/components/icons';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 
 type ModelMetrics = {
   top1Accuracy?: string;
@@ -97,55 +98,63 @@ export function Dashboard() {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="liquid-glass-strong rounded-2xl p-5">
-              <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
-                Top-1 Accuracy
-              </p>
-              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-2">
-                {metrics.top1Accuracy}
-              </p>
-              <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
-                Strict single prediction
-              </p>
-            </div>
+          <Stagger className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <StaggerItem>
+              <div className="liquid-glass-strong rounded-2xl p-5" data-glow="">
+                <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+                  Top-1 Accuracy
+                </p>
+                <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-2">
+                  {metrics.top1Accuracy}
+                </p>
+                <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
+                  Strict single prediction
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="liquid-glass-strong rounded-2xl p-5">
-              <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
-                Top-5 Accuracy
-              </p>
-              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
-                {metrics.top5Accuracy}
-              </p>
-              <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
-                Candidate pool coverage
-              </p>
-            </div>
+            <StaggerItem>
+              <div className="liquid-glass-strong rounded-2xl p-5" data-glow="">
+                <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+                  Top-5 Accuracy
+                </p>
+                <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
+                  {metrics.top5Accuracy}
+                </p>
+                <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
+                  Candidate pool coverage
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="liquid-glass-strong rounded-2xl p-5">
-              <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
-                Macro F1-Score
-              </p>
-              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
-                {metrics.macroF1}
-              </p>
-              <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
-                Balanced across classes
-              </p>
-            </div>
+            <StaggerItem>
+              <div className="liquid-glass-strong rounded-2xl p-5" data-glow="">
+                <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+                  Macro F1-Score
+                </p>
+                <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
+                  {metrics.macroF1}
+                </p>
+                <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
+                  Balanced across classes
+                </p>
+              </div>
+            </StaggerItem>
 
-            <div className="liquid-glass-strong rounded-2xl p-5">
-              <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
-                Validation Loss
-              </p>
-              <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
-                {metrics.valLoss}
-              </p>
-              <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
-                Cross-entropy loss
-              </p>
-            </div>
-          </div>
+            <StaggerItem>
+              <div className="liquid-glass-strong rounded-2xl p-5" data-glow="">
+                <p className="text-xs font-mono uppercase text-[var(--fg-subtle)]">
+                  Validation Loss
+                </p>
+                <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
+                  {metrics.valLoss}
+                </p>
+                <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">
+                  Cross-entropy loss
+                </p>
+              </div>
+            </StaggerItem>
+          </Stagger>
         </div>
 
         {/* Local Hardware Acceleration & Environment */}
@@ -169,50 +178,57 @@ export function Dashboard() {
             </SolidButton>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div className="liquid-glass p-4 rounded-xl flex items-center gap-3">
-              <BarChart className="w-6 h-6 text-[var(--accent)] shrink-0" />
-              <div>
-                <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
-                  CPU Thread Pool
-                </p>
-                <p className="font-mono text-sm text-[var(--fg)] font-medium">
-                  {hardwareConcurrency} Logical Cores
-                </p>
+          <Stagger className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <StaggerItem>
+              <div className="liquid-glass p-4 rounded-xl flex items-center gap-3" data-glow="">
+                <BarChart className="w-6 h-6 text-[var(--accent)] shrink-0" />
+                <div>
+                  <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
+                    CPU Thread Pool
+                  </p>
+                  <p className="font-mono text-sm text-[var(--fg)] font-medium">
+                    {hardwareConcurrency} Logical Cores
+                  </p>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
 
-            <div className="liquid-glass p-4 rounded-xl flex items-center gap-3">
-              <Lightbulb className="w-6 h-6 text-[var(--accent)] shrink-0" />
-              <div>
-                <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
-                  WebGPU Support
-                </p>
-                <p className="font-mono text-sm text-[var(--fg)] font-medium flex items-center gap-1.5">
-                  {webGpuSupported ? 'Supported' : 'WASM Fallback'}
-                </p>
+            <StaggerItem>
+              <div className="liquid-glass p-4 rounded-xl flex items-center gap-3" data-glow="">
+                <Lightbulb className="w-6 h-6 text-[var(--accent)] shrink-0" />
+                <div>
+                  <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
+                    WebGPU Support
+                  </p>
+                  <p className="font-mono text-sm text-[var(--fg)] font-medium flex items-center gap-1.5">
+                    {webGpuSupported ? 'Supported' : 'WASM Fallback'}
+                  </p>
+                </div>
               </div>
-            </div>
+            </StaggerItem>
 
-            <div className="liquid-glass p-4 rounded-xl flex items-center gap-3">
-              <Clock className="w-6 h-6 text-[var(--accent)] shrink-0" />
-              <div>
-                <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
-                  Local Execution Test
-                </p>
-                <p className="font-mono text-sm text-[var(--fg)] font-medium">
-                  {localBenchmarkResult !== null
-                    ? `${localBenchmarkResult} ms`
-                    : 'Not run yet'}
-                </p>
+            <StaggerItem>
+              <div className="liquid-glass p-4 rounded-xl flex items-center gap-3" data-glow="">
+                <Clock className="w-6 h-6 text-[var(--accent)] shrink-0" />
+                <div>
+                  <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">
+                    Local Execution Test
+                  </p>
+                  <p className="font-mono text-sm text-[var(--fg)] font-medium">
+                    {localBenchmarkResult !== null
+                      ? `${localBenchmarkResult} ms`
+                      : 'Not run yet'}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </Stagger>
         </div>
 
         {/* Model Architecture & Pipeline Spec */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="liquid-glass-strong rounded-3xl p-8 space-y-4">
+        <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <StaggerItem>
+            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4" data-glow="">
             <h3 className="font-heading italic text-2xl text-[var(--fg)]">
               Architecture &amp; Pipeline
             </h3>
@@ -239,8 +255,10 @@ export function Dashboard() {
               </li>
             </ul>
           </div>
+        </StaggerItem>
 
-          <div className="liquid-glass-strong rounded-3xl p-8 space-y-4">
+        <StaggerItem>
+          <div className="liquid-glass-strong rounded-3xl p-8 space-y-4" data-glow="">
             <div className="flex items-center gap-2">
               <Leaf className="w-5 h-5 text-[var(--accent)]" />
               <h3 className="font-heading italic text-2xl text-[var(--fg)]">
@@ -270,7 +288,8 @@ export function Dashboard() {
               </li>
             </ul>
           </div>
-        </div>
+        </StaggerItem>
+      </Stagger>
       </div>
     </div>
   );

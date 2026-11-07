@@ -58,6 +58,7 @@ export function UploadZone({
           inputRef.current?.click();
         }
       }}
+      data-glow=""
       className={`liquid-glass rounded-[1.25rem] border-2 border-dashed ${
         isDragging ? 'border-[var(--accent)] bg-emerald-500/10' : 'border-[var(--glass-edge-mid)]'
       } hover:border-[var(--accent)] p-8 text-center flex flex-col items-center justify-center gap-3 transition-all cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${className}`}

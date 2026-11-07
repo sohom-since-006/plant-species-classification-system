@@ -21,7 +21,8 @@ export function Footer() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-xs font-body font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors"
+                data-glow=""
+                className="text-xs font-body font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] transition-colors px-2 py-1 rounded-md"
               >
                 {link.label}
               </Link>

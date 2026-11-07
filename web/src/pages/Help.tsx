@@ -1,5 +1,6 @@
 import { PageHero } from '@/components/layout/PageHero';
 import { Info, Lightbulb, X } from '@/components/icons';
+import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 
 const FAQS = [
   {
@@ -38,51 +39,61 @@ export function Help() {
             How to Take Optimal Botanical Photos
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* DO card */}
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 border-l-4 border-l-[var(--accent)]">
-              <div className="flex items-center gap-2 text-[var(--accent)]">
-                <Lightbulb className="w-5 h-5" />
-                <h3 className="font-heading italic text-xl">Recommended Practices</h3>
+            <StaggerItem>
+              <div
+                data-glow=""
+                className="liquid-glass-strong rounded-3xl p-8 space-y-4 border-l-4 border-l-[var(--accent)] h-full"
+              >
+                <div className="flex items-center gap-2 text-[var(--accent)]">
+                  <Lightbulb className="w-5 h-5" />
+                  <h3 className="font-heading italic text-xl">Recommended Practices</h3>
+                </div>
+                <ul className="space-y-3 text-xs text-[var(--fg-muted)] leading-relaxed">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--accent)] font-bold">•</span>
+                    <span><strong>Clear focus on diagnostic organs:</strong> Center a single mature leaf, blossom petal, or seed pod clearly.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--accent)] font-bold">•</span>
+                    <span><strong>Diffused natural lighting:</strong> Morning or late afternoon daylight reveals natural color and vein contours without harsh flash reflections.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--accent)] font-bold">•</span>
+                    <span><strong>Isolate against neutral background:</strong> Place your hand or a neutral surface behind thin stems to eliminate background clutter.</span>
+                  </li>
+                </ul>
               </div>
-              <ul className="space-y-3 text-xs text-[var(--fg-muted)] leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--accent)] font-bold">•</span>
-                  <span><strong>Clear focus on diagnostic organs:</strong> Center a single mature leaf, blossom petal, or seed pod clearly.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--accent)] font-bold">•</span>
-                  <span><strong>Diffused natural lighting:</strong> Morning or late afternoon daylight reveals natural color and vein contours without harsh flash reflections.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--accent)] font-bold">•</span>
-                  <span><strong>Isolate against neutral background:</strong> Place your hand or a neutral surface behind thin stems to eliminate background clutter.</span>
-                </li>
-              </ul>
-            </div>
+            </StaggerItem>
 
             {/* DON'T card */}
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 border-l-4 border-l-[var(--danger)]">
-              <div className="flex items-center gap-2 text-[var(--danger)]">
-                <X className="w-5 h-5" />
-                <h3 className="font-heading italic text-xl">Avoid These Mistakes</h3>
+            <StaggerItem>
+              <div
+                data-glow=""
+                className="liquid-glass-strong rounded-3xl p-8 space-y-4 border-l-4 border-l-[var(--danger)] h-full"
+              >
+                <div className="flex items-center gap-2 text-[var(--danger)]">
+                  <X className="w-5 h-5" />
+                  <h3 className="font-heading italic text-xl">Avoid These Mistakes</h3>
+                </div>
+                <ul className="space-y-3 text-xs text-[var(--fg-muted)] leading-relaxed">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--danger)] font-bold">•</span>
+                    <span><strong>Distant landscape shots:</strong> When a tree or plant occupies only a small fraction of the frame, neural networks cannot discern leaf teeth.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--danger)] font-bold">•</span>
+                    <span><strong>Heavy motion blur:</strong> Shaking hands in wind causes loss of edge sharpness required for convolutional feature extraction.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[var(--danger)] font-bold">•</span>
+                    <span><strong>Extensive wilt or disease:</strong> Severely dried or decayed specimens can deviate from healthy taxonomic training distributions.</span>
+                  </li>
+                </ul>
               </div>
-              <ul className="space-y-3 text-xs text-[var(--fg-muted)] leading-relaxed">
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--danger)] font-bold">•</span>
-                  <span><strong>Distant landscape shots:</strong> When a tree or plant occupies only a small fraction of the frame, neural networks cannot discern leaf teeth.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--danger)] font-bold">•</span>
-                  <span><strong>Heavy motion blur:</strong> Shaking hands in wind causes loss of edge sharpness required for convolutional feature extraction.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[var(--danger)] font-bold">•</span>
-                  <span><strong>Extensive wilt or disease:</strong> Severely dried or decayed specimens can deviate from healthy taxonomic training distributions.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+            </StaggerItem>
+          </Stagger>
         </div>
 
         {/* FAQs */}
@@ -91,24 +102,26 @@ export function Help() {
             Frequently Asked Questions
           </h2>
 
-          <div className="space-y-4">
+          <Stagger className="space-y-4">
             {FAQS.map((faq, idx) => (
-              <div
-                key={idx}
-                className="liquid-glass rounded-2xl p-6 space-y-2 hover:border-[var(--glass-edge-hi)] transition-colors"
-              >
-                <div className="flex items-center gap-2">
-                  <Lightbulb className="w-4 h-4 text-[var(--accent)] shrink-0" />
-                  <h3 className="font-heading italic text-xl text-[var(--fg)]">
-                    {faq.q}
-                  </h3>
+              <StaggerItem key={idx}>
+                <div
+                  data-glow=""
+                  className="liquid-glass rounded-2xl p-6 space-y-2 hover:border-[var(--glass-edge-hi)] transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <Lightbulb className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                    <h3 className="font-heading italic text-xl text-[var(--fg)]">
+                      {faq.q}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-[var(--fg-muted)] leading-relaxed pl-6">
+                    {faq.a}
+                  </p>
                 </div>
-                <p className="text-xs text-[var(--fg-muted)] leading-relaxed pl-6">
-                  {faq.a}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
 
         {/* Safety Disclaimer */}
