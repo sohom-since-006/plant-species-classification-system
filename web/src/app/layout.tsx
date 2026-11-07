@@ -24,7 +24,7 @@ export function Layout() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col overflow-x-hidden">
       <PageBackground />
       <Navbar />
       <main className="flex-1 w-full relative">

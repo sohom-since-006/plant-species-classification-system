@@ -67,4 +67,3 @@ export function ImagesPerSpeciesChart({ className = '' }: { className?: string }
 }
 
 export default ImagesPerSpeciesChart;
-

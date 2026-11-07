@@ -69,7 +69,7 @@ export function Home() {
   };
 
   return (
-    <div className="relative w-full text-[var(--fg)]">
+    <div className="relative w-full overflow-hidden text-[var(--fg)]">
       {/* ─────────────────────────────────────────────────────────────
           1. HERO SECTION (h-screen, full-bleed, parallax)
       ───────────────────────────────────────────────────────────── */}

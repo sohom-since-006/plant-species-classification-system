@@ -29,4 +29,3 @@ export interface DistributionDataFile {
   source: string;
   species: Record<string, SpeciesDistributionRecord>;
 }
-

@@ -49,4 +49,3 @@ export function ConfusionMatrixChart({ className = '' }: { className?: string })
 }
 
 export default ConfusionMatrixChart;
-

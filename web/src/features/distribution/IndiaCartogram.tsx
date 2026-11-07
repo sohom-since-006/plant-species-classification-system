@@ -169,4 +169,3 @@ export function IndiaCartogram({ states, countries, className = '' }: IndiaCarto
 }
 
 export default IndiaCartogram;
-

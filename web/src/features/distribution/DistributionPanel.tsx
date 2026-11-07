@@ -141,4 +141,3 @@ export function DistributionPanel({ speciesId, className = '' }: DistributionPan
 }
 
 export default DistributionPanel;
-

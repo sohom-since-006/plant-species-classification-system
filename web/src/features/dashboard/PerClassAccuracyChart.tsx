@@ -67,4 +67,3 @@ export function PerClassAccuracyChart({ className = '' }: { className?: string }
 }
 
 export default PerClassAccuracyChart;
-
