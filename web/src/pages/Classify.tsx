@@ -1,9 +1,10 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Tabs } from '@/components/ui/Tabs';
+import { Skeleton } from '@/components/ui/Skeleton';
 import { useToast } from '@/components/ui/useToast';
 import { CameraCapture } from '@/features/classify/CameraCapture';
 import { UploadSection, type SampleImage } from '@/features/classify/UploadSection';
@@ -22,6 +23,8 @@ import type { ClassificationResult, SavedPrediction, PipelineStage } from '@/typ
 import type { Species } from '@/types/species';
 import { ArrowUpRight, History, Leaf } from '@/components/icons';
 import { springDefault, easeOutExpo, DURATION_PAGE, DURATION_BASE, usePrefersReducedMotion } from '@/lib/motion';
+
+const DistributionPanel = lazy(() => import('@/features/distribution/DistributionPanel'));
 
 const SAMPLE_SPECIMENS: SampleImage[] = [
   {
@@ -432,6 +435,13 @@ export function Classify() {
                 </div>
               </div>
             )}
+
+            {/* Where It's Found - Coarse Occurrence Distribution */}
+            <div className="pt-4 border-t border-white/10 space-y-4">
+              <Suspense fallback={<Skeleton className="h-72 w-full rounded-2xl" />}>
+                <DistributionPanel speciesId={topSpecies.id} />
+              </Suspense>
+            </div>
           </div>
         ) : (
           <div className="liquid-glass rounded-xl p-6 text-center text-white/60 text-xs">

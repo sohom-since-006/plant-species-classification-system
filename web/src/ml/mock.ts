@@ -64,56 +64,56 @@ function generateSyntheticCam(): Float32Array {
  *  3: Unknown / Not a Plant (prob < 0.35, rejected)
  */
 export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
-  // Case 0: High confidence (> 0.85)
+  // Case 0: High confidence (> 0.85) - Tulsi
   0: {
     top3: [
-      { speciesId: 1, prob: 0.94 }, // Tulsi (Holy Basil)
-      { speciesId: 3, prob: 0.04 }, // Sweet Basil
-      { speciesId: 2, prob: 0.01 }, // Neem
+      { speciesId: 0, prob: 0.94 }, // Tulsi (Holy Basil)
+      { speciesId: 97, prob: 0.04 }, // Sweet Basil
+      { speciesId: 1, prob: 0.01 }, // Neem
     ],
     tier: 'high',
     unknown: false,
     similar: [
-      { speciesId: 3, ml: 0.04, visual: 0.84, final: 0.360 }, // Sweet Basil (Same genus Ocimum bonus +0.05)
-      { speciesId: 7, ml: 0.005, visual: 0.58, final: 0.235 }, // Curry Leaf
-      { speciesId: 2, ml: 0.01, visual: 0.44, final: 0.182 }, // Neem
+      { speciesId: 97, ml: 0.04, visual: 0.84, final: 0.360 }, // Sweet Basil (Same genus Ocimum bonus +0.05)
+      { speciesId: 9, ml: 0.005, visual: 0.58, final: 0.235 }, // Curry Leaf
+      { speciesId: 1, ml: 0.01, visual: 0.44, final: 0.182 }, // Neem
     ],
     camData: generateSyntheticCam(),
     modelVersion: 'mock-v1.0.0-calibrated',
     genusFallback: null,
   },
 
-  // Case 1: Medium confidence (0.60 to 0.85)
+  // Case 1: Medium confidence (0.60 to 0.85) - Hibiscus
   1: {
     top3: [
-      { speciesId: 4, prob: 0.74 }, // Tropical Hibiscus
-      { speciesId: 7, prob: 0.16 }, // Curry Leaf
-      { speciesId: 5, prob: 0.07 }, // Money Plant
+      { speciesId: 20, prob: 0.74 }, // Tropical Hibiscus
+      { speciesId: 9, prob: 0.16 }, // Curry Leaf
+      { speciesId: 80, prob: 0.07 }, // Money Plant
     ],
     tier: 'medium',
     unknown: false,
     similar: [
-      { speciesId: 7, ml: 0.16, visual: 0.62, final: 0.344 },
-      { speciesId: 5, ml: 0.07, visual: 0.51, final: 0.246 },
-      { speciesId: 1, ml: 0.02, visual: 0.39, final: 0.168 },
+      { speciesId: 9, ml: 0.16, visual: 0.62, final: 0.344 },
+      { speciesId: 80, ml: 0.07, visual: 0.51, final: 0.246 },
+      { speciesId: 0, ml: 0.02, visual: 0.39, final: 0.168 },
     ],
     camData: generateSyntheticCam(),
     modelVersion: 'mock-v1.0.0-calibrated',
     genusFallback: null,
   },
 
-  // Case 2: Low confidence (< 0.60) with Genus Fallback
+  // Case 2: Low confidence (< 0.60) with Genus Fallback - Sweet Basil vs Tulsi (genus Ocimum)
   2: {
     top3: [
-      { speciesId: 3, prob: 0.52 }, // Sweet Basil (Ocimum)
-      { speciesId: 1, prob: 0.38 }, // Tulsi (Ocimum)
-      { speciesId: 3, prob: 0.07 }, // Ocimum relative
+      { speciesId: 97, prob: 0.52 }, // Sweet Basil (Ocimum)
+      { speciesId: 0, prob: 0.38 }, // Tulsi (Ocimum)
+      { speciesId: 97, prob: 0.07 }, // Ocimum relative
     ],
     tier: 'low',
     unknown: false,
     similar: [
-      { speciesId: 1, ml: 0.38, visual: 0.91, final: 0.648 },
-      { speciesId: 7, ml: 0.03, visual: 0.48, final: 0.210 },
+      { speciesId: 0, ml: 0.38, visual: 0.91, final: 0.648 },
+      { speciesId: 9, ml: 0.03, visual: 0.48, final: 0.210 },
     ],
     camData: generateSyntheticCam(),
     modelVersion: 'mock-v1.0.0-calibrated',
@@ -123,9 +123,9 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
   // Case 3: Unknown / Not a plant (prob < 0.35, rejected)
   3: {
     top3: [
-      { speciesId: 5, prob: 0.23 },
-      { speciesId: 6, prob: 0.17 },
-      { speciesId: 2, prob: 0.11 },
+      { speciesId: 80, prob: 0.23 },
+      { speciesId: 2, prob: 0.17 },
+      { speciesId: 1, prob: 0.11 },
     ],
     tier: 'unknown',
     unknown: true,

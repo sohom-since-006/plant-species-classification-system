@@ -1,8 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, lazy, Suspense } from 'react';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Clock, Play, BarChart, Lightbulb, Leaf } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import { Skeleton } from '@/components/ui/Skeleton';
+
+// Lazy-load dashboard charts so Recharts code is isolated in a separate chunk
+const ImagesPerSpeciesChart = lazy(() => import('@/features/dashboard/ImagesPerSpeciesChart'));
+const DatasetSplitChart = lazy(() => import('@/features/dashboard/DatasetSplitChart'));
+const FamilyBreakdownChart = lazy(() => import('@/features/dashboard/FamilyBreakdownChart'));
+const PerClassAccuracyChart = lazy(() => import('@/features/dashboard/PerClassAccuracyChart'));
+const ConfusionMatrixChart = lazy(() => import('@/features/dashboard/ConfusionMatrixChart'));
+const CalibrationChart = lazy(() => import('@/features/dashboard/CalibrationChart'));
 
 type ModelMetrics = {
   top1Accuracy?: string;
@@ -223,6 +232,39 @@ export function Dashboard() {
               </div>
             </StaggerItem>
           </Stagger>
+        </div>
+
+        {/* ─── Statistical Graphs & Performance Metrics ────────────── */}
+        <div className="space-y-6">
+          <div>
+            <h3 className="font-heading italic text-2xl text-[var(--fg)]">
+              Training &amp; Diagnostic Analytics
+            </h3>
+            <p className="text-xs text-[var(--fg-muted)] font-body">
+              Empirical data distributions, class confusion matrices, and confidence calibration.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <ImagesPerSpeciesChart />
+            </Suspense>
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <DatasetSplitChart />
+            </Suspense>
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <FamilyBreakdownChart />
+            </Suspense>
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <PerClassAccuracyChart />
+            </Suspense>
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <ConfusionMatrixChart />
+            </Suspense>
+            <Suspense fallback={<Skeleton className="h-64 rounded-2xl" />}>
+              <CalibrationChart />
+            </Suspense>
+          </div>
         </div>
 
         {/* Model Architecture & Pipeline Spec */}

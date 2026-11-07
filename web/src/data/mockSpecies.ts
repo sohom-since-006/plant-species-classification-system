@@ -2,7 +2,7 @@ import type { Species, SpeciesLookAlike } from '@/types/species';
 
 export const MOCK_SPECIES: Species[] = [
   {
-    id: 1,
+    id: 0,
     slug: 'ocimum-tenuiflorum',
     commonName: 'Tulsi (Holy Basil)',
     scientificName: 'Ocimum tenuiflorum',
@@ -41,7 +41,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Ocimum_tenuiflorum',
   },
   {
-    id: 2,
+    id: 1,
     slug: 'azadirachta-indica',
     commonName: 'Neem',
     scientificName: 'Azadirachta indica',
@@ -80,7 +80,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Azadirachta_indica',
   },
   {
-    id: 3,
+    id: 97,
     slug: 'ocimum-basilicum',
     commonName: 'Sweet Basil',
     scientificName: 'Ocimum basilicum',
@@ -119,7 +119,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Basil',
   },
   {
-    id: 4,
+    id: 20,
     slug: 'hibiscus-rosa-sinensis',
     commonName: 'Tropical Hibiscus',
     scientificName: 'Hibiscus rosa-sinensis',
@@ -158,7 +158,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis',
   },
   {
-    id: 5,
+    id: 80,
     slug: 'epipremnum-aureum',
     commonName: 'Money Plant (Golden Pothos)',
     scientificName: 'Epipremnum aureum',
@@ -197,7 +197,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Epipremnum_aureum',
   },
   {
-    id: 6,
+    id: 2,
     slug: 'aloe-vera',
     commonName: 'Aloe Vera',
     scientificName: 'Aloe vera',
@@ -236,7 +236,7 @@ export const MOCK_SPECIES: Species[] = [
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Aloe_vera',
   },
   {
-    id: 7,
+    id: 9,
     slug: 'murraya-koenigii',
     commonName: 'Curry Leaf Tree',
     scientificName: 'Murraya koenigii',
@@ -278,26 +278,26 @@ export const MOCK_SPECIES: Species[] = [
 
 export const MOCK_LOOKALIKES: SpeciesLookAlike[] = [
   {
-    speciesId: 1, // Tulsi
-    lookAlikeId: 3, // Sweet Basil
+    speciesId: 0, // Tulsi
+    lookAlikeId: 97, // Sweet Basil
     howToTellApart:
       'Tulsi exhibits woody square stems with purplish hues and has a peppery, clove-forward aroma. Sweet Basil possesses tender green stems with glossy, cupped leaves and a sweet anise fragrance.',
   },
   {
-    speciesId: 3, // Sweet Basil
-    lookAlikeId: 1, // Tulsi
+    speciesId: 97, // Sweet Basil
+    lookAlikeId: 0, // Tulsi
     howToTellApart:
       'Sweet Basil foliage is lighter green, softer, and broader with a sweet herbal aroma, whereas Tulsi features darker serrated leaves and a sharp pungent fragrance.',
   },
   {
-    speciesId: 2, // Neem
-    lookAlikeId: 7, // Curry Leaf
+    speciesId: 1, // Neem
+    lookAlikeId: 9, // Curry Leaf
     howToTellApart:
       'Neem leaflets are distinctly sickle-shaped with jagged saw-toothed margins and an intensely bitter taste. Curry leaf leaflets are smaller, aromatic, slightly dentate, and savory when bruised.',
   },
   {
-    speciesId: 7, // Curry Leaf
-    lookAlikeId: 2, // Neem
+    speciesId: 9, // Curry Leaf
+    lookAlikeId: 1, // Neem
     howToTellApart:
       'Curry leaf emits a fragrant savory kitchen aroma with smaller delicate leaflets, whereas Neem has larger, intensely bitter, curved asymmetrical leaves.',
   },

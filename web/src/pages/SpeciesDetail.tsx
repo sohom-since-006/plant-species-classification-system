@@ -1,7 +1,12 @@
+import { lazy, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
+import { Skeleton } from '@/components/ui/Skeleton';
 import { ArrowUpRight, Info, Leaf } from '@/components/icons';
+import { MOCK_SPECIES } from '@/data/mockSpecies';
+
+const DistributionPanel = lazy(() => import('@/features/distribution/DistributionPanel'));
 
 type SpeciesDetailData = {
   commonName: string;
@@ -98,6 +103,9 @@ export function SpeciesDetail() {
   const { slug } = useParams<{ slug: string }>();
 
   const species = (slug && SPECIES_CATALOG[slug]) || DEFAULT_SPECIES;
+  const matchedMock = MOCK_SPECIES.find(
+    (s) => s.slug === slug || s.scientificName.toLowerCase() === species.scientificName.toLowerCase(),
+  );
 
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
@@ -191,6 +199,13 @@ export function SpeciesDetail() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Where It's Found - Coarse Occurrence Distribution */}
+        <div className="space-y-4">
+          <Suspense fallback={<Skeleton className="h-80 rounded-3xl" />}>
+            <DistributionPanel speciesId={matchedMock?.id} />
+          </Suspense>
         </div>
 
         {/* Safety & Medicinal Disclaimer per Rule 8 */}
