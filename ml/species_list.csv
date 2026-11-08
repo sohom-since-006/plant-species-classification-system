@@ -23,11 +23,11 @@ id,common_name,scientific_name,family,genus,type,origin,hindi_name,bengali_name,
 21,Marigold,Tagetes erecta,Asteraceae,Tagetes,Herb,Introduced,गेंदा,গাঁদা,African marigold. Vague group resolved to T. erecta
 22,Jasmine,Jasminum sambac,Oleaceae,Jasminum,Shrub,Native,मोगरा,বেল ফুল,Arabian jasmine / Mogra. Vague group resolved to J. sambac. Look-alike pair with Night jasmine
 23,Lotus,Nelumbo nucifera,Nelumbonaceae,Nelumbo,Aquatic,Native,कमल,পদ্ম,Sacred aquatic lotus; National flower of India
-24,Rose,Rosa chinensis,Rosaceae,Rosa,Shrub,Introduced,गुलाब,গোলাপ,China rose. Vague group resolved to R. chinensis
+24,Rose,Rosa,Rosaceae,Rosa,Shrub,Introduced,गुलाब,গোলাপ,genus-level class (Rosa spp.)
 25,Frangipani,Plumeria rubra,Apocynaceae,Plumeria,Tree,Introduced,चम्पा,কাঠগোলাপ,Red frangipani / Temple tree. Look-alike pair with Oleander
 26,Oleander,Nerium oleander,Apocynaceae,Nerium,Shrub,Introduced,कनेर,করবী,Toxic ornamental shrub. Look-alike pair with Frangipani
 27,Bougainvillea,Bougainvillea spectabilis,Nyctaginaceae,Bougainvillea,Climber,Introduced,बोगनवेलिया,বাগানবিলাস,Great bougainvillea ornamental
-28,Tuberose,Polianthes tuberosa,Asparagaceae,Polianthes,Herb,Introduced,रजनीगंधा,রজনীগন্ধা,Accepted GBIF name Polianthes tuberosa (syn. Agave amica)
+28,Butterfly pea,Clitoria ternatea,Fabaceae,Clitoria,Climber,Native,अपराजिता,অপরাজিতা,"replaces Tuberose, only 4 occurrences with images"
 29,Night jasmine,Nyctanthes arbor-tristis,Oleaceae,Nyctanthes,Tree,Native,पारिजात,শিউলি,Parijat / Shiuli. Look-alike pair with Arabian jasmine
 30,Gulmohar,Delonix regia,Fabaceae,Delonix,Tree,Introduced,गुलमोहर,কৃষ্ণচূড়া,Flamboyant flame tree
 31,Periwinkle,Catharanthus roseus,Apocynaceae,Catharanthus,Herb,Introduced,सदाबहार,নয়নতারা,Madagascar periwinkle (Sadabahar)
@@ -90,7 +90,7 @@ id,common_name,scientific_name,family,genus,type,origin,hindi_name,bengali_name,
 88,Boston fern,Nephrolepis exaltata,Nephrolepidaceae,Nephrolepis,Fern,Introduced,बोस्टन फर्न,বোস্টন ফার্ন,Sword fern. Vague group resolved to N. exaltata. TODO(verify) vernacular transliteration
 89,Aglaonema,Aglaonema commutatum,Araceae,Aglaonema,Herb,Introduced,एग्लोनिमा,অ্যাগ্লোনেমা,Chinese evergreen. Vague group resolved to A. commutatum. TODO(verify) vernacular transliteration
 90,Dieffenbachia,Dieffenbachia seguine,Araceae,Dieffenbachia,Herb,Introduced,डम्ब केन,ডাম্ব কেন,Dumb cane. Vague group resolved to D. seguine. TODO(verify) vernacular transliteration
-91,Zebra plant,Haworthiopsis attenuata,Asphodelaceae,Haworthiopsis,Succulent,Introduced,ज़ेबरा हॉवर्थिया,জেব্রা হাওয়ার্থিয়া,Zebra haworthia. Vague group resolved from Aloe-type succulents to H. attenuata. TODO(verify) vernacular transliteration
+91,Patharchatta / Air plant,Kalanchoe pinnata,Crassulaceae,Kalanchoe,Succulent,Introduced,पत्थरचट्टा,পাথরকুচি,Air plant / Life plant / Miracle leaf. Vague group resolved to K. pinnata
 92,Sunflower,Helianthus annuus,Asteraceae,Helianthus,Herb,Introduced,सूरजमुखी,সূর্যমুখী,Common annual sunflower
 93,Daisy,Bellis perennis,Asteraceae,Bellis,Herb,Introduced,डेज़ी,ডেইজি,English daisy / Common daisy. Vague group resolved to B. perennis. TODO(verify) vernacular transliteration
 94,Dandelion,Taraxacum officinale,Asteraceae,Taraxacum,Herb,Introduced,सिंहपर्णी,সিংহপর্ণী,Common dandelion
@@ -105,7 +105,7 @@ id,common_name,scientific_name,family,genus,type,origin,hindi_name,bengali_name,
 103,Cosmos,Cosmos bipinnatus,Asteraceae,Cosmos,Herb,Introduced,कॉस्मॉस,কসমস,Garden cosmos. Vague group resolved to C. bipinnatus. TODO(verify) vernacular transliteration
 104,Chrysanthemum,Chrysanthemum indicum,Asteraceae,Chrysanthemum,Herb,Native,गुलदाउदी,চন্দ্রমল্লিকা,Indian chrysanthemum. Vague group resolved to C. indicum
 105,Gerbera,Gerbera jamesonii,Asteraceae,Gerbera,Herb,Introduced,जरबेरा,জার্বেরা,Barberton daisy. Vague group resolved to G. jamesonii. TODO(verify) vernacular transliteration
-106,Orchid,Phalaenopsis amabilis,Orchidaceae,Phalaenopsis,Epiphyte,Introduced,मून ऑर्किड,মুন অর্কিড,Moon orchid / Moth orchid. Vague group resolved to P. amabilis. TODO(verify) vernacular transliteration
+106,Foxtail orchid,Rhynchostylis retusa,Orchidaceae,Rhynchostylis,Epiphyte,Native,कपोत फूल,কপোত ফুল,Foxtail orchid (Kopou phool). Vague group resolved to R. retusa. TODO(verify) vernacular transliteration
 107,Water hyacinth,Pontederia crassipes,Pontederiaceae,Pontederia,Aquatic,Invasive,जलकुंभी,কচুরিপানা,Accepted GBIF name Pontederia crassipes (syn. Eichhornia crassipes)
 108,Sensitive plant,Mimosa pudica,Fabaceae,Mimosa,Herb,Introduced,छुईमुई,লজ্জাবতী,Touch-me-not / Shameplant
 109,Parthenium,Parthenium hysterophorus,Asteraceae,Parthenium,Herb,Invasive,गाजर घास,গাজর ঘাস,Carrot grass / Santa Maria feverfew

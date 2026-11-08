@@ -357,6 +357,7 @@ class ImageJobMeta:
     creator: str
     norm_lic: str
     source_url: str
+    sub_species_name: str = ""
 
 
 def download_and_process_image_worker(
@@ -438,6 +439,11 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=DEFAULT_WORKERS,
         help=f"Number of concurrent worker threads for image downloads (default {DEFAULT_WORKERS}).",
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="For specified species, move existing folder to ml/data/replaced/, back up credits CSV, and download fresh.",
     )
     parser.add_argument(
         "--dry-run",
@@ -558,6 +564,62 @@ def main() -> None:
             )
         return
 
+    if args.replace and not args.dry_run and not args.count_only:
+        replace_ids = {int(sp["id"]) for sp in selected_species}
+        replaced_dir = out_dir / "replaced"
+        replaced_dir.mkdir(parents=True, exist_ok=True)
+
+        # 1. Move existing raw directories for selected species to ml/data/replaced/
+        if raw_dir.exists():
+            for folder in list(raw_dir.iterdir()):
+                if folder.is_dir():
+                    prefix = folder.name.split("_")[0]
+                    if prefix.isdigit() and int(prefix) in replace_ids:
+                        target_folder = replaced_dir / folder.name
+                        if target_folder.exists():
+                            target_folder = (
+                                replaced_dir / f"{folder.name}_{int(time.time())}"
+                            )
+                        shutil.move(str(folder), str(target_folder))
+                        logger.info(
+                            "Moved existing raw folder for ID %s to replaced archive: %s -> %s",
+                            prefix,
+                            folder,
+                            target_folder,
+                        )
+
+        # 2. Back up credits CSV and remove rows for replaced species
+        if credits_file.exists():
+            backup_file = (
+                credits_file.parent / f"dataset_credits_backup_{int(time.time())}.csv"
+            )
+            shutil.copy2(credits_file, backup_file)
+            logger.info("Backed up dataset credits to %s", backup_file)
+
+            kept_rows: list[list[str]] = []
+            with open(credits_file, mode="r", encoding="utf-8") as cf:
+                reader = csv.reader(cf)
+                header = next(reader, None)
+                if header:
+                    kept_rows.append(header)
+                for row in reader:
+                    if row and len(row) > 0:
+                        try:
+                            row_sid = int(row[0])
+                            if row_sid in replace_ids:
+                                continue
+                        except ValueError:
+                            pass
+                        kept_rows.append(row)
+
+            with open(credits_file, mode="w", newline="", encoding="utf-8") as cf:
+                writer = csv.writer(cf)
+                writer.writerows(kept_rows)
+            logger.info(
+                "Removed credits rows for replaced species IDs: %s",
+                sorted(replace_ids),
+            )
+
     # Load existing credits for idempotency
     downloaded_urls, downloaded_occurrences, counts_by_species = load_existing_credits(
         credits_file
@@ -610,17 +672,148 @@ def main() -> None:
             if current_count >= target_per_species:
                 continue
 
-            # Resolve taxonKey in GBIF
-            taxon_key, _ = resolve_species_taxon(session, sci_name)
-            if not taxon_key:
-                logger.error("Could not resolve taxonKey for '%s'. Skipping.", sci_name)
-                continue
+            is_genus_level = "genus-level" in sp.get("notes", "").lower()
+            query_targets: list[tuple[int, str, int]] = []
+            species_composition: dict[str, int] = {}
+
+            if is_genus_level:
+                genus_key, genus_name = resolve_species_taxon(session, sci_name)
+                if not genus_key:
+                    logger.error(
+                        "Could not resolve genus taxonKey for '%s'. Skipping.",
+                        sci_name,
+                    )
+                    continue
+
+                logger.info(
+                    "Species %d (%s) is genus-level. Querying top species facets for genusKey %d (%s)...",
+                    sid,
+                    common_name,
+                    genus_key,
+                    genus_name,
+                )
+
+                # Check establishmentMeans field
+                est_params: dict[str, Any] = {
+                    "datasetKey": dataset_key,
+                    "genusKey": genus_key,
+                    "mediaType": "StillImage",
+                    "occurrenceStatus": "PRESENT",
+                    "license": ALLOWED_GBIF_LICENSES,
+                    "facet": "establishmentMeans",
+                    "facetLimit": 20,
+                    "limit": 0,
+                }
+                cultivated_managed_count = 0
+                try:
+                    time.sleep(0.12)
+                    est_resp = session.get(
+                        f"{GBIF_API_BASE}/occurrence/search",
+                        params=est_params,
+                        timeout=15,
+                    )
+                    if est_resp.ok:
+                        for facet in est_resp.json().get("facets", []):
+                            if facet.get("field") == "ESTABLISHMENT_MEANS":
+                                for count_entry in facet.get("counts", []):
+                                    name_val = str(count_entry.get("name", "")).lower()
+                                    if any(
+                                        term in name_val
+                                        for term in ["cultivated", "managed"]
+                                    ):
+                                        cultivated_managed_count += int(
+                                            count_entry.get("count", 0)
+                                        )
+                except requests.RequestException:
+                    pass
+
+                if cultivated_managed_count > 0:
+                    logger.info(
+                        "Found %d cultivated/managed occurrences in GBIF for genus %s.",
+                        cultivated_managed_count,
+                        genus_name,
+                    )
+                else:
+                    logger.info(
+                        "GBIF establishmentMeans check for genus %s (dataset: %s): "
+                        "0 cultivated/managed records exposed in the iNaturalist Research-grade dataset "
+                        "(iNaturalist captive/cultivated records are excluded from research-grade).",
+                        genus_name,
+                        dataset_key,
+                    )
+
+                # Query top 40 species under this genus
+                facet_params: dict[str, Any] = {
+                    "datasetKey": dataset_key,
+                    "genusKey": genus_key,
+                    "mediaType": "StillImage",
+                    "occurrenceStatus": "PRESENT",
+                    "license": ALLOWED_GBIF_LICENSES,
+                    "facet": "speciesKey",
+                    "facetLimit": 50,
+                    "limit": 0,
+                }
+                top_species_keys: list[int] = []
+                try:
+                    time.sleep(0.12)
+                    f_resp = session.get(
+                        f"{GBIF_API_BASE}/occurrence/search",
+                        params=facet_params,
+                        timeout=15,
+                    )
+                    f_resp.raise_for_status()
+                    for facet in f_resp.json().get("facets", []):
+                        if facet.get("field") == "SPECIES_KEY":
+                            for count_entry in facet.get("counts", []):
+                                try:
+                                    top_species_keys.append(int(count_entry["name"]))
+                                except (KeyError, ValueError):
+                                    continue
+                except requests.RequestException as exc:
+                    logger.error(
+                        "Failed to query species facets for genus %s: %s",
+                        genus_name,
+                        exc,
+                    )
+                    continue
+
+                top_species_keys = top_species_keys[:40]
+                logger.info(
+                    "Selected top %d species for genus %s. Fetching species names...",
+                    len(top_species_keys),
+                    genus_name,
+                )
+
+                for skey in top_species_keys:
+                    s_name = f"Species {skey}"
+                    try:
+                        time.sleep(0.05)
+                        sp_info = session.get(
+                            f"{GBIF_API_BASE}/species/{skey}", timeout=10
+                        )
+                        if sp_info.ok:
+                            s_data = sp_info.json()
+                            s_name = (
+                                s_data.get("canonicalName")
+                                or s_data.get("scientificName")
+                                or s_name
+                            )
+                    except requests.RequestException:
+                        pass
+                    query_targets.append((skey, s_name, 8))
+            else:
+                # Regular single species
+                taxon_key, _ = resolve_species_taxon(session, sci_name)
+                if not taxon_key:
+                    logger.error(
+                        "Could not resolve taxonKey for '%s'. Skipping.",
+                        sci_name,
+                    )
+                    continue
+                query_targets.append((taxon_key, sci_name, target_per_species))
 
             # Page through occurrences and submit download tasks
             next_file_idx = len(existing_images) + 1
-            offset = 0
-            page_size = 100
-            end_of_records = False
 
             sp_download_bar = tqdm(
                 total=target_per_species,
@@ -634,135 +827,227 @@ def main() -> None:
                 concurrent.futures.Future[tuple[bool, bytes | None]]
             ] = set()
             fut_to_meta: dict[
-                concurrent.futures.Future[tuple[bool, bytes | None]], ImageJobMeta
+                concurrent.futures.Future[tuple[bool, bytes | None]],
+                ImageJobMeta,
             ] = {}
             queued_urls: set[str] = set()
 
-            while current_count < target_per_species:
-                # Top up worker pool with candidates if backlog is low
-                if (
-                    len(active_futures) < num_workers * 3
-                    and not end_of_records
-                    and offset < 1000
+            for target_key, target_name, max_target_imgs in query_targets:
+                if current_count >= target_per_species:
+                    break
+
+                target_downloaded = 0
+                offset = 0
+                page_size = 20 if is_genus_level else 100
+                end_of_records = False
+
+                while (
+                    target_downloaded < max_target_imgs
+                    and current_count < target_per_species
                 ):
-                    search_url = f"{GBIF_API_BASE}/occurrence/search"
-                    params = {
-                        "datasetKey": dataset_key,
-                        "taxonKey": taxon_key,
-                        "mediaType": "StillImage",
-                        "occurrenceStatus": "PRESENT",
-                        "limit": page_size,
-                        "offset": offset,
-                    }
+                    # Top up worker pool with candidates if backlog is low
+                    if (
+                        len(active_futures) < num_workers * 3
+                        and not end_of_records
+                        and offset < 1000
+                    ):
+                        search_url = f"{GBIF_API_BASE}/occurrence/search"
+                        params = {
+                            "datasetKey": dataset_key,
+                            "taxonKey": target_key,
+                            "mediaType": "StillImage",
+                            "occurrenceStatus": "PRESENT",
+                            "limit": page_size,
+                            "offset": offset,
+                        }
 
-                    results: list[dict[str, Any]] = []
-                    for attempt in range(3):
-                        try:
-                            time.sleep(0.12)  # Polite pacing for GBIF API
-                            resp = session.get(search_url, params=params, timeout=15)
-                            resp.raise_for_status()
-                            data = resp.json()
-                            results = data.get("results", [])
-                            end_of_records = data.get("endOfRecords", False)
-                            break
-                        except requests.RequestException:
-                            time.sleep(2**attempt)
-                            end_of_records = False
+                        results: list[dict[str, Any]] = []
+                        for attempt in range(3):
+                            try:
+                                time.sleep(0.12)  # Polite pacing for GBIF API
+                                resp = session.get(
+                                    search_url, params=params, timeout=15
+                                )
+                                resp.raise_for_status()
+                                data = resp.json()
+                                results = data.get("results", [])
+                                end_of_records = data.get("endOfRecords", False)
+                                break
+                            except requests.RequestException:
+                                time.sleep(2**attempt)
+                                end_of_records = False
 
-                    offset += page_size
+                        offset += page_size
 
-                    if not results:
-                        end_of_records = True
+                        if not results:
+                            end_of_records = True
 
-                    for occ in results:
-                        occ_key = occ.get("key")
-                        if not occ_key:
-                            continue
-
-                        occ_license = occ.get("license")
-                        media_list = occ.get("media", [])
-
-                        for media_item in media_list:
-                            m_type = media_item.get("type", "")
-                            m_format = media_item.get("format", "")
-                            if m_type != "StillImage" and not m_format.startswith(
-                                "image/"
-                            ):
+                        for occ in results:
+                            occ_key = occ.get("key")
+                            if not occ_key:
                                 continue
 
-                            raw_lic = media_item.get("license") or occ_license
-                            norm_lic = normalize_license(raw_lic)
-                            if not norm_lic:
-                                continue
+                            occ_license = occ.get("license")
+                            media_list = occ.get("media", [])
 
-                            image_url = media_item.get("identifier")
-                            if (
-                                not image_url
-                                or image_url in downloaded_urls
-                                or image_url in queued_urls
-                            ):
-                                continue
+                            for media_item in media_list:
+                                m_type = media_item.get("type", "")
+                                m_format = media_item.get("format", "")
+                                if m_type != "StillImage" and not m_format.startswith(
+                                    "image/"
+                                ):
+                                    continue
 
-                            creator = (
-                                media_item.get("creator")
-                                or media_item.get("rightsHolder")
-                                or occ.get("recordedBy")
-                                or "Unknown"
-                            )
+                                raw_lic = media_item.get("license") or occ_license
+                                norm_lic = normalize_license(raw_lic)
+                                if not norm_lic:
+                                    continue
 
-                            if args.dry_run:
-                                current_count += 1
-                                sp_download_bar.update(1)
-                                downloaded_urls.add(image_url)
-                                if current_count >= target_per_species:
+                                image_url = media_item.get("identifier")
+                                if (
+                                    not image_url
+                                    or image_url in downloaded_urls
+                                    or image_url in queued_urls
+                                ):
+                                    continue
+
+                                creator = (
+                                    media_item.get("creator")
+                                    or media_item.get("rightsHolder")
+                                    or occ.get("recordedBy")
+                                    or "Unknown"
+                                )
+
+                                if args.dry_run:
+                                    current_count += 1
+                                    target_downloaded += 1
+                                    sp_download_bar.update(1)
+                                    downloaded_urls.add(image_url)
+                                    if (
+                                        target_downloaded >= max_target_imgs
+                                        or current_count >= target_per_species
+                                    ):
+                                        break
+                                    continue
+
+                                queued_urls.add(image_url)
+                                meta = ImageJobMeta(
+                                    species_id=sid,
+                                    slug=slug,
+                                    occurrence_key=occ_key,
+                                    creator=creator,
+                                    norm_lic=norm_lic,
+                                    source_url=image_url,
+                                    sub_species_name=target_name,
+                                )
+                                fut = executor.submit(
+                                    download_and_process_image_worker,
+                                    session,
+                                    image_url,
+                                    512,
+                                )
+                                active_futures.add(fut)
+                                fut_to_meta[fut] = meta
+
+                                if (
+                                    target_downloaded + len(active_futures)
+                                    >= max_target_imgs
+                                    or current_count + len(active_futures)
+                                    >= target_per_species
+                                ):
                                     break
-                                continue
 
-                            queued_urls.add(image_url)
-                            meta = ImageJobMeta(
-                                species_id=sid,
-                                slug=slug,
-                                occurrence_key=occ_key,
-                                creator=creator,
-                                norm_lic=norm_lic,
-                                source_url=image_url,
-                            )
-                            fut = executor.submit(
-                                download_and_process_image_worker,
-                                session,
-                                image_url,
-                                512,
-                            )
-                            active_futures.add(fut)
-                            fut_to_meta[fut] = meta
+                            if (
+                                target_downloaded >= max_target_imgs
+                                or current_count >= target_per_species
+                            ):
+                                break
 
-                        if args.dry_run and current_count >= target_per_species:
+                    if args.dry_run:
+                        break
+
+                    if not active_futures:
+                        if end_of_records:
                             break
+                        continue
 
-                if args.dry_run:
-                    break
+                    # Wait for at least one worker task to complete
+                    done, _ = concurrent.futures.wait(
+                        active_futures,
+                        timeout=0.2,
+                        return_when=concurrent.futures.FIRST_COMPLETED,
+                    )
 
-                if not active_futures:
-                    # No active tasks and no more records available
-                    break
+                    for fut in done:
+                        active_futures.remove(fut)
+                        meta = fut_to_meta.pop(fut)
 
-                # Wait for at least one worker task to complete
+                        try:
+                            success, jpeg_bytes = fut.result()
+                        except Exception as exc:  # noqa: BLE001
+                            logger.debug(
+                                "Worker error for %s: %s", meta.source_url, exc
+                            )
+                            success, jpeg_bytes = False, None
+
+                        if (
+                            success
+                            and jpeg_bytes
+                            and current_count < target_per_species
+                        ):
+                            current_count += 1
+                            target_downloaded += 1
+                            dest_file = species_dir / f"{next_file_idx}.jpg"
+                            dest_file.parent.mkdir(parents=True, exist_ok=True)
+                            dest_file.write_bytes(jpeg_bytes)
+
+                            rel_file_path = f"raw/{slug}/{next_file_idx}.jpg"
+                            next_file_idx += 1
+                            total_newly_downloaded += 1
+                            sp_download_bar.update(1)
+                            downloaded_urls.add(meta.source_url)
+                            downloaded_occurrences.add((sid, meta.occurrence_key))
+
+                            if meta.sub_species_name:
+                                species_composition[meta.sub_species_name] = (
+                                    species_composition.get(meta.sub_species_name, 0)
+                                    + 1
+                                )
+
+                            # Safely record credit row from main thread
+                            with open(
+                                credits_file,
+                                mode="a",
+                                newline="",
+                                encoding="utf-8",
+                            ) as cf:
+                                cwriter = csv.writer(cf)
+                                cwriter.writerow(
+                                    [
+                                        sid,
+                                        rel_file_path,
+                                        meta.occurrence_key,
+                                        meta.creator,
+                                        meta.norm_lic,
+                                        meta.source_url,
+                                    ]
+                                )
+                                cf.flush()
+
+            # Drain any remaining active futures
+            while active_futures and current_count < target_per_species:
                 done, _ = concurrent.futures.wait(
                     active_futures,
-                    timeout=0.2,
+                    timeout=0.5,
                     return_when=concurrent.futures.FIRST_COMPLETED,
                 )
-
                 for fut in done:
                     active_futures.remove(fut)
                     meta = fut_to_meta.pop(fut)
-
                     try:
                         success, jpeg_bytes = fut.result()
-                    except Exception as exc:  # noqa: BLE001
-                        logger.debug("Worker error for %s: %s", meta.source_url, exc)
+                    except Exception:  # noqa: BLE001
                         success, jpeg_bytes = False, None
-
                     if success and jpeg_bytes and current_count < target_per_species:
                         current_count += 1
                         dest_file = species_dir / f"{next_file_idx}.jpg"
@@ -776,7 +1061,11 @@ def main() -> None:
                         downloaded_urls.add(meta.source_url)
                         downloaded_occurrences.add((sid, meta.occurrence_key))
 
-                        # Safely record credit row from main thread
+                        if meta.sub_species_name:
+                            species_composition[meta.sub_species_name] = (
+                                species_composition.get(meta.sub_species_name, 0) + 1
+                            )
+
                         with open(
                             credits_file, mode="a", newline="", encoding="utf-8"
                         ) as cf:
@@ -799,6 +1088,20 @@ def main() -> None:
 
             sp_download_bar.close()
             final_counts[sid] = current_count
+
+            if is_genus_level and species_composition:
+                logger.info(
+                    "Genus composition for %s (%s, ID %03d): %d images across %d species:",
+                    common_name,
+                    sci_name,
+                    sid,
+                    current_count,
+                    len(species_composition),
+                )
+                for sname, cnt in sorted(
+                    species_composition.items(), key=lambda x: -x[1]
+                ):
+                    logger.info("  * %s: %d image(s)", sname, cnt)
 
     elapsed_time = time.time() - run_start_time
     speed_ips = total_newly_downloaded / elapsed_time if elapsed_time > 0 else 0.0

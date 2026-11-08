@@ -60,6 +60,60 @@ class CandidateResult:
     matched_name: str
     accepted_name: str
     occurrence_count: int
+    sampled_occurrences: int = 0
+    sampled_images: int = 0
+    images_per_occurrence: float = 0.0
+    estimated_images: int = 0
+
+
+def sample_occurrence_images(
+    session: requests.Session,
+    dataset_key: str,
+    taxon_key: int,
+    sample_size: int = 50,
+) -> tuple[int, int, float]:
+    """Sample up to sample_size occurrences to estimate average images per occurrence.
+
+    Returns (sampled_occurrences, sampled_images, avg_images_per_occ).
+    """
+    url = f"{GBIF_API_BASE}/occurrence/search"
+    params: dict[str, Any] = {
+        "datasetKey": dataset_key,
+        "taxonKey": taxon_key,
+        "mediaType": "StillImage",
+        "occurrenceStatus": "PRESENT",
+        "license": ALLOWED_GBIF_LICENSES,
+        "limit": sample_size,
+    }
+    for attempt in range(3):
+        try:
+            resp = session.get(url, params=params, timeout=15)
+            resp.raise_for_status()
+            data = resp.json()
+            results = data.get("results", [])
+            if not results:
+                return 0, 0, 0.0
+
+            sample_occ_count = len(results)
+            total_images = 0
+            for occ in results:
+                media = occ.get("media", [])
+                img_items = [
+                    m
+                    for m in media
+                    if m.get("type") == "StillImage"
+                    or (m.get("format") or "").startswith("image/")
+                ]
+                total_images += max(len(img_items), 1)
+
+            avg_per_occ = (
+                total_images / sample_occ_count if sample_occ_count > 0 else 0.0
+            )
+            return sample_occ_count, total_images, avg_per_occ
+        except requests.RequestException:
+            time.sleep(2**attempt)
+
+    return 0, 0, 0.0
 
 
 def resolve_candidate(
@@ -67,6 +121,7 @@ def resolve_candidate(
     dataset_key: str,
     name: str,
     delay: float = 0.12,
+    sample_size: int = 50,
 ) -> CandidateResult:
     """Resolve candidate name against GBIF match API and query available image occurrences."""
     time.sleep(delay)
@@ -120,6 +175,11 @@ def resolve_candidate(
 
     # Count occurrences in iNaturalist research-grade dataset under allowed licenses
     occurrence_count = 0
+    sampled_occ = 0
+    sampled_imgs = 0
+    imgs_per_occ = 0.0
+    estimated_imgs = 0
+
     if query_key is not None:
         time.sleep(delay)
         occurrence_count = get_occurrence_image_count(
@@ -128,6 +188,15 @@ def resolve_candidate(
             taxon_key=int(query_key),
             licenses=ALLOWED_GBIF_LICENSES,
         )
+        if occurrence_count > 0:
+            time.sleep(delay)
+            sampled_occ, sampled_imgs, imgs_per_occ = sample_occurrence_images(
+                session=session,
+                dataset_key=dataset_key,
+                taxon_key=int(query_key),
+                sample_size=min(sample_size, occurrence_count),
+            )
+            estimated_imgs = round(occurrence_count * imgs_per_occ)
 
     return CandidateResult(
         input_name=name,
@@ -139,6 +208,10 @@ def resolve_candidate(
         matched_name=matched_name,
         accepted_name=accepted_name,
         occurrence_count=occurrence_count,
+        sampled_occurrences=sampled_occ,
+        sampled_images=sampled_imgs,
+        images_per_occurrence=imgs_per_occ,
+        estimated_images=estimated_imgs,
     )
 
 
@@ -151,6 +224,8 @@ def format_table(results: list[CandidateResult]) -> str:
         "Match Type",
         "Accepted / Matched Name",
         "Image Occurrences",
+        "Imgs/Occ (sample)",
+        "Est. Total Images",
     ]
 
     rows: list[list[str]] = []
@@ -158,6 +233,11 @@ def format_table(results: list[CandidateResult]) -> str:
         key_str = str(r.query_key) if r.query_key is not None else "None"
         if r.status in ("SYNONYM", "DOUBTFUL") and r.accepted_key:
             key_str = f"{r.query_key} (acc)"
+
+        ratio_str = (
+            f"{r.images_per_occurrence:.2f}" if r.sampled_occurrences > 0 else "-"
+        )
+        est_str = f"{r.estimated_images:,}" if r.occurrence_count > 0 else "0"
 
         rows.append(
             [
@@ -167,6 +247,8 @@ def format_table(results: list[CandidateResult]) -> str:
                 r.match_type,
                 r.accepted_name,
                 f"{r.occurrence_count:,}",
+                ratio_str,
+                est_str,
             ]
         )
 
@@ -215,6 +297,12 @@ def parse_args() -> argparse.Namespace:
         default=0.12,
         help="Delay in seconds between GBIF API calls (default 0.12s).",
     )
+    parser.add_argument(
+        "--sample-size",
+        type=int,
+        default=50,
+        help="Sample size of occurrences to estimate images per occurrence (default 50).",
+    )
     return parser.parse_args()
 
 
@@ -252,14 +340,17 @@ def main() -> None:
     logger.info("Evaluating %d candidate name(s)...", len(candidates))
     results: list[CandidateResult] = []
     for name in candidates:
-        res = resolve_candidate(session, dataset_key, name, delay=args.delay)
+        res = resolve_candidate(
+            session, dataset_key, name, delay=args.delay, sample_size=args.sample_size
+        )
         results.append(res)
         logger.info(
-            "Checked: %-25s -> Key: %-10s Status: %-10s Count: %5d (%s)",
+            "Checked: %-25s -> Key: %-10s Status: %-10s Occurrences: %5d Est. Images: %5d (%s)",
             res.input_name,
             str(res.query_key),
             res.status,
             res.occurrence_count,
+            res.estimated_images,
             res.accepted_name,
         )
 

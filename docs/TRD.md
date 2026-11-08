@@ -21,14 +21,14 @@
 - Credits: `ml/dataset_credits.csv` (image id, author, license, source URL).
 
 ## 3. Species List
-`ml/species_list.csv`: `id, common_name, scientific_name, family, type, origin, hindi_name, bengali_name`.
-Candidate groups (about 112, topped up to 110-130 after the image-count check):
+`ml/species_list.csv`: `id, common_name, scientific_name, family, genus, type, origin, hindi_name, bengali_name, notes`.
+Candidate groups (112 species, exact ids 0..111 preserved):
 - Indian medicinal/sacred: Tulsi, Neem, Aloe vera, Turmeric, Ginger, Ashwagandha, Giloy, Brahmi, Amla, Curry leaf, Moringa, Bael, Arjuna, Ashoka, Betel, Lemongrass, Mint, Peepal, Banyan, Kalmegh
-- Indian flowers: Hibiscus, Marigold, Jasmine, Lotus, Rose, Frangipani, Oleander, Bougainvillea, Tuberose, Night jasmine, Gulmohar, Periwinkle, Ixora, Lantana, Cockscomb, Crossandra, Canna, Balsam, Amaltas, Palash
+- Indian flowers: Hibiscus, Marigold, Jasmine, Lotus, Rose (genus-level Rosa spp., id 24), Frangipani, Oleander, Bougainvillea, Butterfly pea / Aparajita (Clitoria ternatea, id 28, replaces Tuberose), Night jasmine, Gulmohar, Periwinkle, Ixora, Lantana, Cockscomb, Crossandra, Canna, Balsam, Amaltas, Palash
 - Indian trees/fruit: Mango, Coconut, Banana, Papaya, Guava, Pomegranate, Jackfruit, Tamarind, Jamun, Sapota, Custard apple, Lemon, Teak, Sal, Bamboo, Areca palm, Date palm, Silk cotton, Rain tree, Eucalyptus
 - Crops/vegetables: Rice, Wheat, Maize, Sugarcane, Tea, Cotton, Mustard, Tomato, Chilli, Brinjal, Okra, Potato, Onion, Coriander, Spinach, Bottle gourd, Pumpkin, Cucumber, Peanut, Jute
-- Houseplants: Money plant, Snake plant, Spider plant, Monstera, Peace lily, Rubber plant, Jade plant, Prickly pear, Boston fern, Aglaonema, Dieffenbachia
-- Garden/wild: Sunflower, Daisy, Dandelion, Lavender, Rosemary, Sweet basil, Tulip, Daffodil, Lily, Dahlia, Zinnia, Cosmos, Chrysanthemum, Gerbera, Orchid, Water hyacinth, Sensitive plant, Parthenium, Clover, Oak
+- Houseplants: Money plant, Snake plant, Spider plant, Monstera, Peace lily, Rubber plant, Jade plant, Prickly pear, Boston fern, Aglaonema, Dieffenbachia, Patharchatta / Air plant (Kalanchoe pinnata, id 91)
+- Garden/wild: Sunflower, Daisy, Dandelion, Lavender, Rosemary, Sweet basil, Tulip, Daffodil, Lily, Dahlia, Zinnia, Cosmos, Chrysanthemum, Gerbera, Foxtail orchid (Rhynchostylis retusa, id 106), Water hyacinth, Sensitive plant, Parthenium, Clover, Oak
 Deliberate look-alike pairs: Tulsi/Sweet basil/Mint, Jasmine/Night jasmine, Frangipani/Oleander, Banyan/Peepal/Rubber plant.
 
 ## 4. Model
