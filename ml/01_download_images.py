@@ -38,6 +38,7 @@ MIN_FREE_DISK_GB = 15.0
 DEFAULT_TARGET_PER_SPECIES = 300
 MAX_PER_SPECIES = 400
 DEFAULT_WORKERS = 8
+ALLOWED_GBIF_LICENSES: list[str] = ["CC0_1_0", "CC_BY_4_0", "CC_BY_NC_4_0"]
 
 logger = logging.getLogger("download_images")
 
@@ -180,8 +181,8 @@ def resolve_species_taxon(
 ) -> tuple[int | None, str]:
     """Resolve a scientific name against the GBIF species match API.
 
-    Returns the GBIF usageKey and accepted name. Emits warnings if the
-    match is fuzzy, higher-rank, or a synonym.
+    Returns the GBIF taxon key (accepted key if synonym/doubtful, else usage key)
+    and accepted scientific name. Emits warnings if the match is fuzzy or unaccepted.
     """
     url = f"{GBIF_API_BASE}/species/match"
     params = {"name": scientific_name, "strict": "true"}
@@ -196,6 +197,7 @@ def resolve_species_taxon(
             status = data.get("status")
             matched_name = data.get("scientificName", "")
             usage_key = data.get("usageKey")
+            accepted_key = data.get("acceptedUsageKey") or data.get("acceptedKey")
 
             if match_type != "EXACT":
                 logger.warning(
@@ -204,12 +206,47 @@ def resolve_species_taxon(
                     match_type,
                     matched_name,
                 )
+
+            # When the GBIF species match returns status SYNONYM (or DOUBTFUL) with an
+            # acceptedKey and the match is exact, use the acceptedKey for occurrence queries
+            # and log the accepted scientific name.
+            if (
+                match_type == "EXACT"
+                and status in ("SYNONYM", "DOUBTFUL")
+                and accepted_key
+            ):
+                accepted_name = (
+                    data.get("species") or data.get("canonicalName") or matched_name
+                )
+                try:
+                    acc_resp = session.get(
+                        f"{GBIF_API_BASE}/species/{accepted_key}", timeout=10
+                    )
+                    if acc_resp.ok:
+                        acc_data = acc_resp.json()
+                        accepted_name = (
+                            acc_data.get("scientificName")
+                            or acc_data.get("canonicalName")
+                            or accepted_name
+                        )
+                except requests.RequestException:
+                    pass
+
+                logger.info(
+                    "Taxon '%s' is %s with exact match. Using acceptedKey %s ('%s') for occurrence queries.",
+                    scientific_name,
+                    status,
+                    accepted_key,
+                    accepted_name,
+                )
+                return int(accepted_key), str(accepted_name)
+
             if status != "ACCEPTED":
                 logger.warning(
                     "GBIF taxon status for '%s' is not ACCEPTED (status: %s, acceptedKey: %s).",
                     scientific_name,
                     status,
-                    data.get("acceptedUsageKey"),
+                    accepted_key,
                 )
 
             return usage_key, matched_name
@@ -225,6 +262,43 @@ def resolve_species_taxon(
             time.sleep(delay)
 
     return None, scientific_name
+
+
+def get_occurrence_image_count(
+    session: requests.Session,
+    dataset_key: str,
+    taxon_key: int,
+    licenses: list[str] | None = None,
+) -> int:
+    """Perform a count-only (limit=0) occurrence query for a taxon under allowed licenses."""
+    url = f"{GBIF_API_BASE}/occurrence/search"
+    if licenses is None:
+        licenses = ALLOWED_GBIF_LICENSES
+    params: dict[str, Any] = {
+        "datasetKey": dataset_key,
+        "taxonKey": taxon_key,
+        "mediaType": "StillImage",
+        "occurrenceStatus": "PRESENT",
+        "license": licenses,
+        "limit": 0,
+    }
+    for attempt in range(3):
+        try:
+            resp = session.get(url, params=params, timeout=15)
+            resp.raise_for_status()
+            data = resp.json()
+            return int(data.get("count", 0))
+        except requests.RequestException as exc:
+            delay = 2**attempt
+            logger.warning(
+                "Count query attempt %d failed for taxonKey %d: %s. Retrying in %ds...",
+                attempt + 1,
+                taxon_key,
+                exc,
+                delay,
+            )
+            time.sleep(delay)
+    return 0
 
 
 def load_species_list(csv_path: Path) -> list[dict[str, str]]:
@@ -371,6 +445,11 @@ def parse_args() -> argparse.Namespace:
         help="Query GBIF and report availability without downloading files.",
     )
     parser.add_argument(
+        "--count-only",
+        action="store_true",
+        help="Perform count-only (limit=0) query for occurrences with images without downloading.",
+    )
+    parser.add_argument(
         "--out",
         type=Path,
         default=Path("ml/data"),
@@ -460,6 +539,24 @@ def main() -> None:
 
     # Resolve iNaturalist dataset key
     dataset_key = get_inaturalist_dataset_key(session)
+
+    if args.count_only:
+        print("\n--- Available Image Occurrence Counts (limit=0) ---")
+        for sp in selected_species:
+            sid = int(sp["id"])
+            common_name = sp["common_name"]
+            sci_name = sp["scientific_name"]
+            taxon_key, resolved_name = resolve_species_taxon(session, sci_name)
+            if not taxon_key:
+                print(
+                    f"ID {sid:03d} | {common_name} ({sci_name}) -> Could not resolve taxonKey"
+                )
+                continue
+            count = get_occurrence_image_count(session, dataset_key, taxon_key)
+            print(
+                f"ID {sid:03d} | {common_name} ({sci_name}) -> Key Used: {taxon_key} ({resolved_name}) | Available occurrences with images: {count}"
+            )
+        return
 
     # Load existing credits for idempotency
     downloaded_urls, downloaded_occurrences, counts_by_species = load_existing_credits(

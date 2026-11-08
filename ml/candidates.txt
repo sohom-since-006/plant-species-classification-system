@@ -1,0 +1,24 @@
+# Succulent options for id 91
+Kalanchoe pinnata
+Agave americana
+Euphorbia tirucalli
+Aloe arborescens
+Haworthiopsis attenuata
+
+# Orchid options for id 106
+Rhynchostylis retusa
+Dendrobium nobile
+Cymbidium aloifolium
+Vanda tessellata
+Phalaenopsis amabilis
+
+# Rose options for id 24
+Rosa chinensis
+Rosa x damascena
+Rosa rugosa
+Rosa multiflora
+Rosa
+
+# Additional checks
+Agave amica
+Polianthes tuberosa
