@@ -1,0 +1,680 @@
+{
+  "split_sizes": {
+    "train": 26306,
+    "val": 3406,
+    "test": 3401
+  },
+  "images_per_species": [
+    {
+      "species": "Tulsi",
+      "count": 300
+    },
+    {
+      "species": "Neem",
+      "count": 299
+    },
+    {
+      "species": "Aloe vera",
+      "count": 299
+    },
+    {
+      "species": "Turmeric",
+      "count": 298
+    },
+    {
+      "species": "Ginger",
+      "count": 287
+    },
+    {
+      "species": "Ashwagandha",
+      "count": 299
+    },
+    {
+      "species": "Giloy",
+      "count": 298
+    },
+    {
+      "species": "Brahmi",
+      "count": 299
+    },
+    {
+      "species": "Amla",
+      "count": 297
+    },
+    {
+      "species": "Curry leaf",
+      "count": 300
+    },
+    {
+      "species": "Moringa",
+      "count": 298
+    },
+    {
+      "species": "Bael",
+      "count": 296
+    },
+    {
+      "species": "Arjuna",
+      "count": 299
+    },
+    {
+      "species": "Ashoka",
+      "count": 299
+    },
+    {
+      "species": "Betel",
+      "count": 299
+    },
+    {
+      "species": "Lemongrass",
+      "count": 299
+    },
+    {
+      "species": "Mint",
+      "count": 300
+    },
+    {
+      "species": "Peepal",
+      "count": 300
+    },
+    {
+      "species": "Banyan",
+      "count": 295
+    },
+    {
+      "species": "Kalmegh",
+      "count": 298
+    },
+    {
+      "species": "Hibiscus",
+      "count": 299
+    },
+    {
+      "species": "Marigold",
+      "count": 300
+    },
+    {
+      "species": "Jasmine",
+      "count": 298
+    },
+    {
+      "species": "Lotus",
+      "count": 298
+    },
+    {
+      "species": "Rose",
+      "count": 300
+    },
+    {
+      "species": "Frangipani",
+      "count": 300
+    },
+    {
+      "species": "Oleander",
+      "count": 299
+    },
+    {
+      "species": "Bougainvillea",
+      "count": 299
+    },
+    {
+      "species": "Butterfly pea",
+      "count": 300
+    },
+    {
+      "species": "Night jasmine",
+      "count": 300
+    },
+    {
+      "species": "Gulmohar",
+      "count": 300
+    },
+    {
+      "species": "Periwinkle",
+      "count": 298
+    },
+    {
+      "species": "Ixora",
+      "count": 294
+    },
+    {
+      "species": "Lantana",
+      "count": 300
+    },
+    {
+      "species": "Cockscomb",
+      "count": 300
+    },
+    {
+      "species": "Crossandra",
+      "count": 299
+    },
+    {
+      "species": "Canna",
+      "count": 300
+    },
+    {
+      "species": "Balsam",
+      "count": 298
+    },
+    {
+      "species": "Amaltas",
+      "count": 299
+    },
+    {
+      "species": "Palash",
+      "count": 296
+    },
+    {
+      "species": "Mango",
+      "count": 297
+    },
+    {
+      "species": "Coconut",
+      "count": 299
+    },
+    {
+      "species": "Banana",
+      "count": 297
+    },
+    {
+      "species": "Papaya",
+      "count": 298
+    },
+    {
+      "species": "Guava",
+      "count": 299
+    },
+    {
+      "species": "Pomegranate",
+      "count": 300
+    },
+    {
+      "species": "Jackfruit",
+      "count": 300
+    },
+    {
+      "species": "Tamarind",
+      "count": 300
+    },
+    {
+      "species": "Jamun",
+      "count": 298
+    },
+    {
+      "species": "Sapota",
+      "count": 299
+    },
+    {
+      "species": "Custard apple",
+      "count": 299
+    },
+    {
+      "species": "Lemon",
+      "count": 300
+    },
+    {
+      "species": "Teak",
+      "count": 300
+    },
+    {
+      "species": "Sal",
+      "count": 134
+    },
+    {
+      "species": "Bamboo",
+      "count": 300
+    },
+    {
+      "species": "Areca palm",
+      "count": 300
+    },
+    {
+      "species": "Date palm",
+      "count": 300
+    },
+    {
+      "species": "Silk cotton",
+      "count": 300
+    },
+    {
+      "species": "Rain tree",
+      "count": 300
+    },
+    {
+      "species": "Eucalyptus",
+      "count": 299
+    },
+    {
+      "species": "Rice",
+      "count": 297
+    },
+    {
+      "species": "Wheat",
+      "count": 300
+    },
+    {
+      "species": "Maize",
+      "count": 297
+    },
+    {
+      "species": "Sugarcane",
+      "count": 299
+    },
+    {
+      "species": "Tea",
+      "count": 300
+    },
+    {
+      "species": "Cotton",
+      "count": 298
+    },
+    {
+      "species": "Mustard",
+      "count": 300
+    },
+    {
+      "species": "Tomato",
+      "count": 300
+    },
+    {
+      "species": "Chilli",
+      "count": 299
+    },
+    {
+      "species": "Brinjal",
+      "count": 299
+    },
+    {
+      "species": "Okra",
+      "count": 299
+    },
+    {
+      "species": "Potato",
+      "count": 300
+    },
+    {
+      "species": "Onion",
+      "count": 300
+    },
+    {
+      "species": "Coriander",
+      "count": 298
+    },
+    {
+      "species": "Spinach",
+      "count": 152
+    },
+    {
+      "species": "Bottle gourd",
+      "count": 299
+    },
+    {
+      "species": "Pumpkin",
+      "count": 300
+    },
+    {
+      "species": "Cucumber",
+      "count": 294
+    },
+    {
+      "species": "Peanut",
+      "count": 297
+    },
+    {
+      "species": "Jute",
+      "count": 299
+    },
+    {
+      "species": "Money plant",
+      "count": 300
+    },
+    {
+      "species": "Snake plant",
+      "count": 299
+    },
+    {
+      "species": "Spider plant",
+      "count": 300
+    },
+    {
+      "species": "Monstera",
+      "count": 299
+    },
+    {
+      "species": "Peace lily",
+      "count": 300
+    },
+    {
+      "species": "Rubber plant",
+      "count": 300
+    },
+    {
+      "species": "Jade plant",
+      "count": 292
+    },
+    {
+      "species": "Prickly pear",
+      "count": 298
+    },
+    {
+      "species": "Boston fern",
+      "count": 297
+    },
+    {
+      "species": "Aglaonema",
+      "count": 297
+    },
+    {
+      "species": "Dieffenbachia",
+      "count": 299
+    },
+    {
+      "species": "Patharchatta / Air plant",
+      "count": 298
+    },
+    {
+      "species": "Sunflower",
+      "count": 299
+    },
+    {
+      "species": "Daisy",
+      "count": 299
+    },
+    {
+      "species": "Dandelion",
+      "count": 299
+    },
+    {
+      "species": "Lavender",
+      "count": 299
+    },
+    {
+      "species": "Rosemary",
+      "count": 300
+    },
+    {
+      "species": "Sweet basil",
+      "count": 281
+    },
+    {
+      "species": "Tulip",
+      "count": 299
+    },
+    {
+      "species": "Daffodil",
+      "count": 300
+    },
+    {
+      "species": "Lily",
+      "count": 300
+    },
+    {
+      "species": "Dahlia",
+      "count": 298
+    },
+    {
+      "species": "Zinnia",
+      "count": 298
+    },
+    {
+      "species": "Cosmos",
+      "count": 299
+    },
+    {
+      "species": "Chrysanthemum",
+      "count": 298
+    },
+    {
+      "species": "Gerbera",
+      "count": 300
+    },
+    {
+      "species": "Foxtail orchid",
+      "count": 299
+    },
+    {
+      "species": "Water hyacinth",
+      "count": 299
+    },
+    {
+      "species": "Sensitive plant",
+      "count": 296
+    },
+    {
+      "species": "Parthenium",
+      "count": 299
+    },
+    {
+      "species": "Clover",
+      "count": 300
+    },
+    {
+      "species": "Oak",
+      "count": 290
+    }
+  ],
+  "indian_vs_global": [
+    {
+      "name": "Native (Indian)",
+      "value": 48
+    },
+    {
+      "name": "Introduced (Global)",
+      "value": 61
+    },
+    {
+      "name": "Invasive",
+      "value": 3
+    }
+  ],
+  "family_breakdown": [
+    {
+      "family": "Fabaceae",
+      "count": 10
+    },
+    {
+      "family": "Asteraceae",
+      "count": 10
+    },
+    {
+      "family": "Lamiaceae",
+      "count": 6
+    },
+    {
+      "family": "Poaceae",
+      "count": 6
+    },
+    {
+      "family": "Solanaceae",
+      "count": 5
+    },
+    {
+      "family": "Malvaceae",
+      "count": 5
+    },
+    {
+      "family": "Araceae",
+      "count": 5
+    },
+    {
+      "family": "Moraceae",
+      "count": 4
+    },
+    {
+      "family": "Rutaceae",
+      "count": 3
+    },
+    {
+      "family": "Apocynaceae",
+      "count": 3
+    },
+    {
+      "family": "Arecaceae",
+      "count": 3
+    },
+    {
+      "family": "Myrtaceae",
+      "count": 3
+    },
+    {
+      "family": "Cucurbitaceae",
+      "count": 3
+    },
+    {
+      "family": "Zingiberaceae",
+      "count": 2
+    },
+    {
+      "family": "Acanthaceae",
+      "count": 2
+    },
+    {
+      "family": "Oleaceae",
+      "count": 2
+    },
+    {
+      "family": "Amaranthaceae",
+      "count": 2
+    },
+    {
+      "family": "Amaryllidaceae",
+      "count": 2
+    },
+    {
+      "family": "Asparagaceae",
+      "count": 2
+    },
+    {
+      "family": "Crassulaceae",
+      "count": 2
+    },
+    {
+      "family": "Liliaceae",
+      "count": 2
+    },
+    {
+      "family": "Meliaceae",
+      "count": 1
+    },
+    {
+      "family": "Asphodelaceae",
+      "count": 1
+    },
+    {
+      "family": "Menispermaceae",
+      "count": 1
+    },
+    {
+      "family": "Plantaginaceae",
+      "count": 1
+    },
+    {
+      "family": "Phyllanthaceae",
+      "count": 1
+    },
+    {
+      "family": "Moringaceae",
+      "count": 1
+    },
+    {
+      "family": "Combretaceae",
+      "count": 1
+    },
+    {
+      "family": "Piperaceae",
+      "count": 1
+    },
+    {
+      "family": "Nelumbonaceae",
+      "count": 1
+    },
+    {
+      "family": "Rosaceae",
+      "count": 1
+    },
+    {
+      "family": "Nyctaginaceae",
+      "count": 1
+    },
+    {
+      "family": "Rubiaceae",
+      "count": 1
+    },
+    {
+      "family": "Verbenaceae",
+      "count": 1
+    },
+    {
+      "family": "Cannaceae",
+      "count": 1
+    },
+    {
+      "family": "Balsaminaceae",
+      "count": 1
+    },
+    {
+      "family": "Anacardiaceae",
+      "count": 1
+    },
+    {
+      "family": "Musaceae",
+      "count": 1
+    },
+    {
+      "family": "Caricaceae",
+      "count": 1
+    },
+    {
+      "family": "Lythraceae",
+      "count": 1
+    },
+    {
+      "family": "Sapotaceae",
+      "count": 1
+    },
+    {
+      "family": "Annonaceae",
+      "count": 1
+    },
+    {
+      "family": "Dipterocarpaceae",
+      "count": 1
+    },
+    {
+      "family": "Theaceae",
+      "count": 1
+    },
+    {
+      "family": "Brassicaceae",
+      "count": 1
+    },
+    {
+      "family": "Apiaceae",
+      "count": 1
+    },
+    {
+      "family": "Cactaceae",
+      "count": 1
+    },
+    {
+      "family": "Nephrolepidaceae",
+      "count": 1
+    },
+    {
+      "family": "Orchidaceae",
+      "count": 1
+    },
+    {
+      "family": "Pontederiaceae",
+      "count": 1
+    },
+    {
+      "family": "Fagaceae",
+      "count": 1
+    }
+  ],
+  "total_images": 33113,
+  "total_species": 112,
+  "generated_at": "2026-11-10T07:10:34.338422+00:00"
+}
