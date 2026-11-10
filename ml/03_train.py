@@ -7,7 +7,6 @@ Performs two-phase transfer learning on EfficientNet-B0:
 
 Technical features:
   - AMP (fp16 with GradScaler)
-  - channels_last memory format
   - AdamW optimizer with cosine schedule
   - Label smoothing (0.1) & Mixup/CutMix augmentation (p=0.3)
   - Class-balanced WeightedRandomSampler if min/max class ratio < 0.5
@@ -321,6 +320,7 @@ def create_dataloaders(
         train_shuffle = True
 
     persistent = num_workers > 0
+    prefetch_factor = 4 if num_workers > 0 else None
     train_loader = DataLoader(
         train_dataset,
         batch_size=batch_size,
@@ -329,6 +329,7 @@ def create_dataloaders(
         num_workers=num_workers,
         pin_memory=torch.cuda.is_available(),
         persistent_workers=persistent,
+        prefetch_factor=prefetch_factor,
         drop_last=len(train_dataset) > batch_size,
     )
 
@@ -339,6 +340,7 @@ def create_dataloaders(
         num_workers=num_workers,
         pin_memory=torch.cuda.is_available(),
         persistent_workers=persistent,
+        prefetch_factor=prefetch_factor,
         drop_last=False,
     )
 
@@ -353,23 +355,30 @@ def train_epoch(
     criterion: nn.Module,
     device: torch.device,
     mixup_cutmix_prob: float = DEFAULT_MIXUP_CUTMIX_PROB,
-) -> tuple[float, float, int]:
-    """Execute one training epoch with AMP, channels_last, and Mixup/CutMix.
+    warmup_batches: int = 10,
+) -> tuple[float, float, int, float]:
+    """Execute one training epoch with AMP and Mixup/CutMix.
 
     Returns:
-        (avg_train_loss, elapsed_seconds, total_images_processed)
+        (avg_train_loss, elapsed_seconds, total_images_processed, steady_state_ips)
     """
     model.train()
     total_loss = 0.0
     total_samples = 0
     start_time = time.time()
+    steady_start_time: float | None = None
+    steady_samples = 0
 
-    for inputs, targets in loader:
-        # Transfer to device with channels_last memory format
-        inputs = inputs.to(device, non_blocking=True).to(
-            memory_format=torch.channels_last
-        )
+    for batch_idx, (inputs, targets) in enumerate(loader):
+        # Transfer to device (contiguous layout)
+        inputs = inputs.to(device, non_blocking=True)
         targets = targets.to(device, non_blocking=True)
+
+        if batch_idx == warmup_batches:
+            if device.type == "cuda":
+                torch.cuda.synchronize()
+            steady_start_time = time.time()
+            steady_samples = 0
 
         optimizer.zero_grad(set_to_none=True)
 
@@ -396,10 +405,22 @@ def train_epoch(
         batch_sz = inputs.size(0)
         total_loss += loss.item() * batch_sz
         total_samples += batch_sz
+        if steady_start_time is not None:
+            steady_samples += batch_sz
+
+    if device.type == "cuda":
+        torch.cuda.synchronize()
 
     elapsed = time.time() - start_time
     avg_loss = total_loss / max(1, total_samples)
-    return avg_loss, elapsed, total_samples
+
+    if steady_start_time is not None and steady_samples > 0:
+        steady_elapsed = time.time() - steady_start_time
+        steady_ips = steady_samples / max(0.001, steady_elapsed)
+    else:
+        steady_ips = total_samples / max(0.001, elapsed)
+
+    return avg_loss, elapsed, total_samples, steady_ips
 
 
 def evaluate(
@@ -417,9 +438,7 @@ def evaluate(
 
     with torch.no_grad():
         for inputs, targets in loader:
-            inputs = inputs.to(device, non_blocking=True).to(
-                memory_format=torch.channels_last
-            )
+            inputs = inputs.to(device, non_blocking=True)
             targets = targets.to(device, non_blocking=True)
 
             with torch.amp.autocast(device_type=device.type, dtype=torch.float16):
@@ -500,13 +519,16 @@ def run_training_pipeline(
     # If smoke test, sample 5% of training data and 1 epoch per phase
     if smoke:
         logger.info(
-            "[SMOKE MODE] Sampling 5%% of training set and setting epochs to 1 per phase."
+            "[SMOKE MODE] Sampling training set for steady-state measurement (>=100 batches after warm-up) and 1 epoch per phase."
         )
-        sample_size = max(1, int(len(train_records) * 0.05))
+        # Ensure at least 115 batches (10 warm-up + 105 steady-state) at batch_size 32 = 3680 images
+        sample_size = min(
+            len(train_records), max(int(len(train_records) * 0.05), 115 * batch_size)
+        )
         rng = random.Random(seed)
         train_records = rng.sample(train_records, sample_size)
         # Keep validation set compact for rapid execution
-        val_sample_size = min(len(val_records), max(20, sample_size // 2))
+        val_sample_size = min(len(val_records), max(32, int(len(val_records) * 0.1)))
         val_records = rng.sample(val_records, val_sample_size)
         phase1_epochs = 1
         phase2_epochs = 1
@@ -573,7 +595,7 @@ def run_training_pipeline(
 
     # 3. Model instantiation
     model = PlantClassifier(num_classes=num_classes, pretrained=True)
-    model = model.to(device).to(memory_format=torch.channels_last)
+    model = model.to(device)
 
     criterion = nn.CrossEntropyLoss(label_smoothing=DEFAULT_LABEL_SMOOTHING)
     scaler = torch.amp.GradScaler(device.type, enabled=device.type == "cuda")
@@ -596,6 +618,7 @@ def run_training_pipeline(
     patience_counter = 0
     total_train_images_processed = 0
     total_training_wall_time = 0.0
+    last_steady_ips = 0.0
 
     # ─── PHASE 1: Backbone Frozen (Head Only) ─────────────────────────
     logger.info("=== Starting Phase 1: Backbone Frozen (%d epochs) ===", phase1_epochs)
@@ -612,7 +635,7 @@ def run_training_pipeline(
 
     for epoch in range(1, phase1_epochs + 1):
         try:
-            t_loss, elapsed, n_imgs = train_epoch(
+            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
                 model=model,
                 loader=train_loader,
                 optimizer=optimizer_p1,
@@ -628,7 +651,7 @@ def run_training_pipeline(
             torch.cuda.empty_cache()
             current_batch_size = 16
             train_loader, val_loader = get_loaders(current_batch_size)
-            t_loss, elapsed, n_imgs = train_epoch(
+            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
                 model=model,
                 loader=train_loader,
                 optimizer=optimizer_p1,
@@ -637,6 +660,7 @@ def run_training_pipeline(
                 device=device,
             )
 
+        last_steady_ips = steady_ips
         scheduler_p1.step()
         v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
         total_train_images_processed += n_imgs
@@ -644,7 +668,7 @@ def run_training_pipeline(
 
         current_lr = optimizer_p1.param_groups[0]["lr"]
         logger.info(
-            "Phase 1 | Epoch %d/%d - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs)",
+            "Phase 1 | Epoch %d/%d - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
             epoch,
             phase1_epochs,
             t_loss,
@@ -653,6 +677,7 @@ def run_training_pipeline(
             top5,
             current_lr,
             elapsed,
+            steady_ips,
         )
 
         with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
@@ -715,7 +740,7 @@ def run_training_pipeline(
     for epoch in range(1, phase2_epochs + 1):
         global_epoch = phase1_epochs + epoch
         try:
-            t_loss, elapsed, n_imgs = train_epoch(
+            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
                 model=model,
                 loader=train_loader,
                 optimizer=optimizer_p2,
@@ -731,7 +756,7 @@ def run_training_pipeline(
             torch.cuda.empty_cache()
             current_batch_size = 16
             train_loader, val_loader = get_loaders(current_batch_size)
-            t_loss, elapsed, n_imgs = train_epoch(
+            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
                 model=model,
                 loader=train_loader,
                 optimizer=optimizer_p2,
@@ -740,6 +765,7 @@ def run_training_pipeline(
                 device=device,
             )
 
+        last_steady_ips = steady_ips
         scheduler_p2.step()
         v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
         total_train_images_processed += n_imgs
@@ -747,7 +773,7 @@ def run_training_pipeline(
 
         current_lr = optimizer_p2.param_groups[0]["lr"]
         logger.info(
-            "Phase 2 | Epoch %d/%d (Global %d) - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs)",
+            "Phase 2 | Epoch %d/%d (Global %d) - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
             epoch,
             phase2_epochs,
             global_epoch,
@@ -757,6 +783,7 @@ def run_training_pipeline(
             top5,
             current_lr,
             elapsed,
+            steady_ips,
         )
 
         with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
@@ -822,9 +849,15 @@ def run_training_pipeline(
         else 0.0
     )
 
+    full_epoch_images = 26306
+    effective_ips = last_steady_ips if last_steady_ips > 0 else throughput_ips
+    est_full_epoch_seconds = full_epoch_images / max(0.001, effective_ips)
+
     telemetry: dict[str, Any] = {
         "run_dir": str(run_dir.resolve()),
         "images_per_second": round(throughput_ips, 2),
+        "steady_state_images_per_second": round(last_steady_ips, 2),
+        "estimated_full_epoch_seconds": round(est_full_epoch_seconds, 1),
         "peak_gpu_memory_mb": round(peak_vram_mb, 1),
         "total_images_processed": total_train_images_processed,
         "total_wall_time_seconds": round(total_training_wall_time, 2),
@@ -925,11 +958,20 @@ def main() -> None:
     print("\n" + "=" * 65)
     print(" TRAINING TELEMETRY SUMMARY")
     print("=" * 65)
-    print(f"Run Artifacts Directory:   {results['run_dir']}")
-    print(f"Throughput (Through Train):{results['images_per_second']} images/sec")
-    print(f"Peak GPU VRAM Allocated:   {results['peak_gpu_memory_mb']} MB")
-    print(f"Best Validation Loss:      {results['best_val_loss']}")
-    print(f"Final Batch Size:          {results['final_batch_size']}")
+    print(f"Run Artifacts Directory:            {results['run_dir']}")
+    print(
+        f"Overall Throughput (incl startup):  {results['images_per_second']} images/sec"
+    )
+    print(
+        f"Steady-State Throughput:            {results['steady_state_images_per_second']} images/sec"
+    )
+    print(
+        f"Estimated Time per Full Epoch:      {results['estimated_full_epoch_seconds']:.1f}s "
+        f"(~{results['estimated_full_epoch_seconds'] / 60:.1f} min)"
+    )
+    print(f"Peak GPU VRAM Allocated:            {results['peak_gpu_memory_mb']} MB")
+    print(f"Best Validation Loss:               {results['best_val_loss']}")
+    print(f"Final Batch Size:                   {results['final_batch_size']}")
     print("=" * 65 + "\n")
 
 
