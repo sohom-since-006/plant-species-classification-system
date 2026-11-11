@@ -79,12 +79,12 @@ export function Home() {
       >
         {/* Background video at 120% scale with parallax drift & adjusted center-weighted crop */}
         <motion.div
-          className="absolute left-1/2 top-0 -translate-x-1/2 w-[120%] h-[120%] pointer-events-none"
+          className="absolute -left-[10%] -top-[10%] w-[120%] h-[120%] pointer-events-none"
           style={{ y: prefersReducedMotion ? '0%' : heroVideoY }}
         >
           <FadingVideo
             src={MEDIA.hero}
-            className="w-full h-full object-cover object-[68%_top]"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
 
