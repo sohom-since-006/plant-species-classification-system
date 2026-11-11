@@ -1,0 +1,786 @@
+{
+  "0": {
+    "species_id": 0,
+    "common_name": "Tulsi",
+    "scientific_name": "Ocimum tenuiflorum",
+    "family": "Lamiaceae",
+    "genus": "Ocimum"
+  },
+  "1": {
+    "species_id": 1,
+    "common_name": "Neem",
+    "scientific_name": "Azadirachta indica",
+    "family": "Meliaceae",
+    "genus": "Azadirachta"
+  },
+  "2": {
+    "species_id": 2,
+    "common_name": "Aloe vera",
+    "scientific_name": "Aloe vera",
+    "family": "Asphodelaceae",
+    "genus": "Aloe"
+  },
+  "3": {
+    "species_id": 3,
+    "common_name": "Turmeric",
+    "scientific_name": "Curcuma longa",
+    "family": "Zingiberaceae",
+    "genus": "Curcuma"
+  },
+  "4": {
+    "species_id": 4,
+    "common_name": "Ginger",
+    "scientific_name": "Zingiber officinale",
+    "family": "Zingiberaceae",
+    "genus": "Zingiber"
+  },
+  "5": {
+    "species_id": 5,
+    "common_name": "Ashwagandha",
+    "scientific_name": "Withania somnifera",
+    "family": "Solanaceae",
+    "genus": "Withania"
+  },
+  "6": {
+    "species_id": 6,
+    "common_name": "Giloy",
+    "scientific_name": "Tinospora cordifolia",
+    "family": "Menispermaceae",
+    "genus": "Tinospora"
+  },
+  "7": {
+    "species_id": 7,
+    "common_name": "Brahmi",
+    "scientific_name": "Bacopa monnieri",
+    "family": "Plantaginaceae",
+    "genus": "Bacopa"
+  },
+  "8": {
+    "species_id": 8,
+    "common_name": "Amla",
+    "scientific_name": "Phyllanthus emblica",
+    "family": "Phyllanthaceae",
+    "genus": "Phyllanthus"
+  },
+  "9": {
+    "species_id": 9,
+    "common_name": "Curry leaf",
+    "scientific_name": "Murraya koenigii",
+    "family": "Rutaceae",
+    "genus": "Murraya"
+  },
+  "10": {
+    "species_id": 10,
+    "common_name": "Moringa",
+    "scientific_name": "Moringa oleifera",
+    "family": "Moringaceae",
+    "genus": "Moringa"
+  },
+  "11": {
+    "species_id": 11,
+    "common_name": "Bael",
+    "scientific_name": "Aegle marmelos",
+    "family": "Rutaceae",
+    "genus": "Aegle"
+  },
+  "12": {
+    "species_id": 12,
+    "common_name": "Arjuna",
+    "scientific_name": "Terminalia arjuna",
+    "family": "Combretaceae",
+    "genus": "Terminalia"
+  },
+  "13": {
+    "species_id": 13,
+    "common_name": "Ashoka",
+    "scientific_name": "Saraca asoca",
+    "family": "Fabaceae",
+    "genus": "Saraca"
+  },
+  "14": {
+    "species_id": 14,
+    "common_name": "Betel",
+    "scientific_name": "Piper betle",
+    "family": "Piperaceae",
+    "genus": "Piper"
+  },
+  "15": {
+    "species_id": 15,
+    "common_name": "Lemongrass",
+    "scientific_name": "Cymbopogon citratus",
+    "family": "Poaceae",
+    "genus": "Cymbopogon"
+  },
+  "16": {
+    "species_id": 16,
+    "common_name": "Mint",
+    "scientific_name": "Mentha spicata",
+    "family": "Lamiaceae",
+    "genus": "Mentha"
+  },
+  "17": {
+    "species_id": 17,
+    "common_name": "Peepal",
+    "scientific_name": "Ficus religiosa",
+    "family": "Moraceae",
+    "genus": "Ficus"
+  },
+  "18": {
+    "species_id": 18,
+    "common_name": "Banyan",
+    "scientific_name": "Ficus benghalensis",
+    "family": "Moraceae",
+    "genus": "Ficus"
+  },
+  "19": {
+    "species_id": 19,
+    "common_name": "Kalmegh",
+    "scientific_name": "Andrographis paniculata",
+    "family": "Acanthaceae",
+    "genus": "Andrographis"
+  },
+  "20": {
+    "species_id": 20,
+    "common_name": "Hibiscus",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "family": "Malvaceae",
+    "genus": "Hibiscus"
+  },
+  "21": {
+    "species_id": 21,
+    "common_name": "Marigold",
+    "scientific_name": "Tagetes erecta",
+    "family": "Asteraceae",
+    "genus": "Tagetes"
+  },
+  "22": {
+    "species_id": 22,
+    "common_name": "Jasmine",
+    "scientific_name": "Jasminum sambac",
+    "family": "Oleaceae",
+    "genus": "Jasminum"
+  },
+  "23": {
+    "species_id": 23,
+    "common_name": "Lotus",
+    "scientific_name": "Nelumbo nucifera",
+    "family": "Nelumbonaceae",
+    "genus": "Nelumbo"
+  },
+  "24": {
+    "species_id": 24,
+    "common_name": "Rose",
+    "scientific_name": "Rosa",
+    "family": "Rosaceae",
+    "genus": "Rosa"
+  },
+  "25": {
+    "species_id": 25,
+    "common_name": "Frangipani",
+    "scientific_name": "Plumeria rubra",
+    "family": "Apocynaceae",
+    "genus": "Plumeria"
+  },
+  "26": {
+    "species_id": 26,
+    "common_name": "Oleander",
+    "scientific_name": "Nerium oleander",
+    "family": "Apocynaceae",
+    "genus": "Nerium"
+  },
+  "27": {
+    "species_id": 27,
+    "common_name": "Bougainvillea",
+    "scientific_name": "Bougainvillea spectabilis",
+    "family": "Nyctaginaceae",
+    "genus": "Bougainvillea"
+  },
+  "28": {
+    "species_id": 28,
+    "common_name": "Butterfly pea",
+    "scientific_name": "Clitoria ternatea",
+    "family": "Fabaceae",
+    "genus": "Clitoria"
+  },
+  "29": {
+    "species_id": 29,
+    "common_name": "Night jasmine",
+    "scientific_name": "Nyctanthes arbor-tristis",
+    "family": "Oleaceae",
+    "genus": "Nyctanthes"
+  },
+  "30": {
+    "species_id": 30,
+    "common_name": "Gulmohar",
+    "scientific_name": "Delonix regia",
+    "family": "Fabaceae",
+    "genus": "Delonix"
+  },
+  "31": {
+    "species_id": 31,
+    "common_name": "Periwinkle",
+    "scientific_name": "Catharanthus roseus",
+    "family": "Apocynaceae",
+    "genus": "Catharanthus"
+  },
+  "32": {
+    "species_id": 32,
+    "common_name": "Ixora",
+    "scientific_name": "Ixora coccinea",
+    "family": "Rubiaceae",
+    "genus": "Ixora"
+  },
+  "33": {
+    "species_id": 33,
+    "common_name": "Lantana",
+    "scientific_name": "Lantana camara",
+    "family": "Verbenaceae",
+    "genus": "Lantana"
+  },
+  "34": {
+    "species_id": 34,
+    "common_name": "Cockscomb",
+    "scientific_name": "Celosia argentea",
+    "family": "Amaranthaceae",
+    "genus": "Celosia"
+  },
+  "35": {
+    "species_id": 35,
+    "common_name": "Crossandra",
+    "scientific_name": "Crossandra infundibuliformis",
+    "family": "Acanthaceae",
+    "genus": "Crossandra"
+  },
+  "36": {
+    "species_id": 36,
+    "common_name": "Canna",
+    "scientific_name": "Canna indica",
+    "family": "Cannaceae",
+    "genus": "Canna"
+  },
+  "37": {
+    "species_id": 37,
+    "common_name": "Balsam",
+    "scientific_name": "Impatiens balsamina",
+    "family": "Balsaminaceae",
+    "genus": "Impatiens"
+  },
+  "38": {
+    "species_id": 38,
+    "common_name": "Amaltas",
+    "scientific_name": "Cassia fistula",
+    "family": "Fabaceae",
+    "genus": "Cassia"
+  },
+  "39": {
+    "species_id": 39,
+    "common_name": "Palash",
+    "scientific_name": "Butea monosperma",
+    "family": "Fabaceae",
+    "genus": "Butea"
+  },
+  "40": {
+    "species_id": 40,
+    "common_name": "Mango",
+    "scientific_name": "Mangifera indica",
+    "family": "Anacardiaceae",
+    "genus": "Mangifera"
+  },
+  "41": {
+    "species_id": 41,
+    "common_name": "Coconut",
+    "scientific_name": "Cocos nucifera",
+    "family": "Arecaceae",
+    "genus": "Cocos"
+  },
+  "42": {
+    "species_id": 42,
+    "common_name": "Banana",
+    "scientific_name": "Musa acuminata",
+    "family": "Musaceae",
+    "genus": "Musa"
+  },
+  "43": {
+    "species_id": 43,
+    "common_name": "Papaya",
+    "scientific_name": "Carica papaya",
+    "family": "Caricaceae",
+    "genus": "Carica"
+  },
+  "44": {
+    "species_id": 44,
+    "common_name": "Guava",
+    "scientific_name": "Psidium guajava",
+    "family": "Myrtaceae",
+    "genus": "Psidium"
+  },
+  "45": {
+    "species_id": 45,
+    "common_name": "Pomegranate",
+    "scientific_name": "Punica granatum",
+    "family": "Lythraceae",
+    "genus": "Punica"
+  },
+  "46": {
+    "species_id": 46,
+    "common_name": "Jackfruit",
+    "scientific_name": "Artocarpus heterophyllus",
+    "family": "Moraceae",
+    "genus": "Artocarpus"
+  },
+  "47": {
+    "species_id": 47,
+    "common_name": "Tamarind",
+    "scientific_name": "Tamarindus indica",
+    "family": "Fabaceae",
+    "genus": "Tamarindus"
+  },
+  "48": {
+    "species_id": 48,
+    "common_name": "Jamun",
+    "scientific_name": "Syzygium cumini",
+    "family": "Myrtaceae",
+    "genus": "Syzygium"
+  },
+  "49": {
+    "species_id": 49,
+    "common_name": "Sapota",
+    "scientific_name": "Manilkara zapota",
+    "family": "Sapotaceae",
+    "genus": "Manilkara"
+  },
+  "50": {
+    "species_id": 50,
+    "common_name": "Custard apple",
+    "scientific_name": "Annona squamosa",
+    "family": "Annonaceae",
+    "genus": "Annona"
+  },
+  "51": {
+    "species_id": 51,
+    "common_name": "Lemon",
+    "scientific_name": "Citrus limon",
+    "family": "Rutaceae",
+    "genus": "Citrus"
+  },
+  "52": {
+    "species_id": 52,
+    "common_name": "Teak",
+    "scientific_name": "Tectona grandis",
+    "family": "Lamiaceae",
+    "genus": "Tectona"
+  },
+  "53": {
+    "species_id": 53,
+    "common_name": "Sal",
+    "scientific_name": "Shorea robusta",
+    "family": "Dipterocarpaceae",
+    "genus": "Shorea"
+  },
+  "54": {
+    "species_id": 54,
+    "common_name": "Bamboo",
+    "scientific_name": "Bambusa vulgaris",
+    "family": "Poaceae",
+    "genus": "Bambusa"
+  },
+  "55": {
+    "species_id": 55,
+    "common_name": "Areca palm",
+    "scientific_name": "Areca catechu",
+    "family": "Arecaceae",
+    "genus": "Areca"
+  },
+  "56": {
+    "species_id": 56,
+    "common_name": "Date palm",
+    "scientific_name": "Phoenix dactylifera",
+    "family": "Arecaceae",
+    "genus": "Phoenix"
+  },
+  "57": {
+    "species_id": 57,
+    "common_name": "Silk cotton",
+    "scientific_name": "Bombax ceiba",
+    "family": "Malvaceae",
+    "genus": "Bombax"
+  },
+  "58": {
+    "species_id": 58,
+    "common_name": "Rain tree",
+    "scientific_name": "Samanea saman",
+    "family": "Fabaceae",
+    "genus": "Samanea"
+  },
+  "59": {
+    "species_id": 59,
+    "common_name": "Eucalyptus",
+    "scientific_name": "Eucalyptus globulus",
+    "family": "Myrtaceae",
+    "genus": "Eucalyptus"
+  },
+  "60": {
+    "species_id": 60,
+    "common_name": "Rice",
+    "scientific_name": "Oryza sativa",
+    "family": "Poaceae",
+    "genus": "Oryza"
+  },
+  "61": {
+    "species_id": 61,
+    "common_name": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "family": "Poaceae",
+    "genus": "Triticum"
+  },
+  "62": {
+    "species_id": 62,
+    "common_name": "Maize",
+    "scientific_name": "Zea mays",
+    "family": "Poaceae",
+    "genus": "Zea"
+  },
+  "63": {
+    "species_id": 63,
+    "common_name": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "family": "Poaceae",
+    "genus": "Saccharum"
+  },
+  "64": {
+    "species_id": 64,
+    "common_name": "Tea",
+    "scientific_name": "Camellia sinensis",
+    "family": "Theaceae",
+    "genus": "Camellia"
+  },
+  "65": {
+    "species_id": 65,
+    "common_name": "Cotton",
+    "scientific_name": "Gossypium hirsutum",
+    "family": "Malvaceae",
+    "genus": "Gossypium"
+  },
+  "66": {
+    "species_id": 66,
+    "common_name": "Mustard",
+    "scientific_name": "Brassica juncea",
+    "family": "Brassicaceae",
+    "genus": "Brassica"
+  },
+  "67": {
+    "species_id": 67,
+    "common_name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "family": "Solanaceae",
+    "genus": "Solanum"
+  },
+  "68": {
+    "species_id": 68,
+    "common_name": "Chilli",
+    "scientific_name": "Capsicum annuum",
+    "family": "Solanaceae",
+    "genus": "Capsicum"
+  },
+  "69": {
+    "species_id": 69,
+    "common_name": "Brinjal",
+    "scientific_name": "Solanum melongena",
+    "family": "Solanaceae",
+    "genus": "Solanum"
+  },
+  "70": {
+    "species_id": 70,
+    "common_name": "Okra",
+    "scientific_name": "Abelmoschus esculentus",
+    "family": "Malvaceae",
+    "genus": "Abelmoschus"
+  },
+  "71": {
+    "species_id": 71,
+    "common_name": "Potato",
+    "scientific_name": "Solanum tuberosum",
+    "family": "Solanaceae",
+    "genus": "Solanum"
+  },
+  "72": {
+    "species_id": 72,
+    "common_name": "Onion",
+    "scientific_name": "Allium cepa",
+    "family": "Amaryllidaceae",
+    "genus": "Allium"
+  },
+  "73": {
+    "species_id": 73,
+    "common_name": "Coriander",
+    "scientific_name": "Coriandrum sativum",
+    "family": "Apiaceae",
+    "genus": "Coriandrum"
+  },
+  "74": {
+    "species_id": 74,
+    "common_name": "Spinach",
+    "scientific_name": "Spinacia oleracea",
+    "family": "Amaranthaceae",
+    "genus": "Spinacia"
+  },
+  "75": {
+    "species_id": 75,
+    "common_name": "Bottle gourd",
+    "scientific_name": "Lagenaria siceraria",
+    "family": "Cucurbitaceae",
+    "genus": "Lagenaria"
+  },
+  "76": {
+    "species_id": 76,
+    "common_name": "Pumpkin",
+    "scientific_name": "Cucurbita moschata",
+    "family": "Cucurbitaceae",
+    "genus": "Cucurbita"
+  },
+  "77": {
+    "species_id": 77,
+    "common_name": "Cucumber",
+    "scientific_name": "Cucumis sativus",
+    "family": "Cucurbitaceae",
+    "genus": "Cucumis"
+  },
+  "78": {
+    "species_id": 78,
+    "common_name": "Peanut",
+    "scientific_name": "Arachis hypogaea",
+    "family": "Fabaceae",
+    "genus": "Arachis"
+  },
+  "79": {
+    "species_id": 79,
+    "common_name": "Jute",
+    "scientific_name": "Corchorus olitorius",
+    "family": "Malvaceae",
+    "genus": "Corchorus"
+  },
+  "80": {
+    "species_id": 80,
+    "common_name": "Money plant",
+    "scientific_name": "Epipremnum aureum",
+    "family": "Araceae",
+    "genus": "Epipremnum"
+  },
+  "81": {
+    "species_id": 81,
+    "common_name": "Snake plant",
+    "scientific_name": "Dracaena trifasciata",
+    "family": "Asparagaceae",
+    "genus": "Dracaena"
+  },
+  "82": {
+    "species_id": 82,
+    "common_name": "Spider plant",
+    "scientific_name": "Chlorophytum comosum",
+    "family": "Asparagaceae",
+    "genus": "Chlorophytum"
+  },
+  "83": {
+    "species_id": 83,
+    "common_name": "Monstera",
+    "scientific_name": "Monstera deliciosa",
+    "family": "Araceae",
+    "genus": "Monstera"
+  },
+  "84": {
+    "species_id": 84,
+    "common_name": "Peace lily",
+    "scientific_name": "Spathiphyllum wallisii",
+    "family": "Araceae",
+    "genus": "Spathiphyllum"
+  },
+  "85": {
+    "species_id": 85,
+    "common_name": "Rubber plant",
+    "scientific_name": "Ficus elastica",
+    "family": "Moraceae",
+    "genus": "Ficus"
+  },
+  "86": {
+    "species_id": 86,
+    "common_name": "Jade plant",
+    "scientific_name": "Crassula ovata",
+    "family": "Crassulaceae",
+    "genus": "Crassula"
+  },
+  "87": {
+    "species_id": 87,
+    "common_name": "Prickly pear",
+    "scientific_name": "Opuntia ficus-indica",
+    "family": "Cactaceae",
+    "genus": "Opuntia"
+  },
+  "88": {
+    "species_id": 88,
+    "common_name": "Boston fern",
+    "scientific_name": "Nephrolepis exaltata",
+    "family": "Nephrolepidaceae",
+    "genus": "Nephrolepis"
+  },
+  "89": {
+    "species_id": 89,
+    "common_name": "Aglaonema",
+    "scientific_name": "Aglaonema commutatum",
+    "family": "Araceae",
+    "genus": "Aglaonema"
+  },
+  "90": {
+    "species_id": 90,
+    "common_name": "Dieffenbachia",
+    "scientific_name": "Dieffenbachia seguine",
+    "family": "Araceae",
+    "genus": "Dieffenbachia"
+  },
+  "91": {
+    "species_id": 91,
+    "common_name": "Patharchatta / Air plant",
+    "scientific_name": "Kalanchoe pinnata",
+    "family": "Crassulaceae",
+    "genus": "Kalanchoe"
+  },
+  "92": {
+    "species_id": 92,
+    "common_name": "Sunflower",
+    "scientific_name": "Helianthus annuus",
+    "family": "Asteraceae",
+    "genus": "Helianthus"
+  },
+  "93": {
+    "species_id": 93,
+    "common_name": "Daisy",
+    "scientific_name": "Bellis perennis",
+    "family": "Asteraceae",
+    "genus": "Bellis"
+  },
+  "94": {
+    "species_id": 94,
+    "common_name": "Dandelion",
+    "scientific_name": "Taraxacum officinale",
+    "family": "Asteraceae",
+    "genus": "Taraxacum"
+  },
+  "95": {
+    "species_id": 95,
+    "common_name": "Lavender",
+    "scientific_name": "Lavandula angustifolia",
+    "family": "Lamiaceae",
+    "genus": "Lavandula"
+  },
+  "96": {
+    "species_id": 96,
+    "common_name": "Rosemary",
+    "scientific_name": "Salvia rosmarinus",
+    "family": "Lamiaceae",
+    "genus": "Salvia"
+  },
+  "97": {
+    "species_id": 97,
+    "common_name": "Sweet basil",
+    "scientific_name": "Ocimum basilicum",
+    "family": "Lamiaceae",
+    "genus": "Ocimum"
+  },
+  "98": {
+    "species_id": 98,
+    "common_name": "Tulip",
+    "scientific_name": "Tulipa gesneriana",
+    "family": "Liliaceae",
+    "genus": "Tulipa"
+  },
+  "99": {
+    "species_id": 99,
+    "common_name": "Daffodil",
+    "scientific_name": "Narcissus pseudonarcissus",
+    "family": "Amaryllidaceae",
+    "genus": "Narcissus"
+  },
+  "100": {
+    "species_id": 100,
+    "common_name": "Lily",
+    "scientific_name": "Lilium lancifolium",
+    "family": "Liliaceae",
+    "genus": "Lilium"
+  },
+  "101": {
+    "species_id": 101,
+    "common_name": "Dahlia",
+    "scientific_name": "Dahlia pinnata",
+    "family": "Asteraceae",
+    "genus": "Dahlia"
+  },
+  "102": {
+    "species_id": 102,
+    "common_name": "Zinnia",
+    "scientific_name": "Zinnia elegans",
+    "family": "Asteraceae",
+    "genus": "Zinnia"
+  },
+  "103": {
+    "species_id": 103,
+    "common_name": "Cosmos",
+    "scientific_name": "Cosmos bipinnatus",
+    "family": "Asteraceae",
+    "genus": "Cosmos"
+  },
+  "104": {
+    "species_id": 104,
+    "common_name": "Chrysanthemum",
+    "scientific_name": "Chrysanthemum indicum",
+    "family": "Asteraceae",
+    "genus": "Chrysanthemum"
+  },
+  "105": {
+    "species_id": 105,
+    "common_name": "Gerbera",
+    "scientific_name": "Gerbera jamesonii",
+    "family": "Asteraceae",
+    "genus": "Gerbera"
+  },
+  "106": {
+    "species_id": 106,
+    "common_name": "Foxtail orchid",
+    "scientific_name": "Rhynchostylis retusa",
+    "family": "Orchidaceae",
+    "genus": "Rhynchostylis"
+  },
+  "107": {
+    "species_id": 107,
+    "common_name": "Water hyacinth",
+    "scientific_name": "Pontederia crassipes",
+    "family": "Pontederiaceae",
+    "genus": "Pontederia"
+  },
+  "108": {
+    "species_id": 108,
+    "common_name": "Sensitive plant",
+    "scientific_name": "Mimosa pudica",
+    "family": "Fabaceae",
+    "genus": "Mimosa"
+  },
+  "109": {
+    "species_id": 109,
+    "common_name": "Parthenium",
+    "scientific_name": "Parthenium hysterophorus",
+    "family": "Asteraceae",
+    "genus": "Parthenium"
+  },
+  "110": {
+    "species_id": 110,
+    "common_name": "Clover",
+    "scientific_name": "Trifolium repens",
+    "family": "Fabaceae",
+    "genus": "Trifolium"
+  },
+  "111": {
+    "species_id": 111,
+    "common_name": "Oak",
+    "scientific_name": "Quercus robur",
+    "family": "Fagaceae",
+    "genus": "Quercus"
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "title": "Plant Species Classification Test-Set Metrics",
+  "metrics_type": "test-set metrics",
+  "date": "2026-11-11",
+  "exported_at": "2026-11-11T17:57:47.897064+00:00",
+  "model_version": "1.0.0",
+  "test_top1_accuracy": 83.68,
+  "test_top5_accuracy": 94.33,
+  "macro_precision": 0.8378,
+  "macro_recall": 0.8366,
+  "macro_f1": 0.834,
+  "calibration": {
+    "temperature": 0.7129,
+    "test_ece_before": 15.56,
+    "test_ece_after": 1.18
+  },
+  "thresholds": {
+    "prob_threshold": 0.57,
+    "tau_threshold": 0.31,
+    "temperature": 0.7129,
+    "trd_default_prob_baseline": 0.35
+  },
+  "confidence_tiers": {
+    "high": {
+      "range": "> 0.85",
+      "count": 2341,
+      "percentage": 68.83,
+      "accuracy": 97.35
+    },
+    "medium": {
+      "range": "0.60 - 0.85",
+      "count": 460,
+      "percentage": 13.53,
+      "accuracy": 74.13
+    },
+    "low": {
+      "range": "< 0.60",
+      "count": 600,
+      "percentage": 17.64,
+      "accuracy": 37.67
+    }
+  },
+  "classes_below_f1_70": [
+    {
+      "class_idx": 11,
+      "species_id": 11,
+      "common_name": "Bael",
+      "scientific_name": "Aegle marmelos",
+      "family": "Rutaceae",
+      "genus": "Aegle",
+      "support": 30,
+      "top1_accuracy": 43.33,
+      "precision": 0.619,
+      "recall": 0.4333,
+      "f1": 0.5098
+    },
+    {
+      "class_idx": 52,
+      "species_id": 52,
+      "common_name": "Teak",
+      "scientific_name": "Tectona grandis",
+      "family": "Lamiaceae",
+      "genus": "Tectona",
+      "support": 30,
+      "top1_accuracy": 50.0,
+      "precision": 0.5556,
+      "recall": 0.5,
+      "f1": 0.5263
+    },
+    {
+      "class_idx": 51,
+      "species_id": 51,
+      "common_name": "Lemon",
+      "scientific_name": "Citrus limon",
+      "family": "Rutaceae",
+      "genus": "Citrus",
+      "support": 35,
+      "top1_accuracy": 42.86,
+      "precision": 0.7143,
+      "recall": 0.4286,
+      "f1": 0.5357
+    },
+    {
+      "class_idx": 45,
+      "species_id": 45,
+      "common_name": "Pomegranate",
+      "scientific_name": "Punica granatum",
+      "family": "Lythraceae",
+      "genus": "Punica",
+      "support": 30,
+      "top1_accuracy": 53.33,
+      "precision": 0.6154,
+      "recall": 0.5333,
+      "f1": 0.5714
+    },
+    {
+      "class_idx": 18,
+      "species_id": 18,
+      "common_name": "Banyan",
+      "scientific_name": "Ficus benghalensis",
+      "family": "Moraceae",
+      "genus": "Ficus",
+      "support": 31,
+      "top1_accuracy": 58.06,
+      "precision": 0.6923,
+      "recall": 0.5806,
+      "f1": 0.6316
+    },
+    {
+      "class_idx": 24,
+      "species_id": 24,
+      "common_name": "Rose",
+      "scientific_name": "Rosa",
+      "family": "Rosaceae",
+      "genus": "Rosa",
+      "support": 30,
+      "top1_accuracy": 63.33,
+      "precision": 0.6333,
+      "recall": 0.6333,
+      "f1": 0.6333
+    },
+    {
+      "class_idx": 12,
+      "species_id": 12,
+      "common_name": "Arjuna",
+      "scientific_name": "Terminalia arjuna",
+      "family": "Combretaceae",
+      "genus": "Terminalia",
+      "support": 30,
+      "top1_accuracy": 63.33,
+      "precision": 0.6552,
+      "recall": 0.6333,
+      "f1": 0.6441
+    },
+    {
+      "class_idx": 53,
+      "species_id": 53,
+      "common_name": "Sal",
+      "scientific_name": "Shorea robusta",
+      "family": "Dipterocarpaceae",
+      "genus": "Shorea",
+      "support": 13,
+      "top1_accuracy": 69.23,
+      "precision": 0.6429,
+      "recall": 0.6923,
+      "f1": 0.6667
+    },
+    {
+      "class_idx": 66,
+      "species_id": 66,
+      "common_name": "Mustard",
+      "scientific_name": "Brassica juncea",
+      "family": "Brassicaceae",
+      "genus": "Brassica",
+      "support": 30,
+      "top1_accuracy": 70.0,
+      "precision": 0.6364,
+      "recall": 0.7,
+      "f1": 0.6667
+    },
+    {
+      "class_idx": 71,
+      "species_id": 71,
+      "common_name": "Potato",
+      "scientific_name": "Solanum tuberosum",
+      "family": "Solanaceae",
+      "genus": "Solanum",
+      "support": 30,
+      "top1_accuracy": 63.33,
+      "precision": 0.7037,
+      "recall": 0.6333,
+      "f1": 0.6667
+    },
+    {
+      "class_idx": 72,
+      "species_id": 72,
+      "common_name": "Onion",
+      "scientific_name": "Allium cepa",
+      "family": "Amaryllidaceae",
+      "genus": "Allium",
+      "support": 31,
+      "top1_accuracy": 64.52,
+      "precision": 0.6897,
+      "recall": 0.6452,
+      "f1": 0.6667
+    },
+    {
+      "class_idx": 74,
+      "species_id": 74,
+      "common_name": "Spinach",
+      "scientific_name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "genus": "Spinacia",
+      "support": 17,
+      "top1_accuracy": 82.35,
+      "precision": 0.5833,
+      "recall": 0.8235,
+      "f1": 0.6829
+    },
+    {
+      "class_idx": 47,
+      "species_id": 47,
+      "common_name": "Tamarind",
+      "scientific_name": "Tamarindus indica",
+      "family": "Fabaceae",
+      "genus": "Tamarindus",
+      "support": 30,
+      "top1_accuracy": 63.33,
+      "precision": 0.76,
+      "recall": 0.6333,
+      "f1": 0.6909
+    },
+    {
+      "class_idx": 75,
+      "species_id": 75,
+      "common_name": "Bottle gourd",
+      "scientific_name": "Lagenaria siceraria",
+      "family": "Cucurbitaceae",
+      "genus": "Lagenaria",
+      "support": 30,
+      "top1_accuracy": 73.33,
+      "precision": 0.6667,
+      "recall": 0.7333,
+      "f1": 0.6984
+    }
+  ],
+  "top20_confused_pairs": [
+    {
+      "true_class_idx": 15,
+      "pred_class_idx": 82,
+      "true_name": "Lemongrass (Cymbopogon citratus)",
+      "pred_name": "Spider plant (Chlorophytum comosum)",
+      "count": 5,
+      "percent_of_true_class": 15.62
+    },
+    {
+      "true_class_idx": 18,
+      "pred_class_idx": 85,
+      "true_name": "Banyan (Ficus benghalensis)",
+      "pred_name": "Rubber plant (Ficus elastica)",
+      "count": 5,
+      "percent_of_true_class": 16.13
+    },
+    {
+      "true_class_idx": 55,
+      "pred_class_idx": 41,
+      "true_name": "Areca palm (Areca catechu)",
+      "pred_name": "Coconut (Cocos nucifera)",
+      "count": 4,
+      "percent_of_true_class": 13.33
+    },
+    {
+      "true_class_idx": 71,
+      "pred_class_idx": 16,
+      "true_name": "Potato (Solanum tuberosum)",
+      "pred_name": "Mint (Mentha spicata)",
+      "count": 4,
+      "percent_of_true_class": 13.33
+    },
+    {
+      "true_class_idx": 5,
+      "pred_class_idx": 71,
+      "true_name": "Ashwagandha (Withania somnifera)",
+      "pred_name": "Potato (Solanum tuberosum)",
+      "count": 3,
+      "percent_of_true_class": 9.68
+    },
+    {
+      "true_class_idx": 14,
+      "pred_class_idx": 6,
+      "true_name": "Betel (Piper betle)",
+      "pred_name": "Giloy (Tinospora cordifolia)",
+      "count": 3,
+      "percent_of_true_class": 9.68
+    },
+    {
+      "true_class_idx": 18,
+      "pred_class_idx": 17,
+      "true_name": "Banyan (Ficus benghalensis)",
+      "pred_name": "Peepal (Ficus religiosa)",
+      "count": 3,
+      "percent_of_true_class": 9.68
+    },
+    {
+      "true_class_idx": 31,
+      "pred_class_idx": 34,
+      "true_name": "Periwinkle (Catharanthus roseus)",
+      "pred_name": "Cockscomb (Celosia argentea)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 39,
+      "pred_class_idx": 52,
+      "true_name": "Palash (Butea monosperma)",
+      "pred_name": "Teak (Tectona grandis)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 47,
+      "pred_class_idx": 8,
+      "true_name": "Tamarind (Tamarindus indica)",
+      "pred_name": "Amla (Phyllanthus emblica)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 52,
+      "pred_class_idx": 17,
+      "true_name": "Teak (Tectona grandis)",
+      "pred_name": "Peepal (Ficus religiosa)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 62,
+      "pred_class_idx": 63,
+      "true_name": "Maize (Zea mays)",
+      "pred_name": "Sugarcane (Saccharum officinarum)",
+      "count": 3,
+      "percent_of_true_class": 9.68
+    },
+    {
+      "true_class_idx": 63,
+      "pred_class_idx": 15,
+      "true_name": "Sugarcane (Saccharum officinarum)",
+      "pred_name": "Lemongrass (Cymbopogon citratus)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 71,
+      "pred_class_idx": 66,
+      "true_name": "Potato (Solanum tuberosum)",
+      "pred_name": "Mustard (Brassica juncea)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 73,
+      "pred_class_idx": 109,
+      "true_name": "Coriander (Coriandrum sativum)",
+      "pred_name": "Parthenium (Parthenium hysterophorus)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 97,
+      "pred_class_idx": 0,
+      "true_name": "Sweet basil (Ocimum basilicum)",
+      "pred_name": "Tulsi (Ocimum tenuiflorum)",
+      "count": 3,
+      "percent_of_true_class": 6.82
+    },
+    {
+      "true_class_idx": 97,
+      "pred_class_idx": 74,
+      "true_name": "Sweet basil (Ocimum basilicum)",
+      "pred_name": "Spinach (Spinacia oleracea)",
+      "count": 3,
+      "percent_of_true_class": 6.82
+    },
+    {
+      "true_class_idx": 104,
+      "pred_class_idx": 109,
+      "true_name": "Chrysanthemum (Chrysanthemum indicum)",
+      "pred_name": "Parthenium (Parthenium hysterophorus)",
+      "count": 3,
+      "percent_of_true_class": 10.0
+    },
+    {
+      "true_class_idx": 1,
+      "pred_class_idx": 24,
+      "true_name": "Neem (Azadirachta indica)",
+      "pred_name": "Rose (Rosa)",
+      "count": 2,
+      "percent_of_true_class": 6.45
+    },
+    {
+      "true_class_idx": 4,
+      "pred_class_idx": 3,
+      "true_name": "Ginger (Zingiber officinale)",
+      "pred_name": "Turmeric (Curcuma longa)",
+      "count": 2,
+      "percent_of_true_class": 6.9
+    }
+  ],
+  "split_sizes": {
+    "train": 26306,
+    "val": 3406,
+    "test": 3401
+  }
+}
