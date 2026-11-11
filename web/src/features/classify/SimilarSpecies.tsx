@@ -64,7 +64,7 @@ export function SimilarSpecies({
                   >
                     <td className="py-3.5 px-4">
                       <div className="font-medium text-white group-hover:text-[var(--accent)] transition-colors">
-                        {spec ? spec.commonName : `Species #${match.speciesId}`}
+                        {spec ? spec.commonName : `Botanical Specimen (${match.speciesId})`}
                       </div>
                       <div className="font-heading italic text-white/60 text-xs">
                         {spec?.scientificName}
@@ -74,6 +74,16 @@ export function SimilarSpecies({
                           </span>
                         )}
                       </div>
+                      {(spec?.namesHindi || spec?.namesBengali) && (
+                        <div className="text-[11px] text-white/50 font-body mt-0.5">
+                          {[
+                            spec.namesHindi ? `Hindi: ${spec.namesHindi}` : null,
+                            spec.namesBengali ? `Bengali: ${spec.namesBengali}` : null,
+                          ]
+                            .filter(Boolean)
+                            .join(' • ')}
+                        </div>
+                      )}
                     </td>
                     <td className="py-3.5 px-4 text-right font-mono text-white/80">
                       {formatPercent(match.ml, 1)}
@@ -100,7 +110,10 @@ export function SimilarSpecies({
         <Stagger className="space-y-3">
           {similarMatches.map((match) => {
             const spec = speciesMap.get(match.speciesId);
-            const label = spec ? spec.commonName : `Species #${match.speciesId}`;
+            const regional = [spec?.namesHindi, spec?.namesBengali].filter(Boolean).join(' / ');
+            const label = spec
+              ? `${spec.commonName} (${spec.scientificName})${regional ? ` — ${regional}` : ''}`
+              : `Botanical Specimen (${match.speciesId})`;
             return (
               <StaggerItem key={match.speciesId}>
                 <div className="space-y-1.5">

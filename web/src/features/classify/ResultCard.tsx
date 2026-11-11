@@ -49,11 +49,25 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
           ) : (
             <div>
               <h2 className="font-heading italic text-3xl sm:text-4xl text-white">
-                {topSpecies ? topSpecies.commonName : `Species ID #${result.top3[0]?.speciesId}`}
+                {topSpecies?.commonName || 'Botanical Specimen'}
               </h2>
               <p className="font-heading italic text-lg sm:text-xl text-[var(--accent)]">
                 {topSpecies?.scientificName}
               </p>
+              {(topSpecies?.namesHindi || topSpecies?.namesBengali) && (
+                <div className="flex flex-wrap items-center gap-2 mt-2 font-body text-xs text-white/80">
+                  {topSpecies.namesHindi && (
+                    <span className="liquid-glass px-2.5 py-0.5 rounded-full border border-white/10 text-white/90">
+                      <strong className="text-[var(--accent)] font-medium">Hindi:</strong> {topSpecies.namesHindi}
+                    </span>
+                  )}
+                  {topSpecies.namesBengali && (
+                    <span className="liquid-glass px-2.5 py-0.5 rounded-full border border-white/10 text-white/90">
+                      <strong className="text-[var(--accent)] font-medium">Bengali:</strong> {topSpecies.namesBengali}
+                    </span>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -118,9 +132,10 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
         <Stagger className="space-y-2.5">
           {result.top3.map((pred, idx) => {
             const spec = candidateSpecies[idx];
+            const regional = [spec?.namesHindi, spec?.namesBengali].filter(Boolean).join(' / ');
             const displayName = spec
-              ? `${spec.commonName} (${spec.scientificName})`
-              : `Species #${pred.speciesId}`;
+              ? `${spec.commonName} (${spec.scientificName})${regional ? ` — ${regional}` : ''}`
+              : `Botanical Specimen (${pred.speciesId})`;
             return (
               <StaggerItem key={`${pred.speciesId}-${idx}`}>
                 <MatchBar

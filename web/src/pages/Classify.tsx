@@ -16,7 +16,7 @@ import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
 import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { useHistoryStore } from '@/features/history/useHistoryStore';
-import { MOCK_SPECIES, getSpeciesById } from '@/data/mockSpecies';
+import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
 import { isMockMode } from '@/ml/mock';
 import {
   runClassificationPipeline,
@@ -84,6 +84,7 @@ export function Classify() {
   const [workerProgress, setWorkerProgress] = useState(0);
   const [workerMsg, setWorkerMsg] = useState('');
   const [workerErr, setWorkerErr] = useState<string | null>(null);
+  const [showProgressBanner, setShowProgressBanner] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -95,13 +96,20 @@ export function Classify() {
         getOrCreateWorker((progress, message) => {
           setWorkerProgress(progress);
           setWorkerMsg(message);
-          setWorkerStatus('loading');
+          if (progress >= 1.0) {
+            setWorkerStatus('ready');
+          } else {
+            setWorkerStatus('loading');
+          }
         });
         const current = getWorkerState();
         setWorkerStatus(current.state);
         setWorkerProgress(current.progress);
         setWorkerMsg(current.message);
         setWorkerErr(current.error);
+        if (current.state === 'loading') {
+          setShowProgressBanner(true);
+        }
       } catch (e) {
         setWorkerStatus('error');
         setWorkerErr(e instanceof Error ? e.message : String(e));
@@ -109,10 +117,22 @@ export function Classify() {
     }
   }, []);
 
-  // Species Lookup Map
+  // Auto-hide progress banner 1.5 seconds after reaching 100% / ready state
+  useEffect(() => {
+    if (workerStatus === 'loading') {
+      setShowProgressBanner(true);
+    } else if (workerStatus === 'ready' || workerProgress >= 1.0) {
+      const timer = setTimeout(() => {
+        setShowProgressBanner(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [workerStatus, workerProgress]);
+
+  // Species Lookup Map (contains all 112 cataloged species)
   const speciesMap = useMemo(() => {
     const map = new Map<number, Species>();
-    MOCK_SPECIES.forEach((s) => map.set(s.id, s));
+    getAllSpecies().forEach((s) => map.set(s.id, s));
     return map;
   }, []);
 
@@ -286,8 +306,9 @@ export function Classify() {
     if (!result || isSaved) return;
 
     const topId = result.top3[0]?.speciesId;
-    const topSpecies = topId ? getSpeciesById(topId) : undefined;
+    const resolved = typeof topId === 'number' ? getSpeciesById(topId) : undefined;
     const topProb = result.top3[0]?.prob ?? 0;
+    const regional = [resolved?.namesHindi, resolved?.namesBengali].filter(Boolean).join(' • ');
 
     const entry: SavedPrediction = {
       id: `pred_${Date.now()}`,
@@ -299,8 +320,8 @@ export function Classify() {
       imagePath: photos[0]?.previewUrl ?? null,
       modelVersion: result.modelVersion,
       createdAt: new Date().toISOString(),
-      speciesName: topSpecies
-        ? `${topSpecies.commonName} (${topSpecies.scientificName})`
+      speciesName: resolved
+        ? `${resolved.commonName} (${resolved.scientificName})${regional ? ` — ${regional}` : ''}`
         : 'Unrecognized Specimen',
     };
 
@@ -334,27 +355,42 @@ export function Classify() {
     ctx.font = 'italic 20px sans-serif';
     ctx.fillText(topSpecies?.scientificName || 'Botanical Classification', 50, 105);
 
+    // Regional Names (Hindi / Bengali)
+    const regional = [
+      topSpecies?.namesHindi ? `Hindi: ${topSpecies.namesHindi}` : null,
+      topSpecies?.namesBengali ? `Bengali: ${topSpecies.namesBengali}` : null,
+    ].filter(Boolean).join('   |   ');
+
+    if (regional) {
+      ctx.fillStyle = '#e4e4e7';
+      ctx.font = '16px sans-serif';
+      ctx.fillText(regional, 50, 135);
+    }
+
     ctx.fillStyle = '#a1a1aa';
     ctx.font = '14px monospace';
-    ctx.fillText(`Family: ${topSpecies?.family || 'Taxonomic Class'}`, 50, 140);
+    ctx.fillText(`Family: ${topSpecies?.family || 'Taxonomic Class'}`, 50, regional ? 165 : 140);
 
     // Confidence & Tier
     const probPct = Math.round((result.top3[0]?.prob ?? 0) * 100);
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 24px sans-serif';
-    ctx.fillText(`Confidence: ${probPct}%  |  Tier: ${result.tier.toUpperCase()}`, 50, 200);
+    ctx.fillText(`Confidence: ${probPct}%  |  Tier: ${result.tier.toUpperCase()}`, 50, 210);
 
     // Candidate breakdown
     ctx.fillStyle = '#a1a1aa';
     ctx.font = '14px sans-serif';
-    ctx.fillText('Top Candidate Probabilities:', 50, 250);
+    ctx.fillText('Top Candidate Probabilities:', 50, 260);
 
     result.top3.forEach((pred, i) => {
       const sp = getSpeciesById(pred.speciesId);
-      const name = sp ? `${sp.commonName} (${sp.scientificName})` : `Class #${pred.speciesId}`;
+      const reg = [sp?.namesHindi, sp?.namesBengali].filter(Boolean).join(' / ');
+      const name = sp
+        ? `${sp.commonName} (${sp.scientificName})${reg ? ` — ${reg}` : ''}`
+        : `Botanical Specimen (${pred.speciesId})`;
       const pct = (pred.prob * 100).toFixed(1);
       ctx.fillStyle = '#e4e4e7';
-      ctx.fillText(`${i + 1}. ${name} — ${pct}%`, 50, 280 + i * 30);
+      ctx.fillText(`${i + 1}. ${name} — ${pct}%`, 50, 290 + i * 32);
     });
 
     // Disclaimer
@@ -375,11 +411,29 @@ export function Classify() {
     showToast('Classification summary image downloaded!');
   };
 
-  const topSpecies = result?.top3[0]?.speciesId
-    ? speciesMap.get(result.top3[0].speciesId)
-    : undefined;
+  const topSpeciesId = result?.top3[0]?.speciesId;
+  const [asyncTopSpecies, setAsyncTopSpecies] = useState<Species | null>(null);
 
-  const candidateSpecies = result?.top3.map((p) => speciesMap.get(p.speciesId)) ?? [];
+  useEffect(() => {
+    if (typeof topSpeciesId === 'number') {
+      const sync = getSpeciesById(topSpeciesId);
+      setAsyncTopSpecies(sync);
+      fetchSpeciesById(topSpeciesId).then((loaded) => {
+        if (loaded) setAsyncTopSpecies(loaded);
+      });
+    } else {
+      setAsyncTopSpecies(null);
+    }
+  }, [topSpeciesId]);
+
+  const topSpecies =
+    asyncTopSpecies ||
+    (typeof topSpeciesId === 'number' ? getSpeciesById(topSpeciesId) : undefined);
+
+  const candidateSpecies = useMemo(() => {
+    if (!result?.top3) return [];
+    return result.top3.map((p) => getSpeciesById(p.speciesId));
+  }, [result?.top3]);
 
   // Build Result Tabs
   const tabItems = useMemo(() => {
@@ -423,63 +477,84 @@ export function Classify() {
               </div>
             </div>
 
-            {/* Identifying Features */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
-              <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--accent)]">
-                Identifying Botanical Features
-              </p>
-              <ul className="list-disc list-inside space-y-1.5 text-white/80 leading-relaxed">
-                {topSpecies.identifyingFeatures.map((feat, idx) => (
-                  <li key={idx}>{feat}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Habitat & Distribution */}
-            {topSpecies.habitat && (
-              <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1" data-glow="">
-                <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
-                  Natural Habitat &amp; Distribution
-                </p>
-                <p className="leading-relaxed">{topSpecies.habitat}</p>
-              </div>
-            )}
-
-            {/* Traditional Uses with safety flag */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
-              <p className="text-xs font-body font-semibold uppercase tracking-wider text-emerald-400">
-                Traditional &amp; Practical Uses
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
-                {topSpecies.uses.map((use, idx) => (
-                  <li key={idx}>{use}</li>
-                ))}
-              </ul>
-              <p className="text-[10px] text-white/50 pt-1 italic">
-                Educational information only, not medical advice.
-              </p>
-            </div>
-
-            {/* Care Tips */}
-            <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
-              <p className="text-xs font-body font-semibold uppercase tracking-wider text-teal-300">
-                Cultivation &amp; Care Tips
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
-                {topSpecies.careTips.map((tip, idx) => (
-                  <li key={idx}>{tip}</li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Toxicity Warning */}
-            {topSpecies.toxicityNote && (
-              <div className="liquid-glass rounded-xl p-4 border border-rose-500/30 bg-rose-950/20 text-rose-200 flex items-start gap-3">
-                <span className="text-base" aria-hidden="true">⚠️</span>
-                <div>
-                  <p className="font-semibold text-xs text-rose-100">Toxicity &amp; Precautions</p>
-                  <p className="text-[11px] leading-relaxed mt-0.5">{topSpecies.toxicityNote}</p>
+            {/* Complete Monograph or Pending Overview */}
+            {hasRichContent(topSpecies.id) ? (
+              <>
+                {/* Identifying Features */}
+                <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
+                  <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--accent)]">
+                    Identifying Botanical Features
+                  </p>
+                  <ul className="list-disc list-inside space-y-1.5 text-white/80 leading-relaxed">
+                    {topSpecies.identifyingFeatures.map((feat, idx) => (
+                      <li key={idx}>{feat}</li>
+                    ))}
+                  </ul>
                 </div>
+
+                {/* Habitat & Distribution */}
+                {topSpecies.habitat && (
+                  <div className="liquid-glass rounded-xl p-4 border border-white/10 space-y-1" data-glow="">
+                    <p className="text-[11px] font-body font-semibold uppercase tracking-wider text-white/60">
+                      Natural Habitat &amp; Distribution
+                    </p>
+                    <p className="leading-relaxed">{topSpecies.habitat}</p>
+                  </div>
+                )}
+
+                {/* Traditional Uses with safety flag */}
+                {topSpecies.uses.length > 0 && (
+                  <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
+                    <p className="text-xs font-body font-semibold uppercase tracking-wider text-emerald-400">
+                      Traditional &amp; Practical Uses
+                    </p>
+                    <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
+                      {topSpecies.uses.map((use, idx) => (
+                        <li key={idx}>{use}</li>
+                      ))}
+                    </ul>
+                    <p className="text-[10px] text-white/50 pt-1 italic">
+                      Educational information only, not medical advice.
+                    </p>
+                  </div>
+                )}
+
+                {/* Care Tips */}
+                {topSpecies.careTips.length > 0 && (
+                  <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
+                    <p className="text-xs font-body font-semibold uppercase tracking-wider text-teal-300">
+                      Cultivation &amp; Care Tips
+                    </p>
+                    <ul className="list-disc list-inside space-y-1 text-white/80 leading-relaxed">
+                      {topSpecies.careTips.map((tip, idx) => (
+                        <li key={idx}>{tip}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Toxicity Warning */}
+                {topSpecies.toxicityNote && (
+                  <div className="liquid-glass rounded-xl p-4 border border-rose-500/30 bg-rose-950/20 text-rose-200 flex items-start gap-3">
+                    <span className="text-base" aria-hidden="true">⚠️</span>
+                    <div>
+                      <p className="font-semibold text-xs text-rose-100">Toxicity &amp; Precautions</p>
+                      <p className="text-[11px] leading-relaxed mt-0.5">{topSpecies.toxicityNote}</p>
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">
+                <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--accent)]">
+                  Botanical Monograph Pending
+                </p>
+                <p className="leading-relaxed font-light text-white/80">
+                  {topSpecies.description}
+                </p>
+                <p className="text-[11px] text-white/50 pt-1 italic">
+                  Extended care guidelines and traditional ethnobotanical notes for this species are being compiled. Coarse regional distribution from GBIF is available below.
+                </p>
               </div>
             )}
 
@@ -492,7 +567,7 @@ export function Classify() {
           </div>
         ) : (
           <div className="liquid-glass rounded-xl p-6 text-center text-white/60 text-xs">
-            Botanical details are only available for recognized plant species.
+            Botanical details will appear once a specimen is identified.
           </div>
         ),
       },
@@ -570,15 +645,19 @@ export function Classify() {
           </div>
         )}
 
-        {/* Model Loading Progress Banner */}
-        {!isMockMode && workerStatus === 'loading' && (
-          <div className="liquid-glass rounded-2xl p-4 border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-white space-y-2">
-            <div className="flex items-center justify-between text-xs font-mono">
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-ping" />
-                <span>Initializing On-Device Model: {workerMsg || 'Downloading neural network...'}</span>
+        {/* Model Loading Progress Banner (auto-hides 1.5s after 100%) */}
+        {!isMockMode && showProgressBanner && (
+          <div className="liquid-glass rounded-2xl p-4 border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-white space-y-2 shadow-lg">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono">
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent)] shrink-0 animate-ping" />
+                <span className="truncate">
+                  Initializing On-Device Model: {workerMsg || 'Downloading neural network...'}
+                </span>
+              </div>
+              <span className="text-[var(--accent)] font-semibold shrink-0">
+                {Math.round(workerProgress * 100)}%
               </span>
-              <span className="text-[var(--accent)] font-semibold">{Math.round(workerProgress * 100)}%</span>
             </div>
             <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
               <div
@@ -589,16 +668,19 @@ export function Classify() {
           </div>
         )}
 
-        {/* Model Error Banner */}
+        {/* Model Error Banner (always kept visible) */}
         {!isMockMode && workerStatus === 'error' && (
-          <div className="liquid-glass rounded-2xl p-4 border border-rose-500/40 bg-rose-950/20 text-rose-200 flex items-center justify-between text-xs">
-            <div className="space-y-0.5">
+          <div className="liquid-glass rounded-2xl p-4 border border-rose-500/40 bg-rose-950/20 text-rose-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs shadow-lg">
+            <div className="space-y-0.5 min-w-0">
               <p className="font-semibold text-rose-100">Failed to initialize on-device neural model</p>
-              <p className="text-[11px] text-rose-200/80">{workerErr || 'Hardware acceleration or WASM initialization failed.'}</p>
+              <p className="text-[11px] text-rose-200/80 truncate">
+                {workerErr || 'Hardware acceleration or WASM initialization failed.'}
+              </p>
             </div>
             <button
+              type="button"
               onClick={() => window.location.reload()}
-              className="liquid-glass px-3 py-1.5 rounded-lg border border-rose-400/30 text-rose-100 hover:bg-rose-500/20 font-mono text-[11px]"
+              className="liquid-glass px-3 py-1.5 rounded-lg border border-rose-400/30 text-rose-100 hover:bg-rose-500/20 font-mono text-[11px] shrink-0"
             >
               Retry
             </button>

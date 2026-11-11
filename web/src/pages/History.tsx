@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import { ConfidenceRing } from '@/components/ui/ConfidenceRing';
@@ -6,6 +6,8 @@ import { SolidButton } from '@/components/ui/SolidButton';
 import { ArrowUpRight, Clock, Camera, Info, X } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { CountUp } from '@/components/motion/CountUp';
+import { useHistoryStore } from '@/features/history/useHistoryStore';
+import { getSpeciesById } from '@/services/speciesService';
 
 const INITIAL_HISTORY = [
   {
@@ -13,6 +15,7 @@ const INITIAL_HISTORY = [
     timestamp: 'Today, 14:22',
     commonName: 'Chinese Hibiscus',
     scientificName: 'Hibiscus rosa-sinensis',
+    regionalNames: 'Hindi: गुड़हल • Bengali: জবা',
     confidence: 0.94,
     family: 'Malvaceae',
     organ: 'Flower',
@@ -24,6 +27,7 @@ const INITIAL_HISTORY = [
     timestamp: 'Yesterday, 09:15',
     commonName: 'Holy Basil (Tulsi)',
     scientificName: 'Ocimum tenuiflorum',
+    regionalNames: 'Hindi: तुलसी • Bengali: তুলসী',
     confidence: 0.88,
     family: 'Lamiaceae',
     organ: 'Leaf',
@@ -35,6 +39,7 @@ const INITIAL_HISTORY = [
     timestamp: 'Oct 30, 16:40',
     commonName: 'Swiss Cheese Plant',
     scientificName: 'Monstera deliciosa',
+    regionalNames: '',
     confidence: 0.96,
     family: 'Araceae',
     organ: 'Foliage',
@@ -46,6 +51,7 @@ const INITIAL_HISTORY = [
     timestamp: 'Oct 28, 11:05',
     commonName: 'Rubber Fig',
     scientificName: 'Ficus elastica',
+    regionalNames: 'Hindi: रबर प्लांट • Bengali: রবার গাছ',
     confidence: 0.91,
     family: 'Moraceae',
     organ: 'Bark & Leaf',
@@ -55,10 +61,40 @@ const INITIAL_HISTORY = [
 ];
 
 export function History() {
-  const [items, setItems] = useState(INITIAL_HISTORY);
+  const savedPredictions = useHistoryStore((state) => state.predictions);
+  const clearStore = useHistoryStore((state) => state.clearHistory);
+
+  const items = useMemo(() => {
+    if (savedPredictions.length === 0) {
+      return INITIAL_HISTORY;
+    }
+    return savedPredictions.map((pred) => {
+      const sp = pred.speciesId !== null ? getSpeciesById(pred.speciesId) : undefined;
+      const regional = [sp?.namesHindi, sp?.namesBengali].filter(Boolean).join(' • ');
+      return {
+        id: pred.id,
+        timestamp: new Date(pred.createdAt).toLocaleDateString(undefined, {
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+        }),
+        commonName: sp?.commonName || pred.speciesName || 'Botanical Specimen',
+        scientificName: sp?.scientificName || 'Plantae',
+        regionalNames: regional,
+        confidence: pred.confidence,
+        family: sp?.family || 'Plantae',
+        organ: 'Specimen Scan',
+        imageUrl:
+          pred.imagePath ||
+          sp?.referenceImages?.[0] ||
+          'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=400&q=80',
+      };
+    });
+  }, [savedPredictions]);
 
   const clearHistory = () => {
-    setItems([]);
+    clearStore();
   };
 
   return (
@@ -174,6 +210,11 @@ export function History() {
                     <p className="font-heading italic text-xs text-[var(--fg-muted)]">
                       {item.scientificName}
                     </p>
+                    {item.regionalNames && (
+                      <p className="font-body text-[11px] text-[var(--accent)] mt-0.5">
+                        {item.regionalNames}
+                      </p>
+                    )}
                     <div className="flex items-center gap-1.5 mt-1 text-[11px] font-mono text-[var(--fg-subtle)]">
                       <Clock className="w-3 h-3" />
                       {item.timestamp}
