@@ -1,0 +1,572 @@
+[
+  {
+    "id": 90,
+    "slug": "dieffenbachia-seguine",
+    "common_name": "Dieffenbachia",
+    "scientific_name": "Dieffenbachia seguine",
+    "family": "Araceae",
+    "genus": "Dieffenbachia",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "डम्ब केन (Dumb Cane)",
+    "names_bengali": "ডাম্ব কেন (Dumb Cane)",
+    "other_names": ["Dumb Cane", "Leopard Lily", "Tropic Snow", "Amoena", "Dieffenbachia"],
+    "description": "A striking, upright tropical houseplant with cane-like stems and broad, dramatic emerald-green leaves intricately patterned with ivory, cream, and yellow variegation. HIGHLY TOXIC.",
+    "identifying_features": [
+      "Stout, fleshy, bamboo-like cane stems with prominent leaf sheath scars",
+      "Large, broad oblong-elliptic leaves marbled with creamy-white and pale yellow splotches along the center",
+      "Thick, fleshy petioles with sheathing bases clasping the central cane",
+      "Rare greenish-white spathe-and-spadix inflorescences in indoor cultivation"
+    ],
+    "habitat": "Humid tropical rainforest understory floors, shaded gullies, and domestic indoor corners.",
+    "distribution": "Native to the tropical Americas and the West Indies; widely grown across India as an indoor foliage plant.",
+    "uses": [
+      "Popular decorative indoor statement plant prized for its bold, luminous variegated leaves",
+      "Tolerates lower indoor light levels and humid living spaces",
+      "Air-filtering ornamental removing indoor airborne pollutants"
+    ],
+    "care_tips": [
+      "Provide medium to bright indirect sunlight; direct sun burns and bleaches the variegation",
+      "Allow the top 2 inches of potting mix to dry out between waterings; avoid soggy standing water",
+      "Always wear gloves when pruning or propagating; wash hands thoroughly after handling"
+    ],
+    "toxicity_note": "HIGHLY TOXIC: Known as 'Dumb Cane' because chewing any part causes immediate excruciating burning, intense inflammation of the tongue, lips, and vocal cords, causing temporary loss of speech ('dumbness'). Swelling can obstruct airways and cause asphyxiation. Extremely dangerous to dogs, cats, and small children.",
+    "fun_fact": "The name 'Dumb Cane' refers to the horrific historical practice of punishing enslaved individuals by forcing them to chew the plant's stems, which caused their tongues to swell so violently that they were unable to speak for days.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dieffenbachia_seguine"
+  },
+  {
+    "id": 91,
+    "slug": "kalanchoe-pinnata",
+    "common_name": "Patharchatta / Air plant",
+    "scientific_name": "Kalanchoe pinnata",
+    "family": "Crassulaceae",
+    "genus": "Kalanchoe",
+    "plant_type": "succulent",
+    "origin": "global",
+    "names_hindi": "पत्थरचट्टा (Patharchatta)",
+    "names_bengali": "পাথরকুচি (Patharkuchi)",
+    "other_names": ["Life Plant", "Miracle Leaf", "Cathedral Bells", "Air Plant", "Patharkuchi", "Pashanbheda"],
+    "description": "A remarkable, drought-resilient succulent herb famous for its crenate fleshy leaves that produce tiny, rooted adventitious plantlets along their margins, and pendulous bell-like flowers.",
+    "identifying_features": [
+      "Fleshy, succulent cylindrical stems with thick, scalloped (crenate) opposite leaves",
+      "Unique leaf margins capable of sprouting miniature rooted baby plantlets in every scalloped notch (foliar vivipary)",
+      "Pendulous, hanging reddish-purple tubular bell-shaped flowers arranged in terminal branched cymes",
+      "Exceptional capacity to sprout new plants from a single detached leaf pinned to a wall or resting on dry soil"
+    ],
+    "habitat": "Rocky crevices, dry stone walls, sunny cottage gardens, and arid waste grounds.",
+    "distribution": "Native to Madagascar; naturalized widely across the Indian subcontinent and tropical zones.",
+    "uses": [
+      "Celebrated Indian folk and Ayurvedic remedy (Pashanbheda / Patharchatta) where crushed leaf juice is taken to dissolve kidney stones TODO(verify)",
+      "Traditional poultice applied to wounds, boils, bruises, and insect bites for soothing inflammation TODO(verify)",
+      "Fascinating living botany demonstration plant illustrating vegetative foliar reproduction"
+    ],
+    "care_tips": [
+      "Requires plenty of bright sunlight to maintain compact growth and vibrant leaf margins",
+      "Extremely drought tolerant; water only when potting soil has dried out thoroughly",
+      "Simply lay a detached mature leaf flat on moist soil to propagate dozens of new plantlets"
+    ],
+    "toxicity_note": "TOXIC TO LIVESTOCK AND PETS: Contains bufadienolide cardiac glycosides (bryotoxins). Highly toxic to grazing animals, cattle, dogs, and cats, causing severe cardiac arrhythmias, tremors, vomiting, and potential heart failure. Handle with care around pets.",
+    "fun_fact": "A single fallen leaf of Patharchatta can survive pinned to a bulletin board with zero soil or water for weeks while sprouting a dozen independent baby plants from its scalloped edges, earning it the title 'The Life Plant'.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Kalanchoe_pinnata"
+  },
+  {
+    "id": 92,
+    "slug": "helianthus-annuus",
+    "common_name": "Sunflower",
+    "scientific_name": "Helianthus annuus",
+    "family": "Asteraceae",
+    "genus": "Helianthus",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "सूरजमुखी (Surajmukhi)",
+    "names_bengali": "সূর্যমুখী (Surjomukhi)",
+    "other_names": ["Common Sunflower", "Surajmukhi", "Surjomukhi", "Girasol"],
+    "description": "A magnificent, towering annual herb with rough hairy stems, broad cordate leaves, and colossal golden composite flower heads that famously track the sun across the sky.",
+    "identifying_features": [
+      "Stout, erect, coarse, unbranched rough-hairy stem reaching 1.5 to 3.5 meters in height",
+      "Large, rough, ovate to cordate alternate leaves with serrate margins",
+      "Massive composite flower head (up to 30 cm across) with brilliant golden-yellow ray florets and a central disc of dark brownish-black fertile florets",
+      "Heliotropic behavior: young developing flower buds visibly follow the sun from east to west each day"
+    ],
+    "habitat": "Sunny agricultural farmlands, river plains, open meadows, and summer garden borders.",
+    "distribution": "Native to North America; cultivated widely across southern and central India (Karnataka, Maharashtra, Andhra Pradesh).",
+    "uses": [
+      "Major commercial source of healthy sunflower cooking oil, rich in polyunsaturated fats and Vitamin E",
+      "Edible roasted seeds enjoyed as wholesome snacks, rich in protein, selenium, and dietary fiber",
+      "Premier ornamental garden showstopper and crucial pollen resource for foraging honeybees"
+    ],
+    "care_tips": [
+      "Requires full, uninterrupted, blazing sunlight (at least 6-8 hours daily)",
+      "Plant in deep, well-draining, fertile loam to accommodate a deep central taproot",
+      "Stake tall giant varieties in exposed locations to prevent lodging from heavy winds"
+    ],
+    "toxicity_note": "Non-toxic; seeds, petals, and sprouts are edible and completely safe for humans and household pets.",
+    "fun_fact": "A single sunflower head is not a single flower, but an inflorescence of thousands of individual florets arranged in interlocking Fibonacci spirals, maximizing packing efficiency.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Helianthus_annuus"
+  },
+  {
+    "id": 93,
+    "slug": "bellis-perennis",
+    "common_name": "Daisy",
+    "scientific_name": "Bellis perennis",
+    "family": "Asteraceae",
+    "genus": "Bellis",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "डेज़ी (Daisy)",
+    "names_bengali": "ডেইজি (Daisy)",
+    "other_names": ["English Daisy", "Common Daisy", "Lawn Daisy", "Bruisewort", "Day's Eye"],
+    "description": "A charming, low-growing herbaceous perennial with compact rosettes of spoon-shaped leaves and cheerful solitary composite flower heads with white ray petals and sunny yellow centers.",
+    "identifying_features": [
+      "Basal rosette of flat, spoon-shaped (spathulate) or obovate leaves with finely scalloped margins",
+      "Slender, leafless flower scapes rising 5-15 cm above the foliage",
+      "Solitary composite flower heads with pure white (or pink-tipped) ray florets surrounding a central disc of bright golden-yellow tubular florets",
+      "Flower heads that close tightly at dusk and reopen in the morning sunshine"
+    ],
+    "habitat": "Lush lawns, temperate meadows, alpine hill station gardens (Shimla, Ooty), and ornamental borders.",
+    "distribution": "Native to western, central, and northern Europe; cultivated across Indian hill stations and winter gardens.",
+    "uses": [
+      "Classic cool-season garden edging, rockery border plant, and flowering groundcover",
+      "Tender young leaves and flower petals are edible, traditionally added to fresh spring salads",
+      "Historical European herbal use (Bruisewort) for soothing minor skin bruises and sprains TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires cool temperatures and moist, fertile, well-drained garden soil",
+      "Provide full sun in cool climates, or dappled morning light in warmer zones",
+      "Deadhead spent flowers regularly to encourage continuous blooming flushes"
+    ],
+    "toxicity_note": "Non-toxic; edible and completely safe around dogs, cats, and small children.",
+    "fun_fact": "The name 'daisy' is a contraction of the Old English 'daeges eage' ('day's eye'), so called because the flower opens its petals at dawn and closes them tightly at sunset.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bellis_perennis"
+  },
+  {
+    "id": 94,
+    "slug": "taraxacum-officinale",
+    "common_name": "Dandelion",
+    "scientific_name": "Taraxacum officinale",
+    "family": "Asteraceae",
+    "genus": "Taraxacum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "सिंहपर्णी (Sinhaparni)",
+    "names_bengali": "সিংহপর্ণী (Singhaparni)",
+    "other_names": ["Common Dandelion", "Lion's Tooth", "Sinhaparni", "Puffball", "Blowball"],
+    "description": "A tenacious, nutrient-dense perennial wild herb with deeply toothed basal leaf rosettes, bright sunny-yellow composite flower heads, and iconic spherical feathery seed puffballs.",
+    "identifying_features": [
+      "Basal rosette of deeply jagged, runcinate-pinnatifid leaves resembling sharp lion's teeth",
+      "Hollow, leafless cylindrical flower stalks exuding bitter milky white latex when snapped",
+      "Solitary bright golden-yellow composite flower heads composed entirely of ray florets",
+      "Spherical, ethereal seed head ('clock' or puffball) composed of hundreds of parachute-like pappus bristles attached to achenes"
+    ],
+    "habitat": "Himalayan meadows, hill station roadsides, lawn edges, pastures, and disturbed grasslands.",
+    "distribution": "Native to Eurasia; naturalized across temperate Indian hill ranges (Kashmir, Himachal, Nilgiris) and worldwide.",
+    "uses": [
+      "Tender young spring leaves eaten as a nutritious bitter salad green packed with Vitamins A, C, and K",
+      "Roasted taproots ground and brewed into a rich, caffeine-free herbal coffee substitute",
+      "Traditional herbal diuretic ('pisse-en-lit') and liver tonic supporting bile secretion TODO(verify)"
+    ],
+    "care_tips": [
+      "Thrives in almost any soil and full sun; often treated as a weed due to deep taproots and windborne seeds",
+      "Deep taproots draw up mineral nutrients from subsoil layers",
+      "Harvest roots in autumn when inulin and bitter principles are most concentrated"
+    ],
+    "toxicity_note": "Non-toxic; leaves, flowers, and roots are fully edible. Milky stem latex may cause mild skin contact dermatitis in very sensitive individuals TODO(verify).",
+    "fun_fact": "The name Dandelion comes from the French 'dent-de-lion', meaning 'lion's tooth', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Taraxacum_officinale"
+  },
+  {
+    "id": 95,
+    "slug": "lavandula-angustifolia",
+    "common_name": "Lavender",
+    "scientific_name": "Lavandula angustifolia",
+    "family": "Lamiaceae",
+    "genus": "Lavandula",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "लैवेंडर (Lavender)",
+    "names_bengali": "ল্যাভেন্ডার (Lavender)",
+    "other_names": ["English Lavender", "True Lavender", "Narrow-Leaved Lavender", "Common Lavender"],
+    "description": "A beloved aromatic evergreen semi-shrub with narrow grey-green linear foliage and elegant upright spikes of intensely fragrant lilac-purple blossoms rich in calming linalool oil.",
+    "identifying_features": [
+      "Compact, bushy woody-based semi-shrub reaching 30 to 60 cm in height",
+      "Opposite, narrow, linear-lanceolate greyish-green leaves with softly curled (revolute) margins covered in fragrant glandular hairs",
+      "Slender, unbranched leafless terminal stalks topped with compact spikes of small tubular two-lipped violet-purple flowers",
+      "Clean, sweet, soothing herbal-floral camphoraceous scent"
+    ],
+    "habitat": "Dry, rocky limestone slopes, Mediterranean hill pastures, and temperate Indian hill gardens (Kashmir).",
+    "distribution": "Native to the Mediterranean region; successfully cultivated in the Kashmir Valley and Indian hill stations.",
+    "uses": [
+      "Steam-distilled essential oil rich in linalool and linalyl acetate, world-renowned for aromatherapy and sleep relaxation",
+      "Dried floral buds sewn into fragrant sachets to perfume linens and deter clothing moths",
+      "Culinary herb infused into artisanal honey, gourmet lemonades, teas, and baked pastries"
+    ],
+    "care_tips": [
+      "Requires full blazing sun (at least 6-8 hours daily) and sharply draining, gravelly, low-fertility alkaline soil",
+      "Cannot tolerate wet feet or high subtropical humidity, which induces fungal root rot",
+      "Prune lightly after summer blooming to prevent woodiness and encourage bushy growth"
+    ],
+    "toxicity_note": "Safe in culinary amounts; concentrated essential oil is toxic if swallowed, especially to cats and dogs who lack the liver enzymes to metabolize linalool TODO(verify).",
+    "fun_fact": "The name Lavender comes from the Latin verb 'lavare' (to wash), because ancient Romans extensively perfumed their public thermal baths and laundry with fragrant lavender blossoms.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lavandula_angustifolia"
+  },
+  {
+    "id": 96,
+    "slug": "salvia-rosmarinus",
+    "common_name": "Rosemary",
+    "scientific_name": "Salvia rosmarinus",
+    "family": "Lamiaceae",
+    "genus": "Salvia",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "रोज़मेरी (Rosemary)",
+    "names_bengali": "রোজমেরি (Rosemary)",
+    "other_names": ["Common Rosemary", "Rosmarinus officinalis", "Dew of the Sea", "Gul-mehendi"],
+    "description": "A fragrant, woody evergreen shrub with aromatic needle-like dark green leaves and delicate pale-blue blossoms, prized for culinary seasoning, hair care, and memory enhancement.",
+    "identifying_features": [
+      "Erect or spreading woody perennial shrub reaching 0.5 to 1.5 meters tall",
+      "Dense, needle-like, leathery linear leaves that are dark green above and silvery-white downy beneath with curled margins",
+      "Small, two-lipped pale blue to violet flowers clustered in leaf axils",
+      "Pungent, invigorating pine-wood and camphor aroma when leaves are brushed or crushed"
+    ],
+    "habitat": "Dry, sun-baked rocky Mediterranean sea-cliffs, terrace pots, and temperate herb gardens.",
+    "distribution": "Native to the Mediterranean basin; cultivated widely in Indian kitchen herb gardens and cooler hill regions.",
+    "uses": [
+      "Pungent culinary seasoning herb paired with roasted potatoes, vegetables, breads (focaccia), and oils",
+      "Rosemary essential oil and hair rinses celebrated for invigorating scalps and promoting hair thickness TODO(verify)",
+      "Traditional symbol of remembrance; 1,8-cineole scent shown to boost cognitive recall and alertness"
+    ],
+    "care_tips": [
+      "Needs full direct sunshine and rapid-draining gritty or sandy soil; highly susceptible to root rot if overwatered",
+      "Allow the top 2 inches of potting mix to dry between thorough waterings",
+      "Prune regularly to shape the shrub and prevent the lower stems from turning bare and woody"
+    ],
+    "toxicity_note": "Culinary amounts are completely safe; large medicinal doses of rosemary oil can trigger gastrointestinal irritation and are contraindicated in pregnancy TODO(verify). Safe around pets in small quantities.",
+    "fun_fact": "The botanical name Rosmarinus translates poetically from Latin as 'dew of the sea' (ros = dew, marinus = sea), describing its natural habitat clinging to misty coastal Mediterranean cliffs.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rosemary"
+  },
+  {
+    "id": 97,
+    "slug": "ocimum-basilicum",
+    "common_name": "Sweet basil",
+    "scientific_name": "Ocimum basilicum",
+    "family": "Lamiaceae",
+    "genus": "Ocimum",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "मीठी तुलसी (Meethi Tulsi)",
+    "names_bengali": "মিষ্টি তুলসী (Mishti Tulsi)",
+    "other_names": ["Italian Basil", "Genovese Basil", "Sabja Plant", "Meethi Tulsi", "Great Basil"],
+    "description": "A tender, aromatic annual herb with glossy, cup-shaped emerald-green leaves and an intoxicating sweet clove-anise fragrance, renowned as the soul of pesto and the source of cooling sabja seeds.",
+    "identifying_features": [
+      "Square, branching green stems reaching 30 to 60 cm in height",
+      "Broad, glossy, ovate leaves with smooth or slightly toothed edges, often bulging upward between veins",
+      "Whorls of small white or pale purplish flowers on terminal spikes",
+      "Tiny, oval black seeds (sabja seeds) that swell rapidly into a thick gelatinous mucilaginous coating when soaked in water"
+    ],
+    "habitat": "Warm kitchen garden plots, sunny terrace containers, and irrigated tropical herb beds.",
+    "distribution": "Native to tropical regions of Central Africa and India; cultivated globally as a premier culinary herb.",
+    "uses": [
+      "Signature herb of Mediterranean and Italian cooking: fresh Caprese salads, pasta sauces, and blended basil pesto",
+      "Black seeds (Sabja / Tukmaria) soaked in water to create cooling summer Indian faloodas, sherbets, and health drinks",
+      "Rich in natural antioxidants, eugenol, linalool, and essential aromatic terpenes"
+    ],
+    "care_tips": [
+      "Requires warm weather and at least 6 hours of bright direct sun; highly sensitive to cold and frost",
+      "Keep potting soil moist, rich, and well-draining; avoid wetting leaves from above",
+      "Pinch off terminal flower spikes immediately as they appear to keep leaves sweet, lush, and vegetative"
+    ],
+    "toxicity_note": "Non-toxic and edible; completely safe for human culinary consumption and safe around household pets.",
+    "fun_fact": "When soaked in water for just 10 minutes, sweet basil seeds (Sabja) swell to over thirty times their original volume, forming a transparent jelly bead around each seed that cools the body during hot Indian summers.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1618375531912-867984bdfd87?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Basil"
+  },
+  {
+    "id": 98,
+    "slug": "tulipa-gesneriana",
+    "common_name": "Tulip",
+    "scientific_name": "Tulipa gesneriana",
+    "family": "Liliaceae",
+    "genus": "Tulipa",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "ट्यूलिप (Tulip)",
+    "names_bengali": "টিউলিপ (Tulip)",
+    "other_names": ["Garden Tulip", "Didier's Tulip", "Tulip", "Lale"],
+    "description": "An exquisite spring-blooming bulbous perennial famous for its elegant cup-shaped blossoms in every color of the rainbow, celebrated in the sprawling tulip gardens of Kashmir.",
+    "identifying_features": [
+      "Tunicated subterranean bulb producing 2-6 broad, glaucous, fleshy grey-green leaves clasping the stem base",
+      "Single upright flowering scape carrying a solitary, symmetrical cup-shaped or goblet-shaped blossom",
+      "Six distinct, petal-like tepals (3 outer sepals and 3 inner petals) in solid, bicolored, or fringed hues",
+      "Six stamens with prominent dark anthers surrounding a three-lobed sessile stigma"
+    ],
+    "habitat": "Steppes, mountain valleys, temperate spring borders, and cold-winter flower beds (Indira Gandhi Memorial Tulip Garden, Srinagar).",
+    "distribution": "Native to Central Asia and Turkey; celebrated in Kashmir, the Netherlands, and cold temperate regions globally.",
+    "uses": [
+      "Premier spring ornamental cut flower and garden centerpiece worldwide",
+      "Central attraction of Kashmir's annual Tulip Festival in Srinagar, Asia's largest tulip garden",
+      "Historically the subject of 'Tulip Mania' in 17th-century Holland, the world's first recorded financial speculative bubble"
+    ],
+    "care_tips": [
+      "Bulbs require a mandatory 12-14 week period of winter cold (below 7°C) to break dormancy and initiate flowering",
+      "Plant bulbs in autumn with pointed end up, 10-15 cm deep in loose, well-draining sandy loam",
+      "Provide full spring sunlight and moderate water; withhold watering during hot summer bulb dormancy"
+    ],
+    "toxicity_note": "TOXIC TO PETS AND HUMANS: All parts, especially the subterranean bulbs, contain allergenic lactones (tulipalin A and B) and tulipin. Ingestion causes severe vomiting, diarrhea, drooling, and depression in dogs and cats; handling bulbs can trigger 'tulip fingers' contact dermatitis.",
+    "fun_fact": "During the peak of Dutch 'Tulip Mania' in February 1637, a single rare 'Semper Augustus' tulip bulb sold for the price of a luxurious grand canal house in Amsterdam before the market abruptly crashed.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tulipa_gesneriana"
+  },
+  {
+    "id": 99,
+    "slug": "narcissus-pseudonarcissus",
+    "common_name": "Daffodil",
+    "scientific_name": "Narcissus pseudonarcissus",
+    "family": "Amaryllidaceae",
+    "genus": "Narcissus",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "डैफोडिल (Daffodil)",
+    "names_bengali": "ড্যাফোডিল (Daffodil)",
+    "other_names": ["Wild Daffodil", "Lent Lily", "Nargis", "Narcissus", "Jonquil"],
+    "description": "A radiant spring-flowering bulb herb bearing nodding golden-yellow trumpets surrounded by six spreading perianth petals, celebrated in romantic poetry as a herald of spring.",
+    "identifying_features": [
+      "Tunicated subterranean ovoid bulb producing 4-6 flat, strap-like linear greyish-green leaves",
+      "Slender, flattened flowering stem bearing a solitary nodding or horizontal blossom",
+      "Six pale to golden-yellow spreading perianth segments (petals) surrounding a prominent, tubular central trumpet (corona)",
+      "Sweet delicate floral perfume and three-valved capsule containing small black seeds"
+    ],
+    "habitat": "Open woods, alpine meadows, damp riverbanks, hill station gardens, and spring borders.",
+    "distribution": "Native to western Europe; grown in the cooler hilly climes of northern India (Kashmir, Himachal Pradesh) and temperate zones.",
+    "uses": [
+      "Iconic herald of spring planted in sweeps across hill gardens, parks, and floral arrangements",
+      "Subject of William Wordsworth's immortal poem 'I Wandered Lonely as a Cloud'",
+      "Pharmaceutical extraction of the alkaloid galantamine, utilized in modern medication for Alzheimer's disease"
+    ],
+    "care_tips": [
+      "Plant bulbs in autumn 10-15 cm deep in moist, well-draining soil with morning or full spring sun",
+      "Leave fading green foliage intact after blooming for at least 6 weeks so bulbs can photosynthesize food for next year",
+      "Naturally deer, rodent, and pest resistant due to alkaloid content"
+    ],
+    "toxicity_note": "HIGHLY TOXIC: All parts of the plant, especially the bulbs, contain toxic phenanthridine alkaloids (lycorine) and needle-like calcium oxalate crystals. Ingestion causes severe nausea, projectile vomiting, diarrhea, abdominal pain, cardiac arrhythmias, and convulsions in humans, dogs, and cats.",
+    "fun_fact": "Daffodils are completely immune to garden rodents, squirrels, and deer, who instinctively avoid digging up or chewing the bulbs because of their intense toxicity.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus"
+  },
+  {
+    "id": 100,
+    "slug": "lilium-lancifolium",
+    "common_name": "Lily",
+    "scientific_name": "Lilium lancifolium",
+    "family": "Liliaceae",
+    "genus": "Lilium",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "टाइगर लिली (Tiger Lily)",
+    "names_bengali": "টাইগার লিলি (Tiger Lily)",
+    "other_names": ["Tiger Lily", "Lilium tigrinum", "Spotted Lily", "True Lily"],
+    "description": "A flamboyant, tall perennial bulb herb bearing nodding, fiery orange blossoms with recurved petals covered in dark purple-black freckles and dramatic protruding stamens. FATAL TO CATS.",
+    "identifying_features": [
+      "Stout, dark purplish-green leafy stem reaching 1 to 2 meters in height",
+      "Dense spirally arranged lanceolate sessile leaves with distinctive glossy black bulbils in the upper leaf axils",
+      "Nodding, unscented flowers with six strongly reflexed (curled backward) fiery orange tepals covered in raised dark brown-purple spots",
+      "Six long, spreading stamens with prominent versatile red-brown pollen anthers and a long curved pistil"
+    ],
+    "habitat": "Moist temperate valley meadows, stream banks, cool hillside gardens, and cottage borders.",
+    "distribution": "Native to East Asia (China, Korea, Japan); grown across Indian hill stations and temperate flower gardens.",
+    "uses": [
+      "Dramatic architectural summer garden perennial and premium floriculture cut flower",
+      "Starchy underground bulbs cultivated and eaten as a traditional sweet delicacy in Chinese cooking",
+      "Axillary bulbils provide effortless asexual propagation for gardeners"
+    ],
+    "care_tips": [
+      "Requires cool, shaded roots and full to partial sunshine on top foliage ('head in sun, feet in shade')",
+      "Plant scaly bulbs in deep, humus-rich, acidic to neutral soil with impeccable drainage",
+      "Mulch soil heavily to maintain root coolness and moisture during hot summer weeks"
+    ],
+    "toxicity_note": "DEADLY HAZARD FOR CATS: True lilies (Lilium species) are EXTREMELY TOXIC AND FATAL TO CATS. Ingestion of even microscopic amounts — a bite of a leaf, licking pollen off fur, or drinking water from a vase holding cut lilies — causes rapid, irreversible acute kidney failure and death within 36-72 hours. Moderately toxic to dogs and humans (vomiting). NEVER keep true lilies in homes with cats.",
+    "fun_fact": "Unlike most other lilies, the Tiger Lily produces small, glossy black pea-sized aerial bulbils in the axils of its leaves, which drop to the ground and sprout into identical clones of the parent plant.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lilium_lancifolium"
+  },
+  {
+    "id": 101,
+    "slug": "dahlia-pinnata",
+    "common_name": "Dahlia",
+    "scientific_name": "Dahlia pinnata",
+    "family": "Asteraceae",
+    "genus": "Dahlia",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "डहलिया (Dahlia)",
+    "names_bengali": "ডালিয়া (Dahlia)",
+    "other_names": ["Garden Dahlia", "Dinnerplate Dahlia", "Dahlia", "Pinnate Dahlia"],
+    "description": "A spectacular tuberous bushy perennial famed for its extraordinary variety of geometric, multi-layered flower heads ranging from compact pom-poms to dinner-plate-sized autumn blooms.",
+    "identifying_features": [
+      "Erect, hollow, branching herbaceous stems growing 1 to 2 meters tall from a cluster of starchy underground tubers",
+      "Opposite, pinnately compound or dissected leaves with ovate serrated leaflets",
+      "Spectacular composite flower heads with ray florets arranged in intricate concentric spirals in every hue except true blue",
+      "Available in forms including single, anemone, cactus, waterlily, pom-pom, and giant dinnerplate classes"
+    ],
+    "habitat": "Highland hill stations, winter gardens of the northern plains, and municipal flower show borders.",
+    "distribution": "Native to the mountainous regions of Mexico and Central America; premier winter flower across India.",
+    "uses": [
+      "Undisputed star of winter flower exhibitions and competitive horticultural shows across India",
+      "Spectacular cut flower and festive autumn/winter landscape centerpiece",
+      "Starchy tubers historically consumed as a food source by the ancient Aztecs"
+    ],
+    "care_tips": [
+      "Requires full direct sunshine and rich, well-draining soil heavily amended with compost or well-rotted manure",
+      "Stake tall, heavy-flowering varieties early to support massive flower heads",
+      "Disbud side flower buds if aiming for giant 'dinnerplate' exhibition-sized blooms"
+    ],
+    "toxicity_note": "MILD TOXICITY: Contains phototoxic polyacetylene compounds that can cause mild skin irritation and dermatitis, as well as mild digestive upset and vomiting in dogs and cats if ingested.",
+    "fun_fact": "The national flower of Mexico, Dahlias are octoploids — meaning they possess eight sets of homologous chromosomes, which accounts for their astounding diversity of flower shapes, sizes, and colors.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dahlia_pinnata"
+  },
+  {
+    "id": 102,
+    "slug": "zinnia-elegans",
+    "common_name": "Zinnia",
+    "scientific_name": "Zinnia elegans",
+    "family": "Asteraceae",
+    "genus": "Zinnia",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "जीनिया (Zinnia)",
+    "names_bengali": "জিনিয়া (Zinnia)",
+    "other_names": ["Common Zinnia", "Youth-and-Age", "Elegant Zinnia", "Zinnia"],
+    "description": "A rugged, sun-loving annual herb celebrated for its stiff, rough stems, sandpaper leaves, and intensely vibrant daisy-to-dahlia-like flower heads that bloom non-stop through scorching heat.",
+    "identifying_features": [
+      "Erect, stiff, hairy branching stems reaching 30 to 90 cm in height",
+      "Opposite, sessile, ovate-to-lanceolate rough-textured sandpaper leaves clasping the stem",
+      "Solitary composite flower heads with densely layered ray florets in vivid neon shades of magenta, scarlet, orange, yellow, and lime-green",
+      "Ring of tiny, star-shaped golden-yellow disc florets opening sequentially around the central cone"
+    ],
+    "habitat": "Hot summer flower beds, sunny borders, container gardens, and butterfly corridors.",
+    "distribution": "Native to Mexico; cultivated ubiquitously across India as an unbeatable hot-weather garden flower.",
+    "uses": [
+      "Reliable hot-weather garden bloomer that keeps flowering even in 40°C+ summer heat",
+      "Top-tier nectar magnet for monarch butterflies, swallowtails, and beneficial pollinators",
+      "Long-lasting cut flower with stiff, durable stems for colorful floral vases"
+    ],
+    "care_tips": [
+      "Plant in full blazing sun with good air circulation to avoid powdery mildew on leaves",
+      "Water at the base of the plant early in the day; avoid wetting foliage",
+      "Deadhead faded blooms continuously to trigger rapid flushes of new buds"
+    ],
+    "toxicity_note": "NON-TOXIC: Completely safe and non-toxic for dogs, cats, horses, and children.",
+    "fun_fact": "In 2016, a bright orange Zinnia became the very first flower to bloom in space, grown aboard the International Space Station's Veggie facility by astronaut Scott Kelly.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Zinnia_elegans"
+  },
+  {
+    "id": 103,
+    "slug": "cosmos-bipinnatus",
+    "common_name": "Cosmos",
+    "scientific_name": "Cosmos bipinnatus",
+    "family": "Asteraceae",
+    "genus": "Cosmos",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "कॉस्मॉस (Cosmos)",
+    "names_bengali": "কসমস (Cosmos)",
+    "other_names": ["Garden Cosmos", "Mexican Aster", "Cosmea", "Cosmos"],
+    "description": "A graceful, airy annual flower with delicate feathery thread-like foliage and charming saucer-shaped blossoms in pastel pink, rose, white, and magenta swaying gently on slender wiry stems.",
+    "identifying_features": [
+      "Slender, multi-branching wiry stems reaching 0.6 to 1.5 meters tall",
+      "Finely dissected, feathery, bipinnate thread-like foliage giving an ethereal cloud-like texture",
+      "Saucer-shaped composite flower heads with 8 broad, notched ray florets surrounding a bright golden central disc",
+      "Slender, spindle-shaped black achene seeds tipped with tiny barbed awns"
+    ],
+    "habitat": "Sunny meadows, cottage garden borders, road verges, and empty sunny plots.",
+    "distribution": "Native to Mexico and the southwestern US; widely naturalized and grown in winter and monsoon gardens across India.",
+    "uses": [
+      "Effortless cottage-garden wildflower providing soft, billowing color sweeps",
+      "Attracts clouds of native pollinating bees, hoverflies, and butterflies to the vegetable garden",
+      "Charming, delicate cut flower for lightweight summer vases"
+    ],
+    "care_tips": [
+      "Thrives in full sun and poor-to-average well-draining garden soil; overly rich soil produces excessive foliage at the expense of flowers",
+      "Extremely drought tolerant once established",
+      "Pinch back stem tips when young to encourage bushy branching and more flower stalks"
+    ],
+    "toxicity_note": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, and humans.",
+    "fun_fact": "Spanish priests in Mexico named this flower 'Cosmos' (from the Greek word for order, harmony, and universe) because of the remarkably orderly and even arrangement of its petals.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cosmos_bipinnatus"
+  },
+  {
+    "id": 104,
+    "slug": "chrysanthemum-indicum",
+    "common_name": "Chrysanthemum",
+    "scientific_name": "Chrysanthemum indicum",
+    "family": "Asteraceae",
+    "genus": "Chrysanthemum",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "गुलदाउदी (Guldaudi)",
+    "names_bengali": "চন্দ্রমল্লিকা (Chandromallika)",
+    "other_names": ["Indian Chrysanthemum", "Guldaudi", "Chandromallika", "Sevanti", "Mum"],
+    "description": "A cherished aromatic winter-flowering herbaceous perennial bearing fragrant lobed leaves and dense, showy composite flower heads in a breathtaking spectrum of autumn-winter colors.",
+    "identifying_features": [
+      "Bushy, branching aromatic stems reaching 30 to 90 cm in height",
+      "Alternate, deeply lobed, aromatic dark green leaves emitting a pungent herbal scent when touched",
+      "Composite flower heads ranging from single daisy forms to dense button pom-poms and spider varieties in yellow, white, bronze, pink, and red",
+      "Photoperiodic flowering triggered by shortening autumn and winter day-lengths"
+    ],
+    "habitat": "Winter exhibition gardens, suburban terrace pots, and commercial flower fields.",
+    "distribution": "Native to East and South Asia (India, China, Japan); iconic winter flower across the northern and eastern Indian plains.",
+    "uses": [
+      "Celebrated winter exhibition and garland flower (Sevanti / Chandromallika) in festive Indian winter markets",
+      "Traditional Chrysanthemum flower tea brewed across East Asia for its cooling, soothing properties TODO(verify)",
+      "Long-lasting cut flower used in wedding decorations and decorative vases"
+    ],
+    "care_tips": [
+      "Requires full direct winter sun and rich, well-draining soil with plenty of organic matter",
+      "Pinch growing tips through late summer to create a dense, spherical bush with dozens of flowering branches",
+      "Water at root base; avoid splashing water on leaves to prevent fungal rust and powdery mildew"
+    ],
+    "toxicity_note": "TOXIC TO DOGS AND CATS: Foliage contains natural pyrethrins, sesquiterpene lactones, and irritating oils. Ingestion causes vomiting, diarrhea, drooling, incoordination, and potential skin dermatitis.",
+    "fun_fact": "Chrysanthemums naturally synthesize pyrethrins, organic compounds that attack insect nervous systems, making them nature's own built-in bug repellent.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chrysanthemum_indicum"
+  }
+]

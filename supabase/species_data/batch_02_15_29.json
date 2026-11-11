@@ -1,0 +1,558 @@
+[
+  {
+    "id": 15,
+    "slug": "cymbopogon-citratus",
+    "common_name": "Lemongrass",
+    "scientific_name": "Cymbopogon citratus",
+    "family": "Poaceae",
+    "genus": "Cymbopogon",
+    "plant_type": "grass",
+    "origin": "indian",
+    "names_hindi": "लेमनग्रास (Lemongrass)",
+    "names_bengali": "লেমনগ্রাস (Lemongrass)",
+    "other_names": ["West Indian Lemongrass", "Barbed Wire Grass", "Citronella Grass"],
+    "description": "A tall, perennial clump-forming aromatic grass with dense tufts of sharp-edged, linear bluish-green blades that emit a crisp lemon-citrus aroma when bruised.",
+    "identifying_features": [
+      "Dense clumping habit with swollen fibrous bulb-like stem bases",
+      "Stiff, erect arching linear leaf blades up to 1-1.5 meters tall with sharp margins",
+      "Distinctive, sharp citrus and citronella fragrance when foliage is crushed or cut"
+    ],
+    "habitat": "Tropical and subtropical open plains, garden borders, and moist riverbanks.",
+    "distribution": "Native to maritime Southeast Asia and South Asia; grown widely across India and pantropical zones.",
+    "uses": [
+      "Key culinary flavor herb in curries, broths, and masala chai",
+      "Traditional herbal tea infusion used for calming digestion and fevers TODO(verify)",
+      "Essential oil distillation producing citral used in insect repellents and aromatherapy"
+    ],
+    "care_tips": [
+      "Plant in full direct sun with rich, porous, well-draining soil",
+      "Keep soil consistently moist but never waterlogged; drought tolerant once established",
+      "Divide root clumps every 2 to 3 years to maintain vigor"
+    ],
+    "toxicity_note": "Safe in culinary amounts; concentrated essential oils can cause dermatitis or gastric upset in pets if ingested in quantity TODO(verify).",
+    "fun_fact": "Lemongrass contains up to 80% citral in its volatile oils, giving it a stronger lemon aroma than actual lemon fruit peels.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cymbopogon_citratus"
+  },
+  {
+    "id": 16,
+    "slug": "mentha-spicata",
+    "common_name": "Mint",
+    "scientific_name": "Mentha spicata",
+    "family": "Lamiaceae",
+    "genus": "Mentha",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "पुदीना (Pudina)",
+    "names_bengali": "পুদিনা (Pudina)",
+    "other_names": ["Spearmint", "Garden Mint", "Common Mint", "Pudina"],
+    "description": "A vigorous herbaceous creeping perennial with square stems, lance-shaped serrated leaves, and an intensely invigorating, clean spearmint fragrance.",
+    "identifying_features": [
+      "Square green to purple-tinged branching stems spreading via vigorous underground stolons",
+      "Opposite, sessile to short-petioled ovate-lanceolate leaves with sharply serrate margins",
+      "Slender terminal spikes of tiny pale lilac, pink, or white flowers"
+    ],
+    "habitat": "Moist soils, stream banks, wetland margins, and kitchen garden beds.",
+    "distribution": "Native to Europe and temperate Asia; naturalized and cultivated across India and worldwide.",
+    "uses": [
+      "Essential culinary herb for fresh pudina chutney, raita, and refreshing beverages",
+      "Ayurvedic and folk digestive aid for nausea, stomach cramps, and breath freshness TODO(verify)",
+      "Flavoring agent in teas, confectionery, toothpastes, and cosmetics"
+    ],
+    "care_tips": [
+      "Grow in pots or restricted containers to prevent aggressive underground stolon spreading",
+      "Maintain moist, organically rich soil with partial to full sun",
+      "Harvest top stems frequently to stimulate dense, bushy branching"
+    ],
+    "toxicity_note": "Non-toxic to humans in food amounts; large concentrated ingestion of mint essential oils can be toxic to cats and dogs TODO(verify).",
+    "fun_fact": "Spearmint gets its common name from its pointed, spear-shaped leaf tips and floral spikes.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spearmint"
+  },
+  {
+    "id": 17,
+    "slug": "ficus-religiosa",
+    "common_name": "Peepal",
+    "scientific_name": "Ficus religiosa",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "पीपल (Peepal)",
+    "names_bengali": "অশ্বত্থ (Ashwattha)",
+    "other_names": ["Sacred Fig", "Bodhi Tree", "Bo-Tree", "Ashwattha"],
+    "description": "A monumental semi-evergreen or deciduous sacred banyan-family tree famous for its pendulous, heart-shaped leaves with prolonged tail-like tips that flutter in the gentlest breeze.",
+    "identifying_features": [
+      "Broadly ovate cordate leaves terminating in a distinctive, slender extended drip tip (tail)",
+      "Long slender flexible petioles causing leaves to rustle continuously in breeze",
+      "Smooth, pale grayish bark and paired sessile green-to-purple figs in leaf axils",
+      "Lack of prominent descending aerial pillar roots distinguishing it from the Banyan"
+    ],
+    "habitat": "Tropical lowland forests, village meeting grounds, roadsides, and temple compounds.",
+    "distribution": "Native to the Indian subcontinent and Indochina; revered across Buddhist and Hindu traditions.",
+    "uses": [
+      "Sacred meditation and temple sanctuary tree; associated with the enlightenment of Gautama Buddha",
+      "Traditional Ayurvedic decoctions for skin ailments, wound cleansing, and inflammation TODO(verify)",
+      "Keystone ecological support tree providing figs for birds, fruit bats, and insects"
+    ],
+    "care_tips": [
+      "Plant only in expansive open grounds well away from building foundations and sewage pipes",
+      "Requires full blazing tropical sun and deep, porous soil",
+      "Extremely hardy and drought-tolerant once deep taproots are established"
+    ],
+    "toxicity_note": "Milky latex sap can cause mild skin irritation or contact dermatitis in sensitive individuals TODO(verify).",
+    "fun_fact": "The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_religiosa"
+  },
+  {
+    "id": 18,
+    "slug": "ficus-benghalensis",
+    "common_name": "Banyan",
+    "scientific_name": "Ficus benghalensis",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "बरगद (Bargad)",
+    "names_bengali": "বট (Bot)",
+    "other_names": ["Banyan Tree", "Bargad", "Vat Vriksha", "Indian Banyan"],
+    "description": "The National Tree of India, an enormous strangler fig capable of spreading over vast acreage through stout descending prop roots that thicken into auxiliary trunks.",
+    "identifying_features": [
+      "Massive horizontal branches sending down numerous woody aerial prop roots that anchor as accessory trunks",
+      "Large, leathery, elliptic to ovate glossy dark green leaves with pale prominent venation",
+      "Sessile globose paired figs turning bright scarlet-red when ripe in leaf axils"
+    ],
+    "habitat": "Tropical forests, village squares, sacred groves, and rural highways across India.",
+    "distribution": "Native to the Indian subcontinent; widely venerated and planted across South Asia.",
+    "uses": [
+      "National symbol of longevity and eternal life; central hub for village councils and rural markets",
+      "Ayurvedic bark and aerial root preparations for astringent gargles and joint pain TODO(verify)",
+      "Critical keystone tree feeding hundreds of frugivorous birds and mammals"
+    ],
+    "care_tips": [
+      "Requires vast acreage; never suitable for small residential plots due to intrusive prop roots",
+      "Thrives in full sun with deep, moisture-retentive, well-draining soils",
+      "Prune only when training young specimens as large bonsai"
+    ],
+    "toxicity_note": "Like most Ficus species, the milky white latex can cause eye irritation and skin rash TODO(verify).",
+    "fun_fact": "The Great Banyan in Howrah, West Bengal, has a canopy circumference of over 450 meters and looks like an entire forest, yet is a single clonal specimen connected by thousands of prop roots.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_benghalensis"
+  },
+  {
+    "id": 19,
+    "slug": "andrographis-paniculata",
+    "common_name": "Kalmegh",
+    "scientific_name": "Andrographis paniculata",
+    "family": "Acanthaceae",
+    "genus": "Andrographis",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "कालमेघ (Kalmegh)",
+    "names_bengali": "কালমেঘ (Kalmegh)",
+    "other_names": ["King of Bitters", "Green Chiretta", "Bhui-neem", "Mahatita"],
+    "description": "An erect annual herbaceous plant famed in Ayurveda and Siddha as the 'King of Bitters', renowned for its intensely bitter taste throughout every tissue of the plant.",
+    "identifying_features": [
+      "Slender, four-angled (quadrangular) dark green erect stems up to 30-90 cm tall",
+      "Lanceolate, glabrous, dark green opposite leaves with acute apex and undulate margins",
+      "Small solitary two-lipped white flowers with purple rose blotches borne on lax spreading panicles"
+    ],
+    "habitat": "Open dry forests, wastelands, shaded slopes, and roadsides across tropical plains.",
+    "distribution": "Native to India and Sri Lanka; widely cultivated throughout Southern and Southeastern Asia.",
+    "uses": [
+      "Ayurvedic liver tonic and bitter febrile decoction for malaria, common colds, and upper respiratory infections TODO(verify)",
+      "Potent hepatoprotective and immune-stimulating traditional formulations TODO(verify)",
+      "Folk bitter remedy for intestinal worms and digestive sluggishness"
+    ],
+    "care_tips": [
+      "Prefers partial shade to morning sun in hot tropical climates",
+      "Needs light, sandy loam soil with good drainage to prevent collar rot",
+      "Water moderately; keep soil slightly moist until flowering initiates"
+    ],
+    "toxicity_note": "Intensely bitter; large doses can induce nausea, gastric discomfort, or allergic reactions. Contraindicated during pregnancy TODO(verify).",
+    "fun_fact": "Kalmegh is called 'Maha-tita' in Bengali, literally meaning 'Great Bitter', because its bitter taste is said to surpass even that of Neem.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Andrographis_paniculata"
+  },
+  {
+    "id": 20,
+    "slug": "hibiscus-rosa-sinensis",
+    "common_name": "Hibiscus",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "family": "Malvaceae",
+    "genus": "Hibiscus",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "गुड़हल (Gudhal)",
+    "names_bengali": "জবা (Jaba)",
+    "other_names": ["China Rose", "Shoeblack Plant", "Jaba", "Hawaiian Hibiscus"],
+    "description": "A bushy tropical evergreen shrub beloved for its large, flamboyant, showy 5-petaled flowers with a prominent, extended central staminal column.",
+    "identifying_features": [
+      "Large, trumpet-shaped five-petaled flowers in brilliant shades of red, pink, yellow, or white",
+      "Prominent, long protruding central staminal column with yellow anthers along its length and 5 red stigma lobes at apex",
+      "Alternate, ovate leaves with coarsely toothed or serrated outer margins"
+    ],
+    "habitat": "Cultivated tropical gardens, urban landscape beds, hedges, and temple yards.",
+    "distribution": "Originally native to tropical East Asia; now cultivated worldwide in tropical and subtropical regions.",
+    "uses": [
+      "Sacred devotional offering in Hindu worship, especially for Goddess Kali and Lord Ganesha",
+      "Traditional hair care pastes and oils for nourishing scalp and promoting hair luster TODO(verify)",
+      "Edible petals brewed into tart herbal teas rich in anthocyanins"
+    ],
+    "care_tips": [
+      "Requires at least 6 hours of full bright sun daily for continuous flower bud formation",
+      "Fertilize monthly during growing season with balanced, potassium-rich plant food",
+      "Prune back in early spring to stimulate vigorous fresh flowering shoots"
+    ],
+    "toxicity_note": "Generally non-toxic to humans and common domestic pets, making it a safe garden ornamental.",
+    "fun_fact": "Historically known as 'Shoeblack plant' because crushed petals were used in India and the Caribbean to blacken and polish leather shoes.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis"
+  },
+  {
+    "id": 21,
+    "slug": "tagetes-erecta",
+    "common_name": "Marigold",
+    "scientific_name": "Tagetes erecta",
+    "family": "Asteraceae",
+    "genus": "Tagetes",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "गेंदा (Genda)",
+    "names_bengali": "গাঁদা (Ganda)",
+    "other_names": ["African Marigold", "Aztec Marigold", "Mexican Marigold", "Genda Phool"],
+    "description": "A popular, aromatic herbaceous annual producing dense, globular, ruffled flower heads in brilliant golden-yellow and bright fiery-orange hues.",
+    "identifying_features": [
+      "Pinnately divided feathery leaves with small gland dots emitting a pungent herbal aroma",
+      "Globose pom-pom flower heads with densely layered ray florets on swollen hollow peduncles",
+      "Fibrous, sturdy root system producing natural root exudates that deter soil nematodes"
+    ],
+    "habitat": "Agricultural crop borders, household flower gardens, and festive nursery beds.",
+    "distribution": "Native to the Americas (Mexico); universally cultivated throughout India as a premier garland flower.",
+    "uses": [
+      "Essential festive flower for Diwali, weddings, temple torans, and ceremonial welcoming garlands",
+      "Companion planting to deter nematodes and garden pests via alpha-terthienyl root exudates",
+      "Commercial extraction of lutein carotenoid pigments for natural food and poultry feed coloring"
+    ],
+    "care_tips": [
+      "Plant in full direct sun; blooms become sparse and leggy in partial shade",
+      "Deadhead spent blossoms regularly to prolong profuse continuous flowering",
+      "Allow surface soil to dry slightly between thorough deep waterings"
+    ],
+    "toxicity_note": "Non-toxic to humans; plant sap may cause mild contact skin irritation in sensitive people or mild drooling if chewed by pets TODO(verify).",
+    "fun_fact": "Marigold flower petals are the richest natural commercial source of lutein, an essential antioxidant for human retinal eye health.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tagetes_erecta"
+  },
+  {
+    "id": 22,
+    "slug": "jasminum-sambac",
+    "common_name": "Jasmine",
+    "scientific_name": "Jasminum sambac",
+    "family": "Oleaceae",
+    "genus": "Jasminum",
+    "plant_type": "shrub",
+    "origin": "indian",
+    "names_hindi": "मोगरा (Mogra)",
+    "names_bengali": "বেল ফুল (Beli Phul)",
+    "other_names": ["Arabian Jasmine", "Mogra", "Beli", "Tuscan Jasmine", "Sampaguita"],
+    "description": "An evergreen scandent shrub famous worldwide for its intensely sweet, intoxicatingly fragrant pure white nocturnal star-shaped flowers.",
+    "identifying_features": [
+      "Glossy, ovate to elliptic dark green opposite or whorled leaves with prominent veins",
+      "Pure snow-white solitary or clustered star-like blossoms turning pale purplish-pink as they fade",
+      "Extraordinarily rich, sweet nocturnal fragrance that intensifies after dusk"
+    ],
+    "habitat": "Tropical home gardens, courtyard planters, perfume plantations, and temple gardens.",
+    "distribution": "Native to the tropical regions of South and Southeast Asia; widely cultivated across the Indian subcontinent.",
+    "uses": [
+      "Woven into traditional fragrant hair adornments (gajras) and ceremonial temple garlands",
+      "Extracted for high-value jasmine enfleurage and absolute used in luxury perfumery and attars",
+      "Scenting green teas and herbal soothing infusions"
+    ],
+    "care_tips": [
+      "Ensure at least 5-6 hours of daily sunlight for abundant floral bud formation",
+      "Provide well-drained loamy soil enriched with organic compost or cow dung manure",
+      "Prune lightly after the main summer flowering flush to encourage new budding spurs"
+    ],
+    "toxicity_note": "Non-toxic to humans, cats, and dogs; safe for indoor and courtyard cultivation.",
+    "fun_fact": "Jasminum sambac is the national flower of both the Philippines (known as Sampaguita) and Indonesia (known as Melati putih).",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jasminum_sambac"
+  },
+  {
+    "id": 23,
+    "slug": "nelumbo-nucifera",
+    "common_name": "Lotus",
+    "scientific_name": "Nelumbo nucifera",
+    "family": "Nelumbonaceae",
+    "genus": "Nelumbo",
+    "plant_type": "aquatic",
+    "origin": "indian",
+    "names_hindi": "कमल (Kamal)",
+    "names_bengali": "পদ্ম (Padma)",
+    "other_names": ["Sacred Lotus", "Indian Lotus", "Kamal", "Padma", "Bean of India"],
+    "description": "The National Flower of India, a revered aquatic perennial with peltate water-repellent leaves rising above pond waters and solitary pink-to-white sacred blooms.",
+    "identifying_features": [
+      "Large orbicular peltate leaves held high above water on thorny petioles exhibiting the ultrahydrophobic 'lotus effect'",
+      "Large, multi-petaled fragrant blossoms opening at sunrise and closing by afternoon",
+      "Distinctive central inverted cone-shaped spongy receptacle with embedded seed pods"
+    ],
+    "habitat": "Shallow freshwater ponds, lake margins, temple tanks, and slow-moving marshes.",
+    "distribution": "Native to tropical and warm temperate Asia and northern Australia; deeply rooted in Indian culture.",
+    "uses": [
+      "Supreme sacred floral offering dedicated to Goddess Lakshmi and Goddess Saraswati",
+      "Rhizomes (kamal kakdi) and seeds (makhana / lotus seeds) are prized culinary vegetables and snacks",
+      "Traditional Ayurvedic use of petals, seeds, and stamens as cooling cardiac tonics TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires undisturbed still water ponds or deep water tubs with at least 30-50 cm of rich heavy clay-loam mud",
+      "Needs full direct sunshine all day long; flowering ceases in shaded water",
+      "Protect dormant rhizomes from freezing or water stagnation drying during winter"
+    ],
+    "toxicity_note": "Non-toxic; virtually all parts (rhizome, seeds, young stems, petals) are edible when properly cooked.",
+    "fun_fact": "The micro-nanostructures on lotus leaves cause water droplets to roll off carrying dirt with them, giving rise to the scientific term 'the lotus effect' for self-cleaning surfaces.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nelumbo_nucifera"
+  },
+  {
+    "id": 24,
+    "slug": "rosa",
+    "common_name": "Rose",
+    "scientific_name": "Rosa",
+    "family": "Rosaceae",
+    "genus": "Rosa",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "गुलाब (Gulab)",
+    "names_bengali": "গোলাপ (Golap)",
+    "other_names": ["Garden Rose", "Desi Gulab", "Damask Rose", "Gulab"],
+    "description": "A woody perennial flowering shrub renowned throughout human history for its prickle-armed stems, elegant multi-petaled blossoms, and exquisite sweet perfume.",
+    "identifying_features": [
+      "Woody stems armed with sharp prickles ('thorns') and odd-pinnate leaves with serrated leaflets",
+      "Cup-shaped multi-layered fragrant blossoms in shades of red, pink, yellow, peach, and white",
+      "Fleshy berry-like false fruits known as rose hips developing after successful pollination"
+    ],
+    "habitat": "Temperate and subtropical gardens, open hillsides, commercial floriculture polyhouses.",
+    "distribution": "Native primarily to the temperate Northern Hemisphere; cultivated ubiquitously across India and globally.",
+    "uses": [
+      "Distillation into rose water (gulab jal) and pure rose attar (ruh gulab) for sweets, perfumes, and ceremonies",
+      "Petals candied with sugar into gulkand, an Ayurvedic cooling digestive tonic TODO(verify)",
+      "Universal ornamental cut flower symbolizing love, celebration, and reverence"
+    ],
+    "care_tips": [
+      "Provide at least 6 hours of morning sun with good air circulation to avoid powdery mildew",
+      "Plant in rich, well-draining loamy soil with regular compost top-dressing",
+      "Water at root level in early morning; avoid wetting foliage"
+    ],
+    "toxicity_note": "Non-toxic to humans and pets, though sharp thorny stems can cause mechanical puncture injuries.",
+    "fun_fact": "Rose hips (the fruit of the rose plant) contain one of the highest concentrations of natural Vitamin C of any edible fruit.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rose"
+  },
+  {
+    "id": 25,
+    "slug": "plumeria-rubra",
+    "common_name": "Frangipani",
+    "scientific_name": "Plumeria rubra",
+    "family": "Apocynaceae",
+    "genus": "Plumeria",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "चम्पा (Champa)",
+    "names_bengali": "কাঠগোলাপ (Kathgolap)",
+    "other_names": ["Red Frangipani", "Temple Tree", "Pagoda Tree", "Kathgolap", "Champa"],
+    "description": "A small deciduous succulent-stemmed tropical tree renowned for its thick fleshy sausage-like branches and intensely fragrant spiral-overlapping waxy flowers.",
+    "identifying_features": [
+      "Thick, knobby, fleshy gray branches exuding copious milky latex when punctured",
+      "Large, obovate leathery leaves clustered at the branch ends with prominent parallel lateral veins",
+      "Fragrant 5-lobed salverform flowers with pinwheel petals in white, yellow, pink, or crimson"
+    ],
+    "habitat": "Temple courtyards, cemetery grounds, dry tropical gardens, and coastal landscapes.",
+    "distribution": "Native to Mexico, Central America, and Venezuela; naturalized and beloved across India and the tropics.",
+    "uses": [
+      "Traditional sacred flower offered at temple shrines and used in ceremonial garlands",
+      "Essential perfumery compound for tropical, floral, and incense scent profiles",
+      "Hardy drought-tolerant architectural landscape specimen"
+    ],
+    "care_tips": [
+      "Requires full blazing tropical sun for prolific blooming",
+      "Plant in well-draining gritty or sandy soil; avoid soggy soil which causes stem rot",
+      "Withhold heavy watering during winter deciduous dormancy"
+    ],
+    "toxicity_note": "Sap contains poisonous diterpene and cardiac-irritant compounds that irritate skin and cause digestive distress if ingested TODO(verify).",
+    "fun_fact": "Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Plumeria_rubra"
+  },
+  {
+    "id": 26,
+    "slug": "nerium-oleander",
+    "common_name": "Oleander",
+    "scientific_name": "Nerium oleander",
+    "family": "Apocynaceae",
+    "genus": "Nerium",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "कनेर (Kaner)",
+    "names_bengali": "করবী (Karabi)",
+    "other_names": ["Kaner", "Karabi", "Rose Bay", "Adelfa"],
+    "description": "An evergreen ornamental shrub with whorled leathery narrow leaves and clusters of showy pink, red, or white flowers. ALL PARTS OF THIS PLANT ARE EXTREMELY TOXIC.",
+    "identifying_features": [
+      "Narrowly lanceolate, thick, leathery dark green leaves arranged in whorls of three",
+      "Clusters of terminal funnel-shaped flowers with 5 fringed petal lobes in pink, red, or white",
+      "Copious clear-to-cloudy sticky sap and long slender paired follicle seed pods"
+    ],
+    "habitat": "Dry riverbeds, highway medians, arid rocky slopes, and public landscaped borders.",
+    "distribution": "Native to the Mediterranean basin and southwest Asia; widely cultivated across India for its hardiness.",
+    "uses": [
+      "Highway median windbreak and erosion stabilizer due to extreme drought and pollution tolerance",
+      "Religious flower offerings dedicated to Lord Shiva in Hindu rituals",
+      "Historical cardiac medicine source under strict pharmaceutical extraction TODO(verify)"
+    ],
+    "care_tips": [
+      "Thrives in harsh sun and poor dry soils with minimal maintenance",
+      "Extremely drought and salt tolerant once established",
+      "Always wear protective gloves when pruning, and NEVER burn clippings"
+    ],
+    "toxicity_note": "DEADLY TOXIC: Contains powerful cardiac glycosides (oleandrin, neriine). Ingestion of any part can cause severe vomiting, irregular heartbeat, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic.",
+    "fun_fact": "Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nerium_oleander"
+  },
+  {
+    "id": 27,
+    "slug": "bougainvillea-spectabilis",
+    "common_name": "Bougainvillea",
+    "scientific_name": "Bougainvillea spectabilis",
+    "family": "Nyctaginaceae",
+    "genus": "Bougainvillea",
+    "plant_type": "climber",
+    "origin": "global",
+    "names_hindi": "बोगनवेलिया (Bougainvillea)",
+    "names_bengali": "বাগানবিলাস (Baganbilash)",
+    "other_names": ["Great Bougainvillea", "Paperflower", "Baganbilash", "Kagoj Phul"],
+    "description": "A vigorous, thorny woody scrambling climber celebrated for its exuberant, cascading displays of papery, brightly colored bracts surrounding tiny white tubular flowers.",
+    "identifying_features": [
+      "Woody scrambling stems equipped with sharp, stiff recurved thorns",
+      "Vividly colored papery, petal-like floral bracts in magenta, purple, red, pink, or orange",
+      "Small, tubular, creamy-white inconspicuous true flowers enclosed in clusters of three bracts"
+    ],
+    "habitat": "Garden pergolas, boundary walls, arid landscape trellises, and sunny balcony rails.",
+    "distribution": "Native to tropical South America (Brazil); cultivated ubiquitously as an ornamental across tropical India.",
+    "uses": [
+      "Spectacular vertical greening and security hedging over walls and boundary fences",
+      "Urban landscape screening due to extreme air-pollution and drought resistance",
+      "Folk use of leaf infusions in traditional Mexican remedies for respiratory coughs TODO(verify)"
+    ],
+    "care_tips": [
+      "Needs blazing, uninterrupted tropical sunlight to produce colorful bract flushes",
+      "Do not overwater; allowing soil to dry out between waterings triggers heavier flowering",
+      "Prune aggressively after each flowering flush to manage rambling growth and shape"
+    ],
+    "toxicity_note": "Plant sap can cause contact dermatitis or skin rash; thorny branches cause mechanical skin tears. Mild digestive upset if leaves are ingested by pets TODO(verify).",
+    "fun_fact": "The brightly colored 'petals' of Bougainvillea are actually modified leaves called bracts; the true flowers are the tiny white stars nestled inside.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bougainvillea_spectabilis"
+  },
+  {
+    "id": 28,
+    "slug": "clitoria-ternatea",
+    "common_name": "Butterfly pea",
+    "scientific_name": "Clitoria ternatea",
+    "family": "Fabaceae",
+    "genus": "Clitoria",
+    "plant_type": "climber",
+    "origin": "indian",
+    "names_hindi": "अपराजिता (Aparajita)",
+    "names_bengali": "অপরাজিতা (Aparajita)",
+    "other_names": ["Aparajita", "Blue Pea", "Asian Pigeonwings", "Conch Flower", "Shankhpushpi"],
+    "description": "A slender twining legume vine famous for its vivid, deep cobalt-blue solitary flowers resembling a butterfly, revered in Ayurvedic medicine and Hindu rituals.",
+    "identifying_features": [
+      "Slender twining herbaceous climber with pinnately compound leaves (5-7 elliptic leaflets)",
+      "Striking solitary deep cobalt-blue to indigo flowers with bright yellow-white throat centers",
+      "Flat, linear legume pods containing 6-10 seeds"
+    ],
+    "habitat": "Tropical hedgerows, grassland margins, village fences, and courtyard trellises.",
+    "distribution": "Native to equatorial Asia; widely distributed and revered throughout the Indian subcontinent.",
+    "uses": [
+      "Sacred flower offered to Goddess Durga and Lord Shiva in Hindu devotional worship",
+      "Brewed as vivid 'Blue Tea' that dramatically shifts to violet-magenta when lemon juice is added",
+      "Ayurvedic Medhya Rasayana (nootropic brain tonic) for memory and nervous system balance TODO(verify)"
+    ],
+    "care_tips": [
+      "Provide a trellis, fence, or string support for slender climbing tendrils",
+      "Grows best in full sun or light afternoon shade with moist, permeable soil",
+      "Pinch young tip growth to encourage branching and more flower nodes"
+    ],
+    "toxicity_note": "Flowers are completely edible; roots and mature seeds have potent purgative and emetic properties and should not be consumed casually TODO(verify).",
+    "fun_fact": "The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Clitoria_ternatea"
+  },
+  {
+    "id": 29,
+    "slug": "nyctanthes-arbor-tristis",
+    "common_name": "Night jasmine",
+    "scientific_name": "Nyctanthes arbor-tristis",
+    "family": "Oleaceae",
+    "genus": "Nyctanthes",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "पारिजात (Parijat)",
+    "names_bengali": "শিউলি (Shiuli)",
+    "other_names": ["Parijat", "Shiuli", "Har-singar", "Coral Jasmine", "Tree of Sorrow"],
+    "description": "A sacred Indian small tree celebrated for its nocturnal fragrant white flowers with vibrant orange-coral tubular centers that bloom at dusk and carpet the ground by dawn.",
+    "identifying_features": [
+      "Rough, quadrangular branches with sandpaper-textured ovate opposite leaves",
+      "Star-like 5-8 lobed snowy white blossoms with a vibrant, cylindrical bright orange-red tubular core",
+      "Flowers open exclusively after sunset and gently drop at the first touch of dawn light"
+    ],
+    "habitat": "Sub-Himalayan tracts, dry deciduous forests, village temple grounds, and garden courtyards.",
+    "distribution": "Native to South Asia (India, Nepal, Bangladesh); deeply embedded in Hindu mythology and Autumn Durga Puja rituals.",
+    "uses": [
+      "Only flower in Hindu worship sanctioned to be offered to deities after being picked up from the ground",
+      "Orange floral tubes traditionally boiled to yield a golden-yellow natural fabric dye",
+      "Ayurvedic leaf decoction renowned for treating persistent sciatica, arthritis, and chronic fevers TODO(verify)"
+    ],
+    "care_tips": [
+      "Plant in full sun to partial shade in porous, well-draining garden soil",
+      "Moderate watering; avoid waterlogging around roots which causes leaf yellowing",
+      "Prune annually after winter flowering season to maintain compact tree shape"
+    ],
+    "toxicity_note": "Non-toxic in normal cultural and traditional use; high doses of leaf extracts may have mild laxative effects TODO(verify).",
+    "fun_fact": "The species name 'arbor-tristis' means 'tree of sorrow' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis"
+  }
+]

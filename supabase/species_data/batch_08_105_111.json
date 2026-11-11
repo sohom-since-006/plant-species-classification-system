@@ -1,0 +1,268 @@
+[
+  {
+    "id": 105,
+    "slug": "gerbera-jamesonii",
+    "common_name": "Gerbera",
+    "scientific_name": "Gerbera jamesonii",
+    "family": "Asteraceae",
+    "genus": "Gerbera",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "जरबेरा (Gerbera)",
+    "names_bengali": "জার্বেরা (Gerbera)",
+    "other_names": ["Barberton Daisy", "Transvaal Daisy", "African Daisy", "Gerbera Daisy"],
+    "description": "A popular commercial floriculture perennial forming basal rosettes of lobed leaves and long leafless stems topped with striking, symmetrical daisy-like blooms in dazzling rainbow colors.",
+    "identifying_features": [
+      "Basal rosette of deeply lobed, coarse, dandelion-like leaves with woolly undersides",
+      "Tall, leafless, hollow solitary flower stalks (scapes) rising 30 to 45 cm above the foliage",
+      "Large composite flower heads with radiating, slender ray florets in brilliant red, orange, yellow, pink, and cream",
+      "Two or three concentric rings of ray petals surrounding a tight circular central disc"
+    ],
+    "habitat": "Subtropical rocky grassland slopes, polyhouse commercial farms, and potted terrace displays.",
+    "distribution": "Native to southeastern Africa (Mpumalanga, South Africa); massively grown in commercial polyhouses across Maharashtra and Karnataka.",
+    "uses": [
+      "Top-five cut flower in global floriculture, essential for wedding bouquets and stage floral arrangements",
+      "Effective indoor air-purifying plant shown in NASA studies to remove benzene, formaldehyde, and trichloroethylene",
+      "Pet-safe flowering potted plant for living rooms and verandas"
+    ],
+    "care_tips": [
+      "Requires bright morning sun or gentle filtered light; shield from scorching summer afternoon heat",
+      "Plant with the central crown positioned slightly above soil level to prevent fatal crown rot",
+      "Water around the root zone, keeping moisture away from the crown and flower stalks"
+    ],
+    "toxicity_note": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, horses, and small children.",
+    "fun_fact": "Gerbera is the fifth most popular cut flower in the entire world, trailing only rose, carnation, chrysanthemum, and tulip in global trade volume.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gerbera_jamesonii"
+  },
+  {
+    "id": 106,
+    "slug": "rhynchostylis-retusa",
+    "common_name": "Foxtail orchid",
+    "scientific_name": "Rhynchostylis retusa",
+    "family": "Orchidaceae",
+    "genus": "Rhynchostylis",
+    "plant_type": "epiphyte",
+    "origin": "indian",
+    "names_hindi": "कपोत फूल (Kapot Phool)",
+    "names_bengali": "কপোত ফুল (Kapot Phool)",
+    "other_names": ["Kopou Phool", "Seeta Pushpa", "Foxtail Orchid", "Rhynchostylis"],
+    "description": "The State Flower of Assam and Arunachal Pradesh, a magnificent monopodial epiphyte with thick leathery leaves and long pendulous, cylindrical flower clusters resembling a fluffy fox tail.",
+    "identifying_features": [
+      "Monopodial epiphytic growth habit with stout, climbing stems and thick, spongy silvery-white velamen-covered aerial roots",
+      "Curved, channelled, leathery strap-like leaves with uneven, praemorse (bitten-off) tips",
+      "Spectacular pendulous cylindrical racemes (up to 30-40 cm long) densely packed with over 100 miniature spotted flowers",
+      "Flowers are white to pale pink, heavily spotted and flushed with vibrant magenta-purple, emitting a sweet spicy fragrance"
+    ],
+    "habitat": "Canopy of tropical rainforest trees, mango orchards, and moist deciduous riverbanks in Northeast India and Western Ghats.",
+    "distribution": "Native to the Indian subcontinent (Assam, Western Ghats) and Southeast Asia.",
+    "uses": [
+      "Inseparable symbol of Assamese cultural identity; women wear fresh blooms in their hair during the Rongali Bihu spring dance",
+      "State Flower of Assam and Arunachal Pradesh, symbolizing love, fertility, and renewal",
+      "Collector's premier fragrant epiphytic orchid grown on driftwood or hanging wooden slat baskets"
+    ],
+    "care_tips": [
+      "Mount on tree bark, cork slabs, or open slatted teak baskets with zero heavy potting soil",
+      "Requires high atmospheric humidity (70-80%), excellent air circulation, and bright dappled sunlight",
+      "Water or mist daily during the hot monsoon growing season; reduce watering slightly in dry winter"
+    ],
+    "toxicity_note": "Non-toxic; safe and non-hazardous to humans and domestic pets. Traditional cultural hair adornment.",
+    "fun_fact": "In Assam, the flowering of Kopou Phool marks the arrival of the spring Bihu festival; according to folklore, a Bihu dancer's hair arrangement is incomplete without this sacred fox-tail blossom.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rhynchostylis_retusa"
+  },
+  {
+    "id": 107,
+    "slug": "pontederia-crassipes",
+    "common_name": "Water hyacinth",
+    "scientific_name": "Pontederia crassipes",
+    "family": "Pontederiaceae",
+    "genus": "Pontederia",
+    "plant_type": "aquatic",
+    "origin": "global",
+    "names_hindi": "जलकुंभी (Jalkumbhi)",
+    "names_bengali": "কচুরিপানা (Kochuripana)",
+    "other_names": ["Terror of Bengal", "Jalkumbhi", "Kochuripana", "Eichhornia crassipes", "Water Orchid"],
+    "description": "A free-floating freshwater aquatic perennial with swollen bulbous spongy petioles, glossy round leaves, and spikes of stunning pale-violet flowers bearing a peacock-eye yellow spot. Highly invasive.",
+    "identifying_features": [
+      "Free-floating aquatic rosette with swollen, bulbous, air-filled spongy petioles acting as natural buoyancy floats",
+      "Glossy, thick, rounded or broadly ovate dark green leaf blades",
+      "Massive, fibrous, feather-like dark purple-to-black submerged roots trailing in water",
+      "Spikes of 8-15 exquisite pale lavender-blue or violet flowers, with the top petal displaying a radiant blue halo around a bright golden-yellow spot"
+    ],
+    "habitat": "Freshwater ponds, slow-moving rivers, temple tanks, irrigation canals, and marshy lakes.",
+    "distribution": "Native to the Amazon basin; infamously invasive weed across India, dubbed the 'Terror of Bengal'.",
+    "uses": [
+      "High biomass harvested to produce biodegradable handicrafts, eco-paper, woven baskets, and green compost",
+      "Exceptional capacity for phytoremediation, absorbing heavy metals, nitrogen, and phosphorus from contaminated wastewater",
+      "Biogas production and organic agricultural mulch when properly dried and fermented"
+    ],
+    "care_tips": [
+      "Generally prohibited from planting in natural water bodies due to severe ecological choking hazards",
+      "Floats freely on surface of water gardens in full sun",
+      "Must be contained in closed artificial tubs or ponds; never allow escape into public waterways"
+    ],
+    "toxicity_note": "Foliage contains calcium oxalate crystals causing throat burning if chewed. Wild plants bioaccumulate toxic heavy metals (lead, cadmium, arsenic) and water pathogens from polluted waters, making wild plants dangerous to ingest.",
+    "fun_fact": "Dubbed the 'Terror of Bengal' in the early 20th century, its runaway growth clogged waterways, choked fish populations of oxygen, and halted river navigation throughout the Ganges-Brahmaputra delta.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pontederia_crassipes"
+  },
+  {
+    "id": 108,
+    "slug": "mimosa-pudica",
+    "common_name": "Sensitive plant",
+    "scientific_name": "Mimosa pudica",
+    "family": "Fabaceae",
+    "genus": "Mimosa",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "छुईमुई (Chhui Mui)",
+    "names_bengali": "লজ্জাবতী (Lajjabati)",
+    "other_names": ["Touch-Me-Not", "Shameplant", "Chhui Mui", "Lajjabati", "Sleeping Grass"],
+    "description": "A fascinating creeping herb armed with prickly stems and feathery bipinnate leaves that fold closed and droop dramatically within seconds of being touched, shaken, or heated.",
+    "identifying_features": [
+      "Sprawling or creeping prickly reddish-purple stems reaching 30-50 cm",
+      "Bipinnate compound leaves consisting of 1-2 pairs of pinnae, each carrying 10-26 pairs of tiny sensitive leaflets",
+      "Rapid thigmonastic (seismonastic) response: leaflets fold inward and whole petiole collapses downward upon mechanical stimulation within 1-2 seconds",
+      "Fluffy, spherical pink-to-purple powderpuff flower heads looking like miniature pompoms, followed by bristly jointed seed pods"
+    ],
+    "habitat": "Disturbed roadsides, sunny pastures, lawn edges, and tropical waste grounds.",
+    "distribution": "Native to tropical America; widely naturalized throughout India and tropical Asia.",
+    "uses": [
+      "Famous botanical curiosity demonstrating rapid plant neurobiology and turgor-driven movement (pulvini cells)",
+      "Traditional Ayurvedic remedy (Lajjalu) used as an astringent decoction for wound healing and bleeding disorders TODO(verify)",
+      "Groundcover nitrogen-fixing legume in degraded tropical soils"
+    ],
+    "care_tips": [
+      "Requires warm temperatures (above 18°C) and full to partial sunshine",
+      "Keep soil consistently moist using well-draining loamy potting soil",
+      "Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy"
+    ],
+    "toxicity_note": "TOXIC IN VOLUME TO LIVESTOCK: Contains the non-protein amino acid mimosine. Ingestion of large quantities by grazing cattle or horses can cause hair loss, thyroid enlargement, and digestive disorders TODO(verify). Safe to touch.",
+    "fun_fact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mimosa_pudica"
+  },
+  {
+    "id": 109,
+    "slug": "parthenium-hysterophorus",
+    "common_name": "Parthenium",
+    "scientific_name": "Parthenium hysterophorus",
+    "family": "Asteraceae",
+    "genus": "Parthenium",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "गाजर घास (Gajar Ghas)",
+    "names_bengali": "গাজর ঘাস (Gajor Ghas)",
+    "other_names": ["Congress Grass", "Carrot Grass", "Gajar Ghas", "Santa Maria Feverfew", "White Top"],
+    "description": "An aggressive, noxious invasive annual weed with carrot-like dissected leaves, angular grooved stems, and small creamy-white flower heads. SEVERE HUMAN ALLERGEN AND LIVESTOCK TOXIN.",
+    "identifying_features": [
+      "Erect, vigorously branching annual herb up to 1 to 2 meters tall with deeply grooved, longitudinally striated hairy stems",
+      "Deeply dissected, pale green, alternate leaves resembling carrot foliage (hence 'Carrot Grass')",
+      "Hundreds of miniature, star-shaped creamy-white flower heads (capitula) clustered in loose terminal panicles",
+      "Prolific seed producer: a single mature plant can produce up to 25,000 viable seeds"
+    ],
+    "habitat": "Wastelands, road verges, railway embankments, vacant urban lots, and agricultural fields.",
+    "distribution": "Native to the American tropics; accidentally introduced into India in the 1950s (via PL-480 wheat imports), now a national agricultural scourge.",
+    "uses": [
+      "NO BENEFICIAL USES: Recognized as one of the most hazardous alien invasive plant species in India",
+      "Subject of nationwide biological and chemical eradication campaigns using Mexican beetles (Zygogramma bicolorata)",
+      "Strictly managed and uprooted by agricultural departments to safeguard livestock and food crops"
+    ],
+    "care_tips": [
+      "DO NOT CULTIVATE. Strict eradication weed",
+      "Must be pulled up before flowering while wearing full protective rubber gloves, masks, and long sleeves",
+      "Burn or compost safely under plastic sheeting to kill seed viability"
+    ],
+    "toxicity_note": "HIGHLY TOXIC HAZARD: Contains potent sesquiterpene lactones (chiefly parthenin). Contact triggers severe allergic contact dermatitis ('parthenium dermatitis'), eczema, facial swelling, blisters, and skin cracking in humans. Airborne pollen causes severe asthma, allergic rhinitis, and hay fever. Highly toxic to cattle, goats, and horses, causing mouth ulcers, liver damage, alopecia, and bitter, unpalatable milk.",
+    "fun_fact": "Parthenium entered India in 1955 contaminated in food-aid wheat shipments from the United States under the PL-480 program, rapidly earning the moniker 'Congress Grass'.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Parthenium_hysterophorus"
+  },
+  {
+    "id": 110,
+    "slug": "trifolium-repens",
+    "common_name": "Clover",
+    "scientific_name": "Trifolium repens",
+    "family": "Fabaceae",
+    "genus": "Trifolium",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "तिपतिया घास (Tipatiya Ghas)",
+    "names_bengali": "তিপাত্তা ঘাস (Tipatta Ghas)",
+    "other_names": ["White Clover", "Dutch Clover", "Tipatiya Ghas", "Shamrock", "Trifolium"],
+    "description": "A low-growing creeping perennial legume with creeping stolons, classic trifoliate leaves with white crescent chevrons, and rounded spherical heads of fragrant white-to-pinkish flowers.",
+    "identifying_features": [
+      "Creeping prostrate stems (stolons) rooting freely at the nodes to form a dense green carpet",
+      "Trifoliate leaves composed of 3 rounded obovate leaflets, usually marked with a distinct white or pale 'V'-shaped crescent watermark",
+      "Globe-shaped spherical flower heads consisting of 20-50 small pea-like white flowers, often flushed with pale pink",
+      "Sweet honey fragrance attracting vast numbers of honeybees"
+    ],
+    "habitat": "Lawns, temperate pastures, Himalayan hill station meadows, and orchard groundcover.",
+    "distribution": "Native to Europe and central Asia; naturalized in the temperate hill ranges of northern India and worldwide.",
+    "uses": [
+      "World-class nitrogen-fixing forage legume that enriches soil fertility through symbiotic rhizobia root nodules",
+      "Premier honey plant; white clover nectar produces the world's most popular light, delicate clover honey",
+      "Eco-friendly, drought-tolerant lawn alternative requiring less mowing and no synthetic nitrogen fertilizer"
+    ],
+    "care_tips": [
+      "Prefers cool to temperate weather and moist, well-draining garden soil; struggles in scorching tropical heat",
+      "Tolerates moderate foot traffic and close mowing",
+      "Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation"
+    ],
+    "toxicity_note": "Non-toxic in normal amounts; clover contains traces of cyanogenic glycosides and can cause foamy bloat in ruminant livestock if grazed excessively without dry roughage TODO(verify).",
+    "fun_fact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Trifolium_repens"
+  },
+  {
+    "id": 111,
+    "slug": "quercus-robur",
+    "common_name": "Oak",
+    "scientific_name": "Quercus robur",
+    "family": "Fagaceae",
+    "genus": "Quercus",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "बलूत (Baloot)",
+    "names_bengali": "ওক গাছ (Oak Gachh)",
+    "other_names": ["English Oak", "Pedunculate Oak", "Baloot", "Oak Tree", "King of Trees"],
+    "description": "A legendary, long-lived temperate hardwood canopy tree famed for its massive gnarled trunk, deeply sinuous lobed leaves, and smooth ovoid acorns held in rough scaly cups.",
+    "identifying_features": [
+      "Massive, rugged spreading crown with deeply fissured, greyish-brown furrowed bark",
+      "Alternate, obovate leaves with 4-7 pairs of rounded, sinuous lobes and very short petioles with distinct ear-like auricles at base",
+      "Pendulous male catkins appearing alongside fresh spring leaves",
+      "Ovoid nuts (acorns) borne on long slender stalks (peduncles), held in shallow rough scaly woody cups (cupules)"
+    ],
+    "habitat": "Temperate deciduous forests, deep fertile river valleys, and hill station botanical gardens.",
+    "distribution": "Native to Europe, North Africa, and western Asia; cultivated in Indian Himalayan hill stations and worldwide.",
+    "uses": [
+      "Premier high-density timber for historic sailing ship keels, structural architecture, and wine/whiskey aging barrels",
+      "Keystone ecological master tree supporting over 2,300 species of birds, mammals, insects, fungi, and lichens",
+      "Bark rich in tannins historically used in leather tanning and traditional astringent gargles TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires vast acreage in cool temperate climates; not suited for hot tropical lowlands",
+      "Prefers deep, rich, moisture-retentive loamy soils with unobstructed drainage",
+      "Grows slowly for centuries; requires virtually no pruning once main architectural limbs are established"
+    ],
+    "toxicity_note": "TOXIC TO HORSES, DOGS, AND CATTLE: Acorns, young leaves, and buds contain high concentrations of gallotannins and tannic acid. Ingestion by livestock or pets can cause severe gastrointestinal ulceration, bloody diarrhea, abdominal pain, and acute renal (kidney) failure. Humans must leach tannins out with water before cooking acorns.",
+    "fun_fact": "An English oak tree can live for over 1,000 years: an old English proverb notes, 'Three hundred years growing, three hundred years living, and three hundred years dying.'",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Quercus_robur"
+  }
+]

@@ -1,0 +1,572 @@
+[
+  {
+    "id": 0,
+    "slug": "ocimum-tenuiflorum",
+    "common_name": "Tulsi (Holy Basil)",
+    "scientific_name": "Ocimum tenuiflorum",
+    "family": "Lamiaceae",
+    "genus": "Ocimum",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "तुलसी (Tulsi)",
+    "names_bengali": "তুলসী (Tulsi)",
+    "other_names": ["Holy Basil", "Krishna Tulsi", "Rama Tulsi", "Sacred Basil"],
+    "description": "An aromatic perennial subshrub revered across India as an earthly manifestation of the goddess Tulsi. Widely grown in central home courtyards (Tulsi chaura) and valued for its warm, clove-pepper scent.",
+    "identifying_features": [
+      "Square purplish-green pubescent stems branching profusely",
+      "Opposite, ovate to elliptic leaves with slightly dentate margins",
+      "Small purplish-pink flowers arranged in close whorls on elongate terminal racemes",
+      "Pungent, clove-like aromatic essential oils containing high eugenol content"
+    ],
+    "habitat": "Warm tropical plains, courtyards, village gardens, and temple precincts.",
+    "distribution": "Native to the Indian subcontinent; cultivated widely throughout South and Southeast Asia.",
+    "uses": [
+      "Traditional Ayurvedic adaptogen brewed as herbal tea for coughs and stress relief TODO(verify)",
+      "Daily sacred devotional worship and Hindu ritual sanctification",
+      "Natural culinary herb and insect-deterrent companion plant"
+    ],
+    "care_tips": [
+      "Provide 5-6 hours of unfiltered direct daily sunlight",
+      "Use well-draining loamy potting soil; prevent water accumulation at roots",
+      "Pinch floral terminal spikes regularly to stimulate bushy branch formation"
+    ],
+    "toxicity_note": "Non-toxic in normal culinary use; excessive concentrated medicinal intake during pregnancy should be avoided TODO(verify).",
+    "fun_fact": "Tulsi translates from Sanskrit as 'the incomparable one'. In Hindu mythology, no ritual offering to Lord Vishnu is complete without a Tulsi leaf.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ocimum_tenuiflorum"
+  },
+  {
+    "id": 1,
+    "slug": "azadirachta-indica",
+    "common_name": "Neem",
+    "scientific_name": "Azadirachta indica",
+    "family": "Meliaceae",
+    "genus": "Azadirachta",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "नीम (Neem)",
+    "names_bengali": "নিম (Neem)",
+    "other_names": ["Indian Lilac", "Margosa Tree", "Nimba"],
+    "description": "A robust, fast-growing evergreen mahogany tree celebrated as 'Nature\\'s Drugstore' across rural India for its versatile antimicrobial, insecticidal, and environmental cooling benefits.",
+    "identifying_features": [
+      "Pinnate compound leaves carrying 20-30 curved, sickle-shaped, sharply serrated leaflets",
+      "Fragrant, star-like white blossoms clustered in drooping axillary panicles",
+      "Smooth oval green to yellowish drupe fruits encasing a single kernel seed",
+      "Intensely bitter taste across leaves, bark, roots, and unrefined seed oil"
+    ],
+    "habitat": "Semi-arid to sub-humid tropical plains, dry forests, and rural roadside avenues.",
+    "distribution": "Native to the Indian subcontinent and Myanmar; widely naturalized in tropical Africa and the Caribbean.",
+    "uses": [
+      "Twigs harvested as traditional antibacterial chew sticks (datun) for oral hygiene",
+      "Cold-pressed neem oil applied as a broad-spectrum organic bio-pesticide and fungicide",
+      "Traditional dermatological pastes for soothing skin irritations and cooling fevers TODO(verify)"
+    ],
+    "care_tips": [
+      "Thrives under full, blazing sunlight and high ambient temperatures",
+      "Exceptional drought tolerance once roots establish in well-draining sandy loam",
+      "Protect young saplings from freezing winter drafts and prolonged frost"
+    ],
+    "toxicity_note": "Foliage and dilute topical preparations are safe; concentrated neem seed oil is toxic if ingested orally, particularly dangerous for infants and children TODO(verify).",
+    "fun_fact": "The United Nations named Neem the 'Tree of the 21st Century' due to its potential to combat pests organically without chemical resistance.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Azadirachta_indica"
+  },
+  {
+    "id": 2,
+    "slug": "aloe-vera",
+    "common_name": "Aloe vera",
+    "scientific_name": "Aloe vera",
+    "family": "Asphodelaceae",
+    "genus": "Aloe",
+    "plant_type": "succulent",
+    "origin": "global",
+    "names_hindi": "घृतकुमारी (Ghritkumari)",
+    "names_bengali": "ঘৃতকুমারী (Ghritkumari)",
+    "other_names": ["True Aloe", "First Aid Plant", "Burn Plant"],
+    "description": "A stemless or short-stemmed succulent perennial producing dense rosettes of thick, fleshly spear-shaped leaves loaded with soothing bioactive mucilage gel.",
+    "identifying_features": [
+      "Thick, fleshy lanceolate leaves arranged in upright basal rosettes",
+      "Leaf margins serrated with small, blunt white cartilaginous prickles",
+      "Interior packed with clear, gelatinous, water-storing parenchyma tissue",
+      "Tall spike inflorescence bearing pendulous yellow or orange-red tubular blooms"
+    ],
+    "habitat": "Arid, subtropical, and Mediterranean rocky soils and dry scrublands.",
+    "distribution": "Indigenous to the south-western Arabian Peninsula; pantropically cultivated and naturalized globally.",
+    "uses": [
+      "Topical soothing gel for thermal burns, mild sunburns, and superficial abrasions",
+      "Hydrating botanical humectant in cosmetic formulations and hair conditioners",
+      "Traditional Ayurvedic digestive tonic and cooling preparation TODO(verify)"
+    ],
+    "care_tips": [
+      "Plant in porous cactus mix or sandy soil with excellent drainage holes",
+      "Provide 4-6 hours of bright filtered sunlight; avoid harsh noon glass scorch",
+      "Allow soil substrate to dry thoroughly between moderate waterings"
+    ],
+    "toxicity_note": "Inner clear gel is generally safe; the yellow aloin latex beneath the leaf rind is a harsh laxative and can cause severe cramping and electrolyte loss if ingested TODO(verify). Toxic to cats and dogs.",
+    "fun_fact": "Ancient Egyptian murals referred to Aloe vera as the 'plant of immortality', and Cleopatra reportedly used its gel in her daily skincare regimen.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aloe_vera"
+  },
+  {
+    "id": 3,
+    "slug": "curcuma-longa",
+    "common_name": "Turmeric",
+    "scientific_name": "Curcuma longa",
+    "family": "Zingiberaceae",
+    "genus": "Curcuma",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "हल्दी (Haldi)",
+    "names_bengali": "হলুদ (Holud)",
+    "other_names": ["Indian Saffron", "Haridra", "Golden Spice"],
+    "description": "A rhizomatous herbaceous perennial of the ginger family, celebrated worldwide for its brilliant golden-yellow rhizome rich in curcumin, central to Indian cooking, auspicious rituals, and traditional medicine.",
+    "identifying_features": [
+      "Large, oblong-lanceolate smooth green leaves rising up to 1 meter from fleshy pseudostems",
+      "Fleshy, branched aromatic rhizomes with deep orange-yellow interior flesh",
+      "Dense, conical false flower spikes with pale yellow florets nestled in green-and-pink bracts",
+      "Warm, earthy, slightly peppery and mustard-like aroma released when rhizome is cut"
+    ],
+    "habitat": "Warm, humid tropical monsoon forests and fertile alluvial agricultural river valleys.",
+    "distribution": "Native to the Indian subcontinent and Southeast Asia; India produces over 70% of the world's supply.",
+    "uses": [
+      "Indispensable culinary base spice providing vivid yellow color and warm earthy flavor to curries",
+      "Traditional Ayurvedic anti-inflammatory and antiseptic poultice for wounds and joint aches TODO(verify)",
+      "Sacred Haldi wedding ceremony paste symbolizing purification, auspiciousness, and beauty"
+    ],
+    "care_tips": [
+      "Requires warm, tropical humid weather (20-35°C) and partial to bright indirect sunlight",
+      "Plant in loose, well-draining loamy soil enriched with composted organic matter",
+      "Keep soil evenly moist during the 7-9 month growing season before harvesting rhizomes"
+    ],
+    "toxicity_note": "Extremely safe in dietary quantities; high concentrated curcumin supplements may cause gastric distress or interact with anticoagulant medications TODO(verify).",
+    "fun_fact": "Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Turmeric"
+  },
+  {
+    "id": 4,
+    "slug": "zingiber-officinale",
+    "common_name": "Ginger",
+    "scientific_name": "Zingiber officinale",
+    "family": "Zingiberaceae",
+    "genus": "Zingiber",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "अदरक (Adrak) / सोंठ (Sonth)",
+    "names_bengali": "আদা (Aada)",
+    "other_names": ["Common Ginger", "Adrak", "Zingiber"],
+    "description": "A tropical herbaceous perennial whose pungent, aromatic underground rhizome is one of the world\\'s most popular culinary seasonings and traditional herbal remedies for digestive health.",
+    "identifying_features": [
+      "Slender, reed-like annual pseudostems reaching 1 meter in height",
+      "Alternate, narrow lanceolate dark green leaves with distinct sheathing bases",
+      "Knobby, pale tan fibrous rhizomes with spicy, aromatic, fibrous pale yellow interior",
+      "Dense conelike spikes composed of overlapping green bracts with pale yellow-and-purple blossoms"
+    ],
+    "habitat": "Humid tropical understories, moist rainforest clearings, and fertile cultivated soils.",
+    "distribution": "Indigenous to Island Southeast Asia; domesticated by Austronesian peoples and widely cultivated in India, China, and Nigeria.",
+    "uses": [
+      "Universal culinary spice used fresh, grated, or powdered in curries, teas (chai), and confectionery",
+      "Proven traditional relief for nausea, morning sickness, motion sickness, and digestive cramps TODO(verify)",
+      "Warming herbal decoctions for winter colds, sore throats, and respiratory congestion"
+    ],
+    "care_tips": [
+      "Prefers filtered dappled shade and warm, humid growing environments (22-30°C)",
+      "Plant rhizome buds shallowly in loose, moist, humus-rich soil with sharp drainage",
+      "Harvest when aerial stems naturally yellow and die back in winter"
+    ],
+    "toxicity_note": "Safe in culinary amounts; excessive ingestion of raw root may trigger mild heartburn or gastric acid reflux. Consult physician if on blood thinners TODO(verify).",
+    "fun_fact": "During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ginger"
+  },
+  {
+    "id": 5,
+    "slug": "withania-somnifera",
+    "common_name": "Ashwagandha",
+    "scientific_name": "Withania somnifera",
+    "family": "Solanaceae",
+    "genus": "Withania",
+    "plant_type": "shrub",
+    "origin": "indian",
+    "names_hindi": "अश्वगंधा (Ashwagandha)",
+    "names_bengali": "অশ্বগন্ধা (Ashwagandha)",
+    "other_names": ["Indian Ginseng", "Poison Gooseberry", "Winter Cherry"],
+    "description": "A small, woody perennial shrub of the nightshade family, heralded as the premier adaptogenic rasayana (rejuvenator) in Ayurveda for promoting stamina, vigor, and stress recovery.",
+    "identifying_features": [
+      "Tomentose (velvety hairy) branched stems reaching 35 to 75 cm in height",
+      "Simple, alternate or subopposite dull green ovate leaves",
+      "Inconspicuous, bell-shaped greenish-yellow flowers clustered in leaf axils",
+      "Small, bright red or orange globular berry enclosed within a papery inflated calyx"
+    ],
+    "habitat": "Dry, rocky, sub-tropical arid plains, stony wasteland boundaries, and drought-prone slopes.",
+    "distribution": "Native to the Indian subcontinent, the Middle East, and parts of dry northern Africa.",
+    "uses": [
+      "Ayurvedic adaptogenic root powder consumed with warm milk for vitality and stress reduction TODO(verify)",
+      "Traditional sleep modulator and nervous system calmative (somnifera means 'sleep-inducing') TODO(verify)",
+      "Traditional herbal support for physical endurance and hormonal balance TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires full, intense sunlight and warm temperatures to develop medicinal withanolides",
+      "Grow in sandy, stony, or gravelly soil with low organic matter and minimal moisture",
+      "Avoid overwatering; highly susceptible to fungal root rot in soggy or heavy clay soils"
+    ],
+    "toxicity_note": "Leaves and green unripened berries contain solanine-like alkaloids and are toxic; medicinal root should be avoided during pregnancy due to potential uterine-stimulating effects TODO(verify).",
+    "fun_fact": "Its Sanskrit name Ashwagandha translates literally to 'smell of a horse', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Withania_somnifera"
+  },
+  {
+    "id": 6,
+    "slug": "tinospora-cordifolia",
+    "common_name": "Giloy",
+    "scientific_name": "Tinospora cordifolia",
+    "family": "Menispermaceae",
+    "genus": "Tinospora",
+    "plant_type": "climber",
+    "origin": "indian",
+    "names_hindi": "गिलोय (Giloy) / गुड़ूची (Guduchi)",
+    "names_bengali": "গুলঞ্চ (Gulancha)",
+    "other_names": ["Heart-leaved Moonseed", "Guduchi", "Amrita", "Heavenly Elixir"],
+    "description": "A vigorous deciduous climbing vine with succulent corky bark and cordate foliage, celebrated in Sanskrit as 'Amrita' (the root of immortality) for its powerful immune-modulating properties.",
+    "identifying_features": [
+      "Twining fleshy stems with grayish-white, papery, lenticellate peeling bark",
+      "Distinctive broad, heart-shaped (cordate) membranous leaves with 7-9 radiating veins",
+      "Long, slender aerial roots dropping vertically from high tree canopies",
+      "Drupelet fruits ripening from bright green to vibrant glistening scarlet red"
+    ],
+    "habitat": "Tropical deciduous and dry secondary forests, often scaling Neem, Mango, or Acacia canopies.",
+    "distribution": "Indigenous throughout the tropical Indian subcontinent, Sri Lanka, and Myanmar.",
+    "uses": [
+      "Ayurvedic immune booster and fever-reducing decoction (kwath) particularly during viral illnesses TODO(verify)",
+      "Traditional hepatoprotective agent and blood purifier in herbal formulations TODO(verify)",
+      "Popular home remedy for chronic fatigue, joint stiffness, and glycemic regulation TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires a sturdy trellis, pergola, or host tree trunk for climbing support",
+      "Tolerates bright sun to partial canopy shade and varied tropical soil conditions",
+      "Propagates with extreme ease from mature stem cuttings planted in well-draining soil"
+    ],
+    "toxicity_note": "Generally recognized as safe; excessive unsupervised intake of concentrated extracts has been associated with rare idiosyncratic hepatic enzyme elevations TODO(verify).",
+    "fun_fact": "In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tinospora_cordifolia"
+  },
+  {
+    "id": 7,
+    "slug": "bacopa-monnieri",
+    "common_name": "Brahmi",
+    "scientific_name": "Bacopa monnieri",
+    "family": "Plantaginaceae",
+    "genus": "Bacopa",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "ब्राह्मी (Brahmi) / जलनीम",
+    "names_bengali": "ব্রাহ্মী শাক (Brahmi Shak)",
+    "other_names": ["Water Hyssop", "Herb of Grace", "Jalanimba", "Indian Pennywort"],
+    "description": "A creeping, succulent wetland perennial herb named after Lord Brahma, the creator god of Hindu cosmology, renowned in Ayurveda for centuries as the ultimate brain tonic (medhya rasayana).",
+    "identifying_features": [
+      "Prostrate, creeping succulent stems rooting freely at nodes along wet ground",
+      "Small, thick, wedge-shaped succulent leaves with blunt rounded tips and no visible stalks",
+      "Solitary, delicate four- or five-petaled bell-shaped flowers of pale blue, violet, or pure white",
+      "Distinctively bitter, cooling, slightly salty taste when chewed fresh"
+    ],
+    "habitat": "Wetlands, marshes, edges of freshwater streams, flooded rice paddy margins, and brackish estuarine fringes.",
+    "distribution": "Native to the wetlands of India and tropical Asia; cultivated globally as an aquatic herb and terrarium plant.",
+    "uses": [
+      "Celebrated nootropic cognitive enhancer promoting memory retention, alertness, and mental clarity TODO(verify)",
+      "Traditional calming agent for anxiety, nervous exhaustion, and cognitive aging TODO(verify)",
+      "Stir-fried as a bitter medicinal culinary green (Brahmi shak) in Bengali cuisine"
+    ],
+    "care_tips": [
+      "Requires continuously wet, boggy, or submerged muddy soil substrate",
+      "Thrives in full blazing tropical sunlight to light filtered shade",
+      "Never allow roots to dry out; maintain standing water in saucer or shallow pond margin"
+    ],
+    "toxicity_note": "Non-toxic; high therapeutic doses on an empty stomach may cause mild nausea, abdominal cramps, or increased gastrointestinal motility TODO(verify).",
+    "fun_fact": "Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bacopa_monnieri"
+  },
+  {
+    "id": 8,
+    "slug": "phyllanthus-emblica",
+    "common_name": "Amla",
+    "scientific_name": "Phyllanthus emblica",
+    "family": "Phyllanthaceae",
+    "genus": "Phyllanthus",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "आंवला (Amla)",
+    "names_bengali": "আমলকী (Amloki)",
+    "other_names": ["Indian Gooseberry", "Emblic Myrobalan", "Dhatriphala"],
+    "description": "A medium-sized deciduous tree renowned for its pale greenish-yellow globular sour fruits, revered in India as a supreme source of vitamin C, natural polyphenols, and longevity rasayana.",
+    "identifying_features": [
+      "Slender, feathery branchlets carrying tiny, closely spaced, linear-oblong light green leaflets resembling pinnate leaves",
+      "Flaking, peeling smooth greenish-grey bark revealing inner brown layers",
+      "Globular, smooth, six-striated depressed-spherical translucent greenish-yellow fruits",
+      "Intensely sour, astringent, and bitter initial flavor that turns remarkably sweet in the throat after drinking water"
+    ],
+    "habitat": "Tropical dry and moist deciduous forests, mixed savannah woodlands, and undulating hill tracts.",
+    "distribution": "Native across the Indian subcontinent, Indochina, and southern China.",
+    "uses": [
+      "Primary active ingredient in classical Ayurvedic herbal formulations like Chyawanprash and Triphala",
+      "Preserved as sweet murabba, tart pickles (aachar), and sun-dried salted candies",
+      "Natural hair conditioner and scalp treatment oil for preventing premature greying"
+    ],
+    "care_tips": [
+      "Requires full, unshaded sunlight for prolific fruiting",
+      "Highly adaptable to poor, alkaline, saline, and gravelly soils once established",
+      "Provide regular deep irrigation during floral fruit-set to avoid pre-harvest fruit drop"
+    ],
+    "toxicity_note": "Completely non-toxic and nutrient-dense; high dietary intake of fresh sour fruit may occasionally irritate sensitive stomachs with acid hypersecretion TODO(verify).",
+    "fun_fact": "A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phyllanthus_emblica"
+  },
+  {
+    "id": 9,
+    "slug": "murraya-koenigii",
+    "common_name": "Curry leaf",
+    "scientific_name": "Murraya koenigii",
+    "family": "Rutaceae",
+    "genus": "Murraya",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "कढ़ी पत्ता (Kadi Patta)",
+    "names_bengali": "কারি পাতা (Kari Pata)",
+    "other_names": ["Curry Tree", "Sweet Neem", "Meetha Neem", "Karivepaku"],
+    "description": "A small, highly aromatic tropical citrus-family deciduous tree whose aromatic pinnate leaves form the irreplaceable flavor foundation of South Asian culinary tempering (tadka).",
+    "identifying_features": [
+      "Pinnate compound leaves carrying 11-25 small, alternate, ovate-lanceolate leaflets",
+      "Leaflets have slightly crenate-dentate margins and translucent glandular oil dots visible to the light",
+      "Clusters of small, star-shaped, fragrant white flowers in terminal cymes",
+      "Deeply nutty, citrus-anise, warm savory aroma released immediately when foliage is bruised"
+    ],
+    "habitat": "Tropical moist deciduous and dry evergreen forests, rural gardens, and agricultural hedgerows.",
+    "distribution": "Native to India, Sri Lanka, and Bangladesh; planted across tropical homes worldwide.",
+    "uses": [
+      "Essential seasoning in South Indian and Maharashtrian tempering (tadka) for sambar, rasam, and chutneys",
+      "Traditional Ayurvedic remedy for indigestion, morning nausea, and glycemic regulation TODO(verify)",
+      "Boiled in coconut oil to create nourishing traditional hair tonics against premature greying"
+    ],
+    "care_tips": [
+      "Requires warm tropical temperatures (> 18°C / 65°F) and generous direct sunlight",
+      "Use fertile, slightly acidic, well-draining loamy soil; avoid soggy roots",
+      "Protect from cold winter frost and chilly winds which cause rapid leaf drop"
+    ],
+    "toxicity_note": "Leaves are completely edible, flavorful, and safe; the dark berry seeds contain toxic cardiac glycosides and must never be chewed or ingested TODO(verify).",
+    "fun_fact": "Commercial 'curry powder' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Curry_tree"
+  },
+  {
+    "id": 10,
+    "slug": "moringa-oleifera",
+    "common_name": "Moringa",
+    "scientific_name": "Moringa oleifera",
+    "family": "Moringaceae",
+    "genus": "Moringa",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "सहजन (Sahjan) / मुनगा",
+    "names_bengali": "সজনে (Sojne)",
+    "other_names": ["Drumstick Tree", "Horseradish Tree", "Miracle Tree", "Ben Oil Tree"],
+    "description": "A fast-growing, exceptionally nutrient-dense drought-resistant tree native to northern India, revered as a global 'miracle tree' because nearly every part—leaves, pods, flowers, and seeds—is edible and therapeutic.",
+    "identifying_features": [
+      "Tripinnate compound feathery foliage carrying dozens of tiny oval-elliptic leaflets",
+      "Fragrant, yellowish-white bisexual flowers in drooping terminal clusters",
+      "Long, pendulous, triangular, three-valved woody pods ('drumsticks') reaching up to 60 cm",
+      "Soft, corky, whitish bark with brittle, drooping umbrella-shaped canopy branches"
+    ],
+    "habitat": "Semi-arid tropical plains, alluvial sub-Himalayan valleys, and rural farm boundaries.",
+    "distribution": "Indigenous to northwestern India at the foot of the Himalayas; cultivated across the global tropics.",
+    "uses": [
+      "Tender pods ('drumsticks') cooked in traditional sambar, dals, curries, and soups",
+      "Nutrient-dense leaves powdered as a superfood rich in protein, iron, calcium, and vitamins A & C",
+      "Crushed seeds used for flocculating and purifying turbid drinking water in rural communities"
+    ],
+    "care_tips": [
+      "Thrives in full unshaded blazing sun and high tropical heat",
+      "Grows exceptionally well in sandy, well-drained poor soils; highly drought-resistant",
+      "Prune main trunk when young to stimulate low branching for easy pod and leaf harvesting"
+    ],
+    "toxicity_note": "Leaves, blossoms, and green pods are nutritious and safe; the root bark contains the alkaloid spirochin, which can induce toxic cardiac paralysis and must never be consumed TODO(verify).",
+    "fun_fact": "Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow's milk, and four times more Vitamin A than carrots per equal weight.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Moringa_oleifera"
+  },
+  {
+    "id": 11,
+    "slug": "aegle-marmelos",
+    "common_name": "Bael",
+    "scientific_name": "Aegle marmelos",
+    "family": "Rutaceae",
+    "genus": "Aegle",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "बेल (Bel) / श्रीफल (Bilva)",
+    "names_bengali": "বেল (Bel)",
+    "other_names": ["Golden Apple", "Wood Apple", "Stone Apple", "Bengal Quince", "Bilva"],
+    "description": "A sacred deciduous fruit tree belonging to the citrus family, dedicated to Lord Shiva whose trident is symbolized by its trifoliate leaves. Produces woody-shelled sweet aromatic digestive fruits.",
+    "identifying_features": [
+      "Trifoliate compound leaves with three ovate leaflets representing the Hindu Holy Trinity (Trimurti)",
+      "Spiny branches bearing sharp, straight auxiliary thorns (1-3 cm)",
+      "Large, globular hard-shelled fruits with greyish-green to woody golden-yellow rinds",
+      "Thick, aromatic, sweet orange pulp packed with mucilaginous seeds and pleasant citrus-floral aroma"
+    ],
+    "habitat": "Dry open deciduous hill forests, rocky plains, and temple courtyards across South Asia.",
+    "distribution": "Native to the Indian subcontinent and Indochina; widely revered across India and Nepal.",
+    "uses": [
+      "Pulp scooped to brew refreshing cooling summer sharbat (Bael pana) for digestive relief",
+      "Revered Ayurvedic specific for chronic dysentery, irritable bowel, and diarrhea TODO(verify)",
+      "Trifoliate leaves offered in daily worship rituals at Shiva temples across the country"
+    ],
+    "care_tips": [
+      "Needs full direct sun and wide open ground space for root establishment",
+      "Extremely hardy; thrives in poor, rocky, stony, and alkaline clay soils",
+      "Drought-resistant once established; requires minimal supplemental watering"
+    ],
+    "toxicity_note": "Ripe fruit pulp is delicious and non-toxic; unripe fruit and concentrated bark preparations have strong astringent action and should be used with caution during pregnancy TODO(verify).",
+    "fun_fact": "The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aegle_marmelos"
+  },
+  {
+    "id": 12,
+    "slug": "terminalia-arjuna",
+    "common_name": "Arjuna",
+    "scientific_name": "Terminalia arjuna",
+    "family": "Combretaceae",
+    "genus": "Terminalia",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "अर्जुन (Arjuna) / कहुआ",
+    "names_bengali": "অর্জুন (Arjun)",
+    "other_names": ["Arjun Tree", "White Marudah", "Kahua"],
+    "description": "A towering deciduous riverine tree with an immense buttressed trunk and smooth peeling pinkish-grey bark, revered in classical Ayurvedic pharmacology as the premier cardiotonic herb.",
+    "identifying_features": [
+      "Massive fluted trunk with smooth, exfoliating sheets of pinkish-grey to greenish-white bark",
+      "Sub-opposite, oblong-elliptic leathery leaves with 2 small glands at the petiole base",
+      "Small, pale yellowish-white cup-shaped flowers clustered on short axillary spikes",
+      "Distinctive woody fruit with five prominent, hard, fibrous longitudinal wings"
+    ],
+    "habitat": "Riverbanks, streamsides, ravines, and moist alluvial floodplains across the Indian peninsula.",
+    "distribution": "Endemic to the Indian subcontinent; common along river courses in central and southern India.",
+    "uses": [
+      "Famous Ayurvedic cardiac rasayana: bark decoction boiled in milk for supporting heart muscle tone and healthy blood pressure TODO(verify)",
+      "Timber used for agricultural implements, boat-building, and structural housing beams",
+      "Foliage fed as primary host foodplant for wild tropical Tasar silkworms (Antheraea mylitta)"
+    ],
+    "care_tips": [
+      "Best planted in deep, moist, alluvial river soils with consistent underground moisture",
+      "Requires full overhead sunlight and expansive outdoor physical space for its massive crown",
+      "Protect young saplings from domestic livestock during the first few years"
+    ],
+    "toxicity_note": "Medicinal bark preparations are well-tolerated under professional guidance; patients with severe congestive cardiac failure must consult their cardiologist before taking herbal preparations TODO(verify).",
+    "fun_fact": "Named after the hero Arjuna of the Mahabharata epic in tribute to the tree's unmatched strength, defensive resilience, and role as a biological shield for the human heart.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Terminalia_arjuna"
+  },
+  {
+    "id": 13,
+    "slug": "saraca-asoca",
+    "common_name": "Ashoka",
+    "scientific_name": "Saraca asoca",
+    "family": "Fabaceae",
+    "genus": "Saraca",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "अशोक (Ashok) / सीता अशोक",
+    "names_bengali": "অশোক (Ashok)",
+    "other_names": ["Sita Ashok", "Sorrowless Tree", "Kankelli", "Hemapushpa"],
+    "description": "A sacred evergreen rainforest tree producing dense, vibrant spherical clusters of fragrant orange-red blooms. Revered in Sanskrit as 'A-shoka' (without sorrow), under which Sita sought sanctuary in the Ramayana.",
+    "identifying_features": [
+      "Dense, rounded evergreen canopy with glossy dark green pinnate compound leaves",
+      "Young emergent leaves hang limply in drooping tassel-like bunches of pale coppery-pink",
+      "Dense, rounded, fragrant inflorescence heads that transition from brilliant golden-yellow to rich scarlet-red",
+      "Large, flattened, leathery woody seed pods (10-25 cm) containing 4-8 smooth brown seeds"
+    ],
+    "habitat": "Deep shade of moist evergreen rainforest valleys, foothills of the Western Ghats, and sacred groves.",
+    "distribution": "Indigenous to the Western Ghats, Eastern Himalayas, and southern tropical river valleys of India; globally vulnerable.",
+    "uses": [
+      "Prized Ayurvedic uterine tonic (Ashokarishta) used for feminine hormonal balance and reproductive health TODO(verify)",
+      "Sacred ornamental tree planted in temple courtyards, Buddhist viharas, and palace botanical gardens",
+      "Traditional astringent bark decoction for internal bleeding and uterine discomfort TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires partial shade and sheltered humid conditions when young; intolerant of arid scorching heat",
+      "Plant in rich, moist, organic-matter-loaded acidic soils with adequate moisture retention",
+      "Provide regular deep irrigation during prolonged dry seasons to maintain lush canopy foliage"
+    ],
+    "toxicity_note": "Non-toxic; commonly confused in urban landscaping with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which lacks medicinal properties TODO(verify).",
+    "fun_fact": "According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Saraca_asoca"
+  },
+  {
+    "id": 14,
+    "slug": "piper-betle",
+    "common_name": "Betel",
+    "scientific_name": "Piper betle",
+    "family": "Piperaceae",
+    "genus": "Piper",
+    "plant_type": "climber",
+    "origin": "indian",
+    "names_hindi": "पान (Paan)",
+    "names_bengali": "পান (Paan)",
+    "other_names": ["Betel Vine", "Paan Leaf", "Tambula", "Nagavalli"],
+    "description": "An evergreen perennial climbing vine of the pepper family with glossy heart-shaped aromatic leaves, central to Indian hospitality, festive traditions, and after-dinner digestive culture (paan).",
+    "identifying_features": [
+      "Semi-woody climbing vine with swollen stem nodes producing adventitious clinging roots",
+      "Glossy, leathery heart-shaped (cordate) alternate leaves with 5-7 prominent palmate veins",
+      "Dioecious pendulous cylindrical catkin flower spikes",
+      "Distinctively spicy, aromatic, warm clove-like and peppery scent released when foliage is crushed"
+    ],
+    "habitat": "Moist, warm, shaded tropical agricultural conservatories (paan boroj) and rainforest understories.",
+    "distribution": "Native to Southeast Asia and cultivated throughout the Indian subcontinent from antiquity.",
+    "uses": [
+      "Chewed after meals as traditional digestive paan wrapped around areca nut, slaked lime, and aromatic spices",
+      "Auspicious symbol presented at Hindu wedding ceremonies, temple pujas, and welcoming honored guests",
+      "Traditional warm leaf poultice applied to children's chests for respiratory congestion TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires warm, highly humid conditions (> 70% humidity) with protection from direct burning sun",
+      "Cultivate in moist, highly fertile, well-draining loamy soil rich in decomposed manure",
+      "Provide sturdy bamboo poles or living support trees for aerial vine climbing"
+    ],
+    "toxicity_note": "Fresh betel leaf alone is non-toxic and aromatic; habitual chewing of traditional paan concoctions containing tobacco and areca nut is strongly carcinogenic to oral tissues TODO(verify).",
+    "fun_fact": "Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo's travelogues of the subcontinent in the 13th century.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Betel"
+  }
+]

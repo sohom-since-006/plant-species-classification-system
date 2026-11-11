@@ -20,7 +20,7 @@ create table public.species (
   family           text not null,
   genus            text not null,
   plant_type       text not null check (plant_type in
-                   ('herb','shrub','tree','climber','grass','succulent','aquatic','crop')),
+                   ('herb','shrub','tree','climber','grass','succulent','aquatic','crop','epiphyte')),
   origin           text not null check (origin in ('indian','global','both')),
   names_hindi      text,
   names_bengali    text,

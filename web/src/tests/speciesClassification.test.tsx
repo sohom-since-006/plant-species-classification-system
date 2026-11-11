@@ -46,15 +46,11 @@ describe('Species Resolution and Content Completeness', () => {
     }
   });
 
-  it('identifies which species IDs currently lack rich monograph content', () => {
+  it('verifies that all 112 species have rich monograph content (0 missing)', () => {
     const missing = getMissingContentIds();
     expect(missing).toBeInstanceOf(Array);
-    expect(missing).not.toContain(40); // Mango has content
-    expect(missing).not.toContain(0);  // Tulsi has content
-    expect(missing).not.toContain(1);  // Neem has content
-    expect(missing).not.toContain(2);  // Aloe vera has content
-    expect(missing).not.toContain(97); // Sweet Basil has content
-    expect(missing.length).toBeGreaterThan(0);
+    expect(missing).toEqual([]);
+    expect(missing.length).toBe(0);
   });
 });
 

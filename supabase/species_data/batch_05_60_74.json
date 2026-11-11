@@ -1,0 +1,571 @@
+[
+  {
+    "id": 60,
+    "slug": "oryza-sativa",
+    "common_name": "Rice",
+    "scientific_name": "Oryza sativa",
+    "family": "Poaceae",
+    "genus": "Oryza",
+    "plant_type": "grass",
+    "origin": "indian",
+    "names_hindi": "धान (Dhan)",
+    "names_bengali": "ধান (Dhan)",
+    "other_names": ["Paddy", "Dhan", "Asian Rice", "Chawal", "Shali"],
+    "description": "The quintessential cereal grass of tropical Asia, cultivated in flooded paddy terraces and alluvial plains to nourish more than half of the human global population.",
+    "identifying_features": [
+      "Erect annual clumping grass with hollow, jointed round culms up to 1-1.8 m tall",
+      "Long, flat linear leaf blades with rough scaberulous margins and a prominent membranous ligule",
+      "Arching terminal panicles bearing flattened one-flowered spikelets that mature into golden husked grains"
+    ],
+    "habitat": "Flooded wetland paddies, irrigated river deltas, and terraced hillside water basins.",
+    "distribution": "Native to the Yangtze and Ganges river basins; cultivated across all rice belts of India and Asia.",
+    "uses": [
+      "Staple dietary carbohydrate grain eaten steamed, boiled into khichdi, or ground into idli and dosa batter",
+      "Sacred grain (Akshata) used in every Hindu ritual, wedding blessing, and puja offering",
+      "Rice straw used for cattle fodder, thatched roofs, mushroom cultivation, and biodegradable paper"
+    ],
+    "care_tips": [
+      "Requires flooded or saturated muddy soil during vegetative tillering and panicle development",
+      "Thrives in hot, humid tropical climates with intense uninterrupted sunlight",
+      "Drain water from paddy fields 10-14 days before grain harvesting"
+    ],
+    "toxicity_note": "Non-toxic; raw husks are indigestible and must be milled. Cooked rice is one of the gentlest hypoallergenic foods known.",
+    "fun_fact": "India is the world's largest exporter of rice, cultivating thousands of fragrant heritage varieties including the legendary long-grain Basmati and aromatic Gobindobhog.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rice"
+  },
+  {
+    "id": 61,
+    "slug": "triticum-aestivum",
+    "common_name": "Wheat",
+    "scientific_name": "Triticum aestivum",
+    "family": "Poaceae",
+    "genus": "Triticum",
+    "plant_type": "grass",
+    "origin": "global",
+    "names_hindi": "गेहूं (Gehun)",
+    "names_bengali": "গম (Gom)",
+    "other_names": ["Bread Wheat", "Common Wheat", "Gehun", "Gom", "Godhuma"],
+    "description": "The world's foremost cool-season temperate cereal grass, bearing dense awned spikes of golden grains that provide the flour foundation for rotis, breads, and pastas.",
+    "identifying_features": [
+      "Upright annual tufted grass with hollow ribbed stems reaching 0.6 to 1.2 m in height",
+      "Flat, narrow linear leaves with clasping claw-like auricles at the junction of sheath and blade",
+      "Dense, erect terminal compound spikes with zigzag rachis bearing spikelets with or without bristly awns ('beards')",
+      "Oval golden-brown caryopsis grain with a deep longitudinal groove along one side"
+    ],
+    "habitat": "Irrigated winter farmlands, alluvial river plains (Indo-Gangetic plain), and temperate prairies.",
+    "distribution": "Originated in the Fertile Crescent of the Middle East; premier Rabi winter crop of northern India (Punjab, Haryana, UP).",
+    "uses": [
+      "Milled into whole-wheat atta for daily rotis, chapatis, parathas, and refined maida for breads and bakery goods",
+      "Wheat straw (bhusa) serves as the primary winter dry livestock fodder across rural north India",
+      "Tender green wheatgrass juiced as an antioxidant-rich wellness beverage"
+    ],
+    "care_tips": [
+      "Sown as a winter (Rabi) crop in northern India, requiring cool vegetative temperatures and warm ripening weather",
+      "Needs well-drained, fertile alluvial or clay loam soil; cannot tolerate prolonged waterlogging",
+      "Requires 4-6 timed crown root irrigations during crucial growth stages"
+    ],
+    "toxicity_note": "Non-toxic; contains gluten proteins which cause immune reactions in individuals with celiac disease or gluten sensitivity.",
+    "fun_fact": "Common bread wheat is an allohexaploid plant, meaning its complex genome contains six sets of chromosomes derived from three distinct ancestral wild grass species.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Common_wheat"
+  },
+  {
+    "id": 62,
+    "slug": "zea-mays",
+    "common_name": "Maize",
+    "scientific_name": "Zea mays",
+    "family": "Poaceae",
+    "genus": "Zea",
+    "plant_type": "grass",
+    "origin": "global",
+    "names_hindi": "मक्का (Makka)",
+    "names_bengali": "ভুট্টা (Bhutta)",
+    "other_names": ["Corn", "Indian Corn", "Makka", "Bhutta", "Sweetcorn"],
+    "description": "A robust, tall annual giant cereal grass with stout prop roots, broad arching leaves, terminal male tassel flowers, and ears of tightly packed sweet or starchy kernels.",
+    "identifying_features": [
+      "Tall, solid, bamboo-like unbranched erect stalk reaching 2-3 meters in height, supported by stout aerial prop roots at base",
+      "Broad, wavy-margined linear leaves clasping the stem on alternating sides",
+      "Separate male and female flowers on same plant: terminal branching tassel (male) and axillary ear with silky styles (female)",
+      "Cylindrical cobs tightly wrapped in leafy husks, packed with rows of yellow, white, or multicolor grains"
+    ],
+    "habitat": "Agricultural grain fields, river terraces, and warm temperate-to-tropical croplands.",
+    "distribution": "Domesticated in southern Mexico over 9,000 years ago; now cultivated extensively across India and worldwide.",
+    "uses": [
+      "Fresh ears roasted over charcoal on Indian street carts (bhutta) with lime and black salt",
+      "Ground into yellow makki ka atta for iconic winter Makki ki Roti paired with Sarson ka Saag",
+      "Major global industrial source of cornstarch, corn syrup, poultry feed, and biofuel ethanol"
+    ],
+    "care_tips": [
+      "Requires full direct sun and rich, nitrogen-heavy, well-aerated soil",
+      "Plant in blocks of several short rows rather than single long rows to facilitate wind pollination",
+      "Keep consistently watered, particularly when tassels and silk emerge"
+    ],
+    "toxicity_note": "Non-toxic; corn kernels and silks are completely safe and edible for humans and domestic animals.",
+    "fun_fact": "Every single strand of silk on an ear of corn connects to a single egg inside, meaning every single kernel on a cob must be individually pollinated by a grain of airborne pollen.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Maize"
+  },
+  {
+    "id": 63,
+    "slug": "saccharum-officinarum",
+    "common_name": "Sugarcane",
+    "scientific_name": "Saccharum officinarum",
+    "family": "Poaceae",
+    "genus": "Saccharum",
+    "plant_type": "grass",
+    "origin": "global",
+    "names_hindi": "गन्ना (Ganna)",
+    "names_bengali": "আখ (Aakh)",
+    "other_names": ["Noble Cane", "Ganna", "Aakh", "Ikshu", "Khabbu"],
+    "description": "A gigantic, thick-stemmed perennial clumping grass with stout, jointed, fibrous stalks brimming with sweet sucrose-rich juice, grown as the world's primary sugar source.",
+    "identifying_features": [
+      "Massive clumping stalks (culms) 3 to 5 meters tall and 3 to 5 cm thick, ringed with noticeable nodes",
+      "Stalks colored green, yellow, purple, or deep burgundy with sweet, fibrous, juice-saturated inner pith",
+      "Long, narrow, sword-like linear leaves with sharp serrulate edges and a pale prominent central midrib",
+      "Large, feathery, plume-like silvery-white terminal panicle known as an 'arrow'"
+    ],
+    "habitat": "Tropical and subtropical alluvial plains with high water availability and intense warmth.",
+    "distribution": "Native to New Guinea and Southeast Asia; historically refined in India where crystalline sugar was invented.",
+    "uses": [
+      "Stalks freshly crushed on Indian street stalls for refreshing sugarcane juice (Ganne ka ras) flavored with ginger and mint",
+      "Boiled and concentrated into traditional unrefined jaggery (gur) and refined crystalline table sugar",
+      "Bagasse fiber burned for thermal co-generation energy and molasses fermented into industrial ethanol"
+    ],
+    "care_tips": [
+      "Requires 10-12 months of hot tropical weather, high humidity, and copious irrigation",
+      "Prefers deep, rich, fertile loam or heavy clay soils with good drainage",
+      "Propagated vegetatively via stem cuttings ('setts') bearing at least 2-3 healthy eye buds"
+    ],
+    "toxicity_note": "Completely non-toxic; cane juice and jaggery are safe foods; moldy red-rot sugarcane should be avoided.",
+    "fun_fact": "India was the first country in the world to invent the process of crystallizing sugarcane juice into solid crystals (Sanskrit: 'Khanda', origin of the English word 'candy') over 2,500 years ago.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Saccharum_officinarum"
+  },
+  {
+    "id": 64,
+    "slug": "camellia-sinensis",
+    "common_name": "Tea",
+    "scientific_name": "Camellia sinensis",
+    "family": "Theaceae",
+    "genus": "Camellia",
+    "plant_type": "shrub",
+    "origin": "indian",
+    "names_hindi": "चाय (Chai)",
+    "names_bengali": "চা (Cha)",
+    "other_names": ["Tea Plant", "Chai", "Cha", "Camellia", "Assamica"],
+    "description": "An evergreen glossy-leaved shrub pruned into flat-topped bushes across rolling misty hills, whose tender young bud flushes yield black, green, oolong, and white teas.",
+    "identifying_features": [
+      "Pruned flat-topped evergreen bushes (plucking tables) with dense, woody branching",
+      "Alternate, elliptic-to-lanceolate leathery glossy leaves with serrated margins and silky hairs on young flushes",
+      "Small, nodding, fragrant creamy-white flowers with 7-8 petals and a prominent cluster of bright yellow stamens",
+      "Three-lobed woody green-to-brown capsules containing round brown oily seeds"
+    ],
+    "habitat": "Misty subtropical mountain slopes, cool elevated plateaus, and acidic highland hill stations.",
+    "distribution": "Native to East Asia and the Assam Brahmaputra valley of Northeast India; grown across Darjeeling, Assam, and Nilgiris.",
+    "uses": [
+      "Harvesting 'two leaves and a bud' processed into world-renowned Darjeeling, Assam, and Nilgiri teas",
+      "Brewed as daily Indian spiced milk tea (Masala Chai) boiled with cardamom, ginger, and cloves",
+      "Rich in polyphenol antioxidants (EGCG), theanine, and gentle caffeine for mental clarity"
+    ],
+    "care_tips": [
+      "Requires strongly acidic, well-draining soil (pH 4.5 to 5.5) rich in organic humus",
+      "Thrives under high rainfall, cool temperatures, and frequent misty humidity with morning sun",
+      "Requires regular plucking and pruning to maintain a dense vegetative flushing canopy"
+    ],
+    "toxicity_note": "Non-toxic to humans in beverage use; caffeine content makes concentrated leaves toxic to cats and dogs if ingested TODO(verify).",
+    "fun_fact": "All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Camellia_sinensis"
+  },
+  {
+    "id": 65,
+    "slug": "gossypium-hirsutum",
+    "common_name": "Cotton",
+    "scientific_name": "Gossypium hirsutum",
+    "family": "Malvaceae",
+    "genus": "Gossypium",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "कपास (Kapas)",
+    "names_bengali": "তুলা (Tula)",
+    "other_names": ["Upland Cotton", "Kapas", "Tula", "White Gold", "Rui"],
+    "description": "A branching subtropical shrub bearing cream-to-pink mallow flowers, lobed leaves, and leathery green bolls that burst open at maturity to reveal snowy clouds of soft cellulose lint.",
+    "identifying_features": [
+      "Erect, branching herbaceous shrub reaching 1 to 1.5 m with reddish hairy stems",
+      "Broad, palmately 3-to-5 lobed cordate leaves with hairy undersides and dark gland dots",
+      "Large, cup-shaped creamy-white or pale yellow flowers that turn dull pinkish-purple on the second day",
+      "Ovoid pointed green bolls that split into 3-5 valves, revealing fluffy white fibrous lint enclosing dark seeds"
+    ],
+    "habitat": "Warm, sunny agricultural river plains, black cotton soil tracts (Regur soils), and semi-arid valleys.",
+    "distribution": "Native to Central America; widely cultivated throughout western and central India (Gujarat, Maharashtra, Telangana).",
+    "uses": [
+      "World's most important natural textile fiber ('white gold') woven into breathable cotton garments, towels, and bedsheets",
+      "Cottonseed crushed to extract edible cottonseed oil and high-protein livestock meal cake (khal)",
+      "Absorbent medical cotton wool used universally in wound dressings and surgical care"
+    ],
+    "care_tips": [
+      "Requires deep, moisture-retentive black basaltic soils (Regur) or fertile alluvial loam",
+      "Needs hot weather, full sun, and at least 180 to 200 frost-free sunny days",
+      "Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality"
+    ],
+    "toxicity_note": "Lint and oil are safe; raw seeds and foliage contain the toxic polyphenol gossypol, which can cause cardiac and reproductive toxicity in non-ruminant animals TODO(verify).",
+    "fun_fact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gossypium_hirsutum"
+  },
+  {
+    "id": 66,
+    "slug": "brassica-juncea",
+    "common_name": "Mustard",
+    "scientific_name": "Brassica juncea",
+    "family": "Brassicaceae",
+    "genus": "Brassica",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "सरसों (Sarson)",
+    "names_bengali": "সর্ষে (Shorshe)",
+    "other_names": ["Indian Mustard", "Brown Mustard", "Sarson", "Rai", "Shorshe"],
+    "description": "A cool-season annual agricultural herb that carpets winter fields in sea of radiant canary-yellow 4-petaled blossoms, yielding pungent leaves and fiery oil-rich seeds.",
+    "identifying_features": [
+      "Erect, smooth glaucous branching green stem up to 1-1.5 meters tall",
+      "Lower leaves are large, lyrate-pinnatifid with scalloped margins; upper leaves are smaller, lanceolate and sub-entire",
+      "Abundant terminal racemes of bright golden-yellow cruciform (4-petaled cross-shaped) flowers",
+      "Slender, cylindrical ascending silique pods (beaked pods) containing rows of tiny spherical reddish-brown seeds"
+    ],
+    "habitat": "Winter agricultural fields, alluvial riverbanks, and fertile northern plains.",
+    "distribution": "Native to Central Asia and the Indian subcontinent; iconic winter crop of Punjab, Rajasthan, Haryana, and Bengal.",
+    "uses": [
+      "Pungent brown seeds cold-pressed into Kacchi Ghani mustard oil, the signature cooking oil of North and Eastern India",
+      "Tender winter leaves boiled and slow-simmered into Sarson ka Saag served with Makki ki Roti",
+      "Seeds ground into zesty kasundi and fish-curry pastes (Shorshe Ilish) in Bengal"
+    ],
+    "care_tips": [
+      "Grown as a winter Rabi crop; thrives in cool weather and full direct sunlight",
+      "Prefers well-drained loamy soil; sensitive to water stagnation during early root development",
+      "Harvest seed pods when plants turn golden-brown before pods shatter open"
+    ],
+    "toxicity_note": "Non-toxic in normal culinary use; mustard oil contains erucic acid and allyl isothiocyanate which gives it a pungent sharp bite. Safe and widely consumed.",
+    "fun_fact": "The characteristic pungent nasal heat of mustard is only released when seeds or leaves are crushed in water, which activates the myrosinase enzyme to produce allyl isothiocyanate.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brassica_juncea"
+  },
+  {
+    "id": 67,
+    "slug": "solanum-lycopersicum",
+    "common_name": "Tomato",
+    "scientific_name": "Solanum lycopersicum",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "टमाटर (Tamatar)",
+    "names_bengali": "টমেটো (Tomato)",
+    "other_names": ["Common Tomato", "Tamatar", "Tomato", "Love Apple"],
+    "description": "A sprawling, gland-dotted annual herb with aromatic dissected leaves, yellow star-shaped blossoms, and juicy red berries that are a cornerstone of modern world gastronomy.",
+    "identifying_features": [
+      "Sprawling, glandular-pubescent weak stems covered in sticky hairs that release a strong, pungent odor",
+      "Pinnately divided leaves with irregular ovate, serrated leaflets",
+      "Clusters of nodding, star-shaped yellow flowers with reflexed petals and a conical yellow anther cone",
+      "Fleshy, juicy globose-to-oblong berries ripening from firm green to brilliant scarlet-red with multiple seed locules"
+    ],
+    "habitat": "Kitchen gardens, commercial vegetable farm plots, polyhouses, and terrace containers.",
+    "distribution": "Native to western South America (Andes); now grown universally across India and worldwide.",
+    "uses": [
+      "Essential savory flavor base for Indian gravies, curries, rasams, and fresh kachumber salads",
+      "Richest dietary source of the potent antioxidant carotenoid lycopene, supporting cardiovascular health",
+      "Processed commercially into tomato puree, ketchups, and canned sauces"
+    ],
+    "care_tips": [
+      "Requires at least 6-8 hours of direct sunshine and support trellising or tomato cages",
+      "Water deeply and consistently at the soil level; irregular watering causes blossom end rot and fruit splitting",
+      "Pinch out side-suckers from leaf axils on indeterminate varieties to focus energy on fruit ripening"
+    ],
+    "toxicity_note": "RIPE FRUIT IS SAFE AND EDIBLE. FOLIAGE AND GREEN UNRIPE FRUITS ARE TOXIC: Leaves, stems, and unripened green tomatoes contain toxic glycoalkaloids (solanine and tomatine). Ingestion of green plant parts can cause abdominal pain, vomiting, and diarrhea in humans and pets.",
+    "fun_fact": "Botanically, the tomato is a true berry, but a famous 1893 US Supreme Court case (Nix v. Hedden) legally classified it as a vegetable for taxation purposes because it is eaten as part of the main meal.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tomato"
+  },
+  {
+    "id": 68,
+    "slug": "capsicum-annuum",
+    "common_name": "Chilli",
+    "scientific_name": "Capsicum annuum",
+    "family": "Solanaceae",
+    "genus": "Capsicum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "मिर्च (Mirch)",
+    "names_bengali": "লঙ্কা (Lanka)",
+    "other_names": ["Hot Pepper", "Chilli Pepper", "Mirch", "Lanka", "Hari Mirch"],
+    "description": "A bushy herbaceous plant producing solitary white star flowers and glossy elongated pods containing spicy capsaicin that gives heat and fire to Indian cuisine.",
+    "identifying_features": [
+      "Bushy, angular-stemmed compact plant reaching 0.5 to 1 meter in height",
+      "Alternate, smooth, ovate-to-lanceolate leaves with entire margins and pointed tips",
+      "Solitary, nodding white or greenish-white star-like flowers borne in leaf axils",
+      "Glossy, elongated pendant or erect berries ripening from green to fiery crimson-red, packed with heat on placental membranes"
+    ],
+    "habitat": "Agricultural vegetable farms, sunny home gardens, and raised garden containers.",
+    "distribution": "Native to Mesoamerica; introduced to India by Portuguese traders in the 16th century, now an inseparable national staple.",
+    "uses": [
+      "Indispensable spice added fresh (hari mirch) or sun-dried and powdered (lal mirch) to almost all savory Indian dishes",
+      "Capsaicin extracts used pharmaceutically in topical pain-relief creams for neuropathy and arthritis TODO(verify)",
+      "Traditional Indian protective amulets (nimbu-mirchi) hung to ward off the evil eye (nazar)"
+    ],
+    "care_tips": [
+      "Thrives in hot, sunny conditions with rich, well-draining garden soil",
+      "Water moderately; slightly restricting water during fruiting actually increases capsaicin heat intensity",
+      "Apply high-potash fertilizer when flower buds initiate"
+    ],
+    "toxicity_note": "Fruit is culinary safe; capsaicin is an intense mucous membrane irritant. Wash hands thoroughly after chopping; avoid touching eyes. Excessive intake can cause gastric pain. Keep away from household pets.",
+    "fun_fact": "The fiery heat in chillies is measured on the Scoville Heat Scale; capsaicin does not cause an actual physical burn, but tricks sensory nerve endings into signaling extreme heat to the brain.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Capsicum_annuum"
+  },
+  {
+    "id": 69,
+    "slug": "solanum-melongena",
+    "common_name": "Brinjal",
+    "scientific_name": "Solanum melongena",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "बैंगन (Baingan)",
+    "names_bengali": "বেগুন (Begun)",
+    "other_names": ["Eggplant", "Aubergine", "Baingan", "Begun", "Vangi"],
+    "description": "A robust, bushy annual vegetable herb bearing starry violet flowers and large, glossy, deep-purple fleshy berries beloved across India for hearty, tender roasted and curried dishes.",
+    "identifying_features": [
+      "Bushy, coarse erect stem up to 1-1.5 m, sometimes armed with sharp prickles on calyx and stem",
+      "Large, alternate, coarsely lobed dull grey-green leaves covered in soft downy star-shaped hairs",
+      "Star-shaped violet or purple flowers with yellow central stamens clustered in leaf axils",
+      "Large, glossy, pear-shaped or globular berries with a persistent spiny green calyx and tender spongy white seed-flecked flesh"
+    ],
+    "habitat": "Fertile alluvial plains, homestead vegetable plots, and sunny agricultural farmlands.",
+    "distribution": "Native to the Indian subcontinent and Southeast Asia; cultivated across India since pre-Vedic antiquity.",
+    "uses": [
+      "Charred and mashed over open flame to create the iconic smoky Baingan Bharta",
+      "Deep-fried in spiced gram-flour batter for Bengali Beguni, or stuffed in Maharashtrian Bharli Vangi",
+      "Excellent source of dietary fiber, nasunin anthocyanins in purple skin, and copper"
+    ],
+    "care_tips": [
+      "Requires hot, sunny weather and deep, fertile, organically rich loam soil",
+      "Stake heavy fruiting branches to keep heavy eggplants off wet soil",
+      "Harvest fruits while skin remains glossy; dull skin indicates overripe bitter seeds"
+    ],
+    "toxicity_note": "Cooked fruit is safe and nutritious. RAW FOLIAGE AND STEMS ARE TOXIC: Leaves and raw unripened fruit contain the toxic glycoalkaloid solanine; do not consume raw green parts or allow pets to chew foliage.",
+    "fun_fact": "Botanical and linguistic records confirm that brinjal was domesticated in India over 4,000 years ago, and Sanskrit literature documents over 30 distinct historical culinary varieties.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eggplant"
+  },
+  {
+    "id": 70,
+    "slug": "abelmoschus-esculentus",
+    "common_name": "Okra",
+    "scientific_name": "Abelmoschus esculentus",
+    "family": "Malvaceae",
+    "genus": "Abelmoschus",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "भिंडी (Bhindi)",
+    "names_bengali": "ঢেঁড়শ (Dherosh)",
+    "other_names": ["Lady's Finger", "Bhindi", "Dherosh", "Gumbo", "Bamia"],
+    "description": "A tall, erect warm-season annual herb with hibiscus-like pale yellow flowers and elongated ridged green seed pods prized for their tender texture and natural mucilaginous thickening.",
+    "identifying_features": [
+      "Stout, erect semi-woody hairy stem growing 1 to 2 meters tall",
+      "Broad, palmately 5-to-7 lobed leaves with coarse serrated edges on long petioles",
+      "Showy, creamy-yellow hibiscus-like flowers with a deep dark-maroon or purple throat center",
+      "Elongated, ridged, tapering green pyramidal capsules filled with round white seeds and rich mucilage"
+    ],
+    "habitat": "Summer agricultural vegetable beds, warm alluvial loam fields, and kitchen gardens.",
+    "distribution": "Native to tropical Africa and South Asia; enthusiastically cultivated as a daily staple vegetable across India.",
+    "uses": [
+      "Staple Indian vegetable dish: dry-spiced stir-fry Bhindi Masala, Kurkuri Bhindi, or Bengali Dherosh Chorchori",
+      "Natural mucilage used as a thickener in traditional southern gumbos and stews",
+      "High natural source of soluble dietary fiber, Vitamin K, and folate"
+    ],
+    "care_tips": [
+      "Thrives in hot summer sunshine; seeds fail to germinate in cold or waterlogged soil",
+      "Plant in rich, well-draining garden soil enriched with mature compost",
+      "Harvest pods every 2-3 days while they are tender and snap easily; old pods become tough and stringy"
+    ],
+    "toxicity_note": "Completely non-toxic; pods, leaves, and seeds are edible and safe for humans and animals.",
+    "fun_fact": "India is the world's undisputed king of okra production, harvesting over 60% of the entire global commercial okra crop each year.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Okra"
+  },
+  {
+    "id": 71,
+    "slug": "solanum-tuberosum",
+    "common_name": "Potato",
+    "scientific_name": "Solanum tuberosum",
+    "family": "Solanaceae",
+    "genus": "Solanum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "आलू (Aloo)",
+    "names_bengali": "আলু (Aloo)",
+    "other_names": ["Common Potato", "Aloo", "Alu", "Batata", "Spud"],
+    "description": "The world's premier tuber crop, a sprawling nightshade family herb bearing starchy underground stem tubers that form the backbone of Indian street food and global cooking.",
+    "identifying_features": [
+      "Sprawling herbaceous green stems with pinnately compound leaves composed of ovate leaflets",
+      "Clusters of white, pink, or pale lavender star-shaped flowers with bright yellow protruding anthers",
+      "Small, green tomato-like seed balls (berries) borne above ground containing true botanical seeds",
+      "Starchy underground stem tubers with protective corky skins and spirally arranged buds ('eyes')"
+    ],
+    "habitat": "Cool-season agricultural plains (Indo-Gangetic plain), temperate mountain slopes, and sandy loam beds.",
+    "distribution": "Native to the South American Andes; introduced to India in the 17th century, now grown everywhere from UP to Bengal.",
+    "uses": [
+      "Heart of Indian comfort cuisine: Aloo Gobi, Aloo Paratha, Samosa stuffing, Dum Aloo, and street chaat",
+      "Rich source of digestible dietary carbohydrates, potassium, and Vitamin B6",
+      "Commercial production of potato starch, flour, and snack chips"
+    ],
+    "care_tips": [
+      "Grown as a cool winter crop in the plains, or summer crop in the Himalayan hills",
+      "Requires loose, deeply tilled sandy loam soil to allow unhindered tuber expansion",
+      "Hill soil up around growing stems regularly to protect swelling tubers from sunlight exposure"
+    ],
+    "toxicity_note": "TUBERS ARE SAFE WHEN SOUND. GREEN PARTS AND SPROUTS ARE TOXIC: Green sun-exposed potato peel, green tubers, sprouts, and all aboveground foliage contain poisonous solanine and chaconine glycoalkaloids. Ingestion causes nausea, vomiting, abdominal cramping, and headaches. NEVER eat green potatoes.",
+    "fun_fact": "Potatoes are underground modified stems (tubers), not roots; the 'eyes' of a potato are actually dormant axillary buds capable of sprouting into new clonal plants.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Potato"
+  },
+  {
+    "id": 72,
+    "slug": "allium-cepa",
+    "common_name": "Onion",
+    "scientific_name": "Allium cepa",
+    "family": "Amaryllidaceae",
+    "genus": "Allium",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "प्याज़ (Pyaz)",
+    "names_bengali": "পেঁয়াজ (Penyaj)",
+    "other_names": ["Common Onion", "Pyaz", "Peyaj", "Kanda", "Palandu"],
+    "description": "A biennial pungent bulb herb with hollow cylindrical leaves, globose spherical umbels of starry white flowers, and layered fleshy underground bulbs indispensable in world cooking.",
+    "identifying_features": [
+      "Hollow, cylindrical, glaucous bluish-green leaves growing in a fan from the underground basal stem plate",
+      "Layered underground bulb composed of concentric fleshy modified leaf bases enclosed in dry, papery brown-to-purple tunics",
+      "Tall, hollow flowering scape topped by a dense spherical umbel of small white or pale greenish flowers",
+      "Strong, pungent lachrymatory aroma released when bulb cells are ruptured or sliced"
+    ],
+    "habitat": "Agricultural crop fields, market vegetable gardens, and alluvial vegetable terraces.",
+    "distribution": "Native to Central/Southwestern Asia; grown in colossal quantities across Maharashtra (Nashik), Gujarat, and nationwide.",
+    "uses": [
+      "Fundamental aromatic flavor foundation for Indian tadkas, gravies, biryanis, and salads",
+      "High natural source of quercetin, a powerful antioxidant flavonoid supporting cellular health",
+      "Folk use of raw onion juice applied topically to soothe bee stings or massaged on scalps for hair strength TODO(verify)"
+    ],
+    "care_tips": [
+      "Needs full direct sun and fertile, loose, sandy loam soil free of rocks",
+      "Keep soil weed-free and uniformly moist during early bulb swelling; withhold water as tops flop over",
+      "Allow harvested bulbs to dry and cure in a well-ventilated shaded space for several weeks"
+    ],
+    "toxicity_note": "SAFE FOR HUMANS. TOXIC TO PETS: Contains organosulfoxides and N-propyl disulfide that are highly toxic to dogs, cats, and horses, destroying red blood cells and triggering life-threatening hemolytic anemia.",
+    "fun_fact": "Onions make you cry because slicing cell walls mixes sulfenic acids with enzymes to create syn-propanethial-S-oxide gas, which reacts with tear-duct moisture to form mild sulfuric acid.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Onion"
+  },
+  {
+    "id": 73,
+    "slug": "coriandrum-sativum",
+    "common_name": "Coriander",
+    "scientific_name": "Coriandrum sativum",
+    "family": "Apiaceae",
+    "genus": "Coriandrum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "धनिया (Dhaniya)",
+    "names_bengali": "ধনে (Dhone)",
+    "other_names": ["Cilantro", "Chinese Parsley", "Dhaniya", "Dhone", "Kothmir"],
+    "description": "A feathery, aromatic annual herb whose refreshing citrus-herbal leaves (cilantro) and warm, spicy-citrus dried spherical seeds (coriander) are central to Indian cookery.",
+    "identifying_features": [
+      "Slender, erect hollow branching stems up to 30-60 cm tall",
+      "Dimorphic foliage: broad, fan-lobed lower leaves and finely dissected feathery upper leaves",
+      "Compound umbels of tiny white to pale pinkish asymmetric flowers",
+      "Globose, ribbed, hollow dual-seeded schizocarps turning from green to fragrant straw-brown"
+    ],
+    "habitat": "Sunny vegetable beds, alluvial winter croplands, and kitchen herb pots.",
+    "distribution": "Native to the Mediterranean and southwestern Asia; widely cultivated in Rajasthan, Gujarat, and across India.",
+    "uses": [
+      "Fresh chopped leaves (cilantro / green dhaniya) used as the universal finishing garnish on all Indian curries and dals",
+      "Dry roasted seeds ground into dhaniya powder, a foundational warm spice in garam masala and curry powders",
+      "Ayurvedic cooling water infusion of crushed seeds (Dhaniya jal) taken for soothing digestion and urinary balance TODO(verify)"
+    ],
+    "care_tips": [
+      "Thrives in cool weather and morning sun; rapidly bolts to flower in hot, dry conditions",
+      "Keep soil evenly moist using well-aerated, fertile potting loam",
+      "Sow successive seeds every 3 weeks for an uninterrupted supply of fresh tender leaves"
+    ],
+    "toxicity_note": "Non-toxic and edible; a harmless genetic variation in OR6A2 olfactory receptor genes causes cilantro to taste intensely like soap to about 10-15% of people.",
+    "fun_fact": "Every part of the coriander plant is edible — the tender leafy greens (cilantro), the flowers, the dried seeds (coriander), and even the pungent roots which form the base of Thai curry pastes.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coriander"
+  },
+  {
+    "id": 74,
+    "slug": "spinacia-oleracea",
+    "common_name": "Spinach",
+    "scientific_name": "Spinacia oleracea",
+    "family": "Amaranthaceae",
+    "genus": "Spinacia",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "पालक (Palak)",
+    "names_bengali": "পালং শাক (Palang Shak)",
+    "other_names": ["Common Spinach", "Palak", "Palang Shak", "Spinacia"],
+    "description": "A cool-season leafy annual vegetable forming basal rosettes of succulent, deep-green tender leaves celebrated worldwide for their rich iron, folate, and vitamin content.",
+    "identifying_features": [
+      "Basal rosette of succulent, deep-green, ovate to triangular-hastate leaves with prominent veins",
+      "Leaves can be smooth-flat or deeply crinkled (savoy)",
+      "Dioecious flowering (male and female flowers on separate plants) producing tiny greenish apetalous clusters on upright spikes",
+      "Compact cluster of small hard, spiny or smooth fruits enclosing seeds"
+    ],
+    "habitat": "Cool-season vegetable plots, raised kitchen garden beds, and fertile agricultural loams.",
+    "distribution": "Native to ancient Persia (central and western Asia); universally cultivated across India as a premier winter leafy green.",
+    "uses": [
+      "Blanched and pureed with paneer into the beloved restaurant classic Palak Paneer",
+      "Stir-fried with potatoes in Aloo Palak or simmered into comforting Bengali Palang Shaker Ghonto",
+      "Rich in lutein, zeaxanthin, iron, folate, and Vitamins A, C, and K"
+    ],
+    "care_tips": [
+      "Requires cool temperatures (10-22°C); hot weather immediately triggers bitter flowering stalks (bolting)",
+      "Provide full winter sun and nitrogen-rich, moisture-retentive, well-draining garden soil",
+      "Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window"
+    ],
+    "toxicity_note": "Safe and wholesome; contains high concentrations of natural dietary oxalic acid, which can bind calcium and contribute to kidney stone formation in susceptible individuals TODO(verify).",
+    "fun_fact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spinach"
+  }
+]

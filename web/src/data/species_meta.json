@@ -2,14 +2,14 @@
   "0": {
     "id": 0,
     "slug": "ocimum-tenuiflorum",
-    "commonName": "Tulsi",
+    "commonName": "Tulsi (Holy Basil)",
     "scientificName": "Ocimum tenuiflorum",
     "family": "Lamiaceae",
     "genus": "Ocimum",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "तुलसी",
-    "namesBengali": "তুলসী"
+    "namesHindi": "तुलसी (Tulsi)",
+    "namesBengali": "তুলসী (Tulsi)"
   },
   "1": {
     "id": 1,
@@ -20,8 +20,8 @@
     "genus": "Azadirachta",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "नीम",
-    "namesBengali": "নিম"
+    "namesHindi": "नीम (Neem)",
+    "namesBengali": "নিম (Neem)"
   },
   "2": {
     "id": 2,
@@ -32,8 +32,8 @@
     "genus": "Aloe",
     "plantType": "succulent",
     "origin": "global",
-    "namesHindi": "घृतकुमारी",
-    "namesBengali": "ঘৃতকুমারী"
+    "namesHindi": "घृतकुमारी (Ghritkumari)",
+    "namesBengali": "ঘৃতকুমারী (Ghritkumari)"
   },
   "3": {
     "id": 3,
@@ -44,8 +44,8 @@
     "genus": "Curcuma",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "हल्दी",
-    "namesBengali": "হলুদ"
+    "namesHindi": "हल्दी (Haldi)",
+    "namesBengali": "হলুদ (Holud)"
   },
   "4": {
     "id": 4,
@@ -56,8 +56,8 @@
     "genus": "Zingiber",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "अदरक",
-    "namesBengali": "আদা"
+    "namesHindi": "अदरक (Adrak) / सोंठ (Sonth)",
+    "namesBengali": "আদা (Aada)"
   },
   "5": {
     "id": 5,
@@ -68,8 +68,8 @@
     "genus": "Withania",
     "plantType": "shrub",
     "origin": "indian",
-    "namesHindi": "अश्वगंधा",
-    "namesBengali": "অশ্বগন্ধা"
+    "namesHindi": "अश्वगंधा (Ashwagandha)",
+    "namesBengali": "অশ্বগন্ধা (Ashwagandha)"
   },
   "6": {
     "id": 6,
@@ -80,8 +80,8 @@
     "genus": "Tinospora",
     "plantType": "climber",
     "origin": "indian",
-    "namesHindi": "गिलोय",
-    "namesBengali": "গুলঞ্চ"
+    "namesHindi": "गिलोय (Giloy) / गुड़ूची (Guduchi)",
+    "namesBengali": "গুলঞ্চ (Gulancha)"
   },
   "7": {
     "id": 7,
@@ -92,8 +92,8 @@
     "genus": "Bacopa",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "ब्राह्मी",
-    "namesBengali": "ব্রাহ্মী শাক"
+    "namesHindi": "ब्राह्मी (Brahmi) / जलनीम",
+    "namesBengali": "ব্রাহ্মী শাক (Brahmi Shak)"
   },
   "8": {
     "id": 8,
@@ -104,8 +104,8 @@
     "genus": "Phyllanthus",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "आंवला",
-    "namesBengali": "আমলকী"
+    "namesHindi": "आंवला (Amla)",
+    "namesBengali": "আমলকী (Amloki)"
   },
   "9": {
     "id": 9,
@@ -116,8 +116,8 @@
     "genus": "Murraya",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "कढ़ी पत्ता",
-    "namesBengali": "কারি পাতা"
+    "namesHindi": "कढ़ी पत्ता (Kadi Patta)",
+    "namesBengali": "কারি পাতা (Kari Pata)"
   },
   "10": {
     "id": 10,
@@ -128,8 +128,8 @@
     "genus": "Moringa",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "सहजन",
-    "namesBengali": "সজনে"
+    "namesHindi": "सहजन (Sahjan) / मुनगा",
+    "namesBengali": "সজনে (Sojne)"
   },
   "11": {
     "id": 11,
@@ -140,8 +140,8 @@
     "genus": "Aegle",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "बेल",
-    "namesBengali": "বেল"
+    "namesHindi": "बेल (Bel) / श्रीफल (Bilva)",
+    "namesBengali": "বেল (Bel)"
   },
   "12": {
     "id": 12,
@@ -152,8 +152,8 @@
     "genus": "Terminalia",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "अर्जुन",
-    "namesBengali": "অর্জুন"
+    "namesHindi": "अर्जुन (Arjuna) / कहुआ",
+    "namesBengali": "অর্জুন (Arjun)"
   },
   "13": {
     "id": 13,
@@ -164,8 +164,8 @@
     "genus": "Saraca",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "अशोक",
-    "namesBengali": "অশোক"
+    "namesHindi": "अशोक (Ashok) / सीता अशोक",
+    "namesBengali": "অশোক (Ashok)"
   },
   "14": {
     "id": 14,
@@ -176,8 +176,8 @@
     "genus": "Piper",
     "plantType": "climber",
     "origin": "indian",
-    "namesHindi": "पान",
-    "namesBengali": "পান"
+    "namesHindi": "पान (Paan)",
+    "namesBengali": "পান (Paan)"
   },
   "15": {
     "id": 15,
@@ -188,8 +188,8 @@
     "genus": "Cymbopogon",
     "plantType": "grass",
     "origin": "indian",
-    "namesHindi": "लेमनग्रास",
-    "namesBengali": "লেমনগ্রাস"
+    "namesHindi": "लेमनग्रास (Lemongrass)",
+    "namesBengali": "লেমনগ্রাস (Lemongrass)"
   },
   "16": {
     "id": 16,
@@ -200,8 +200,8 @@
     "genus": "Mentha",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "पुदीना",
-    "namesBengali": "পুদিনা"
+    "namesHindi": "पुदीना (Pudina)",
+    "namesBengali": "পুদিনা (Pudina)"
   },
   "17": {
     "id": 17,
@@ -212,8 +212,8 @@
     "genus": "Ficus",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "पीपल",
-    "namesBengali": "অশ্বত্থ"
+    "namesHindi": "पीपल (Peepal)",
+    "namesBengali": "অশ্বত্থ (Ashwattha)"
   },
   "18": {
     "id": 18,
@@ -224,8 +224,8 @@
     "genus": "Ficus",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "बरगद",
-    "namesBengali": "বট"
+    "namesHindi": "बरगद (Bargad)",
+    "namesBengali": "বট (Bot)"
   },
   "19": {
     "id": 19,
@@ -236,8 +236,8 @@
     "genus": "Andrographis",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "कालमेघ",
-    "namesBengali": "কালমেঘ"
+    "namesHindi": "कालमेघ (Kalmegh)",
+    "namesBengali": "কালমেঘ (Kalmegh)"
   },
   "20": {
     "id": 20,
@@ -248,8 +248,8 @@
     "genus": "Hibiscus",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "गुड़हल",
-    "namesBengali": "জবা"
+    "namesHindi": "गुड़हल (Gudhal)",
+    "namesBengali": "জবা (Jaba)"
   },
   "21": {
     "id": 21,
@@ -260,8 +260,8 @@
     "genus": "Tagetes",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "गेंदा",
-    "namesBengali": "গাঁদা"
+    "namesHindi": "गेंदा (Genda)",
+    "namesBengali": "গাঁদা (Ganda)"
   },
   "22": {
     "id": 22,
@@ -272,8 +272,8 @@
     "genus": "Jasminum",
     "plantType": "shrub",
     "origin": "indian",
-    "namesHindi": "मोगरा",
-    "namesBengali": "বেল ফুল"
+    "namesHindi": "मोगरा (Mogra)",
+    "namesBengali": "বেল ফুল (Beli Phul)"
   },
   "23": {
     "id": 23,
@@ -284,8 +284,8 @@
     "genus": "Nelumbo",
     "plantType": "aquatic",
     "origin": "indian",
-    "namesHindi": "कमल",
-    "namesBengali": "পদ্ম"
+    "namesHindi": "कमल (Kamal)",
+    "namesBengali": "পদ্ম (Padma)"
   },
   "24": {
     "id": 24,
@@ -296,8 +296,8 @@
     "genus": "Rosa",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "गुलाब",
-    "namesBengali": "গোলাপ"
+    "namesHindi": "गुलाब (Gulab)",
+    "namesBengali": "গোলাপ (Golap)"
   },
   "25": {
     "id": 25,
@@ -308,8 +308,8 @@
     "genus": "Plumeria",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "चम्पा",
-    "namesBengali": "কাঠগোলাপ"
+    "namesHindi": "चम्पा (Champa)",
+    "namesBengali": "কাঠগোলাপ (Kathgolap)"
   },
   "26": {
     "id": 26,
@@ -320,8 +320,8 @@
     "genus": "Nerium",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "कनेर",
-    "namesBengali": "করবী"
+    "namesHindi": "कनेर (Kaner)",
+    "namesBengali": "করবী (Karabi)"
   },
   "27": {
     "id": 27,
@@ -332,8 +332,8 @@
     "genus": "Bougainvillea",
     "plantType": "climber",
     "origin": "global",
-    "namesHindi": "बोगनवेलिया",
-    "namesBengali": "বাগানবিলাস"
+    "namesHindi": "बोगनवेलिया (Bougainvillea)",
+    "namesBengali": "বাগানবিলাস (Baganbilash)"
   },
   "28": {
     "id": 28,
@@ -344,8 +344,8 @@
     "genus": "Clitoria",
     "plantType": "climber",
     "origin": "indian",
-    "namesHindi": "अपराजिता",
-    "namesBengali": "অপরাজিতা"
+    "namesHindi": "अपराजिता (Aparajita)",
+    "namesBengali": "অপরাজিতা (Aparajita)"
   },
   "29": {
     "id": 29,
@@ -356,8 +356,8 @@
     "genus": "Nyctanthes",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "पारिजात",
-    "namesBengali": "শিউলি"
+    "namesHindi": "पारिजात (Parijat)",
+    "namesBengali": "শিউলি (Shiuli)"
   },
   "30": {
     "id": 30,
@@ -368,8 +368,8 @@
     "genus": "Delonix",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "गुलमोहर",
-    "namesBengali": "কৃষ্ণচূড়া"
+    "namesHindi": "गुलमोहर (Gulmohar)",
+    "namesBengali": "কৃষ্ণচূড়া (Krishnachura)"
   },
   "31": {
     "id": 31,
@@ -380,8 +380,8 @@
     "genus": "Catharanthus",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "सदाबहार",
-    "namesBengali": "নয়নতারা"
+    "namesHindi": "सदाबहार (Sadabahar)",
+    "namesBengali": "নয়নতারা (Nayantara)"
   },
   "32": {
     "id": 32,
@@ -392,8 +392,8 @@
     "genus": "Ixora",
     "plantType": "shrub",
     "origin": "indian",
-    "namesHindi": "रुक्मिणी",
-    "namesBengali": "রঙ্গন"
+    "namesHindi": "रुक्मिणी (Rukmini)",
+    "namesBengali": "রঙ্গন (Rangan)"
   },
   "33": {
     "id": 33,
@@ -403,9 +403,9 @@
     "family": "Verbenaceae",
     "genus": "Lantana",
     "plantType": "shrub",
-    "origin": "both",
-    "namesHindi": "रायमुनिया",
-    "namesBengali": "লান্টানা"
+    "origin": "global",
+    "namesHindi": "रायमुनिया (Raimuniya)",
+    "namesBengali": "লান্টানা (Lantana)"
   },
   "34": {
     "id": 34,
@@ -416,8 +416,8 @@
     "genus": "Celosia",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "मुर्गा कलगी",
-    "namesBengali": "মোরগঝুঁটি"
+    "namesHindi": "मुर्गा कलगी (Murga Kalgi)",
+    "namesBengali": "মোরগঝুঁটি (Morogjhuti)"
   },
   "35": {
     "id": 35,
@@ -428,8 +428,8 @@
     "genus": "Crossandra",
     "plantType": "shrub",
     "origin": "indian",
-    "namesHindi": "प्रियदर्शी",
-    "namesBengali": "কনকচাঁপা"
+    "namesHindi": "प्रियदर्शी (Priyadarshi)",
+    "namesBengali": "কনকচাঁপা (Kanakchampa)"
   },
   "36": {
     "id": 36,
@@ -440,8 +440,8 @@
     "genus": "Canna",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "सर्वजया",
-    "namesBengali": "সর্বজয়া"
+    "namesHindi": "सर्वजया (Sarvajaya)",
+    "namesBengali": "সর্বজয়া (Sarbojaya)"
   },
   "37": {
     "id": 37,
@@ -452,8 +452,8 @@
     "genus": "Impatiens",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "गुल मेहँदी",
-    "namesBengali": "দোপাট্টি"
+    "namesHindi": "गुल मेहँदी (Gul Mehendi)",
+    "namesBengali": "দোপাট্টি (Dopati)"
   },
   "38": {
     "id": 38,
@@ -464,8 +464,8 @@
     "genus": "Cassia",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "अमलतास",
-    "namesBengali": "সোনালু"
+    "namesHindi": "अमलतास (Amaltas)",
+    "namesBengali": "সোনালু (Sonalu)"
   },
   "39": {
     "id": 39,
@@ -476,8 +476,8 @@
     "genus": "Butea",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "पलाश",
-    "namesBengali": "পলাশ"
+    "namesHindi": "पलाश (Palash)",
+    "namesBengali": "পলাশ (Palash)"
   },
   "40": {
     "id": 40,
@@ -488,8 +488,8 @@
     "genus": "Mangifera",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "आम",
-    "namesBengali": "আম"
+    "namesHindi": "आम (Aam)",
+    "namesBengali": "আম (Aam)"
   },
   "41": {
     "id": 41,
@@ -500,8 +500,8 @@
     "genus": "Cocos",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "नारियल",
-    "namesBengali": "নারকেল"
+    "namesHindi": "नारियल (Nariyal)",
+    "namesBengali": "নারকেল (Narkel)"
   },
   "42": {
     "id": 42,
@@ -512,8 +512,8 @@
     "genus": "Musa",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "केला",
-    "namesBengali": "কলা"
+    "namesHindi": "केला (Kela)",
+    "namesBengali": "কলা (Kola)"
   },
   "43": {
     "id": 43,
@@ -524,8 +524,8 @@
     "genus": "Carica",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "पपीता",
-    "namesBengali": "পেঁপে"
+    "namesHindi": "पपीता (Papita)",
+    "namesBengali": "পেঁপে (Pépe)"
   },
   "44": {
     "id": 44,
@@ -536,8 +536,8 @@
     "genus": "Psidium",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "अमरूद",
-    "namesBengali": "পেয়ারা"
+    "namesHindi": "अमरूद (Amrood)",
+    "namesBengali": "পেয়ারা (Peyara)"
   },
   "45": {
     "id": 45,
@@ -548,8 +548,8 @@
     "genus": "Punica",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "अनार",
-    "namesBengali": "বেদানা"
+    "namesHindi": "अनार (Anaar)",
+    "namesBengali": "বেদানা (Bedana)"
   },
   "46": {
     "id": 46,
@@ -560,8 +560,8 @@
     "genus": "Artocarpus",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "कटहल",
-    "namesBengali": "কাঁঠাল"
+    "namesHindi": "कटहल (Kathal)",
+    "namesBengali": "কাঁঠাল (Kanthal)"
   },
   "47": {
     "id": 47,
@@ -572,8 +572,8 @@
     "genus": "Tamarindus",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "इमली",
-    "namesBengali": "তেঁতুল"
+    "namesHindi": "इमली (Imli)",
+    "namesBengali": "তেঁতুল (Tentul)"
   },
   "48": {
     "id": 48,
@@ -584,8 +584,8 @@
     "genus": "Syzygium",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "जामुन",
-    "namesBengali": "জাম"
+    "namesHindi": "जामुन (Jamun)",
+    "namesBengali": "জাম (Jaam)"
   },
   "49": {
     "id": 49,
@@ -596,8 +596,8 @@
     "genus": "Manilkara",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "चीकू",
-    "namesBengali": "সবেদা"
+    "namesHindi": "चीकू (Chikoo)",
+    "namesBengali": "সবেদা (Sobeda)"
   },
   "50": {
     "id": 50,
@@ -608,8 +608,8 @@
     "genus": "Annona",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "शरीफा",
-    "namesBengali": "আতা"
+    "namesHindi": "शरीफा (Sharifa)",
+    "namesBengali": "আতা (Aata)"
   },
   "51": {
     "id": 51,
@@ -620,8 +620,8 @@
     "genus": "Citrus",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "नींबू",
-    "namesBengali": "লেবু"
+    "namesHindi": "नींबू (Nimbu)",
+    "namesBengali": "লেবু (Lebu)"
   },
   "52": {
     "id": 52,
@@ -632,8 +632,8 @@
     "genus": "Tectona",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "सागौन",
-    "namesBengali": "সেগুন"
+    "namesHindi": "सागौन (Sagwan)",
+    "namesBengali": "সেগুন (Segun)"
   },
   "53": {
     "id": 53,
@@ -644,8 +644,8 @@
     "genus": "Shorea",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "साल",
-    "namesBengali": "শাল"
+    "namesHindi": "साल (Saal)",
+    "namesBengali": "শাল (Shaal)"
   },
   "54": {
     "id": 54,
@@ -656,8 +656,8 @@
     "genus": "Bambusa",
     "plantType": "grass",
     "origin": "indian",
-    "namesHindi": "बांस",
-    "namesBengali": "বাঁশ"
+    "namesHindi": "बांस (Baans)",
+    "namesBengali": "বাঁশ (Baash)"
   },
   "55": {
     "id": 55,
@@ -668,8 +668,8 @@
     "genus": "Areca",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "सुपारी",
-    "namesBengali": "সুপারি"
+    "namesHindi": "सुपारी (Supari)",
+    "namesBengali": "সুপারি (Supari)"
   },
   "56": {
     "id": 56,
@@ -680,8 +680,8 @@
     "genus": "Phoenix",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "खजूर",
-    "namesBengali": "খেজুর"
+    "namesHindi": "खजूर (Khajoor)",
+    "namesBengali": "খেজুর (Khejur)"
   },
   "57": {
     "id": 57,
@@ -692,8 +692,8 @@
     "genus": "Bombax",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "सेमल",
-    "namesBengali": "শিমুল"
+    "namesHindi": "सेमल (Semal)",
+    "namesBengali": "শিমুল (Shimul)"
   },
   "58": {
     "id": 58,
@@ -704,8 +704,8 @@
     "genus": "Samanea",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "विलायती सिरिस",
-    "namesBengali": "রেইনট্রি"
+    "namesHindi": "विलायती सिरिस (Vilayati Siris)",
+    "namesBengali": "রেইনট্রি (Raintree)"
   },
   "59": {
     "id": 59,
@@ -716,8 +716,8 @@
     "genus": "Eucalyptus",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "नीलगिरी",
-    "namesBengali": "ইউক্যালিপটাস"
+    "namesHindi": "नीलगिरी (Nilgiri)",
+    "namesBengali": "ইউক্যালিপটাস (Eucalyptus)"
   },
   "60": {
     "id": 60,
@@ -728,8 +728,8 @@
     "genus": "Oryza",
     "plantType": "grass",
     "origin": "indian",
-    "namesHindi": "धान",
-    "namesBengali": "ধান"
+    "namesHindi": "धान (Dhan)",
+    "namesBengali": "ধান (Dhan)"
   },
   "61": {
     "id": 61,
@@ -740,8 +740,8 @@
     "genus": "Triticum",
     "plantType": "grass",
     "origin": "global",
-    "namesHindi": "गेहूं",
-    "namesBengali": "গম"
+    "namesHindi": "गेहूं (Gehun)",
+    "namesBengali": "গম (Gom)"
   },
   "62": {
     "id": 62,
@@ -752,8 +752,8 @@
     "genus": "Zea",
     "plantType": "grass",
     "origin": "global",
-    "namesHindi": "मक्का",
-    "namesBengali": "ভুট্টা"
+    "namesHindi": "मक्का (Makka)",
+    "namesBengali": "ভুট্টা (Bhutta)"
   },
   "63": {
     "id": 63,
@@ -764,8 +764,8 @@
     "genus": "Saccharum",
     "plantType": "grass",
     "origin": "global",
-    "namesHindi": "गन्ना",
-    "namesBengali": "আখ"
+    "namesHindi": "गन्ना (Ganna)",
+    "namesBengali": "আখ (Aakh)"
   },
   "64": {
     "id": 64,
@@ -776,8 +776,8 @@
     "genus": "Camellia",
     "plantType": "shrub",
     "origin": "indian",
-    "namesHindi": "चाय",
-    "namesBengali": "চা"
+    "namesHindi": "चाय (Chai)",
+    "namesBengali": "চা (Cha)"
   },
   "65": {
     "id": 65,
@@ -788,8 +788,8 @@
     "genus": "Gossypium",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "कपास",
-    "namesBengali": "তুলা"
+    "namesHindi": "कपास (Kapas)",
+    "namesBengali": "তুলা (Tula)"
   },
   "66": {
     "id": 66,
@@ -800,8 +800,8 @@
     "genus": "Brassica",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "सरसों",
-    "namesBengali": "সর্ষে"
+    "namesHindi": "सरसों (Sarson)",
+    "namesBengali": "সর্ষে (Shorshe)"
   },
   "67": {
     "id": 67,
@@ -812,8 +812,8 @@
     "genus": "Solanum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "टमाटर",
-    "namesBengali": "টমেটো"
+    "namesHindi": "टमाटर (Tamatar)",
+    "namesBengali": "টমেটো (Tomato)"
   },
   "68": {
     "id": 68,
@@ -824,8 +824,8 @@
     "genus": "Capsicum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "मिर्च",
-    "namesBengali": "লঙ্কা"
+    "namesHindi": "मिर्च (Mirch)",
+    "namesBengali": "লঙ্কা (Lanka)"
   },
   "69": {
     "id": 69,
@@ -836,8 +836,8 @@
     "genus": "Solanum",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "बैंगन",
-    "namesBengali": "বেগুন"
+    "namesHindi": "बैंगन (Baingan)",
+    "namesBengali": "বেগুন (Begun)"
   },
   "70": {
     "id": 70,
@@ -848,8 +848,8 @@
     "genus": "Abelmoschus",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "भिंडी",
-    "namesBengali": "ঢেঁড়শ"
+    "namesHindi": "भिंडी (Bhindi)",
+    "namesBengali": "ঢেঁড়শ (Dherosh)"
   },
   "71": {
     "id": 71,
@@ -860,8 +860,8 @@
     "genus": "Solanum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "आलू",
-    "namesBengali": "আলু"
+    "namesHindi": "आलू (Aloo)",
+    "namesBengali": "আলু (Aloo)"
   },
   "72": {
     "id": 72,
@@ -872,8 +872,8 @@
     "genus": "Allium",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "प्याज़",
-    "namesBengali": "পেঁয়াজ"
+    "namesHindi": "प्याज़ (Pyaz)",
+    "namesBengali": "পেঁয়াজ (Penyaj)"
   },
   "73": {
     "id": 73,
@@ -884,8 +884,8 @@
     "genus": "Coriandrum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "धनिया",
-    "namesBengali": "ধনে"
+    "namesHindi": "धनिया (Dhaniya)",
+    "namesBengali": "ধনে (Dhone)"
   },
   "74": {
     "id": 74,
@@ -896,8 +896,8 @@
     "genus": "Spinacia",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "पालक",
-    "namesBengali": "পালং শাক"
+    "namesHindi": "पालक (Palak)",
+    "namesBengali": "পালং শাক (Palang Shak)"
   },
   "75": {
     "id": 75,
@@ -908,8 +908,8 @@
     "genus": "Lagenaria",
     "plantType": "climber",
     "origin": "indian",
-    "namesHindi": "लौकी",
-    "namesBengali": "লাউ"
+    "namesHindi": "लौकी (Lauki)",
+    "namesBengali": "লাউ (Lau)"
   },
   "76": {
     "id": 76,
@@ -920,8 +920,8 @@
     "genus": "Cucurbita",
     "plantType": "climber",
     "origin": "global",
-    "namesHindi": "कद्दू",
-    "namesBengali": "কুমড়ো"
+    "namesHindi": "कद्दू (Kaddu)",
+    "namesBengali": "কুমড়ো (Kumro)"
   },
   "77": {
     "id": 77,
@@ -932,8 +932,8 @@
     "genus": "Cucumis",
     "plantType": "climber",
     "origin": "indian",
-    "namesHindi": "खीरा",
-    "namesBengali": "শসা"
+    "namesHindi": "खीरा (Kheera)",
+    "namesBengali": "শসা (Shosha)"
   },
   "78": {
     "id": 78,
@@ -944,8 +944,8 @@
     "genus": "Arachis",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "मूंगफली",
-    "namesBengali": "চিনাবাদাম"
+    "namesHindi": "मूंगफली (Moongphali)",
+    "namesBengali": "চিনাবাদাম (Chinabadam)"
   },
   "79": {
     "id": 79,
@@ -956,8 +956,8 @@
     "genus": "Corchorus",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "पटसन",
-    "namesBengali": "পাট"
+    "namesHindi": "पटसन (Patsan)",
+    "namesBengali": "পাট (Paat)"
   },
   "80": {
     "id": 80,
@@ -968,8 +968,8 @@
     "genus": "Epipremnum",
     "plantType": "climber",
     "origin": "global",
-    "namesHindi": "मनी प्लांट",
-    "namesBengali": "মানি প্ল্যান্ট"
+    "namesHindi": "मनी प्लांट (Money Plant)",
+    "namesBengali": "মানি প্ল্যান্ট (Money Plant)"
   },
   "81": {
     "id": 81,
@@ -980,8 +980,8 @@
     "genus": "Dracaena",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "स्नेक प्लांट",
-    "namesBengali": "স্নেক প্ল্যান্ট"
+    "namesHindi": "स्नेक प्लांट (Snake Plant)",
+    "namesBengali": "স্নেক প্ল্যান্ট (Snake Plant)"
   },
   "82": {
     "id": 82,
@@ -992,8 +992,8 @@
     "genus": "Chlorophytum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "स्पाइडर प्लांट",
-    "namesBengali": "স্পাইডার প্ল্যান্ট"
+    "namesHindi": "स्पाइडर प्लांट (Spider Plant)",
+    "namesBengali": "স্পাইডার প্ল্যান্ট (Spider Plant)"
   },
   "83": {
     "id": 83,
@@ -1004,8 +1004,8 @@
     "genus": "Monstera",
     "plantType": "climber",
     "origin": "global",
-    "namesHindi": "मॉन्स्टेरा",
-    "namesBengali": "মনস্টেরা"
+    "namesHindi": "मॉन्स्टेरा (Monstera)",
+    "namesBengali": "মনস্টেরা (Monstera)"
   },
   "84": {
     "id": 84,
@@ -1016,8 +1016,8 @@
     "genus": "Spathiphyllum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "पीस लिली",
-    "namesBengali": "পিস লিলি"
+    "namesHindi": "पीस लिली (Peace Lily)",
+    "namesBengali": "পিস লিলি (Peace Lily)"
   },
   "85": {
     "id": 85,
@@ -1028,8 +1028,8 @@
     "genus": "Ficus",
     "plantType": "tree",
     "origin": "indian",
-    "namesHindi": "रबर प्लांट",
-    "namesBengali": "রবার গাছ"
+    "namesHindi": "रबर प्लांट (Rubber Plant)",
+    "namesBengali": "রবার গাছ (Rubber Gachh)"
   },
   "86": {
     "id": 86,
@@ -1040,8 +1040,8 @@
     "genus": "Crassula",
     "plantType": "succulent",
     "origin": "global",
-    "namesHindi": "जेड प्लांट",
-    "namesBengali": "জেড প্ল্যান্ট"
+    "namesHindi": "जेड प्लांट (Jade Plant)",
+    "namesBengali": "জেড প্ল্যান্ট (Jade Plant)"
   },
   "87": {
     "id": 87,
@@ -1050,10 +1050,10 @@
     "scientificName": "Opuntia ficus-indica",
     "family": "Cactaceae",
     "genus": "Opuntia",
-    "plantType": "herb",
+    "plantType": "succulent",
     "origin": "global",
-    "namesHindi": "नागफनी",
-    "namesBengali": "নাগফণী"
+    "namesHindi": "नागफनी (Nagphani)",
+    "namesBengali": "নাগফণী (Nagphani)"
   },
   "88": {
     "id": 88,
@@ -1062,10 +1062,10 @@
     "scientificName": "Nephrolepis exaltata",
     "family": "Nephrolepidaceae",
     "genus": "Nephrolepis",
-    "plantType": "herb",
+    "plantType": "epiphyte",
     "origin": "global",
-    "namesHindi": "बोस्टन फर्न",
-    "namesBengali": "বোস্টন ফার্ন"
+    "namesHindi": "बोस्टन फर्न (Boston Fern)",
+    "namesBengali": "বোস্টন ফার্ন (Boston Fern)"
   },
   "89": {
     "id": 89,
@@ -1076,8 +1076,8 @@
     "genus": "Aglaonema",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "एग्लोनिमा",
-    "namesBengali": "অ্যাগ্লোনেমা"
+    "namesHindi": "एग्लोनिमा (Aglaonema)",
+    "namesBengali": "অ্যাগ্লোনেমা (Aglaonema)"
   },
   "90": {
     "id": 90,
@@ -1088,8 +1088,8 @@
     "genus": "Dieffenbachia",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "डम्ब केन",
-    "namesBengali": "ডাম্ব কেন"
+    "namesHindi": "डम्ब केन (Dumb Cane)",
+    "namesBengali": "ডাম্ব কেন (Dumb Cane)"
   },
   "91": {
     "id": 91,
@@ -1100,8 +1100,8 @@
     "genus": "Kalanchoe",
     "plantType": "succulent",
     "origin": "global",
-    "namesHindi": "पत्थरचट्टा",
-    "namesBengali": "পাথরকুচি"
+    "namesHindi": "पत्थरचट्टा (Patharchatta)",
+    "namesBengali": "পাথরকুচি (Patharkuchi)"
   },
   "92": {
     "id": 92,
@@ -1112,8 +1112,8 @@
     "genus": "Helianthus",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "सूरजमुखी",
-    "namesBengali": "সূর্যমুখী"
+    "namesHindi": "सूरजमुखी (Surajmukhi)",
+    "namesBengali": "সূর্যমুখী (Surjomukhi)"
   },
   "93": {
     "id": 93,
@@ -1124,8 +1124,8 @@
     "genus": "Bellis",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "डेज़ी",
-    "namesBengali": "ডেইজি"
+    "namesHindi": "डेज़ी (Daisy)",
+    "namesBengali": "ডেইজি (Daisy)"
   },
   "94": {
     "id": 94,
@@ -1136,8 +1136,8 @@
     "genus": "Taraxacum",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "सिंहपर्णी",
-    "namesBengali": "সিংহপর্ণী"
+    "namesHindi": "सिंहपर्णी (Sinhaparni)",
+    "namesBengali": "সিংহপর্ণী (Singhaparni)"
   },
   "95": {
     "id": 95,
@@ -1148,8 +1148,8 @@
     "genus": "Lavandula",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "लैवेंडर",
-    "namesBengali": "ল্যাভেন্ডার"
+    "namesHindi": "लैवेंडर (Lavender)",
+    "namesBengali": "ল্যাভেন্ডার (Lavender)"
   },
   "96": {
     "id": 96,
@@ -1160,8 +1160,8 @@
     "genus": "Salvia",
     "plantType": "shrub",
     "origin": "global",
-    "namesHindi": "रोज़मेरी",
-    "namesBengali": "রোজমেরি"
+    "namesHindi": "रोज़मेरी (Rosemary)",
+    "namesBengali": "রোজমেরি (Rosemary)"
   },
   "97": {
     "id": 97,
@@ -1172,8 +1172,8 @@
     "genus": "Ocimum",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "मीठी तुलसी",
-    "namesBengali": "মিষ্টি তুলসী"
+    "namesHindi": "मीठी तुलसी (Meethi Tulsi)",
+    "namesBengali": "মিষ্টি তুলসী (Mishti Tulsi)"
   },
   "98": {
     "id": 98,
@@ -1184,8 +1184,8 @@
     "genus": "Tulipa",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "ट्यूलिप",
-    "namesBengali": "টিউলিপ"
+    "namesHindi": "ट्यूलिप (Tulip)",
+    "namesBengali": "টিউলিপ (Tulip)"
   },
   "99": {
     "id": 99,
@@ -1196,8 +1196,8 @@
     "genus": "Narcissus",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "डैफोडिल",
-    "namesBengali": "ড্যাফোডিল"
+    "namesHindi": "डैफोडिल (Daffodil)",
+    "namesBengali": "ড্যাফোডিল (Daffodil)"
   },
   "100": {
     "id": 100,
@@ -1208,8 +1208,8 @@
     "genus": "Lilium",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "टाइगर लिली",
-    "namesBengali": "টাইগার লিলি"
+    "namesHindi": "टाइगर लिली (Tiger Lily)",
+    "namesBengali": "টাইগার লিলি (Tiger Lily)"
   },
   "101": {
     "id": 101,
@@ -1220,8 +1220,8 @@
     "genus": "Dahlia",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "डहलिया",
-    "namesBengali": "ডালিয়া"
+    "namesHindi": "डहलिया (Dahlia)",
+    "namesBengali": "ডালিয়া (Dahlia)"
   },
   "102": {
     "id": 102,
@@ -1232,8 +1232,8 @@
     "genus": "Zinnia",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "जीनिया",
-    "namesBengali": "জিনিয়া"
+    "namesHindi": "जीनिया (Zinnia)",
+    "namesBengali": "জিনিয়া (Zinnia)"
   },
   "103": {
     "id": 103,
@@ -1244,8 +1244,8 @@
     "genus": "Cosmos",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "कॉस्मॉस",
-    "namesBengali": "কসমস"
+    "namesHindi": "कॉस्मॉस (Cosmos)",
+    "namesBengali": "কসমস (Cosmos)"
   },
   "104": {
     "id": 104,
@@ -1256,8 +1256,8 @@
     "genus": "Chrysanthemum",
     "plantType": "herb",
     "origin": "indian",
-    "namesHindi": "गुलदाउदी",
-    "namesBengali": "চন্দ্রমল্লিকা"
+    "namesHindi": "गुलदाउदी (Guldaudi)",
+    "namesBengali": "চন্দ্রমল্লিকা (Chandromallika)"
   },
   "105": {
     "id": 105,
@@ -1268,8 +1268,8 @@
     "genus": "Gerbera",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "जरबेरा",
-    "namesBengali": "জার্বেরা"
+    "namesHindi": "जरबेरा (Gerbera)",
+    "namesBengali": "জার্বেরা (Gerbera)"
   },
   "106": {
     "id": 106,
@@ -1278,10 +1278,10 @@
     "scientificName": "Rhynchostylis retusa",
     "family": "Orchidaceae",
     "genus": "Rhynchostylis",
-    "plantType": "herb",
+    "plantType": "epiphyte",
     "origin": "indian",
-    "namesHindi": "कपोत फूल",
-    "namesBengali": "কপোত ফুল"
+    "namesHindi": "कपोत फूल (Kapot Phool)",
+    "namesBengali": "কপোত ফুল (Kapot Phool)"
   },
   "107": {
     "id": 107,
@@ -1291,9 +1291,9 @@
     "family": "Pontederiaceae",
     "genus": "Pontederia",
     "plantType": "aquatic",
-    "origin": "both",
-    "namesHindi": "जलकुंभी",
-    "namesBengali": "কচুরিপানা"
+    "origin": "global",
+    "namesHindi": "जलकुंभी (Jalkumbhi)",
+    "namesBengali": "কচুরিপানা (Kochuripana)"
   },
   "108": {
     "id": 108,
@@ -1304,8 +1304,8 @@
     "genus": "Mimosa",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "छुईमुई",
-    "namesBengali": "লজ্জাবতী"
+    "namesHindi": "छुईमुई (Chhui Mui)",
+    "namesBengali": "লজ্জাবতী (Lajjabati)"
   },
   "109": {
     "id": 109,
@@ -1315,9 +1315,9 @@
     "family": "Asteraceae",
     "genus": "Parthenium",
     "plantType": "herb",
-    "origin": "both",
-    "namesHindi": "गाजर घास",
-    "namesBengali": "গাজর ঘাস"
+    "origin": "global",
+    "namesHindi": "गाजर घास (Gajar Ghas)",
+    "namesBengali": "গাজর ঘাস (Gajor Ghas)"
   },
   "110": {
     "id": 110,
@@ -1328,8 +1328,8 @@
     "genus": "Trifolium",
     "plantType": "herb",
     "origin": "global",
-    "namesHindi": "तिपतिया घास",
-    "namesBengali": "তিপাত্তা ঘাস"
+    "namesHindi": "तिपतिया घास (Tipatiya Ghas)",
+    "namesBengali": "তিপাত্তা ঘাস (Tipatta Ghas)"
   },
   "111": {
     "id": 111,
@@ -1340,7 +1340,7 @@
     "genus": "Quercus",
     "plantType": "tree",
     "origin": "global",
-    "namesHindi": "बलूत",
-    "namesBengali": "ওক গাছ"
+    "namesHindi": "बलूत (Baloot)",
+    "namesBengali": "ওক গাছ (Oak Gachh)"
   }
 }

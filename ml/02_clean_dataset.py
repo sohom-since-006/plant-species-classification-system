@@ -718,10 +718,13 @@ def build_dashboard_stats(
             origin_counter[origin] += 1
 
     indian_vs_global = [
-        {"name": "Native (Indian)", "value": origin_counter.get("Native", 0)},
+        {
+            "name": "Native (Indian)",
+            "value": origin_counter.get("Native", 0) + origin_counter.get("indian", 0),
+        },
         {
             "name": "Introduced (Global)",
-            "value": origin_counter.get("Introduced", 0),
+            "value": origin_counter.get("Introduced", 0) + origin_counter.get("global", 0),
         },
         {"name": "Invasive", "value": origin_counter.get("Invasive", 0)},
     ]

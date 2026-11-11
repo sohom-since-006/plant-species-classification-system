@@ -1,0 +1,565 @@
+[
+  {
+    "id": 30,
+    "slug": "delonix-regia",
+    "common_name": "Gulmohar",
+    "scientific_name": "Delonix regia",
+    "family": "Fabaceae",
+    "genus": "Delonix",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "गुलमोहर (Gulmohar)",
+    "names_bengali": "কৃষ্ণচূড়া (Krishnachura)",
+    "other_names": ["Flamboyant", "Flame of the Forest", "Royal Poinciana", "Krishnachura"],
+    "description": "A magnificent umbrella-canopied tropical tree celebrated for its dramatic explosion of scarlet-orange blossoms that envelop the entire crown in late spring and summer.",
+    "identifying_features": [
+      "Broad, spreading umbrella-shaped flat-topped canopy providing generous dappled shade",
+      "Fine, feathery bipinnate mimosa-like ferny leaves that fold at dusk",
+      "Large scarlet or orange-red flowers with 5 petals, one of which is larger and splashed with white and yellow",
+      "Long, woody, strap-shaped flat brown seed pods up to 60 cm long hanging after flowering"
+    ],
+    "habitat": "Avenue tree, urban parks, open residential avenues, and dry tropical lowland landscapes.",
+    "distribution": "Native to the dry deciduous forests of Madagascar; widely cultivated across India and worldwide tropics.",
+    "uses": [
+      "Premier ornamental shade and avenue tree across Indian cities and universities",
+      "Flowers used in educational botany demonstrations and seasonal cultural decor",
+      "Hard dried seed pods historically used as children's rattles and festive noisemakers"
+    ],
+    "care_tips": [
+      "Plant in wide open spaces with plenty of clearance from buildings, as root system is shallow and wide-spreading",
+      "Requires full scorching sun; flowers poorly in shade",
+      "Extremely drought tolerant once established, but susceptible to brittle limb breakage in gale winds"
+    ],
+    "toxicity_note": "Seeds and bark contain mild saponins and tannins; generally non-toxic to humans in casual exposure, but unverified for ingestion TODO(verify).",
+    "fun_fact": "Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Delonix_regia"
+  },
+  {
+    "id": 31,
+    "slug": "catharanthus-roseus",
+    "common_name": "Periwinkle",
+    "scientific_name": "Catharanthus roseus",
+    "family": "Apocynaceae",
+    "genus": "Catharanthus",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "सदाबहार (Sadabahar)",
+    "names_bengali": "নয়নতারা (Nayantara)",
+    "other_names": ["Madagascar Periwinkle", "Sadabahar", "Nayantara", "Vinca Rosea", "Old Maid"],
+    "description": "A hardy, ever-blooming herbaceous perennial with glossy oval leaves and 5-lobed salverform flowers in vibrant pink, rose, or pure white. Contains powerful pharmaceutical alkaloids.",
+    "identifying_features": [
+      "Glossy dark green, oval-to-oblong opposite leaves with a pale central midrib and milky sap",
+      "Flat five-lobed salverform flowers with a tiny contrasting darker red or yellow eye",
+      "Cylindrical paired follicular fruits holding small ribbed black seeds"
+    ],
+    "habitat": "Waste ground, sandy coastal dunes, rural boundaries, and sunny courtyard pots.",
+    "distribution": "Native to Madagascar; universally naturalized across India and pantropical zones.",
+    "uses": [
+      "Commercial source of critical chemotherapy alkaloids vinblastine and vincristine used for leukemia and lymphoma",
+      "Traditional folk remedy where leaf infusions are taken for blood sugar regulation in diabetes TODO(verify)",
+      "Continuous-blooming ornamental groundcover and patio pot plant"
+    ],
+    "care_tips": [
+      "Thrives in full sun and thrives in poor, sandy, gritty soils",
+      "Never overwater; highly vulnerable to phytophthora root rot in waterlogged pots",
+      "Pinch young shoots to prevent leggy growth"
+    ],
+    "toxicity_note": "TOXIC: Contains over 70 potent cytotoxic vinca alkaloids. Ingestion can cause severe abdominal cramping, low blood pressure, neuromuscular impairment, and organ toxicity in humans and pets.",
+    "fun_fact": "Sadabahar literally means 'evergreen' or 'always in bloom' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Catharanthus_roseus"
+  },
+  {
+    "id": 32,
+    "slug": "ixora-coccinea",
+    "common_name": "Ixora",
+    "scientific_name": "Ixora coccinea",
+    "family": "Rubiaceae",
+    "genus": "Ixora",
+    "plant_type": "shrub",
+    "origin": "indian",
+    "names_hindi": "रुक्मिणी (Rukmini)",
+    "names_bengali": "রঙ্গন (Rangan)",
+    "other_names": ["Jungle Geranium", "Flame of the Woods", "Rangan", "Rukmini", "Rugmini"],
+    "description": "A dense, multi-stemmed evergreen tropical shrub celebrated for its spherical, long-lasting clusters of fiery scarlet-red, orange, or pink tubular star-tipped flowers.",
+    "identifying_features": [
+      "Opposite, leathery, dark green glossy oblong-lanceolate leaves with smooth margins",
+      "Dense rounded terminal corymbose inflorescences composed of dozens of 4-petaled tubular flowers",
+      "Small globose reddish-black drupe-like berries following pollination"
+    ],
+    "habitat": "Tropical scrub, coastal evergreen forests, sacred temple grounds, and landscaped garden hedges.",
+    "distribution": "Native to South India and Sri Lanka; widely cultivated throughout tropical Asia and the Caribbean.",
+    "uses": [
+      "Sacred flower offered in Hindu temple pujas, especially in Kerala and Bengal",
+      "Traditional Ayurvedic root and flower decoctions used for dysentery, ulcers, and skin eruptions TODO(verify)",
+      "Hardy, shearable formal hedge and border landscape shrub"
+    ],
+    "care_tips": [
+      "Requires acidic soil (pH 5.0 to 5.5) enriched with organic compost; alkaline soil causes iron chlorosis",
+      "Provide full sun to bright partial shade and maintain steady soil moisture",
+      "Prune after heavy bloom cycles to keep shrub bushy and compact"
+    ],
+    "toxicity_note": "Non-toxic to humans; generally safe around domestic pets.",
+    "fun_fact": "In Kerala, Ixora coccinea (known as Thechi) is a mandatory floral offering for Lord Ganesha and temple rituals.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ixora_coccinea"
+  },
+  {
+    "id": 33,
+    "slug": "lantana-camara",
+    "common_name": "Lantana",
+    "scientific_name": "Lantana camara",
+    "family": "Verbenaceae",
+    "genus": "Lantana",
+    "plant_type": "shrub",
+    "origin": "global",
+    "names_hindi": "रायमुनिया (Raimuniya)",
+    "names_bengali": "লান্টানা (Lantana)",
+    "other_names": ["Wild Sage", "Tickberry", "Raimuniya", "Ghaneri", "Red Sage"],
+    "description": "A rugged, invasive scrambling evergreen shrub with prickly four-angled stems, rough pungent leaves, and multicolor flat-topped flower clusters. TOXIC TO LIVESTOCK AND HUMANS.",
+    "identifying_features": [
+      "Square-angled woody stems often armed with small, downward-pointing prickles",
+      "Rough, coarse, sandpaper-textured ovate leaves with a pungent, musky medicinal odor when bruised",
+      "Multicolor umbrella-shaped flower umbels containing yellow, orange, pink, and scarlet florets on the same head",
+      "Fleshy, globose green berries turning glossy metallic purplish-black when ripe"
+    ],
+    "habitat": "Degraded pastures, forest fringes, railway embankments, wastelands, and roadside thickets.",
+    "distribution": "Native to tropical Americas; aggressively invasive noxious weed across India and global subtropics.",
+    "uses": [
+      "Nectar source attracting diverse butterflies, bees, and hummingbirds in butterfly gardens",
+      "Dense root system prevents roadside embankment soil erosion",
+      "Stems sometimes harvested by tribal artisans for making termite-resistant wicker furniture"
+    ],
+    "care_tips": [
+      "Generally discouraged from cultivation due to severe invasive ecological threats",
+      "Extremely drought, heat, and poor-soil tolerant",
+      "Potted sterile ornamental cultivars should be deadheaded to prevent berry dispersal by birds"
+    ],
+    "toxicity_note": "HIGHLY TOXIC: Green unripe berries and foliage contain triterpenoid toxins (lantadene A and B). Ingestion by children causes vomiting, lethargy, dilated pupils, and respiratory depression. Highly hepatotoxic to cattle and sheep, causing irreversible liver failure and fatal photosensitization.",
+    "fun_fact": "Lantana camara has invaded over 13 million hectares of Indian forest lands, suppressing native regeneration and earning a spot among the world's 100 worst invasive alien species.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lantana_camara"
+  },
+  {
+    "id": 34,
+    "slug": "celosia-argentea",
+    "common_name": "Cockscomb",
+    "scientific_name": "Celosia argentea",
+    "family": "Amaranthaceae",
+    "genus": "Celosia",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "मुर्गा कलगी (Murga Kalgi)",
+    "names_bengali": "মোরগঝুঁটি (Morogjhuti)",
+    "other_names": ["Silver Cockscomb", "Plumed Celosia", "Morogjhuti", "Woolflower", "Quail Grass"],
+    "description": "A striking herbaceous annual producing undulating, velvety crested flower heads resembling the comb of a rooster, or upright feathery flaming plumes in dazzling crimson, scarlet, and gold.",
+    "identifying_features": [
+      "Distinctive fasciated, undulating, velvety crested or plumed flower heads in vivid magenta, red, or yellow",
+      "Alternate, lanceolate-to-ovate green leaves frequently flushed or veined with deep purple-red pigment",
+      "Tiny, glossy black lenticular seeds retained inside chaffy persistent sepals"
+    ],
+    "habitat": "Dry tropical plains, agricultural fields, waste lands, and domestic ornamental flower beds.",
+    "distribution": "Native to tropical India and Africa; cultivated globally as a festive ornamental and traditional leaf vegetable.",
+    "uses": [
+      "Vibrant autumn ornamental garden display and long-lasting dried floral arrangements",
+      "Young tender shoots and leaves consumed as a nutritious potherb (Lagos spinach) in traditional cooking",
+      "Traditional Indian and Chinese medicine using seeds (Semen Celosiae) for eye inflammation and dysentery TODO(verify)"
+    ],
+    "care_tips": [
+      "Position in full intense sunlight; shade causes plumed heads to become pale and moldy",
+      "Plant in rich, well-aerated soil with dependable drainage; avoid excess nitrogen which favors foliage over crests",
+      "Water at soil line; dampness on dense floral crests promotes fungal botrytis rot"
+    ],
+    "toxicity_note": "Non-toxic; leaves and young stems are edible greens; completely safe around household pets.",
+    "fun_fact": "The crested form of Cockscomb is a stabilized genetic anomaly called fasciation, which fuses and fans out the floral stem into a rooster-like crest.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Celosia_argentea"
+  },
+  {
+    "id": 35,
+    "slug": "crossandra-infundibuliformis",
+    "common_name": "Crossandra",
+    "scientific_name": "Crossandra infundibuliformis",
+    "family": "Acanthaceae",
+    "genus": "Crossandra",
+    "plant_type": "shrub",
+    "origin": "indian",
+    "names_hindi": "प्रियदर्शी (Priyadarshi)",
+    "names_bengali": "কনকচাঁপা (Kanakchampa)",
+    "other_names": ["Firecracker Flower", "Kanakambaram", "Aboli", "Priyadarshi"],
+    "description": "A compact tropical evergreen subshrub cherished across South India for its glossy deep-green foliage and asymmetric, fan-like salmon-orange or apricot flowers.",
+    "identifying_features": [
+      "Glossy, dark green, wavy-margined ovate opposite leaves with pointed tips",
+      "Four-sided square spikes bearing unusual asymmetric, fan-shaped flowers with 3 to 5 overlapping petals",
+      "Characteristic warm salmon-apricot to bright orange flower coloration",
+      "Explosive seed capsule dehiscence upon contact with water, giving it the name Firecracker Flower"
+    ],
+    "habitat": "Understory of tropical deciduous forests, home gardens, and commercial floral farm plots.",
+    "distribution": "Native to South India and Sri Lanka; intensely cultivated in Tamil Nadu, Karnataka, and Andhra Pradesh.",
+    "uses": [
+      "Iconic South Indian garland flower (Kanakambaram) strung with Jasmine to create fragrant, contrasting orange-and-white gajras",
+      "Sacred hair adornment for festive and wedding wear across South India",
+      "Durable, heat-tolerant potted terrace ornamental"
+    ],
+    "care_tips": [
+      "Thrives in warm, humid conditions with bright indirect light or dappled morning sunshine",
+      "Keep soil evenly moist using peat-rich, well-draining potting mixture",
+      "Protect from chilly winter drafts and temperatures below 12°C"
+    ],
+    "toxicity_note": "Non-toxic to humans and animals; completely safe for wearing in hair and near pets.",
+    "fun_fact": "When Crossandra's ripe seed pods encounter water or high humidity, they burst open with an audible pop and fling seeds away, earning the moniker 'Firecracker flower'.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crossandra_infundibuliformis"
+  },
+  {
+    "id": 36,
+    "slug": "canna-indica",
+    "common_name": "Canna",
+    "scientific_name": "Canna indica",
+    "family": "Cannaceae",
+    "genus": "Canna",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "सर्वजया (Sarvajaya)",
+    "names_bengali": "সর্বজয়া (Sarbojaya)",
+    "other_names": ["Indian Shot", "Canna Lily", "Sarvajaya", "Achira", "Arrowroot"],
+    "description": "A lush, fast-growing rhizomatous tropical perennial with bold paddle-like banana-esque foliage and tall spikes of asymmetric scarlet, orange, or yellow flowers.",
+    "identifying_features": [
+      "Thick, upright clumping pseudostems emerging from vigorous underground starchy rhizomes",
+      "Broad, large paddle-shaped oval leaves in lush green, bronze, or purple tones",
+      "Spikes of asymmetric showy red-to-yellow blossoms with petaloid sterile stamens (staminodes)",
+      "Rough, warty globose green capsules enclosing extraordinarily hard, spherical black seeds"
+    ],
+    "habitat": "Wetland borders, roadside ditches, municipal lake banks, and urban garden borders.",
+    "distribution": "Native to the tropical and subtropical Americas; extensively naturalized across India and the tropics worldwide.",
+    "uses": [
+      "Vigorous architectural tropical screening and wetland landscape beautification",
+      "Hard, dense round seeds historically utilized as shotgun pellets ('Indian Shot') and prayer rosary beads",
+      "Underground rhizomes yield easily digestible culinary arrowroot starch (achira) in traditional farming TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires abundant moisture; thrives even in boggy soil or pond margins",
+      "Plant in full blazing sun to maintain intense foliage coloration and prolific blooming",
+      "Cut down dead flowering stalks to the base to encourage fresh suckering stems"
+    ],
+    "toxicity_note": "Non-toxic; rhizomes are traditionally cooked and eaten in South America; safe around pets and children.",
+    "fun_fact": "Canna seeds are so exceptionally hard and dense that during the 1857 Indian rebellion, soldiers reportedly used them in place of lead shot when musket balls ran out.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Canna_indica"
+  },
+  {
+    "id": 37,
+    "slug": "impatiens-balsamina",
+    "common_name": "Balsam",
+    "scientific_name": "Impatiens balsamina",
+    "family": "Balsaminaceae",
+    "genus": "Impatiens",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "गुल मेहँदी (Gul Mehendi)",
+    "names_bengali": "দোপাট্টি (Dopati)",
+    "other_names": ["Garden Balsam", "Rose Balsam", "Touch-Me-Not", "Gul Mehendi", "Dopati"],
+    "description": "A juicy, succulent-stemmed annual herb bearing solitary or clustered cup-shaped flowers with curved nectar spurs nestled among serrated leaves, famed for its explosive seed pods.",
+    "identifying_features": [
+      "Erect, thick, translucent fleshy succulent stems with spirally arranged lanceolate serrate leaves",
+      "Cup-shaped spur-bearing flowers in leaf axils occurring in pink, crimson, lilac, salmon, or white",
+      "Swollen hairy spindle-shaped green seed capsules that burst open violently at the slightest touch (ballochory)"
+    ],
+    "habitat": "Monsoon-fed forest floors, hill station roadsides, stream banks, and cottage gardens.",
+    "distribution": "Native to India, Sri Lanka, and Southeast Asia; widely cultivated as a monsoon garden favorite.",
+    "uses": [
+      "Traditional natural dye: crushed petals applied as a substitute for Henna (Mehendi) to stain fingernails red",
+      "Ayurvedic and folk poultices applied to burns, scalds, and insect stings for immediate cooling relief TODO(verify)",
+      "High-nectar floral bed attracting native bumblebees and butterflies during the rainy season"
+    ],
+    "care_tips": [
+      "Prefers morning sun with partial afternoon shade; wilts readily under harsh midday heat",
+      "Keep soil moist and humus-rich; never allow roots to dry out completely",
+      "Sow fresh seeds at the onset of monsoon rains for dazzling monsoon flushes"
+    ],
+    "toxicity_note": "Non-toxic to humans in external use; contains mild calcium oxalates which can cause mild gastric discomfort if consumed raw in large quantities TODO(verify).",
+    "fun_fact": "The genus name 'Impatiens' (meaning impatient) refers to the explosive seed pods that violently shoot their seeds into the air the instant they are touched.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Impatiens_balsamina"
+  },
+  {
+    "id": 38,
+    "slug": "cassia-fistula",
+    "common_name": "Amaltas",
+    "scientific_name": "Cassia fistula",
+    "family": "Fabaceae",
+    "genus": "Cassia",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "अमलतास (Amaltas)",
+    "names_bengali": "সোনালু (Sonalu)",
+    "other_names": ["Golden Shower Tree", "Indian Laburnum", "Amaltas", "Sonalu", "Bandarlathi"],
+    "description": "A breathtaking deciduous tree famed for its pendulous hanging racemes of luminous golden-yellow flowers that drape the leafless canopy in early summer.",
+    "identifying_features": [
+      "Long pendulous hanging racemes (up to 40-60 cm long) packed with luminous butter-yellow flowers",
+      "Pinnate compound leaves with 4-8 pairs of large ovate-elliptic leaflets",
+      "Remarkable long, cylindrical, woody, dark brown to black pendulous pods hanging like pipe conduits (30-60 cm)"
+    ],
+    "habitat": "Dry deciduous forests, village boundaries, railway tracts, and city avenue borders.",
+    "distribution": "Native to the Indian subcontinent and Southeast Asia; state flower of Kerala (Kanikkonna).",
+    "uses": [
+      "Auspicious floral offering central to the Kerala Vishu festival (Kani Konna)",
+      "The dark, sweetish black pulp inside the cylindrical pod is a renowned Ayurvedic safe laxative (Aragvadha) TODO(verify)",
+      "Premier ornamental urban flowering avenue tree across India"
+    ],
+    "care_tips": [
+      "Plant in open sunny ground with well-drained loam or gravelly soil",
+      "Extremely hardy and drought-resistant once deep taproots are established",
+      "Requires minimal pruning; protect young saplings from livestock grazing"
+    ],
+    "toxicity_note": "Pods and seeds have potent anthraquinone purgative properties; overconsumption can cause severe diarrhea and intestinal cramps TODO(verify). Safe as an ornamental tree.",
+    "fun_fact": "Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cassia_fistula"
+  },
+  {
+    "id": 39,
+    "slug": "butea-monosperma",
+    "common_name": "Palash",
+    "scientific_name": "Butea monosperma",
+    "family": "Fabaceae",
+    "genus": "Butea",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "पलाश (Palash)",
+    "names_bengali": "পলাশ (Palash)",
+    "other_names": ["Flame of the Forest", "Bastard Teak", "Dhak", "Teshu", "Kinkirata"],
+    "description": "A slow-growing deciduous dry-forest tree famous for its crooked trunk, trifoliate leathery leaves, and stunning burst of fiery bright vermilion-orange keel-shaped flowers in spring.",
+    "identifying_features": [
+      "Crooked, gnarled trunk and irregular spreading branches with fibrous rough grey bark",
+      "Large, trifoliate leathery leaves with broad rhomboid or obovate leaflets",
+      "Massive terminal clusters of velvety, bright flame-orange parrot-beak keel blossoms appearing when tree is leafless",
+      "Flat, silky-pubescent legume pods bearing a single large compressed seed at the apex"
+    ],
+    "habitat": "Dry deciduous woodlands, saline plains, scrub forests, and agricultural field margins.",
+    "distribution": "Native to the Indian subcontinent and Southeast Asia; state flower of Uttar Pradesh and Jharkhand.",
+    "uses": [
+      "Dry flowers boiled to produce the sacred, skin-friendly traditional saffron-orange herbal Holi dye (Teshu)",
+      "Stiff leathery leaves stitched together with bamboo splints into traditional disposable dining plates (pattals)",
+      "Ayurvedic gum (Kamarkas) and bark decoctions used as potent astringents and tonics TODO(verify)"
+    ],
+    "care_tips": [
+      "Suited for hot, dry continental climates and withstands alkaline, sodic, and waterlogged soils",
+      "Requires full blazing sunshine throughout the year",
+      "Slow-growing initially while it establishes a deep drought-resistant taproot"
+    ],
+    "toxicity_note": "Seeds contain butin and proteolytic enzymes that are toxic in raw ingestion and exhibit anthelmintic toxicity if consumed unpurified TODO(verify). Flowers are safe and edible.",
+    "fun_fact": "The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Butea_monosperma"
+  },
+  {
+    "id": 40,
+    "slug": "mangifera-indica",
+    "common_name": "Mango",
+    "scientific_name": "Mangifera indica",
+    "family": "Anacardiaceae",
+    "genus": "Mangifera",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "आम (Aam)",
+    "names_bengali": "আম (Aam)",
+    "other_names": ["King of Fruits", "Aam", "Amra", "Indian Mango"],
+    "description": "The National Fruit of India, a grand evergreen canopy tree bearing deep green lanceolate foliage, fragrant branched floral panicles, and sweet, juicy tropical drupes.",
+    "identifying_features": [
+      "Large, dense, dome-shaped evergreen canopy casting deep cool shade",
+      "Alternate, oblong-lanceolate leathery leaves that emerge copper-bronze and mature to glossy dark green",
+      "Massive branched terminal panicles bearing thousands of minute pale pinkish-yellow flowers",
+      "Variable large fleshy drupes with a thick skin, aromatic fibrous-to-buttery pulp, and a woody central stone"
+    ],
+    "habitat": "Tropical lowland plains, alluvial river valleys, agricultural orchards, and village homesteads.",
+    "distribution": "Native to the Indian subcontinent and Myanmar; cultivated globally across all tropical and subtropical continents.",
+    "uses": [
+      "World-renowned premier dessert fruit eaten fresh, blended into mango lassi, or processed into pickles and aam papad",
+      "Leaves strung into auspicious torans over house doorways during Hindu festivals, weddings, and pujas",
+      "Unripe green mangoes (kairi) boiled into Aam Panna, a traditional summer heatstroke-remedy beverage"
+    ],
+    "care_tips": [
+      "Requires full sun and deep, well-draining alluvial loam soils",
+      "Withhold heavy irrigation prior to flowering to stimulate flower panicle emergence",
+      "Protect young graft trees from frost and waterlogging"
+    ],
+    "toxicity_note": "Mango tree sap, peel, and floral pollen contain urushiol-related alkylresorcinols, which can cause severe contact dermatitis ('mango mouth') in people sensitive to poison ivy TODO(verify). Fruit flesh is safe.",
+    "fun_fact": "India produces over 40% of the world's total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mangifera_indica"
+  },
+  {
+    "id": 41,
+    "slug": "cocos-nucifera",
+    "common_name": "Coconut",
+    "scientific_name": "Cocos nucifera",
+    "family": "Arecaceae",
+    "genus": "Cocos",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "नारियल (Nariyal)",
+    "names_bengali": "নারকেল (Narkel)",
+    "other_names": ["Kalpavriksha", "Nariyal", "Coconut Palm", "Narkel"],
+    "description": "Revered as 'Kalpavriksha' (the divine wish-fulfilling tree), a magnificent solitary palm with a slender curving trunk, majestic crown of feathery fronds, and versatile fibrous nuts.",
+    "identifying_features": [
+      "Slender, light grey trunk up to 30 m tall, often gently leaning or curved with ring-like leaf scars",
+      "Terminal crown of massive arching pinnate fronds up to 4-6 meters long",
+      "Large clusters of ovoid fibrous drupes (coconuts) hanging under the crown, containing water and sweet endosperm"
+    ],
+    "habitat": "Coastal sands, tropical alluvial plains, river deltas, and humid coastal plantations.",
+    "distribution": "Native to tropical coastal regions of the Indo-Pacific; thrives across coastal and interior southern India.",
+    "uses": [
+      "Essential sacred offering (shrifal) broken at the start of all Hindu auspicious ventures and temple ceremonies",
+      "Nut provides nutritious refreshing water, cooking oil, grated kernel for curries, and coconut milk",
+      "Coir fiber used for ropes and doormats; trunk timber for building; fronds for thatched roofing"
+    ],
+    "care_tips": [
+      "Requires intense sunlight, high relative humidity, and warm tropical temperatures",
+      "Prefers deep, sandy or saline well-drained soils; highly salt-tolerant",
+      "Apply high-potassium and boron fertilizer blends regularly to maintain nut yield"
+    ],
+    "toxicity_note": "Completely non-toxic; all parts of the nut, water, and oil are safe and nutritious for humans and animals.",
+    "fun_fact": "Every single part of the coconut tree is utilized for food, shelter, fuel, or medicine, leading Sanskrit scriptures to name it Kalpavriksha ('the tree that provides all the necessities of life').",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coconut"
+  },
+  {
+    "id": 42,
+    "slug": "musa-acuminata",
+    "common_name": "Banana",
+    "scientific_name": "Musa acuminata",
+    "family": "Musaceae",
+    "genus": "Musa",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "केला (Kela)",
+    "names_bengali": "কলা (Kola)",
+    "other_names": ["Wild Banana", "Kela", "Plantain", "Kadali", "Kola"],
+    "description": "A giant, fast-growing herbaceous perennial with an overlapping pseudostem, enormous paddle-shaped emerald leaves, and pendulous flower inflorescences bearing clusters of sweet fruit.",
+    "identifying_features": [
+      "Massive pseudostem formed of tightly rolled leaf sheaths reaching 3 to 6 meters tall",
+      "Immense, oblong emerald-green leaf blades up to 2-3 meters long that shred naturally along veins in wind",
+      "Large pendulous flowering spike with deep maroon-purple bracts opening to reveal tiered tiers ('hands') of fruit"
+    ],
+    "habitat": "Humid tropical rainforest understory, alluvial riverbanks, kitchen gardens, and commercial fruit orchards.",
+    "distribution": "Native to tropical South and Southeast Asia; widely cultivated throughout India and the global tropics.",
+    "uses": [
+      "World's most widely consumed fruit; ripe fruit eaten fresh, green raw fruit cooked as vegetable (kacha kela)",
+      "Broad waxy clean leaves serve as traditional, biodegradable ceremonial dining plates across South India",
+      "Tender inner pseudostem (thor) and floral heart (mocha) are nutrient-dense Ayurvedic culinary delicacies"
+    ],
+    "care_tips": [
+      "Provide sheltered full sun away from strong winds that tear the broad leaf blades",
+      "Requires massive amounts of water and heavy organic nutrient feeding; never allow soil to dry out",
+      "Cut down pseudostem after fruiting to allow the strongest side sucker (ratoon) to take over"
+    ],
+    "toxicity_note": "Completely non-toxic; all parts (fruit, peel, flower, stem core) are safe and edible when prepared properly.",
+    "fun_fact": "Botanically speaking, the banana plant is not a tree at all, but the world's largest perennial herbaceous plant, and the banana itself is classified as a berry.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Musa_acuminata"
+  },
+  {
+    "id": 43,
+    "slug": "carica-papaya",
+    "common_name": "Papaya",
+    "scientific_name": "Carica papaya",
+    "family": "Caricaceae",
+    "genus": "Carica",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "पपीता (Papita)",
+    "names_bengali": "পেঁপে (Pépe)",
+    "other_names": ["Papita", "Pawpaw", "Pepe", "Melon Tree"],
+    "description": "A fast-growing, semi-woody herbaceous palm-like tropical tree with a hollow single trunk, a crown of deeply palmately lobed leaves, and melon-like orange-fleshed fruit.",
+    "identifying_features": [
+      "Erect, single columnar hollow stem with prominent diamond-shaped scars from fallen petioles",
+      "Large, deeply palmately lobed leaves (50-70 cm wide) on long hollow radiating horizontal stalks",
+      "Clusters of green to golden-yellow oblong fruit hanging directly from the upper trunk below the leaf crown",
+      "Flesh filled with dozens of black, gelatinous round seeds resembling peppercorns"
+    ],
+    "habitat": "Tropical backyards, alluvial orchards, rural homesteads, and warm sunny kitchen gardens.",
+    "distribution": "Native to tropical Mesoamerica; universally naturalized and cultivated across India.",
+    "uses": [
+      "Sweet ripe fruit eaten fresh; green raw fruit cooked in curries and shredded in digestive salads",
+      "Fresh papaya leaf juice extract widely utilized in India to support blood platelet counts during dengue fever recovery TODO(verify)",
+      "Rich source of the proteolytic enzyme papain, used commercially as a meat tenderizer and digestive aid"
+    ],
+    "care_tips": [
+      "Plant in full direct sun with elevated, rapid-draining soil mounds; standing water causes root rot within 24 hours",
+      "Water moderately and regularly during dry periods",
+      "Replace plants every 3 to 4 years as older trees decline in productivity and become unwieldy"
+    ],
+    "toxicity_note": "Ripe fruit is safe. UNRIPE raw green papaya and milky latex contain concentrated papain and carpaine, which can trigger uterine contractions and are strictly avoided during pregnancy TODO(verify).",
+    "fun_fact": "Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Papaya"
+  },
+  {
+    "id": 44,
+    "slug": "psidium-guajava",
+    "common_name": "Guava",
+    "scientific_name": "Psidium guajava",
+    "family": "Myrtaceae",
+    "genus": "Psidium",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "अमरूद (Amrood)",
+    "names_bengali": "পেয়ারা (Peyara)",
+    "other_names": ["Common Guava", "Amrood", "Peyara", "Yellow Guava", "Apple Guava"],
+    "description": "A hardy, drought-tolerant tropical fruit tree famous for its attractive smooth peeling copper-colored bark, fragrant white flowers, and sweet, musky Vitamin C-rich fruit.",
+    "identifying_features": [
+      "Smooth, greenish-brown to coppery-pink bark that continuously peels off in thin, papery flakes",
+      "Opposite, elliptic-to-oblong leaves with prominent raised parallel veins on the underside",
+      "Fragrant white 4-5 petaled solitary flowers with a dense brush of hundreds of creamy-white stamens",
+      "Globose or pyriform fruit with edible yellow-green rind and sweet white, pink, or red aromatic seed-filled pulp"
+    ],
+    "habitat": "Tropical orchards, homestead gardens, open pastures, and dry semi-arid farmlands.",
+    "distribution": "Native to Mexico and Central America; naturalized for centuries throughout India (Allahabad Guavas are legendary).",
+    "uses": [
+      "Nutritious dessert fruit eaten fresh with chaat masala or cooked into jellies and jams",
+      "Extremely rich natural source of Vitamin C (up to 4 times higher than citrus fruits)",
+      "Tender guava leaf decoctions chewed for oral ulcers, toothaches, and digestive diarrhea TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires full direct sun and tolerates a wide variety of soils from sandy to heavy clay",
+      "Prune tips after harvest to stimulate new lateral branches where the next crop of flowers forms",
+      "Drought-resistant once established; moderate watering improves fruit size and sweetness"
+    ],
+    "toxicity_note": "Non-toxic; leaves, fruit, and seeds are completely safe for human consumption and non-hazardous to pets.",
+    "fun_fact": "Guava fruit contains over 228 mg of Vitamin C per 100g — roughly four times the Vitamin C concentration of a typical sweet orange.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Psidium_guajava"
+  }
+]

@@ -1,0 +1,571 @@
+[
+  {
+    "id": 75,
+    "slug": "lagenaria-siceraria",
+    "common_name": "Bottle gourd",
+    "scientific_name": "Lagenaria siceraria",
+    "family": "Cucurbitaceae",
+    "genus": "Lagenaria",
+    "plant_type": "climber",
+    "origin": "indian",
+    "names_hindi": "लौकी (Lauki)",
+    "names_bengali": "লাউ (Lau)",
+    "other_names": ["Calabash", "Lauki", "Ghiya", "Lau", "Doodhi"],
+    "description": "A vigorous annual climbing vine with soft hairy leaves, nocturnal white flowers, and smooth pale-green cylindrical or bottle-shaped fruits prized for cooling summer dishes.",
+    "identifying_features": [
+      "Vigorous twining tendril-bearing vine with soft, velvet-hairy musk-scented stems",
+      "Broad, heart-shaped (cordate) or kidney-shaped leaves with shallow lobes and wavy margins",
+      "Solitary, nocturnal white flowers with crinkled petals opening late afternoon",
+      "Smooth, pale-green fruits in cylindrical, club, or dumbbell shapes with white spongy flesh and flat seeds"
+    ],
+    "habitat": "Alluvial agricultural fields, village roof trellises, and home garden pergolas.",
+    "distribution": "Native to tropical Africa and South Asia; cultivated throughout India for thousands of years.",
+    "uses": [
+      "Light, cooling staple vegetable cooked into Lauki ki Sabzi, Lauki Kofta, Lauki Kheer, and Bengali Lau Ghonto",
+      "Fresh juice consumed as an Ayurvedic cooling health tonic and digestive aid TODO(verify)",
+      "Dried, hollowed woody gourds historically crafted into the soundbox resonator of the sitar, tanpura, and rudra veena"
+    ],
+    "care_tips": [
+      "Provide a sturdy bamboo arbor, trellis, or rooftop scaffolding to support heavy hanging gourds",
+      "Requires full direct sunshine and organically enriched, moisture-retentive loam soil",
+      "Water generously and consistently during vine growth and fruit swelling"
+    ],
+    "toxicity_note": "WARNING: NORMAL SWEET LAUKI IS SAFE. BITTER BOTTLE GOURD IS EXTREMELY TOXIC: Never consume bottle gourd juice that tastes bitter. Bitter gourds contain high levels of toxic cucurbitacins B and D, which cause acute toxic shock, hematemesis (vomiting blood), gastrointestinal bleeding, and organ failure. Always taste a small raw piece before juicing or cooking; discard immediately if bitter.",
+    "fun_fact": "Dried, hollowed bottle gourds were among the world's very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Calabash"
+  },
+  {
+    "id": 76,
+    "slug": "cucurbita-moschata",
+    "common_name": "Pumpkin",
+    "scientific_name": "Cucurbita moschata",
+    "family": "Cucurbitaceae",
+    "genus": "Cucurbita",
+    "plant_type": "climber",
+    "origin": "global",
+    "names_hindi": "कद्दू (Kaddu)",
+    "names_bengali": "কুমড়ো (Kumro)",
+    "other_names": ["Indian Pumpkin", "Kaddu", "Kumro", "Sitaphal", "Butternut Squash"],
+    "description": "A vigorous creeping or climbing vine with large mottled leaves, bright golden-orange bell-shaped blossoms, and heavy ribbed fruits with nutrient-dense, sweet orange flesh.",
+    "identifying_features": [
+      "Extensive trailing or climbing vine with angled stems and branched tendrils",
+      "Large, soft, dark green heart-shaped leaves often patterned with silver-white blotches at vein intersections",
+      "Large, showy bright yellow-orange flared trumpet flowers (edible blossoms)",
+      "Large variable fruit (globose, flattened, or oblong) with ribbed rind and thick, sweet orange flesh enclosing flat seeds"
+    ],
+    "habitat": "Farmland fields, river sandbanks (diara farming), and home compost beds.",
+    "distribution": "Native to Mesoamerica and South America; universally cultivated throughout India as a staple vegetable.",
+    "uses": [
+      "Cooked into sweet-and-sour Kaddu ki Sabzi, Bengali Kumror Chhokka, and sambar stews",
+      "Nutrient-dense seeds (magaz) roasted as healthy snacks or ground into festive sweet gravies",
+      "Rich dietary source of beta-carotene (provitamin A), lutein, and potassium"
+    ],
+    "care_tips": [
+      "Requires vast ground area or heavy-duty arbors to support rambling 5-10 meter vines",
+      "Thrives in hot, sunny weather and loose, fertile soil enriched with aged cow manure",
+      "Mulch soil beneath developing fruits with straw to prevent rot from ground moisture"
+    ],
+    "toxicity_note": "Non-toxic; flesh, blossoms, tender leaves, and seeds are completely edible and safe for humans and pets.",
+    "fun_fact": "In Bengali cuisine, practically zero waste is generated from pumpkin: the flesh, tender climbing shoot tips (kumro shaak), yellow flowers (kumro phul bhaja), and seeds are all prized delicacies.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucurbita_moschata"
+  },
+  {
+    "id": 77,
+    "slug": "cucumis-sativus",
+    "common_name": "Cucumber",
+    "scientific_name": "Cucumis sativus",
+    "family": "Cucurbitaceae",
+    "genus": "Cucumis",
+    "plant_type": "climber",
+    "origin": "indian",
+    "names_hindi": "खीरा (Kheera)",
+    "names_bengali": "শসা (Shosha)",
+    "other_names": ["Common Cucumber", "Kheera", "Shosha", "Kakdi", "Gherkin"],
+    "description": "A fast-growing rough-stemmed annual climbing vine bearing small yellow flowers and crisp, cooling cylindrical green fruits containing over 95% water.",
+    "identifying_features": [
+      "Slender climbing or trailing vine with rough bristly stems and unbranched coiled tendrils",
+      "Rough, triangular-ovate palmately 3-5 lobed leaves with acute lobes",
+      "Small yellow star-like flowers in leaf axils (separate male and female flowers)",
+      "Elongated cylindrical green fruits with warty or smooth skin and pale crisp seed-filled juicy flesh"
+    ],
+    "habitat": "Riverbed sands, alluvial vegetable farms, polyhouses, and home garden trellises.",
+    "distribution": "Native to the foothills of the Himalayas in India; cultivated across the world for over 3,000 years.",
+    "uses": [
+      "Essential cooling raw salad vegetable eaten fresh with lemon juice and chaat masala, or folded into boondi raita",
+      "Natural hydrator containing over 95% water, electrolytes, and silica",
+      "Chilled slices placed over eyes to reduce puffiness and soothe tired skin"
+    ],
+    "care_tips": [
+      "Trellis vines vertically to keep cucumbers clean, straight, and well-aerated",
+      "Requires consistent, deep watering; moisture stress produces bitter, misshapen fruits",
+      "Harvest cucumbers while crisp and firm before seeds enlarge and skins turn yellow"
+    ],
+    "toxicity_note": "Safe and wholesome; occasional bitter cucumbers contain elevated cucurbitacins (usually concentrated near the stem end) and should be trimmed or discarded.",
+    "fun_fact": "Ancient Sanskrit texts mention cucumber cultivation under the name 'Trapusha' over three millennia ago, confirming India as the original botanical homeland of the global cucumber.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucumber"
+  },
+  {
+    "id": 78,
+    "slug": "arachis-hypogaea",
+    "common_name": "Peanut",
+    "scientific_name": "Arachis hypogaea",
+    "family": "Fabaceae",
+    "genus": "Arachis",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "मूंगफली (Moongphali)",
+    "names_bengali": "চিনাবাদাম (Chinabadam)",
+    "other_names": ["Groundnut", "Moongphali", "Chinabadam", "Earthnut", "Goober"],
+    "description": "A low-growing legume herb renowned for its remarkable habit of geocarpy, where pollinated flower stems bend downward and drill beneath the soil to develop underground pods.",
+    "identifying_features": [
+      "Low, bushy, or sprawling annual legume reaching 30-50 cm in height",
+      "Pinnate leaves with four broad, obovate leaflets arranged in two opposite pairs",
+      "Bright yellow pea-like flowers blooming low on stems; after pollination, the floral stalk ('peg') elongates downward and burrows into the soil",
+      "Reticulated woody underground pods containing 1 to 4 oil-rich edible seeds covered in thin reddish-brown papery seed coats"
+    ],
+    "habitat": "Sandy loam agricultural plains, light well-drained soils, and semi-arid cropping belts.",
+    "distribution": "Native to South America; extensively cultivated across western and southern India (Gujarat, Andhra Pradesh, Tamil Nadu).",
+    "uses": [
+      "Roasted, salted, or boiled as iconic winter street snacks (moongphali) across Indian railway stations and markets",
+      "Major commercial source of groundnut oil, the preferred traditional cooking oil of Gujarat and Maharashtra",
+      "High natural source of plant protein, healthy monounsaturated fats, resveratrol, and Vitamin E"
+    ],
+    "care_tips": [
+      "Requires light, loose, sandy loam soil so emerging pegs can easily penetrate underground",
+      "Thrives in warm, sunny weather; sensitive to soil compaction and waterlogging",
+      "Keep soil loose around the base of plants during flowering and pegging stages"
+    ],
+    "toxicity_note": "Non-toxic; peanuts are one of the most common severe food allergens, capable of triggering life-threatening anaphylaxis in allergic individuals. Ensure peanuts are stored dry to avoid toxic aflatoxin mold.",
+    "fun_fact": "Peanuts are not true nuts at all, but botanical legumes related to peas and beans, famous for their unique habit of flowering in the air and ripening their pods underground.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Peanut"
+  },
+  {
+    "id": 79,
+    "slug": "corchorus-olitorius",
+    "common_name": "Jute",
+    "scientific_name": "Corchorus olitorius",
+    "family": "Malvaceae",
+    "genus": "Corchorus",
+    "plant_type": "herb",
+    "origin": "indian",
+    "names_hindi": "पटसन (Patsan)",
+    "names_bengali": "পাট (Paat)",
+    "other_names": ["Tossa Jute", "Golden Fiber", "Paat", "Nalita", "Jews Mallow"],
+    "description": "A tall, erect annual bast-fiber herb celebrated as the source of 'The Golden Fiber', with slender stalks that yield strong, silky, biodegradable natural fibers after retting.",
+    "identifying_features": [
+      "Tall, straight, slender unbranched annual herb reaching 2 to 4 meters in height",
+      "Alternate, ovate-to-lanceolate leaves with serrated margins, characterized by two hair-like tail bristles at the base of the blade",
+      "Small, bright yellow 5-petaled flowers borne solitary or in pairs in leaf axils",
+      "Elongated, ribbed cylindrical 10-angled seed capsules containing numerous small grayish seeds"
+    ],
+    "habitat": "Alluvial floodplains, water-rich river basins, and monsoon-inundated delta soils.",
+    "distribution": "Native to the Indian subcontinent and tropical Africa; Bengal (India and Bangladesh) is the global epicentre of jute production.",
+    "uses": [
+      "Bast fibers woven into burlap, gunny sacks, twine, eco-friendly shopping bags, and geo-textiles ('The Golden Fiber')",
+      "Tender mucilaginous young leaves cooked as a prized nutritious green potherb (Pat shaak) in Bengal and Egypt (Molokhia)",
+      "Completely biodegradable, eco-friendly alternative to synthetic plastic packaging materials"
+    ],
+    "care_tips": [
+      "Requires high temperatures, high monsoon humidity, and deep, standing alluvial silt soils",
+      "Grown during the monsoon season when rainfall is abundant",
+      "Retting: harvested stalks must be submerged in slow-flowing fresh water for 2-3 weeks to soften and strip fibers"
+    ],
+    "toxicity_note": "Tender young leaves are a safe, edible vegetable; mature seeds contain cardiac glycosides (olitoriside) and should not be consumed TODO(verify).",
+    "fun_fact": "Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as 'The Golden Fiber' for its natural golden sheen and vital economic importance.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Corchorus_olitorius"
+  },
+  {
+    "id": 80,
+    "slug": "epipremnum-aureum",
+    "common_name": "Money plant",
+    "scientific_name": "Epipremnum aureum",
+    "family": "Araceae",
+    "genus": "Epipremnum",
+    "plant_type": "climber",
+    "origin": "global",
+    "names_hindi": "मनी प्लांट (Money Plant)",
+    "names_bengali": "মানি প্ল্যান্ট (Money Plant)",
+    "other_names": ["Golden Pothos", "Devil's Ivy", "Money Plant", "Ceylon Creeper", "Hunter's Robe"],
+    "description": "An evergreen climbing tropical vine ubiquitously grown in Indian households in jars of water and hanging baskets, prized for its glossy heart-shaped variegated leaves and feng shui prosperity symbolism.",
+    "identifying_features": [
+      "Trailing or climbing vine with adventitious aerial roots that grip supports or flourish directly in standing water",
+      "Glossy, heart-shaped (cordate) juvenile leaves marbled with vibrant splashes of yellow, cream, or lime-green",
+      "In wild mature forest conditions, leaves become gigantic (up to 1 m long) with deep pinnatifid leaf splits",
+      "Almost never flowers in domestic cultivation due to a genetic deficiency in gibberellin synthesis"
+    ],
+    "habitat": "Indoor living rooms, balconies, office corridors, and tropical tree trunks.",
+    "distribution": "Native to Mo'orea in French Polynesia; universally cultivated across India and worldwide as an indestructible houseplant.",
+    "uses": [
+      "Popular Vastu Shastra and Feng Shui houseplant believed to attract wealth, prosperity, and positive energy",
+      "Top-rated indoor air-purifying plant shown to remove indoor toxins including formaldehyde, benzene, and xylene",
+      "Versatile ornamental grown in soil pots, moss poles, or simple glass bottles filled with water"
+    ],
+    "care_tips": [
+      "Thrives in bright indirect light; tolerates low-light conditions (though variegation fades in deep shade)",
+      "Allow the top 2 inches of soil to dry out between waterings; avoid soggy, anaerobic soil",
+      "If growing in water jars, change the water every 7-10 days to maintain oxygenation and prevent algae"
+    ],
+    "toxicity_note": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-shaped calcium oxalate crystals (raphides). Chewing any part causes immediate intense burning and stinging of the mouth, tongue, and lips, excessive drooling, difficulty swallowing, and vomiting in cats, dogs, and humans.",
+    "fun_fact": "Golden Pothos earned the nickname 'Devil's Ivy' because it is nearly impossible to kill and stays vibrantly green even when neglected in windowless dark corners.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Epipremnum_aureum"
+  },
+  {
+    "id": 81,
+    "slug": "dracaena-trifasciata",
+    "common_name": "Snake plant",
+    "scientific_name": "Dracaena trifasciata",
+    "family": "Asparagaceae",
+    "genus": "Dracaena",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "स्नेक प्लांट (Snake Plant)",
+    "names_bengali": "স্নেক প্ল্যান্ট (Snake Plant)",
+    "other_names": ["Mother-in-Law's Tongue", "Sansevieria", "Snake Plant", "Saint George's Sword", "Viper's Bowstring Hemp"],
+    "description": "An architectural, virtually indestructible succulent herb with erect, sword-like stiff leaves banded with wavy grey-green horizontal patterns and golden borders.",
+    "identifying_features": [
+      "Dense basal clusters of rigid, erect, vertical sword-shaped succulent leaves growing 0.5 to 1.5 m tall",
+      "Distinctive horizontal wavy zigzag banding of light and dark olive-green resembling snakeskin, often with bright yellow margins",
+      "Tough, fibrous underground rhizomes that creep and push up new pups",
+      "Slender spikes of greenish-white tubular nocturnal flowers emitting a light sweet fragrance in mature plants"
+    ],
+    "habitat": "Dry tropical rocky forests, shaded arid bushlands, and modern indoor living spaces.",
+    "distribution": "Native to tropical West Africa; grown everywhere globally and across India as a durable indoor plant.",
+    "uses": [
+      "Renowned NASA Clean Air Study plant that converts CO2 into oxygen at night via Crassulacean Acid Metabolism (CAM)",
+      "Filters airborne toxins including benzene, formaldehyde, trichloroethylene, and xylene",
+      "Architectural focal point for modern minimalist interior design and drought-tolerant rock gardens"
+    ],
+    "care_tips": [
+      "Water sparingly; allow soil to dry out completely between waterings; overwatering causes fatal root rot",
+      "Tolerates full blazing sun as well as low-light indoor corners",
+      "Use well-aerated cactus or succulent potting soil with perlite and pumice"
+    ],
+    "toxicity_note": "MILD-TO-MODERATE TOXICITY: Foliage contains saponins. Ingestion by cats and dogs causes excessive salivation, vomiting, nausea, diarrhea, and lethargy.",
+    "fun_fact": "Unlike most houseplants that release oxygen only during daytime photosynthesis, the Snake Plant performs CAM photosynthesis, releasing oxygen throughout the night, making it ideal for bedrooms.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dracaena_trifasciata"
+  },
+  {
+    "id": 82,
+    "slug": "chlorophytum-comosum",
+    "common_name": "Spider plant",
+    "scientific_name": "Chlorophytum comosum",
+    "family": "Asparagaceae",
+    "genus": "Chlorophytum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "स्पाइडर प्लांट (Spider Plant)",
+    "names_bengali": "স্পাইডার প্ল্যান্ট (Spider Plant)",
+    "other_names": ["Airplane Plant", "Ribbon Plant", "Spider Ivy", "Spider Plant", "Hen and Chickens"],
+    "description": "A graceful, easy-care clump-forming indoor perennial with arching ribbon-like variegated leaves and long wiry runners bearing miniature plantlets ('spiderettes').",
+    "identifying_features": [
+      "Dense rosette of arching, linear, ribbon-like leaves up to 30-45 cm long, striped with green and creamy-white margins or centers",
+      "Long, wiry, yellowish arching stolons (runners) extending 60-90 cm outward",
+      "Small, starry, six-petaled white flowers borne along the runners",
+      "Miniature tufted plantlets with nascent aerial rootlets dangling from runners like spiders on a web"
+    ],
+    "habitat": "Coastal riverine forests, rocky forest floors, and residential hanging baskets.",
+    "distribution": "Native to tropical and southern Africa; widely popular throughout India as a hanging terrace and indoor basket plant.",
+    "uses": [
+      "Classic hanging basket and shelf ornamental with cascading tiers of dangling plantlets",
+      "Highly effective natural air purifier removing carbon monoxide, formaldehyde, and airborne dust particles",
+      "Safe, non-toxic pet-friendly indoor houseplant"
+    ],
+    "care_tips": [
+      "Provide bright, indirect sunlight; direct midday sun scorches and bleaches the tender ribbon leaves",
+      "Keep soil evenly moist in spring and summer; water when top inch of soil feels dry",
+      "Snip off dangling spiderettes and root them in moist soil or water for effortless propagation"
+    ],
+    "toxicity_note": "NON-TOXIC: Completely safe for cats, dogs, and children. Cats are often attracted to spider plants because they contain mild compounds with a mild hallucinogenic/catnip-like effect on felines, though it is physically harmless.",
+    "fun_fact": "A single healthy mother Spider Plant can produce dozens of dangling baby plantlets simultaneously on its arching stolons, giving rise to its common name 'Hen and Chickens'.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chlorophytum_comosum"
+  },
+  {
+    "id": 83,
+    "slug": "monstera-deliciosa",
+    "common_name": "Monstera",
+    "scientific_name": "Monstera deliciosa",
+    "family": "Araceae",
+    "genus": "Monstera",
+    "plant_type": "climber",
+    "origin": "global",
+    "names_hindi": "मॉन्स्टेरा (Monstera)",
+    "names_bengali": "মনস্টেরা (Monstera)",
+    "other_names": ["Swiss Cheese Plant", "Split-Leaf Philodendron", "Ceriman", "Monstera", "Windowleaf"],
+    "description": "An iconic tropical climbing hemiepiphyte renowned for its enormous, glossy, perforated and deeply split emerald-green leaves and stout aerial cord roots.",
+    "identifying_features": [
+      "Massive climbing vine with stout stems producing thick, cord-like brownish aerial roots",
+      "Huge, glossy, heart-shaped leathery leaves that develop dramatic natural perforations (fenestrations) and deep splits",
+      "Creamy-white boat-shaped spathe enclosing a stout spadix that develops into an edible cob-like fruit",
+      "Fruit covered in hexagonal green scales that pop off naturally when fully ripe to reveal sweet pineapple-banana pulp"
+    ],
+    "habitat": "Tropical rainforest understory, climbing up mature host trees, and stylish interior spaces.",
+    "distribution": "Native to tropical rainforests of southern Mexico to Panama; massively popular across India as a premium indoor statement plant.",
+    "uses": [
+      "Premier architectural statement plant featured in contemporary interior design and boutique hotels",
+      "Naturally removes indoor airborne pollutants and enriches ambient room humidity",
+      "Ripe fruit (ceriman) is eaten as a rare delicacy tasting of a hybrid between pineapple, banana, and mango"
+    ],
+    "care_tips": [
+      "Place in bright indirect or filtered sunlight; harsh direct sun bleaches and burns the glossy leaves",
+      "Provide a sturdy moss pole, coir totem, or trellis for aerial roots to climb",
+      "Water thoroughly when the top 2-3 inches of soil dry; wipe dust off broad leaves with a damp cloth"
+    ],
+    "toxicity_note": "FOLIAGE AND UNRIPE FRUIT ARE TOXIC: All vegetative parts contain sharp needle-like insoluble calcium oxalate crystals (raphides). Chewing foliage causes intense oral burning, swelling of tongue and throat, and digestive distress in pets and humans. Only the completely ripe fruit (whose outer green scales fall off voluntarily) is edible.",
+    "fun_fact": "The natural holes in Monstera leaves are called 'fenestrations' (from the Latin for window); they allow hurricane winds to pass through without tearing the leaf and let sunlight filter down to lower foliage.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Monstera_deliciosa"
+  },
+  {
+    "id": 84,
+    "slug": "spathiphyllum-wallisii",
+    "common_name": "Peace lily",
+    "scientific_name": "Spathiphyllum wallisii",
+    "family": "Araceae",
+    "genus": "Spathiphyllum",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "पीस लिली (Peace Lily)",
+    "names_bengali": "পিস লিলি (Peace Lily)",
+    "other_names": ["Peace Lily", "White Sails", "Spathiphyllum", "Closet Plant"],
+    "description": "An elegant, shade-tolerant evergreen perennial herb with glossy lanceolate leaves and striking, pure-white hood-like floral spathes that resemble white flags of peace.",
+    "identifying_features": [
+      "Dense, stemless clumps of arching, glossy dark green elliptic leaves with sunken veins",
+      "Pure snow-white, petal-like oval spathes emerging above the foliage on slender erect stalks",
+      "Central, creamy-yellow cylindrical spadix covered in tiny true flowers",
+      "Dramatic wilting behavior ('fainting') when thirsty, followed by rapid full recovery within hours of watering"
+    ],
+    "habitat": "Dense tropical rainforest understory floors, shaded riverbanks, and dimly lit home interiors.",
+    "distribution": "Native to tropical rainforests of Central and South America; universally cultivated as an indoor decorative houseplant.",
+    "uses": [
+      "Celebrated as a symbol of peace, purity, and healing, frequently gifted during housewarmings and milestones",
+      "One of the top-performing houseplants for removing benzene, formaldehyde, carbon monoxide, and toluene from indoor air",
+      "Thrives in low-light indoor spaces where few other flowering plants can survive"
+    ],
+    "care_tips": [
+      "Prefers medium to low indirect light; direct sunshine will scorch the leaves and brown the white spathes",
+      "Keep potting soil consistently moist but never soggy; water as soon as leaves begin to gently droop",
+      "Wipe broad leaves periodically to remove dust and maintain high photosynthetic efficiency"
+    ],
+    "toxicity_note": "TOXIC TO DOGS AND CATS: Contains insoluble calcium oxalate crystals. Ingestion causes immediate oral pain, burning of lips and tongue, drooling, difficulty swallowing, and vomiting. Keep out of reach of domestic pets.",
+    "fun_fact": "The white 'flower' of the Peace Lily is not a true flower at all, but a modified leaf called a spathe that serves as a protective hood and billboard to guide pollinators to the tiny true flowers on the spadix.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spathiphyllum_wallisii"
+  },
+  {
+    "id": 85,
+    "slug": "ficus-elastica",
+    "common_name": "Rubber plant",
+    "scientific_name": "Ficus elastica",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "रबर प्लांट (Rubber Plant)",
+    "names_bengali": "রবার গাছ (Rubber Gachh)",
+    "other_names": ["Rubber Fig", "Indian Rubber Bush", "Rubber Tree", "Bor", "Living Root Bridge Tree"],
+    "description": "A magnificent banyan-group evergreen tree native to Northeast India, famous for its colossal buttressed roots, living root bridges of Meghalaya, and thick, glossy, leathery oval leaves.",
+    "identifying_features": [
+      "Massive forest tree developing vast buttresses and aerial prop roots in humid wild habitats",
+      "Large, thick, leathery, glossy oblong-oval leaves up to 20-35 cm long with a prominent pinkish-red midrib",
+      "Emerging new leaves tightly enclosed in a bright crimson-red or pinkish stipular sheath that drops as the leaf unfurls",
+      "Copious thick milky white latex sap exuding immediately from any broken leaf or stem"
+    ],
+    "habitat": "Humid subtropical rainforests, river ravines of Meghalaya and Assam, and domestic indoor pots.",
+    "distribution": "Native to Northeast India (Meghalaya, Assam), Myanmar, and Indonesia; grown worldwide as a popular houseplant.",
+    "uses": [
+      "Aerial roots trained by the indigenous Khasi and Jaintia tribes of Meghalaya to create centuries-old, living root bridges across roaring rivers",
+      "Historical source of natural rubber latex before the Amazonian rubber tree (Hevea brasiliensis) became dominant",
+      "Bold, dramatic indoor specimen plant prized for its shiny architectural foliage"
+    ],
+    "care_tips": [
+      "Thrives in bright, indirect sunlight; can tolerate gentle morning direct sun",
+      "Water thoroughly when the top two inches of potting mix feel dry; reduce watering during winter months",
+      "Clean leaves with a soft damp cloth to keep the glossy surface free of dust and mineral deposits"
+    ],
+    "toxicity_note": "MILD-TO-MODERATE TOXICITY: The milky latex contains ficin and psoralens. Contact with skin or eyes causes irritation and dermatitis; ingestion can cause vomiting, drooling, and mouth irritation in dogs and cats.",
+    "fun_fact": "The incredible Living Root Bridges of Meghalaya, some carrying foot traffic for over 500 years, are meticulously grown and woven by indigenous Khasi villagers using the living aerial roots of Ficus elastica.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_elastica"
+  },
+  {
+    "id": 86,
+    "slug": "crassula-ovata",
+    "common_name": "Jade plant",
+    "scientific_name": "Crassula ovata",
+    "family": "Crassulaceae",
+    "genus": "Crassula",
+    "plant_type": "succulent",
+    "origin": "global",
+    "names_hindi": "जेड प्लांट (Jade Plant)",
+    "names_bengali": "জেড প্ল্যান্ট (Jade Plant)",
+    "other_names": ["Money Tree", "Dollar Plant", "Lucky Plant", "Friendship Tree", "Crassula"],
+    "description": "A charming, long-lived woody-stemmed succulent with fleshy, teardrop-shaped jade-green leaves, revered in Feng Shui as a symbol of financial wealth, good fortune, and renewal.",
+    "identifying_features": [
+      "Thick, gnarled, miniature tree-like woody branching trunk giving it a natural bonsai appearance",
+      "Fleshy, plump, glossy jade-green oval or obovate opposite leaves, often developing red margins in bright sun",
+      "Clusters of tiny, delicate, star-shaped white or pale-pink flowers in late winter or early spring",
+      "Extremely durable succulent foliage capable of storing water for months of drought"
+    ],
+    "habitat": "Rocky arid scrub hills, succulent valleys, and sunny indoor balcony planters.",
+    "distribution": "Native to KwaZulu-Natal and the Eastern Cape of South Africa; universally popular as an ornamental and feng shui plant across India.",
+    "uses": [
+      "Premier Feng Shui and Vastu houseplant placed near home or office entrances to attract financial prosperity and harmony",
+      "Ideal living bonsai specimen that naturally develops an ancient, thick-trunked appearance with minimal training",
+      "Drought-resilient tabletop succulent requiring minimal maintenance"
+    ],
+    "care_tips": [
+      "Requires at least 4-6 hours of bright direct or filtered sunlight; insufficient light causes leggy, drooping stems",
+      "Water thoroughly only when the soil has dried out completely; highly vulnerable to stem rot from overwatering",
+      "Plant in porous, gritty succulent/cactus potting mix with perlite or pumice"
+    ],
+    "toxicity_note": "TOXIC TO CATS AND DOGS: Ingestion by pets causes vomiting, depression, ataxia (unsteady gait), and slow heart rate. Keep placed on high shelves away from household pets.",
+    "fun_fact": "Jade plants can live for over 70 to 100 years, often passed down through multiple family generations as living family heirlooms.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crassula_ovata"
+  },
+  {
+    "id": 87,
+    "slug": "opuntia-ficus-indica",
+    "common_name": "Prickly pear",
+    "scientific_name": "Opuntia ficus-indica",
+    "family": "Cactaceae",
+    "genus": "Opuntia",
+    "plant_type": "succulent",
+    "origin": "global",
+    "names_hindi": "नागफनी (Nagphani)",
+    "names_bengali": "নাগফণী (Nagphani)",
+    "other_names": ["Barbary Fig", "Cactus Pear", "Nagphani", "Nopal", "Tuna"],
+    "description": "A robust, drought-conquering succulent cactus composed of flattened paddle-like green stem segments (cladodes), yellow blossoms, and sweet, juicy, spine-armed oval fruits.",
+    "identifying_features": [
+      "Segmented succulent shrub formed of thick, flattened, obovate green pad-like stem joints (cladodes)",
+      "Pads armed with clusters of minute, barbed hair-like bristles (glochids) and occasional sharp spines",
+      "Large, cup-shaped bright golden-yellow or orange flowers opening on the upper margins of terminal pads",
+      "Ovoid, fleshy berry fruits (tunas) ripening from green to ruby-red or purplish-crimson with sweet juicy seed-filled pulp"
+    ],
+    "habitat": "Arid deserts, dry rocky wastelands, semi-arid agricultural field boundaries, and saline scrublands.",
+    "distribution": "Native to Mexico; naturalized extensively across arid and semi-arid regions of western and peninsular India.",
+    "uses": [
+      "Nutritious sweet fruit (tunas / prickly pears) peeled and eaten fresh, rich in betalain antioxidants and Vitamin C",
+      "Tender young pads (nopales) cleaned of spines and grilled or cooked in traditional Mexican cuisine",
+      "Formidable living barbed security fence planted along rural agricultural borders to exclude cattle and wild boars"
+    ],
+    "care_tips": [
+      "Requires full, blazing, intense direct sunshine and hot temperatures",
+      "Needs sharply draining sandy, gravelly, or rocky soil; immediately rots in waterlogged conditions",
+      "Extremely drought tolerant; requires virtually no supplemental watering once established"
+    ],
+    "toxicity_note": "Fruit flesh and pads are non-toxic and edible. MECHANICAL IRRITATION HAZARD: The tiny microscopic hair-like barbed spines (glochids) easily detach and penetrate skin or mucous membranes, causing persistent severe mechanical dermatitis, itching, and pain. Handle only with thick leather gloves or tongs.",
+    "fun_fact": "Prickly pear cladodes are the traditional host plant for cochineal insects (Dactylopius coccus), the historic source of natural carmine red dye used to color royal fabrics, cosmetics, and foods.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Opuntia_ficus-indica"
+  },
+  {
+    "id": 88,
+    "slug": "nephrolepis-exaltata",
+    "common_name": "Boston fern",
+    "scientific_name": "Nephrolepis exaltata",
+    "family": "Nephrolepidaceae",
+    "genus": "Nephrolepis",
+    "plant_type": "epiphyte",
+    "origin": "global",
+    "names_hindi": "बोस्टन फर्न (Boston Fern)",
+    "names_bengali": "বোস্টন ফার্ন (Boston Fern)",
+    "other_names": ["Sword Fern", "Boston Fern", "Wild Boston Fern", "Fishbone Fern"],
+    "description": "A lush, arching graceful fern with long, feathery sword-shaped fronds bearing alternating pinnate leaflets, beloved worldwide as a classic hanging porch and indoor bathroom fern.",
+    "identifying_features": [
+      "Gracefully arching, pendulous pinnate fronds up to 0.5 to 1.5 meters long emerging from a central tufted crown",
+      "Alternate, closely spaced triangular-oblong leaflets (pinnae) with slightly serrated or wavy margins",
+      "Underground creeping rhizomes and thin fibrous runners producing daughter plantlets",
+      "Two neat rows of rounded spore-bearing sori protected by kidney-shaped indusia along the underside of fertile pinnae"
+    ],
+    "habitat": "Damp tropical swamps, humid shaded rock crevices, epiphytic on tree trunks, and indoor hanging pots.",
+    "distribution": "Native to tropical forests of the Americas, West Indies, and Polynesia; universally cultivated across India.",
+    "uses": [
+      "Quintessential hanging basket fern bringing lush, arching woodland greenery to verandas, living rooms, and patios",
+      "Outstanding natural humidifier and air purifier capable of absorbing indoor formaldehyde and xylene",
+      "Safe, non-toxic plant for households with dogs and cats"
+    ],
+    "care_tips": [
+      "Requires high atmospheric humidity; mist regularly or place in naturally humid bathrooms or kitchens",
+      "Provide bright, dappled indirect light; avoid harsh direct sun which bleaches and browns frond tips",
+      "Keep potting soil consistently moist but well-drained; never allow the root ball to dry out completely"
+    ],
+    "toxicity_note": "NON-TOXIC: Completely safe and non-toxic for cats, dogs, birds, and children.",
+    "fun_fact": "The popular Boston Fern originated in 1894 when a Massachusetts florist noticed a spontaneous mutation with wider, more gracefully arching and ruffled fronds among a shipment of wild sword ferns.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nephrolepis_exaltata"
+  },
+  {
+    "id": 89,
+    "slug": "aglaonema-commutatum",
+    "common_name": "Aglaonema",
+    "scientific_name": "Aglaonema commutatum",
+    "family": "Araceae",
+    "genus": "Aglaonema",
+    "plant_type": "herb",
+    "origin": "global",
+    "names_hindi": "एग्लोनिमा (Aglaonema)",
+    "names_bengali": "অ্যাগ্লোনেমা (Aglaonema)",
+    "other_names": ["Chinese Evergreen", "Aglaonema", "Poison Dart Plant"],
+    "description": "A stunning, shade-tolerant tropical foliage herb renowned for its lush, spear-shaped leaves beautifully patterned in silver, grey, pink, and vibrant ruby-red variegation.",
+    "identifying_features": [
+      "Compact, erect clumping herbaceous stems reaching 30 to 80 cm in height",
+      "Broad, elliptic-lanceolate leathery leaves with striking silver-grey feathering or vivid pink/red splashes along primary veins",
+      "Greenish-white arum-like floral spathes enclosing a pale spadix, followed occasionally by red ornamental berries"
+    ],
+    "habitat": "Tropical rainforest understories, shaded humid damp slopes, and low-light home interiors.",
+    "distribution": "Native to the tropical rainforests of the Philippines and Sulawesi; widely grown across India as an elite indoor accent plant.",
+    "uses": [
+      "Celebrated as one of the best and easiest indoor houseplants for low-light apartments and offices",
+      "Top-tier air-cleansing houseplant documented in NASA studies for filtering toxins like benzene and formaldehyde",
+      "Provides vibrant color accents indoors through contemporary pink and red cultivars (e.g., 'Siam Aurora')"
+    ],
+    "care_tips": [
+      "Thrives in low to bright indirect light; keep entirely shielded from hot direct sun",
+      "Allow the top 2 inches of soil to dry before watering again; highly susceptible to root rot if overwatered",
+      "Keep away from cold air conditioners and drafty doorways; prefers temperatures above 16°C"
+    ],
+    "toxicity_note": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-like calcium oxalate crystals. Chewing any part causes immediate intense burning and swelling of the mouth, tongue, and throat, excessive drooling, and digestive distress.",
+    "fun_fact": "In China and throughout East Asia, Aglaonema has been cultivated for centuries as an auspicious good-luck plant believed to bring good fortune, prosperity, and positive chi into the home.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aglaonema_commutatum"
+  }
+]

@@ -1,4 +1,4 @@
-export type PlantType = 'herb' | 'shrub' | 'tree' | 'climber' | 'grass' | 'succulent' | 'aquatic' | 'crop';
+export type PlantType = 'herb' | 'shrub' | 'tree' | 'climber' | 'grass' | 'succulent' | 'aquatic' | 'crop' | 'epiphyte';
 export type Origin = 'indian' | 'global' | 'both';
 
 export interface Species {

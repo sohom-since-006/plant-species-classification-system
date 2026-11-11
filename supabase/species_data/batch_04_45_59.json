@@ -1,0 +1,566 @@
+[
+  {
+    "id": 45,
+    "slug": "punica-granatum",
+    "common_name": "Pomegranate",
+    "scientific_name": "Punica granatum",
+    "family": "Lythraceae",
+    "genus": "Punica",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "अनार (Anaar)",
+    "names_bengali": "বেদানা (Bedana)",
+    "other_names": ["Pomegranate", "Anaar", "Bedana", "Dalim", "Granada"],
+    "description": "A dense, spiny deciduous large shrub or small tree bearing leathery scarlet-orange blooms and thick-rinded ruby-red fruits packed with jewel-like edible juicy arils.",
+    "identifying_features": [
+      "Slender, thorny branching habit with glossy, opposite, narrow oblong leaves",
+      "Brilliant scarlet-orange ruffled flowers with a thick, fleshy, vase-shaped calyx",
+      "Globose hexagonal crowned fruit with a tough leathery rind containing hundreds of ruby-red translucent juicy arils"
+    ],
+    "habitat": "Dry subtropical orchards, rocky scrub slopes, and irrigated arid river basins.",
+    "distribution": "Native to the Mediterranean region to northern India; extensively cultivated across Maharashtra and western India.",
+    "uses": [
+      "Antioxidant-rich fresh fruit and freshly pressed juice packed with punicalagins and anthocyanins",
+      "Dried seeds used as a souring spice (anardana) in Indian curries, chole, and chutneys",
+      "Traditional Ayurvedic rind decoctions for dysentery, diarrhea, and intestinal parasites TODO(verify)"
+    ],
+    "care_tips": [
+      "Thrives in hot, dry climates with plenty of baking direct sunshine",
+      "Requires deep, well-draining calcareous or sandy loam soils; sensitive to waterlogging",
+      "Prune suckers regularly to maintain a clean multi-stemmed or single-trunk tree"
+    ],
+    "toxicity_note": "Fruit arils are completely safe and edible; tree root bark contains pelletierine alkaloids that are toxic in large unverified medicinal doses TODO(verify).",
+    "fun_fact": "A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1541344999736-83eca872f242?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pomegranate"
+  },
+  {
+    "id": 46,
+    "slug": "artocarpus-heterophyllus",
+    "common_name": "Jackfruit",
+    "scientific_name": "Artocarpus heterophyllus",
+    "family": "Moraceae",
+    "genus": "Artocarpus",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "कटहल (Kathal)",
+    "names_bengali": "কাঁঠাল (Kanthal)",
+    "other_names": ["Kathal", "Kanthal", "Chakka", "Jackfruit Tree", "Panas"],
+    "description": "A massive tropical rainforest tree producing the largest tree-borne fruit in the world, bearing enormous bumpy green syncarps directly on its trunk and heavy mature branches.",
+    "identifying_features": [
+      "Dense evergreen canopy with thick, glossy, dark green elliptic-to-obovate leaves",
+      "Cauliflorous fruiting habit with colossal oblong fruits (up to 30-50 kg) growing straight from the woody trunk",
+      "Thick, rubbery green rind covered in hard conical tubercles exuding sticky white latex when sliced",
+      "Sweet, golden aromatic bulbous arils surrounding large edible starchy seeds"
+    ],
+    "habitat": "Tropical wet evergreen forests, alluvial homesteads, and warm agroforestry belts.",
+    "distribution": "Native to the Western Ghats of India; the state fruit of Kerala and Tamil Nadu, cultivated across South/Southeast Asia.",
+    "uses": [
+      "Immature raw green jackfruit cooked as a hearty fibrous vegetable ('tree meat' / kathal ki sabzi)",
+      "Sweet ripe bulbs consumed fresh, fried into chips, or preserved in sugar syrups",
+      "Hard, termite-resistant yellow heartwood prized for musical instruments (veena, mridangam) and temple furniture"
+    ],
+    "care_tips": [
+      "Requires spacious acreage in warm, frost-free humid tropical conditions",
+      "Needs deep, rich, porous alluvial soils with unobstructed drainage",
+      "Protect young saplings from livestock grazing and waterlogging"
+    ],
+    "toxicity_note": "Non-toxic; raw unripe bulbs must be thoroughly cooked before eating; sticky white latex can irritate eyes or skin in sensitive individuals TODO(verify).",
+    "fun_fact": "Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jackfruit"
+  },
+  {
+    "id": 47,
+    "slug": "tamarindus-indica",
+    "common_name": "Tamarind",
+    "scientific_name": "Tamarindus indica",
+    "family": "Fabaceae",
+    "genus": "Tamarindus",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "इमली (Imli)",
+    "names_bengali": "তেঁতুল (Tentul)",
+    "other_names": ["Imli", "Tentul", "Tamarind Tree", "Indian Date"],
+    "description": "A long-lived, massive shade tree with a broad rounded canopy of feathery pinnate foliage, weeping branches, and pendulous curved brown pods containing tart, sticky pulp.",
+    "identifying_features": [
+      "Graceful, dense spreading canopy with finely pinnate compound leaves (10-20 pairs of small leaflets)",
+      "Small yellow flowers with red or orange veins borne in lax racemes",
+      "Curved, cinnamon-brown brittle sausage-shaped pods filled with tart, fibrous brown sticky pulp and glossy hard brown seeds"
+    ],
+    "habitat": "Dry tropical savannahs, roadsides, agricultural village borders, and pasture clearings.",
+    "distribution": "Native to tropical Africa; introduced to India millennia ago where it naturalized so deeply that Linnaeus named it 'indica'.",
+    "uses": [
+      "Quintessential souring agent in Indian cuisine for sambar, rasam, imli chutney, and street pani puri",
+      "Tartaric acid pulp traditionally rubbed to polish and restore the shine of brass and copper sacred idols",
+      "Deep, cooling roadside avenue shade tree across national highways"
+    ],
+    "care_tips": [
+      "Requires full direct sun and thrives in deep alluvial or gravelly soils",
+      "Remarkably drought and wind resistant once mature due to immense taproots",
+      "Prune young trees to establish a high central trunk clear of low traffic"
+    ],
+    "toxicity_note": "Completely non-toxic; pulp, tender young leaves, and roasted seeds are edible and safe for humans and animals.",
+    "fun_fact": "The name Tamarind derives from the Arabic 'Tamar-ul-Hind', literally translating to 'Date of India', referencing the dark, sticky, date-like pulp inside the pods.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tamarind"
+  },
+  {
+    "id": 48,
+    "slug": "syzygium-cumini",
+    "common_name": "Jamun",
+    "scientific_name": "Syzygium cumini",
+    "family": "Myrtaceae",
+    "genus": "Syzygium",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "जामुन (Jamun)",
+    "names_bengali": "জাম (Jaam)",
+    "other_names": ["Black Plum", "Java Plum", "Malabar Plum", "Jaam", "Jamun"],
+    "description": "A majestic, fast-growing evergreen tree revered in Indian mythology and Ayurveda, bearing glossy aromatic leaves, fragrant white blossoms, and deep purple-black sweet-astringent berries.",
+    "identifying_features": [
+      "Rough, cracked grey bark and dense rounded evergreen canopy with pink-tinged young flushes",
+      "Opposite, oblong-ovate leathery leaves with a faint turpentine scent when crushed",
+      "Clusters of small fragrant greenish-white flowers with prominent stamens",
+      "Ovoid berry-like drupes turning from green to magenta and finally deep glossy purplish-black with dark staining flesh"
+    ],
+    "habitat": "Riverbanks, moist deciduous forests, marsh edges, and rural avenue roadsides.",
+    "distribution": "Native to the Indian subcontinent and Southeast Asia; sacred tree of Jambudvipa ('continent of the Jamun tree').",
+    "uses": [
+      "Delicious summer fruit eaten fresh with black salt (kala namak) or made into vinegar and juices",
+      "Dried seed powder (Jamun gutli) highly celebrated in Ayurveda for blood sugar management in diabetes TODO(verify)",
+      "Durable, water-resistant timber used for railway sleepers, well-linings, and agricultural tools"
+    ],
+    "care_tips": [
+      "Thrives in rich, moist alluvial soils near canals or river systems, but also tolerates seasonal drought",
+      "Needs full overhead sun for prolific summer fruiting",
+      "Protect ripening fruit from parakeet and bat flocks"
+    ],
+    "toxicity_note": "Non-toxic; fruit and seeds are safe in dietary use. The anthocyanins in fruit heavily stain tongues and clothing dark purple.",
+    "fun_fact": "In ancient Hindu cosmology, the Indian subcontinent was known as 'Jambudvipa' (the Island of the Jambu Trees), named after the abundance of giant Jamun trees.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Syzygium_cumini"
+  },
+  {
+    "id": 49,
+    "slug": "manilkara-zapota",
+    "common_name": "Sapota",
+    "scientific_name": "Manilkara zapota",
+    "family": "Sapotaceae",
+    "genus": "Manilkara",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "चीकू (Chikoo)",
+    "names_bengali": "সবেদা (Sobeda)",
+    "other_names": ["Sapodilla", "Chikoo", "Sobeda", "Naseberry", "Chicle Tree"],
+    "description": "A handsome, slow-growing evergreen tree with dense glossy foliage, famed for its scurfy brown egg-shaped fruit with sweet, brown sugar-flavored malty grainy pulp.",
+    "identifying_features": [
+      "Dense, pyramidal-to-rounded canopy of glossy, dark green elliptic leathery leaves clustered at branch tips",
+      "Copious white gummy milky latex (chicle) throughout bark, stems, and unripe fruit",
+      "Round to oval scurfy brownish-sandpaper fruits containing soft, caramel-sweet brown flesh and 2-5 hard shiny black seeds"
+    ],
+    "habitat": "Coastal tropical plains, warm orchards, and coastal sandy loam plantations.",
+    "distribution": "Native to southern Mexico and Central America; naturalized and massively grown in western India (Gujarat, Maharashtra, Karnataka).",
+    "uses": [
+      "Delectable dessert fruit eaten chilled, blended into thick chikoo milkshakes, or dried into fruit slices",
+      "Historical commercial source of 'chicle', the natural latex gum base used to make chewing gum",
+      "Wind-resistant coastal agroforestry shelterbelt tree"
+    ],
+    "care_tips": [
+      "Requires warm, tropical coastal climate and full sun for sweet fruit development",
+      "Highly adaptable to diverse soils including saline coastal soils and limestone loams",
+      "Water regularly during fruit set; drought-tolerant once established"
+    ],
+    "toxicity_note": "Ripe fruit is non-toxic and wholesome; the hard shiny black seeds have a small sharp hook that can catch in the throat if swallowed whole TODO(verify).",
+    "fun_fact": "The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Manilkara_zapota"
+  },
+  {
+    "id": 50,
+    "slug": "annona-squamosa",
+    "common_name": "Custard apple",
+    "scientific_name": "Annona squamosa",
+    "family": "Annonaceae",
+    "genus": "Annona",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "शरीफा (Sharifa)",
+    "names_bengali": "আতা (Aata)",
+    "other_names": ["Sugar Apple", "Sweetsop", "Sharifa", "Sitaphal", "Aata"],
+    "description": "A small, semi-deciduous tropical fruit tree bearing irregular rounded fruits with a knobby, bumpy scale-like exterior and luscious creamy, fragrant custard-like white segments.",
+    "identifying_features": [
+      "Irregular small branching tree with dull green, lanceolate alternate leaves emitting an odd musky scent when crushed",
+      "Thick, fleshy, three-sided nodding greenish-yellow flowers hanging from leaf axils",
+      "Globose greenish syncarp covered in rounded, protruding knobby fleshy scales that separate when ripe",
+      "Soft, fragrant, sweet creamy-white pulp surrounding numerous smooth, shiny dark-brown to black seeds"
+    ],
+    "habitat": "Dry scrublands, rocky hillsides, homestead gardens, and arid marginal soils.",
+    "distribution": "Native to tropical Americas and West Indies; widely cultivated across central and southern India.",
+    "uses": [
+      "Prized seasonal dessert fruit eaten fresh, blended into Sitaphal ice creams, or pureed into rabdi",
+      "Crushed leaves and seed pastes historically used as traditional lice-deterrent washes and insecticide TODO(verify)",
+      "High natural source of Vitamin C, dietary fiber, magnesium, and potassium"
+    ],
+    "care_tips": [
+      "Thrives in hot, dry climates with excellent soil drainage; cannot tolerate frost or waterlogged roots",
+      "Performs surprisingly well on rocky, gravelly, and low-fertility hillsides",
+      "Harvest fruits when the skin fissures between scales turn pale creamy-white"
+    ],
+    "toxicity_note": "PULP IS EDIBLE. SEEDS AND LEAVES ARE TOXIC: Seeds contain neurotoxic annonacin and acetogenins; crushed seeds cause severe eye inflammation and are toxic if swallowed or chewed. Keep seeds away from children and pets.",
+    "fun_fact": "Custard apple is commonly known as 'Sitaphal' in India, traditionally associated with Sita from the epic Ramayana.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Annona_squamosa"
+  },
+  {
+    "id": 51,
+    "slug": "citrus-limon",
+    "common_name": "Lemon",
+    "scientific_name": "Citrus limon",
+    "family": "Rutaceae",
+    "genus": "Citrus",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "नींबू (Nimbu)",
+    "names_bengali": "লেবু (Lebu)",
+    "other_names": ["Cultivated Lemon", "Nimbu", "Lebu", "Citron", "Kagzi Nimbu"],
+    "description": "A thorny evergreen citrus tree producing fragrant white-and-purple blossoms, glossy leaves with winged petioles, and oval yellow-green fruits filled with sour, acidic juice.",
+    "identifying_features": [
+      "Spreading thorny branches armed with stout, sharp stiff spines in leaf axils",
+      "Elliptic dark green leathery leaves with translucent oil glands that release a sharp citrus fragrance",
+      "Sweetly fragrant white blossoms with purple-flushed petals and yellow stamens",
+      "Ovoid yellow-to-green hesperidium fruits with a mamillate nipple at apex and acidic juice vesicles"
+    ],
+    "habitat": "Sunny orchards, suburban backyards, terrace pots, and warm agricultural valleys.",
+    "distribution": "Native to Northeast India, Northern Myanmar, and China; cultivated ubiquitously across India and the globe.",
+    "uses": [
+      "Indispensable culinary citrus for salads, nimbu pani (lemonade), dal seasonings, and traditional spicy pickles",
+      "Rich source of dietary Vitamin C and citric acid used for digestive drinks and home cleansing",
+      "Essential component of Indian good-luck charms (nimbu-mirchi toran) hung on doors and vehicles"
+    ],
+    "care_tips": [
+      "Requires at least 6-8 hours of direct unfiltered sunlight daily",
+      "Provide light, well-draining sandy loam; avoid wet feet to prevent phytophthora gummosis",
+      "Feed quarterly with citrus-specific micronutrient fertilizers containing zinc, iron, and magnesium"
+    ],
+    "toxicity_note": "Fruit juice and zest are safe; peel essential oils and psoralens can cause phototoxic dermatitis on skin exposed to sun, and are mildly toxic to cats and dogs if consumed in volume TODO(verify).",
+    "fun_fact": "Genetic studies reveal that the cultivated lemon is actually an ancient hybrid between the sour orange (Citrus × aurantium) and the citron (Citrus medica).",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1534533983688-c7b8e83f5b72?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lemon"
+  },
+  {
+    "id": 52,
+    "slug": "tectona-grandis",
+    "common_name": "Teak",
+    "scientific_name": "Tectona grandis",
+    "family": "Lamiaceae",
+    "genus": "Tectona",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "सागौन (Sagwan)",
+    "names_bengali": "সেগুন (Segun)",
+    "other_names": ["Teak Tree", "Sagwan", "Segun", "Sagon", "Burmese Teak"],
+    "description": "A magnificent deciduous tropical hardwood tree famed worldwide for its gigantic rough leaves, huge panicles of tiny white flowers, and unparalleled termite-proof golden-brown timber.",
+    "identifying_features": [
+      "Tall, straight columnar trunk with fibrous, vertically grooved grey-brown bark",
+      "Massive, opposite, rough sandpaper-textured broadly elliptic leaves up to 40-70 cm long",
+      "Immense erect branched terminal panicles held above the canopy bearing thousands of tiny white flowers",
+      "Inflated, bladder-like papery calyx enclosing a hard globose four-celled woody nut"
+    ],
+    "habitat": "Moist and dry deciduous tropical forests, hilly slopes, and managed timber plantations.",
+    "distribution": "Native to India, Myanmar, Laos, and Thailand; iconic heritage timber tree of peninsular India.",
+    "uses": [
+      "World standard luxury timber for shipbuilding, exterior decking, high-end doors, and heirloom furniture",
+      "Exceptional natural resistance to rotting, weathering, termites, and marine borers due to high tectoquinone content",
+      "Traditional folk use of leaf extracts as astringent compresses for skin eruptions TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires vast open forestry plots with deep, well-drained alluvial or basaltic soils",
+      "Needs blazing tropical sunshine and distinct dry and wet monsoon seasons",
+      "Long-term forestry investment requiring 20 to 30 years to reach harvestable heartwood girth"
+    ],
+    "toxicity_note": "Non-toxic in normal contact; fine sawdust from wood processing can cause respiratory irritation, sneezing, or contact dermatitis in woodworkers TODO(verify).",
+    "fun_fact": "Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Teak"
+  },
+  {
+    "id": 53,
+    "slug": "shorea-robusta",
+    "common_name": "Sal",
+    "scientific_name": "Shorea robusta",
+    "family": "Dipterocarpaceae",
+    "genus": "Shorea",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "साल (Saal)",
+    "names_bengali": "শাল (Shaal)",
+    "other_names": ["Sal Tree", "Shala", "Sakhua", "Shaal", "Sakhu"],
+    "description": "A towering, slow-growing hardwood tree dominating the moist deciduous forests of northern and central India, famous for its dense timber, resinous dammar, and winged spiraling seeds.",
+    "identifying_features": [
+      "Tall straight cylindrical bole with thick, dark brown bark deeply furrowed with longitudinal fissures",
+      "Large, leathery, ovate-oblong alternate leaves with a rounded base and prominent parallel lateral veins",
+      "Creamy-white to pale yellowish fragrant flowers borne in large terminal and axillary racemose panicles",
+      "Nut-like fruit surrounded by 5 unequal elongated papery wings that helicopter down during seed dispersal"
+    ],
+    "habitat": "Terai foothills, sub-Himalayan forest belts, central Indian plateau reserves (Chota Nagpur).",
+    "distribution": "Native to the Indian subcontinent (foothills of the Himalayas, eastern and central India).",
+    "uses": [
+      "Heavy-duty timber used extensively for railway ties, structural beams, bridge construction, and mine props",
+      "Leaves stitched into ubiquitous durable traditional dining plates and bowls (patravali / donas)",
+      "Resin (Raal / Sal dammar) burned as sacred temple incense and used in traditional waterproofing"
+    ],
+    "care_tips": [
+      "Suited only for large-scale natural forest conservation and forestry silviculture",
+      "Requires deep, well-aerated sandy loam soils; sensitive to prolonged stagnant waterlogging",
+      "Seeds have extremely short viability (days) and must germinate immediately upon falling at monsoon onset"
+    ],
+    "toxicity_note": "Non-toxic; leaves and resin are safe and traditionally utilized in incense and food serving.",
+    "fun_fact": "According to Buddhist tradition, Queen Maya gave birth to Gautama Buddha under a blooming Sal tree in Lumbini garden, and Buddha passed into Parinirvana beneath a pair of Sal trees in Kushinagar.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Shorea_robusta"
+  },
+  {
+    "id": 54,
+    "slug": "bambusa-vulgaris",
+    "common_name": "Bamboo",
+    "scientific_name": "Bambusa vulgaris",
+    "family": "Poaceae",
+    "genus": "Bambusa",
+    "plant_type": "grass",
+    "origin": "indian",
+    "names_hindi": "बांस (Baans)",
+    "names_bengali": "বাঁশ (Baash)",
+    "other_names": ["Common Bamboo", "Golden Bamboo", "Baans", "Venu", "Green Bamboo"],
+    "description": "A large, vigorous clump-forming giant woody grass with towering hollow culms, gracefully arching feathery foliage, and phenomenal, rapid daily growth rates.",
+    "identifying_features": [
+      "Dense, non-invasive sympodial (clumping) habit with stout, erect hollow culms up to 10-20 m high",
+      "Bright green to golden-yellow culms often striped with dark green vertical bands, ringed with node rings",
+      "Linear-lanceolate leaf blades with rough margins borne on short petioles along clustered branches"
+    ],
+    "habitat": "Tropical riverbanks, moist valleys, village groves, and managed agroforestry plantations.",
+    "distribution": "Native to tropical Asia (Indo-Malayan region); widely naturalized and cultivated pantropically.",
+    "uses": [
+      "Universal green building material ('green gold') for scaffolding, rural housing, fencing, and furniture",
+      "Tender emerging young shoots fermented, boiled, and cooked into savory traditional curries and pickles",
+      "Major industrial raw material for paper pulp manufacturing and eco-friendly textiles"
+    ],
+    "care_tips": [
+      "Requires spacious garden areas or farm boundaries in full sun with plentiful soil moisture",
+      "Prefers rich, humusy loam with good drainage; avoid soggy saline soils",
+      "Thin out older culms (over 3-4 years old) to encourage robust new culm emergence during monsoon"
+    ],
+    "toxicity_note": "Raw emerging bamboo shoots contain cyanogenic glycosides (taxiphyllin) and MUST be thoroughly boiled or fermented to dissipate hydrogen cyanide before eating. Cooked shoots and mature culms are safe.",
+    "fun_fact": "Certain bamboo species can grow up to 90 centimeters (almost 3 feet) in a single 24-hour period during peak monsoon season, making them the fastest-growing woody plants on Earth.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bambusa_vulgaris"
+  },
+  {
+    "id": 55,
+    "slug": "areca-catechu",
+    "common_name": "Areca palm",
+    "scientific_name": "Areca catechu",
+    "family": "Arecaceae",
+    "genus": "Areca",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "सुपारी (Supari)",
+    "names_bengali": "সুপারি (Supari)",
+    "other_names": ["Betel Nut Palm", "Areca Nut", "Supari", "Guva", "Pinang"],
+    "description": "An elegant, tall, solitary feather palm with a slender ringed trunk, a compact crownshaft of dark green pinnate fronds, and hanging clusters of fibrous orange betel nuts.",
+    "identifying_features": [
+      "Extremely slender, perfectly straight columnar trunk reaching 15-25 m tall, marked with prominent pale circular rings",
+      "Neat, smooth olive-green crownshaft bearing a compact crown of arching pinnate fronds with crowded leaflets",
+      "Heavily branched spadix inflorescence emerging below the crownshaft, bearing dozens of oval green-to-orange fibrous nuts"
+    ],
+    "habitat": "Humid coastal belts, tropical valleys, homestead orchards, and high-rainfall Western Ghats plantations.",
+    "distribution": "Native to tropical Asia and the Pacific; cultivated extensively across Kerala, Karnataka, Assam, and West Bengal.",
+    "uses": [
+      "Cured nut (Supari) chewed with betel leaf (Paan), slaked lime, and spices as an age-old social stimulant",
+      "Indispensable sacred offering in Hindu Vedic rituals, pujas, and wedding blessings",
+      "Fallen sheaths molded into eco-friendly biodegradable dining plates and takeout bowls"
+    ],
+    "care_tips": [
+      "Requires high atmospheric humidity, warm tropical temperatures, and abundant year-round water",
+      "Prefers deep, fertile clay loam or lateritic soils with good drainage; cannot endure waterlogging",
+      "Intercropped traditionally with black pepper vines, cardamom, and banana plants for optimal microclimate"
+    ],
+    "toxicity_note": "CARCINOGENIC WHEN CHEWED: Areca nut contains the alkaloid arecoline. The International Agency for Research on Cancer (IARC) classifies areca nut as a Group 1 human carcinogen, strongly linked to oral submucous fibrosis and oral cancer. Chewing is hazardous to health.",
+    "fun_fact": "Betel nut chewing is one of the world's oldest psychoactive traditions, practiced by hundreds of millions of people across South Asia and the Pacific for thousands of years.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Areca_catechu"
+  },
+  {
+    "id": 56,
+    "slug": "phoenix-dactylifera",
+    "common_name": "Date palm",
+    "scientific_name": "Phoenix dactylifera",
+    "family": "Arecaceae",
+    "genus": "Phoenix",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "खजूर (Khajoor)",
+    "names_bengali": "খেজুর (Khejur)",
+    "other_names": ["True Date Palm", "Khajoor", "Khejur", "Pind Khajoor", "Tamar"],
+    "description": "An ancient, rugged desert feather palm with a stout diamond-patterned trunk, stiff grey-green spiny fronds, and heavy pendulous clusters of sweet, energy-rich dates.",
+    "identifying_features": [
+      "Stout columnar trunk up to 20-30 meters tall, covered in the persistent diamond-shaped bases of fallen fronds",
+      "Crown of stiff, arching, greyish-blue-green pinnate fronds with sharp, formidable spines at petiole base",
+      "Dioecious flowering (male and female trees separate); female palms produce heavy pendulous orange-to-brown fruit clusters"
+    ],
+    "habitat": "Arid desert oases, dry riverbeds, semi-arid agricultural lands, and desert margins.",
+    "distribution": "Native to the Fertile Crescent and North Africa; cultivated across arid western India (Rajasthan, Gujarat, Kutch).",
+    "uses": [
+      "Sweet, highly nutritious dried and fresh dates rich in sugars, fiber, iron, and potassium",
+      "Sap tapped in winter from related palms (Phoenix sylvestris) boiled into prized Bengal Khejur Gur (date palm jaggery)",
+      "Fronds used for making mats, baskets, fans, and traditional thatched roofing"
+    ],
+    "care_tips": [
+      "Requires hot, dry desert conditions ('feet in water, head in the fire of heaven') with intense sun",
+      "Highly drought and salinity tolerant once established",
+      "Hand pollination of female inflorescences is commonly practiced in commercial cultivation to ensure high fruit set"
+    ],
+    "toxicity_note": "Non-toxic; fruit is completely wholesome. Caution: base of fronds armed with needle-sharp, rigid spines capable of puncturing skin.",
+    "fun_fact": "Archaeological evidence shows date palm cultivation dating back more than 6,000 years in Mesopotamia, making it one of the oldest cultivated fruit trees in human civilization.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Date_palm"
+  },
+  {
+    "id": 57,
+    "slug": "bombax-ceiba",
+    "common_name": "Silk cotton",
+    "scientific_name": "Bombax ceiba",
+    "family": "Malvaceae",
+    "genus": "Bombax",
+    "plant_type": "tree",
+    "origin": "indian",
+    "names_hindi": "सेमल (Semal)",
+    "names_bengali": "শিমুল (Shimul)",
+    "other_names": ["Red Silk-Cotton Tree", "Semal", "Shimul", "Kapok Tree", "Shalmali"],
+    "description": "A gigantic, dramatic deciduous rainforest tree with massive plank buttress roots, spiny trunk, and blazing scarlet cup-shaped flowers that bloom on bare branches in late winter.",
+    "identifying_features": [
+      "Massive straight trunk with formidable conical prickles on younger bark and colossal buttress root fins at base",
+      "Palmately compound leaves with 5-7 lanceolate leaflets radiating like fingers from a central point",
+      "Spectacular, large fleshy scarlet-red flowers (10-15 cm wide) with recurved petals and a dense cluster of purple-black stamens",
+      "Large woody ellipsoid capsules that burst open when ripe, releasing clouds of fluffy white silky kapok fiber"
+    ],
+    "habitat": "Tropical wet and dry deciduous forests, alluvial flood plains, and rural roadsides.",
+    "distribution": "Native to tropical South Asia and Southeast Asia; widely distributed across the Indian plains.",
+    "uses": [
+      "Silky kapok fiber from seed pods harvested to stuff luxury pillows, cushions, and life vests (naturally buoyant and water-repellent)",
+      "Fleshy flower calyces cooked as a prized seasonal vegetable (Semal ke doke) in northern India",
+      "Ayurvedic gum (Mocharas) and root bark used as cooling tonics and astringents TODO(verify)"
+    ],
+    "care_tips": [
+      "Requires vast acreage due to enormous canopy and massive surface buttress roots",
+      "Plant in full direct sun with deep, moist alluvial or riverbank soil",
+      "Deciduous in winter; drops leaves completely before producing flaming floral canopy in February-March"
+    ],
+    "toxicity_note": "Non-toxic; flowers, young pods, and gum have traditional culinary and medicinal uses. Safe around pets.",
+    "fun_fact": "When in bloom on bare branches, a single Semal tree becomes a bustling wildlife hub, attracting dozens of bird species, fruit bats, and monkeys gorging on abundant nectar.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bombax_ceiba"
+  },
+  {
+    "id": 58,
+    "slug": "samanea-saman",
+    "common_name": "Rain tree",
+    "scientific_name": "Samanea saman",
+    "family": "Fabaceae",
+    "genus": "Samanea",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "विलायती सिरिस (Vilayati Siris)",
+    "names_bengali": "রেইনট্রি (Raintree)",
+    "other_names": ["Monkeypod", "Raintree", "Vilayati Siris", "Saman", "Cow Tamarind"],
+    "description": "A colossal, broad-canopied tropical shade tree forming a massive umbrella crown, famous for its delicate pink powderpuff blooms and leaflets that fold up before rain and dusk.",
+    "identifying_features": [
+      "Colossal umbrella-shaped spreading crown often wider (30-40 m) than the tree is tall",
+      "Bipinnate compound leaves that fold closed in rainy, overcast weather and at sunset (nyctinasty)",
+      "Bicolor fluffy powderpuff flower heads composed of dozens of long stamens, white at base and rosy-pink at tips",
+      "Thick, straight or slightly curved blackish-brown seed pods with sweet, sticky pulp inside"
+    ],
+    "habitat": "Spacious public parks, university campuses, expansive highway avenues, and rural pasture borders.",
+    "distribution": "Native to tropical Central and South America; extensively planted throughout India as a premier canopy shade tree.",
+    "uses": [
+      "Unrivaled urban park shade tree providing cooling canopies covering entire intersections",
+      "Sweet, sticky seed pods avidly eaten by cattle, goats, and horses as nutritious fodder",
+      "Durable, attractively figured hardwood used for artisan carved bowls and furniture"
+    ],
+    "care_tips": [
+      "Plant only in expansive open parks or wide avenues where massive spreading branches have room to expand",
+      "Needs full sun and tolerates diverse soil conditions from moist alluvial to seasonal drought",
+      "Prune young trees to establish strong branch unions free of narrow, weak crotches"
+    ],
+    "toxicity_note": "Non-toxic; sweet pods are safe fodder for animals and safe around humans.",
+    "fun_fact": "The name 'Rain Tree' comes from the phenomenon of its leaflets folding up before rainfall, allowing raindrops to pass directly through the canopy to the ground beneath.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Samanea_saman"
+  },
+  {
+    "id": 59,
+    "slug": "eucalyptus-globulus",
+    "common_name": "Eucalyptus",
+    "scientific_name": "Eucalyptus globulus",
+    "family": "Myrtaceae",
+    "genus": "Eucalyptus",
+    "plant_type": "tree",
+    "origin": "global",
+    "names_hindi": "नीलगिरी (Nilgiri)",
+    "names_bengali": "ইউক্যালিপটাস (Eucalyptus)",
+    "other_names": ["Tasmanian Blue Gum", "Southern Blue Gum", "Nilgiri Tree", "Safeda"],
+    "description": "A towering, fast-growing evergreen tree with peeling shaggy bark, sickle-shaped aromatic blue-green leaves, and pungent cineole-rich medicinal essential oils.",
+    "identifying_features": [
+      "Tall, straight, smooth trunk with peeling ribbons of grey, cream, and brown bark shedding continuously",
+      "Juvenile leaves are broad, silvery-blue and opposite; adult leaves are long, curved, sickle-shaped (falcate) and dark green",
+      "Woody, warty, top-shaped capsules (gum nuts) with a four-valved opening releasing tiny seeds",
+      "Intensely pungent, sharp camphoraceous cineole aroma when foliage is crushed"
+    ],
+    "habitat": "Hill stations, timber plantations, farm boundary windbreaks, and drained marshy lowlands.",
+    "distribution": "Native to southeastern Australia; widely planted in India's Nilgiri Hills, Punjab, and agroforestry sectors.",
+    "uses": [
+      "Steam distillation of leaves produces medicinal Nilgiri oil (eucalyptol) for decongestant balms, inhalants, and throat lozenges",
+      "Rapidly grown commercial timber for paper pulp, cardboard, utility poles, and construction scaffolding",
+      "Planted in waterlogged areas to rapidly lower water tables and help control mosquito breeding"
+    ],
+    "care_tips": [
+      "Requires full direct sunshine and rapid-draining soil; avoid planting near residential foundations or septic systems",
+      "Deep, aggressive root system consumes enormous amounts of water; keep away from shallow garden beds",
+      "Extremely fire-prone due to volatile resinous leaf oils; maintain cleared firebreaks"
+    ],
+    "toxicity_note": "TOXIC INGESTION: Concentrated eucalyptus essential oil is TOXIC if swallowed, causing burning in mouth, vomiting, dizziness, seizures, and respiratory failure, particularly in children and household pets. Diluted topical balms and steam inhalations are safe.",
+    "fun_fact": "The Nilgiri Hills ('Blue Mountains') in Tamil Nadu got their modern blue haze association partly from the vast plantations of blue gum eucalyptus trees introduced there in the mid-19th century.",
+    "reference_images": [
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+    ],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eucalyptus_globulus"
+  }
+]
