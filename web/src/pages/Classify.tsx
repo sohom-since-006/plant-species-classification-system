@@ -18,7 +18,13 @@ import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { useHistoryStore } from '@/features/history/useHistoryStore';
 import { MOCK_SPECIES, getSpeciesById } from '@/data/mockSpecies';
 import { isMockMode } from '@/ml/mock';
-import { runClassificationPipeline, STAGE_LABELS } from '@/ml/pipelineRunner';
+import {
+  runClassificationPipeline,
+  STAGE_LABELS,
+  getOrCreateWorker,
+  getWorkerState,
+  type ModelWorkerState,
+} from '@/ml/pipelineRunner';
 import type { ClassificationResult, SavedPrediction, PipelineStage } from '@/types/prediction';
 import type { Species } from '@/types/species';
 import { ArrowUpRight, History, Leaf } from '@/components/icons';
@@ -73,8 +79,35 @@ export function Classify() {
   const [forcedFixture, setForcedFixture] = useState<number | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
 
+  // Model loading & worker lifecycle state
+  const [workerStatus, setWorkerStatus] = useState<ModelWorkerState>('unloaded');
+  const [workerProgress, setWorkerProgress] = useState(0);
+  const [workerMsg, setWorkerMsg] = useState('');
+  const [workerErr, setWorkerErr] = useState<string | null>(null);
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Eagerly preheat model worker on Classify page mount if not in mock mode
+  useEffect(() => {
+    if (!isMockMode) {
+      try {
+        getOrCreateWorker((progress, message) => {
+          setWorkerProgress(progress);
+          setWorkerMsg(message);
+          setWorkerStatus('loading');
+        });
+        const current = getWorkerState();
+        setWorkerStatus(current.state);
+        setWorkerProgress(current.progress);
+        setWorkerMsg(current.message);
+        setWorkerErr(current.error);
+      } catch (e) {
+        setWorkerStatus('error');
+        setWorkerErr(e instanceof Error ? e.message : String(e));
+      }
+    }
+  }, []);
 
   // Species Lookup Map
   const speciesMap = useMemo(() => {
@@ -109,6 +142,13 @@ export function Classify() {
   }, [photos]);
 
   const addPhoto = (file: File, forcedIdx?: number) => {
+    // Cancel any stale inference run immediately
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+      setIsAnalyzing(false);
+    }
+
     if (photos.length >= 3) {
       showToast('Maximum 3 photos can be combined for multi-organ analysis.');
       return;
@@ -132,6 +172,13 @@ export function Classify() {
   };
 
   const removePhoto = (id: string) => {
+    // Cancel any active inference run immediately
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+      abortControllerRef.current = null;
+      setIsAnalyzing(false);
+    }
+
     setPhotos((prev) => {
       const item = prev.find((p) => p.id === id);
       if (item) URL.revokeObjectURL(item.previewUrl);
@@ -520,6 +567,41 @@ export function Classify() {
               <span className="font-mono">Demo mode: results are simulated (VITE_MOCK_ML=true)</span>
             </div>
             <span className="text-[10px] font-mono uppercase text-amber-300/80">Deterministic Fixtures</span>
+          </div>
+        )}
+
+        {/* Model Loading Progress Banner */}
+        {!isMockMode && workerStatus === 'loading' && (
+          <div className="liquid-glass rounded-2xl p-4 border border-[var(--accent)]/30 bg-[var(--accent)]/10 text-white space-y-2">
+            <div className="flex items-center justify-between text-xs font-mono">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-ping" />
+                <span>Initializing On-Device Model: {workerMsg || 'Downloading neural network...'}</span>
+              </span>
+              <span className="text-[var(--accent)] font-semibold">{Math.round(workerProgress * 100)}%</span>
+            </div>
+            <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+              <div
+                className="bg-[var(--accent)] h-full transition-all duration-300"
+                style={{ width: `${Math.round(workerProgress * 100)}%` }}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Model Error Banner */}
+        {!isMockMode && workerStatus === 'error' && (
+          <div className="liquid-glass rounded-2xl p-4 border border-rose-500/40 bg-rose-950/20 text-rose-200 flex items-center justify-between text-xs">
+            <div className="space-y-0.5">
+              <p className="font-semibold text-rose-100">Failed to initialize on-device neural model</p>
+              <p className="text-[11px] text-rose-200/80">{workerErr || 'Hardware acceleration or WASM initialization failed.'}</p>
+            </div>
+            <button
+              onClick={() => window.location.reload()}
+              className="liquid-glass px-3 py-1.5 rounded-lg border border-rose-400/30 text-rose-100 hover:bg-rose-500/20 font-mono text-[11px]"
+            >
+              Retry
+            </button>
           </div>
         )}
 

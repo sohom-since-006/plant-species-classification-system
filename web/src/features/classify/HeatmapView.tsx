@@ -41,6 +41,7 @@ export function HeatmapView({
   camData,
   gridSize = 7,
 }: HeatmapViewProps) {
+  const [isEnabled, setIsEnabled] = useState(true);
   const [opacity, setOpacity] = useState(0.65);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -74,7 +75,7 @@ export function HeatmapView({
     // Draw base image
     ctx.drawImage(img, 0, 0, width, height);
 
-    if (!camData || camData.length === 0 || opacity <= 0) return;
+    if (!isEnabled || !camData || camData.length === 0 || opacity <= 0) return;
 
     // Create an offscreen low-res canvas for the 7x7 grid
     const offscreen = document.createElement('canvas');
@@ -103,7 +104,7 @@ export function HeatmapView({
     ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(offscreen, 0, 0, width, height);
     ctx.restore();
-  }, [camData, opacity, imageLoaded, gridSize]);
+  }, [camData, opacity, imageLoaded, gridSize, isEnabled]);
 
   return (
     <div className="space-y-6 w-full">
@@ -148,25 +149,54 @@ export function HeatmapView({
         </div>
       </div>
 
-      {/* Opacity Slider Control */}
-      <div className="liquid-glass rounded-2xl p-5 border border-white/10 space-y-3">
-        <div className="flex items-center justify-between text-xs font-body">
-          <label htmlFor="heatmap-opacity" className="font-medium text-white/90">
-            Heatmap Overlay Opacity
-          </label>
-          <span className="font-mono text-[var(--accent)]">{Math.round(opacity * 100)}%</span>
+      {/* Opacity Slider & Toggle Controls */}
+      <div className="liquid-glass rounded-2xl p-5 border border-white/10 space-y-4">
+        <div className="flex items-center justify-between text-xs font-body pb-2 border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <span className="font-medium text-white/90">Attention Overlay</span>
+            <span className="text-[10px] text-white/50 font-mono">
+              ({isEnabled ? 'Enabled' : 'Disabled'})
+            </span>
+          </div>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={isEnabled}
+            onClick={() => setIsEnabled((prev) => !prev)}
+            className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+              isEnabled ? 'bg-[var(--accent)]' : 'bg-white/20'
+            }`}
+          >
+            <span
+              className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${
+                isEnabled ? 'translate-x-4' : 'translate-x-0'
+              }`}
+            />
+          </button>
         </div>
-        <input
-          id="heatmap-opacity"
-          type="range"
-          min="0"
-          max="1"
-          step="0.05"
-          value={opacity}
-          onChange={(e) => setOpacity(parseFloat(e.target.value))}
-          className="w-full accent-[var(--accent)] bg-white/10 h-1.5 rounded-full cursor-pointer"
-          aria-label="Heatmap opacity slider"
-        />
+
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-xs font-body">
+            <label htmlFor="heatmap-opacity" className="font-medium text-white/90">
+              Heatmap Overlay Opacity
+            </label>
+            <span className="font-mono text-[var(--accent)]">
+              {isEnabled ? `${Math.round(opacity * 100)}%` : '0%'}
+            </span>
+          </div>
+          <input
+            id="heatmap-opacity"
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            disabled={!isEnabled}
+            value={opacity}
+            onChange={(e) => setOpacity(parseFloat(e.target.value))}
+            className="w-full accent-[var(--accent)] bg-white/10 h-1.5 rounded-full cursor-pointer disabled:opacity-40"
+            aria-label="Heatmap opacity slider"
+          />
+        </div>
 
         {/* Color Legend */}
         <div className="pt-2 border-t border-white/10 space-y-2">

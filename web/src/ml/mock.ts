@@ -1,9 +1,7 @@
 import type { ClassificationResult } from '@/types/prediction';
 
-/** Whether mock mode is active */
-export const isMockMode =
-  import.meta.env.VITE_MOCK_ML === 'true' ||
-  import.meta.env.VITE_MOCK_ML === undefined;
+/** Whether mock mode is explicitly requested */
+export const isMockMode = import.meta.env.VITE_MOCK_ML === 'true';
 
 /**
  * Fast FNV-1a 32-bit hash function for deterministic fixture selection.

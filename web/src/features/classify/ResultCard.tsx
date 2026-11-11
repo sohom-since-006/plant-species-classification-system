@@ -39,11 +39,11 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
           {/* Species Names */}
           {isUnknown ? (
             <div>
-              <h2 className="font-heading italic text-3xl sm:text-4xl text-white">
-                Unrecognized Specimen
+              <h2 className="font-heading italic text-2xl sm:text-3xl text-white">
+                Not confident this is one of the 112 species
               </h2>
               <p className="font-body text-sm text-white/70 mt-1">
-                Specimen does not match any known botanical class with sufficient confidence.
+                The neural model could not match this specimen to one of the 112 cataloged plant classes with sufficient confidence.
               </p>
             </div>
           ) : (
@@ -70,17 +70,17 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
         </div>
       </div>
 
-      {/* ─── Edge Messages from docs/PRODUCT.md ───────────────────── */}
+      {/* ─── Edge Messages from docs/PRODUCT.md & TRD Section 5 ───── */}
 
-      {/* 1. Unknown / Not a Plant message */}
+      {/* 1. Unknown / Rejected specimen guidance */}
       {isUnknown && (
         <div className="liquid-glass rounded-2xl p-5 border border-amber-500/30 bg-amber-950/15 text-amber-200 space-y-2">
           <div className="flex items-center gap-2 font-medium text-sm text-amber-100">
             <Lightbulb className="w-4 h-4 text-amber-300" />
-            <span>This doesn't look like a plant we know yet.</span>
+            <span>Retake Recommendation</span>
           </div>
           <p className="text-xs leading-relaxed text-amber-200/90 font-light">
-            Our on-device model specializes in 120+ plant species across Indian and global flora. If your photo is blurry, taken in extreme lighting, or contains non-plant objects, try capturing a well-lit close-up of a single leaf or blossom.
+            Tip: For best accuracy, try retaking a clearer photo (leaf close-up, good light, plain background). Below are the top candidate guesses based on visual proximity.
           </p>
         </div>
       )}

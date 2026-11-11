@@ -1,6 +1,6 @@
 {
   "description": "Deterministic PyTorch ground-truth outputs for browser parity verification",
-  "generated_at": "2026-11-11T11:59:32.335128+00:00",
+  "generated_at": "2026-11-11T17:57:48.536021+00:00",
   "temperature": 0.7129,
   "fixtures_count": 10,
   "fixtures": [
