@@ -1,0 +1,618 @@
+{
+  "description": "Deterministic PyTorch ground-truth outputs for browser parity verification",
+  "generated_at": "2026-11-11T11:59:32.335128+00:00",
+  "temperature": 0.7129,
+  "fixtures_count": 10,
+  "fixtures": [
+    {
+      "fixture_id": 1,
+      "filename": "images/golden_01.png",
+      "original_dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 104,
+          "species_id": 104,
+          "common_name": "Chrysanthemum",
+          "scientific_name": "Chrysanthemum indicum",
+          "probability": 0.113368
+        },
+        {
+          "rank": 2,
+          "class_idx": 10,
+          "species_id": 10,
+          "common_name": "Moringa",
+          "scientific_name": "Moringa oleifera",
+          "probability": 0.073989
+        },
+        {
+          "rank": 3,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.070454
+        },
+        {
+          "rank": 4,
+          "class_idx": 7,
+          "species_id": 7,
+          "common_name": "Brahmi",
+          "scientific_name": "Bacopa monnieri",
+          "probability": 0.067937
+        },
+        {
+          "rank": 5,
+          "class_idx": 60,
+          "species_id": 60,
+          "common_name": "Rice",
+          "scientific_name": "Oryza sativa",
+          "probability": 0.059166
+        }
+      ],
+      "embedding_first_8": [
+        -0.21541,
+        -0.126102,
+        -0.11529,
+        -0.161209,
+        -0.225188,
+        0.151107,
+        -0.157007,
+        -0.138647
+      ]
+    },
+    {
+      "fixture_id": 2,
+      "filename": "images/golden_02.png",
+      "original_dimensions": {
+        "width": 320,
+        "height": 240
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.20912
+        },
+        {
+          "rank": 2,
+          "class_idx": 23,
+          "species_id": 23,
+          "common_name": "Lotus",
+          "scientific_name": "Nelumbo nucifera",
+          "probability": 0.052248
+        },
+        {
+          "rank": 3,
+          "class_idx": 106,
+          "species_id": 106,
+          "common_name": "Foxtail orchid",
+          "scientific_name": "Rhynchostylis retusa",
+          "probability": 0.047316
+        },
+        {
+          "rank": 4,
+          "class_idx": 54,
+          "species_id": 54,
+          "common_name": "Bamboo",
+          "scientific_name": "Bambusa vulgaris",
+          "probability": 0.043365
+        },
+        {
+          "rank": 5,
+          "class_idx": 79,
+          "species_id": 79,
+          "common_name": "Jute",
+          "scientific_name": "Corchorus olitorius",
+          "probability": 0.030698
+        }
+      ],
+      "embedding_first_8": [
+        0.053828,
+        -0.147666,
+        -0.246564,
+        -0.086546,
+        -0.204435,
+        1.462199,
+        -0.244802,
+        -0.176158
+      ]
+    },
+    {
+      "fixture_id": 3,
+      "filename": "images/golden_03.png",
+      "original_dimensions": {
+        "width": 240,
+        "height": 320
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 54,
+          "species_id": 54,
+          "common_name": "Bamboo",
+          "scientific_name": "Bambusa vulgaris",
+          "probability": 0.270699
+        },
+        {
+          "rank": 2,
+          "class_idx": 95,
+          "species_id": 95,
+          "common_name": "Lavender",
+          "scientific_name": "Lavandula angustifolia",
+          "probability": 0.069163
+        },
+        {
+          "rank": 3,
+          "class_idx": 57,
+          "species_id": 57,
+          "common_name": "Silk cotton",
+          "scientific_name": "Bombax ceiba",
+          "probability": 0.050747
+        },
+        {
+          "rank": 4,
+          "class_idx": 60,
+          "species_id": 60,
+          "common_name": "Rice",
+          "scientific_name": "Oryza sativa",
+          "probability": 0.044495
+        },
+        {
+          "rank": 5,
+          "class_idx": 25,
+          "species_id": 25,
+          "common_name": "Frangipani",
+          "scientific_name": "Plumeria rubra",
+          "probability": 0.03489
+        }
+      ],
+      "embedding_first_8": [
+        -0.002973,
+        -0.126126,
+        -0.265101,
+        -0.139517,
+        -0.241395,
+        0.477237,
+        -0.22131,
+        -0.207516
+      ]
+    },
+    {
+      "fixture_id": 4,
+      "filename": "images/golden_04.png",
+      "original_dimensions": {
+        "width": 224,
+        "height": 224
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 104,
+          "species_id": 104,
+          "common_name": "Chrysanthemum",
+          "scientific_name": "Chrysanthemum indicum",
+          "probability": 0.150799
+        },
+        {
+          "rank": 2,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.117368
+        },
+        {
+          "rank": 3,
+          "class_idx": 7,
+          "species_id": 7,
+          "common_name": "Brahmi",
+          "scientific_name": "Bacopa monnieri",
+          "probability": 0.111334
+        },
+        {
+          "rank": 4,
+          "class_idx": 63,
+          "species_id": 63,
+          "common_name": "Sugarcane",
+          "scientific_name": "Saccharum officinarum",
+          "probability": 0.065759
+        },
+        {
+          "rank": 5,
+          "class_idx": 60,
+          "species_id": 60,
+          "common_name": "Rice",
+          "scientific_name": "Oryza sativa",
+          "probability": 0.065527
+        }
+      ],
+      "embedding_first_8": [
+        -0.214681,
+        -0.121872,
+        -0.163658,
+        -0.210531,
+        -0.217561,
+        0.548273,
+        -0.154213,
+        -0.13144
+      ]
+    },
+    {
+      "fixture_id": 5,
+      "filename": "images/golden_05.png",
+      "original_dimensions": {
+        "width": 384,
+        "height": 288
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 30,
+          "species_id": 30,
+          "common_name": "Gulmohar",
+          "scientific_name": "Delonix regia",
+          "probability": 0.167872
+        },
+        {
+          "rank": 2,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.140765
+        },
+        {
+          "rank": 3,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.108345
+        },
+        {
+          "rank": 4,
+          "class_idx": 46,
+          "species_id": 46,
+          "common_name": "Jackfruit",
+          "scientific_name": "Artocarpus heterophyllus",
+          "probability": 0.099884
+        },
+        {
+          "rank": 5,
+          "class_idx": 0,
+          "species_id": 0,
+          "common_name": "Tulsi",
+          "scientific_name": "Ocimum tenuiflorum",
+          "probability": 0.082384
+        }
+      ],
+      "embedding_first_8": [
+        -0.149738,
+        -0.134408,
+        -0.154394,
+        -0.133378,
+        -0.206251,
+        -0.003536,
+        -0.177069,
+        -0.136665
+      ]
+    },
+    {
+      "fixture_id": 6,
+      "filename": "images/golden_06.png",
+      "original_dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.08415
+        },
+        {
+          "rank": 2,
+          "class_idx": 6,
+          "species_id": 6,
+          "common_name": "Giloy",
+          "scientific_name": "Tinospora cordifolia",
+          "probability": 0.065599
+        },
+        {
+          "rank": 3,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.060524
+        },
+        {
+          "rank": 4,
+          "class_idx": 0,
+          "species_id": 0,
+          "common_name": "Tulsi",
+          "scientific_name": "Ocimum tenuiflorum",
+          "probability": 0.058649
+        },
+        {
+          "rank": 5,
+          "class_idx": 23,
+          "species_id": 23,
+          "common_name": "Lotus",
+          "scientific_name": "Nelumbo nucifera",
+          "probability": 0.052607
+        }
+      ],
+      "embedding_first_8": [
+        -0.080956,
+        -0.160605,
+        -0.213575,
+        -0.117534,
+        -0.213748,
+        0.951463,
+        -0.23793,
+        -0.179866
+      ]
+    },
+    {
+      "fixture_id": 7,
+      "filename": "images/golden_07.png",
+      "original_dimensions": {
+        "width": 270,
+        "height": 360
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.19761
+        },
+        {
+          "rank": 2,
+          "class_idx": 10,
+          "species_id": 10,
+          "common_name": "Moringa",
+          "scientific_name": "Moringa oleifera",
+          "probability": 0.101597
+        },
+        {
+          "rank": 3,
+          "class_idx": 7,
+          "species_id": 7,
+          "common_name": "Brahmi",
+          "scientific_name": "Bacopa monnieri",
+          "probability": 0.05113
+        },
+        {
+          "rank": 4,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.048434
+        },
+        {
+          "rank": 5,
+          "class_idx": 98,
+          "species_id": 98,
+          "common_name": "Tulip",
+          "scientific_name": "Tulipa gesneriana",
+          "probability": 0.046825
+        }
+      ],
+      "embedding_first_8": [
+        -0.206001,
+        -0.107467,
+        -0.174213,
+        -0.182472,
+        -0.210599,
+        0.170325,
+        -0.179905,
+        -0.17759
+      ]
+    },
+    {
+      "fixture_id": 8,
+      "filename": "images/golden_08.png",
+      "original_dimensions": {
+        "width": 360,
+        "height": 270
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.146353
+        },
+        {
+          "rank": 2,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.10385
+        },
+        {
+          "rank": 3,
+          "class_idx": 46,
+          "species_id": 46,
+          "common_name": "Jackfruit",
+          "scientific_name": "Artocarpus heterophyllus",
+          "probability": 0.078291
+        },
+        {
+          "rank": 4,
+          "class_idx": 10,
+          "species_id": 10,
+          "common_name": "Moringa",
+          "scientific_name": "Moringa oleifera",
+          "probability": 0.063947
+        },
+        {
+          "rank": 5,
+          "class_idx": 107,
+          "species_id": 107,
+          "common_name": "Water hyacinth",
+          "scientific_name": "Pontederia crassipes",
+          "probability": 0.044064
+        }
+      ],
+      "embedding_first_8": [
+        -0.205609,
+        -0.120431,
+        -0.207517,
+        -0.12854,
+        -0.183691,
+        -0.043731,
+        -0.133968,
+        -0.133209
+      ]
+    },
+    {
+      "fixture_id": 9,
+      "filename": "images/golden_09.png",
+      "original_dimensions": {
+        "width": 400,
+        "height": 300
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 30,
+          "species_id": 30,
+          "common_name": "Gulmohar",
+          "scientific_name": "Delonix regia",
+          "probability": 0.086468
+        },
+        {
+          "rank": 2,
+          "class_idx": 56,
+          "species_id": 56,
+          "common_name": "Date palm",
+          "scientific_name": "Phoenix dactylifera",
+          "probability": 0.075204
+        },
+        {
+          "rank": 3,
+          "class_idx": 46,
+          "species_id": 46,
+          "common_name": "Jackfruit",
+          "scientific_name": "Artocarpus heterophyllus",
+          "probability": 0.074143
+        },
+        {
+          "rank": 4,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.06194
+        },
+        {
+          "rank": 5,
+          "class_idx": 0,
+          "species_id": 0,
+          "common_name": "Tulsi",
+          "scientific_name": "Ocimum tenuiflorum",
+          "probability": 0.057175
+        }
+      ],
+      "embedding_first_8": [
+        -0.181133,
+        -0.166007,
+        -0.192161,
+        -0.086493,
+        -0.175575,
+        0.258654,
+        -0.199422,
+        -0.131835
+      ]
+    },
+    {
+      "fixture_id": 10,
+      "filename": "images/golden_10.png",
+      "original_dimensions": {
+        "width": 300,
+        "height": 400
+      },
+      "temperature": 0.7129,
+      "top5_predictions": [
+        {
+          "rank": 1,
+          "class_idx": 39,
+          "species_id": 39,
+          "common_name": "Palash",
+          "scientific_name": "Butea monosperma",
+          "probability": 0.143586
+        },
+        {
+          "rank": 2,
+          "class_idx": 88,
+          "species_id": 88,
+          "common_name": "Boston fern",
+          "scientific_name": "Nephrolepis exaltata",
+          "probability": 0.095873
+        },
+        {
+          "rank": 3,
+          "class_idx": 0,
+          "species_id": 0,
+          "common_name": "Tulsi",
+          "scientific_name": "Ocimum tenuiflorum",
+          "probability": 0.085277
+        },
+        {
+          "rank": 4,
+          "class_idx": 98,
+          "species_id": 98,
+          "common_name": "Tulip",
+          "scientific_name": "Tulipa gesneriana",
+          "probability": 0.079967
+        },
+        {
+          "rank": 5,
+          "class_idx": 27,
+          "species_id": 27,
+          "common_name": "Bougainvillea",
+          "scientific_name": "Bougainvillea spectabilis",
+          "probability": 0.042792
+        }
+      ],
+      "embedding_first_8": [
+        -0.182475,
+        -0.114176,
+        -0.222576,
+        -0.181235,
+        -0.209188,
+        -0.033899,
+        -0.211541,
+        -0.175206
+      ]
+    }
+  ]
+}
