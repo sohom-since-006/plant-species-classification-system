@@ -59,7 +59,7 @@ ml_k      = probs[k]
 visual_k  = clamp((cos(embedding, centroid_k) - 0.30) / 0.70, 0, 1)
 final_k   = 0.6 * ml_k + 0.4 * visual_k
 ```
-Rank by `final_k`; show the top 3-5 with all three percentages. Species in the same genus get +0.05 (capped at 1). Centroids are the mean test-set embeddings per class, computed by `05_export_onnx.py` and saved to `centroids.json`. Weights are configurable in `model_meta.json`.
+Rank by `final_k`; show the top 3-5 with all three percentages. Species in the same genus get +0.05 (capped at 1). Centroids are the mean training-set embeddings per class, computed by `04_evaluate.py` / `05_export_onnx.py` and saved to `centroids.json`. Weights are configurable in `model_meta.json`.
 
 ## 7. Attention Heatmap
 The head is global-average-pool plus linear, so the class activation map is exact:
