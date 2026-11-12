@@ -9,6 +9,7 @@ import {
 } from '@/services/speciesService';
 import { ResultCard } from '@/features/classify/ResultCard';
 import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
+import { MOCK_FIXTURES } from '@/ml/mock';
 import type { ClassificationResult } from '@/types/prediction';
 
 describe('Species Resolution and Content Completeness', () => {
@@ -124,5 +125,49 @@ describe('SimilarSpecies Component with Real Species', () => {
 
     expect(screen.queryByText(/Species #/)).not.toBeInTheDocument();
     expect(screen.getByText('Terminalia arjuna')).toBeInTheDocument();
+  });
+
+  it('renders "Not confident this is one of the 112 species" for pebble / non-plant fixture 3', () => {
+    const pebbleResult = MOCK_FIXTURES[3]!;
+    const topSpecies = getSpeciesById(pebbleResult.top3[0]!.speciesId);
+    const candidateSpecies = pebbleResult.top3.map((p) => getSpeciesById(p.speciesId));
+
+    render(
+      <MemoryRouter>
+        <ResultCard
+          result={pebbleResult}
+          topSpecies={topSpecies}
+          candidateSpecies={candidateSpecies}
+        />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Not confident this is one of the 112 species')).toBeInTheDocument();
+    expect(screen.getByText('Unknown')).toBeInTheDocument();
+    expect(
+      screen.getByText(/The neural model could not match this specimen to one of the 112 cataloged plant classes with sufficient confidence./)
+    ).toBeInTheDocument();
+  });
+
+  it('renders Sweet Basil fixture 2 with Low tier, 52% confidence and genus fallback banner', () => {
+    const basilResult = MOCK_FIXTURES[2]!;
+    const topSpecies = getSpeciesById(basilResult.top3[0]!.speciesId);
+    const candidateSpecies = basilResult.top3.map((p) => getSpeciesById(p.speciesId));
+
+    render(
+      <MemoryRouter>
+        <ResultCard
+          result={basilResult}
+          topSpecies={topSpecies}
+          candidateSpecies={candidateSpecies}
+        />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Sweet basil')).toBeInTheDocument();
+    expect(screen.getByText('Ocimum basilicum')).toBeInTheDocument();
+    expect(screen.getByText('Low')).toBeInTheDocument();
+    expect(screen.getByText('52.0%')).toBeInTheDocument();
+    expect(screen.getByText(/Likely genus Ocimum/)).toBeInTheDocument();
   });
 });
