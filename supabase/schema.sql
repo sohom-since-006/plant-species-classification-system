@@ -4,7 +4,7 @@
 create extension if not exists "pgcrypto";
 
 -- 1. Species Catalog (Single source of truth for botanical taxonomy & content)
-create table public.species (
+create table if not exists public.species (
   id                   int primary key,              -- matches class index in labels.json (0..111)
   slug                 text unique not null,
   common_name          text not null,
@@ -31,7 +31,7 @@ create table public.species (
 );
 
 -- 2. Species Look-Alikes (Curated "how to tell apart" pairs)
-create table public.species_look_alikes (
+create table if not exists public.species_look_alikes (
   species_id        int references public.species(id) on delete cascade,
   look_alike_id     int references public.species(id) on delete cascade,
   how_to_tell_apart text not null,
@@ -40,7 +40,7 @@ create table public.species_look_alikes (
 );
 
 -- 3. User Profiles (Extends auth.users, optional account sync)
-create table public.profiles (
+create table if not exists public.profiles (
   id           uuid primary key references auth.users(id) on delete cascade,
   display_name text,
   theme        text default 'dark' check (theme in ('dark','light')),
@@ -48,7 +48,7 @@ create table public.profiles (
 );
 
 -- 4. Model Versions (Tracks accuracy, calibration, and training metadata)
-create table public.model_versions (
+create table if not exists public.model_versions (
   version     text primary key,
   top1        numeric,
   top5        numeric,
@@ -60,23 +60,24 @@ create table public.model_versions (
 );
 
 -- 5. Saved Predictions (Field history for logged-in users)
-create table public.predictions (
+-- Note: "similar" is quoted because SIMILAR is a reserved SQL keyword in PostgreSQL
+create table if not exists public.predictions (
   id            uuid primary key default gen_random_uuid(),
   user_id       uuid not null references auth.users(id) on delete cascade,
   species_id    int references public.species(id),
   confidence    numeric not null check (confidence between 0 and 1),
   tier          text not null check (tier in ('high','medium','low','unknown')),
   top3          jsonb not null,            -- [{species_id, prob}]
-  similar       jsonb,                     -- [{species_id, ml, visual, final}]
+  "similar"     jsonb,                     -- [{species_id, ml, visual, final}]
   image_path    text,                      -- storage path, nullable (opt-in)
   model_version text references public.model_versions(version),
   created_at    timestamptz default now()
 );
 
-create index on public.predictions (user_id, created_at desc);
+create index if not exists idx_predictions_user_created on public.predictions (user_id, created_at desc);
 
 -- 6. User Feedback / Ground Truth Corrections (Guests allowed, rate-limited)
-create table public.feedback (
+create table if not exists public.feedback (
   id                uuid primary key default gen_random_uuid(),
   user_id           uuid references auth.users(id) on delete set null,
   predicted_species int references public.species(id),
@@ -100,45 +101,55 @@ alter table public.predictions          enable row level security;
 alter table public.feedback             enable row level security;
 
 -- Public read-only reference data
+drop policy if exists "species readable" on public.species;
 create policy "species readable"
   on public.species for select
   using (true);
 
+drop policy if exists "lookalikes readable" on public.species_look_alikes;
 create policy "lookalikes readable"
   on public.species_look_alikes for select
   using (true);
 
+drop policy if exists "models readable" on public.model_versions;
 create policy "models readable"
   on public.model_versions for select
   using (true);
 
 -- User profiles: own row only
+drop policy if exists "profile select own" on public.profiles;
 create policy "profile select own"
   on public.profiles for select
   using (auth.uid() = id);
 
+drop policy if exists "profile upsert own" on public.profiles;
 create policy "profile upsert own"
   on public.profiles for insert
   with check (auth.uid() = id);
 
+drop policy if exists "profile update own" on public.profiles;
 create policy "profile update own"
   on public.profiles for update
   using (auth.uid() = id);
 
 -- Predictions: per-user isolation
+drop policy if exists "pred select own" on public.predictions;
 create policy "pred select own"
   on public.predictions for select
   using (auth.uid() = user_id);
 
+drop policy if exists "pred insert own" on public.predictions;
 create policy "pred insert own"
   on public.predictions for insert
   with check (auth.uid() = user_id);
 
+drop policy if exists "pred delete own" on public.predictions;
 create policy "pred delete own"
   on public.predictions for delete
   using (auth.uid() = user_id);
 
 -- Feedback: guests & users may submit, client read disabled
+drop policy if exists "feedback insert" on public.feedback;
 create policy "feedback insert"
   on public.feedback for insert
   with check (user_id is null or auth.uid() = user_id);
@@ -149,14 +160,17 @@ create policy "feedback insert"
 
 -- Bucket `uploads`: private, max 5 MB per object, allowed types image/jpeg, image/png, image/webp
 -- Path format: {user_id}/{uuid}.jpg
+drop policy if exists "uploads insert own" on storage.objects;
 create policy "uploads insert own"
   on storage.objects for insert
   with check (bucket_id = 'uploads' and (storage.foldername(name))[1] = auth.uid()::text);
 
+drop policy if exists "uploads read own" on storage.objects;
 create policy "uploads read own"
   on storage.objects for select
   using (bucket_id = 'uploads' and (storage.foldername(name))[1] = auth.uid()::text);
 
+drop policy if exists "uploads delete own" on storage.objects;
 create policy "uploads delete own"
   on storage.objects for delete
   using (bucket_id = 'uploads' and (storage.foldername(name))[1] = auth.uid()::text);

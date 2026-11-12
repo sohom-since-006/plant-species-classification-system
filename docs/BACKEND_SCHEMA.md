@@ -66,7 +66,7 @@ create table public.predictions (
   confidence    numeric not null check (confidence between 0 and 1),
   tier          text not null check (tier in ('high','medium','low','unknown')),
   top3          jsonb not null,            -- [{species_id, prob}]
-  similar       jsonb,                     -- [{species_id, ml, visual, final}]
+  "similar"     jsonb,                     -- [{species_id, ml, visual, final}] (quoted: 'similar' is a reserved SQL keyword)
   image_path    text,                      -- storage path, nullable (opt-in)
   model_version text references public.model_versions(version),
   created_at    timestamptz default now()
