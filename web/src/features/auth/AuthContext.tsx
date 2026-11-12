@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useContext } from 'react';
 import type { User, Session } from '@supabase/supabase-js';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
+import { ToastContext } from '@/components/ui/toastContext';
 import { AuthContext, type AuthContextValue } from './authTypes';
 
 const GUEST_KEY = 'plant_guest_mode_enabled';
@@ -15,7 +16,36 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   });
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
+  const toastCtx = useContext(ToastContext);
+  const showToast = toastCtx?.showToast;
+
   useEffect(() => {
+    // Handle auth callback redirect fragments (e.g. from email verification or error)
+    if (typeof window !== 'undefined' && window.location.hash) {
+      try {
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        const errorDesc = params.get('error_description');
+        const tokenType = params.get('type');
+
+        if (errorDesc) {
+          const cleanDesc = decodeURIComponent(errorDesc.replace(/\+/g, ' '));
+          showToast?.(cleanDesc, 'error');
+          // Clean the error fragment from the address bar
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        } else if (tokenType === 'signup' || tokenType === 'email_change') {
+          showToast?.('Email verified successfully! Welcome to PlantAI.', 'success');
+          setTimeout(() => {
+            if (window.location.hash) {
+              window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+          }, 600);
+        }
+      } catch {
+        // Ignore URL parsing errors
+      }
+    }
+
     if (!supabase || !isSupabaseConfigured) {
       setLoading(false);
       return;
@@ -27,6 +57,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(initialSession?.user ?? null);
       if (initialSession?.user) {
         setIsGuest(false);
+        localStorage.removeItem(GUEST_KEY);
       }
       setLoading(false);
     });
@@ -39,6 +70,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(currentSession?.user ?? null);
       if (currentSession?.user) {
         setIsGuest(false);
+        localStorage.removeItem(GUEST_KEY);
       }
       setLoading(false);
     });
@@ -46,7 +78,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     return () => {
       subscription.unsubscribe();
     };
-  }, []);
+  }, [showToast]);
 
   const signInWithEmail = useCallback(async (email: string, pass: string) => {
     if (!supabase || !isSupabaseConfigured) {
@@ -68,10 +100,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!supabase || !isSupabaseConfigured) {
       return { error: 'Supabase is not configured or in offline mode.' };
     }
+
+    // Dynamically route email confirmation to the active deployment origin
+    const emailRedirectTo =
+      typeof window !== 'undefined' && window.location.origin
+        ? `${window.location.origin}/`
+        : undefined;
+
     const { error } = await supabase.auth.signUp({
       email,
       password: pass,
       options: {
+        emailRedirectTo,
         data: {
           name: displayName || email.split('@')[0],
         },

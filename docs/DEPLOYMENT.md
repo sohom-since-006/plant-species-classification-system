@@ -24,6 +24,14 @@ Execute the following in your Supabase project's **SQL Editor** in exact order:
 2. **Species Reference Data**:
    - Run [`supabase/seed.sql`](file:///supabase/seed.sql)
    - Populates reference catalog of 112 Indian botanical species with taxonomies, regional vernacular names, and look-alikes.
+3. **Authentication & URL Configuration (Critical for Email Confirmation & Redirects)**:
+   - In the Supabase Dashboard, navigate to **Authentication > URL Configuration**.
+   - Set **Site URL** to your production URL: `https://plantai-ecru.vercel.app` (never leave this as `http://localhost:3000`).
+   - Under **Redirect URLs**, add the following allow-list patterns:
+     - `https://plantai-ecru.vercel.app/**`
+     - `https://*.vercel.app/**` (for preview deployments)
+     - `http://localhost:5173/**` (for local development)
+   - *Why this is mandatory*: When users sign up, Supabase sends a verification email. If your production URL is not in Supabase's allow-list, Supabase rejects the client's `emailRedirectTo` and falls back to `http://localhost:3000`, causing "localhost refused to connect" errors upon email confirmation.
 
 ---
 
