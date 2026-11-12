@@ -135,7 +135,7 @@ insert into public.species (
   false,
   'Ancient Egyptian murals referred to Aloe vera as the ''plant of immortality'', and Cleopatra reportedly used its gel in her daily skincare regimen.',
   ARRAY['/species/2.webp']::text[],
-  '{"observer":"Steven Mlodinow","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/625536592/original.jpg"}'::jsonb,
+  '{"observer":"coralito_00","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620627610/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aloe_vera'
 ) on conflict (id) do update set
   slug = excluded.slug,

@@ -65,3 +65,4 @@ for (const file of files) {
 }
 
 console.log('All species_data JSON files updated with local /species/{id}.webp, image_credit, and is_toxic.');
+
