@@ -62,7 +62,7 @@ export function UserHistoryStats() {
   // Loading skeleton
   if (authLoading || historyLoading) {
     return (
-      <div className="space-y-6" aria-busy="true" aria-label="Loading personal scan telemetry">
+      <div className="space-y-6" aria-busy="true" role="status" aria-label="Loading personal scan telemetry">
         <div className="flex items-center justify-between">
           <Skeleton className="h-8 w-64 rounded-lg" />
           <Skeleton className="h-4 w-32 rounded-lg" />

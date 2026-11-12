@@ -628,6 +628,7 @@ export function Classify() {
         ref={fileInputRef}
         type="file"
         accept="image/jpeg,image/png,image/webp"
+        aria-label="Add photo to multi-photo tray"
         onChange={(e) => {
           const file = e.target.files?.[0];
           if (file) addPhoto(file);

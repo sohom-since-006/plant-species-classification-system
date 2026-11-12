@@ -32,7 +32,13 @@ export function BatchModeSection() {
     const remainingSlots = Math.max(0, 10 - items.length);
     if (remainingSlots === 0) return;
 
-    const fileArray = Array.from(files).slice(0, remainingSlots);
+    const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+    const MAX_BYTES = 10 * 1024 * 1024; // 10 MB
+
+    const fileArray = Array.from(files)
+      .filter((file) => ALLOWED_TYPES.includes(file.type) && file.size <= MAX_BYTES)
+      .slice(0, remainingSlots);
+
     const newItems: BatchItem[] = fileArray.map((file, idx) => ({
       id: `${Date.now()}_${idx}_${file.name}`,
       file,
@@ -194,6 +200,7 @@ export function BatchModeSection() {
             type="file"
             multiple
             accept="image/jpeg,image/png,image/webp"
+            aria-label="Upload batch plant images"
             className="hidden"
             onChange={(e) => handleFilesSelected(e.target.files)}
           />

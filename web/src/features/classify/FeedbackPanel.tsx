@@ -26,6 +26,7 @@ export function FeedbackPanel({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
   // All cataloged 112 species for correction picker
   const allSpecies = useMemo(() => getAllSpecies(), []);
@@ -45,6 +46,11 @@ export function FeedbackPanel({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!rating) return;
+
+    if (Date.now() - lastSubmitTime < 5000) {
+      showToast('Please wait a few seconds before submitting another feedback entry.');
+      return;
+    }
 
     setIsSubmitting(true);
     setErrorMessage(null);
@@ -73,10 +79,12 @@ export function FeedbackPanel({
       }
 
       setIsSubmitted(true);
+      setLastSubmitTime(Date.now());
       showToast('Thank you! Your feedback helps calibrate botanical classification.');
     } catch (err) {
       console.warn('Feedback submission offline fallback:', err);
       setIsSubmitted(true);
+      setLastSubmitTime(Date.now());
       showToast('Feedback logged locally.');
     } finally {
       setIsSubmitting(false);
