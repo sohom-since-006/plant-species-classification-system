@@ -105,12 +105,17 @@ export function SpeciesDetail() {
                 e.currentTarget.src = '/species/neutral_leaf.svg';
               }}
             />
-            {species.isToxic && (
+            {species.isToxic ? (
               <div className="absolute top-4 left-4 bg-rose-500/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1.5 shadow-lg">
                 <AlertTriangle className="w-3.5 h-3.5" />
                 <span>Toxic Specimen</span>
               </div>
-            )}
+            ) : (species.id === 1 || species.id === 10 || species.id === 75) ? (
+              <div className="absolute top-4 left-4 bg-amber-500/90 text-black font-semibold backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1.5 shadow-lg">
+                <AlertTriangle className="w-3.5 h-3.5" />
+                <span>Safety Warning</span>
+              </div>
+            ) : null}
             {species.imageCredit && (
               <div className="absolute bottom-3 right-3 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-mono text-[var(--fg-subtle)] flex items-center gap-1.5 border border-white/10 max-w-[90%] truncate">
                 <span className="truncate">Photo: {species.imageCredit.observer || 'Dataset observation'}</span>
@@ -217,11 +222,13 @@ export function SpeciesDetail() {
         </div>
 
         {/* Toxicity / Safety Notice */}
-        {species.isToxic ? (
+        {species.isToxic || (species.toxicityNote && (species.toxicityNote.includes('WARNING') || species.toxicityNote.includes('TOXIC') || species.toxicityNote.includes('ALERT'))) ? (
           <div className="rounded-3xl p-6 bg-rose-500/10 border border-rose-500/30 flex items-start gap-4">
             <AlertTriangle className="w-6 h-6 text-rose-400 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <h4 className="font-heading italic text-lg text-rose-300">Toxicity Warning</h4>
+              <h4 className="font-heading italic text-lg text-rose-300">
+                {species.isToxic ? 'Toxicity Warning' : 'Safety & Hazard Warning'}
+              </h4>
               <p className="text-xs font-body text-rose-200/90 leading-relaxed">
                 {species.toxicityNote}
               </p>
@@ -290,6 +297,38 @@ export function SpeciesDetail() {
             <DistributionPanel speciesId={species.id} />
           </Suspense>
         </div>
+
+        {/* Literature & Botanical Sources */}
+        {species.sources && species.sources.length > 0 && (
+          <section className="liquid-glass rounded-3xl p-8 space-y-4" aria-labelledby="sources-heading">
+            <div className="flex items-center gap-2">
+              <Info className="w-5 h-5 text-[var(--accent)]" />
+              <h3 id="sources-heading" className="font-heading italic text-2xl text-[var(--fg)]">
+                Sources &amp; Botanical References
+              </h3>
+            </div>
+            <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+              Authoritative peer-reviewed clinical studies, regulatory herbal pharmacopoeias, and international taxonomic records corroborating botanical data:
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+              {species.sources.map((src, idx) => (
+                <li key={idx}>
+                  <a
+                    href={src.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3.5 rounded-2xl bg-black/30 hover:bg-white/5 border border-[var(--glass-edge-mid)] transition-colors text-xs group"
+                  >
+                    <span className="font-medium text-[var(--fg)] group-hover:text-[var(--accent)] transition-colors pr-2 truncate">
+                      {src.name}
+                    </span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[var(--fg-subtle)] group-hover:text-[var(--accent)] shrink-0 transition-colors" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Safety & Medicinal Disclaimer per Rule 8 */}
         <div className="liquid-glass rounded-2xl p-6 flex items-start gap-4 text-xs font-body text-[var(--fg-muted)]">

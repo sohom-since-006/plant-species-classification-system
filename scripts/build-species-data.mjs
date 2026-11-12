@@ -226,6 +226,7 @@ export function buildAndValidateSpeciesData() {
       referenceImages: s.reference_images || [],
       imageCredit: s.image_credit || null,
       wikipediaUrl: s.wikipedia_url || null,
+      sources: s.sources || [],
     };
 
     clientSpeciesMap[id] = clientRecord;
@@ -257,7 +258,7 @@ export function buildAndValidateSpeciesData() {
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url, sources
 ) values (
   ${s.id},
   ${sqlEscape(s.slug)},
@@ -281,7 +282,8 @@ export function buildAndValidateSpeciesData() {
   ${sqlEscape(s.fun_fact)},
   ${sqlArray(s.reference_images)},
   ${s.image_credit ? sqlEscape(JSON.stringify(s.image_credit)) + '::jsonb' : 'null'},
-  ${sqlEscape(s.wikipedia_url)}
+  ${sqlEscape(s.wikipedia_url)},
+  ${s.sources && s.sources.length > 0 ? sqlEscape(JSON.stringify(s.sources)) + '::jsonb' : "'[]'::jsonb"}
 ) on conflict (id) do update set
   slug = excluded.slug,
   common_name = excluded.common_name,
@@ -304,7 +306,8 @@ export function buildAndValidateSpeciesData() {
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
   image_credit = excluded.image_credit,
-  wikipedia_url = excluded.wikipedia_url;
+  wikipedia_url = excluded.wikipedia_url,
+  sources = excluded.sources;
 `);
   }
 

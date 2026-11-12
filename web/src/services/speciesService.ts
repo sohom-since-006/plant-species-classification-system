@@ -162,6 +162,7 @@ export async function fetchSpeciesById(id: number): Promise<Species> {
           referenceImages: data.reference_images || [],
           imageCredit: (data.image_credit as Species['imageCredit']) || null,
           wikipediaUrl: data.wikipedia_url,
+          sources: (data.sources as unknown as Species['sources']) || [],
         };
       }
     } catch {

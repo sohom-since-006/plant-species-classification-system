@@ -77,4 +77,59 @@ describe('Species Data & Image Integrity', () => {
       }
     }
   });
+
+  it('verifies fact-check integrity: 0 TODO(verify), no curative claims, and literature sources populated', () => {
+    const rawText = JSON.stringify(speciesData);
+    expect(rawText).not.toContain('TODO(verify)');
+
+    // Forbidden medical claims
+    for (let id = 0; id < 112; id++) {
+      const sp = speciesData[String(id)];
+      if (!sp) continue;
+      const combined = [sp.toxicityNote || '', ...sp.uses].join(' ');
+      expect(combined).not.toMatch(/\b(treats|treating|cures|curing|proven)\b/i);
+    }
+
+    // Periwinkle (31) check
+    const periwinkle = speciesData['31'];
+    expect(periwinkle).toBeDefined();
+    if (periwinkle) {
+      expect(periwinkle.isToxic).toBe(true);
+      expect(periwinkle.toxicityNote).toContain('CRITICAL TOXICITY WARNING');
+      expect(periwinkle.toxicityNote).toContain('contraindicated');
+      for (const use of periwinkle.uses) {
+        expect(use.toLowerCase()).not.toContain('diabetes');
+        expect(use.toLowerCase()).not.toContain('blood sugar');
+      }
+    }
+
+    // Key toxic and warning species check
+    const oleander = speciesData['26'];
+    expect(oleander?.isToxic).toBe(true);
+    expect(oleander?.toxicityNote).toMatch(/DEADLY TOXIC/i);
+
+    const bottleGourd = speciesData['75'];
+    expect(bottleGourd?.toxicityNote).toMatch(/CRITICAL TOXICITY WARNING/i);
+    expect(bottleGourd?.toxicityNote).toMatch(/cucurbitacins/i);
+
+    const neem = speciesData['1'];
+    expect(neem?.toxicityNote).toMatch(/SAFETY ALERT & PEDIATRIC TOXICITY WARNING/i);
+
+    const moringa = speciesData['10'];
+    expect(moringa?.toxicityNote).toMatch(/spirochin/i);
+
+    // Verify sources array presence
+    let speciesWithSources = 0;
+    for (let id = 0; id < 112; id++) {
+      const sp = speciesData[String(id)];
+      if (sp && sp.sources && sp.sources.length > 0) {
+        speciesWithSources++;
+        for (const src of sp.sources) {
+          expect(src.name).toBeDefined();
+          expect(src.url.startsWith('http')).toBe(true);
+        }
+      }
+    }
+    expect(speciesWithSources).toBeGreaterThanOrEqual(65);
+  });
 });

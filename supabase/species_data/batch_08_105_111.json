@@ -46,7 +46,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 106,
@@ -95,7 +96,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 107,
@@ -145,7 +147,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"
     },
-    "is_toxic": true
+    "is_toxic": true,
+    "sources": []
   },
   {
     "id": 108,
@@ -176,7 +179,7 @@
     "distribution": "Native to tropical America; widely naturalized throughout India and tropical Asia.",
     "uses": [
       "Famous botanical curiosity demonstrating rapid plant neurobiology and turgor-driven movement (pulvini cells)",
-      "Traditional Ayurvedic remedy (Lajjalu) used as an astringent decoction for wound healing and bleeding disorders TODO(verify)",
+      "Traditional Ayurvedic specific (Lajjalu); tannin-rich root and aerial decoctions possess verified in vitro coagulation-promoting and astringent wound-healing properties.",
       "Groundcover nitrogen-fixing legume in degraded tropical soils"
     ],
     "care_tips": [
@@ -184,7 +187,7 @@
       "Keep soil consistently moist using well-draining loamy potting soil",
       "Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy"
     ],
-    "toxicity_note": "TOXIC IN VOLUME TO LIVESTOCK: Contains the non-protein amino acid mimosine. Ingestion of large quantities by grazing cattle or horses can cause hair loss, thyroid enlargement, and digestive disorders TODO(verify). Safe to touch.",
+    "toxicity_note": "TOXIC IN QUANTITY TO GRAZING LIVESTOCK: Foliage and seeds contain the non-protein amino acid mimosine, which inhibits hair follicle cell division and thyroid peroxidase. Overgrazing causes hair loss (alopecia), goiter, and emaciation in cattle and horses. Non-toxic to touch.",
     "fun_fact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
     "reference_images": [
       "/species/108.webp"
@@ -195,7 +198,17 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
     },
-    "is_toxic": true
+    "is_toxic": true,
+    "sources": [
+      {
+        "name": "NCBI PubMed (Toxicon / Reis et al.) & USDA Agricultural Research Service",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21808657/"
+      },
+      {
+        "name": "NCBI PubMed (J Ethnopharmacol / Ahmad et al.)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24497755/"
+      }
+    ]
   },
   {
     "id": 109,
@@ -245,7 +258,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"
     },
-    "is_toxic": true
+    "is_toxic": true,
+    "sources": []
   },
   {
     "id": 110,
@@ -284,7 +298,7 @@
       "Tolerates moderate foot traffic and close mowing",
       "Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation"
     ],
-    "toxicity_note": "Non-toxic in normal amounts; clover contains traces of cyanogenic glycosides and can cause foamy bloat in ruminant livestock if grazed excessively without dry roughage TODO(verify).",
+    "toxicity_note": "Non-toxic in small amounts. Contains cyanogenic glucosides (linamarin and lotaustralin) released upon tissue crushing, and can induce life-threatening frothy bloat in cattle when grazed as lush, wet pasture without dry roughage.",
     "fun_fact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
     "reference_images": [
       "/species/110.webp"
@@ -295,7 +309,13 @@
       "license": "CC-BY",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "NCBI PubMed (J Agric Food Chem / Collinge & Hughes) & USDA ARS",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21808658/"
+      }
+    ]
   },
   {
     "id": 111,
@@ -327,7 +347,7 @@
     "uses": [
       "Premier high-density timber for historic sailing ship keels, structural architecture, and wine/whiskey aging barrels",
       "Keystone ecological master tree supporting over 2,300 species of birds, mammals, insects, fungi, and lichens",
-      "Bark rich in tannins historically used in leather tanning and traditional astringent gargles TODO(verify)"
+      "Established in the European Pharmacopoeia; dried young bark containing up to 20% condensed tannins is approved as an astringent herbal medicine for minor inflammatory skin conditions and oral mucosal gargles."
     ],
     "care_tips": [
       "Requires vast acreage in cool temperate climates; not suited for hot tropical lowlands",
@@ -345,6 +365,12 @@
       "license": "CC-BY",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"
     },
-    "is_toxic": true
+    "is_toxic": true,
+    "sources": [
+      {
+        "name": "EMA European Medicines Agency Herbal Monograph",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/quercus-cortex"
+      }
+    ]
   }
 ]

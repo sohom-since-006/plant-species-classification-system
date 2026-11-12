@@ -1,6 +1,11 @@
 export type PlantType = 'herb' | 'shrub' | 'tree' | 'climber' | 'grass' | 'succulent' | 'aquatic' | 'crop' | 'epiphyte';
 export type Origin = 'indian' | 'global' | 'both';
 
+export interface SpeciesSource {
+  name: string;
+  url: string;
+}
+
 export interface Species {
   id: number;
   slug: string;
@@ -29,6 +34,7 @@ export interface Species {
     source_url?: string;
   } | null;
   wikipediaUrl: string | null;
+  sources?: SpeciesSource[];
 }
 
 export interface SpeciesLookAlike {

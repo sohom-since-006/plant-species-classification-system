@@ -31,6 +31,7 @@ export function mapDbSpeciesToClient(row: DbSpeciesRow): Species {
     referenceImages: row.reference_images || [],
     imageCredit: (row.image_credit as Species['imageCredit']) || null,
     wikipediaUrl: row.wikipedia_url,
+    sources: (row.sources as unknown as Species['sources']) || [],
   };
 }
 

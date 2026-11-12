@@ -535,11 +535,13 @@ export function Classify() {
                 )}
 
                 {/* Toxicity / Safety Note */}
-                {topSpecies.isToxic ? (
+                {topSpecies.isToxic || (topSpecies.toxicityNote && (topSpecies.toxicityNote.includes('WARNING') || topSpecies.toxicityNote.includes('ALERT') || topSpecies.toxicityNote.includes('TOXIC'))) ? (
                   <div className="liquid-glass rounded-xl p-4 border border-rose-500/30 bg-rose-950/20 text-rose-200 flex items-start gap-3">
                     <span className="text-base" aria-hidden="true">⚠️</span>
                     <div>
-                      <p className="font-semibold text-xs text-rose-100">Toxicity &amp; Precautions</p>
+                      <p className="font-semibold text-xs text-rose-100">
+                        {topSpecies.isToxic ? 'Toxicity & Precautions' : 'Safety Warning & Precautions'}
+                      </p>
                       <p className="text-[11px] leading-relaxed mt-0.5">{topSpecies.toxicityNote}</p>
                     </div>
                   </div>

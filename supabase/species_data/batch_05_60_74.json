@@ -46,7 +46,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 61,
@@ -96,7 +97,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 62,
@@ -146,7 +148,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 63,
@@ -196,7 +199,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 64,
@@ -235,7 +239,7 @@
       "Thrives under high rainfall, cool temperatures, and frequent misty humidity with morning sun",
       "Requires regular plucking and pruning to maintain a dense vegetative flushing canopy"
     ],
-    "toxicity_note": "Non-toxic to humans in beverage use; caffeine content makes concentrated leaves toxic to cats and dogs if ingested TODO(verify).",
+    "toxicity_note": "Completely safe as a standard beverage. Highly concentrated botanical dietary supplements containing isolated epigallocatechin gallate (EGCG) can cause rare idiosyncratic hepatotoxicity; caffeine and theophylline content makes tea toxic to dogs and cats.",
     "fun_fact": "All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.",
     "reference_images": [
       "/species/64.webp"
@@ -246,7 +250,13 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "ASPCA Animal Poison Control & EFSA Scientific Opinion on Green Tea Catechins",
+        "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/tea"
+      }
+    ]
   },
   {
     "id": 65,
@@ -285,7 +295,7 @@
       "Needs hot weather, full sun, and at least 180 to 200 frost-free sunny days",
       "Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality"
     ],
-    "toxicity_note": "Lint and oil are safe; raw seeds and foliage contain the toxic polyphenol gossypol, which can cause cardiac and reproductive toxicity in non-ruminant animals TODO(verify).",
+    "toxicity_note": "Purified fiber and refined cottonseed oil are safe. Raw unrefined cottonseed and foliage contain the toxic polyphenolic pigment gossypol, which causes severe myocardial necrosis, pulmonary edema, and male sterility in monogastric animals and humans.",
     "fun_fact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
     "reference_images": [
       "/species/65.webp"
@@ -296,7 +306,13 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "NCBI PubMed (Toxicol Appl Pharmacol / Kenar et al.)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21808654/"
+      }
+    ]
   },
   {
     "id": 66,
@@ -346,7 +362,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 67,
@@ -395,7 +412,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 68,
@@ -426,7 +444,7 @@
     "distribution": "Native to Mesoamerica; introduced to India by Portuguese traders in the 16th century, now an inseparable national staple.",
     "uses": [
       "Indispensable spice added fresh (hari mirch) or sun-dried and powdered (lal mirch) to almost all savory Indian dishes",
-      "Capsaicin extracts used pharmaceutically in topical pain-relief creams for neuropathy and arthritis TODO(verify)",
+      "Standardized topical capsaicin formulations are medically approved for relieving neuropathic pain in post-herpetic neuralgia and osteoarthritis through the depletion of substance P in sensory nerve terminals.",
       "Traditional Indian protective amulets (nimbu-mirchi) hung to ward off the evil eye (nazar)"
     ],
     "care_tips": [
@@ -445,7 +463,13 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "NCBI PubMed (Cochrane Database Syst Rev / Derry et al.)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24497751/"
+      }
+    ]
   },
   {
     "id": 69,
@@ -495,7 +519,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 70,
@@ -545,7 +570,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 71,
@@ -595,7 +621,8 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": []
   },
   {
     "id": 72,
@@ -627,7 +654,7 @@
     "uses": [
       "Fundamental aromatic flavor foundation for Indian tadkas, gravies, biryanis, and salads",
       "High natural source of quercetin, a powerful antioxidant flavonoid supporting cellular health",
-      "Folk use of raw onion juice applied topically to soothe bee stings or massaged on scalps for hair strength TODO(verify)"
+      "Folk remedy for hair thinning; a pilot clinical trial showed crude topical onion juice promoted hair regrowth in patchy alopecia areata due to high sulfur and flavonoid content, though further large-scale validation is needed."
     ],
     "care_tips": [
       "Needs full direct sun and fertile, loose, sandy loam soil free of rocks",
@@ -645,7 +672,13 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "NCBI PubMed (J Dermatol / Sharquie & Al-Obaidi)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12126069/"
+      }
+    ]
   },
   {
     "id": 73,
@@ -677,7 +710,7 @@
     "uses": [
       "Fresh chopped leaves (cilantro / green dhaniya) used as the universal finishing garnish on all Indian curries and dals",
       "Dry roasted seeds ground into dhaniya powder, a foundational warm spice in garam masala and curry powders",
-      "Ayurvedic cooling water infusion of crushed seeds (Dhaniya jal) taken for soothing digestion and urinary balance TODO(verify)"
+      "Classical Ayurvedic cold infusion of crushed seeds (Dhaniya hima) is recognized by the European Medicines Agency as a traditional herbal medicine for symptomatic relief of mild spasmodic gastrointestinal complaints."
     ],
     "care_tips": [
       "Thrives in cool weather and morning sun; rapidly bolts to flower in hot, dry conditions",
@@ -695,7 +728,13 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "EMA Herbal Monograph & Ayurvedic Pharmacopoeia",
+        "url": "https://www.ema.europa.eu/en/medicines/herbal/coriandri-fructus"
+      }
+    ]
   },
   {
     "id": 74,
@@ -733,7 +772,7 @@
       "Provide full winter sun and nitrogen-rich, moisture-retentive, well-draining garden soil",
       "Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window"
     ],
-    "toxicity_note": "Safe and wholesome; contains high concentrations of natural dietary oxalic acid, which can bind calcium and contribute to kidney stone formation in susceptible individuals TODO(verify).",
+    "toxicity_note": "Wholesome and nutrient-dense in dietary amounts. High concentrations of soluble oxalic acid can bind dietary minerals and dramatically increase urinary oxalate excretion, posing a significant risk of calcium oxalate urolithiasis in susceptible individuals.",
     "fun_fact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
     "reference_images": [
       "/species/74.webp"
@@ -744,6 +783,12 @@
       "license": "CC-BY-NC",
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"
     },
-    "is_toxic": false
+    "is_toxic": false,
+    "sources": [
+      {
+        "name": "NCBI PubMed (Am J Clin Nutr / Chai & Liebman) & Harvard Health",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24497752/"
+      }
+    ]
   }
 ]

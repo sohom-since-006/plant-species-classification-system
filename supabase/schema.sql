@@ -29,6 +29,7 @@ create table if not exists public.species (
   reference_images     text[] default '{}',
   image_credit         jsonb,
   wikipedia_url        text,
+  sources              jsonb default '[]'::jsonb,
   created_at           timestamptz default now()
 );
 

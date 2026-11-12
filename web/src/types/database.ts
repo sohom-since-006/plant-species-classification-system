@@ -48,6 +48,7 @@ export interface Database {
           reference_images: string[];
           image_credit: Json | null;
           wikipedia_url: string | null;
+          sources: Json | null;
           created_at: string;
         };
         Insert: {
@@ -74,6 +75,7 @@ export interface Database {
           reference_images?: string[];
           image_credit?: Json | null;
           wikipedia_url?: string | null;
+          sources?: Json | null;
           created_at?: string;
         };
         Update: {
@@ -100,6 +102,7 @@ export interface Database {
           reference_images?: string[];
           image_credit?: Json | null;
           wikipedia_url?: string | null;
+          sources?: Json | null;
           created_at?: string;
         };
         Relationships: [];
