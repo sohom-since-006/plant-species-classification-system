@@ -170,4 +170,16 @@ describe('SimilarSpecies Component with Real Species', () => {
     expect(screen.getByText('52.0%')).toBeInTheDocument();
     expect(screen.getByText(/Likely genus Ocimum/)).toBeInTheDocument();
   });
+
+  it('guarantees all mock fixture candidate species resolve strictly from cataloged species', () => {
+    Object.values(MOCK_FIXTURES).forEach((fixture) => {
+      fixture.top3.forEach((item) => {
+        const sp = getSpeciesById(item.speciesId);
+        expect(sp).toBeDefined();
+        expect(sp.id).toBe(item.speciesId);
+        expect(sp.commonName).toBeTruthy();
+        expect(sp.scientificName).toBeTruthy();
+      });
+    });
+  });
 });

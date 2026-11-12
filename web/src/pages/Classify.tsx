@@ -39,26 +39,22 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
   {
     name: 'Ocimum tenuiflorum',
     common: 'Tulsi (High Confidence)',
-    url: '/species/0.webp',
-    fixtureIndex: 0,
+    url: '/species/sample_tulsi.webp',
   },
   {
     name: 'Hibiscus rosa-sinensis',
     common: 'Hibiscus (Medium Confidence)',
-    url: '/species/20.webp',
-    fixtureIndex: 1,
+    url: '/species/sample_hibiscus.webp',
   },
   {
     name: 'Ocimum basilicum',
-    common: 'Sweet Basil (Genus Fallback)',
-    url: '/species/97.webp',
-    fixtureIndex: 2,
+    common: 'Sweet Basil (Low Confidence)',
+    url: '/species/sample_sweet_basil.webp',
   },
   {
-    name: 'Non-Plant / Texture',
+    name: 'Non-Plant Specimen',
     common: 'Pebble (Unknown / Rejected)',
-    url: '/species/sample_pebble.png',
-    fixtureIndex: 3,
+    url: '/species/sample_pebble.webp',
   },
 ];
 
@@ -219,29 +215,39 @@ export function Classify() {
 
   const handleSampleSelect = async (sample: SampleImage) => {
     try {
-      const file = new File(['sample-plant-specimen-bytes'], `${sample.name}.jpg`, {
-        type: 'image/jpeg',
-        lastModified: 1700000000000,
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+        abortControllerRef.current = null;
+        setIsAnalyzing(false);
+      }
+      const resp = await fetch(sample.url);
+      if (!resp.ok) throw new Error('Could not fetch sample image');
+      const blob = await resp.blob();
+      const file = new File([blob], `${sample.name.replace(/\s+/g, '_')}.webp`, {
+        type: blob.type || 'image/webp',
       });
-      setPhotos([
-        {
-          id: `sample_${sample.fixtureIndex}`,
-          file,
-          previewUrl: sample.url,
-        },
-      ]);
-      setForcedFixture(sample.fixtureIndex);
+      const photoItem: PhotoItem = {
+        id: `sample_${Date.now()}`,
+        file,
+        previewUrl: sample.url,
+      };
+      setPhotos([photoItem]);
+      setForcedFixture(undefined);
       setResult(null);
       setIsDone(false);
       setError(null);
       setIsSaved(false);
+
+      // Execute on-device neural inference on the real sample image
+      void handleIdentify([file]);
     } catch {
       showToast('Could not load sample specimen.');
     }
   };
 
-  const handleIdentify = async () => {
-    if (photos.length === 0) return;
+  const handleIdentify = async (overrideFiles?: File[]) => {
+    const photoFiles = Array.isArray(overrideFiles) ? overrideFiles : photos.map((p) => p.file);
+    if (photoFiles.length === 0) return;
 
     setIsAnalyzing(true);
     setError(null);
@@ -256,7 +262,6 @@ export function Classify() {
     abortControllerRef.current = controller;
 
     try {
-      const photoFiles = photos.map((p) => p.file);
       const res = await runClassificationPipeline(
         photoFiles,
         (event) => {
@@ -267,7 +272,7 @@ export function Classify() {
         },
         {
           signal: controller.signal,
-          forcedFixture,
+          forcedFixture: isMockMode ? forcedFixture : undefined,
           minDisplayTimeMs: 1600,
         },
       );
@@ -824,7 +829,7 @@ export function Classify() {
                 <div className="pt-2">
                   <motion.div whileTap={{ scale: 0.98 }}>
                     <SolidButton
-                      onClick={handleIdentify}
+                      onClick={() => handleIdentify()}
                       data-glow=""
                       className="w-full py-4 text-sm justify-center rounded-2xl shadow-xl hover:scale-[1.01] transition-transform"
                     >

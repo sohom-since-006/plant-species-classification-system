@@ -94,7 +94,7 @@ function buildResultFromProbsAndEmbedding(
   const top1Prob = top3[0]?.prob ?? 0;
   const top1Id = top3[0]?.speciesId ?? 0;
 
-  const threshold = options?.threshold ?? 0.57;
+  const threshold = options?.threshold ?? 0.35;
   const tau = options?.tau ?? 0.31;
   const centroids = options?.centroids ?? {};
 

@@ -9,6 +9,10 @@ const PRECACHE_URLS = [
   '/apple-touch-icon.png',
   '/species/credits.json',
   '/species/neutral_leaf.svg',
+  '/species/sample_tulsi.webp',
+  '/species/sample_hibiscus.webp',
+  '/species/sample_sweet_basil.webp',
+  '/species/sample_pebble.webp',
 ];
 
 self.addEventListener('install', (event) => {

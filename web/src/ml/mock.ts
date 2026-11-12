@@ -100,12 +100,12 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
     genusFallback: null,
   },
 
-  // Case 2: Low confidence (< 0.60) with Genus Fallback - Sweet Basil vs Tulsi (genus Ocimum)
+  // Case 2: Low confidence (< 0.60) with Genus Fallback - Sweet Basil vs Tulsi
   2: {
     top3: [
       { speciesId: 97, prob: 0.52 }, // Sweet Basil (Ocimum)
       { speciesId: 0, prob: 0.38 }, // Tulsi (Ocimum)
-      { speciesId: 97, prob: 0.07 }, // Ocimum relative
+      { speciesId: 74, prob: 0.07 }, // Spinach (Spinacia oleracea)
     ],
     tier: 'low',
     unknown: false,

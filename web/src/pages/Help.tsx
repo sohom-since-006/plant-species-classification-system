@@ -33,7 +33,7 @@ const FAQS: FaqItem[] = [
     category: 'Diagnostics',
     badge: 'Rejection Gate',
     q: 'Why does the app say "We\'re not sure" or mark a specimen as "Unknown / Rejected"?',
-    a: 'PlantAI employs dual out-of-distribution (OOD) rejection gates: maximum probability below 0.57 or cosine distance to genus embedding centroids exceeding τ=0.31. When an image is blurry, captures a non-plant object (like a pebble, fabric, or food), or depicts a plant not present in our 112 cataloged species, the model refuses to guess and safely marks it as rejected.',
+    a: 'PlantAI employs dual out-of-distribution (OOD) rejection gates: maximum calibrated probability below 0.35 or cosine distance to genus embedding centroids exceeding τ=0.31. When an image is blurry, captures a non-plant object (like a pebble, fabric, or food), or depicts a plant not present in our 112 cataloged species, the model refuses to guess and safely marks it as rejected.',
   },
   {
     id: 'confidence-tiers',
