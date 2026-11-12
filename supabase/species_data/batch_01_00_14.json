@@ -10,7 +10,12 @@
     "origin": "indian",
     "names_hindi": "तुलसी (Tulsi)",
     "names_bengali": "তুলসী (Tulsi)",
-    "other_names": ["Holy Basil", "Krishna Tulsi", "Rama Tulsi", "Sacred Basil"],
+    "other_names": [
+      "Holy Basil",
+      "Krishna Tulsi",
+      "Rama Tulsi",
+      "Sacred Basil"
+    ],
     "description": "An aromatic perennial subshrub revered across India as an earthly manifestation of the goddess Tulsi. Widely grown in central home courtyards (Tulsi chaura) and valued for its warm, clove-pepper scent.",
     "identifying_features": [
       "Square purplish-green pubescent stems branching profusely",
@@ -33,9 +38,15 @@
     "toxicity_note": "Non-toxic in normal culinary use; excessive concentrated medicinal intake during pregnancy should be avoided TODO(verify).",
     "fun_fact": "Tulsi translates from Sanskrit as 'the incomparable one'. In Hindu mythology, no ritual offering to Lord Vishnu is complete without a Tulsi leaf.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/0.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ocimum_tenuiflorum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ocimum_tenuiflorum",
+    "image_credit": {
+      "observer": "pikun",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 1,
@@ -48,7 +59,11 @@
     "origin": "indian",
     "names_hindi": "नीम (Neem)",
     "names_bengali": "নিম (Neem)",
-    "other_names": ["Indian Lilac", "Margosa Tree", "Nimba"],
+    "other_names": [
+      "Indian Lilac",
+      "Margosa Tree",
+      "Nimba"
+    ],
     "description": "A robust, fast-growing evergreen mahogany tree celebrated as 'Nature\\'s Drugstore' across rural India for its versatile antimicrobial, insecticidal, and environmental cooling benefits.",
     "identifying_features": [
       "Pinnate compound leaves carrying 20-30 curved, sickle-shaped, sharply serrated leaflets",
@@ -71,9 +86,15 @@
     "toxicity_note": "Foliage and dilute topical preparations are safe; concentrated neem seed oil is toxic if ingested orally, particularly dangerous for infants and children TODO(verify).",
     "fun_fact": "The United Nations named Neem the 'Tree of the 21st Century' due to its potential to combat pests organically without chemical resistance.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/1.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Azadirachta_indica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Azadirachta_indica",
+    "image_credit": {
+      "observer": "sanahawwa",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 2,
@@ -86,7 +107,11 @@
     "origin": "global",
     "names_hindi": "घृतकुमारी (Ghritkumari)",
     "names_bengali": "ঘৃতকুমারী (Ghritkumari)",
-    "other_names": ["True Aloe", "First Aid Plant", "Burn Plant"],
+    "other_names": [
+      "True Aloe",
+      "First Aid Plant",
+      "Burn Plant"
+    ],
     "description": "A stemless or short-stemmed succulent perennial producing dense rosettes of thick, fleshly spear-shaped leaves loaded with soothing bioactive mucilage gel.",
     "identifying_features": [
       "Thick, fleshy lanceolate leaves arranged in upright basal rosettes",
@@ -109,9 +134,15 @@
     "toxicity_note": "Inner clear gel is generally safe; the yellow aloin latex beneath the leaf rind is a harsh laxative and can cause severe cramping and electrolyte loss if ingested TODO(verify). Toxic to cats and dogs.",
     "fun_fact": "Ancient Egyptian murals referred to Aloe vera as the 'plant of immortality', and Cleopatra reportedly used its gel in her daily skincare regimen.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600&q=80"
+      "/species/2.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Aloe_vera"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aloe_vera",
+    "image_credit": {
+      "observer": "Steven Mlodinow",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625536592/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 3,
@@ -124,7 +155,11 @@
     "origin": "indian",
     "names_hindi": "हल्दी (Haldi)",
     "names_bengali": "হলুদ (Holud)",
-    "other_names": ["Indian Saffron", "Haridra", "Golden Spice"],
+    "other_names": [
+      "Indian Saffron",
+      "Haridra",
+      "Golden Spice"
+    ],
     "description": "A rhizomatous herbaceous perennial of the ginger family, celebrated worldwide for its brilliant golden-yellow rhizome rich in curcumin, central to Indian cooking, auspicious rituals, and traditional medicine.",
     "identifying_features": [
       "Large, oblong-lanceolate smooth green leaves rising up to 1 meter from fleshy pseudostems",
@@ -147,9 +182,15 @@
     "toxicity_note": "Extremely safe in dietary quantities; high concentrated curcumin supplements may cause gastric distress or interact with anticoagulant medications TODO(verify).",
     "fun_fact": "Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/3.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Turmeric"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Turmeric",
+    "image_credit": {
+      "observer": "偷米",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 4,
@@ -162,7 +203,11 @@
     "origin": "global",
     "names_hindi": "अदरक (Adrak) / सोंठ (Sonth)",
     "names_bengali": "আদা (Aada)",
-    "other_names": ["Common Ginger", "Adrak", "Zingiber"],
+    "other_names": [
+      "Common Ginger",
+      "Adrak",
+      "Zingiber"
+    ],
     "description": "A tropical herbaceous perennial whose pungent, aromatic underground rhizome is one of the world\\'s most popular culinary seasonings and traditional herbal remedies for digestive health.",
     "identifying_features": [
       "Slender, reed-like annual pseudostems reaching 1 meter in height",
@@ -185,9 +230,15 @@
     "toxicity_note": "Safe in culinary amounts; excessive ingestion of raw root may trigger mild heartburn or gastric acid reflux. Consult physician if on blood thinners TODO(verify).",
     "fun_fact": "During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/4.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ginger"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ginger",
+    "image_credit": {
+      "observer": "Zuleika Peralta",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 5,
@@ -200,7 +251,11 @@
     "origin": "indian",
     "names_hindi": "अश्वगंधा (Ashwagandha)",
     "names_bengali": "অশ্বগন্ধা (Ashwagandha)",
-    "other_names": ["Indian Ginseng", "Poison Gooseberry", "Winter Cherry"],
+    "other_names": [
+      "Indian Ginseng",
+      "Poison Gooseberry",
+      "Winter Cherry"
+    ],
     "description": "A small, woody perennial shrub of the nightshade family, heralded as the premier adaptogenic rasayana (rejuvenator) in Ayurveda for promoting stamina, vigor, and stress recovery.",
     "identifying_features": [
       "Tomentose (velvety hairy) branched stems reaching 35 to 75 cm in height",
@@ -223,9 +278,15 @@
     "toxicity_note": "Leaves and green unripened berries contain solanine-like alkaloids and are toxic; medicinal root should be avoided during pregnancy due to potential uterine-stimulating effects TODO(verify).",
     "fun_fact": "Its Sanskrit name Ashwagandha translates literally to 'smell of a horse', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+      "/species/5.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Withania_somnifera"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Withania_somnifera",
+    "image_credit": {
+      "observer": "Finn Rautenbach",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 6,
@@ -238,7 +299,12 @@
     "origin": "indian",
     "names_hindi": "गिलोय (Giloy) / गुड़ूची (Guduchi)",
     "names_bengali": "গুলঞ্চ (Gulancha)",
-    "other_names": ["Heart-leaved Moonseed", "Guduchi", "Amrita", "Heavenly Elixir"],
+    "other_names": [
+      "Heart-leaved Moonseed",
+      "Guduchi",
+      "Amrita",
+      "Heavenly Elixir"
+    ],
     "description": "A vigorous deciduous climbing vine with succulent corky bark and cordate foliage, celebrated in Sanskrit as 'Amrita' (the root of immortality) for its powerful immune-modulating properties.",
     "identifying_features": [
       "Twining fleshy stems with grayish-white, papery, lenticellate peeling bark",
@@ -261,9 +327,15 @@
     "toxicity_note": "Generally recognized as safe; excessive unsupervised intake of concentrated extracts has been associated with rare idiosyncratic hepatic enzyme elevations TODO(verify).",
     "fun_fact": "In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&q=80"
+      "/species/6.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Tinospora_cordifolia"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tinospora_cordifolia",
+    "image_credit": {
+      "observer": "Green Bull",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 7,
@@ -276,7 +348,12 @@
     "origin": "indian",
     "names_hindi": "ब्राह्मी (Brahmi) / जलनीम",
     "names_bengali": "ব্রাহ্মী শাক (Brahmi Shak)",
-    "other_names": ["Water Hyssop", "Herb of Grace", "Jalanimba", "Indian Pennywort"],
+    "other_names": [
+      "Water Hyssop",
+      "Herb of Grace",
+      "Jalanimba",
+      "Indian Pennywort"
+    ],
     "description": "A creeping, succulent wetland perennial herb named after Lord Brahma, the creator god of Hindu cosmology, renowned in Ayurveda for centuries as the ultimate brain tonic (medhya rasayana).",
     "identifying_features": [
       "Prostrate, creeping succulent stems rooting freely at nodes along wet ground",
@@ -299,9 +376,15 @@
     "toxicity_note": "Non-toxic; high therapeutic doses on an empty stomach may cause mild nausea, abdominal cramps, or increased gastrointestinal motility TODO(verify).",
     "fun_fact": "Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80"
+      "/species/7.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Bacopa_monnieri"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bacopa_monnieri",
+    "image_credit": {
+      "observer": "tahli-jade",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 8,
@@ -314,7 +397,11 @@
     "origin": "indian",
     "names_hindi": "आंवला (Amla)",
     "names_bengali": "আমলকী (Amloki)",
-    "other_names": ["Indian Gooseberry", "Emblic Myrobalan", "Dhatriphala"],
+    "other_names": [
+      "Indian Gooseberry",
+      "Emblic Myrobalan",
+      "Dhatriphala"
+    ],
     "description": "A medium-sized deciduous tree renowned for its pale greenish-yellow globular sour fruits, revered in India as a supreme source of vitamin C, natural polyphenols, and longevity rasayana.",
     "identifying_features": [
       "Slender, feathery branchlets carrying tiny, closely spaced, linear-oblong light green leaflets resembling pinnate leaves",
@@ -337,9 +424,15 @@
     "toxicity_note": "Completely non-toxic and nutrient-dense; high dietary intake of fresh sour fruit may occasionally irritate sensitive stomachs with acid hypersecretion TODO(verify).",
     "fun_fact": "A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/8.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Phyllanthus_emblica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phyllanthus_emblica",
+    "image_credit": {
+      "observer": "Bikash Kumar Sahoo",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 9,
@@ -352,7 +445,12 @@
     "origin": "indian",
     "names_hindi": "कढ़ी पत्ता (Kadi Patta)",
     "names_bengali": "কারি পাতা (Kari Pata)",
-    "other_names": ["Curry Tree", "Sweet Neem", "Meetha Neem", "Karivepaku"],
+    "other_names": [
+      "Curry Tree",
+      "Sweet Neem",
+      "Meetha Neem",
+      "Karivepaku"
+    ],
     "description": "A small, highly aromatic tropical citrus-family deciduous tree whose aromatic pinnate leaves form the irreplaceable flavor foundation of South Asian culinary tempering (tadka).",
     "identifying_features": [
       "Pinnate compound leaves carrying 11-25 small, alternate, ovate-lanceolate leaflets",
@@ -375,9 +473,15 @@
     "toxicity_note": "Leaves are completely edible, flavorful, and safe; the dark berry seeds contain toxic cardiac glycosides and must never be chewed or ingested TODO(verify).",
     "fun_fact": "Commercial 'curry powder' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/9.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Curry_tree"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Curry_tree",
+    "image_credit": {
+      "observer": "foaspotter",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 10,
@@ -390,7 +494,12 @@
     "origin": "indian",
     "names_hindi": "सहजन (Sahjan) / मुनगा",
     "names_bengali": "সজনে (Sojne)",
-    "other_names": ["Drumstick Tree", "Horseradish Tree", "Miracle Tree", "Ben Oil Tree"],
+    "other_names": [
+      "Drumstick Tree",
+      "Horseradish Tree",
+      "Miracle Tree",
+      "Ben Oil Tree"
+    ],
     "description": "A fast-growing, exceptionally nutrient-dense drought-resistant tree native to northern India, revered as a global 'miracle tree' because nearly every part—leaves, pods, flowers, and seeds—is edible and therapeutic.",
     "identifying_features": [
       "Tripinnate compound feathery foliage carrying dozens of tiny oval-elliptic leaflets",
@@ -413,9 +522,15 @@
     "toxicity_note": "Leaves, blossoms, and green pods are nutritious and safe; the root bark contains the alkaloid spirochin, which can induce toxic cardiac paralysis and must never be consumed TODO(verify).",
     "fun_fact": "Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow's milk, and four times more Vitamin A than carrots per equal weight.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/10.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Moringa_oleifera"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Moringa_oleifera",
+    "image_credit": {
+      "observer": "Biodiversity Restoration Registry Kigamboni.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 11,
@@ -428,7 +543,13 @@
     "origin": "indian",
     "names_hindi": "बेल (Bel) / श्रीफल (Bilva)",
     "names_bengali": "বেল (Bel)",
-    "other_names": ["Golden Apple", "Wood Apple", "Stone Apple", "Bengal Quince", "Bilva"],
+    "other_names": [
+      "Golden Apple",
+      "Wood Apple",
+      "Stone Apple",
+      "Bengal Quince",
+      "Bilva"
+    ],
     "description": "A sacred deciduous fruit tree belonging to the citrus family, dedicated to Lord Shiva whose trident is symbolized by its trifoliate leaves. Produces woody-shelled sweet aromatic digestive fruits.",
     "identifying_features": [
       "Trifoliate compound leaves with three ovate leaflets representing the Hindu Holy Trinity (Trimurti)",
@@ -451,9 +572,15 @@
     "toxicity_note": "Ripe fruit pulp is delicious and non-toxic; unripe fruit and concentrated bark preparations have strong astringent action and should be used with caution during pregnancy TODO(verify).",
     "fun_fact": "The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+      "/species/11.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Aegle_marmelos"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aegle_marmelos",
+    "image_credit": {
+      "observer": "Priya Priya",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 12,
@@ -466,7 +593,11 @@
     "origin": "indian",
     "names_hindi": "अर्जुन (Arjuna) / कहुआ",
     "names_bengali": "অর্জুন (Arjun)",
-    "other_names": ["Arjun Tree", "White Marudah", "Kahua"],
+    "other_names": [
+      "Arjun Tree",
+      "White Marudah",
+      "Kahua"
+    ],
     "description": "A towering deciduous riverine tree with an immense buttressed trunk and smooth peeling pinkish-grey bark, revered in classical Ayurvedic pharmacology as the premier cardiotonic herb.",
     "identifying_features": [
       "Massive fluted trunk with smooth, exfoliating sheets of pinkish-grey to greenish-white bark",
@@ -489,9 +620,15 @@
     "toxicity_note": "Medicinal bark preparations are well-tolerated under professional guidance; patients with severe congestive cardiac failure must consult their cardiologist before taking herbal preparations TODO(verify).",
     "fun_fact": "Named after the hero Arjuna of the Mahabharata epic in tribute to the tree's unmatched strength, defensive resilience, and role as a biological shield for the human heart.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80"
+      "/species/12.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Terminalia_arjuna"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Terminalia_arjuna",
+    "image_credit": {
+      "observer": "Kailas Erande",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 13,
@@ -504,7 +641,12 @@
     "origin": "indian",
     "names_hindi": "अशोक (Ashok) / सीता अशोक",
     "names_bengali": "অশোক (Ashok)",
-    "other_names": ["Sita Ashok", "Sorrowless Tree", "Kankelli", "Hemapushpa"],
+    "other_names": [
+      "Sita Ashok",
+      "Sorrowless Tree",
+      "Kankelli",
+      "Hemapushpa"
+    ],
     "description": "A sacred evergreen rainforest tree producing dense, vibrant spherical clusters of fragrant orange-red blooms. Revered in Sanskrit as 'A-shoka' (without sorrow), under which Sita sought sanctuary in the Ramayana.",
     "identifying_features": [
       "Dense, rounded evergreen canopy with glossy dark green pinnate compound leaves",
@@ -527,9 +669,15 @@
     "toxicity_note": "Non-toxic; commonly confused in urban landscaping with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which lacks medicinal properties TODO(verify).",
     "fun_fact": "According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/13.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Saraca_asoca"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Saraca_asoca",
+    "image_credit": {
+      "observer": "Sayali Bakore",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 14,
@@ -542,7 +690,12 @@
     "origin": "indian",
     "names_hindi": "पान (Paan)",
     "names_bengali": "পান (Paan)",
-    "other_names": ["Betel Vine", "Paan Leaf", "Tambula", "Nagavalli"],
+    "other_names": [
+      "Betel Vine",
+      "Paan Leaf",
+      "Tambula",
+      "Nagavalli"
+    ],
     "description": "An evergreen perennial climbing vine of the pepper family with glossy heart-shaped aromatic leaves, central to Indian hospitality, festive traditions, and after-dinner digestive culture (paan).",
     "identifying_features": [
       "Semi-woody climbing vine with swollen stem nodes producing adventitious clinging roots",
@@ -565,8 +718,14 @@
     "toxicity_note": "Fresh betel leaf alone is non-toxic and aromatic; habitual chewing of traditional paan concoctions containing tobacco and areca nut is strongly carcinogenic to oral tissues TODO(verify).",
     "fun_fact": "Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo's travelogues of the subcontinent in the 13th century.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+      "/species/14.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Betel"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Betel",
+    "image_credit": {
+      "observer": "連亮惟",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg"
+    },
+    "is_toxic": false
   }
 ]

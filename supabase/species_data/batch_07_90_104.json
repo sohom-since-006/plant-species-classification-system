@@ -10,7 +10,13 @@
     "origin": "global",
     "names_hindi": "डम्ब केन (Dumb Cane)",
     "names_bengali": "ডাম্ব কেন (Dumb Cane)",
-    "other_names": ["Dumb Cane", "Leopard Lily", "Tropic Snow", "Amoena", "Dieffenbachia"],
+    "other_names": [
+      "Dumb Cane",
+      "Leopard Lily",
+      "Tropic Snow",
+      "Amoena",
+      "Dieffenbachia"
+    ],
     "description": "A striking, upright tropical houseplant with cane-like stems and broad, dramatic emerald-green leaves intricately patterned with ivory, cream, and yellow variegation. HIGHLY TOXIC.",
     "identifying_features": [
       "Stout, fleshy, bamboo-like cane stems with prominent leaf sheath scars",
@@ -33,9 +39,15 @@
     "toxicity_note": "HIGHLY TOXIC: Known as 'Dumb Cane' because chewing any part causes immediate excruciating burning, intense inflammation of the tongue, lips, and vocal cords, causing temporary loss of speech ('dumbness'). Swelling can obstruct airways and cause asphyxiation. Extremely dangerous to dogs, cats, and small children.",
     "fun_fact": "The name 'Dumb Cane' refers to the horrific historical practice of punishing enslaved individuals by forcing them to chew the plant's stems, which caused their tongues to swell so violently that they were unable to speak for days.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/90.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Dieffenbachia_seguine"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dieffenbachia_seguine",
+    "image_credit": {
+      "observer": "MARIA PAULINA CEBALLOS GARCIA",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 91,
@@ -48,7 +60,14 @@
     "origin": "global",
     "names_hindi": "पत्थरचट्टा (Patharchatta)",
     "names_bengali": "পাথরকুচি (Patharkuchi)",
-    "other_names": ["Life Plant", "Miracle Leaf", "Cathedral Bells", "Air Plant", "Patharkuchi", "Pashanbheda"],
+    "other_names": [
+      "Life Plant",
+      "Miracle Leaf",
+      "Cathedral Bells",
+      "Air Plant",
+      "Patharkuchi",
+      "Pashanbheda"
+    ],
     "description": "A remarkable, drought-resilient succulent herb famous for its crenate fleshy leaves that produce tiny, rooted adventitious plantlets along their margins, and pendulous bell-like flowers.",
     "identifying_features": [
       "Fleshy, succulent cylindrical stems with thick, scalloped (crenate) opposite leaves",
@@ -71,9 +90,15 @@
     "toxicity_note": "TOXIC TO LIVESTOCK AND PETS: Contains bufadienolide cardiac glycosides (bryotoxins). Highly toxic to grazing animals, cattle, dogs, and cats, causing severe cardiac arrhythmias, tremors, vomiting, and potential heart failure. Handle with care around pets.",
     "fun_fact": "A single fallen leaf of Patharchatta can survive pinned to a bulletin board with zero soil or water for weeks while sprouting a dozen independent baby plants from its scalloped edges, earning it the title 'The Life Plant'.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/91.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Kalanchoe_pinnata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Kalanchoe_pinnata",
+    "image_credit": {
+      "observer": "Jenny Ju",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 92,
@@ -86,7 +111,12 @@
     "origin": "global",
     "names_hindi": "सूरजमुखी (Surajmukhi)",
     "names_bengali": "সূর্যমুখী (Surjomukhi)",
-    "other_names": ["Common Sunflower", "Surajmukhi", "Surjomukhi", "Girasol"],
+    "other_names": [
+      "Common Sunflower",
+      "Surajmukhi",
+      "Surjomukhi",
+      "Girasol"
+    ],
     "description": "A magnificent, towering annual herb with rough hairy stems, broad cordate leaves, and colossal golden composite flower heads that famously track the sun across the sky.",
     "identifying_features": [
       "Stout, erect, coarse, unbranched rough-hairy stem reaching 1.5 to 3.5 meters in height",
@@ -109,9 +139,15 @@
     "toxicity_note": "Non-toxic; seeds, petals, and sprouts are edible and completely safe for humans and household pets.",
     "fun_fact": "A single sunflower head is not a single flower, but an inflorescence of thousands of individual florets arranged in interlocking Fibonacci spirals, maximizing packing efficiency.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/92.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Helianthus_annuus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Helianthus_annuus",
+    "image_credit": {
+      "observer": "Mackenzie Goldthwait",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 93,
@@ -124,7 +160,13 @@
     "origin": "global",
     "names_hindi": "डेज़ी (Daisy)",
     "names_bengali": "ডেইজি (Daisy)",
-    "other_names": ["English Daisy", "Common Daisy", "Lawn Daisy", "Bruisewort", "Day's Eye"],
+    "other_names": [
+      "English Daisy",
+      "Common Daisy",
+      "Lawn Daisy",
+      "Bruisewort",
+      "Day's Eye"
+    ],
     "description": "A charming, low-growing herbaceous perennial with compact rosettes of spoon-shaped leaves and cheerful solitary composite flower heads with white ray petals and sunny yellow centers.",
     "identifying_features": [
       "Basal rosette of flat, spoon-shaped (spathulate) or obovate leaves with finely scalloped margins",
@@ -147,9 +189,15 @@
     "toxicity_note": "Non-toxic; edible and completely safe around dogs, cats, and small children.",
     "fun_fact": "The name 'daisy' is a contraction of the Old English 'daeges eage' ('day's eye'), so called because the flower opens its petals at dawn and closes them tightly at sunset.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/93.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Bellis_perennis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bellis_perennis",
+    "image_credit": {
+      "observer": "drfishy62",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 94,
@@ -162,7 +210,13 @@
     "origin": "global",
     "names_hindi": "सिंहपर्णी (Sinhaparni)",
     "names_bengali": "সিংহপর্ণী (Singhaparni)",
-    "other_names": ["Common Dandelion", "Lion's Tooth", "Sinhaparni", "Puffball", "Blowball"],
+    "other_names": [
+      "Common Dandelion",
+      "Lion's Tooth",
+      "Sinhaparni",
+      "Puffball",
+      "Blowball"
+    ],
     "description": "A tenacious, nutrient-dense perennial wild herb with deeply toothed basal leaf rosettes, bright sunny-yellow composite flower heads, and iconic spherical feathery seed puffballs.",
     "identifying_features": [
       "Basal rosette of deeply jagged, runcinate-pinnatifid leaves resembling sharp lion's teeth",
@@ -185,9 +239,15 @@
     "toxicity_note": "Non-toxic; leaves, flowers, and roots are fully edible. Milky stem latex may cause mild skin contact dermatitis in very sensitive individuals TODO(verify).",
     "fun_fact": "The name Dandelion comes from the French 'dent-de-lion', meaning 'lion's tooth', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/94.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Taraxacum_officinale"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Taraxacum_officinale",
+    "image_credit": {
+      "observer": "Nantar Kuja",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 95,
@@ -200,7 +260,12 @@
     "origin": "global",
     "names_hindi": "लैवेंडर (Lavender)",
     "names_bengali": "ল্যাভেন্ডার (Lavender)",
-    "other_names": ["English Lavender", "True Lavender", "Narrow-Leaved Lavender", "Common Lavender"],
+    "other_names": [
+      "English Lavender",
+      "True Lavender",
+      "Narrow-Leaved Lavender",
+      "Common Lavender"
+    ],
     "description": "A beloved aromatic evergreen semi-shrub with narrow grey-green linear foliage and elegant upright spikes of intensely fragrant lilac-purple blossoms rich in calming linalool oil.",
     "identifying_features": [
       "Compact, bushy woody-based semi-shrub reaching 30 to 60 cm in height",
@@ -223,9 +288,15 @@
     "toxicity_note": "Safe in culinary amounts; concentrated essential oil is toxic if swallowed, especially to cats and dogs who lack the liver enzymes to metabolize linalool TODO(verify).",
     "fun_fact": "The name Lavender comes from the Latin verb 'lavare' (to wash), because ancient Romans extensively perfumed their public thermal baths and laundry with fragrant lavender blossoms.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80"
+      "/species/95.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Lavandula_angustifolia"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lavandula_angustifolia",
+    "image_credit": {
+      "observer": "Anatole Maugendre",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 96,
@@ -238,7 +309,12 @@
     "origin": "global",
     "names_hindi": "रोज़मेरी (Rosemary)",
     "names_bengali": "রোজমেরি (Rosemary)",
-    "other_names": ["Common Rosemary", "Rosmarinus officinalis", "Dew of the Sea", "Gul-mehendi"],
+    "other_names": [
+      "Common Rosemary",
+      "Rosmarinus officinalis",
+      "Dew of the Sea",
+      "Gul-mehendi"
+    ],
     "description": "A fragrant, woody evergreen shrub with aromatic needle-like dark green leaves and delicate pale-blue blossoms, prized for culinary seasoning, hair care, and memory enhancement.",
     "identifying_features": [
       "Erect or spreading woody perennial shrub reaching 0.5 to 1.5 meters tall",
@@ -261,9 +337,15 @@
     "toxicity_note": "Culinary amounts are completely safe; large medicinal doses of rosemary oil can trigger gastrointestinal irritation and are contraindicated in pregnancy TODO(verify). Safe around pets in small quantities.",
     "fun_fact": "The botanical name Rosmarinus translates poetically from Latin as 'dew of the sea' (ros = dew, marinus = sea), describing its natural habitat clinging to misty coastal Mediterranean cliffs.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/96.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Rosemary"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rosemary",
+    "image_credit": {
+      "observer": "Rubén Frías",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 97,
@@ -276,7 +358,13 @@
     "origin": "indian",
     "names_hindi": "मीठी तुलसी (Meethi Tulsi)",
     "names_bengali": "মিষ্টি তুলসী (Mishti Tulsi)",
-    "other_names": ["Italian Basil", "Genovese Basil", "Sabja Plant", "Meethi Tulsi", "Great Basil"],
+    "other_names": [
+      "Italian Basil",
+      "Genovese Basil",
+      "Sabja Plant",
+      "Meethi Tulsi",
+      "Great Basil"
+    ],
     "description": "A tender, aromatic annual herb with glossy, cup-shaped emerald-green leaves and an intoxicating sweet clove-anise fragrance, renowned as the soul of pesto and the source of cooling sabja seeds.",
     "identifying_features": [
       "Square, branching green stems reaching 30 to 60 cm in height",
@@ -299,9 +387,15 @@
     "toxicity_note": "Non-toxic and edible; completely safe for human culinary consumption and safe around household pets.",
     "fun_fact": "When soaked in water for just 10 minutes, sweet basil seeds (Sabja) swell to over thirty times their original volume, forming a transparent jelly bead around each seed that cools the body during hot Indian summers.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1618375531912-867984bdfd87?w=600&q=80"
+      "/species/97.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Basil"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Basil",
+    "image_credit": {
+      "observer": "UNIRSE Lidia marian,Arce aldana",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 98,
@@ -314,7 +408,12 @@
     "origin": "global",
     "names_hindi": "ट्यूलिप (Tulip)",
     "names_bengali": "টিউলিপ (Tulip)",
-    "other_names": ["Garden Tulip", "Didier's Tulip", "Tulip", "Lale"],
+    "other_names": [
+      "Garden Tulip",
+      "Didier's Tulip",
+      "Tulip",
+      "Lale"
+    ],
     "description": "An exquisite spring-blooming bulbous perennial famous for its elegant cup-shaped blossoms in every color of the rainbow, celebrated in the sprawling tulip gardens of Kashmir.",
     "identifying_features": [
       "Tunicated subterranean bulb producing 2-6 broad, glaucous, fleshy grey-green leaves clasping the stem base",
@@ -337,9 +436,15 @@
     "toxicity_note": "TOXIC TO PETS AND HUMANS: All parts, especially the subterranean bulbs, contain allergenic lactones (tulipalin A and B) and tulipin. Ingestion causes severe vomiting, diarrhea, drooling, and depression in dogs and cats; handling bulbs can trigger 'tulip fingers' contact dermatitis.",
     "fun_fact": "During the peak of Dutch 'Tulip Mania' in February 1637, a single rare 'Semper Augustus' tulip bulb sold for the price of a luxurious grand canal house in Amsterdam before the market abruptly crashed.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80"
+      "/species/98.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Tulipa_gesneriana"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tulipa_gesneriana",
+    "image_credit": {
+      "observer": "nevinbelcher",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 99,
@@ -352,7 +457,13 @@
     "origin": "global",
     "names_hindi": "डैफोडिल (Daffodil)",
     "names_bengali": "ড্যাফোডিল (Daffodil)",
-    "other_names": ["Wild Daffodil", "Lent Lily", "Nargis", "Narcissus", "Jonquil"],
+    "other_names": [
+      "Wild Daffodil",
+      "Lent Lily",
+      "Nargis",
+      "Narcissus",
+      "Jonquil"
+    ],
     "description": "A radiant spring-flowering bulb herb bearing nodding golden-yellow trumpets surrounded by six spreading perianth petals, celebrated in romantic poetry as a herald of spring.",
     "identifying_features": [
       "Tunicated subterranean ovoid bulb producing 4-6 flat, strap-like linear greyish-green leaves",
@@ -375,9 +486,15 @@
     "toxicity_note": "HIGHLY TOXIC: All parts of the plant, especially the bulbs, contain toxic phenanthridine alkaloids (lycorine) and needle-like calcium oxalate crystals. Ingestion causes severe nausea, projectile vomiting, diarrhea, abdominal pain, cardiac arrhythmias, and convulsions in humans, dogs, and cats.",
     "fun_fact": "Daffodils are completely immune to garden rodents, squirrels, and deer, who instinctively avoid digging up or chewing the bulbs because of their intense toxicity.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/99.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus",
+    "image_credit": {
+      "observer": "Beth King",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 100,
@@ -390,7 +507,12 @@
     "origin": "global",
     "names_hindi": "टाइगर लिली (Tiger Lily)",
     "names_bengali": "টাইগার লিলি (Tiger Lily)",
-    "other_names": ["Tiger Lily", "Lilium tigrinum", "Spotted Lily", "True Lily"],
+    "other_names": [
+      "Tiger Lily",
+      "Lilium tigrinum",
+      "Spotted Lily",
+      "True Lily"
+    ],
     "description": "A flamboyant, tall perennial bulb herb bearing nodding, fiery orange blossoms with recurved petals covered in dark purple-black freckles and dramatic protruding stamens. FATAL TO CATS.",
     "identifying_features": [
       "Stout, dark purplish-green leafy stem reaching 1 to 2 meters in height",
@@ -413,9 +535,15 @@
     "toxicity_note": "DEADLY HAZARD FOR CATS: True lilies (Lilium species) are EXTREMELY TOXIC AND FATAL TO CATS. Ingestion of even microscopic amounts — a bite of a leaf, licking pollen off fur, or drinking water from a vase holding cut lilies — causes rapid, irreversible acute kidney failure and death within 36-72 hours. Moderately toxic to dogs and humans (vomiting). NEVER keep true lilies in homes with cats.",
     "fun_fact": "Unlike most other lilies, the Tiger Lily produces small, glossy black pea-sized aerial bulbils in the axils of its leaves, which drop to the ground and sprout into identical clones of the parent plant.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/100.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Lilium_lancifolium"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lilium_lancifolium",
+    "image_credit": {
+      "observer": "shaboinginator5000",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 101,
@@ -428,7 +556,12 @@
     "origin": "global",
     "names_hindi": "डहलिया (Dahlia)",
     "names_bengali": "ডালিয়া (Dahlia)",
-    "other_names": ["Garden Dahlia", "Dinnerplate Dahlia", "Dahlia", "Pinnate Dahlia"],
+    "other_names": [
+      "Garden Dahlia",
+      "Dinnerplate Dahlia",
+      "Dahlia",
+      "Pinnate Dahlia"
+    ],
     "description": "A spectacular tuberous bushy perennial famed for its extraordinary variety of geometric, multi-layered flower heads ranging from compact pom-poms to dinner-plate-sized autumn blooms.",
     "identifying_features": [
       "Erect, hollow, branching herbaceous stems growing 1 to 2 meters tall from a cluster of starchy underground tubers",
@@ -451,9 +584,15 @@
     "toxicity_note": "MILD TOXICITY: Contains phototoxic polyacetylene compounds that can cause mild skin irritation and dermatitis, as well as mild digestive upset and vomiting in dogs and cats if ingested.",
     "fun_fact": "The national flower of Mexico, Dahlias are octoploids — meaning they possess eight sets of homologous chromosomes, which accounts for their astounding diversity of flower shapes, sizes, and colors.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/101.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Dahlia_pinnata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dahlia_pinnata",
+    "image_credit": {
+      "observer": "Archer Lamason",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 102,
@@ -466,7 +605,12 @@
     "origin": "global",
     "names_hindi": "जीनिया (Zinnia)",
     "names_bengali": "জিনিয়া (Zinnia)",
-    "other_names": ["Common Zinnia", "Youth-and-Age", "Elegant Zinnia", "Zinnia"],
+    "other_names": [
+      "Common Zinnia",
+      "Youth-and-Age",
+      "Elegant Zinnia",
+      "Zinnia"
+    ],
     "description": "A rugged, sun-loving annual herb celebrated for its stiff, rough stems, sandpaper leaves, and intensely vibrant daisy-to-dahlia-like flower heads that bloom non-stop through scorching heat.",
     "identifying_features": [
       "Erect, stiff, hairy branching stems reaching 30 to 90 cm in height",
@@ -489,9 +633,15 @@
     "toxicity_note": "NON-TOXIC: Completely safe and non-toxic for dogs, cats, horses, and children.",
     "fun_fact": "In 2016, a bright orange Zinnia became the very first flower to bloom in space, grown aboard the International Space Station's Veggie facility by astronaut Scott Kelly.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/102.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Zinnia_elegans"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Zinnia_elegans",
+    "image_credit": {
+      "observer": "Jhoan Sebastian Cifuentes Guarin",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 103,
@@ -504,7 +654,12 @@
     "origin": "global",
     "names_hindi": "कॉस्मॉस (Cosmos)",
     "names_bengali": "কসমস (Cosmos)",
-    "other_names": ["Garden Cosmos", "Mexican Aster", "Cosmea", "Cosmos"],
+    "other_names": [
+      "Garden Cosmos",
+      "Mexican Aster",
+      "Cosmea",
+      "Cosmos"
+    ],
     "description": "A graceful, airy annual flower with delicate feathery thread-like foliage and charming saucer-shaped blossoms in pastel pink, rose, white, and magenta swaying gently on slender wiry stems.",
     "identifying_features": [
       "Slender, multi-branching wiry stems reaching 0.6 to 1.5 meters tall",
@@ -527,9 +682,15 @@
     "toxicity_note": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, and humans.",
     "fun_fact": "Spanish priests in Mexico named this flower 'Cosmos' (from the Greek word for order, harmony, and universe) because of the remarkably orderly and even arrangement of its petals.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/103.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Cosmos_bipinnatus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cosmos_bipinnatus",
+    "image_credit": {
+      "observer": "Hope Hespenheide",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 104,
@@ -542,7 +703,13 @@
     "origin": "indian",
     "names_hindi": "गुलदाउदी (Guldaudi)",
     "names_bengali": "চন্দ্রমল্লিকা (Chandromallika)",
-    "other_names": ["Indian Chrysanthemum", "Guldaudi", "Chandromallika", "Sevanti", "Mum"],
+    "other_names": [
+      "Indian Chrysanthemum",
+      "Guldaudi",
+      "Chandromallika",
+      "Sevanti",
+      "Mum"
+    ],
     "description": "A cherished aromatic winter-flowering herbaceous perennial bearing fragrant lobed leaves and dense, showy composite flower heads in a breathtaking spectrum of autumn-winter colors.",
     "identifying_features": [
       "Bushy, branching aromatic stems reaching 30 to 90 cm in height",
@@ -565,8 +732,14 @@
     "toxicity_note": "TOXIC TO DOGS AND CATS: Foliage contains natural pyrethrins, sesquiterpene lactones, and irritating oils. Ingestion causes vomiting, diarrhea, drooling, incoordination, and potential skin dermatitis.",
     "fun_fact": "Chrysanthemums naturally synthesize pyrethrins, organic compounds that attack insect nervous systems, making them nature's own built-in bug repellent.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/104.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Chrysanthemum_indicum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chrysanthemum_indicum",
+    "image_credit": {
+      "observer": "zgy",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"
+    },
+    "is_toxic": true
   }
 ]

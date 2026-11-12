@@ -20,8 +20,14 @@ export interface Species {
   uses: string[];
   careTips: string[];
   toxicityNote: string | null;
+  isToxic?: boolean;
   funFact: string | null;
   referenceImages: string[];
+  imageCredit?: {
+    observer?: string;
+    license?: string;
+    source_url?: string;
+  } | null;
   wikipediaUrl: string | null;
 }
 

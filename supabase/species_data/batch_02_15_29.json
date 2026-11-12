@@ -10,7 +10,11 @@
     "origin": "indian",
     "names_hindi": "लेमनग्रास (Lemongrass)",
     "names_bengali": "লেমনগ্রাস (Lemongrass)",
-    "other_names": ["West Indian Lemongrass", "Barbed Wire Grass", "Citronella Grass"],
+    "other_names": [
+      "West Indian Lemongrass",
+      "Barbed Wire Grass",
+      "Citronella Grass"
+    ],
     "description": "A tall, perennial clump-forming aromatic grass with dense tufts of sharp-edged, linear bluish-green blades that emit a crisp lemon-citrus aroma when bruised.",
     "identifying_features": [
       "Dense clumping habit with swollen fibrous bulb-like stem bases",
@@ -32,9 +36,15 @@
     "toxicity_note": "Safe in culinary amounts; concentrated essential oils can cause dermatitis or gastric upset in pets if ingested in quantity TODO(verify).",
     "fun_fact": "Lemongrass contains up to 80% citral in its volatile oils, giving it a stronger lemon aroma than actual lemon fruit peels.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/15.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Cymbopogon_citratus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cymbopogon_citratus",
+    "image_credit": {
+      "observer": "Biodiversity Restoration Registry Kigamboni.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605049920/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 16,
@@ -47,7 +57,12 @@
     "origin": "global",
     "names_hindi": "पुदीना (Pudina)",
     "names_bengali": "পুদিনা (Pudina)",
-    "other_names": ["Spearmint", "Garden Mint", "Common Mint", "Pudina"],
+    "other_names": [
+      "Spearmint",
+      "Garden Mint",
+      "Common Mint",
+      "Pudina"
+    ],
     "description": "A vigorous herbaceous creeping perennial with square stems, lance-shaped serrated leaves, and an intensely invigorating, clean spearmint fragrance.",
     "identifying_features": [
       "Square green to purple-tinged branching stems spreading via vigorous underground stolons",
@@ -69,9 +84,15 @@
     "toxicity_note": "Non-toxic to humans in food amounts; large concentrated ingestion of mint essential oils can be toxic to cats and dogs TODO(verify).",
     "fun_fact": "Spearmint gets its common name from its pointed, spear-shaped leaf tips and floral spikes.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/16.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Spearmint"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spearmint",
+    "image_credit": {
+      "observer": "lynettescott",
+      "license": "CC0",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643458773/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 17,
@@ -84,7 +105,12 @@
     "origin": "indian",
     "names_hindi": "पीपल (Peepal)",
     "names_bengali": "অশ্বত্থ (Ashwattha)",
-    "other_names": ["Sacred Fig", "Bodhi Tree", "Bo-Tree", "Ashwattha"],
+    "other_names": [
+      "Sacred Fig",
+      "Bodhi Tree",
+      "Bo-Tree",
+      "Ashwattha"
+    ],
     "description": "A monumental semi-evergreen or deciduous sacred banyan-family tree famous for its pendulous, heart-shaped leaves with prolonged tail-like tips that flutter in the gentlest breeze.",
     "identifying_features": [
       "Broadly ovate cordate leaves terminating in a distinctive, slender extended drip tip (tail)",
@@ -107,9 +133,15 @@
     "toxicity_note": "Milky latex sap can cause mild skin irritation or contact dermatitis in sensitive individuals TODO(verify).",
     "fun_fact": "The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/17.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_religiosa"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_religiosa",
+    "image_credit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 18,
@@ -122,7 +154,12 @@
     "origin": "indian",
     "names_hindi": "बरगद (Bargad)",
     "names_bengali": "বট (Bot)",
-    "other_names": ["Banyan Tree", "Bargad", "Vat Vriksha", "Indian Banyan"],
+    "other_names": [
+      "Banyan Tree",
+      "Bargad",
+      "Vat Vriksha",
+      "Indian Banyan"
+    ],
     "description": "The National Tree of India, an enormous strangler fig capable of spreading over vast acreage through stout descending prop roots that thicken into auxiliary trunks.",
     "identifying_features": [
       "Massive horizontal branches sending down numerous woody aerial prop roots that anchor as accessory trunks",
@@ -144,9 +181,15 @@
     "toxicity_note": "Like most Ficus species, the milky white latex can cause eye irritation and skin rash TODO(verify).",
     "fun_fact": "The Great Banyan in Howrah, West Bengal, has a canopy circumference of over 450 meters and looks like an entire forest, yet is a single clonal specimen connected by thousands of prop roots.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/18.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_benghalensis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_benghalensis",
+    "image_credit": {
+      "observer": "Sushant Kumar Mishra",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626942186/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 19,
@@ -159,7 +202,12 @@
     "origin": "indian",
     "names_hindi": "कालमेघ (Kalmegh)",
     "names_bengali": "কালমেঘ (Kalmegh)",
-    "other_names": ["King of Bitters", "Green Chiretta", "Bhui-neem", "Mahatita"],
+    "other_names": [
+      "King of Bitters",
+      "Green Chiretta",
+      "Bhui-neem",
+      "Mahatita"
+    ],
     "description": "An erect annual herbaceous plant famed in Ayurveda and Siddha as the 'King of Bitters', renowned for its intensely bitter taste throughout every tissue of the plant.",
     "identifying_features": [
       "Slender, four-angled (quadrangular) dark green erect stems up to 30-90 cm tall",
@@ -181,9 +229,15 @@
     "toxicity_note": "Intensely bitter; large doses can induce nausea, gastric discomfort, or allergic reactions. Contraindicated during pregnancy TODO(verify).",
     "fun_fact": "Kalmegh is called 'Maha-tita' in Bengali, literally meaning 'Great Bitter', because its bitter taste is said to surpass even that of Neem.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/19.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Andrographis_paniculata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Andrographis_paniculata",
+    "image_credit": {
+      "observer": "Wanda G Jackson",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 20,
@@ -196,7 +250,12 @@
     "origin": "global",
     "names_hindi": "गुड़हल (Gudhal)",
     "names_bengali": "জবা (Jaba)",
-    "other_names": ["China Rose", "Shoeblack Plant", "Jaba", "Hawaiian Hibiscus"],
+    "other_names": [
+      "China Rose",
+      "Shoeblack Plant",
+      "Jaba",
+      "Hawaiian Hibiscus"
+    ],
     "description": "A bushy tropical evergreen shrub beloved for its large, flamboyant, showy 5-petaled flowers with a prominent, extended central staminal column.",
     "identifying_features": [
       "Large, trumpet-shaped five-petaled flowers in brilliant shades of red, pink, yellow, or white",
@@ -218,9 +277,15 @@
     "toxicity_note": "Generally non-toxic to humans and common domestic pets, making it a safe garden ornamental.",
     "fun_fact": "Historically known as 'Shoeblack plant' because crushed petals were used in India and the Caribbean to blacken and polish leather shoes.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/20.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis",
+    "image_credit": {
+      "observer": "Silky Refina Marshellia",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 21,
@@ -233,7 +298,12 @@
     "origin": "global",
     "names_hindi": "गेंदा (Genda)",
     "names_bengali": "গাঁদা (Ganda)",
-    "other_names": ["African Marigold", "Aztec Marigold", "Mexican Marigold", "Genda Phool"],
+    "other_names": [
+      "African Marigold",
+      "Aztec Marigold",
+      "Mexican Marigold",
+      "Genda Phool"
+    ],
     "description": "A popular, aromatic herbaceous annual producing dense, globular, ruffled flower heads in brilliant golden-yellow and bright fiery-orange hues.",
     "identifying_features": [
       "Pinnately divided feathery leaves with small gland dots emitting a pungent herbal aroma",
@@ -255,9 +325,15 @@
     "toxicity_note": "Non-toxic to humans; plant sap may cause mild contact skin irritation in sensitive people or mild drooling if chewed by pets TODO(verify).",
     "fun_fact": "Marigold flower petals are the richest natural commercial source of lutein, an essential antioxidant for human retinal eye health.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/21.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Tagetes_erecta"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tagetes_erecta",
+    "image_credit": {
+      "observer": "Ernesto Rodriguez",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632297674/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 22,
@@ -270,7 +346,13 @@
     "origin": "indian",
     "names_hindi": "मोगरा (Mogra)",
     "names_bengali": "বেল ফুল (Beli Phul)",
-    "other_names": ["Arabian Jasmine", "Mogra", "Beli", "Tuscan Jasmine", "Sampaguita"],
+    "other_names": [
+      "Arabian Jasmine",
+      "Mogra",
+      "Beli",
+      "Tuscan Jasmine",
+      "Sampaguita"
+    ],
     "description": "An evergreen scandent shrub famous worldwide for its intensely sweet, intoxicatingly fragrant pure white nocturnal star-shaped flowers.",
     "identifying_features": [
       "Glossy, ovate to elliptic dark green opposite or whorled leaves with prominent veins",
@@ -292,9 +374,15 @@
     "toxicity_note": "Non-toxic to humans, cats, and dogs; safe for indoor and courtyard cultivation.",
     "fun_fact": "Jasminum sambac is the national flower of both the Philippines (known as Sampaguita) and Indonesia (known as Melati putih).",
     "reference_images": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/22.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Jasminum_sambac"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jasminum_sambac",
+    "image_credit": {
+      "observer": "Io Siu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 23,
@@ -307,7 +395,13 @@
     "origin": "indian",
     "names_hindi": "कमल (Kamal)",
     "names_bengali": "পদ্ম (Padma)",
-    "other_names": ["Sacred Lotus", "Indian Lotus", "Kamal", "Padma", "Bean of India"],
+    "other_names": [
+      "Sacred Lotus",
+      "Indian Lotus",
+      "Kamal",
+      "Padma",
+      "Bean of India"
+    ],
     "description": "The National Flower of India, a revered aquatic perennial with peltate water-repellent leaves rising above pond waters and solitary pink-to-white sacred blooms.",
     "identifying_features": [
       "Large orbicular peltate leaves held high above water on thorny petioles exhibiting the ultrahydrophobic 'lotus effect'",
@@ -329,9 +423,15 @@
     "toxicity_note": "Non-toxic; virtually all parts (rhizome, seeds, young stems, petals) are edible when properly cooked.",
     "fun_fact": "The micro-nanostructures on lotus leaves cause water droplets to roll off carrying dirt with them, giving rise to the scientific term 'the lotus effect' for self-cleaning surfaces.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/23.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Nelumbo_nucifera"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nelumbo_nucifera",
+    "image_credit": {
+      "observer": "cgbolas",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 24,
@@ -344,7 +444,12 @@
     "origin": "global",
     "names_hindi": "गुलाब (Gulab)",
     "names_bengali": "গোলাপ (Golap)",
-    "other_names": ["Garden Rose", "Desi Gulab", "Damask Rose", "Gulab"],
+    "other_names": [
+      "Garden Rose",
+      "Desi Gulab",
+      "Damask Rose",
+      "Gulab"
+    ],
     "description": "A woody perennial flowering shrub renowned throughout human history for its prickle-armed stems, elegant multi-petaled blossoms, and exquisite sweet perfume.",
     "identifying_features": [
       "Woody stems armed with sharp prickles ('thorns') and odd-pinnate leaves with serrated leaflets",
@@ -366,9 +471,15 @@
     "toxicity_note": "Non-toxic to humans and pets, though sharp thorny stems can cause mechanical puncture injuries.",
     "fun_fact": "Rose hips (the fruit of the rose plant) contain one of the highest concentrations of natural Vitamin C of any edible fruit.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80"
+      "/species/24.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Rose"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rose",
+    "image_credit": {
+      "observer": "amandrews",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 25,
@@ -381,7 +492,13 @@
     "origin": "global",
     "names_hindi": "चम्पा (Champa)",
     "names_bengali": "কাঠগোলাপ (Kathgolap)",
-    "other_names": ["Red Frangipani", "Temple Tree", "Pagoda Tree", "Kathgolap", "Champa"],
+    "other_names": [
+      "Red Frangipani",
+      "Temple Tree",
+      "Pagoda Tree",
+      "Kathgolap",
+      "Champa"
+    ],
     "description": "A small deciduous succulent-stemmed tropical tree renowned for its thick fleshy sausage-like branches and intensely fragrant spiral-overlapping waxy flowers.",
     "identifying_features": [
       "Thick, knobby, fleshy gray branches exuding copious milky latex when punctured",
@@ -403,9 +520,15 @@
     "toxicity_note": "Sap contains poisonous diterpene and cardiac-irritant compounds that irritate skin and cause digestive distress if ingested TODO(verify).",
     "fun_fact": "Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/25.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Plumeria_rubra"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Plumeria_rubra",
+    "image_credit": {
+      "observer": "fmunoz",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 26,
@@ -418,7 +541,12 @@
     "origin": "global",
     "names_hindi": "कनेर (Kaner)",
     "names_bengali": "করবী (Karabi)",
-    "other_names": ["Kaner", "Karabi", "Rose Bay", "Adelfa"],
+    "other_names": [
+      "Kaner",
+      "Karabi",
+      "Rose Bay",
+      "Adelfa"
+    ],
     "description": "An evergreen ornamental shrub with whorled leathery narrow leaves and clusters of showy pink, red, or white flowers. ALL PARTS OF THIS PLANT ARE EXTREMELY TOXIC.",
     "identifying_features": [
       "Narrowly lanceolate, thick, leathery dark green leaves arranged in whorls of three",
@@ -440,9 +568,15 @@
     "toxicity_note": "DEADLY TOXIC: Contains powerful cardiac glycosides (oleandrin, neriine). Ingestion of any part can cause severe vomiting, irregular heartbeat, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic.",
     "fun_fact": "Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/26.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Nerium_oleander"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nerium_oleander",
+    "image_credit": {
+      "observer": "bradwarren",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 27,
@@ -455,7 +589,12 @@
     "origin": "global",
     "names_hindi": "बोगनवेलिया (Bougainvillea)",
     "names_bengali": "বাগানবিলাস (Baganbilash)",
-    "other_names": ["Great Bougainvillea", "Paperflower", "Baganbilash", "Kagoj Phul"],
+    "other_names": [
+      "Great Bougainvillea",
+      "Paperflower",
+      "Baganbilash",
+      "Kagoj Phul"
+    ],
     "description": "A vigorous, thorny woody scrambling climber celebrated for its exuberant, cascading displays of papery, brightly colored bracts surrounding tiny white tubular flowers.",
     "identifying_features": [
       "Woody scrambling stems equipped with sharp, stiff recurved thorns",
@@ -477,9 +616,15 @@
     "toxicity_note": "Plant sap can cause contact dermatitis or skin rash; thorny branches cause mechanical skin tears. Mild digestive upset if leaves are ingested by pets TODO(verify).",
     "fun_fact": "The brightly colored 'petals' of Bougainvillea are actually modified leaves called bracts; the true flowers are the tiny white stars nestled inside.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/27.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Bougainvillea_spectabilis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bougainvillea_spectabilis",
+    "image_credit": {
+      "observer": "Noopur🍀",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/461875164/original.jpeg"
+    },
+    "is_toxic": false
   },
   {
     "id": 28,
@@ -492,7 +637,13 @@
     "origin": "indian",
     "names_hindi": "अपराजिता (Aparajita)",
     "names_bengali": "অপরাজিতা (Aparajita)",
-    "other_names": ["Aparajita", "Blue Pea", "Asian Pigeonwings", "Conch Flower", "Shankhpushpi"],
+    "other_names": [
+      "Aparajita",
+      "Blue Pea",
+      "Asian Pigeonwings",
+      "Conch Flower",
+      "Shankhpushpi"
+    ],
     "description": "A slender twining legume vine famous for its vivid, deep cobalt-blue solitary flowers resembling a butterfly, revered in Ayurvedic medicine and Hindu rituals.",
     "identifying_features": [
       "Slender twining herbaceous climber with pinnately compound leaves (5-7 elliptic leaflets)",
@@ -514,9 +665,15 @@
     "toxicity_note": "Flowers are completely edible; roots and mature seeds have potent purgative and emetic properties and should not be consumed casually TODO(verify).",
     "fun_fact": "The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/28.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Clitoria_ternatea"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Clitoria_ternatea",
+    "image_credit": {
+      "observer": "benjaminsisko",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 29,
@@ -529,7 +686,13 @@
     "origin": "indian",
     "names_hindi": "पारिजात (Parijat)",
     "names_bengali": "শিউলি (Shiuli)",
-    "other_names": ["Parijat", "Shiuli", "Har-singar", "Coral Jasmine", "Tree of Sorrow"],
+    "other_names": [
+      "Parijat",
+      "Shiuli",
+      "Har-singar",
+      "Coral Jasmine",
+      "Tree of Sorrow"
+    ],
     "description": "A sacred Indian small tree celebrated for its nocturnal fragrant white flowers with vibrant orange-coral tubular centers that bloom at dusk and carpet the ground by dawn.",
     "identifying_features": [
       "Rough, quadrangular branches with sandpaper-textured ovate opposite leaves",
@@ -551,8 +714,14 @@
     "toxicity_note": "Non-toxic in normal cultural and traditional use; high doses of leaf extracts may have mild laxative effects TODO(verify).",
     "fun_fact": "The species name 'arbor-tristis' means 'tree of sorrow' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/29.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis",
+    "image_credit": {
+      "observer": "rushitha_jain",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg"
+    },
+    "is_toxic": false
   }
 ]

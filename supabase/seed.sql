@@ -6,7 +6,7 @@ insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   0,
   'ocimum-tenuiflorum',
@@ -26,8 +26,10 @@ insert into public.species (
   ARRAY['Traditional Ayurvedic adaptogen brewed as herbal tea for coughs and stress relief TODO(verify)', 'Daily sacred devotional worship and Hindu ritual sanctification', 'Natural culinary herb and insect-deterrent companion plant']::text[],
   ARRAY['Provide 5-6 hours of unfiltered direct daily sunlight', 'Use well-draining loamy potting soil; prevent water accumulation at roots', 'Pinch floral terminal spikes regularly to stimulate bushy branch formation']::text[],
   'Non-toxic in normal culinary use; excessive concentrated medicinal intake during pregnancy should be avoided TODO(verify).',
+  false,
   'Tulsi translates from Sanskrit as ''the incomparable one''. In Hindu mythology, no ritual offering to Lord Vishnu is complete without a Tulsi leaf.',
-  ARRAY['https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80']::text[],
+  ARRAY['/species/0.webp']::text[],
+  '{"observer":"pikun","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ocimum_tenuiflorum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -47,15 +49,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   1,
   'azadirachta-indica',
@@ -75,8 +79,10 @@ insert into public.species (
   ARRAY['Twigs harvested as traditional antibacterial chew sticks (datun) for oral hygiene', 'Cold-pressed neem oil applied as a broad-spectrum organic bio-pesticide and fungicide', 'Traditional dermatological pastes for soothing skin irritations and cooling fevers TODO(verify)']::text[],
   ARRAY['Thrives under full, blazing sunlight and high ambient temperatures', 'Exceptional drought tolerance once roots establish in well-draining sandy loam', 'Protect young saplings from freezing winter drafts and prolonged frost']::text[],
   'Foliage and dilute topical preparations are safe; concentrated neem seed oil is toxic if ingested orally, particularly dangerous for infants and children TODO(verify).',
+  false,
   'The United Nations named Neem the ''Tree of the 21st Century'' due to its potential to combat pests organically without chemical resistance.',
-  ARRAY['https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80']::text[],
+  ARRAY['/species/1.webp']::text[],
+  '{"observer":"sanahawwa","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Azadirachta_indica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -96,15 +102,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   2,
   'aloe-vera',
@@ -124,8 +132,10 @@ insert into public.species (
   ARRAY['Topical soothing gel for thermal burns, mild sunburns, and superficial abrasions', 'Hydrating botanical humectant in cosmetic formulations and hair conditioners', 'Traditional Ayurvedic digestive tonic and cooling preparation TODO(verify)']::text[],
   ARRAY['Plant in porous cactus mix or sandy soil with excellent drainage holes', 'Provide 4-6 hours of bright filtered sunlight; avoid harsh noon glass scorch', 'Allow soil substrate to dry thoroughly between moderate waterings']::text[],
   'Inner clear gel is generally safe; the yellow aloin latex beneath the leaf rind is a harsh laxative and can cause severe cramping and electrolyte loss if ingested TODO(verify). Toxic to cats and dogs.',
+  false,
   'Ancient Egyptian murals referred to Aloe vera as the ''plant of immortality'', and Cleopatra reportedly used its gel in her daily skincare regimen.',
-  ARRAY['https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600&q=80']::text[],
+  ARRAY['/species/2.webp']::text[],
+  '{"observer":"Steven Mlodinow","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/625536592/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aloe_vera'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -145,15 +155,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   3,
   'curcuma-longa',
@@ -173,8 +185,10 @@ insert into public.species (
   ARRAY['Indispensable culinary base spice providing vivid yellow color and warm earthy flavor to curries', 'Traditional Ayurvedic anti-inflammatory and antiseptic poultice for wounds and joint aches TODO(verify)', 'Sacred Haldi wedding ceremony paste symbolizing purification, auspiciousness, and beauty']::text[],
   ARRAY['Requires warm, tropical humid weather (20-35°C) and partial to bright indirect sunlight', 'Plant in loose, well-draining loamy soil enriched with composted organic matter', 'Keep soil evenly moist during the 7-9 month growing season before harvesting rhizomes']::text[],
   'Extremely safe in dietary quantities; high concentrated curcumin supplements may cause gastric distress or interact with anticoagulant medications TODO(verify).',
+  false,
   'Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.',
-  ARRAY['https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80']::text[],
+  ARRAY['/species/3.webp']::text[],
+  '{"observer":"偷米","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Turmeric'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -194,15 +208,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   4,
   'zingiber-officinale',
@@ -222,8 +238,10 @@ insert into public.species (
   ARRAY['Universal culinary spice used fresh, grated, or powdered in curries, teas (chai), and confectionery', 'Proven traditional relief for nausea, morning sickness, motion sickness, and digestive cramps TODO(verify)', 'Warming herbal decoctions for winter colds, sore throats, and respiratory congestion']::text[],
   ARRAY['Prefers filtered dappled shade and warm, humid growing environments (22-30°C)', 'Plant rhizome buds shallowly in loose, moist, humus-rich soil with sharp drainage', 'Harvest when aerial stems naturally yellow and die back in winter']::text[],
   'Safe in culinary amounts; excessive ingestion of raw root may trigger mild heartburn or gastric acid reflux. Consult physician if on blood thinners TODO(verify).',
+  false,
   'During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.',
-  ARRAY['https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80']::text[],
+  ARRAY['/species/4.webp']::text[],
+  '{"observer":"Zuleika Peralta","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ginger'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -243,15 +261,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   5,
   'withania-somnifera',
@@ -271,8 +291,10 @@ insert into public.species (
   ARRAY['Ayurvedic adaptogenic root powder consumed with warm milk for vitality and stress reduction TODO(verify)', 'Traditional sleep modulator and nervous system calmative (somnifera means ''sleep-inducing'') TODO(verify)', 'Traditional herbal support for physical endurance and hormonal balance TODO(verify)']::text[],
   ARRAY['Requires full, intense sunlight and warm temperatures to develop medicinal withanolides', 'Grow in sandy, stony, or gravelly soil with low organic matter and minimal moisture', 'Avoid overwatering; highly susceptible to fungal root rot in soggy or heavy clay soils']::text[],
   'Leaves and green unripened berries contain solanine-like alkaloids and are toxic; medicinal root should be avoided during pregnancy due to potential uterine-stimulating effects TODO(verify).',
+  false,
   'Its Sanskrit name Ashwagandha translates literally to ''smell of a horse'', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.',
-  ARRAY['https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80']::text[],
+  ARRAY['/species/5.webp']::text[],
+  '{"observer":"Finn Rautenbach","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Withania_somnifera'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -292,15 +314,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   6,
   'tinospora-cordifolia',
@@ -320,8 +344,10 @@ insert into public.species (
   ARRAY['Ayurvedic immune booster and fever-reducing decoction (kwath) particularly during viral illnesses TODO(verify)', 'Traditional hepatoprotective agent and blood purifier in herbal formulations TODO(verify)', 'Popular home remedy for chronic fatigue, joint stiffness, and glycemic regulation TODO(verify)']::text[],
   ARRAY['Requires a sturdy trellis, pergola, or host tree trunk for climbing support', 'Tolerates bright sun to partial canopy shade and varied tropical soil conditions', 'Propagates with extreme ease from mature stem cuttings planted in well-draining soil']::text[],
   'Generally recognized as safe; excessive unsupervised intake of concentrated extracts has been associated with rare idiosyncratic hepatic enzyme elevations TODO(verify).',
+  false,
   'In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.',
-  ARRAY['https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&q=80']::text[],
+  ARRAY['/species/6.webp']::text[],
+  '{"observer":"Green Bull","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tinospora_cordifolia'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -341,15 +367,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   7,
   'bacopa-monnieri',
@@ -369,8 +397,10 @@ insert into public.species (
   ARRAY['Celebrated nootropic cognitive enhancer promoting memory retention, alertness, and mental clarity TODO(verify)', 'Traditional calming agent for anxiety, nervous exhaustion, and cognitive aging TODO(verify)', 'Stir-fried as a bitter medicinal culinary green (Brahmi shak) in Bengali cuisine']::text[],
   ARRAY['Requires continuously wet, boggy, or submerged muddy soil substrate', 'Thrives in full blazing tropical sunlight to light filtered shade', 'Never allow roots to dry out; maintain standing water in saucer or shallow pond margin']::text[],
   'Non-toxic; high therapeutic doses on an empty stomach may cause mild nausea, abdominal cramps, or increased gastrointestinal motility TODO(verify).',
+  false,
   'Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.',
-  ARRAY['https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80']::text[],
+  ARRAY['/species/7.webp']::text[],
+  '{"observer":"tahli-jade","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bacopa_monnieri'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -390,15 +420,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   8,
   'phyllanthus-emblica',
@@ -418,8 +450,10 @@ insert into public.species (
   ARRAY['Primary active ingredient in classical Ayurvedic herbal formulations like Chyawanprash and Triphala', 'Preserved as sweet murabba, tart pickles (aachar), and sun-dried salted candies', 'Natural hair conditioner and scalp treatment oil for preventing premature greying']::text[],
   ARRAY['Requires full, unshaded sunlight for prolific fruiting', 'Highly adaptable to poor, alkaline, saline, and gravelly soils once established', 'Provide regular deep irrigation during floral fruit-set to avoid pre-harvest fruit drop']::text[],
   'Completely non-toxic and nutrient-dense; high dietary intake of fresh sour fruit may occasionally irritate sensitive stomachs with acid hypersecretion TODO(verify).',
+  false,
   'A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.',
-  ARRAY['https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80']::text[],
+  ARRAY['/species/8.webp']::text[],
+  '{"observer":"Bikash Kumar Sahoo","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Phyllanthus_emblica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -439,15 +473,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   9,
   'murraya-koenigii',
@@ -467,8 +503,10 @@ insert into public.species (
   ARRAY['Essential seasoning in South Indian and Maharashtrian tempering (tadka) for sambar, rasam, and chutneys', 'Traditional Ayurvedic remedy for indigestion, morning nausea, and glycemic regulation TODO(verify)', 'Boiled in coconut oil to create nourishing traditional hair tonics against premature greying']::text[],
   ARRAY['Requires warm tropical temperatures (> 18°C / 65°F) and generous direct sunlight', 'Use fertile, slightly acidic, well-draining loamy soil; avoid soggy roots', 'Protect from cold winter frost and chilly winds which cause rapid leaf drop']::text[],
   'Leaves are completely edible, flavorful, and safe; the dark berry seeds contain toxic cardiac glycosides and must never be chewed or ingested TODO(verify).',
+  false,
   'Commercial ''curry powder'' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.',
-  ARRAY['https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80']::text[],
+  ARRAY['/species/9.webp']::text[],
+  '{"observer":"foaspotter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Curry_tree'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -488,15 +526,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   10,
   'moringa-oleifera',
@@ -516,8 +556,10 @@ insert into public.species (
   ARRAY['Tender pods (''drumsticks'') cooked in traditional sambar, dals, curries, and soups', 'Nutrient-dense leaves powdered as a superfood rich in protein, iron, calcium, and vitamins A & C', 'Crushed seeds used for flocculating and purifying turbid drinking water in rural communities']::text[],
   ARRAY['Thrives in full unshaded blazing sun and high tropical heat', 'Grows exceptionally well in sandy, well-drained poor soils; highly drought-resistant', 'Prune main trunk when young to stimulate low branching for easy pod and leaf harvesting']::text[],
   'Leaves, blossoms, and green pods are nutritious and safe; the root bark contains the alkaloid spirochin, which can induce toxic cardiac paralysis and must never be consumed TODO(verify).',
+  false,
   'Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow''s milk, and four times more Vitamin A than carrots per equal weight.',
-  ARRAY['https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80']::text[],
+  ARRAY['/species/10.webp']::text[],
+  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Moringa_oleifera'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -537,15 +579,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   11,
   'aegle-marmelos',
@@ -565,8 +609,10 @@ insert into public.species (
   ARRAY['Pulp scooped to brew refreshing cooling summer sharbat (Bael pana) for digestive relief', 'Revered Ayurvedic specific for chronic dysentery, irritable bowel, and diarrhea TODO(verify)', 'Trifoliate leaves offered in daily worship rituals at Shiva temples across the country']::text[],
   ARRAY['Needs full direct sun and wide open ground space for root establishment', 'Extremely hardy; thrives in poor, rocky, stony, and alkaline clay soils', 'Drought-resistant once established; requires minimal supplemental watering']::text[],
   'Ripe fruit pulp is delicious and non-toxic; unripe fruit and concentrated bark preparations have strong astringent action and should be used with caution during pregnancy TODO(verify).',
+  false,
   'The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.',
-  ARRAY['https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80']::text[],
+  ARRAY['/species/11.webp']::text[],
+  '{"observer":"Priya Priya","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aegle_marmelos'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -586,15 +632,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   12,
   'terminalia-arjuna',
@@ -614,8 +662,10 @@ insert into public.species (
   ARRAY['Famous Ayurvedic cardiac rasayana: bark decoction boiled in milk for supporting heart muscle tone and healthy blood pressure TODO(verify)', 'Timber used for agricultural implements, boat-building, and structural housing beams', 'Foliage fed as primary host foodplant for wild tropical Tasar silkworms (Antheraea mylitta)']::text[],
   ARRAY['Best planted in deep, moist, alluvial river soils with consistent underground moisture', 'Requires full overhead sunlight and expansive outdoor physical space for its massive crown', 'Protect young saplings from domestic livestock during the first few years']::text[],
   'Medicinal bark preparations are well-tolerated under professional guidance; patients with severe congestive cardiac failure must consult their cardiologist before taking herbal preparations TODO(verify).',
+  false,
   'Named after the hero Arjuna of the Mahabharata epic in tribute to the tree''s unmatched strength, defensive resilience, and role as a biological shield for the human heart.',
-  ARRAY['https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80']::text[],
+  ARRAY['/species/12.webp']::text[],
+  '{"observer":"Kailas Erande","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Terminalia_arjuna'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -635,15 +685,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   13,
   'saraca-asoca',
@@ -663,8 +715,10 @@ insert into public.species (
   ARRAY['Prized Ayurvedic uterine tonic (Ashokarishta) used for feminine hormonal balance and reproductive health TODO(verify)', 'Sacred ornamental tree planted in temple courtyards, Buddhist viharas, and palace botanical gardens', 'Traditional astringent bark decoction for internal bleeding and uterine discomfort TODO(verify)']::text[],
   ARRAY['Requires partial shade and sheltered humid conditions when young; intolerant of arid scorching heat', 'Plant in rich, moist, organic-matter-loaded acidic soils with adequate moisture retention', 'Provide regular deep irrigation during prolonged dry seasons to maintain lush canopy foliage']::text[],
   'Non-toxic; commonly confused in urban landscaping with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which lacks medicinal properties TODO(verify).',
+  false,
   'According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/13.webp']::text[],
+  '{"observer":"Sayali Bakore","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Saraca_asoca'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -684,15 +738,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   14,
   'piper-betle',
@@ -712,8 +768,10 @@ insert into public.species (
   ARRAY['Chewed after meals as traditional digestive paan wrapped around areca nut, slaked lime, and aromatic spices', 'Auspicious symbol presented at Hindu wedding ceremonies, temple pujas, and welcoming honored guests', 'Traditional warm leaf poultice applied to children''s chests for respiratory congestion TODO(verify)']::text[],
   ARRAY['Requires warm, highly humid conditions (> 70% humidity) with protection from direct burning sun', 'Cultivate in moist, highly fertile, well-draining loamy soil rich in decomposed manure', 'Provide sturdy bamboo poles or living support trees for aerial vine climbing']::text[],
   'Fresh betel leaf alone is non-toxic and aromatic; habitual chewing of traditional paan concoctions containing tobacco and areca nut is strongly carcinogenic to oral tissues TODO(verify).',
+  false,
   'Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo''s travelogues of the subcontinent in the 13th century.',
-  ARRAY['https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80']::text[],
+  ARRAY['/species/14.webp']::text[],
+  '{"observer":"連亮惟","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Betel'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -733,15 +791,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   15,
   'cymbopogon-citratus',
@@ -761,8 +821,10 @@ insert into public.species (
   ARRAY['Key culinary flavor herb in curries, broths, and masala chai', 'Traditional herbal tea infusion used for calming digestion and fevers TODO(verify)', 'Essential oil distillation producing citral used in insect repellents and aromatherapy']::text[],
   ARRAY['Plant in full direct sun with rich, porous, well-draining soil', 'Keep soil consistently moist but never waterlogged; drought tolerant once established', 'Divide root clumps every 2 to 3 years to maintain vigor']::text[],
   'Safe in culinary amounts; concentrated essential oils can cause dermatitis or gastric upset in pets if ingested in quantity TODO(verify).',
+  false,
   'Lemongrass contains up to 80% citral in its volatile oils, giving it a stronger lemon aroma than actual lemon fruit peels.',
-  ARRAY['https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80']::text[],
+  ARRAY['/species/15.webp']::text[],
+  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605049920/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cymbopogon_citratus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -782,15 +844,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   16,
   'mentha-spicata',
@@ -810,8 +874,10 @@ insert into public.species (
   ARRAY['Essential culinary herb for fresh pudina chutney, raita, and refreshing beverages', 'Ayurvedic and folk digestive aid for nausea, stomach cramps, and breath freshness TODO(verify)', 'Flavoring agent in teas, confectionery, toothpastes, and cosmetics']::text[],
   ARRAY['Grow in pots or restricted containers to prevent aggressive underground stolon spreading', 'Maintain moist, organically rich soil with partial to full sun', 'Harvest top stems frequently to stimulate dense, bushy branching']::text[],
   'Non-toxic to humans in food amounts; large concentrated ingestion of mint essential oils can be toxic to cats and dogs TODO(verify).',
+  false,
   'Spearmint gets its common name from its pointed, spear-shaped leaf tips and floral spikes.',
-  ARRAY['https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80']::text[],
+  ARRAY['/species/16.webp']::text[],
+  '{"observer":"lynettescott","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643458773/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spearmint'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -831,15 +897,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   17,
   'ficus-religiosa',
@@ -859,8 +927,10 @@ insert into public.species (
   ARRAY['Sacred meditation and temple sanctuary tree; associated with the enlightenment of Gautama Buddha', 'Traditional Ayurvedic decoctions for skin ailments, wound cleansing, and inflammation TODO(verify)', 'Keystone ecological support tree providing figs for birds, fruit bats, and insects']::text[],
   ARRAY['Plant only in expansive open grounds well away from building foundations and sewage pipes', 'Requires full blazing tropical sun and deep, porous soil', 'Extremely hardy and drought-tolerant once deep taproots are established']::text[],
   'Milky latex sap can cause mild skin irritation or contact dermatitis in sensitive individuals TODO(verify).',
+  false,
   'The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/17.webp']::text[],
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_religiosa'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -880,15 +950,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   18,
   'ficus-benghalensis',
@@ -908,8 +980,10 @@ insert into public.species (
   ARRAY['National symbol of longevity and eternal life; central hub for village councils and rural markets', 'Ayurvedic bark and aerial root preparations for astringent gargles and joint pain TODO(verify)', 'Critical keystone tree feeding hundreds of frugivorous birds and mammals']::text[],
   ARRAY['Requires vast acreage; never suitable for small residential plots due to intrusive prop roots', 'Thrives in full sun with deep, moisture-retentive, well-draining soils', 'Prune only when training young specimens as large bonsai']::text[],
   'Like most Ficus species, the milky white latex can cause eye irritation and skin rash TODO(verify).',
+  false,
   'The Great Banyan in Howrah, West Bengal, has a canopy circumference of over 450 meters and looks like an entire forest, yet is a single clonal specimen connected by thousands of prop roots.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/18.webp']::text[],
+  '{"observer":"Sushant Kumar Mishra","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626942186/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_benghalensis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -929,15 +1003,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   19,
   'andrographis-paniculata',
@@ -957,8 +1033,10 @@ insert into public.species (
   ARRAY['Ayurvedic liver tonic and bitter febrile decoction for malaria, common colds, and upper respiratory infections TODO(verify)', 'Potent hepatoprotective and immune-stimulating traditional formulations TODO(verify)', 'Folk bitter remedy for intestinal worms and digestive sluggishness']::text[],
   ARRAY['Prefers partial shade to morning sun in hot tropical climates', 'Needs light, sandy loam soil with good drainage to prevent collar rot', 'Water moderately; keep soil slightly moist until flowering initiates']::text[],
   'Intensely bitter; large doses can induce nausea, gastric discomfort, or allergic reactions. Contraindicated during pregnancy TODO(verify).',
+  false,
   'Kalmegh is called ''Maha-tita'' in Bengali, literally meaning ''Great Bitter'', because its bitter taste is said to surpass even that of Neem.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/19.webp']::text[],
+  '{"observer":"Wanda G Jackson","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Andrographis_paniculata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -978,15 +1056,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   20,
   'hibiscus-rosa-sinensis',
@@ -1006,8 +1086,10 @@ insert into public.species (
   ARRAY['Sacred devotional offering in Hindu worship, especially for Goddess Kali and Lord Ganesha', 'Traditional hair care pastes and oils for nourishing scalp and promoting hair luster TODO(verify)', 'Edible petals brewed into tart herbal teas rich in anthocyanins']::text[],
   ARRAY['Requires at least 6 hours of full bright sun daily for continuous flower bud formation', 'Fertilize monthly during growing season with balanced, potassium-rich plant food', 'Prune back in early spring to stimulate vigorous fresh flowering shoots']::text[],
   'Generally non-toxic to humans and common domestic pets, making it a safe garden ornamental.',
+  false,
   'Historically known as ''Shoeblack plant'' because crushed petals were used in India and the Caribbean to blacken and polish leather shoes.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/20.webp']::text[],
+  '{"observer":"Silky Refina Marshellia","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1027,15 +1109,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   21,
   'tagetes-erecta',
@@ -1055,8 +1139,10 @@ insert into public.species (
   ARRAY['Essential festive flower for Diwali, weddings, temple torans, and ceremonial welcoming garlands', 'Companion planting to deter nematodes and garden pests via alpha-terthienyl root exudates', 'Commercial extraction of lutein carotenoid pigments for natural food and poultry feed coloring']::text[],
   ARRAY['Plant in full direct sun; blooms become sparse and leggy in partial shade', 'Deadhead spent blossoms regularly to prolong profuse continuous flowering', 'Allow surface soil to dry slightly between thorough deep waterings']::text[],
   'Non-toxic to humans; plant sap may cause mild contact skin irritation in sensitive people or mild drooling if chewed by pets TODO(verify).',
+  false,
   'Marigold flower petals are the richest natural commercial source of lutein, an essential antioxidant for human retinal eye health.',
-  ARRAY['https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80']::text[],
+  ARRAY['/species/21.webp']::text[],
+  '{"observer":"Ernesto Rodriguez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632297674/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tagetes_erecta'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1076,15 +1162,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   22,
   'jasminum-sambac',
@@ -1104,8 +1192,10 @@ insert into public.species (
   ARRAY['Woven into traditional fragrant hair adornments (gajras) and ceremonial temple garlands', 'Extracted for high-value jasmine enfleurage and absolute used in luxury perfumery and attars', 'Scenting green teas and herbal soothing infusions']::text[],
   ARRAY['Ensure at least 5-6 hours of daily sunlight for abundant floral bud formation', 'Provide well-drained loamy soil enriched with organic compost or cow dung manure', 'Prune lightly after the main summer flowering flush to encourage new budding spurs']::text[],
   'Non-toxic to humans, cats, and dogs; safe for indoor and courtyard cultivation.',
+  false,
   'Jasminum sambac is the national flower of both the Philippines (known as Sampaguita) and Indonesia (known as Melati putih).',
-  ARRAY['https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80']::text[],
+  ARRAY['/species/22.webp']::text[],
+  '{"observer":"Io Siu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Jasminum_sambac'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1125,15 +1215,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   23,
   'nelumbo-nucifera',
@@ -1153,8 +1245,10 @@ insert into public.species (
   ARRAY['Supreme sacred floral offering dedicated to Goddess Lakshmi and Goddess Saraswati', 'Rhizomes (kamal kakdi) and seeds (makhana / lotus seeds) are prized culinary vegetables and snacks', 'Traditional Ayurvedic use of petals, seeds, and stamens as cooling cardiac tonics TODO(verify)']::text[],
   ARRAY['Requires undisturbed still water ponds or deep water tubs with at least 30-50 cm of rich heavy clay-loam mud', 'Needs full direct sunshine all day long; flowering ceases in shaded water', 'Protect dormant rhizomes from freezing or water stagnation drying during winter']::text[],
   'Non-toxic; virtually all parts (rhizome, seeds, young stems, petals) are edible when properly cooked.',
+  false,
   'The micro-nanostructures on lotus leaves cause water droplets to roll off carrying dirt with them, giving rise to the scientific term ''the lotus effect'' for self-cleaning surfaces.',
-  ARRAY['https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80']::text[],
+  ARRAY['/species/23.webp']::text[],
+  '{"observer":"cgbolas","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nelumbo_nucifera'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1174,15 +1268,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   24,
   'rosa',
@@ -1202,8 +1298,10 @@ insert into public.species (
   ARRAY['Distillation into rose water (gulab jal) and pure rose attar (ruh gulab) for sweets, perfumes, and ceremonies', 'Petals candied with sugar into gulkand, an Ayurvedic cooling digestive tonic TODO(verify)', 'Universal ornamental cut flower symbolizing love, celebration, and reverence']::text[],
   ARRAY['Provide at least 6 hours of morning sun with good air circulation to avoid powdery mildew', 'Plant in rich, well-draining loamy soil with regular compost top-dressing', 'Water at root level in early morning; avoid wetting foliage']::text[],
   'Non-toxic to humans and pets, though sharp thorny stems can cause mechanical puncture injuries.',
+  false,
   'Rose hips (the fruit of the rose plant) contain one of the highest concentrations of natural Vitamin C of any edible fruit.',
-  ARRAY['https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80']::text[],
+  ARRAY['/species/24.webp']::text[],
+  '{"observer":"amandrews","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rose'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1223,15 +1321,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   25,
   'plumeria-rubra',
@@ -1251,8 +1351,10 @@ insert into public.species (
   ARRAY['Traditional sacred flower offered at temple shrines and used in ceremonial garlands', 'Essential perfumery compound for tropical, floral, and incense scent profiles', 'Hardy drought-tolerant architectural landscape specimen']::text[],
   ARRAY['Requires full blazing tropical sun for prolific blooming', 'Plant in well-draining gritty or sandy soil; avoid soggy soil which causes stem rot', 'Withhold heavy watering during winter deciduous dormancy']::text[],
   'Sap contains poisonous diterpene and cardiac-irritant compounds that irritate skin and cause digestive distress if ingested TODO(verify).',
+  true,
   'Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/25.webp']::text[],
+  '{"observer":"fmunoz","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumeria_rubra'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1272,15 +1374,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   26,
   'nerium-oleander',
@@ -1300,8 +1404,10 @@ insert into public.species (
   ARRAY['Highway median windbreak and erosion stabilizer due to extreme drought and pollution tolerance', 'Religious flower offerings dedicated to Lord Shiva in Hindu rituals', 'Historical cardiac medicine source under strict pharmaceutical extraction TODO(verify)']::text[],
   ARRAY['Thrives in harsh sun and poor dry soils with minimal maintenance', 'Extremely drought and salt tolerant once established', 'Always wear protective gloves when pruning, and NEVER burn clippings']::text[],
   'DEADLY TOXIC: Contains powerful cardiac glycosides (oleandrin, neriine). Ingestion of any part can cause severe vomiting, irregular heartbeat, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic.',
+  true,
   'Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/26.webp']::text[],
+  '{"observer":"bradwarren","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nerium_oleander'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1321,15 +1427,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   27,
   'bougainvillea-spectabilis',
@@ -1349,8 +1457,10 @@ insert into public.species (
   ARRAY['Spectacular vertical greening and security hedging over walls and boundary fences', 'Urban landscape screening due to extreme air-pollution and drought resistance', 'Folk use of leaf infusions in traditional Mexican remedies for respiratory coughs TODO(verify)']::text[],
   ARRAY['Needs blazing, uninterrupted tropical sunlight to produce colorful bract flushes', 'Do not overwater; allowing soil to dry out between waterings triggers heavier flowering', 'Prune aggressively after each flowering flush to manage rambling growth and shape']::text[],
   'Plant sap can cause contact dermatitis or skin rash; thorny branches cause mechanical skin tears. Mild digestive upset if leaves are ingested by pets TODO(verify).',
+  false,
   'The brightly colored ''petals'' of Bougainvillea are actually modified leaves called bracts; the true flowers are the tiny white stars nestled inside.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/27.webp']::text[],
+  '{"observer":"Noopur🍀","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/461875164/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bougainvillea_spectabilis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1370,15 +1480,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   28,
   'clitoria-ternatea',
@@ -1398,8 +1510,10 @@ insert into public.species (
   ARRAY['Sacred flower offered to Goddess Durga and Lord Shiva in Hindu devotional worship', 'Brewed as vivid ''Blue Tea'' that dramatically shifts to violet-magenta when lemon juice is added', 'Ayurvedic Medhya Rasayana (nootropic brain tonic) for memory and nervous system balance TODO(verify)']::text[],
   ARRAY['Provide a trellis, fence, or string support for slender climbing tendrils', 'Grows best in full sun or light afternoon shade with moist, permeable soil', 'Pinch young tip growth to encourage branching and more flower nodes']::text[],
   'Flowers are completely edible; roots and mature seeds have potent purgative and emetic properties and should not be consumed casually TODO(verify).',
+  false,
   'The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/28.webp']::text[],
+  '{"observer":"benjaminsisko","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Clitoria_ternatea'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1419,15 +1533,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   29,
   'nyctanthes-arbor-tristis',
@@ -1447,8 +1563,10 @@ insert into public.species (
   ARRAY['Only flower in Hindu worship sanctioned to be offered to deities after being picked up from the ground', 'Orange floral tubes traditionally boiled to yield a golden-yellow natural fabric dye', 'Ayurvedic leaf decoction renowned for treating persistent sciatica, arthritis, and chronic fevers TODO(verify)']::text[],
   ARRAY['Plant in full sun to partial shade in porous, well-draining garden soil', 'Moderate watering; avoid waterlogging around roots which causes leaf yellowing', 'Prune annually after winter flowering season to maintain compact tree shape']::text[],
   'Non-toxic in normal cultural and traditional use; high doses of leaf extracts may have mild laxative effects TODO(verify).',
+  false,
   'The species name ''arbor-tristis'' means ''tree of sorrow'' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.',
-  ARRAY['https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80']::text[],
+  ARRAY['/species/29.webp']::text[],
+  '{"observer":"rushitha_jain","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1468,15 +1586,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   30,
   'delonix-regia',
@@ -1496,8 +1616,10 @@ insert into public.species (
   ARRAY['Premier ornamental shade and avenue tree across Indian cities and universities', 'Flowers used in educational botany demonstrations and seasonal cultural decor', 'Hard dried seed pods historically used as children''s rattles and festive noisemakers']::text[],
   ARRAY['Plant in wide open spaces with plenty of clearance from buildings, as root system is shallow and wide-spreading', 'Requires full scorching sun; flowers poorly in shade', 'Extremely drought tolerant once established, but susceptible to brittle limb breakage in gale winds']::text[],
   'Seeds and bark contain mild saponins and tannins; generally non-toxic to humans in casual exposure, but unverified for ingestion TODO(verify).',
+  false,
   'Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/30.webp']::text[],
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Delonix_regia'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1517,15 +1639,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   31,
   'catharanthus-roseus',
@@ -1545,8 +1669,10 @@ insert into public.species (
   ARRAY['Commercial source of critical chemotherapy alkaloids vinblastine and vincristine used for leukemia and lymphoma', 'Traditional folk remedy where leaf infusions are taken for blood sugar regulation in diabetes TODO(verify)', 'Continuous-blooming ornamental groundcover and patio pot plant']::text[],
   ARRAY['Thrives in full sun and thrives in poor, sandy, gritty soils', 'Never overwater; highly vulnerable to phytophthora root rot in waterlogged pots', 'Pinch young shoots to prevent leggy growth']::text[],
   'TOXIC: Contains over 70 potent cytotoxic vinca alkaloids. Ingestion can cause severe abdominal cramping, low blood pressure, neuromuscular impairment, and organ toxicity in humans and pets.',
+  true,
   'Sadabahar literally means ''evergreen'' or ''always in bloom'' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.',
-  ARRAY['https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80']::text[],
+  ARRAY['/species/31.webp']::text[],
+  '{"observer":"amynmann","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Catharanthus_roseus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1566,15 +1692,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   32,
   'ixora-coccinea',
@@ -1594,8 +1722,10 @@ insert into public.species (
   ARRAY['Sacred flower offered in Hindu temple pujas, especially in Kerala and Bengal', 'Traditional Ayurvedic root and flower decoctions used for dysentery, ulcers, and skin eruptions TODO(verify)', 'Hardy, shearable formal hedge and border landscape shrub']::text[],
   ARRAY['Requires acidic soil (pH 5.0 to 5.5) enriched with organic compost; alkaline soil causes iron chlorosis', 'Provide full sun to bright partial shade and maintain steady soil moisture', 'Prune after heavy bloom cycles to keep shrub bushy and compact']::text[],
   'Non-toxic to humans; generally safe around domestic pets.',
+  false,
   'In Kerala, Ixora coccinea (known as Thechi) is a mandatory floral offering for Lord Ganesha and temple rituals.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/32.webp']::text[],
+  '{"observer":"Thoodi Harsha","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ixora_coccinea'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1615,15 +1745,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   33,
   'lantana-camara',
@@ -1643,8 +1775,10 @@ insert into public.species (
   ARRAY['Nectar source attracting diverse butterflies, bees, and hummingbirds in butterfly gardens', 'Dense root system prevents roadside embankment soil erosion', 'Stems sometimes harvested by tribal artisans for making termite-resistant wicker furniture']::text[],
   ARRAY['Generally discouraged from cultivation due to severe invasive ecological threats', 'Extremely drought, heat, and poor-soil tolerant', 'Potted sterile ornamental cultivars should be deadheaded to prevent berry dispersal by birds']::text[],
   'HIGHLY TOXIC: Green unripe berries and foliage contain triterpenoid toxins (lantadene A and B). Ingestion by children causes vomiting, lethargy, dilated pupils, and respiratory depression. Highly hepatotoxic to cattle and sheep, causing irreversible liver failure and fatal photosensitization.',
+  true,
   'Lantana camara has invaded over 13 million hectares of Indian forest lands, suppressing native regeneration and earning a spot among the world''s 100 worst invasive alien species.',
-  ARRAY['https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80']::text[],
+  ARRAY['/species/33.webp']::text[],
+  '{"observer":"Francois (Red)","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lantana_camara'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1664,15 +1798,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   34,
   'celosia-argentea',
@@ -1692,8 +1828,10 @@ insert into public.species (
   ARRAY['Vibrant autumn ornamental garden display and long-lasting dried floral arrangements', 'Young tender shoots and leaves consumed as a nutritious potherb (Lagos spinach) in traditional cooking', 'Traditional Indian and Chinese medicine using seeds (Semen Celosiae) for eye inflammation and dysentery TODO(verify)']::text[],
   ARRAY['Position in full intense sunlight; shade causes plumed heads to become pale and moldy', 'Plant in rich, well-aerated soil with dependable drainage; avoid excess nitrogen which favors foliage over crests', 'Water at soil line; dampness on dense floral crests promotes fungal botrytis rot']::text[],
   'Non-toxic; leaves and young stems are edible greens; completely safe around household pets.',
+  false,
   'The crested form of Cockscomb is a stabilized genetic anomaly called fasciation, which fuses and fans out the floral stem into a rooster-like crest.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/34.webp']::text[],
+  '{"observer":"timmeschke","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Celosia_argentea'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1713,15 +1851,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   35,
   'crossandra-infundibuliformis',
@@ -1741,8 +1881,10 @@ insert into public.species (
   ARRAY['Iconic South Indian garland flower (Kanakambaram) strung with Jasmine to create fragrant, contrasting orange-and-white gajras', 'Sacred hair adornment for festive and wedding wear across South India', 'Durable, heat-tolerant potted terrace ornamental']::text[],
   ARRAY['Thrives in warm, humid conditions with bright indirect light or dappled morning sunshine', 'Keep soil evenly moist using peat-rich, well-draining potting mixture', 'Protect from chilly winter drafts and temperatures below 12°C']::text[],
   'Non-toxic to humans and animals; completely safe for wearing in hair and near pets.',
+  false,
   'When Crossandra''s ripe seed pods encounter water or high humidity, they burst open with an audible pop and fling seeds away, earning the moniker ''Firecracker flower''.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/35.webp']::text[],
+  '{"observer":"Tharuni Sangonda","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Crossandra_infundibuliformis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1762,15 +1904,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   36,
   'canna-indica',
@@ -1790,8 +1934,10 @@ insert into public.species (
   ARRAY['Vigorous architectural tropical screening and wetland landscape beautification', 'Hard, dense round seeds historically utilized as shotgun pellets (''Indian Shot'') and prayer rosary beads', 'Underground rhizomes yield easily digestible culinary arrowroot starch (achira) in traditional farming TODO(verify)']::text[],
   ARRAY['Requires abundant moisture; thrives even in boggy soil or pond margins', 'Plant in full blazing sun to maintain intense foliage coloration and prolific blooming', 'Cut down dead flowering stalks to the base to encourage fresh suckering stems']::text[],
   'Non-toxic; rhizomes are traditionally cooked and eaten in South America; safe around pets and children.',
+  false,
   'Canna seeds are so exceptionally hard and dense that during the 1857 Indian rebellion, soldiers reportedly used them in place of lead shot when musket balls ran out.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/36.webp']::text[],
+  '{"observer":"Drew Baxter","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Canna_indica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1811,15 +1957,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   37,
   'impatiens-balsamina',
@@ -1839,8 +1987,10 @@ insert into public.species (
   ARRAY['Traditional natural dye: crushed petals applied as a substitute for Henna (Mehendi) to stain fingernails red', 'Ayurvedic and folk poultices applied to burns, scalds, and insect stings for immediate cooling relief TODO(verify)', 'High-nectar floral bed attracting native bumblebees and butterflies during the rainy season']::text[],
   ARRAY['Prefers morning sun with partial afternoon shade; wilts readily under harsh midday heat', 'Keep soil moist and humus-rich; never allow roots to dry out completely', 'Sow fresh seeds at the onset of monsoon rains for dazzling monsoon flushes']::text[],
   'Non-toxic to humans in external use; contains mild calcium oxalates which can cause mild gastric discomfort if consumed raw in large quantities TODO(verify).',
+  false,
   'The genus name ''Impatiens'' (meaning impatient) refers to the explosive seed pods that violently shoot their seeds into the air the instant they are touched.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/37.webp']::text[],
+  '{"observer":"Lynn Katsoulis","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620293016/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Impatiens_balsamina'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1860,15 +2010,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   38,
   'cassia-fistula',
@@ -1888,8 +2040,10 @@ insert into public.species (
   ARRAY['Auspicious floral offering central to the Kerala Vishu festival (Kani Konna)', 'The dark, sweetish black pulp inside the cylindrical pod is a renowned Ayurvedic safe laxative (Aragvadha) TODO(verify)', 'Premier ornamental urban flowering avenue tree across India']::text[],
   ARRAY['Plant in open sunny ground with well-drained loam or gravelly soil', 'Extremely hardy and drought-resistant once deep taproots are established', 'Requires minimal pruning; protect young saplings from livestock grazing']::text[],
   'Pods and seeds have potent anthraquinone purgative properties; overconsumption can cause severe diarrhea and intestinal cramps TODO(verify). Safe as an ornamental tree.',
+  false,
   'Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/38.webp']::text[],
+  '{"observer":"Aditya Bari","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616097106/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cassia_fistula'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1909,15 +2063,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   39,
   'butea-monosperma',
@@ -1937,8 +2093,10 @@ insert into public.species (
   ARRAY['Dry flowers boiled to produce the sacred, skin-friendly traditional saffron-orange herbal Holi dye (Teshu)', 'Stiff leathery leaves stitched together with bamboo splints into traditional disposable dining plates (pattals)', 'Ayurvedic gum (Kamarkas) and bark decoctions used as potent astringents and tonics TODO(verify)']::text[],
   ARRAY['Suited for hot, dry continental climates and withstands alkaline, sodic, and waterlogged soils', 'Requires full blazing sunshine throughout the year', 'Slow-growing initially while it establishes a deep drought-resistant taproot']::text[],
   'Seeds contain butin and proteolytic enzymes that are toxic in raw ingestion and exhibit anthelmintic toxicity if consumed unpurified TODO(verify). Flowers are safe and edible.',
+  false,
   'The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/39.webp']::text[],
+  '{"observer":"Jordan","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Butea_monosperma'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -1958,15 +2116,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   40,
   'mangifera-indica',
@@ -1986,8 +2146,10 @@ insert into public.species (
   ARRAY['World-renowned premier dessert fruit eaten fresh, blended into mango lassi, or processed into pickles and aam papad', 'Leaves strung into auspicious torans over house doorways during Hindu festivals, weddings, and pujas', 'Unripe green mangoes (kairi) boiled into Aam Panna, a traditional summer heatstroke-remedy beverage']::text[],
   ARRAY['Requires full sun and deep, well-draining alluvial loam soils', 'Withhold heavy irrigation prior to flowering to stimulate flower panicle emergence', 'Protect young graft trees from frost and waterlogging']::text[],
   'Mango tree sap, peel, and floral pollen contain urushiol-related alkylresorcinols, which can cause severe contact dermatitis (''mango mouth'') in people sensitive to poison ivy TODO(verify). Fruit flesh is safe.',
+  false,
   'India produces over 40% of the world''s total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.',
-  ARRAY['https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80']::text[],
+  ARRAY['/species/40.webp']::text[],
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Mangifera_indica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2007,15 +2169,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   41,
   'cocos-nucifera',
@@ -2035,8 +2199,10 @@ insert into public.species (
   ARRAY['Essential sacred offering (shrifal) broken at the start of all Hindu auspicious ventures and temple ceremonies', 'Nut provides nutritious refreshing water, cooking oil, grated kernel for curries, and coconut milk', 'Coir fiber used for ropes and doormats; trunk timber for building; fronds for thatched roofing']::text[],
   ARRAY['Requires intense sunlight, high relative humidity, and warm tropical temperatures', 'Prefers deep, sandy or saline well-drained soils; highly salt-tolerant', 'Apply high-potassium and boron fertilizer blends regularly to maintain nut yield']::text[],
   'Completely non-toxic; all parts of the nut, water, and oil are safe and nutritious for humans and animals.',
+  false,
   'Every single part of the coconut tree is utilized for food, shelter, fuel, or medicine, leading Sanskrit scriptures to name it Kalpavriksha (''the tree that provides all the necessities of life'').',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/41.webp']::text[],
+  '{"observer":"Sam Rickert","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coconut'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2056,15 +2222,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   42,
   'musa-acuminata',
@@ -2084,8 +2252,10 @@ insert into public.species (
   ARRAY['World''s most widely consumed fruit; ripe fruit eaten fresh, green raw fruit cooked as vegetable (kacha kela)', 'Broad waxy clean leaves serve as traditional, biodegradable ceremonial dining plates across South India', 'Tender inner pseudostem (thor) and floral heart (mocha) are nutrient-dense Ayurvedic culinary delicacies']::text[],
   ARRAY['Provide sheltered full sun away from strong winds that tear the broad leaf blades', 'Requires massive amounts of water and heavy organic nutrient feeding; never allow soil to dry out', 'Cut down pseudostem after fruiting to allow the strongest side sucker (ratoon) to take over']::text[],
   'Completely non-toxic; all parts (fruit, peel, flower, stem core) are safe and edible when prepared properly.',
+  false,
   'Botanically speaking, the banana plant is not a tree at all, but the world''s largest perennial herbaceous plant, and the banana itself is classified as a berry.',
-  ARRAY['https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80']::text[],
+  ARRAY['/species/42.webp']::text[],
+  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Musa_acuminata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2105,15 +2275,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   43,
   'carica-papaya',
@@ -2133,8 +2305,10 @@ insert into public.species (
   ARRAY['Sweet ripe fruit eaten fresh; green raw fruit cooked in curries and shredded in digestive salads', 'Fresh papaya leaf juice extract widely utilized in India to support blood platelet counts during dengue fever recovery TODO(verify)', 'Rich source of the proteolytic enzyme papain, used commercially as a meat tenderizer and digestive aid']::text[],
   ARRAY['Plant in full direct sun with elevated, rapid-draining soil mounds; standing water causes root rot within 24 hours', 'Water moderately and regularly during dry periods', 'Replace plants every 3 to 4 years as older trees decline in productivity and become unwieldy']::text[],
   'Ripe fruit is safe. UNRIPE raw green papaya and milky latex contain concentrated papain and carpaine, which can trigger uterine contractions and are strictly avoided during pregnancy TODO(verify).',
+  false,
   'Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/43.webp']::text[],
+  '{"observer":"Harry Hill","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Papaya'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2154,15 +2328,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   44,
   'psidium-guajava',
@@ -2182,8 +2358,10 @@ insert into public.species (
   ARRAY['Nutritious dessert fruit eaten fresh with chaat masala or cooked into jellies and jams', 'Extremely rich natural source of Vitamin C (up to 4 times higher than citrus fruits)', 'Tender guava leaf decoctions chewed for oral ulcers, toothaches, and digestive diarrhea TODO(verify)']::text[],
   ARRAY['Requires full direct sun and tolerates a wide variety of soils from sandy to heavy clay', 'Prune tips after harvest to stimulate new lateral branches where the next crop of flowers forms', 'Drought-resistant once established; moderate watering improves fruit size and sweetness']::text[],
   'Non-toxic; leaves, fruit, and seeds are completely safe for human consumption and non-hazardous to pets.',
+  false,
   'Guava fruit contains over 228 mg of Vitamin C per 100g — roughly four times the Vitamin C concentration of a typical sweet orange.',
-  ARRAY['https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80']::text[],
+  ARRAY['/species/44.webp']::text[],
+  '{"observer":"Roqui Bello","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Psidium_guajava'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2203,15 +2381,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   45,
   'punica-granatum',
@@ -2231,8 +2411,10 @@ insert into public.species (
   ARRAY['Antioxidant-rich fresh fruit and freshly pressed juice packed with punicalagins and anthocyanins', 'Dried seeds used as a souring spice (anardana) in Indian curries, chole, and chutneys', 'Traditional Ayurvedic rind decoctions for dysentery, diarrhea, and intestinal parasites TODO(verify)']::text[],
   ARRAY['Thrives in hot, dry climates with plenty of baking direct sunshine', 'Requires deep, well-draining calcareous or sandy loam soils; sensitive to waterlogging', 'Prune suckers regularly to maintain a clean multi-stemmed or single-trunk tree']::text[],
   'Fruit arils are completely safe and edible; tree root bark contains pelletierine alkaloids that are toxic in large unverified medicinal doses TODO(verify).',
+  false,
   'A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.',
-  ARRAY['https://images.unsplash.com/photo-1541344999736-83eca872f242?w=600&q=80']::text[],
+  ARRAY['/species/45.webp']::text[],
+  '{"observer":"謝麗霦","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pomegranate'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2252,15 +2434,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   46,
   'artocarpus-heterophyllus',
@@ -2280,8 +2464,10 @@ insert into public.species (
   ARRAY['Immature raw green jackfruit cooked as a hearty fibrous vegetable (''tree meat'' / kathal ki sabzi)', 'Sweet ripe bulbs consumed fresh, fried into chips, or preserved in sugar syrups', 'Hard, termite-resistant yellow heartwood prized for musical instruments (veena, mridangam) and temple furniture']::text[],
   ARRAY['Requires spacious acreage in warm, frost-free humid tropical conditions', 'Needs deep, rich, porous alluvial soils with unobstructed drainage', 'Protect young saplings from livestock grazing and waterlogging']::text[],
   'Non-toxic; raw unripe bulbs must be thoroughly cooked before eating; sticky white latex can irritate eyes or skin in sensitive individuals TODO(verify).',
+  false,
   'Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/46.webp']::text[],
+  '{"observer":"keirfawinat","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Jackfruit'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2301,15 +2487,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   47,
   'tamarindus-indica',
@@ -2329,8 +2517,10 @@ insert into public.species (
   ARRAY['Quintessential souring agent in Indian cuisine for sambar, rasam, imli chutney, and street pani puri', 'Tartaric acid pulp traditionally rubbed to polish and restore the shine of brass and copper sacred idols', 'Deep, cooling roadside avenue shade tree across national highways']::text[],
   ARRAY['Requires full direct sun and thrives in deep alluvial or gravelly soils', 'Remarkably drought and wind resistant once mature due to immense taproots', 'Prune young trees to establish a high central trunk clear of low traffic']::text[],
   'Completely non-toxic; pulp, tender young leaves, and roasted seeds are edible and safe for humans and animals.',
+  false,
   'The name Tamarind derives from the Arabic ''Tamar-ul-Hind'', literally translating to ''Date of India'', referencing the dark, sticky, date-like pulp inside the pods.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/47.webp']::text[],
+  '{"observer":"Mohamed SAOUPKAI","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tamarind'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2350,15 +2540,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   48,
   'syzygium-cumini',
@@ -2378,8 +2570,10 @@ insert into public.species (
   ARRAY['Delicious summer fruit eaten fresh with black salt (kala namak) or made into vinegar and juices', 'Dried seed powder (Jamun gutli) highly celebrated in Ayurveda for blood sugar management in diabetes TODO(verify)', 'Durable, water-resistant timber used for railway sleepers, well-linings, and agricultural tools']::text[],
   ARRAY['Thrives in rich, moist alluvial soils near canals or river systems, but also tolerates seasonal drought', 'Needs full overhead sun for prolific summer fruiting', 'Protect ripening fruit from parakeet and bat flocks']::text[],
   'Non-toxic; fruit and seeds are safe in dietary use. The anthocyanins in fruit heavily stain tongues and clothing dark purple.',
+  false,
   'In ancient Hindu cosmology, the Indian subcontinent was known as ''Jambudvipa'' (the Island of the Jambu Trees), named after the abundance of giant Jamun trees.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/48.webp']::text[],
+  '{"observer":"Austin Smith","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Syzygium_cumini'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2399,15 +2593,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   49,
   'manilkara-zapota',
@@ -2427,8 +2623,10 @@ insert into public.species (
   ARRAY['Delectable dessert fruit eaten chilled, blended into thick chikoo milkshakes, or dried into fruit slices', 'Historical commercial source of ''chicle'', the natural latex gum base used to make chewing gum', 'Wind-resistant coastal agroforestry shelterbelt tree']::text[],
   ARRAY['Requires warm, tropical coastal climate and full sun for sweet fruit development', 'Highly adaptable to diverse soils including saline coastal soils and limestone loams', 'Water regularly during fruit set; drought-tolerant once established']::text[],
   'Ripe fruit is non-toxic and wholesome; the hard shiny black seeds have a small sharp hook that can catch in the throat if swallowed whole TODO(verify).',
+  false,
   'The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/49.webp']::text[],
+  '{"observer":"Lynette","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Manilkara_zapota'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2448,15 +2646,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   50,
   'annona-squamosa',
@@ -2476,8 +2676,10 @@ insert into public.species (
   ARRAY['Prized seasonal dessert fruit eaten fresh, blended into Sitaphal ice creams, or pureed into rabdi', 'Crushed leaves and seed pastes historically used as traditional lice-deterrent washes and insecticide TODO(verify)', 'High natural source of Vitamin C, dietary fiber, magnesium, and potassium']::text[],
   ARRAY['Thrives in hot, dry climates with excellent soil drainage; cannot tolerate frost or waterlogged roots', 'Performs surprisingly well on rocky, gravelly, and low-fertility hillsides', 'Harvest fruits when the skin fissures between scales turn pale creamy-white']::text[],
   'PULP IS EDIBLE. SEEDS AND LEAVES ARE TOXIC: Seeds contain neurotoxic annonacin and acetogenins; crushed seeds cause severe eye inflammation and are toxic if swallowed or chewed. Keep seeds away from children and pets.',
+  false,
   'Custard apple is commonly known as ''Sitaphal'' in India, traditionally associated with Sita from the epic Ramayana.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/50.webp']::text[],
+  '{"observer":"Amara Malik","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Annona_squamosa'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2497,15 +2699,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   51,
   'citrus-limon',
@@ -2525,8 +2729,10 @@ insert into public.species (
   ARRAY['Indispensable culinary citrus for salads, nimbu pani (lemonade), dal seasonings, and traditional spicy pickles', 'Rich source of dietary Vitamin C and citric acid used for digestive drinks and home cleansing', 'Essential component of Indian good-luck charms (nimbu-mirchi toran) hung on doors and vehicles']::text[],
   ARRAY['Requires at least 6-8 hours of direct unfiltered sunlight daily', 'Provide light, well-draining sandy loam; avoid wet feet to prevent phytophthora gummosis', 'Feed quarterly with citrus-specific micronutrient fertilizers containing zinc, iron, and magnesium']::text[],
   'Fruit juice and zest are safe; peel essential oils and psoralens can cause phototoxic dermatitis on skin exposed to sun, and are mildly toxic to cats and dogs if consumed in volume TODO(verify).',
+  false,
   'Genetic studies reveal that the cultivated lemon is actually an ancient hybrid between the sour orange (Citrus × aurantium) and the citron (Citrus medica).',
-  ARRAY['https://images.unsplash.com/photo-1534533983688-c7b8e83f5b72?w=600&q=80']::text[],
+  ARRAY['/species/51.webp']::text[],
+  '{"observer":"rafa perazzolo","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/419656927/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lemon'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2546,15 +2752,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   52,
   'tectona-grandis',
@@ -2574,8 +2782,10 @@ insert into public.species (
   ARRAY['World standard luxury timber for shipbuilding, exterior decking, high-end doors, and heirloom furniture', 'Exceptional natural resistance to rotting, weathering, termites, and marine borers due to high tectoquinone content', 'Traditional folk use of leaf extracts as astringent compresses for skin eruptions TODO(verify)']::text[],
   ARRAY['Requires vast open forestry plots with deep, well-drained alluvial or basaltic soils', 'Needs blazing tropical sunshine and distinct dry and wet monsoon seasons', 'Long-term forestry investment requiring 20 to 30 years to reach harvestable heartwood girth']::text[],
   'Non-toxic in normal contact; fine sawdust from wood processing can cause respiratory irritation, sneezing, or contact dermatitis in woodworkers TODO(verify).',
+  false,
   'Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/52.webp']::text[],
+  '{"observer":"Gaurav S. Soman.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Teak'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2595,15 +2805,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   53,
   'shorea-robusta',
@@ -2623,8 +2835,10 @@ insert into public.species (
   ARRAY['Heavy-duty timber used extensively for railway ties, structural beams, bridge construction, and mine props', 'Leaves stitched into ubiquitous durable traditional dining plates and bowls (patravali / donas)', 'Resin (Raal / Sal dammar) burned as sacred temple incense and used in traditional waterproofing']::text[],
   ARRAY['Suited only for large-scale natural forest conservation and forestry silviculture', 'Requires deep, well-aerated sandy loam soils; sensitive to prolonged stagnant waterlogging', 'Seeds have extremely short viability (days) and must germinate immediately upon falling at monsoon onset']::text[],
   'Non-toxic; leaves and resin are safe and traditionally utilized in incense and food serving.',
+  false,
   'According to Buddhist tradition, Queen Maya gave birth to Gautama Buddha under a blooming Sal tree in Lumbini garden, and Buddha passed into Parinirvana beneath a pair of Sal trees in Kushinagar.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/53.webp']::text[],
+  '{"observer":"Bikram Gyawali","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Shorea_robusta'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2644,15 +2858,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   54,
   'bambusa-vulgaris',
@@ -2672,8 +2888,10 @@ insert into public.species (
   ARRAY['Universal green building material (''green gold'') for scaffolding, rural housing, fencing, and furniture', 'Tender emerging young shoots fermented, boiled, and cooked into savory traditional curries and pickles', 'Major industrial raw material for paper pulp manufacturing and eco-friendly textiles']::text[],
   ARRAY['Requires spacious garden areas or farm boundaries in full sun with plentiful soil moisture', 'Prefers rich, humusy loam with good drainage; avoid soggy saline soils', 'Thin out older culms (over 3-4 years old) to encourage robust new culm emergence during monsoon']::text[],
   'Raw emerging bamboo shoots contain cyanogenic glycosides (taxiphyllin) and MUST be thoroughly boiled or fermented to dissipate hydrogen cyanide before eating. Cooked shoots and mature culms are safe.',
+  false,
   'Certain bamboo species can grow up to 90 centimeters (almost 3 feet) in a single 24-hour period during peak monsoon season, making them the fastest-growing woody plants on Earth.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/54.webp']::text[],
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bambusa_vulgaris'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2693,15 +2911,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   55,
   'areca-catechu',
@@ -2721,8 +2941,10 @@ insert into public.species (
   ARRAY['Cured nut (Supari) chewed with betel leaf (Paan), slaked lime, and spices as an age-old social stimulant', 'Indispensable sacred offering in Hindu Vedic rituals, pujas, and wedding blessings', 'Fallen sheaths molded into eco-friendly biodegradable dining plates and takeout bowls']::text[],
   ARRAY['Requires high atmospheric humidity, warm tropical temperatures, and abundant year-round water', 'Prefers deep, fertile clay loam or lateritic soils with good drainage; cannot endure waterlogging', 'Intercropped traditionally with black pepper vines, cardamom, and banana plants for optimal microclimate']::text[],
   'CARCINOGENIC WHEN CHEWED: Areca nut contains the alkaloid arecoline. The International Agency for Research on Cancer (IARC) classifies areca nut as a Group 1 human carcinogen, strongly linked to oral submucous fibrosis and oral cancer. Chewing is hazardous to health.',
+  false,
   'Betel nut chewing is one of the world''s oldest psychoactive traditions, practiced by hundreds of millions of people across South Asia and the Pacific for thousands of years.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/55.webp']::text[],
+  '{"observer":"eagle100","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Areca_catechu'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2742,15 +2964,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   56,
   'phoenix-dactylifera',
@@ -2770,8 +2994,10 @@ insert into public.species (
   ARRAY['Sweet, highly nutritious dried and fresh dates rich in sugars, fiber, iron, and potassium', 'Sap tapped in winter from related palms (Phoenix sylvestris) boiled into prized Bengal Khejur Gur (date palm jaggery)', 'Fronds used for making mats, baskets, fans, and traditional thatched roofing']::text[],
   ARRAY['Requires hot, dry desert conditions (''feet in water, head in the fire of heaven'') with intense sun', 'Highly drought and salinity tolerant once established', 'Hand pollination of female inflorescences is commonly practiced in commercial cultivation to ensure high fruit set']::text[],
   'Non-toxic; fruit is completely wholesome. Caution: base of fronds armed with needle-sharp, rigid spines capable of puncturing skin.',
+  false,
   'Archaeological evidence shows date palm cultivation dating back more than 6,000 years in Mesopotamia, making it one of the oldest cultivated fruit trees in human civilization.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/56.webp']::text[],
+  '{"observer":"Darrell Parsons","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Date_palm'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2791,15 +3017,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   57,
   'bombax-ceiba',
@@ -2819,8 +3047,10 @@ insert into public.species (
   ARRAY['Silky kapok fiber from seed pods harvested to stuff luxury pillows, cushions, and life vests (naturally buoyant and water-repellent)', 'Fleshy flower calyces cooked as a prized seasonal vegetable (Semal ke doke) in northern India', 'Ayurvedic gum (Mocharas) and root bark used as cooling tonics and astringents TODO(verify)']::text[],
   ARRAY['Requires vast acreage due to enormous canopy and massive surface buttress roots', 'Plant in full direct sun with deep, moist alluvial or riverbank soil', 'Deciduous in winter; drops leaves completely before producing flaming floral canopy in February-March']::text[],
   'Non-toxic; flowers, young pods, and gum have traditional culinary and medicinal uses. Safe around pets.',
+  false,
   'When in bloom on bare branches, a single Semal tree becomes a bustling wildlife hub, attracting dozens of bird species, fruit bats, and monkeys gorging on abundant nectar.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/57.webp']::text[],
+  '{"observer":"ankitha_jayanth","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bombax_ceiba'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2840,15 +3070,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   58,
   'samanea-saman',
@@ -2868,8 +3100,10 @@ insert into public.species (
   ARRAY['Unrivaled urban park shade tree providing cooling canopies covering entire intersections', 'Sweet, sticky seed pods avidly eaten by cattle, goats, and horses as nutritious fodder', 'Durable, attractively figured hardwood used for artisan carved bowls and furniture']::text[],
   ARRAY['Plant only in expansive open parks or wide avenues where massive spreading branches have room to expand', 'Needs full sun and tolerates diverse soil conditions from moist alluvial to seasonal drought', 'Prune young trees to establish strong branch unions free of narrow, weak crotches']::text[],
   'Non-toxic; sweet pods are safe fodder for animals and safe around humans.',
+  false,
   'The name ''Rain Tree'' comes from the phenomenon of its leaflets folding up before rainfall, allowing raindrops to pass directly through the canopy to the ground beneath.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/58.webp']::text[],
+  '{"observer":"Hilal Ram","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Samanea_saman'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2889,15 +3123,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   59,
   'eucalyptus-globulus',
@@ -2917,8 +3153,10 @@ insert into public.species (
   ARRAY['Steam distillation of leaves produces medicinal Nilgiri oil (eucalyptol) for decongestant balms, inhalants, and throat lozenges', 'Rapidly grown commercial timber for paper pulp, cardboard, utility poles, and construction scaffolding', 'Planted in waterlogged areas to rapidly lower water tables and help control mosquito breeding']::text[],
   ARRAY['Requires full direct sunshine and rapid-draining soil; avoid planting near residential foundations or septic systems', 'Deep, aggressive root system consumes enormous amounts of water; keep away from shallow garden beds', 'Extremely fire-prone due to volatile resinous leaf oils; maintain cleared firebreaks']::text[],
   'TOXIC INGESTION: Concentrated eucalyptus essential oil is TOXIC if swallowed, causing burning in mouth, vomiting, dizziness, seizures, and respiratory failure, particularly in children and household pets. Diluted topical balms and steam inhalations are safe.',
+  false,
   'The Nilgiri Hills (''Blue Mountains'') in Tamil Nadu got their modern blue haze association partly from the vast plantations of blue gum eucalyptus trees introduced there in the mid-19th century.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/59.webp']::text[],
+  '{"observer":"felixgwj","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Eucalyptus_globulus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2938,15 +3176,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   60,
   'oryza-sativa',
@@ -2966,8 +3206,10 @@ insert into public.species (
   ARRAY['Staple dietary carbohydrate grain eaten steamed, boiled into khichdi, or ground into idli and dosa batter', 'Sacred grain (Akshata) used in every Hindu ritual, wedding blessing, and puja offering', 'Rice straw used for cattle fodder, thatched roofs, mushroom cultivation, and biodegradable paper']::text[],
   ARRAY['Requires flooded or saturated muddy soil during vegetative tillering and panicle development', 'Thrives in hot, humid tropical climates with intense uninterrupted sunlight', 'Drain water from paddy fields 10-14 days before grain harvesting']::text[],
   'Non-toxic; raw husks are indigestible and must be milled. Cooked rice is one of the gentlest hypoallergenic foods known.',
+  false,
   'India is the world''s largest exporter of rice, cultivating thousands of fragrant heritage varieties including the legendary long-grain Basmati and aromatic Gobindobhog.',
-  ARRAY['https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=600&q=80']::text[],
+  ARRAY['/species/60.webp']::text[],
+  '{"observer":"Chitra Shanker","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rice'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -2987,15 +3229,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   61,
   'triticum-aestivum',
@@ -3015,8 +3259,10 @@ insert into public.species (
   ARRAY['Milled into whole-wheat atta for daily rotis, chapatis, parathas, and refined maida for breads and bakery goods', 'Wheat straw (bhusa) serves as the primary winter dry livestock fodder across rural north India', 'Tender green wheatgrass juiced as an antioxidant-rich wellness beverage']::text[],
   ARRAY['Sown as a winter (Rabi) crop in northern India, requiring cool vegetative temperatures and warm ripening weather', 'Needs well-drained, fertile alluvial or clay loam soil; cannot tolerate prolonged waterlogging', 'Requires 4-6 timed crown root irrigations during crucial growth stages']::text[],
   'Non-toxic; contains gluten proteins which cause immune reactions in individuals with celiac disease or gluten sensitivity.',
+  false,
   'Common bread wheat is an allohexaploid plant, meaning its complex genome contains six sets of chromosomes derived from three distinct ancestral wild grass species.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/61.webp']::text[],
+  '{"observer":"Francis Stiteler","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Common_wheat'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3036,15 +3282,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   62,
   'zea-mays',
@@ -3064,8 +3312,10 @@ insert into public.species (
   ARRAY['Fresh ears roasted over charcoal on Indian street carts (bhutta) with lime and black salt', 'Ground into yellow makki ka atta for iconic winter Makki ki Roti paired with Sarson ka Saag', 'Major global industrial source of cornstarch, corn syrup, poultry feed, and biofuel ethanol']::text[],
   ARRAY['Requires full direct sun and rich, nitrogen-heavy, well-aerated soil', 'Plant in blocks of several short rows rather than single long rows to facilitate wind pollination', 'Keep consistently watered, particularly when tassels and silk emerge']::text[],
   'Non-toxic; corn kernels and silks are completely safe and edible for humans and domestic animals.',
+  false,
   'Every single strand of silk on an ear of corn connects to a single egg inside, meaning every single kernel on a cob must be individually pollinated by a grain of airborne pollen.',
-  ARRAY['https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&q=80']::text[],
+  ARRAY['/species/62.webp']::text[],
+  '{"observer":"Karol Łanocha","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Maize'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3085,15 +3335,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   63,
   'saccharum-officinarum',
@@ -3113,8 +3365,10 @@ insert into public.species (
   ARRAY['Stalks freshly crushed on Indian street stalls for refreshing sugarcane juice (Ganne ka ras) flavored with ginger and mint', 'Boiled and concentrated into traditional unrefined jaggery (gur) and refined crystalline table sugar', 'Bagasse fiber burned for thermal co-generation energy and molasses fermented into industrial ethanol']::text[],
   ARRAY['Requires 10-12 months of hot tropical weather, high humidity, and copious irrigation', 'Prefers deep, rich, fertile loam or heavy clay soils with good drainage', 'Propagated vegetatively via stem cuttings (''setts'') bearing at least 2-3 healthy eye buds']::text[],
   'Completely non-toxic; cane juice and jaggery are safe foods; moldy red-rot sugarcane should be avoided.',
+  false,
   'India was the first country in the world to invent the process of crystallizing sugarcane juice into solid crystals (Sanskrit: ''Khanda'', origin of the English word ''candy'') over 2,500 years ago.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/63.webp']::text[],
+  '{"observer":"FO12071Saowanit","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Saccharum_officinarum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3134,15 +3388,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   64,
   'camellia-sinensis',
@@ -3162,8 +3418,10 @@ insert into public.species (
   ARRAY['Harvesting ''two leaves and a bud'' processed into world-renowned Darjeeling, Assam, and Nilgiri teas', 'Brewed as daily Indian spiced milk tea (Masala Chai) boiled with cardamom, ginger, and cloves', 'Rich in polyphenol antioxidants (EGCG), theanine, and gentle caffeine for mental clarity']::text[],
   ARRAY['Requires strongly acidic, well-draining soil (pH 4.5 to 5.5) rich in organic humus', 'Thrives under high rainfall, cool temperatures, and frequent misty humidity with morning sun', 'Requires regular plucking and pruning to maintain a dense vegetative flushing canopy']::text[],
   'Non-toxic to humans in beverage use; caffeine content makes concentrated leaves toxic to cats and dogs if ingested TODO(verify).',
+  false,
   'All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.',
-  ARRAY['https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=600&q=80']::text[],
+  ARRAY['/species/64.webp']::text[],
+  '{"observer":"kusa-to-uo","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Camellia_sinensis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3183,15 +3441,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   65,
   'gossypium-hirsutum',
@@ -3211,8 +3471,10 @@ insert into public.species (
   ARRAY['World''s most important natural textile fiber (''white gold'') woven into breathable cotton garments, towels, and bedsheets', 'Cottonseed crushed to extract edible cottonseed oil and high-protein livestock meal cake (khal)', 'Absorbent medical cotton wool used universally in wound dressings and surgical care']::text[],
   ARRAY['Requires deep, moisture-retentive black basaltic soils (Regur) or fertile alluvial loam', 'Needs hot weather, full sun, and at least 180 to 200 frost-free sunny days', 'Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality']::text[],
   'Lint and oil are safe; raw seeds and foliage contain the toxic polyphenol gossypol, which can cause cardiac and reproductive toxicity in non-ruminant animals TODO(verify).',
+  false,
   'Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/65.webp']::text[],
+  '{"observer":"megan_pratt1","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gossypium_hirsutum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3232,15 +3494,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   66,
   'brassica-juncea',
@@ -3260,8 +3524,10 @@ insert into public.species (
   ARRAY['Pungent brown seeds cold-pressed into Kacchi Ghani mustard oil, the signature cooking oil of North and Eastern India', 'Tender winter leaves boiled and slow-simmered into Sarson ka Saag served with Makki ki Roti', 'Seeds ground into zesty kasundi and fish-curry pastes (Shorshe Ilish) in Bengal']::text[],
   ARRAY['Grown as a winter Rabi crop; thrives in cool weather and full direct sunlight', 'Prefers well-drained loamy soil; sensitive to water stagnation during early root development', 'Harvest seed pods when plants turn golden-brown before pods shatter open']::text[],
   'Non-toxic in normal culinary use; mustard oil contains erucic acid and allyl isothiocyanate which gives it a pungent sharp bite. Safe and widely consumed.',
+  false,
   'The characteristic pungent nasal heat of mustard is only released when seeds or leaves are crushed in water, which activates the myrosinase enzyme to produce allyl isothiocyanate.',
-  ARRAY['https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80']::text[],
+  ARRAY['/species/66.webp']::text[],
+  '{"observer":"Emilia Sierra","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Brassica_juncea'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3281,15 +3547,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   67,
   'solanum-lycopersicum',
@@ -3309,8 +3577,10 @@ insert into public.species (
   ARRAY['Essential savory flavor base for Indian gravies, curries, rasams, and fresh kachumber salads', 'Richest dietary source of the potent antioxidant carotenoid lycopene, supporting cardiovascular health', 'Processed commercially into tomato puree, ketchups, and canned sauces']::text[],
   ARRAY['Requires at least 6-8 hours of direct sunshine and support trellising or tomato cages', 'Water deeply and consistently at the soil level; irregular watering causes blossom end rot and fruit splitting', 'Pinch out side-suckers from leaf axils on indeterminate varieties to focus energy on fruit ripening']::text[],
   'RIPE FRUIT IS SAFE AND EDIBLE. FOLIAGE AND GREEN UNRIPE FRUITS ARE TOXIC: Leaves, stems, and unripened green tomatoes contain toxic glycoalkaloids (solanine and tomatine). Ingestion of green plant parts can cause abdominal pain, vomiting, and diarrhea in humans and pets.',
+  false,
   'Botanically, the tomato is a true berry, but a famous 1893 US Supreme Court case (Nix v. Hedden) legally classified it as a vegetable for taxation purposes because it is eaten as part of the main meal.',
-  ARRAY['https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&q=80']::text[],
+  ARRAY['/species/67.webp']::text[],
+  '{"observer":"Ajay Malik.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tomato'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3330,15 +3600,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   68,
   'capsicum-annuum',
@@ -3358,8 +3630,10 @@ insert into public.species (
   ARRAY['Indispensable spice added fresh (hari mirch) or sun-dried and powdered (lal mirch) to almost all savory Indian dishes', 'Capsaicin extracts used pharmaceutically in topical pain-relief creams for neuropathy and arthritis TODO(verify)', 'Traditional Indian protective amulets (nimbu-mirchi) hung to ward off the evil eye (nazar)']::text[],
   ARRAY['Thrives in hot, sunny conditions with rich, well-draining garden soil', 'Water moderately; slightly restricting water during fruiting actually increases capsaicin heat intensity', 'Apply high-potash fertilizer when flower buds initiate']::text[],
   'Fruit is culinary safe; capsaicin is an intense mucous membrane irritant. Wash hands thoroughly after chopping; avoid touching eyes. Excessive intake can cause gastric pain. Keep away from household pets.',
+  false,
   'The fiery heat in chillies is measured on the Scoville Heat Scale; capsaicin does not cause an actual physical burn, but tricks sensory nerve endings into signaling extreme heat to the brain.',
-  ARRAY['https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&q=80']::text[],
+  ARRAY['/species/68.webp']::text[],
+  '{"observer":"chrissietinder","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Capsicum_annuum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3379,15 +3653,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   69,
   'solanum-melongena',
@@ -3407,8 +3683,10 @@ insert into public.species (
   ARRAY['Charred and mashed over open flame to create the iconic smoky Baingan Bharta', 'Deep-fried in spiced gram-flour batter for Bengali Beguni, or stuffed in Maharashtrian Bharli Vangi', 'Excellent source of dietary fiber, nasunin anthocyanins in purple skin, and copper']::text[],
   ARRAY['Requires hot, sunny weather and deep, fertile, organically rich loam soil', 'Stake heavy fruiting branches to keep heavy eggplants off wet soil', 'Harvest fruits while skin remains glossy; dull skin indicates overripe bitter seeds']::text[],
   'Cooked fruit is safe and nutritious. RAW FOLIAGE AND STEMS ARE TOXIC: Leaves and raw unripened fruit contain the toxic glycoalkaloid solanine; do not consume raw green parts or allow pets to chew foliage.',
+  false,
   'Botanical and linguistic records confirm that brinjal was domesticated in India over 4,000 years ago, and Sanskrit literature documents over 30 distinct historical culinary varieties.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/69.webp']::text[],
+  '{"observer":"Sereana Seuvou","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Eggplant'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3428,15 +3706,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   70,
   'abelmoschus-esculentus',
@@ -3456,8 +3736,10 @@ insert into public.species (
   ARRAY['Staple Indian vegetable dish: dry-spiced stir-fry Bhindi Masala, Kurkuri Bhindi, or Bengali Dherosh Chorchori', 'Natural mucilage used as a thickener in traditional southern gumbos and stews', 'High natural source of soluble dietary fiber, Vitamin K, and folate']::text[],
   ARRAY['Thrives in hot summer sunshine; seeds fail to germinate in cold or waterlogged soil', 'Plant in rich, well-draining garden soil enriched with mature compost', 'Harvest pods every 2-3 days while they are tender and snap easily; old pods become tough and stringy']::text[],
   'Completely non-toxic; pods, leaves, and seeds are edible and safe for humans and animals.',
+  false,
   'India is the world''s undisputed king of okra production, harvesting over 60% of the entire global commercial okra crop each year.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/70.webp']::text[],
+  '{"observer":"kc8328thamonwan","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Okra'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3477,15 +3759,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   71,
   'solanum-tuberosum',
@@ -3505,8 +3789,10 @@ insert into public.species (
   ARRAY['Heart of Indian comfort cuisine: Aloo Gobi, Aloo Paratha, Samosa stuffing, Dum Aloo, and street chaat', 'Rich source of digestible dietary carbohydrates, potassium, and Vitamin B6', 'Commercial production of potato starch, flour, and snack chips']::text[],
   ARRAY['Grown as a cool winter crop in the plains, or summer crop in the Himalayan hills', 'Requires loose, deeply tilled sandy loam soil to allow unhindered tuber expansion', 'Hill soil up around growing stems regularly to protect swelling tubers from sunlight exposure']::text[],
   'TUBERS ARE SAFE WHEN SOUND. GREEN PARTS AND SPROUTS ARE TOXIC: Green sun-exposed potato peel, green tubers, sprouts, and all aboveground foliage contain poisonous solanine and chaconine glycoalkaloids. Ingestion causes nausea, vomiting, abdominal cramping, and headaches. NEVER eat green potatoes.',
+  false,
   'Potatoes are underground modified stems (tubers), not roots; the ''eyes'' of a potato are actually dormant axillary buds capable of sprouting into new clonal plants.',
-  ARRAY['https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80']::text[],
+  ARRAY['/species/71.webp']::text[],
+  '{"observer":"김도윤","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Potato'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3526,15 +3812,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   72,
   'allium-cepa',
@@ -3554,8 +3842,10 @@ insert into public.species (
   ARRAY['Fundamental aromatic flavor foundation for Indian tadkas, gravies, biryanis, and salads', 'High natural source of quercetin, a powerful antioxidant flavonoid supporting cellular health', 'Folk use of raw onion juice applied topically to soothe bee stings or massaged on scalps for hair strength TODO(verify)']::text[],
   ARRAY['Needs full direct sun and fertile, loose, sandy loam soil free of rocks', 'Keep soil weed-free and uniformly moist during early bulb swelling; withhold water as tops flop over', 'Allow harvested bulbs to dry and cure in a well-ventilated shaded space for several weeks']::text[],
   'SAFE FOR HUMANS. TOXIC TO PETS: Contains organosulfoxides and N-propyl disulfide that are highly toxic to dogs, cats, and horses, destroying red blood cells and triggering life-threatening hemolytic anemia.',
+  false,
   'Onions make you cry because slicing cell walls mixes sulfenic acids with enzymes to create syn-propanethial-S-oxide gas, which reacts with tear-duct moisture to form mild sulfuric acid.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/72.webp']::text[],
+  '{"observer":"jeanelz","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Onion'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3575,15 +3865,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   73,
   'coriandrum-sativum',
@@ -3603,8 +3895,10 @@ insert into public.species (
   ARRAY['Fresh chopped leaves (cilantro / green dhaniya) used as the universal finishing garnish on all Indian curries and dals', 'Dry roasted seeds ground into dhaniya powder, a foundational warm spice in garam masala and curry powders', 'Ayurvedic cooling water infusion of crushed seeds (Dhaniya jal) taken for soothing digestion and urinary balance TODO(verify)']::text[],
   ARRAY['Thrives in cool weather and morning sun; rapidly bolts to flower in hot, dry conditions', 'Keep soil evenly moist using well-aerated, fertile potting loam', 'Sow successive seeds every 3 weeks for an uninterrupted supply of fresh tender leaves']::text[],
   'Non-toxic and edible; a harmless genetic variation in OR6A2 olfactory receptor genes causes cilantro to taste intensely like soap to about 10-15% of people.',
+  false,
   'Every part of the coriander plant is edible — the tender leafy greens (cilantro), the flowers, the dried seeds (coriander), and even the pungent roots which form the base of Thai curry pastes.',
-  ARRAY['https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80']::text[],
+  ARRAY['/species/73.webp']::text[],
+  '{"observer":"Юрий","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coriander'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3624,15 +3918,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   74,
   'spinacia-oleracea',
@@ -3652,8 +3948,10 @@ insert into public.species (
   ARRAY['Blanched and pureed with paneer into the beloved restaurant classic Palak Paneer', 'Stir-fried with potatoes in Aloo Palak or simmered into comforting Bengali Palang Shaker Ghonto', 'Rich in lutein, zeaxanthin, iron, folate, and Vitamins A, C, and K']::text[],
   ARRAY['Requires cool temperatures (10-22°C); hot weather immediately triggers bitter flowering stalks (bolting)', 'Provide full winter sun and nitrogen-rich, moisture-retentive, well-draining garden soil', 'Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window']::text[],
   'Safe and wholesome; contains high concentrations of natural dietary oxalic acid, which can bind calcium and contribute to kidney stone formation in susceptible individuals TODO(verify).',
+  false,
   'The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.',
-  ARRAY['https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&q=80']::text[],
+  ARRAY['/species/74.webp']::text[],
+  '{"observer":"Thassanee Duangnin","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spinach'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3673,15 +3971,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   75,
   'lagenaria-siceraria',
@@ -3701,8 +4001,10 @@ insert into public.species (
   ARRAY['Light, cooling staple vegetable cooked into Lauki ki Sabzi, Lauki Kofta, Lauki Kheer, and Bengali Lau Ghonto', 'Fresh juice consumed as an Ayurvedic cooling health tonic and digestive aid TODO(verify)', 'Dried, hollowed woody gourds historically crafted into the soundbox resonator of the sitar, tanpura, and rudra veena']::text[],
   ARRAY['Provide a sturdy bamboo arbor, trellis, or rooftop scaffolding to support heavy hanging gourds', 'Requires full direct sunshine and organically enriched, moisture-retentive loam soil', 'Water generously and consistently during vine growth and fruit swelling']::text[],
   'WARNING: NORMAL SWEET LAUKI IS SAFE. BITTER BOTTLE GOURD IS EXTREMELY TOXIC: Never consume bottle gourd juice that tastes bitter. Bitter gourds contain high levels of toxic cucurbitacins B and D, which cause acute toxic shock, hematemesis (vomiting blood), gastrointestinal bleeding, and organ failure. Always taste a small raw piece before juicing or cooking; discard immediately if bitter.',
+  false,
   'Dried, hollowed bottle gourds were among the world''s very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/75.webp']::text[],
+  '{"observer":"Sulaiman Inuwa Muhammad","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Calabash'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3722,15 +4024,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   76,
   'cucurbita-moschata',
@@ -3750,8 +4054,10 @@ insert into public.species (
   ARRAY['Cooked into sweet-and-sour Kaddu ki Sabzi, Bengali Kumror Chhokka, and sambar stews', 'Nutrient-dense seeds (magaz) roasted as healthy snacks or ground into festive sweet gravies', 'Rich dietary source of beta-carotene (provitamin A), lutein, and potassium']::text[],
   ARRAY['Requires vast ground area or heavy-duty arbors to support rambling 5-10 meter vines', 'Thrives in hot, sunny weather and loose, fertile soil enriched with aged cow manure', 'Mulch soil beneath developing fruits with straw to prevent rot from ground moisture']::text[],
   'Non-toxic; flesh, blossoms, tender leaves, and seeds are completely edible and safe for humans and pets.',
+  false,
   'In Bengali cuisine, practically zero waste is generated from pumpkin: the flesh, tender climbing shoot tips (kumro shaak), yellow flowers (kumro phul bhaja), and seeds are all prized delicacies.',
-  ARRAY['https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80']::text[],
+  ARRAY['/species/76.webp']::text[],
+  '{"observer":"abdlkrim","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cucurbita_moschata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3771,15 +4077,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   77,
   'cucumis-sativus',
@@ -3799,8 +4107,10 @@ insert into public.species (
   ARRAY['Essential cooling raw salad vegetable eaten fresh with lemon juice and chaat masala, or folded into boondi raita', 'Natural hydrator containing over 95% water, electrolytes, and silica', 'Chilled slices placed over eyes to reduce puffiness and soothe tired skin']::text[],
   ARRAY['Trellis vines vertically to keep cucumbers clean, straight, and well-aerated', 'Requires consistent, deep watering; moisture stress produces bitter, misshapen fruits', 'Harvest cucumbers while crisp and firm before seeds enlarge and skins turn yellow']::text[],
   'Safe and wholesome; occasional bitter cucumbers contain elevated cucurbitacins (usually concentrated near the stem end) and should be trimmed or discarded.',
+  false,
   'Ancient Sanskrit texts mention cucumber cultivation under the name ''Trapusha'' over three millennia ago, confirming India as the original botanical homeland of the global cucumber.',
-  ARRAY['https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=600&q=80']::text[],
+  ARRAY['/species/77.webp']::text[],
+  '{"observer":"dongjing123","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cucumber'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3820,15 +4130,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   78,
   'arachis-hypogaea',
@@ -3848,8 +4160,10 @@ insert into public.species (
   ARRAY['Roasted, salted, or boiled as iconic winter street snacks (moongphali) across Indian railway stations and markets', 'Major commercial source of groundnut oil, the preferred traditional cooking oil of Gujarat and Maharashtra', 'High natural source of plant protein, healthy monounsaturated fats, resveratrol, and Vitamin E']::text[],
   ARRAY['Requires light, loose, sandy loam soil so emerging pegs can easily penetrate underground', 'Thrives in warm, sunny weather; sensitive to soil compaction and waterlogging', 'Keep soil loose around the base of plants during flowering and pegging stages']::text[],
   'Non-toxic; peanuts are one of the most common severe food allergens, capable of triggering life-threatening anaphylaxis in allergic individuals. Ensure peanuts are stored dry to avoid toxic aflatoxin mold.',
+  false,
   'Peanuts are not true nuts at all, but botanical legumes related to peas and beans, famous for their unique habit of flowering in the air and ripening their pods underground.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/78.webp']::text[],
+  '{"observer":"pcharris","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Peanut'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3869,15 +4183,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   79,
   'corchorus-olitorius',
@@ -3897,8 +4213,10 @@ insert into public.species (
   ARRAY['Bast fibers woven into burlap, gunny sacks, twine, eco-friendly shopping bags, and geo-textiles (''The Golden Fiber'')', 'Tender mucilaginous young leaves cooked as a prized nutritious green potherb (Pat shaak) in Bengal and Egypt (Molokhia)', 'Completely biodegradable, eco-friendly alternative to synthetic plastic packaging materials']::text[],
   ARRAY['Requires high temperatures, high monsoon humidity, and deep, standing alluvial silt soils', 'Grown during the monsoon season when rainfall is abundant', 'Retting: harvested stalks must be submerged in slow-flowing fresh water for 2-3 weeks to soften and strip fibers']::text[],
   'Tender young leaves are a safe, edible vegetable; mature seeds contain cardiac glycosides (olitoriside) and should not be consumed TODO(verify).',
+  false,
   'Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as ''The Golden Fiber'' for its natural golden sheen and vital economic importance.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/79.webp']::text[],
+  '{"observer":"Mashudu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Corchorus_olitorius'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3918,15 +4236,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   80,
   'epipremnum-aureum',
@@ -3946,8 +4266,10 @@ insert into public.species (
   ARRAY['Popular Vastu Shastra and Feng Shui houseplant believed to attract wealth, prosperity, and positive energy', 'Top-rated indoor air-purifying plant shown to remove indoor toxins including formaldehyde, benzene, and xylene', 'Versatile ornamental grown in soil pots, moss poles, or simple glass bottles filled with water']::text[],
   ARRAY['Thrives in bright indirect light; tolerates low-light conditions (though variegation fades in deep shade)', 'Allow the top 2 inches of soil to dry out between waterings; avoid soggy, anaerobic soil', 'If growing in water jars, change the water every 7-10 days to maintain oxygenation and prevent algae']::text[],
   'TOXIC TO PETS AND CHILDREN: Contains insoluble needle-shaped calcium oxalate crystals (raphides). Chewing any part causes immediate intense burning and stinging of the mouth, tongue, and lips, excessive drooling, difficulty swallowing, and vomiting in cats, dogs, and humans.',
+  true,
   'Golden Pothos earned the nickname ''Devil''s Ivy'' because it is nearly impossible to kill and stays vibrantly green even when neglected in windowless dark corners.',
-  ARRAY['https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&q=80']::text[],
+  ARRAY['/species/80.webp']::text[],
+  '{"observer":"ELIZE JANICA AQUINO","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Epipremnum_aureum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -3967,15 +4289,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   81,
   'dracaena-trifasciata',
@@ -3995,8 +4319,10 @@ insert into public.species (
   ARRAY['Renowned NASA Clean Air Study plant that converts CO2 into oxygen at night via Crassulacean Acid Metabolism (CAM)', 'Filters airborne toxins including benzene, formaldehyde, trichloroethylene, and xylene', 'Architectural focal point for modern minimalist interior design and drought-tolerant rock gardens']::text[],
   ARRAY['Water sparingly; allow soil to dry out completely between waterings; overwatering causes fatal root rot', 'Tolerates full blazing sun as well as low-light indoor corners', 'Use well-aerated cactus or succulent potting soil with perlite and pumice']::text[],
   'MILD-TO-MODERATE TOXICITY: Foliage contains saponins. Ingestion by cats and dogs causes excessive salivation, vomiting, nausea, diarrhea, and lethargy.',
+  true,
   'Unlike most houseplants that release oxygen only during daytime photosynthesis, the Snake Plant performs CAM photosynthesis, releasing oxygen throughout the night, making it ideal for bedrooms.',
-  ARRAY['https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80']::text[],
+  ARRAY['/species/81.webp']::text[],
+  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_trifasciata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4016,15 +4342,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   82,
   'chlorophytum-comosum',
@@ -4044,8 +4372,10 @@ insert into public.species (
   ARRAY['Classic hanging basket and shelf ornamental with cascading tiers of dangling plantlets', 'Highly effective natural air purifier removing carbon monoxide, formaldehyde, and airborne dust particles', 'Safe, non-toxic pet-friendly indoor houseplant']::text[],
   ARRAY['Provide bright, indirect sunlight; direct midday sun scorches and bleaches the tender ribbon leaves', 'Keep soil evenly moist in spring and summer; water when top inch of soil feels dry', 'Snip off dangling spiderettes and root them in moist soil or water for effortless propagation']::text[],
   'NON-TOXIC: Completely safe for cats, dogs, and children. Cats are often attracted to spider plants because they contain mild compounds with a mild hallucinogenic/catnip-like effect on felines, though it is physically harmless.',
+  false,
   'A single healthy mother Spider Plant can produce dozens of dangling baby plantlets simultaneously on its arching stolons, giving rise to its common name ''Hen and Chickens''.',
-  ARRAY['https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80']::text[],
+  ARRAY['/species/82.webp']::text[],
+  '{"observer":"Petra Holland","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Chlorophytum_comosum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4065,15 +4395,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   83,
   'monstera-deliciosa',
@@ -4093,8 +4425,10 @@ insert into public.species (
   ARRAY['Premier architectural statement plant featured in contemporary interior design and boutique hotels', 'Naturally removes indoor airborne pollutants and enriches ambient room humidity', 'Ripe fruit (ceriman) is eaten as a rare delicacy tasting of a hybrid between pineapple, banana, and mango']::text[],
   ARRAY['Place in bright indirect or filtered sunlight; harsh direct sun bleaches and burns the glossy leaves', 'Provide a sturdy moss pole, coir totem, or trellis for aerial roots to climb', 'Water thoroughly when the top 2-3 inches of soil dry; wipe dust off broad leaves with a damp cloth']::text[],
   'FOLIAGE AND UNRIPE FRUIT ARE TOXIC: All vegetative parts contain sharp needle-like insoluble calcium oxalate crystals (raphides). Chewing foliage causes intense oral burning, swelling of tongue and throat, and digestive distress in pets and humans. Only the completely ripe fruit (whose outer green scales fall off voluntarily) is edible.',
+  false,
   'The natural holes in Monstera leaves are called ''fenestrations'' (from the Latin for window); they allow hurricane winds to pass through without tearing the leaf and let sunlight filter down to lower foliage.',
-  ARRAY['https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80']::text[],
+  ARRAY['/species/83.webp']::text[],
+  '{"observer":"carolwest","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Monstera_deliciosa'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4114,15 +4448,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   84,
   'spathiphyllum-wallisii',
@@ -4142,8 +4478,10 @@ insert into public.species (
   ARRAY['Celebrated as a symbol of peace, purity, and healing, frequently gifted during housewarmings and milestones', 'One of the top-performing houseplants for removing benzene, formaldehyde, carbon monoxide, and toluene from indoor air', 'Thrives in low-light indoor spaces where few other flowering plants can survive']::text[],
   ARRAY['Prefers medium to low indirect light; direct sunshine will scorch the leaves and brown the white spathes', 'Keep potting soil consistently moist but never soggy; water as soon as leaves begin to gently droop', 'Wipe broad leaves periodically to remove dust and maintain high photosynthetic efficiency']::text[],
   'TOXIC TO DOGS AND CATS: Contains insoluble calcium oxalate crystals. Ingestion causes immediate oral pain, burning of lips and tongue, drooling, difficulty swallowing, and vomiting. Keep out of reach of domestic pets.',
+  true,
   'The white ''flower'' of the Peace Lily is not a true flower at all, but a modified leaf called a spathe that serves as a protective hood and billboard to guide pollinators to the tiny true flowers on the spadix.',
-  ARRAY['https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80']::text[],
+  ARRAY['/species/84.webp']::text[],
+  '{"observer":"Dhandara Manini","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spathiphyllum_wallisii'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4163,15 +4501,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   85,
   'ficus-elastica',
@@ -4191,8 +4531,10 @@ insert into public.species (
   ARRAY['Aerial roots trained by the indigenous Khasi and Jaintia tribes of Meghalaya to create centuries-old, living root bridges across roaring rivers', 'Historical source of natural rubber latex before the Amazonian rubber tree (Hevea brasiliensis) became dominant', 'Bold, dramatic indoor specimen plant prized for its shiny architectural foliage']::text[],
   ARRAY['Thrives in bright, indirect sunlight; can tolerate gentle morning direct sun', 'Water thoroughly when the top two inches of potting mix feel dry; reduce watering during winter months', 'Clean leaves with a soft damp cloth to keep the glossy surface free of dust and mineral deposits']::text[],
   'MILD-TO-MODERATE TOXICITY: The milky latex contains ficin and psoralens. Contact with skin or eyes causes irritation and dermatitis; ingestion can cause vomiting, drooling, and mouth irritation in dogs and cats.',
+  false,
   'The incredible Living Root Bridges of Meghalaya, some carrying foot traffic for over 500 years, are meticulously grown and woven by indigenous Khasi villagers using the living aerial roots of Ficus elastica.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/85.webp']::text[],
+  '{"observer":"大坑東宣道小學","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_elastica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4212,15 +4554,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   86,
   'crassula-ovata',
@@ -4240,8 +4584,10 @@ insert into public.species (
   ARRAY['Premier Feng Shui and Vastu houseplant placed near home or office entrances to attract financial prosperity and harmony', 'Ideal living bonsai specimen that naturally develops an ancient, thick-trunked appearance with minimal training', 'Drought-resilient tabletop succulent requiring minimal maintenance']::text[],
   ARRAY['Requires at least 4-6 hours of bright direct or filtered sunlight; insufficient light causes leggy, drooping stems', 'Water thoroughly only when the soil has dried out completely; highly vulnerable to stem rot from overwatering', 'Plant in porous, gritty succulent/cactus potting mix with perlite or pumice']::text[],
   'TOXIC TO CATS AND DOGS: Ingestion by pets causes vomiting, depression, ataxia (unsteady gait), and slow heart rate. Keep placed on high shelves away from household pets.',
+  true,
   'Jade plants can live for over 70 to 100 years, often passed down through multiple family generations as living family heirlooms.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/86.webp']::text[],
+  '{"observer":"Craig Peter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Crassula_ovata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4261,15 +4607,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   87,
   'opuntia-ficus-indica',
@@ -4289,8 +4637,10 @@ insert into public.species (
   ARRAY['Nutritious sweet fruit (tunas / prickly pears) peeled and eaten fresh, rich in betalain antioxidants and Vitamin C', 'Tender young pads (nopales) cleaned of spines and grilled or cooked in traditional Mexican cuisine', 'Formidable living barbed security fence planted along rural agricultural borders to exclude cattle and wild boars']::text[],
   ARRAY['Requires full, blazing, intense direct sunshine and hot temperatures', 'Needs sharply draining sandy, gravelly, or rocky soil; immediately rots in waterlogged conditions', 'Extremely drought tolerant; requires virtually no supplemental watering once established']::text[],
   'Fruit flesh and pads are non-toxic and edible. MECHANICAL IRRITATION HAZARD: The tiny microscopic hair-like barbed spines (glochids) easily detach and penetrate skin or mucous membranes, causing persistent severe mechanical dermatitis, itching, and pain. Handle only with thick leather gloves or tongs.',
+  false,
   'Prickly pear cladodes are the traditional host plant for cochineal insects (Dactylopius coccus), the historic source of natural carmine red dye used to color royal fabrics, cosmetics, and foods.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/87.webp']::text[],
+  '{"observer":"Melissa Sinka","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Opuntia_ficus-indica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4310,15 +4660,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   88,
   'nephrolepis-exaltata',
@@ -4338,8 +4690,10 @@ insert into public.species (
   ARRAY['Quintessential hanging basket fern bringing lush, arching woodland greenery to verandas, living rooms, and patios', 'Outstanding natural humidifier and air purifier capable of absorbing indoor formaldehyde and xylene', 'Safe, non-toxic plant for households with dogs and cats']::text[],
   ARRAY['Requires high atmospheric humidity; mist regularly or place in naturally humid bathrooms or kitchens', 'Provide bright, dappled indirect light; avoid harsh direct sun which bleaches and browns frond tips', 'Keep potting soil consistently moist but well-drained; never allow the root ball to dry out completely']::text[],
   'NON-TOXIC: Completely safe and non-toxic for cats, dogs, birds, and children.',
+  false,
   'The popular Boston Fern originated in 1894 when a Massachusetts florist noticed a spontaneous mutation with wider, more gracefully arching and ruffled fronds among a shipment of wild sword ferns.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/88.webp']::text[],
+  '{"observer":"Carlos/Giancarla Ross (AnimeBirder)","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nephrolepis_exaltata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4359,15 +4713,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   89,
   'aglaonema-commutatum',
@@ -4387,8 +4743,10 @@ insert into public.species (
   ARRAY['Celebrated as one of the best and easiest indoor houseplants for low-light apartments and offices', 'Top-tier air-cleansing houseplant documented in NASA studies for filtering toxins like benzene and formaldehyde', 'Provides vibrant color accents indoors through contemporary pink and red cultivars (e.g., ''Siam Aurora'')']::text[],
   ARRAY['Thrives in low to bright indirect light; keep entirely shielded from hot direct sun', 'Allow the top 2 inches of soil to dry before watering again; highly susceptible to root rot if overwatered', 'Keep away from cold air conditioners and drafty doorways; prefers temperatures above 16°C']::text[],
   'TOXIC TO PETS AND CHILDREN: Contains insoluble needle-like calcium oxalate crystals. Chewing any part causes immediate intense burning and swelling of the mouth, tongue, and throat, excessive drooling, and digestive distress.',
+  true,
   'In China and throughout East Asia, Aglaonema has been cultivated for centuries as an auspicious good-luck plant believed to bring good fortune, prosperity, and positive chi into the home.',
-  ARRAY['https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80']::text[],
+  ARRAY['/species/89.webp']::text[],
+  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aglaonema_commutatum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4408,15 +4766,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   90,
   'dieffenbachia-seguine',
@@ -4436,8 +4796,10 @@ insert into public.species (
   ARRAY['Popular decorative indoor statement plant prized for its bold, luminous variegated leaves', 'Tolerates lower indoor light levels and humid living spaces', 'Air-filtering ornamental removing indoor airborne pollutants']::text[],
   ARRAY['Provide medium to bright indirect sunlight; direct sun burns and bleaches the variegation', 'Allow the top 2 inches of potting mix to dry out between waterings; avoid soggy standing water', 'Always wear gloves when pruning or propagating; wash hands thoroughly after handling']::text[],
   'HIGHLY TOXIC: Known as ''Dumb Cane'' because chewing any part causes immediate excruciating burning, intense inflammation of the tongue, lips, and vocal cords, causing temporary loss of speech (''dumbness''). Swelling can obstruct airways and cause asphyxiation. Extremely dangerous to dogs, cats, and small children.',
+  true,
   'The name ''Dumb Cane'' refers to the horrific historical practice of punishing enslaved individuals by forcing them to chew the plant''s stems, which caused their tongues to swell so violently that they were unable to speak for days.',
-  ARRAY['https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80']::text[],
+  ARRAY['/species/90.webp']::text[],
+  '{"observer":"MARIA PAULINA CEBALLOS GARCIA","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dieffenbachia_seguine'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4457,15 +4819,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   91,
   'kalanchoe-pinnata',
@@ -4485,8 +4849,10 @@ insert into public.species (
   ARRAY['Celebrated Indian folk and Ayurvedic remedy (Pashanbheda / Patharchatta) where crushed leaf juice is taken to dissolve kidney stones TODO(verify)', 'Traditional poultice applied to wounds, boils, bruises, and insect bites for soothing inflammation TODO(verify)', 'Fascinating living botany demonstration plant illustrating vegetative foliar reproduction']::text[],
   ARRAY['Requires plenty of bright sunlight to maintain compact growth and vibrant leaf margins', 'Extremely drought tolerant; water only when potting soil has dried out thoroughly', 'Simply lay a detached mature leaf flat on moist soil to propagate dozens of new plantlets']::text[],
   'TOXIC TO LIVESTOCK AND PETS: Contains bufadienolide cardiac glycosides (bryotoxins). Highly toxic to grazing animals, cattle, dogs, and cats, causing severe cardiac arrhythmias, tremors, vomiting, and potential heart failure. Handle with care around pets.',
+  true,
   'A single fallen leaf of Patharchatta can survive pinned to a bulletin board with zero soil or water for weeks while sprouting a dozen independent baby plants from its scalloped edges, earning it the title ''The Life Plant''.',
-  ARRAY['https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80']::text[],
+  ARRAY['/species/91.webp']::text[],
+  '{"observer":"Jenny Ju","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Kalanchoe_pinnata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4506,15 +4872,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   92,
   'helianthus-annuus',
@@ -4534,8 +4902,10 @@ insert into public.species (
   ARRAY['Major commercial source of healthy sunflower cooking oil, rich in polyunsaturated fats and Vitamin E', 'Edible roasted seeds enjoyed as wholesome snacks, rich in protein, selenium, and dietary fiber', 'Premier ornamental garden showstopper and crucial pollen resource for foraging honeybees']::text[],
   ARRAY['Requires full, uninterrupted, blazing sunlight (at least 6-8 hours daily)', 'Plant in deep, well-draining, fertile loam to accommodate a deep central taproot', 'Stake tall giant varieties in exposed locations to prevent lodging from heavy winds']::text[],
   'Non-toxic; seeds, petals, and sprouts are edible and completely safe for humans and household pets.',
+  false,
   'A single sunflower head is not a single flower, but an inflorescence of thousands of individual florets arranged in interlocking Fibonacci spirals, maximizing packing efficiency.',
-  ARRAY['https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80']::text[],
+  ARRAY['/species/92.webp']::text[],
+  '{"observer":"Mackenzie Goldthwait","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Helianthus_annuus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4555,15 +4925,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   93,
   'bellis-perennis',
@@ -4583,8 +4955,10 @@ insert into public.species (
   ARRAY['Classic cool-season garden edging, rockery border plant, and flowering groundcover', 'Tender young leaves and flower petals are edible, traditionally added to fresh spring salads', 'Historical European herbal use (Bruisewort) for soothing minor skin bruises and sprains TODO(verify)']::text[],
   ARRAY['Requires cool temperatures and moist, fertile, well-drained garden soil', 'Provide full sun in cool climates, or dappled morning light in warmer zones', 'Deadhead spent flowers regularly to encourage continuous blooming flushes']::text[],
   'Non-toxic; edible and completely safe around dogs, cats, and small children.',
+  false,
   'The name ''daisy'' is a contraction of the Old English ''daeges eage'' (''day''s eye''), so called because the flower opens its petals at dawn and closes them tightly at sunset.',
-  ARRAY['https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80']::text[],
+  ARRAY['/species/93.webp']::text[],
+  '{"observer":"drfishy62","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bellis_perennis'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4604,15 +4978,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   94,
   'taraxacum-officinale',
@@ -4632,8 +5008,10 @@ insert into public.species (
   ARRAY['Tender young spring leaves eaten as a nutritious bitter salad green packed with Vitamins A, C, and K', 'Roasted taproots ground and brewed into a rich, caffeine-free herbal coffee substitute', 'Traditional herbal diuretic (''pisse-en-lit'') and liver tonic supporting bile secretion TODO(verify)']::text[],
   ARRAY['Thrives in almost any soil and full sun; often treated as a weed due to deep taproots and windborne seeds', 'Deep taproots draw up mineral nutrients from subsoil layers', 'Harvest roots in autumn when inulin and bitter principles are most concentrated']::text[],
   'Non-toxic; leaves, flowers, and roots are fully edible. Milky stem latex may cause mild skin contact dermatitis in very sensitive individuals TODO(verify).',
+  false,
   'The name Dandelion comes from the French ''dent-de-lion'', meaning ''lion''s tooth'', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/94.webp']::text[],
+  '{"observer":"Nantar Kuja","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Taraxacum_officinale'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4653,15 +5031,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   95,
   'lavandula-angustifolia',
@@ -4681,8 +5061,10 @@ insert into public.species (
   ARRAY['Steam-distilled essential oil rich in linalool and linalyl acetate, world-renowned for aromatherapy and sleep relaxation', 'Dried floral buds sewn into fragrant sachets to perfume linens and deter clothing moths', 'Culinary herb infused into artisanal honey, gourmet lemonades, teas, and baked pastries']::text[],
   ARRAY['Requires full blazing sun (at least 6-8 hours daily) and sharply draining, gravelly, low-fertility alkaline soil', 'Cannot tolerate wet feet or high subtropical humidity, which induces fungal root rot', 'Prune lightly after summer blooming to prevent woodiness and encourage bushy growth']::text[],
   'Safe in culinary amounts; concentrated essential oil is toxic if swallowed, especially to cats and dogs who lack the liver enzymes to metabolize linalool TODO(verify).',
+  false,
   'The name Lavender comes from the Latin verb ''lavare'' (to wash), because ancient Romans extensively perfumed their public thermal baths and laundry with fragrant lavender blossoms.',
-  ARRAY['https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80']::text[],
+  ARRAY['/species/95.webp']::text[],
+  '{"observer":"Anatole Maugendre","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lavandula_angustifolia'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4702,15 +5084,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   96,
   'salvia-rosmarinus',
@@ -4730,8 +5114,10 @@ insert into public.species (
   ARRAY['Pungent culinary seasoning herb paired with roasted potatoes, vegetables, breads (focaccia), and oils', 'Rosemary essential oil and hair rinses celebrated for invigorating scalps and promoting hair thickness TODO(verify)', 'Traditional symbol of remembrance; 1,8-cineole scent shown to boost cognitive recall and alertness']::text[],
   ARRAY['Needs full direct sunshine and rapid-draining gritty or sandy soil; highly susceptible to root rot if overwatered', 'Allow the top 2 inches of potting mix to dry between thorough waterings', 'Prune regularly to shape the shrub and prevent the lower stems from turning bare and woody']::text[],
   'Culinary amounts are completely safe; large medicinal doses of rosemary oil can trigger gastrointestinal irritation and are contraindicated in pregnancy TODO(verify). Safe around pets in small quantities.',
+  false,
   'The botanical name Rosmarinus translates poetically from Latin as ''dew of the sea'' (ros = dew, marinus = sea), describing its natural habitat clinging to misty coastal Mediterranean cliffs.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/96.webp']::text[],
+  '{"observer":"Rubén Frías","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rosemary'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4751,15 +5137,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   97,
   'ocimum-basilicum',
@@ -4779,8 +5167,10 @@ insert into public.species (
   ARRAY['Signature herb of Mediterranean and Italian cooking: fresh Caprese salads, pasta sauces, and blended basil pesto', 'Black seeds (Sabja / Tukmaria) soaked in water to create cooling summer Indian faloodas, sherbets, and health drinks', 'Rich in natural antioxidants, eugenol, linalool, and essential aromatic terpenes']::text[],
   ARRAY['Requires warm weather and at least 6 hours of bright direct sun; highly sensitive to cold and frost', 'Keep potting soil moist, rich, and well-draining; avoid wetting leaves from above', 'Pinch off terminal flower spikes immediately as they appear to keep leaves sweet, lush, and vegetative']::text[],
   'Non-toxic and edible; completely safe for human culinary consumption and safe around household pets.',
+  false,
   'When soaked in water for just 10 minutes, sweet basil seeds (Sabja) swell to over thirty times their original volume, forming a transparent jelly bead around each seed that cools the body during hot Indian summers.',
-  ARRAY['https://images.unsplash.com/photo-1618375531912-867984bdfd87?w=600&q=80']::text[],
+  ARRAY['/species/97.webp']::text[],
+  '{"observer":"UNIRSE Lidia marian,Arce aldana","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Basil'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4800,15 +5190,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   98,
   'tulipa-gesneriana',
@@ -4828,8 +5220,10 @@ insert into public.species (
   ARRAY['Premier spring ornamental cut flower and garden centerpiece worldwide', 'Central attraction of Kashmir''s annual Tulip Festival in Srinagar, Asia''s largest tulip garden', 'Historically the subject of ''Tulip Mania'' in 17th-century Holland, the world''s first recorded financial speculative bubble']::text[],
   ARRAY['Bulbs require a mandatory 12-14 week period of winter cold (below 7°C) to break dormancy and initiate flowering', 'Plant bulbs in autumn with pointed end up, 10-15 cm deep in loose, well-draining sandy loam', 'Provide full spring sunlight and moderate water; withhold watering during hot summer bulb dormancy']::text[],
   'TOXIC TO PETS AND HUMANS: All parts, especially the subterranean bulbs, contain allergenic lactones (tulipalin A and B) and tulipin. Ingestion causes severe vomiting, diarrhea, drooling, and depression in dogs and cats; handling bulbs can trigger ''tulip fingers'' contact dermatitis.',
+  true,
   'During the peak of Dutch ''Tulip Mania'' in February 1637, a single rare ''Semper Augustus'' tulip bulb sold for the price of a luxurious grand canal house in Amsterdam before the market abruptly crashed.',
-  ARRAY['https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80']::text[],
+  ARRAY['/species/98.webp']::text[],
+  '{"observer":"nevinbelcher","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tulipa_gesneriana'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4849,15 +5243,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   99,
   'narcissus-pseudonarcissus',
@@ -4877,8 +5273,10 @@ insert into public.species (
   ARRAY['Iconic herald of spring planted in sweeps across hill gardens, parks, and floral arrangements', 'Subject of William Wordsworth''s immortal poem ''I Wandered Lonely as a Cloud''', 'Pharmaceutical extraction of the alkaloid galantamine, utilized in modern medication for Alzheimer''s disease']::text[],
   ARRAY['Plant bulbs in autumn 10-15 cm deep in moist, well-draining soil with morning or full spring sun', 'Leave fading green foliage intact after blooming for at least 6 weeks so bulbs can photosynthesize food for next year', 'Naturally deer, rodent, and pest resistant due to alkaloid content']::text[],
   'HIGHLY TOXIC: All parts of the plant, especially the bulbs, contain toxic phenanthridine alkaloids (lycorine) and needle-like calcium oxalate crystals. Ingestion causes severe nausea, projectile vomiting, diarrhea, abdominal pain, cardiac arrhythmias, and convulsions in humans, dogs, and cats.',
+  true,
   'Daffodils are completely immune to garden rodents, squirrels, and deer, who instinctively avoid digging up or chewing the bulbs because of their intense toxicity.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/99.webp']::text[],
+  '{"observer":"Beth King","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4898,15 +5296,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   100,
   'lilium-lancifolium',
@@ -4926,8 +5326,10 @@ insert into public.species (
   ARRAY['Dramatic architectural summer garden perennial and premium floriculture cut flower', 'Starchy underground bulbs cultivated and eaten as a traditional sweet delicacy in Chinese cooking', 'Axillary bulbils provide effortless asexual propagation for gardeners']::text[],
   ARRAY['Requires cool, shaded roots and full to partial sunshine on top foliage (''head in sun, feet in shade'')', 'Plant scaly bulbs in deep, humus-rich, acidic to neutral soil with impeccable drainage', 'Mulch soil heavily to maintain root coolness and moisture during hot summer weeks']::text[],
   'DEADLY HAZARD FOR CATS: True lilies (Lilium species) are EXTREMELY TOXIC AND FATAL TO CATS. Ingestion of even microscopic amounts — a bite of a leaf, licking pollen off fur, or drinking water from a vase holding cut lilies — causes rapid, irreversible acute kidney failure and death within 36-72 hours. Moderately toxic to dogs and humans (vomiting). NEVER keep true lilies in homes with cats.',
+  true,
   'Unlike most other lilies, the Tiger Lily produces small, glossy black pea-sized aerial bulbils in the axils of its leaves, which drop to the ground and sprout into identical clones of the parent plant.',
-  ARRAY['https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80']::text[],
+  ARRAY['/species/100.webp']::text[],
+  '{"observer":"shaboinginator5000","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lilium_lancifolium'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4947,15 +5349,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   101,
   'dahlia-pinnata',
@@ -4975,8 +5379,10 @@ insert into public.species (
   ARRAY['Undisputed star of winter flower exhibitions and competitive horticultural shows across India', 'Spectacular cut flower and festive autumn/winter landscape centerpiece', 'Starchy tubers historically consumed as a food source by the ancient Aztecs']::text[],
   ARRAY['Requires full direct sunshine and rich, well-draining soil heavily amended with compost or well-rotted manure', 'Stake tall, heavy-flowering varieties early to support massive flower heads', 'Disbud side flower buds if aiming for giant ''dinnerplate'' exhibition-sized blooms']::text[],
   'MILD TOXICITY: Contains phototoxic polyacetylene compounds that can cause mild skin irritation and dermatitis, as well as mild digestive upset and vomiting in dogs and cats if ingested.',
+  true,
   'The national flower of Mexico, Dahlias are octoploids — meaning they possess eight sets of homologous chromosomes, which accounts for their astounding diversity of flower shapes, sizes, and colors.',
-  ARRAY['https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80']::text[],
+  ARRAY['/species/101.webp']::text[],
+  '{"observer":"Archer Lamason","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dahlia_pinnata'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -4996,15 +5402,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   102,
   'zinnia-elegans',
@@ -5024,8 +5432,10 @@ insert into public.species (
   ARRAY['Reliable hot-weather garden bloomer that keeps flowering even in 40°C+ summer heat', 'Top-tier nectar magnet for monarch butterflies, swallowtails, and beneficial pollinators', 'Long-lasting cut flower with stiff, durable stems for colorful floral vases']::text[],
   ARRAY['Plant in full blazing sun with good air circulation to avoid powdery mildew on leaves', 'Water at the base of the plant early in the day; avoid wetting foliage', 'Deadhead faded blooms continuously to trigger rapid flushes of new buds']::text[],
   'NON-TOXIC: Completely safe and non-toxic for dogs, cats, horses, and children.',
+  false,
   'In 2016, a bright orange Zinnia became the very first flower to bloom in space, grown aboard the International Space Station''s Veggie facility by astronaut Scott Kelly.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/102.webp']::text[],
+  '{"observer":"Jhoan Sebastian Cifuentes Guarin","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Zinnia_elegans'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5045,15 +5455,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   103,
   'cosmos-bipinnatus',
@@ -5073,8 +5485,10 @@ insert into public.species (
   ARRAY['Effortless cottage-garden wildflower providing soft, billowing color sweeps', 'Attracts clouds of native pollinating bees, hoverflies, and butterflies to the vegetable garden', 'Charming, delicate cut flower for lightweight summer vases']::text[],
   ARRAY['Thrives in full sun and poor-to-average well-draining garden soil; overly rich soil produces excessive foliage at the expense of flowers', 'Extremely drought tolerant once established', 'Pinch back stem tips when young to encourage bushy branching and more flower stalks']::text[],
   'NON-TOXIC: Completely safe and non-toxic to dogs, cats, and humans.',
+  false,
   'Spanish priests in Mexico named this flower ''Cosmos'' (from the Greek word for order, harmony, and universe) because of the remarkably orderly and even arrangement of its petals.',
-  ARRAY['https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80']::text[],
+  ARRAY['/species/103.webp']::text[],
+  '{"observer":"Hope Hespenheide","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cosmos_bipinnatus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5094,15 +5508,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   104,
   'chrysanthemum-indicum',
@@ -5122,8 +5538,10 @@ insert into public.species (
   ARRAY['Celebrated winter exhibition and garland flower (Sevanti / Chandromallika) in festive Indian winter markets', 'Traditional Chrysanthemum flower tea brewed across East Asia for its cooling, soothing properties TODO(verify)', 'Long-lasting cut flower used in wedding decorations and decorative vases']::text[],
   ARRAY['Requires full direct winter sun and rich, well-draining soil with plenty of organic matter', 'Pinch growing tips through late summer to create a dense, spherical bush with dozens of flowering branches', 'Water at root base; avoid splashing water on leaves to prevent fungal rust and powdery mildew']::text[],
   'TOXIC TO DOGS AND CATS: Foliage contains natural pyrethrins, sesquiterpene lactones, and irritating oils. Ingestion causes vomiting, diarrhea, drooling, incoordination, and potential skin dermatitis.',
+  true,
   'Chrysanthemums naturally synthesize pyrethrins, organic compounds that attack insect nervous systems, making them nature''s own built-in bug repellent.',
-  ARRAY['https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80']::text[],
+  ARRAY['/species/104.webp']::text[],
+  '{"observer":"zgy","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Chrysanthemum_indicum'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5143,15 +5561,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   105,
   'gerbera-jamesonii',
@@ -5171,8 +5591,10 @@ insert into public.species (
   ARRAY['Top-five cut flower in global floriculture, essential for wedding bouquets and stage floral arrangements', 'Effective indoor air-purifying plant shown in NASA studies to remove benzene, formaldehyde, and trichloroethylene', 'Pet-safe flowering potted plant for living rooms and verandas']::text[],
   ARRAY['Requires bright morning sun or gentle filtered light; shield from scorching summer afternoon heat', 'Plant with the central crown positioned slightly above soil level to prevent fatal crown rot', 'Water around the root zone, keeping moisture away from the crown and flower stalks']::text[],
   'NON-TOXIC: Completely safe and non-toxic to dogs, cats, horses, and small children.',
+  false,
   'Gerbera is the fifth most popular cut flower in the entire world, trailing only rose, carnation, chrysanthemum, and tulip in global trade volume.',
-  ARRAY['https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80']::text[],
+  ARRAY['/species/105.webp']::text[],
+  '{"observer":"Les Marches du Vivant","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gerbera_jamesonii'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5192,15 +5614,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   106,
   'rhynchostylis-retusa',
@@ -5220,8 +5644,10 @@ insert into public.species (
   ARRAY['Inseparable symbol of Assamese cultural identity; women wear fresh blooms in their hair during the Rongali Bihu spring dance', 'State Flower of Assam and Arunachal Pradesh, symbolizing love, fertility, and renewal', 'Collector''s premier fragrant epiphytic orchid grown on driftwood or hanging wooden slat baskets']::text[],
   ARRAY['Mount on tree bark, cork slabs, or open slatted teak baskets with zero heavy potting soil', 'Requires high atmospheric humidity (70-80%), excellent air circulation, and bright dappled sunlight', 'Water or mist daily during the hot monsoon growing season; reduce watering slightly in dry winter']::text[],
   'Non-toxic; safe and non-hazardous to humans and domestic pets. Traditional cultural hair adornment.',
+  false,
   'In Assam, the flowering of Kopou Phool marks the arrival of the spring Bihu festival; according to folklore, a Bihu dancer''s hair arrangement is incomplete without this sacred fox-tail blossom.',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/106.webp']::text[],
+  '{"observer":"adokania","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rhynchostylis_retusa'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5241,15 +5667,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   107,
   'pontederia-crassipes',
@@ -5269,8 +5697,10 @@ insert into public.species (
   ARRAY['High biomass harvested to produce biodegradable handicrafts, eco-paper, woven baskets, and green compost', 'Exceptional capacity for phytoremediation, absorbing heavy metals, nitrogen, and phosphorus from contaminated wastewater', 'Biogas production and organic agricultural mulch when properly dried and fermented']::text[],
   ARRAY['Generally prohibited from planting in natural water bodies due to severe ecological choking hazards', 'Floats freely on surface of water gardens in full sun', 'Must be contained in closed artificial tubs or ponds; never allow escape into public waterways']::text[],
   'Foliage contains calcium oxalate crystals causing throat burning if chewed. Wild plants bioaccumulate toxic heavy metals (lead, cadmium, arsenic) and water pathogens from polluted waters, making wild plants dangerous to ingest.',
+  true,
   'Dubbed the ''Terror of Bengal'' in the early 20th century, its runaway growth clogged waterways, choked fish populations of oxygen, and halted river navigation throughout the Ganges-Brahmaputra delta.',
-  ARRAY['https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80']::text[],
+  ARRAY['/species/107.webp']::text[],
+  '{"observer":"Jeeson","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pontederia_crassipes'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5290,15 +5720,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   108,
   'mimosa-pudica',
@@ -5318,8 +5750,10 @@ insert into public.species (
   ARRAY['Famous botanical curiosity demonstrating rapid plant neurobiology and turgor-driven movement (pulvini cells)', 'Traditional Ayurvedic remedy (Lajjalu) used as an astringent decoction for wound healing and bleeding disorders TODO(verify)', 'Groundcover nitrogen-fixing legume in degraded tropical soils']::text[],
   ARRAY['Requires warm temperatures (above 18°C) and full to partial sunshine', 'Keep soil consistently moist using well-draining loamy potting soil', 'Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy']::text[],
   'TOXIC IN VOLUME TO LIVESTOCK: Contains the non-protein amino acid mimosine. Ingestion of large quantities by grazing cattle or horses can cause hair loss, thyroid enlargement, and digestive disorders TODO(verify). Safe to touch.',
+  true,
   'The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/108.webp']::text[],
+  '{"observer":"Steve Wu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Mimosa_pudica'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5339,15 +5773,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   109,
   'parthenium-hysterophorus',
@@ -5367,8 +5803,10 @@ insert into public.species (
   ARRAY['NO BENEFICIAL USES: Recognized as one of the most hazardous alien invasive plant species in India', 'Subject of nationwide biological and chemical eradication campaigns using Mexican beetles (Zygogramma bicolorata)', 'Strictly managed and uprooted by agricultural departments to safeguard livestock and food crops']::text[],
   ARRAY['DO NOT CULTIVATE. Strict eradication weed', 'Must be pulled up before flowering while wearing full protective rubber gloves, masks, and long sleeves', 'Burn or compost safely under plastic sheeting to kill seed viability']::text[],
   'HIGHLY TOXIC HAZARD: Contains potent sesquiterpene lactones (chiefly parthenin). Contact triggers severe allergic contact dermatitis (''parthenium dermatitis''), eczema, facial swelling, blisters, and skin cracking in humans. Airborne pollen causes severe asthma, allergic rhinitis, and hay fever. Highly toxic to cattle, goats, and horses, causing mouth ulcers, liver damage, alopecia, and bitter, unpalatable milk.',
+  true,
   'Parthenium entered India in 1955 contaminated in food-aid wheat shipments from the United States under the PL-480 program, rapidly earning the moniker ''Congress Grass''.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/109.webp']::text[],
+  '{"observer":"陳士訓","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Parthenium_hysterophorus'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5388,15 +5826,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   110,
   'trifolium-repens',
@@ -5416,8 +5856,10 @@ insert into public.species (
   ARRAY['World-class nitrogen-fixing forage legume that enriches soil fertility through symbiotic rhizobia root nodules', 'Premier honey plant; white clover nectar produces the world''s most popular light, delicate clover honey', 'Eco-friendly, drought-tolerant lawn alternative requiring less mowing and no synthetic nitrogen fertilizer']::text[],
   ARRAY['Prefers cool to temperate weather and moist, well-draining garden soil; struggles in scorching tropical heat', 'Tolerates moderate foot traffic and close mowing', 'Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation']::text[],
   'Non-toxic in normal amounts; clover contains traces of cyanogenic glycosides and can cause foamy bloat in ruminant livestock if grazed excessively without dry roughage TODO(verify).',
+  false,
   'The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.',
-  ARRAY['https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80']::text[],
+  ARRAY['/species/110.webp']::text[],
+  '{"observer":"Cesar Ormazabal","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Trifolium_repens'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5437,15 +5879,17 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;
 
 insert into public.species (
   id, slug, common_name, scientific_name, family, genus,
   plant_type, origin, names_hindi, names_bengali, other_names,
   description, identifying_features, habitat, distribution,
-  uses, care_tips, toxicity_note, fun_fact, reference_images, wikipedia_url
+  uses, care_tips, toxicity_note, is_toxic, fun_fact, reference_images, image_credit, wikipedia_url
 ) values (
   111,
   'quercus-robur',
@@ -5465,8 +5909,10 @@ insert into public.species (
   ARRAY['Premier high-density timber for historic sailing ship keels, structural architecture, and wine/whiskey aging barrels', 'Keystone ecological master tree supporting over 2,300 species of birds, mammals, insects, fungi, and lichens', 'Bark rich in tannins historically used in leather tanning and traditional astringent gargles TODO(verify)']::text[],
   ARRAY['Requires vast acreage in cool temperate climates; not suited for hot tropical lowlands', 'Prefers deep, rich, moisture-retentive loamy soils with unobstructed drainage', 'Grows slowly for centuries; requires virtually no pruning once main architectural limbs are established']::text[],
   'TOXIC TO HORSES, DOGS, AND CATTLE: Acorns, young leaves, and buds contain high concentrations of gallotannins and tannic acid. Ingestion by livestock or pets can cause severe gastrointestinal ulceration, bloody diarrhea, abdominal pain, and acute renal (kidney) failure. Humans must leach tannins out with water before cooking acorns.',
+  true,
   'An English oak tree can live for over 1,000 years: an old English proverb notes, ''Three hundred years growing, three hundred years living, and three hundred years dying.''',
-  ARRAY['https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80']::text[],
+  ARRAY['/species/111.webp']::text[],
+  '{"observer":"Stanislav Murashkin","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"}'::jsonb,
   'https://en.wikipedia.org/wiki/Quercus_robur'
 ) on conflict (id) do update set
   slug = excluded.slug,
@@ -5486,6 +5932,8 @@ insert into public.species (
   uses = excluded.uses,
   care_tips = excluded.care_tips,
   toxicity_note = excluded.toxicity_note,
+  is_toxic = excluded.is_toxic,
   fun_fact = excluded.fun_fact,
   reference_images = excluded.reference_images,
+  image_credit = excluded.image_credit,
   wikipedia_url = excluded.wikipedia_url;

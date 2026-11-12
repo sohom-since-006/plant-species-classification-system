@@ -26,8 +26,10 @@ export function mapDbSpeciesToClient(row: DbSpeciesRow): Species {
     uses: row.uses || [],
     careTips: row.care_tips || [],
     toxicityNote: row.toxicity_note,
+    isToxic: Boolean(row.is_toxic),
     funFact: row.fun_fact,
     referenceImages: row.reference_images || [],
+    imageCredit: (row.image_credit as Species['imageCredit']) || null,
     wikipediaUrl: row.wikipedia_url,
   };
 }

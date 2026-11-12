@@ -10,7 +10,13 @@
     "origin": "global",
     "names_hindi": "अनार (Anaar)",
     "names_bengali": "বেদানা (Bedana)",
-    "other_names": ["Pomegranate", "Anaar", "Bedana", "Dalim", "Granada"],
+    "other_names": [
+      "Pomegranate",
+      "Anaar",
+      "Bedana",
+      "Dalim",
+      "Granada"
+    ],
     "description": "A dense, spiny deciduous large shrub or small tree bearing leathery scarlet-orange blooms and thick-rinded ruby-red fruits packed with jewel-like edible juicy arils.",
     "identifying_features": [
       "Slender, thorny branching habit with glossy, opposite, narrow oblong leaves",
@@ -32,9 +38,15 @@
     "toxicity_note": "Fruit arils are completely safe and edible; tree root bark contains pelletierine alkaloids that are toxic in large unverified medicinal doses TODO(verify).",
     "fun_fact": "A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1541344999736-83eca872f242?w=600&q=80"
+      "/species/45.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Pomegranate"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pomegranate",
+    "image_credit": {
+      "observer": "謝麗霦",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 46,
@@ -47,7 +59,13 @@
     "origin": "indian",
     "names_hindi": "कटहल (Kathal)",
     "names_bengali": "কাঁঠাল (Kanthal)",
-    "other_names": ["Kathal", "Kanthal", "Chakka", "Jackfruit Tree", "Panas"],
+    "other_names": [
+      "Kathal",
+      "Kanthal",
+      "Chakka",
+      "Jackfruit Tree",
+      "Panas"
+    ],
     "description": "A massive tropical rainforest tree producing the largest tree-borne fruit in the world, bearing enormous bumpy green syncarps directly on its trunk and heavy mature branches.",
     "identifying_features": [
       "Dense evergreen canopy with thick, glossy, dark green elliptic-to-obovate leaves",
@@ -70,9 +88,15 @@
     "toxicity_note": "Non-toxic; raw unripe bulbs must be thoroughly cooked before eating; sticky white latex can irritate eyes or skin in sensitive individuals TODO(verify).",
     "fun_fact": "Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/46.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Jackfruit"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jackfruit",
+    "image_credit": {
+      "observer": "keirfawinat",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 47,
@@ -85,7 +109,12 @@
     "origin": "global",
     "names_hindi": "इमली (Imli)",
     "names_bengali": "তেঁতুল (Tentul)",
-    "other_names": ["Imli", "Tentul", "Tamarind Tree", "Indian Date"],
+    "other_names": [
+      "Imli",
+      "Tentul",
+      "Tamarind Tree",
+      "Indian Date"
+    ],
     "description": "A long-lived, massive shade tree with a broad rounded canopy of feathery pinnate foliage, weeping branches, and pendulous curved brown pods containing tart, sticky pulp.",
     "identifying_features": [
       "Graceful, dense spreading canopy with finely pinnate compound leaves (10-20 pairs of small leaflets)",
@@ -107,9 +136,15 @@
     "toxicity_note": "Completely non-toxic; pulp, tender young leaves, and roasted seeds are edible and safe for humans and animals.",
     "fun_fact": "The name Tamarind derives from the Arabic 'Tamar-ul-Hind', literally translating to 'Date of India', referencing the dark, sticky, date-like pulp inside the pods.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/47.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Tamarind"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tamarind",
+    "image_credit": {
+      "observer": "Mohamed SAOUPKAI",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 48,
@@ -122,7 +157,13 @@
     "origin": "indian",
     "names_hindi": "जामुन (Jamun)",
     "names_bengali": "জাম (Jaam)",
-    "other_names": ["Black Plum", "Java Plum", "Malabar Plum", "Jaam", "Jamun"],
+    "other_names": [
+      "Black Plum",
+      "Java Plum",
+      "Malabar Plum",
+      "Jaam",
+      "Jamun"
+    ],
     "description": "A majestic, fast-growing evergreen tree revered in Indian mythology and Ayurveda, bearing glossy aromatic leaves, fragrant white blossoms, and deep purple-black sweet-astringent berries.",
     "identifying_features": [
       "Rough, cracked grey bark and dense rounded evergreen canopy with pink-tinged young flushes",
@@ -145,9 +186,15 @@
     "toxicity_note": "Non-toxic; fruit and seeds are safe in dietary use. The anthocyanins in fruit heavily stain tongues and clothing dark purple.",
     "fun_fact": "In ancient Hindu cosmology, the Indian subcontinent was known as 'Jambudvipa' (the Island of the Jambu Trees), named after the abundance of giant Jamun trees.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/48.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Syzygium_cumini"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Syzygium_cumini",
+    "image_credit": {
+      "observer": "Austin Smith",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 49,
@@ -160,7 +207,13 @@
     "origin": "global",
     "names_hindi": "चीकू (Chikoo)",
     "names_bengali": "সবেদা (Sobeda)",
-    "other_names": ["Sapodilla", "Chikoo", "Sobeda", "Naseberry", "Chicle Tree"],
+    "other_names": [
+      "Sapodilla",
+      "Chikoo",
+      "Sobeda",
+      "Naseberry",
+      "Chicle Tree"
+    ],
     "description": "A handsome, slow-growing evergreen tree with dense glossy foliage, famed for its scurfy brown egg-shaped fruit with sweet, brown sugar-flavored malty grainy pulp.",
     "identifying_features": [
       "Dense, pyramidal-to-rounded canopy of glossy, dark green elliptic leathery leaves clustered at branch tips",
@@ -182,9 +235,15 @@
     "toxicity_note": "Ripe fruit is non-toxic and wholesome; the hard shiny black seeds have a small sharp hook that can catch in the throat if swallowed whole TODO(verify).",
     "fun_fact": "The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/49.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Manilkara_zapota"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Manilkara_zapota",
+    "image_credit": {
+      "observer": "Lynette",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 50,
@@ -197,7 +256,13 @@
     "origin": "global",
     "names_hindi": "शरीफा (Sharifa)",
     "names_bengali": "আতা (Aata)",
-    "other_names": ["Sugar Apple", "Sweetsop", "Sharifa", "Sitaphal", "Aata"],
+    "other_names": [
+      "Sugar Apple",
+      "Sweetsop",
+      "Sharifa",
+      "Sitaphal",
+      "Aata"
+    ],
     "description": "A small, semi-deciduous tropical fruit tree bearing irregular rounded fruits with a knobby, bumpy scale-like exterior and luscious creamy, fragrant custard-like white segments.",
     "identifying_features": [
       "Irregular small branching tree with dull green, lanceolate alternate leaves emitting an odd musky scent when crushed",
@@ -220,9 +285,15 @@
     "toxicity_note": "PULP IS EDIBLE. SEEDS AND LEAVES ARE TOXIC: Seeds contain neurotoxic annonacin and acetogenins; crushed seeds cause severe eye inflammation and are toxic if swallowed or chewed. Keep seeds away from children and pets.",
     "fun_fact": "Custard apple is commonly known as 'Sitaphal' in India, traditionally associated with Sita from the epic Ramayana.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/50.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Annona_squamosa"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Annona_squamosa",
+    "image_credit": {
+      "observer": "Amara Malik",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 51,
@@ -235,7 +306,13 @@
     "origin": "global",
     "names_hindi": "नींबू (Nimbu)",
     "names_bengali": "লেবু (Lebu)",
-    "other_names": ["Cultivated Lemon", "Nimbu", "Lebu", "Citron", "Kagzi Nimbu"],
+    "other_names": [
+      "Cultivated Lemon",
+      "Nimbu",
+      "Lebu",
+      "Citron",
+      "Kagzi Nimbu"
+    ],
     "description": "A thorny evergreen citrus tree producing fragrant white-and-purple blossoms, glossy leaves with winged petioles, and oval yellow-green fruits filled with sour, acidic juice.",
     "identifying_features": [
       "Spreading thorny branches armed with stout, sharp stiff spines in leaf axils",
@@ -258,9 +335,15 @@
     "toxicity_note": "Fruit juice and zest are safe; peel essential oils and psoralens can cause phototoxic dermatitis on skin exposed to sun, and are mildly toxic to cats and dogs if consumed in volume TODO(verify).",
     "fun_fact": "Genetic studies reveal that the cultivated lemon is actually an ancient hybrid between the sour orange (Citrus × aurantium) and the citron (Citrus medica).",
     "reference_images": [
-      "https://images.unsplash.com/photo-1534533983688-c7b8e83f5b72?w=600&q=80"
+      "/species/51.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Lemon"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lemon",
+    "image_credit": {
+      "observer": "rafa perazzolo",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/419656927/original.jpeg"
+    },
+    "is_toxic": false
   },
   {
     "id": 52,
@@ -273,7 +356,13 @@
     "origin": "indian",
     "names_hindi": "सागौन (Sagwan)",
     "names_bengali": "সেগুন (Segun)",
-    "other_names": ["Teak Tree", "Sagwan", "Segun", "Sagon", "Burmese Teak"],
+    "other_names": [
+      "Teak Tree",
+      "Sagwan",
+      "Segun",
+      "Sagon",
+      "Burmese Teak"
+    ],
     "description": "A magnificent deciduous tropical hardwood tree famed worldwide for its gigantic rough leaves, huge panicles of tiny white flowers, and unparalleled termite-proof golden-brown timber.",
     "identifying_features": [
       "Tall, straight columnar trunk with fibrous, vertically grooved grey-brown bark",
@@ -296,9 +385,15 @@
     "toxicity_note": "Non-toxic in normal contact; fine sawdust from wood processing can cause respiratory irritation, sneezing, or contact dermatitis in woodworkers TODO(verify).",
     "fun_fact": "Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/52.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Teak"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Teak",
+    "image_credit": {
+      "observer": "Gaurav S. Soman.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 53,
@@ -311,7 +406,13 @@
     "origin": "indian",
     "names_hindi": "साल (Saal)",
     "names_bengali": "শাল (Shaal)",
-    "other_names": ["Sal Tree", "Shala", "Sakhua", "Shaal", "Sakhu"],
+    "other_names": [
+      "Sal Tree",
+      "Shala",
+      "Sakhua",
+      "Shaal",
+      "Sakhu"
+    ],
     "description": "A towering, slow-growing hardwood tree dominating the moist deciduous forests of northern and central India, famous for its dense timber, resinous dammar, and winged spiraling seeds.",
     "identifying_features": [
       "Tall straight cylindrical bole with thick, dark brown bark deeply furrowed with longitudinal fissures",
@@ -334,9 +435,15 @@
     "toxicity_note": "Non-toxic; leaves and resin are safe and traditionally utilized in incense and food serving.",
     "fun_fact": "According to Buddhist tradition, Queen Maya gave birth to Gautama Buddha under a blooming Sal tree in Lumbini garden, and Buddha passed into Parinirvana beneath a pair of Sal trees in Kushinagar.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/53.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Shorea_robusta"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Shorea_robusta",
+    "image_credit": {
+      "observer": "Bikram Gyawali",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg"
+    },
+    "is_toxic": false
   },
   {
     "id": 54,
@@ -349,7 +456,13 @@
     "origin": "indian",
     "names_hindi": "बांस (Baans)",
     "names_bengali": "বাঁশ (Baash)",
-    "other_names": ["Common Bamboo", "Golden Bamboo", "Baans", "Venu", "Green Bamboo"],
+    "other_names": [
+      "Common Bamboo",
+      "Golden Bamboo",
+      "Baans",
+      "Venu",
+      "Green Bamboo"
+    ],
     "description": "A large, vigorous clump-forming giant woody grass with towering hollow culms, gracefully arching feathery foliage, and phenomenal, rapid daily growth rates.",
     "identifying_features": [
       "Dense, non-invasive sympodial (clumping) habit with stout, erect hollow culms up to 10-20 m high",
@@ -371,9 +484,15 @@
     "toxicity_note": "Raw emerging bamboo shoots contain cyanogenic glycosides (taxiphyllin) and MUST be thoroughly boiled or fermented to dissipate hydrogen cyanide before eating. Cooked shoots and mature culms are safe.",
     "fun_fact": "Certain bamboo species can grow up to 90 centimeters (almost 3 feet) in a single 24-hour period during peak monsoon season, making them the fastest-growing woody plants on Earth.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/54.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Bambusa_vulgaris"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bambusa_vulgaris",
+    "image_credit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 55,
@@ -386,7 +505,13 @@
     "origin": "indian",
     "names_hindi": "सुपारी (Supari)",
     "names_bengali": "সুপারি (Supari)",
-    "other_names": ["Betel Nut Palm", "Areca Nut", "Supari", "Guva", "Pinang"],
+    "other_names": [
+      "Betel Nut Palm",
+      "Areca Nut",
+      "Supari",
+      "Guva",
+      "Pinang"
+    ],
     "description": "An elegant, tall, solitary feather palm with a slender ringed trunk, a compact crownshaft of dark green pinnate fronds, and hanging clusters of fibrous orange betel nuts.",
     "identifying_features": [
       "Extremely slender, perfectly straight columnar trunk reaching 15-25 m tall, marked with prominent pale circular rings",
@@ -408,9 +533,15 @@
     "toxicity_note": "CARCINOGENIC WHEN CHEWED: Areca nut contains the alkaloid arecoline. The International Agency for Research on Cancer (IARC) classifies areca nut as a Group 1 human carcinogen, strongly linked to oral submucous fibrosis and oral cancer. Chewing is hazardous to health.",
     "fun_fact": "Betel nut chewing is one of the world's oldest psychoactive traditions, practiced by hundreds of millions of people across South Asia and the Pacific for thousands of years.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/55.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Areca_catechu"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Areca_catechu",
+    "image_credit": {
+      "observer": "eagle100",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 56,
@@ -423,7 +554,13 @@
     "origin": "global",
     "names_hindi": "खजूर (Khajoor)",
     "names_bengali": "খেজুর (Khejur)",
-    "other_names": ["True Date Palm", "Khajoor", "Khejur", "Pind Khajoor", "Tamar"],
+    "other_names": [
+      "True Date Palm",
+      "Khajoor",
+      "Khejur",
+      "Pind Khajoor",
+      "Tamar"
+    ],
     "description": "An ancient, rugged desert feather palm with a stout diamond-patterned trunk, stiff grey-green spiny fronds, and heavy pendulous clusters of sweet, energy-rich dates.",
     "identifying_features": [
       "Stout columnar trunk up to 20-30 meters tall, covered in the persistent diamond-shaped bases of fallen fronds",
@@ -445,9 +582,15 @@
     "toxicity_note": "Non-toxic; fruit is completely wholesome. Caution: base of fronds armed with needle-sharp, rigid spines capable of puncturing skin.",
     "fun_fact": "Archaeological evidence shows date palm cultivation dating back more than 6,000 years in Mesopotamia, making it one of the oldest cultivated fruit trees in human civilization.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/56.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Date_palm"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Date_palm",
+    "image_credit": {
+      "observer": "Darrell Parsons",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 57,
@@ -460,7 +603,13 @@
     "origin": "indian",
     "names_hindi": "सेमल (Semal)",
     "names_bengali": "শিমুল (Shimul)",
-    "other_names": ["Red Silk-Cotton Tree", "Semal", "Shimul", "Kapok Tree", "Shalmali"],
+    "other_names": [
+      "Red Silk-Cotton Tree",
+      "Semal",
+      "Shimul",
+      "Kapok Tree",
+      "Shalmali"
+    ],
     "description": "A gigantic, dramatic deciduous rainforest tree with massive plank buttress roots, spiny trunk, and blazing scarlet cup-shaped flowers that bloom on bare branches in late winter.",
     "identifying_features": [
       "Massive straight trunk with formidable conical prickles on younger bark and colossal buttress root fins at base",
@@ -483,9 +632,15 @@
     "toxicity_note": "Non-toxic; flowers, young pods, and gum have traditional culinary and medicinal uses. Safe around pets.",
     "fun_fact": "When in bloom on bare branches, a single Semal tree becomes a bustling wildlife hub, attracting dozens of bird species, fruit bats, and monkeys gorging on abundant nectar.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/57.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Bombax_ceiba"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bombax_ceiba",
+    "image_credit": {
+      "observer": "ankitha_jayanth",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 58,
@@ -498,7 +653,13 @@
     "origin": "global",
     "names_hindi": "विलायती सिरिस (Vilayati Siris)",
     "names_bengali": "রেইনট্রি (Raintree)",
-    "other_names": ["Monkeypod", "Raintree", "Vilayati Siris", "Saman", "Cow Tamarind"],
+    "other_names": [
+      "Monkeypod",
+      "Raintree",
+      "Vilayati Siris",
+      "Saman",
+      "Cow Tamarind"
+    ],
     "description": "A colossal, broad-canopied tropical shade tree forming a massive umbrella crown, famous for its delicate pink powderpuff blooms and leaflets that fold up before rain and dusk.",
     "identifying_features": [
       "Colossal umbrella-shaped spreading crown often wider (30-40 m) than the tree is tall",
@@ -521,9 +682,15 @@
     "toxicity_note": "Non-toxic; sweet pods are safe fodder for animals and safe around humans.",
     "fun_fact": "The name 'Rain Tree' comes from the phenomenon of its leaflets folding up before rainfall, allowing raindrops to pass directly through the canopy to the ground beneath.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/58.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Samanea_saman"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Samanea_saman",
+    "image_credit": {
+      "observer": "Hilal Ram",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 59,
@@ -536,7 +703,12 @@
     "origin": "global",
     "names_hindi": "नीलगिरी (Nilgiri)",
     "names_bengali": "ইউক্যালিপটাস (Eucalyptus)",
-    "other_names": ["Tasmanian Blue Gum", "Southern Blue Gum", "Nilgiri Tree", "Safeda"],
+    "other_names": [
+      "Tasmanian Blue Gum",
+      "Southern Blue Gum",
+      "Nilgiri Tree",
+      "Safeda"
+    ],
     "description": "A towering, fast-growing evergreen tree with peeling shaggy bark, sickle-shaped aromatic blue-green leaves, and pungent cineole-rich medicinal essential oils.",
     "identifying_features": [
       "Tall, straight, smooth trunk with peeling ribbons of grey, cream, and brown bark shedding continuously",
@@ -559,8 +731,14 @@
     "toxicity_note": "TOXIC INGESTION: Concentrated eucalyptus essential oil is TOXIC if swallowed, causing burning in mouth, vomiting, dizziness, seizures, and respiratory failure, particularly in children and household pets. Diluted topical balms and steam inhalations are safe.",
     "fun_fact": "The Nilgiri Hills ('Blue Mountains') in Tamil Nadu got their modern blue haze association partly from the vast plantations of blue gum eucalyptus trees introduced there in the mid-19th century.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/59.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Eucalyptus_globulus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eucalyptus_globulus",
+    "image_credit": {
+      "observer": "felixgwj",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg"
+    },
+    "is_toxic": false
   }
 ]

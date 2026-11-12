@@ -118,18 +118,18 @@ export function Explore() {
                     {/* Image banner */}
                     <div className="relative w-full h-56 bg-black/40 overflow-hidden">
                       <img
-                        src={
-                          species.referenceImages?.[0] ||
-                          'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80'
-                        }
+                        src={species.referenceImages?.[0] || '/species/neutral_leaf.svg'}
                         alt={species.commonName}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = '/species/neutral_leaf.svg';
+                        }}
                       />
                       <span className="absolute top-4 right-4 liquid-glass px-3 py-1 rounded-full text-[11px] font-mono uppercase text-[var(--accent)]">
                         {species.family}
                       </span>
-                      {species.toxicityNote && (
+                      {species.isToxic && (
                         <span className="absolute bottom-3 left-3 bg-rose-500/80 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-mono text-white flex items-center gap-1">
                           <AlertTriangle className="w-3 h-3" />
                           Toxic

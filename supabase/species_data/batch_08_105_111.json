@@ -10,7 +10,12 @@
     "origin": "global",
     "names_hindi": "जरबेरा (Gerbera)",
     "names_bengali": "জার্বেরা (Gerbera)",
-    "other_names": ["Barberton Daisy", "Transvaal Daisy", "African Daisy", "Gerbera Daisy"],
+    "other_names": [
+      "Barberton Daisy",
+      "Transvaal Daisy",
+      "African Daisy",
+      "Gerbera Daisy"
+    ],
     "description": "A popular commercial floriculture perennial forming basal rosettes of lobed leaves and long leafless stems topped with striking, symmetrical daisy-like blooms in dazzling rainbow colors.",
     "identifying_features": [
       "Basal rosette of deeply lobed, coarse, dandelion-like leaves with woolly undersides",
@@ -33,9 +38,15 @@
     "toxicity_note": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, horses, and small children.",
     "fun_fact": "Gerbera is the fifth most popular cut flower in the entire world, trailing only rose, carnation, chrysanthemum, and tulip in global trade volume.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/105.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Gerbera_jamesonii"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gerbera_jamesonii",
+    "image_credit": {
+      "observer": "Les Marches du Vivant",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 106,
@@ -48,7 +59,12 @@
     "origin": "indian",
     "names_hindi": "कपोत फूल (Kapot Phool)",
     "names_bengali": "কপোত ফুল (Kapot Phool)",
-    "other_names": ["Kopou Phool", "Seeta Pushpa", "Foxtail Orchid", "Rhynchostylis"],
+    "other_names": [
+      "Kopou Phool",
+      "Seeta Pushpa",
+      "Foxtail Orchid",
+      "Rhynchostylis"
+    ],
     "description": "The State Flower of Assam and Arunachal Pradesh, a magnificent monopodial epiphyte with thick leathery leaves and long pendulous, cylindrical flower clusters resembling a fluffy fox tail.",
     "identifying_features": [
       "Monopodial epiphytic growth habit with stout, climbing stems and thick, spongy silvery-white velamen-covered aerial roots",
@@ -71,9 +87,15 @@
     "toxicity_note": "Non-toxic; safe and non-hazardous to humans and domestic pets. Traditional cultural hair adornment.",
     "fun_fact": "In Assam, the flowering of Kopou Phool marks the arrival of the spring Bihu festival; according to folklore, a Bihu dancer's hair arrangement is incomplete without this sacred fox-tail blossom.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/106.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Rhynchostylis_retusa"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rhynchostylis_retusa",
+    "image_credit": {
+      "observer": "adokania",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 107,
@@ -86,7 +108,13 @@
     "origin": "global",
     "names_hindi": "जलकुंभी (Jalkumbhi)",
     "names_bengali": "কচুরিপানা (Kochuripana)",
-    "other_names": ["Terror of Bengal", "Jalkumbhi", "Kochuripana", "Eichhornia crassipes", "Water Orchid"],
+    "other_names": [
+      "Terror of Bengal",
+      "Jalkumbhi",
+      "Kochuripana",
+      "Eichhornia crassipes",
+      "Water Orchid"
+    ],
     "description": "A free-floating freshwater aquatic perennial with swollen bulbous spongy petioles, glossy round leaves, and spikes of stunning pale-violet flowers bearing a peacock-eye yellow spot. Highly invasive.",
     "identifying_features": [
       "Free-floating aquatic rosette with swollen, bulbous, air-filled spongy petioles acting as natural buoyancy floats",
@@ -109,9 +137,15 @@
     "toxicity_note": "Foliage contains calcium oxalate crystals causing throat burning if chewed. Wild plants bioaccumulate toxic heavy metals (lead, cadmium, arsenic) and water pathogens from polluted waters, making wild plants dangerous to ingest.",
     "fun_fact": "Dubbed the 'Terror of Bengal' in the early 20th century, its runaway growth clogged waterways, choked fish populations of oxygen, and halted river navigation throughout the Ganges-Brahmaputra delta.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/107.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Pontederia_crassipes"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pontederia_crassipes",
+    "image_credit": {
+      "observer": "Jeeson",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 108,
@@ -124,7 +158,13 @@
     "origin": "global",
     "names_hindi": "छुईमुई (Chhui Mui)",
     "names_bengali": "লজ্জাবতী (Lajjabati)",
-    "other_names": ["Touch-Me-Not", "Shameplant", "Chhui Mui", "Lajjabati", "Sleeping Grass"],
+    "other_names": [
+      "Touch-Me-Not",
+      "Shameplant",
+      "Chhui Mui",
+      "Lajjabati",
+      "Sleeping Grass"
+    ],
     "description": "A fascinating creeping herb armed with prickly stems and feathery bipinnate leaves that fold closed and droop dramatically within seconds of being touched, shaken, or heated.",
     "identifying_features": [
       "Sprawling or creeping prickly reddish-purple stems reaching 30-50 cm",
@@ -147,9 +187,15 @@
     "toxicity_note": "TOXIC IN VOLUME TO LIVESTOCK: Contains the non-protein amino acid mimosine. Ingestion of large quantities by grazing cattle or horses can cause hair loss, thyroid enlargement, and digestive disorders TODO(verify). Safe to touch.",
     "fun_fact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/108.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Mimosa_pudica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mimosa_pudica",
+    "image_credit": {
+      "observer": "Steve Wu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 109,
@@ -162,7 +208,13 @@
     "origin": "global",
     "names_hindi": "गाजर घास (Gajar Ghas)",
     "names_bengali": "গাজর ঘাস (Gajor Ghas)",
-    "other_names": ["Congress Grass", "Carrot Grass", "Gajar Ghas", "Santa Maria Feverfew", "White Top"],
+    "other_names": [
+      "Congress Grass",
+      "Carrot Grass",
+      "Gajar Ghas",
+      "Santa Maria Feverfew",
+      "White Top"
+    ],
     "description": "An aggressive, noxious invasive annual weed with carrot-like dissected leaves, angular grooved stems, and small creamy-white flower heads. SEVERE HUMAN ALLERGEN AND LIVESTOCK TOXIN.",
     "identifying_features": [
       "Erect, vigorously branching annual herb up to 1 to 2 meters tall with deeply grooved, longitudinally striated hairy stems",
@@ -185,9 +237,15 @@
     "toxicity_note": "HIGHLY TOXIC HAZARD: Contains potent sesquiterpene lactones (chiefly parthenin). Contact triggers severe allergic contact dermatitis ('parthenium dermatitis'), eczema, facial swelling, blisters, and skin cracking in humans. Airborne pollen causes severe asthma, allergic rhinitis, and hay fever. Highly toxic to cattle, goats, and horses, causing mouth ulcers, liver damage, alopecia, and bitter, unpalatable milk.",
     "fun_fact": "Parthenium entered India in 1955 contaminated in food-aid wheat shipments from the United States under the PL-480 program, rapidly earning the moniker 'Congress Grass'.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/109.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Parthenium_hysterophorus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Parthenium_hysterophorus",
+    "image_credit": {
+      "observer": "陳士訓",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 110,
@@ -200,7 +258,13 @@
     "origin": "global",
     "names_hindi": "तिपतिया घास (Tipatiya Ghas)",
     "names_bengali": "তিপাত্তা ঘাস (Tipatta Ghas)",
-    "other_names": ["White Clover", "Dutch Clover", "Tipatiya Ghas", "Shamrock", "Trifolium"],
+    "other_names": [
+      "White Clover",
+      "Dutch Clover",
+      "Tipatiya Ghas",
+      "Shamrock",
+      "Trifolium"
+    ],
     "description": "A low-growing creeping perennial legume with creeping stolons, classic trifoliate leaves with white crescent chevrons, and rounded spherical heads of fragrant white-to-pinkish flowers.",
     "identifying_features": [
       "Creeping prostrate stems (stolons) rooting freely at the nodes to form a dense green carpet",
@@ -223,9 +287,15 @@
     "toxicity_note": "Non-toxic in normal amounts; clover contains traces of cyanogenic glycosides and can cause foamy bloat in ruminant livestock if grazed excessively without dry roughage TODO(verify).",
     "fun_fact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/110.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Trifolium_repens"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Trifolium_repens",
+    "image_credit": {
+      "observer": "Cesar Ormazabal",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 111,
@@ -238,7 +308,13 @@
     "origin": "global",
     "names_hindi": "बलूत (Baloot)",
     "names_bengali": "ওক গাছ (Oak Gachh)",
-    "other_names": ["English Oak", "Pedunculate Oak", "Baloot", "Oak Tree", "King of Trees"],
+    "other_names": [
+      "English Oak",
+      "Pedunculate Oak",
+      "Baloot",
+      "Oak Tree",
+      "King of Trees"
+    ],
     "description": "A legendary, long-lived temperate hardwood canopy tree famed for its massive gnarled trunk, deeply sinuous lobed leaves, and smooth ovoid acorns held in rough scaly cups.",
     "identifying_features": [
       "Massive, rugged spreading crown with deeply fissured, greyish-brown furrowed bark",
@@ -261,8 +337,14 @@
     "toxicity_note": "TOXIC TO HORSES, DOGS, AND CATTLE: Acorns, young leaves, and buds contain high concentrations of gallotannins and tannic acid. Ingestion by livestock or pets can cause severe gastrointestinal ulceration, bloody diarrhea, abdominal pain, and acute renal (kidney) failure. Humans must leach tannins out with water before cooking acorns.",
     "fun_fact": "An English oak tree can live for over 1,000 years: an old English proverb notes, 'Three hundred years growing, three hundred years living, and three hundred years dying.'",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/111.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Quercus_robur"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Quercus_robur",
+    "image_credit": {
+      "observer": "Stanislav Murashkin",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"
+    },
+    "is_toxic": true
   }
 ]

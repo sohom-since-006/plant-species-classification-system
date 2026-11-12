@@ -10,7 +10,12 @@
     "origin": "global",
     "names_hindi": "गुलमोहर (Gulmohar)",
     "names_bengali": "কৃষ্ণচূড়া (Krishnachura)",
-    "other_names": ["Flamboyant", "Flame of the Forest", "Royal Poinciana", "Krishnachura"],
+    "other_names": [
+      "Flamboyant",
+      "Flame of the Forest",
+      "Royal Poinciana",
+      "Krishnachura"
+    ],
     "description": "A magnificent umbrella-canopied tropical tree celebrated for its dramatic explosion of scarlet-orange blossoms that envelop the entire crown in late spring and summer.",
     "identifying_features": [
       "Broad, spreading umbrella-shaped flat-topped canopy providing generous dappled shade",
@@ -33,9 +38,15 @@
     "toxicity_note": "Seeds and bark contain mild saponins and tannins; generally non-toxic to humans in casual exposure, but unverified for ingestion TODO(verify).",
     "fun_fact": "Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/30.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Delonix_regia"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Delonix_regia",
+    "image_credit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 31,
@@ -48,7 +59,13 @@
     "origin": "global",
     "names_hindi": "सदाबहार (Sadabahar)",
     "names_bengali": "নয়নতারা (Nayantara)",
-    "other_names": ["Madagascar Periwinkle", "Sadabahar", "Nayantara", "Vinca Rosea", "Old Maid"],
+    "other_names": [
+      "Madagascar Periwinkle",
+      "Sadabahar",
+      "Nayantara",
+      "Vinca Rosea",
+      "Old Maid"
+    ],
     "description": "A hardy, ever-blooming herbaceous perennial with glossy oval leaves and 5-lobed salverform flowers in vibrant pink, rose, or pure white. Contains powerful pharmaceutical alkaloids.",
     "identifying_features": [
       "Glossy dark green, oval-to-oblong opposite leaves with a pale central midrib and milky sap",
@@ -70,9 +87,15 @@
     "toxicity_note": "TOXIC: Contains over 70 potent cytotoxic vinca alkaloids. Ingestion can cause severe abdominal cramping, low blood pressure, neuromuscular impairment, and organ toxicity in humans and pets.",
     "fun_fact": "Sadabahar literally means 'evergreen' or 'always in bloom' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/31.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Catharanthus_roseus"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Catharanthus_roseus",
+    "image_credit": {
+      "observer": "amynmann",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 32,
@@ -85,7 +108,13 @@
     "origin": "indian",
     "names_hindi": "रुक्मिणी (Rukmini)",
     "names_bengali": "রঙ্গন (Rangan)",
-    "other_names": ["Jungle Geranium", "Flame of the Woods", "Rangan", "Rukmini", "Rugmini"],
+    "other_names": [
+      "Jungle Geranium",
+      "Flame of the Woods",
+      "Rangan",
+      "Rukmini",
+      "Rugmini"
+    ],
     "description": "A dense, multi-stemmed evergreen tropical shrub celebrated for its spherical, long-lasting clusters of fiery scarlet-red, orange, or pink tubular star-tipped flowers.",
     "identifying_features": [
       "Opposite, leathery, dark green glossy oblong-lanceolate leaves with smooth margins",
@@ -107,9 +136,15 @@
     "toxicity_note": "Non-toxic to humans; generally safe around domestic pets.",
     "fun_fact": "In Kerala, Ixora coccinea (known as Thechi) is a mandatory floral offering for Lord Ganesha and temple rituals.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/32.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ixora_coccinea"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ixora_coccinea",
+    "image_credit": {
+      "observer": "Thoodi Harsha",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 33,
@@ -122,7 +157,13 @@
     "origin": "global",
     "names_hindi": "रायमुनिया (Raimuniya)",
     "names_bengali": "লান্টানা (Lantana)",
-    "other_names": ["Wild Sage", "Tickberry", "Raimuniya", "Ghaneri", "Red Sage"],
+    "other_names": [
+      "Wild Sage",
+      "Tickberry",
+      "Raimuniya",
+      "Ghaneri",
+      "Red Sage"
+    ],
     "description": "A rugged, invasive scrambling evergreen shrub with prickly four-angled stems, rough pungent leaves, and multicolor flat-topped flower clusters. TOXIC TO LIVESTOCK AND HUMANS.",
     "identifying_features": [
       "Square-angled woody stems often armed with small, downward-pointing prickles",
@@ -145,9 +186,15 @@
     "toxicity_note": "HIGHLY TOXIC: Green unripe berries and foliage contain triterpenoid toxins (lantadene A and B). Ingestion by children causes vomiting, lethargy, dilated pupils, and respiratory depression. Highly hepatotoxic to cattle and sheep, causing irreversible liver failure and fatal photosensitization.",
     "fun_fact": "Lantana camara has invaded over 13 million hectares of Indian forest lands, suppressing native regeneration and earning a spot among the world's 100 worst invasive alien species.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/33.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Lantana_camara"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lantana_camara",
+    "image_credit": {
+      "observer": "Francois (Red)",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 34,
@@ -160,7 +207,13 @@
     "origin": "indian",
     "names_hindi": "मुर्गा कलगी (Murga Kalgi)",
     "names_bengali": "মোরগঝুঁটি (Morogjhuti)",
-    "other_names": ["Silver Cockscomb", "Plumed Celosia", "Morogjhuti", "Woolflower", "Quail Grass"],
+    "other_names": [
+      "Silver Cockscomb",
+      "Plumed Celosia",
+      "Morogjhuti",
+      "Woolflower",
+      "Quail Grass"
+    ],
     "description": "A striking herbaceous annual producing undulating, velvety crested flower heads resembling the comb of a rooster, or upright feathery flaming plumes in dazzling crimson, scarlet, and gold.",
     "identifying_features": [
       "Distinctive fasciated, undulating, velvety crested or plumed flower heads in vivid magenta, red, or yellow",
@@ -182,9 +235,15 @@
     "toxicity_note": "Non-toxic; leaves and young stems are edible greens; completely safe around household pets.",
     "fun_fact": "The crested form of Cockscomb is a stabilized genetic anomaly called fasciation, which fuses and fans out the floral stem into a rooster-like crest.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/34.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Celosia_argentea"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Celosia_argentea",
+    "image_credit": {
+      "observer": "timmeschke",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 35,
@@ -197,7 +256,12 @@
     "origin": "indian",
     "names_hindi": "प्रियदर्शी (Priyadarshi)",
     "names_bengali": "কনকচাঁপা (Kanakchampa)",
-    "other_names": ["Firecracker Flower", "Kanakambaram", "Aboli", "Priyadarshi"],
+    "other_names": [
+      "Firecracker Flower",
+      "Kanakambaram",
+      "Aboli",
+      "Priyadarshi"
+    ],
     "description": "A compact tropical evergreen subshrub cherished across South India for its glossy deep-green foliage and asymmetric, fan-like salmon-orange or apricot flowers.",
     "identifying_features": [
       "Glossy, dark green, wavy-margined ovate opposite leaves with pointed tips",
@@ -220,9 +284,15 @@
     "toxicity_note": "Non-toxic to humans and animals; completely safe for wearing in hair and near pets.",
     "fun_fact": "When Crossandra's ripe seed pods encounter water or high humidity, they burst open with an audible pop and fling seeds away, earning the moniker 'Firecracker flower'.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/35.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Crossandra_infundibuliformis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crossandra_infundibuliformis",
+    "image_credit": {
+      "observer": "Tharuni Sangonda",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 36,
@@ -235,7 +305,13 @@
     "origin": "global",
     "names_hindi": "सर्वजया (Sarvajaya)",
     "names_bengali": "সর্বজয়া (Sarbojaya)",
-    "other_names": ["Indian Shot", "Canna Lily", "Sarvajaya", "Achira", "Arrowroot"],
+    "other_names": [
+      "Indian Shot",
+      "Canna Lily",
+      "Sarvajaya",
+      "Achira",
+      "Arrowroot"
+    ],
     "description": "A lush, fast-growing rhizomatous tropical perennial with bold paddle-like banana-esque foliage and tall spikes of asymmetric scarlet, orange, or yellow flowers.",
     "identifying_features": [
       "Thick, upright clumping pseudostems emerging from vigorous underground starchy rhizomes",
@@ -258,9 +334,15 @@
     "toxicity_note": "Non-toxic; rhizomes are traditionally cooked and eaten in South America; safe around pets and children.",
     "fun_fact": "Canna seeds are so exceptionally hard and dense that during the 1857 Indian rebellion, soldiers reportedly used them in place of lead shot when musket balls ran out.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/36.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Canna_indica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Canna_indica",
+    "image_credit": {
+      "observer": "Drew Baxter",
+      "license": "CC0",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 37,
@@ -273,7 +355,13 @@
     "origin": "indian",
     "names_hindi": "गुल मेहँदी (Gul Mehendi)",
     "names_bengali": "দোপাট্টি (Dopati)",
-    "other_names": ["Garden Balsam", "Rose Balsam", "Touch-Me-Not", "Gul Mehendi", "Dopati"],
+    "other_names": [
+      "Garden Balsam",
+      "Rose Balsam",
+      "Touch-Me-Not",
+      "Gul Mehendi",
+      "Dopati"
+    ],
     "description": "A juicy, succulent-stemmed annual herb bearing solitary or clustered cup-shaped flowers with curved nectar spurs nestled among serrated leaves, famed for its explosive seed pods.",
     "identifying_features": [
       "Erect, thick, translucent fleshy succulent stems with spirally arranged lanceolate serrate leaves",
@@ -295,9 +383,15 @@
     "toxicity_note": "Non-toxic to humans in external use; contains mild calcium oxalates which can cause mild gastric discomfort if consumed raw in large quantities TODO(verify).",
     "fun_fact": "The genus name 'Impatiens' (meaning impatient) refers to the explosive seed pods that violently shoot their seeds into the air the instant they are touched.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/37.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Impatiens_balsamina"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Impatiens_balsamina",
+    "image_credit": {
+      "observer": "Lynn Katsoulis",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620293016/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 38,
@@ -310,7 +404,13 @@
     "origin": "indian",
     "names_hindi": "अमलतास (Amaltas)",
     "names_bengali": "সোনালু (Sonalu)",
-    "other_names": ["Golden Shower Tree", "Indian Laburnum", "Amaltas", "Sonalu", "Bandarlathi"],
+    "other_names": [
+      "Golden Shower Tree",
+      "Indian Laburnum",
+      "Amaltas",
+      "Sonalu",
+      "Bandarlathi"
+    ],
     "description": "A breathtaking deciduous tree famed for its pendulous hanging racemes of luminous golden-yellow flowers that drape the leafless canopy in early summer.",
     "identifying_features": [
       "Long pendulous hanging racemes (up to 40-60 cm long) packed with luminous butter-yellow flowers",
@@ -332,9 +432,15 @@
     "toxicity_note": "Pods and seeds have potent anthraquinone purgative properties; overconsumption can cause severe diarrhea and intestinal cramps TODO(verify). Safe as an ornamental tree.",
     "fun_fact": "Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/38.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Cassia_fistula"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cassia_fistula",
+    "image_credit": {
+      "observer": "Aditya Bari",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616097106/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 39,
@@ -347,7 +453,13 @@
     "origin": "indian",
     "names_hindi": "पलाश (Palash)",
     "names_bengali": "পলাশ (Palash)",
-    "other_names": ["Flame of the Forest", "Bastard Teak", "Dhak", "Teshu", "Kinkirata"],
+    "other_names": [
+      "Flame of the Forest",
+      "Bastard Teak",
+      "Dhak",
+      "Teshu",
+      "Kinkirata"
+    ],
     "description": "A slow-growing deciduous dry-forest tree famous for its crooked trunk, trifoliate leathery leaves, and stunning burst of fiery bright vermilion-orange keel-shaped flowers in spring.",
     "identifying_features": [
       "Crooked, gnarled trunk and irregular spreading branches with fibrous rough grey bark",
@@ -370,9 +482,15 @@
     "toxicity_note": "Seeds contain butin and proteolytic enzymes that are toxic in raw ingestion and exhibit anthelmintic toxicity if consumed unpurified TODO(verify). Flowers are safe and edible.",
     "fun_fact": "The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/39.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Butea_monosperma"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Butea_monosperma",
+    "image_credit": {
+      "observer": "Jordan",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 40,
@@ -385,7 +503,12 @@
     "origin": "indian",
     "names_hindi": "आम (Aam)",
     "names_bengali": "আম (Aam)",
-    "other_names": ["King of Fruits", "Aam", "Amra", "Indian Mango"],
+    "other_names": [
+      "King of Fruits",
+      "Aam",
+      "Amra",
+      "Indian Mango"
+    ],
     "description": "The National Fruit of India, a grand evergreen canopy tree bearing deep green lanceolate foliage, fragrant branched floral panicles, and sweet, juicy tropical drupes.",
     "identifying_features": [
       "Large, dense, dome-shaped evergreen canopy casting deep cool shade",
@@ -408,9 +531,15 @@
     "toxicity_note": "Mango tree sap, peel, and floral pollen contain urushiol-related alkylresorcinols, which can cause severe contact dermatitis ('mango mouth') in people sensitive to poison ivy TODO(verify). Fruit flesh is safe.",
     "fun_fact": "India produces over 40% of the world's total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+      "/species/40.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Mangifera_indica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mangifera_indica",
+    "image_credit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 41,
@@ -423,7 +552,12 @@
     "origin": "indian",
     "names_hindi": "नारियल (Nariyal)",
     "names_bengali": "নারকেল (Narkel)",
-    "other_names": ["Kalpavriksha", "Nariyal", "Coconut Palm", "Narkel"],
+    "other_names": [
+      "Kalpavriksha",
+      "Nariyal",
+      "Coconut Palm",
+      "Narkel"
+    ],
     "description": "Revered as 'Kalpavriksha' (the divine wish-fulfilling tree), a magnificent solitary palm with a slender curving trunk, majestic crown of feathery fronds, and versatile fibrous nuts.",
     "identifying_features": [
       "Slender, light grey trunk up to 30 m tall, often gently leaning or curved with ring-like leaf scars",
@@ -445,9 +579,15 @@
     "toxicity_note": "Completely non-toxic; all parts of the nut, water, and oil are safe and nutritious for humans and animals.",
     "fun_fact": "Every single part of the coconut tree is utilized for food, shelter, fuel, or medicine, leading Sanskrit scriptures to name it Kalpavriksha ('the tree that provides all the necessities of life').",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/41.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Coconut"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coconut",
+    "image_credit": {
+      "observer": "Sam Rickert",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 42,
@@ -460,7 +600,13 @@
     "origin": "indian",
     "names_hindi": "केला (Kela)",
     "names_bengali": "কলা (Kola)",
-    "other_names": ["Wild Banana", "Kela", "Plantain", "Kadali", "Kola"],
+    "other_names": [
+      "Wild Banana",
+      "Kela",
+      "Plantain",
+      "Kadali",
+      "Kola"
+    ],
     "description": "A giant, fast-growing herbaceous perennial with an overlapping pseudostem, enormous paddle-shaped emerald leaves, and pendulous flower inflorescences bearing clusters of sweet fruit.",
     "identifying_features": [
       "Massive pseudostem formed of tightly rolled leaf sheaths reaching 3 to 6 meters tall",
@@ -482,9 +628,15 @@
     "toxicity_note": "Completely non-toxic; all parts (fruit, peel, flower, stem core) are safe and edible when prepared properly.",
     "fun_fact": "Botanically speaking, the banana plant is not a tree at all, but the world's largest perennial herbaceous plant, and the banana itself is classified as a berry.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80"
+      "/species/42.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Musa_acuminata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Musa_acuminata",
+    "image_credit": {
+      "observer": "Manuel Raab",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 43,
@@ -497,7 +649,12 @@
     "origin": "global",
     "names_hindi": "पपीता (Papita)",
     "names_bengali": "পেঁপে (Pépe)",
-    "other_names": ["Papita", "Pawpaw", "Pepe", "Melon Tree"],
+    "other_names": [
+      "Papita",
+      "Pawpaw",
+      "Pepe",
+      "Melon Tree"
+    ],
     "description": "A fast-growing, semi-woody herbaceous palm-like tropical tree with a hollow single trunk, a crown of deeply palmately lobed leaves, and melon-like orange-fleshed fruit.",
     "identifying_features": [
       "Erect, single columnar hollow stem with prominent diamond-shaped scars from fallen petioles",
@@ -520,9 +677,15 @@
     "toxicity_note": "Ripe fruit is safe. UNRIPE raw green papaya and milky latex contain concentrated papain and carpaine, which can trigger uterine contractions and are strictly avoided during pregnancy TODO(verify).",
     "fun_fact": "Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/43.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Papaya"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Papaya",
+    "image_credit": {
+      "observer": "Harry Hill",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 44,
@@ -535,7 +698,13 @@
     "origin": "global",
     "names_hindi": "अमरूद (Amrood)",
     "names_bengali": "পেয়ারা (Peyara)",
-    "other_names": ["Common Guava", "Amrood", "Peyara", "Yellow Guava", "Apple Guava"],
+    "other_names": [
+      "Common Guava",
+      "Amrood",
+      "Peyara",
+      "Yellow Guava",
+      "Apple Guava"
+    ],
     "description": "A hardy, drought-tolerant tropical fruit tree famous for its attractive smooth peeling copper-colored bark, fragrant white flowers, and sweet, musky Vitamin C-rich fruit.",
     "identifying_features": [
       "Smooth, greenish-brown to coppery-pink bark that continuously peels off in thin, papery flakes",
@@ -558,8 +727,14 @@
     "toxicity_note": "Non-toxic; leaves, fruit, and seeds are completely safe for human consumption and non-hazardous to pets.",
     "fun_fact": "Guava fruit contains over 228 mg of Vitamin C per 100g — roughly four times the Vitamin C concentration of a typical sweet orange.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80"
+      "/species/44.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Psidium_guajava"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Psidium_guajava",
+    "image_credit": {
+      "observer": "Roqui Bello",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"
+    },
+    "is_toxic": false
   }
 ]

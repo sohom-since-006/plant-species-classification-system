@@ -157,8 +157,10 @@ export async function fetchSpeciesById(id: number): Promise<Species> {
           uses: data.uses || [],
           careTips: data.care_tips || [],
           toxicityNote: data.toxicity_note,
+          isToxic: Boolean(data.is_toxic),
           funFact: data.fun_fact,
           referenceImages: data.reference_images || [],
+          imageCredit: (data.image_credit as Species['imageCredit']) || null,
           wikipediaUrl: data.wikipedia_url,
         };
       }

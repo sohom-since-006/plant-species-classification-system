@@ -10,7 +10,13 @@
     "origin": "indian",
     "names_hindi": "लौकी (Lauki)",
     "names_bengali": "লাউ (Lau)",
-    "other_names": ["Calabash", "Lauki", "Ghiya", "Lau", "Doodhi"],
+    "other_names": [
+      "Calabash",
+      "Lauki",
+      "Ghiya",
+      "Lau",
+      "Doodhi"
+    ],
     "description": "A vigorous annual climbing vine with soft hairy leaves, nocturnal white flowers, and smooth pale-green cylindrical or bottle-shaped fruits prized for cooling summer dishes.",
     "identifying_features": [
       "Vigorous twining tendril-bearing vine with soft, velvet-hairy musk-scented stems",
@@ -33,9 +39,15 @@
     "toxicity_note": "WARNING: NORMAL SWEET LAUKI IS SAFE. BITTER BOTTLE GOURD IS EXTREMELY TOXIC: Never consume bottle gourd juice that tastes bitter. Bitter gourds contain high levels of toxic cucurbitacins B and D, which cause acute toxic shock, hematemesis (vomiting blood), gastrointestinal bleeding, and organ failure. Always taste a small raw piece before juicing or cooking; discard immediately if bitter.",
     "fun_fact": "Dried, hollowed bottle gourds were among the world's very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/75.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Calabash"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Calabash",
+    "image_credit": {
+      "observer": "Sulaiman Inuwa Muhammad",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 76,
@@ -48,7 +60,13 @@
     "origin": "global",
     "names_hindi": "कद्दू (Kaddu)",
     "names_bengali": "কুমড়ো (Kumro)",
-    "other_names": ["Indian Pumpkin", "Kaddu", "Kumro", "Sitaphal", "Butternut Squash"],
+    "other_names": [
+      "Indian Pumpkin",
+      "Kaddu",
+      "Kumro",
+      "Sitaphal",
+      "Butternut Squash"
+    ],
     "description": "A vigorous creeping or climbing vine with large mottled leaves, bright golden-orange bell-shaped blossoms, and heavy ribbed fruits with nutrient-dense, sweet orange flesh.",
     "identifying_features": [
       "Extensive trailing or climbing vine with angled stems and branched tendrils",
@@ -71,9 +89,15 @@
     "toxicity_note": "Non-toxic; flesh, blossoms, tender leaves, and seeds are completely edible and safe for humans and pets.",
     "fun_fact": "In Bengali cuisine, practically zero waste is generated from pumpkin: the flesh, tender climbing shoot tips (kumro shaak), yellow flowers (kumro phul bhaja), and seeds are all prized delicacies.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/76.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucurbita_moschata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucurbita_moschata",
+    "image_credit": {
+      "observer": "abdlkrim",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 77,
@@ -86,7 +110,13 @@
     "origin": "indian",
     "names_hindi": "खीरा (Kheera)",
     "names_bengali": "শসা (Shosha)",
-    "other_names": ["Common Cucumber", "Kheera", "Shosha", "Kakdi", "Gherkin"],
+    "other_names": [
+      "Common Cucumber",
+      "Kheera",
+      "Shosha",
+      "Kakdi",
+      "Gherkin"
+    ],
     "description": "A fast-growing rough-stemmed annual climbing vine bearing small yellow flowers and crisp, cooling cylindrical green fruits containing over 95% water.",
     "identifying_features": [
       "Slender climbing or trailing vine with rough bristly stems and unbranched coiled tendrils",
@@ -109,9 +139,15 @@
     "toxicity_note": "Safe and wholesome; occasional bitter cucumbers contain elevated cucurbitacins (usually concentrated near the stem end) and should be trimmed or discarded.",
     "fun_fact": "Ancient Sanskrit texts mention cucumber cultivation under the name 'Trapusha' over three millennia ago, confirming India as the original botanical homeland of the global cucumber.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=600&q=80"
+      "/species/77.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucumber"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cucumber",
+    "image_credit": {
+      "observer": "dongjing123",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg"
+    },
+    "is_toxic": false
   },
   {
     "id": 78,
@@ -124,7 +160,13 @@
     "origin": "global",
     "names_hindi": "मूंगफली (Moongphali)",
     "names_bengali": "চিনাবাদাম (Chinabadam)",
-    "other_names": ["Groundnut", "Moongphali", "Chinabadam", "Earthnut", "Goober"],
+    "other_names": [
+      "Groundnut",
+      "Moongphali",
+      "Chinabadam",
+      "Earthnut",
+      "Goober"
+    ],
     "description": "A low-growing legume herb renowned for its remarkable habit of geocarpy, where pollinated flower stems bend downward and drill beneath the soil to develop underground pods.",
     "identifying_features": [
       "Low, bushy, or sprawling annual legume reaching 30-50 cm in height",
@@ -147,9 +189,15 @@
     "toxicity_note": "Non-toxic; peanuts are one of the most common severe food allergens, capable of triggering life-threatening anaphylaxis in allergic individuals. Ensure peanuts are stored dry to avoid toxic aflatoxin mold.",
     "fun_fact": "Peanuts are not true nuts at all, but botanical legumes related to peas and beans, famous for their unique habit of flowering in the air and ripening their pods underground.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/78.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Peanut"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Peanut",
+    "image_credit": {
+      "observer": "pcharris",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 79,
@@ -162,7 +210,13 @@
     "origin": "indian",
     "names_hindi": "पटसन (Patsan)",
     "names_bengali": "পাট (Paat)",
-    "other_names": ["Tossa Jute", "Golden Fiber", "Paat", "Nalita", "Jews Mallow"],
+    "other_names": [
+      "Tossa Jute",
+      "Golden Fiber",
+      "Paat",
+      "Nalita",
+      "Jews Mallow"
+    ],
     "description": "A tall, erect annual bast-fiber herb celebrated as the source of 'The Golden Fiber', with slender stalks that yield strong, silky, biodegradable natural fibers after retting.",
     "identifying_features": [
       "Tall, straight, slender unbranched annual herb reaching 2 to 4 meters in height",
@@ -185,9 +239,15 @@
     "toxicity_note": "Tender young leaves are a safe, edible vegetable; mature seeds contain cardiac glycosides (olitoriside) and should not be consumed TODO(verify).",
     "fun_fact": "Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as 'The Golden Fiber' for its natural golden sheen and vital economic importance.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/79.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Corchorus_olitorius"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Corchorus_olitorius",
+    "image_credit": {
+      "observer": "Mashudu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"
+    },
+    "is_toxic": false
   },
   {
     "id": 80,
@@ -200,7 +260,13 @@
     "origin": "global",
     "names_hindi": "मनी प्लांट (Money Plant)",
     "names_bengali": "মানি প্ল্যান্ট (Money Plant)",
-    "other_names": ["Golden Pothos", "Devil's Ivy", "Money Plant", "Ceylon Creeper", "Hunter's Robe"],
+    "other_names": [
+      "Golden Pothos",
+      "Devil's Ivy",
+      "Money Plant",
+      "Ceylon Creeper",
+      "Hunter's Robe"
+    ],
     "description": "An evergreen climbing tropical vine ubiquitously grown in Indian households in jars of water and hanging baskets, prized for its glossy heart-shaped variegated leaves and feng shui prosperity symbolism.",
     "identifying_features": [
       "Trailing or climbing vine with adventitious aerial roots that grip supports or flourish directly in standing water",
@@ -223,9 +289,15 @@
     "toxicity_note": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-shaped calcium oxalate crystals (raphides). Chewing any part causes immediate intense burning and stinging of the mouth, tongue, and lips, excessive drooling, difficulty swallowing, and vomiting in cats, dogs, and humans.",
     "fun_fact": "Golden Pothos earned the nickname 'Devil's Ivy' because it is nearly impossible to kill and stays vibrantly green even when neglected in windowless dark corners.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&q=80"
+      "/species/80.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Epipremnum_aureum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Epipremnum_aureum",
+    "image_credit": {
+      "observer": "ELIZE JANICA AQUINO",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 81,
@@ -238,7 +310,13 @@
     "origin": "global",
     "names_hindi": "स्नेक प्लांट (Snake Plant)",
     "names_bengali": "স্নেক প্ল্যান্ট (Snake Plant)",
-    "other_names": ["Mother-in-Law's Tongue", "Sansevieria", "Snake Plant", "Saint George's Sword", "Viper's Bowstring Hemp"],
+    "other_names": [
+      "Mother-in-Law's Tongue",
+      "Sansevieria",
+      "Snake Plant",
+      "Saint George's Sword",
+      "Viper's Bowstring Hemp"
+    ],
     "description": "An architectural, virtually indestructible succulent herb with erect, sword-like stiff leaves banded with wavy grey-green horizontal patterns and golden borders.",
     "identifying_features": [
       "Dense basal clusters of rigid, erect, vertical sword-shaped succulent leaves growing 0.5 to 1.5 m tall",
@@ -261,9 +339,15 @@
     "toxicity_note": "MILD-TO-MODERATE TOXICITY: Foliage contains saponins. Ingestion by cats and dogs causes excessive salivation, vomiting, nausea, diarrhea, and lethargy.",
     "fun_fact": "Unlike most houseplants that release oxygen only during daytime photosynthesis, the Snake Plant performs CAM photosynthesis, releasing oxygen throughout the night, making it ideal for bedrooms.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/81.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Dracaena_trifasciata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dracaena_trifasciata",
+    "image_credit": {
+      "observer": "Manuel Raab",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 82,
@@ -276,7 +360,13 @@
     "origin": "global",
     "names_hindi": "स्पाइडर प्लांट (Spider Plant)",
     "names_bengali": "স্পাইডার প্ল্যান্ট (Spider Plant)",
-    "other_names": ["Airplane Plant", "Ribbon Plant", "Spider Ivy", "Spider Plant", "Hen and Chickens"],
+    "other_names": [
+      "Airplane Plant",
+      "Ribbon Plant",
+      "Spider Ivy",
+      "Spider Plant",
+      "Hen and Chickens"
+    ],
     "description": "A graceful, easy-care clump-forming indoor perennial with arching ribbon-like variegated leaves and long wiry runners bearing miniature plantlets ('spiderettes').",
     "identifying_features": [
       "Dense rosette of arching, linear, ribbon-like leaves up to 30-45 cm long, striped with green and creamy-white margins or centers",
@@ -299,9 +389,15 @@
     "toxicity_note": "NON-TOXIC: Completely safe for cats, dogs, and children. Cats are often attracted to spider plants because they contain mild compounds with a mild hallucinogenic/catnip-like effect on felines, though it is physically harmless.",
     "fun_fact": "A single healthy mother Spider Plant can produce dozens of dangling baby plantlets simultaneously on its arching stolons, giving rise to its common name 'Hen and Chickens'.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/82.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Chlorophytum_comosum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chlorophytum_comosum",
+    "image_credit": {
+      "observer": "Petra Holland",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 83,
@@ -314,7 +410,13 @@
     "origin": "global",
     "names_hindi": "मॉन्स्टेरा (Monstera)",
     "names_bengali": "মনস্টেরা (Monstera)",
-    "other_names": ["Swiss Cheese Plant", "Split-Leaf Philodendron", "Ceriman", "Monstera", "Windowleaf"],
+    "other_names": [
+      "Swiss Cheese Plant",
+      "Split-Leaf Philodendron",
+      "Ceriman",
+      "Monstera",
+      "Windowleaf"
+    ],
     "description": "An iconic tropical climbing hemiepiphyte renowned for its enormous, glossy, perforated and deeply split emerald-green leaves and stout aerial cord roots.",
     "identifying_features": [
       "Massive climbing vine with stout stems producing thick, cord-like brownish aerial roots",
@@ -337,9 +439,15 @@
     "toxicity_note": "FOLIAGE AND UNRIPE FRUIT ARE TOXIC: All vegetative parts contain sharp needle-like insoluble calcium oxalate crystals (raphides). Chewing foliage causes intense oral burning, swelling of tongue and throat, and digestive distress in pets and humans. Only the completely ripe fruit (whose outer green scales fall off voluntarily) is edible.",
     "fun_fact": "The natural holes in Monstera leaves are called 'fenestrations' (from the Latin for window); they allow hurricane winds to pass through without tearing the leaf and let sunlight filter down to lower foliage.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80"
+      "/species/83.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Monstera_deliciosa"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Monstera_deliciosa",
+    "image_credit": {
+      "observer": "carolwest",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 84,
@@ -352,7 +460,12 @@
     "origin": "global",
     "names_hindi": "पीस लिली (Peace Lily)",
     "names_bengali": "পিস লিলি (Peace Lily)",
-    "other_names": ["Peace Lily", "White Sails", "Spathiphyllum", "Closet Plant"],
+    "other_names": [
+      "Peace Lily",
+      "White Sails",
+      "Spathiphyllum",
+      "Closet Plant"
+    ],
     "description": "An elegant, shade-tolerant evergreen perennial herb with glossy lanceolate leaves and striking, pure-white hood-like floral spathes that resemble white flags of peace.",
     "identifying_features": [
       "Dense, stemless clumps of arching, glossy dark green elliptic leaves with sunken veins",
@@ -375,9 +488,15 @@
     "toxicity_note": "TOXIC TO DOGS AND CATS: Contains insoluble calcium oxalate crystals. Ingestion causes immediate oral pain, burning of lips and tongue, drooling, difficulty swallowing, and vomiting. Keep out of reach of domestic pets.",
     "fun_fact": "The white 'flower' of the Peace Lily is not a true flower at all, but a modified leaf called a spathe that serves as a protective hood and billboard to guide pollinators to the tiny true flowers on the spadix.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/84.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Spathiphyllum_wallisii"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spathiphyllum_wallisii",
+    "image_credit": {
+      "observer": "Dhandara Manini",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg"
+    },
+    "is_toxic": true
   },
   {
     "id": 85,
@@ -390,7 +509,13 @@
     "origin": "indian",
     "names_hindi": "रबर प्लांट (Rubber Plant)",
     "names_bengali": "রবার গাছ (Rubber Gachh)",
-    "other_names": ["Rubber Fig", "Indian Rubber Bush", "Rubber Tree", "Bor", "Living Root Bridge Tree"],
+    "other_names": [
+      "Rubber Fig",
+      "Indian Rubber Bush",
+      "Rubber Tree",
+      "Bor",
+      "Living Root Bridge Tree"
+    ],
     "description": "A magnificent banyan-group evergreen tree native to Northeast India, famous for its colossal buttressed roots, living root bridges of Meghalaya, and thick, glossy, leathery oval leaves.",
     "identifying_features": [
       "Massive forest tree developing vast buttresses and aerial prop roots in humid wild habitats",
@@ -413,9 +538,15 @@
     "toxicity_note": "MILD-TO-MODERATE TOXICITY: The milky latex contains ficin and psoralens. Contact with skin or eyes causes irritation and dermatitis; ingestion can cause vomiting, drooling, and mouth irritation in dogs and cats.",
     "fun_fact": "The incredible Living Root Bridges of Meghalaya, some carrying foot traffic for over 500 years, are meticulously grown and woven by indigenous Khasi villagers using the living aerial roots of Ficus elastica.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/85.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_elastica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ficus_elastica",
+    "image_credit": {
+      "observer": "大坑東宣道小學",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 86,
@@ -428,7 +559,13 @@
     "origin": "global",
     "names_hindi": "जेड प्लांट (Jade Plant)",
     "names_bengali": "জেড প্ল্যান্ট (Jade Plant)",
-    "other_names": ["Money Tree", "Dollar Plant", "Lucky Plant", "Friendship Tree", "Crassula"],
+    "other_names": [
+      "Money Tree",
+      "Dollar Plant",
+      "Lucky Plant",
+      "Friendship Tree",
+      "Crassula"
+    ],
     "description": "A charming, long-lived woody-stemmed succulent with fleshy, teardrop-shaped jade-green leaves, revered in Feng Shui as a symbol of financial wealth, good fortune, and renewal.",
     "identifying_features": [
       "Thick, gnarled, miniature tree-like woody branching trunk giving it a natural bonsai appearance",
@@ -451,9 +588,15 @@
     "toxicity_note": "TOXIC TO CATS AND DOGS: Ingestion by pets causes vomiting, depression, ataxia (unsteady gait), and slow heart rate. Keep placed on high shelves away from household pets.",
     "fun_fact": "Jade plants can live for over 70 to 100 years, often passed down through multiple family generations as living family heirlooms.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/86.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Crassula_ovata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crassula_ovata",
+    "image_credit": {
+      "observer": "Craig Peter",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg"
+    },
+    "is_toxic": true
   },
   {
     "id": 87,
@@ -466,7 +609,13 @@
     "origin": "global",
     "names_hindi": "नागफनी (Nagphani)",
     "names_bengali": "নাগফণী (Nagphani)",
-    "other_names": ["Barbary Fig", "Cactus Pear", "Nagphani", "Nopal", "Tuna"],
+    "other_names": [
+      "Barbary Fig",
+      "Cactus Pear",
+      "Nagphani",
+      "Nopal",
+      "Tuna"
+    ],
     "description": "A robust, drought-conquering succulent cactus composed of flattened paddle-like green stem segments (cladodes), yellow blossoms, and sweet, juicy, spine-armed oval fruits.",
     "identifying_features": [
       "Segmented succulent shrub formed of thick, flattened, obovate green pad-like stem joints (cladodes)",
@@ -489,9 +638,15 @@
     "toxicity_note": "Fruit flesh and pads are non-toxic and edible. MECHANICAL IRRITATION HAZARD: The tiny microscopic hair-like barbed spines (glochids) easily detach and penetrate skin or mucous membranes, causing persistent severe mechanical dermatitis, itching, and pain. Handle only with thick leather gloves or tongs.",
     "fun_fact": "Prickly pear cladodes are the traditional host plant for cochineal insects (Dactylopius coccus), the historic source of natural carmine red dye used to color royal fabrics, cosmetics, and foods.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/87.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Opuntia_ficus-indica"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Opuntia_ficus-indica",
+    "image_credit": {
+      "observer": "Melissa Sinka",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 88,
@@ -504,7 +659,12 @@
     "origin": "global",
     "names_hindi": "बोस्टन फर्न (Boston Fern)",
     "names_bengali": "বোস্টন ফার্ন (Boston Fern)",
-    "other_names": ["Sword Fern", "Boston Fern", "Wild Boston Fern", "Fishbone Fern"],
+    "other_names": [
+      "Sword Fern",
+      "Boston Fern",
+      "Wild Boston Fern",
+      "Fishbone Fern"
+    ],
     "description": "A lush, arching graceful fern with long, feathery sword-shaped fronds bearing alternating pinnate leaflets, beloved worldwide as a classic hanging porch and indoor bathroom fern.",
     "identifying_features": [
       "Gracefully arching, pendulous pinnate fronds up to 0.5 to 1.5 meters long emerging from a central tufted crown",
@@ -527,9 +687,15 @@
     "toxicity_note": "NON-TOXIC: Completely safe and non-toxic for cats, dogs, birds, and children.",
     "fun_fact": "The popular Boston Fern originated in 1894 when a Massachusetts florist noticed a spontaneous mutation with wider, more gracefully arching and ruffled fronds among a shipment of wild sword ferns.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/88.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Nephrolepis_exaltata"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nephrolepis_exaltata",
+    "image_credit": {
+      "observer": "Carlos/Giancarla Ross (AnimeBirder)",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 89,
@@ -542,7 +708,11 @@
     "origin": "global",
     "names_hindi": "एग्लोनिमा (Aglaonema)",
     "names_bengali": "অ্যাগ্লোনেমা (Aglaonema)",
-    "other_names": ["Chinese Evergreen", "Aglaonema", "Poison Dart Plant"],
+    "other_names": [
+      "Chinese Evergreen",
+      "Aglaonema",
+      "Poison Dart Plant"
+    ],
     "description": "A stunning, shade-tolerant tropical foliage herb renowned for its lush, spear-shaped leaves beautifully patterned in silver, grey, pink, and vibrant ruby-red variegation.",
     "identifying_features": [
       "Compact, erect clumping herbaceous stems reaching 30 to 80 cm in height",
@@ -564,8 +734,14 @@
     "toxicity_note": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-like calcium oxalate crystals. Chewing any part causes immediate intense burning and swelling of the mouth, tongue, and throat, excessive drooling, and digestive distress.",
     "fun_fact": "In China and throughout East Asia, Aglaonema has been cultivated for centuries as an auspicious good-luck plant believed to bring good fortune, prosperity, and positive chi into the home.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/89.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Aglaonema_commutatum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aglaonema_commutatum",
+    "image_credit": {
+      "observer": "James K. Wetterer",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg"
+    },
+    "is_toxic": true
   }
 ]

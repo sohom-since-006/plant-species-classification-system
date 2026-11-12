@@ -36,10 +36,16 @@
       "Pinch floral terminal spikes regularly to stimulate bushy branch formation"
     ],
     "toxicityNote": "Non-toxic in normal culinary use; excessive concentrated medicinal intake during pregnancy should be avoided TODO(verify).",
+    "isToxic": false,
     "funFact": "Tulsi translates from Sanskrit as 'the incomparable one'. In Hindu mythology, no ritual offering to Lord Vishnu is complete without a Tulsi leaf.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/0.webp"
     ],
+    "imageCredit": {
+      "observer": "pikun",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ocimum_tenuiflorum"
   },
   "1": {
@@ -78,10 +84,16 @@
       "Protect young saplings from freezing winter drafts and prolonged frost"
     ],
     "toxicityNote": "Foliage and dilute topical preparations are safe; concentrated neem seed oil is toxic if ingested orally, particularly dangerous for infants and children TODO(verify).",
+    "isToxic": false,
     "funFact": "The United Nations named Neem the 'Tree of the 21st Century' due to its potential to combat pests organically without chemical resistance.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/1.webp"
     ],
+    "imageCredit": {
+      "observer": "sanahawwa",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Azadirachta_indica"
   },
   "2": {
@@ -120,10 +132,16 @@
       "Allow soil substrate to dry thoroughly between moderate waterings"
     ],
     "toxicityNote": "Inner clear gel is generally safe; the yellow aloin latex beneath the leaf rind is a harsh laxative and can cause severe cramping and electrolyte loss if ingested TODO(verify). Toxic to cats and dogs.",
+    "isToxic": false,
     "funFact": "Ancient Egyptian murals referred to Aloe vera as the 'plant of immortality', and Cleopatra reportedly used its gel in her daily skincare regimen.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600&q=80"
+      "/species/2.webp"
     ],
+    "imageCredit": {
+      "observer": "Steven Mlodinow",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625536592/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aloe_vera"
   },
   "3": {
@@ -162,10 +180,16 @@
       "Keep soil evenly moist during the 7-9 month growing season before harvesting rhizomes"
     ],
     "toxicityNote": "Extremely safe in dietary quantities; high concentrated curcumin supplements may cause gastric distress or interact with anticoagulant medications TODO(verify).",
+    "isToxic": false,
     "funFact": "Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/3.webp"
     ],
+    "imageCredit": {
+      "observer": "偷米",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Turmeric"
   },
   "4": {
@@ -204,10 +228,16 @@
       "Harvest when aerial stems naturally yellow and die back in winter"
     ],
     "toxicityNote": "Safe in culinary amounts; excessive ingestion of raw root may trigger mild heartburn or gastric acid reflux. Consult physician if on blood thinners TODO(verify).",
+    "isToxic": false,
     "funFact": "During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/4.webp"
     ],
+    "imageCredit": {
+      "observer": "Zuleika Peralta",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ginger"
   },
   "5": {
@@ -246,10 +276,16 @@
       "Avoid overwatering; highly susceptible to fungal root rot in soggy or heavy clay soils"
     ],
     "toxicityNote": "Leaves and green unripened berries contain solanine-like alkaloids and are toxic; medicinal root should be avoided during pregnancy due to potential uterine-stimulating effects TODO(verify).",
+    "isToxic": false,
     "funFact": "Its Sanskrit name Ashwagandha translates literally to 'smell of a horse', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+      "/species/5.webp"
     ],
+    "imageCredit": {
+      "observer": "Finn Rautenbach",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Withania_somnifera"
   },
   "6": {
@@ -289,10 +325,16 @@
       "Propagates with extreme ease from mature stem cuttings planted in well-draining soil"
     ],
     "toxicityNote": "Generally recognized as safe; excessive unsupervised intake of concentrated extracts has been associated with rare idiosyncratic hepatic enzyme elevations TODO(verify).",
+    "isToxic": false,
     "funFact": "In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&q=80"
+      "/species/6.webp"
     ],
+    "imageCredit": {
+      "observer": "Green Bull",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinospora_cordifolia"
   },
   "7": {
@@ -332,10 +374,16 @@
       "Never allow roots to dry out; maintain standing water in saucer or shallow pond margin"
     ],
     "toxicityNote": "Non-toxic; high therapeutic doses on an empty stomach may cause mild nausea, abdominal cramps, or increased gastrointestinal motility TODO(verify).",
+    "isToxic": false,
     "funFact": "Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80"
+      "/species/7.webp"
     ],
+    "imageCredit": {
+      "observer": "tahli-jade",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bacopa_monnieri"
   },
   "8": {
@@ -374,10 +422,16 @@
       "Provide regular deep irrigation during floral fruit-set to avoid pre-harvest fruit drop"
     ],
     "toxicityNote": "Completely non-toxic and nutrient-dense; high dietary intake of fresh sour fruit may occasionally irritate sensitive stomachs with acid hypersecretion TODO(verify).",
+    "isToxic": false,
     "funFact": "A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/8.webp"
     ],
+    "imageCredit": {
+      "observer": "Bikash Kumar Sahoo",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Phyllanthus_emblica"
   },
   "9": {
@@ -417,10 +471,16 @@
       "Protect from cold winter frost and chilly winds which cause rapid leaf drop"
     ],
     "toxicityNote": "Leaves are completely edible, flavorful, and safe; the dark berry seeds contain toxic cardiac glycosides and must never be chewed or ingested TODO(verify).",
+    "isToxic": false,
     "funFact": "Commercial 'curry powder' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/9.webp"
     ],
+    "imageCredit": {
+      "observer": "foaspotter",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Curry_tree"
   },
   "10": {
@@ -460,10 +520,16 @@
       "Prune main trunk when young to stimulate low branching for easy pod and leaf harvesting"
     ],
     "toxicityNote": "Leaves, blossoms, and green pods are nutritious and safe; the root bark contains the alkaloid spirochin, which can induce toxic cardiac paralysis and must never be consumed TODO(verify).",
+    "isToxic": false,
     "funFact": "Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow's milk, and four times more Vitamin A than carrots per equal weight.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80"
+      "/species/10.webp"
     ],
+    "imageCredit": {
+      "observer": "Biodiversity Restoration Registry Kigamboni.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Moringa_oleifera"
   },
   "11": {
@@ -504,10 +570,16 @@
       "Drought-resistant once established; requires minimal supplemental watering"
     ],
     "toxicityNote": "Ripe fruit pulp is delicious and non-toxic; unripe fruit and concentrated bark preparations have strong astringent action and should be used with caution during pregnancy TODO(verify).",
+    "isToxic": false,
     "funFact": "The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+      "/species/11.webp"
     ],
+    "imageCredit": {
+      "observer": "Priya Priya",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aegle_marmelos"
   },
   "12": {
@@ -546,10 +618,16 @@
       "Protect young saplings from domestic livestock during the first few years"
     ],
     "toxicityNote": "Medicinal bark preparations are well-tolerated under professional guidance; patients with severe congestive cardiac failure must consult their cardiologist before taking herbal preparations TODO(verify).",
+    "isToxic": false,
     "funFact": "Named after the hero Arjuna of the Mahabharata epic in tribute to the tree's unmatched strength, defensive resilience, and role as a biological shield for the human heart.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80"
+      "/species/12.webp"
     ],
+    "imageCredit": {
+      "observer": "Kailas Erande",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Terminalia_arjuna"
   },
   "13": {
@@ -589,10 +667,16 @@
       "Provide regular deep irrigation during prolonged dry seasons to maintain lush canopy foliage"
     ],
     "toxicityNote": "Non-toxic; commonly confused in urban landscaping with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which lacks medicinal properties TODO(verify).",
+    "isToxic": false,
     "funFact": "According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/13.webp"
     ],
+    "imageCredit": {
+      "observer": "Sayali Bakore",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saraca_asoca"
   },
   "14": {
@@ -632,10 +716,16 @@
       "Provide sturdy bamboo poles or living support trees for aerial vine climbing"
     ],
     "toxicityNote": "Fresh betel leaf alone is non-toxic and aromatic; habitual chewing of traditional paan concoctions containing tobacco and areca nut is strongly carcinogenic to oral tissues TODO(verify).",
+    "isToxic": false,
     "funFact": "Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo's travelogues of the subcontinent in the 13th century.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80"
+      "/species/14.webp"
     ],
+    "imageCredit": {
+      "observer": "連亮惟",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Betel"
   },
   "15": {
@@ -673,10 +763,16 @@
       "Divide root clumps every 2 to 3 years to maintain vigor"
     ],
     "toxicityNote": "Safe in culinary amounts; concentrated essential oils can cause dermatitis or gastric upset in pets if ingested in quantity TODO(verify).",
+    "isToxic": false,
     "funFact": "Lemongrass contains up to 80% citral in its volatile oils, giving it a stronger lemon aroma than actual lemon fruit peels.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80"
+      "/species/15.webp"
     ],
+    "imageCredit": {
+      "observer": "Biodiversity Restoration Registry Kigamboni.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605049920/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cymbopogon_citratus"
   },
   "16": {
@@ -715,10 +811,16 @@
       "Harvest top stems frequently to stimulate dense, bushy branching"
     ],
     "toxicityNote": "Non-toxic to humans in food amounts; large concentrated ingestion of mint essential oils can be toxic to cats and dogs TODO(verify).",
+    "isToxic": false,
     "funFact": "Spearmint gets its common name from its pointed, spear-shaped leaf tips and floral spikes.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/16.webp"
     ],
+    "imageCredit": {
+      "observer": "lynettescott",
+      "license": "CC0",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643458773/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Spearmint"
   },
   "17": {
@@ -758,10 +860,16 @@
       "Extremely hardy and drought-tolerant once deep taproots are established"
     ],
     "toxicityNote": "Milky latex sap can cause mild skin irritation or contact dermatitis in sensitive individuals TODO(verify).",
+    "isToxic": false,
     "funFact": "The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/17.webp"
     ],
+    "imageCredit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_religiosa"
   },
   "18": {
@@ -800,10 +908,16 @@
       "Prune only when training young specimens as large bonsai"
     ],
     "toxicityNote": "Like most Ficus species, the milky white latex can cause eye irritation and skin rash TODO(verify).",
+    "isToxic": false,
     "funFact": "The Great Banyan in Howrah, West Bengal, has a canopy circumference of over 450 meters and looks like an entire forest, yet is a single clonal specimen connected by thousands of prop roots.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/18.webp"
     ],
+    "imageCredit": {
+      "observer": "Sushant Kumar Mishra",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626942186/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_benghalensis"
   },
   "19": {
@@ -842,10 +956,16 @@
       "Water moderately; keep soil slightly moist until flowering initiates"
     ],
     "toxicityNote": "Intensely bitter; large doses can induce nausea, gastric discomfort, or allergic reactions. Contraindicated during pregnancy TODO(verify).",
+    "isToxic": false,
     "funFact": "Kalmegh is called 'Maha-tita' in Bengali, literally meaning 'Great Bitter', because its bitter taste is said to surpass even that of Neem.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/19.webp"
     ],
+    "imageCredit": {
+      "observer": "Wanda G Jackson",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Andrographis_paniculata"
   },
   "20": {
@@ -884,10 +1004,16 @@
       "Prune back in early spring to stimulate vigorous fresh flowering shoots"
     ],
     "toxicityNote": "Generally non-toxic to humans and common domestic pets, making it a safe garden ornamental.",
+    "isToxic": false,
     "funFact": "Historically known as 'Shoeblack plant' because crushed petals were used in India and the Caribbean to blacken and polish leather shoes.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/20.webp"
     ],
+    "imageCredit": {
+      "observer": "Silky Refina Marshellia",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis"
   },
   "21": {
@@ -926,10 +1052,16 @@
       "Allow surface soil to dry slightly between thorough deep waterings"
     ],
     "toxicityNote": "Non-toxic to humans; plant sap may cause mild contact skin irritation in sensitive people or mild drooling if chewed by pets TODO(verify).",
+    "isToxic": false,
     "funFact": "Marigold flower petals are the richest natural commercial source of lutein, an essential antioxidant for human retinal eye health.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/21.webp"
     ],
+    "imageCredit": {
+      "observer": "Ernesto Rodriguez",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632297674/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tagetes_erecta"
   },
   "22": {
@@ -969,10 +1101,16 @@
       "Prune lightly after the main summer flowering flush to encourage new budding spurs"
     ],
     "toxicityNote": "Non-toxic to humans, cats, and dogs; safe for indoor and courtyard cultivation.",
+    "isToxic": false,
     "funFact": "Jasminum sambac is the national flower of both the Philippines (known as Sampaguita) and Indonesia (known as Melati putih).",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/22.webp"
     ],
+    "imageCredit": {
+      "observer": "Io Siu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jasminum_sambac"
   },
   "23": {
@@ -1012,10 +1150,16 @@
       "Protect dormant rhizomes from freezing or water stagnation drying during winter"
     ],
     "toxicityNote": "Non-toxic; virtually all parts (rhizome, seeds, young stems, petals) are edible when properly cooked.",
+    "isToxic": false,
     "funFact": "The micro-nanostructures on lotus leaves cause water droplets to roll off carrying dirt with them, giving rise to the scientific term 'the lotus effect' for self-cleaning surfaces.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/23.webp"
     ],
+    "imageCredit": {
+      "observer": "cgbolas",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nelumbo_nucifera"
   },
   "24": {
@@ -1054,10 +1198,16 @@
       "Water at root level in early morning; avoid wetting foliage"
     ],
     "toxicityNote": "Non-toxic to humans and pets, though sharp thorny stems can cause mechanical puncture injuries.",
+    "isToxic": false,
     "funFact": "Rose hips (the fruit of the rose plant) contain one of the highest concentrations of natural Vitamin C of any edible fruit.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80"
+      "/species/24.webp"
     ],
+    "imageCredit": {
+      "observer": "amandrews",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rose"
   },
   "25": {
@@ -1097,10 +1247,16 @@
       "Withhold heavy watering during winter deciduous dormancy"
     ],
     "toxicityNote": "Sap contains poisonous diterpene and cardiac-irritant compounds that irritate skin and cause digestive distress if ingested TODO(verify).",
+    "isToxic": true,
     "funFact": "Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/25.webp"
     ],
+    "imageCredit": {
+      "observer": "fmunoz",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Plumeria_rubra"
   },
   "26": {
@@ -1139,10 +1295,16 @@
       "Always wear protective gloves when pruning, and NEVER burn clippings"
     ],
     "toxicityNote": "DEADLY TOXIC: Contains powerful cardiac glycosides (oleandrin, neriine). Ingestion of any part can cause severe vomiting, irregular heartbeat, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic.",
+    "isToxic": true,
     "funFact": "Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/26.webp"
     ],
+    "imageCredit": {
+      "observer": "bradwarren",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nerium_oleander"
   },
   "27": {
@@ -1181,10 +1343,16 @@
       "Prune aggressively after each flowering flush to manage rambling growth and shape"
     ],
     "toxicityNote": "Plant sap can cause contact dermatitis or skin rash; thorny branches cause mechanical skin tears. Mild digestive upset if leaves are ingested by pets TODO(verify).",
+    "isToxic": false,
     "funFact": "The brightly colored 'petals' of Bougainvillea are actually modified leaves called bracts; the true flowers are the tiny white stars nestled inside.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/27.webp"
     ],
+    "imageCredit": {
+      "observer": "Noopur🍀",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/461875164/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bougainvillea_spectabilis"
   },
   "28": {
@@ -1224,10 +1392,16 @@
       "Pinch young tip growth to encourage branching and more flower nodes"
     ],
     "toxicityNote": "Flowers are completely edible; roots and mature seeds have potent purgative and emetic properties and should not be consumed casually TODO(verify).",
+    "isToxic": false,
     "funFact": "The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/28.webp"
     ],
+    "imageCredit": {
+      "observer": "benjaminsisko",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clitoria_ternatea"
   },
   "29": {
@@ -1267,10 +1441,16 @@
       "Prune annually after winter flowering season to maintain compact tree shape"
     ],
     "toxicityNote": "Non-toxic in normal cultural and traditional use; high doses of leaf extracts may have mild laxative effects TODO(verify).",
+    "isToxic": false,
     "funFact": "The species name 'arbor-tristis' means 'tree of sorrow' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/29.webp"
     ],
+    "imageCredit": {
+      "observer": "rushitha_jain",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis"
   },
   "30": {
@@ -1310,10 +1490,16 @@
       "Extremely drought tolerant once established, but susceptible to brittle limb breakage in gale winds"
     ],
     "toxicityNote": "Seeds and bark contain mild saponins and tannins; generally non-toxic to humans in casual exposure, but unverified for ingestion TODO(verify).",
+    "isToxic": false,
     "funFact": "Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/30.webp"
     ],
+    "imageCredit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Delonix_regia"
   },
   "31": {
@@ -1353,10 +1539,16 @@
       "Pinch young shoots to prevent leggy growth"
     ],
     "toxicityNote": "TOXIC: Contains over 70 potent cytotoxic vinca alkaloids. Ingestion can cause severe abdominal cramping, low blood pressure, neuromuscular impairment, and organ toxicity in humans and pets.",
+    "isToxic": true,
     "funFact": "Sadabahar literally means 'evergreen' or 'always in bloom' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/31.webp"
     ],
+    "imageCredit": {
+      "observer": "amynmann",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Catharanthus_roseus"
   },
   "32": {
@@ -1396,10 +1588,16 @@
       "Prune after heavy bloom cycles to keep shrub bushy and compact"
     ],
     "toxicityNote": "Non-toxic to humans; generally safe around domestic pets.",
+    "isToxic": false,
     "funFact": "In Kerala, Ixora coccinea (known as Thechi) is a mandatory floral offering for Lord Ganesha and temple rituals.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/32.webp"
     ],
+    "imageCredit": {
+      "observer": "Thoodi Harsha",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ixora_coccinea"
   },
   "33": {
@@ -1440,10 +1638,16 @@
       "Potted sterile ornamental cultivars should be deadheaded to prevent berry dispersal by birds"
     ],
     "toxicityNote": "HIGHLY TOXIC: Green unripe berries and foliage contain triterpenoid toxins (lantadene A and B). Ingestion by children causes vomiting, lethargy, dilated pupils, and respiratory depression. Highly hepatotoxic to cattle and sheep, causing irreversible liver failure and fatal photosensitization.",
+    "isToxic": true,
     "funFact": "Lantana camara has invaded over 13 million hectares of Indian forest lands, suppressing native regeneration and earning a spot among the world's 100 worst invasive alien species.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/33.webp"
     ],
+    "imageCredit": {
+      "observer": "Francois (Red)",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lantana_camara"
   },
   "34": {
@@ -1483,10 +1687,16 @@
       "Water at soil line; dampness on dense floral crests promotes fungal botrytis rot"
     ],
     "toxicityNote": "Non-toxic; leaves and young stems are edible greens; completely safe around household pets.",
+    "isToxic": false,
     "funFact": "The crested form of Cockscomb is a stabilized genetic anomaly called fasciation, which fuses and fans out the floral stem into a rooster-like crest.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/34.webp"
     ],
+    "imageCredit": {
+      "observer": "timmeschke",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Celosia_argentea"
   },
   "35": {
@@ -1526,10 +1736,16 @@
       "Protect from chilly winter drafts and temperatures below 12°C"
     ],
     "toxicityNote": "Non-toxic to humans and animals; completely safe for wearing in hair and near pets.",
+    "isToxic": false,
     "funFact": "When Crossandra's ripe seed pods encounter water or high humidity, they burst open with an audible pop and fling seeds away, earning the moniker 'Firecracker flower'.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/35.webp"
     ],
+    "imageCredit": {
+      "observer": "Tharuni Sangonda",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crossandra_infundibuliformis"
   },
   "36": {
@@ -1570,10 +1786,16 @@
       "Cut down dead flowering stalks to the base to encourage fresh suckering stems"
     ],
     "toxicityNote": "Non-toxic; rhizomes are traditionally cooked and eaten in South America; safe around pets and children.",
+    "isToxic": false,
     "funFact": "Canna seeds are so exceptionally hard and dense that during the 1857 Indian rebellion, soldiers reportedly used them in place of lead shot when musket balls ran out.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/36.webp"
     ],
+    "imageCredit": {
+      "observer": "Drew Baxter",
+      "license": "CC0",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Canna_indica"
   },
   "37": {
@@ -1613,10 +1835,16 @@
       "Sow fresh seeds at the onset of monsoon rains for dazzling monsoon flushes"
     ],
     "toxicityNote": "Non-toxic to humans in external use; contains mild calcium oxalates which can cause mild gastric discomfort if consumed raw in large quantities TODO(verify).",
+    "isToxic": false,
     "funFact": "The genus name 'Impatiens' (meaning impatient) refers to the explosive seed pods that violently shoot their seeds into the air the instant they are touched.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/37.webp"
     ],
+    "imageCredit": {
+      "observer": "Lynn Katsoulis",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620293016/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Impatiens_balsamina"
   },
   "38": {
@@ -1656,10 +1884,16 @@
       "Requires minimal pruning; protect young saplings from livestock grazing"
     ],
     "toxicityNote": "Pods and seeds have potent anthraquinone purgative properties; overconsumption can cause severe diarrhea and intestinal cramps TODO(verify). Safe as an ornamental tree.",
+    "isToxic": false,
     "funFact": "Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/38.webp"
     ],
+    "imageCredit": {
+      "observer": "Aditya Bari",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616097106/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cassia_fistula"
   },
   "39": {
@@ -1700,10 +1934,16 @@
       "Slow-growing initially while it establishes a deep drought-resistant taproot"
     ],
     "toxicityNote": "Seeds contain butin and proteolytic enzymes that are toxic in raw ingestion and exhibit anthelmintic toxicity if consumed unpurified TODO(verify). Flowers are safe and edible.",
+    "isToxic": false,
     "funFact": "The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/39.webp"
     ],
+    "imageCredit": {
+      "observer": "Jordan",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Butea_monosperma"
   },
   "40": {
@@ -1743,10 +1983,16 @@
       "Protect young graft trees from frost and waterlogging"
     ],
     "toxicityNote": "Mango tree sap, peel, and floral pollen contain urushiol-related alkylresorcinols, which can cause severe contact dermatitis ('mango mouth') in people sensitive to poison ivy TODO(verify). Fruit flesh is safe.",
+    "isToxic": false,
     "funFact": "India produces over 40% of the world's total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80"
+      "/species/40.webp"
     ],
+    "imageCredit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mangifera_indica"
   },
   "41": {
@@ -1785,10 +2031,16 @@
       "Apply high-potassium and boron fertilizer blends regularly to maintain nut yield"
     ],
     "toxicityNote": "Completely non-toxic; all parts of the nut, water, and oil are safe and nutritious for humans and animals.",
+    "isToxic": false,
     "funFact": "Every single part of the coconut tree is utilized for food, shelter, fuel, or medicine, leading Sanskrit scriptures to name it Kalpavriksha ('the tree that provides all the necessities of life').",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/41.webp"
     ],
+    "imageCredit": {
+      "observer": "Sam Rickert",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Coconut"
   },
   "42": {
@@ -1828,10 +2080,16 @@
       "Cut down pseudostem after fruiting to allow the strongest side sucker (ratoon) to take over"
     ],
     "toxicityNote": "Completely non-toxic; all parts (fruit, peel, flower, stem core) are safe and edible when prepared properly.",
+    "isToxic": false,
     "funFact": "Botanically speaking, the banana plant is not a tree at all, but the world's largest perennial herbaceous plant, and the banana itself is classified as a berry.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&q=80"
+      "/species/42.webp"
     ],
+    "imageCredit": {
+      "observer": "Manuel Raab",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Musa_acuminata"
   },
   "43": {
@@ -1871,10 +2129,16 @@
       "Replace plants every 3 to 4 years as older trees decline in productivity and become unwieldy"
     ],
     "toxicityNote": "Ripe fruit is safe. UNRIPE raw green papaya and milky latex contain concentrated papain and carpaine, which can trigger uterine contractions and are strictly avoided during pregnancy TODO(verify).",
+    "isToxic": false,
     "funFact": "Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/43.webp"
     ],
+    "imageCredit": {
+      "observer": "Harry Hill",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Papaya"
   },
   "44": {
@@ -1915,10 +2179,16 @@
       "Drought-resistant once established; moderate watering improves fruit size and sweetness"
     ],
     "toxicityNote": "Non-toxic; leaves, fruit, and seeds are completely safe for human consumption and non-hazardous to pets.",
+    "isToxic": false,
     "funFact": "Guava fruit contains over 228 mg of Vitamin C per 100g — roughly four times the Vitamin C concentration of a typical sweet orange.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80"
+      "/species/44.webp"
     ],
+    "imageCredit": {
+      "observer": "Roqui Bello",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Psidium_guajava"
   },
   "45": {
@@ -1958,10 +2228,16 @@
       "Prune suckers regularly to maintain a clean multi-stemmed or single-trunk tree"
     ],
     "toxicityNote": "Fruit arils are completely safe and edible; tree root bark contains pelletierine alkaloids that are toxic in large unverified medicinal doses TODO(verify).",
+    "isToxic": false,
     "funFact": "A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1541344999736-83eca872f242?w=600&q=80"
+      "/species/45.webp"
     ],
+    "imageCredit": {
+      "observer": "謝麗霦",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pomegranate"
   },
   "46": {
@@ -2002,10 +2278,16 @@
       "Protect young saplings from livestock grazing and waterlogging"
     ],
     "toxicityNote": "Non-toxic; raw unripe bulbs must be thoroughly cooked before eating; sticky white latex can irritate eyes or skin in sensitive individuals TODO(verify).",
+    "isToxic": false,
     "funFact": "Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/46.webp"
     ],
+    "imageCredit": {
+      "observer": "keirfawinat",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jackfruit"
   },
   "47": {
@@ -2044,10 +2326,16 @@
       "Prune young trees to establish a high central trunk clear of low traffic"
     ],
     "toxicityNote": "Completely non-toxic; pulp, tender young leaves, and roasted seeds are edible and safe for humans and animals.",
+    "isToxic": false,
     "funFact": "The name Tamarind derives from the Arabic 'Tamar-ul-Hind', literally translating to 'Date of India', referencing the dark, sticky, date-like pulp inside the pods.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/47.webp"
     ],
+    "imageCredit": {
+      "observer": "Mohamed SAOUPKAI",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tamarind"
   },
   "48": {
@@ -2088,10 +2376,16 @@
       "Protect ripening fruit from parakeet and bat flocks"
     ],
     "toxicityNote": "Non-toxic; fruit and seeds are safe in dietary use. The anthocyanins in fruit heavily stain tongues and clothing dark purple.",
+    "isToxic": false,
     "funFact": "In ancient Hindu cosmology, the Indian subcontinent was known as 'Jambudvipa' (the Island of the Jambu Trees), named after the abundance of giant Jamun trees.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/48.webp"
     ],
+    "imageCredit": {
+      "observer": "Austin Smith",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Syzygium_cumini"
   },
   "49": {
@@ -2131,10 +2425,16 @@
       "Water regularly during fruit set; drought-tolerant once established"
     ],
     "toxicityNote": "Ripe fruit is non-toxic and wholesome; the hard shiny black seeds have a small sharp hook that can catch in the throat if swallowed whole TODO(verify).",
+    "isToxic": false,
     "funFact": "The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/49.webp"
     ],
+    "imageCredit": {
+      "observer": "Lynette",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Manilkara_zapota"
   },
   "50": {
@@ -2175,10 +2475,16 @@
       "Harvest fruits when the skin fissures between scales turn pale creamy-white"
     ],
     "toxicityNote": "PULP IS EDIBLE. SEEDS AND LEAVES ARE TOXIC: Seeds contain neurotoxic annonacin and acetogenins; crushed seeds cause severe eye inflammation and are toxic if swallowed or chewed. Keep seeds away from children and pets.",
+    "isToxic": false,
     "funFact": "Custard apple is commonly known as 'Sitaphal' in India, traditionally associated with Sita from the epic Ramayana.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/50.webp"
     ],
+    "imageCredit": {
+      "observer": "Amara Malik",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Annona_squamosa"
   },
   "51": {
@@ -2219,10 +2525,16 @@
       "Feed quarterly with citrus-specific micronutrient fertilizers containing zinc, iron, and magnesium"
     ],
     "toxicityNote": "Fruit juice and zest are safe; peel essential oils and psoralens can cause phototoxic dermatitis on skin exposed to sun, and are mildly toxic to cats and dogs if consumed in volume TODO(verify).",
+    "isToxic": false,
     "funFact": "Genetic studies reveal that the cultivated lemon is actually an ancient hybrid between the sour orange (Citrus × aurantium) and the citron (Citrus medica).",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1534533983688-c7b8e83f5b72?w=600&q=80"
+      "/species/51.webp"
     ],
+    "imageCredit": {
+      "observer": "rafa perazzolo",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/419656927/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lemon"
   },
   "52": {
@@ -2263,10 +2575,16 @@
       "Long-term forestry investment requiring 20 to 30 years to reach harvestable heartwood girth"
     ],
     "toxicityNote": "Non-toxic in normal contact; fine sawdust from wood processing can cause respiratory irritation, sneezing, or contact dermatitis in woodworkers TODO(verify).",
+    "isToxic": false,
     "funFact": "Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/52.webp"
     ],
+    "imageCredit": {
+      "observer": "Gaurav S. Soman.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Teak"
   },
   "53": {
@@ -2307,10 +2625,16 @@
       "Seeds have extremely short viability (days) and must germinate immediately upon falling at monsoon onset"
     ],
     "toxicityNote": "Non-toxic; leaves and resin are safe and traditionally utilized in incense and food serving.",
+    "isToxic": false,
     "funFact": "According to Buddhist tradition, Queen Maya gave birth to Gautama Buddha under a blooming Sal tree in Lumbini garden, and Buddha passed into Parinirvana beneath a pair of Sal trees in Kushinagar.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/53.webp"
     ],
+    "imageCredit": {
+      "observer": "Bikram Gyawali",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shorea_robusta"
   },
   "54": {
@@ -2350,10 +2674,16 @@
       "Thin out older culms (over 3-4 years old) to encourage robust new culm emergence during monsoon"
     ],
     "toxicityNote": "Raw emerging bamboo shoots contain cyanogenic glycosides (taxiphyllin) and MUST be thoroughly boiled or fermented to dissipate hydrogen cyanide before eating. Cooked shoots and mature culms are safe.",
+    "isToxic": false,
     "funFact": "Certain bamboo species can grow up to 90 centimeters (almost 3 feet) in a single 24-hour period during peak monsoon season, making them the fastest-growing woody plants on Earth.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/54.webp"
     ],
+    "imageCredit": {
+      "observer": "Raja Sekhar Chimirala",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bambusa_vulgaris"
   },
   "55": {
@@ -2393,10 +2723,16 @@
       "Intercropped traditionally with black pepper vines, cardamom, and banana plants for optimal microclimate"
     ],
     "toxicityNote": "CARCINOGENIC WHEN CHEWED: Areca nut contains the alkaloid arecoline. The International Agency for Research on Cancer (IARC) classifies areca nut as a Group 1 human carcinogen, strongly linked to oral submucous fibrosis and oral cancer. Chewing is hazardous to health.",
+    "isToxic": false,
     "funFact": "Betel nut chewing is one of the world's oldest psychoactive traditions, practiced by hundreds of millions of people across South Asia and the Pacific for thousands of years.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/55.webp"
     ],
+    "imageCredit": {
+      "observer": "eagle100",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Areca_catechu"
   },
   "56": {
@@ -2436,10 +2772,16 @@
       "Hand pollination of female inflorescences is commonly practiced in commercial cultivation to ensure high fruit set"
     ],
     "toxicityNote": "Non-toxic; fruit is completely wholesome. Caution: base of fronds armed with needle-sharp, rigid spines capable of puncturing skin.",
+    "isToxic": false,
     "funFact": "Archaeological evidence shows date palm cultivation dating back more than 6,000 years in Mesopotamia, making it one of the oldest cultivated fruit trees in human civilization.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/56.webp"
     ],
+    "imageCredit": {
+      "observer": "Darrell Parsons",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Date_palm"
   },
   "57": {
@@ -2480,10 +2822,16 @@
       "Deciduous in winter; drops leaves completely before producing flaming floral canopy in February-March"
     ],
     "toxicityNote": "Non-toxic; flowers, young pods, and gum have traditional culinary and medicinal uses. Safe around pets.",
+    "isToxic": false,
     "funFact": "When in bloom on bare branches, a single Semal tree becomes a bustling wildlife hub, attracting dozens of bird species, fruit bats, and monkeys gorging on abundant nectar.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/57.webp"
     ],
+    "imageCredit": {
+      "observer": "ankitha_jayanth",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bombax_ceiba"
   },
   "58": {
@@ -2524,10 +2872,16 @@
       "Prune young trees to establish strong branch unions free of narrow, weak crotches"
     ],
     "toxicityNote": "Non-toxic; sweet pods are safe fodder for animals and safe around humans.",
+    "isToxic": false,
     "funFact": "The name 'Rain Tree' comes from the phenomenon of its leaflets folding up before rainfall, allowing raindrops to pass directly through the canopy to the ground beneath.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/58.webp"
     ],
+    "imageCredit": {
+      "observer": "Hilal Ram",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Samanea_saman"
   },
   "59": {
@@ -2567,10 +2921,16 @@
       "Extremely fire-prone due to volatile resinous leaf oils; maintain cleared firebreaks"
     ],
     "toxicityNote": "TOXIC INGESTION: Concentrated eucalyptus essential oil is TOXIC if swallowed, causing burning in mouth, vomiting, dizziness, seizures, and respiratory failure, particularly in children and household pets. Diluted topical balms and steam inhalations are safe.",
+    "isToxic": false,
     "funFact": "The Nilgiri Hills ('Blue Mountains') in Tamil Nadu got their modern blue haze association partly from the vast plantations of blue gum eucalyptus trees introduced there in the mid-19th century.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/59.webp"
     ],
+    "imageCredit": {
+      "observer": "felixgwj",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Eucalyptus_globulus"
   },
   "60": {
@@ -2610,10 +2970,16 @@
       "Drain water from paddy fields 10-14 days before grain harvesting"
     ],
     "toxicityNote": "Non-toxic; raw husks are indigestible and must be milled. Cooked rice is one of the gentlest hypoallergenic foods known.",
+    "isToxic": false,
     "funFact": "India is the world's largest exporter of rice, cultivating thousands of fragrant heritage varieties including the legendary long-grain Basmati and aromatic Gobindobhog.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=600&q=80"
+      "/species/60.webp"
     ],
+    "imageCredit": {
+      "observer": "Chitra Shanker",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rice"
   },
   "61": {
@@ -2654,10 +3020,16 @@
       "Requires 4-6 timed crown root irrigations during crucial growth stages"
     ],
     "toxicityNote": "Non-toxic; contains gluten proteins which cause immune reactions in individuals with celiac disease or gluten sensitivity.",
+    "isToxic": false,
     "funFact": "Common bread wheat is an allohexaploid plant, meaning its complex genome contains six sets of chromosomes derived from three distinct ancestral wild grass species.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/61.webp"
     ],
+    "imageCredit": {
+      "observer": "Francis Stiteler",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Common_wheat"
   },
   "62": {
@@ -2698,10 +3070,16 @@
       "Keep consistently watered, particularly when tassels and silk emerge"
     ],
     "toxicityNote": "Non-toxic; corn kernels and silks are completely safe and edible for humans and domestic animals.",
+    "isToxic": false,
     "funFact": "Every single strand of silk on an ear of corn connects to a single egg inside, meaning every single kernel on a cob must be individually pollinated by a grain of airborne pollen.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&q=80"
+      "/species/62.webp"
     ],
+    "imageCredit": {
+      "observer": "Karol Łanocha",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Maize"
   },
   "63": {
@@ -2742,10 +3120,16 @@
       "Propagated vegetatively via stem cuttings ('setts') bearing at least 2-3 healthy eye buds"
     ],
     "toxicityNote": "Completely non-toxic; cane juice and jaggery are safe foods; moldy red-rot sugarcane should be avoided.",
+    "isToxic": false,
     "funFact": "India was the first country in the world to invent the process of crystallizing sugarcane juice into solid crystals (Sanskrit: 'Khanda', origin of the English word 'candy') over 2,500 years ago.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/63.webp"
     ],
+    "imageCredit": {
+      "observer": "FO12071Saowanit",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saccharum_officinarum"
   },
   "64": {
@@ -2786,10 +3170,16 @@
       "Requires regular plucking and pruning to maintain a dense vegetative flushing canopy"
     ],
     "toxicityNote": "Non-toxic to humans in beverage use; caffeine content makes concentrated leaves toxic to cats and dogs if ingested TODO(verify).",
+    "isToxic": false,
     "funFact": "All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=600&q=80"
+      "/species/64.webp"
     ],
+    "imageCredit": {
+      "observer": "kusa-to-uo",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Camellia_sinensis"
   },
   "65": {
@@ -2830,10 +3220,16 @@
       "Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality"
     ],
     "toxicityNote": "Lint and oil are safe; raw seeds and foliage contain the toxic polyphenol gossypol, which can cause cardiac and reproductive toxicity in non-ruminant animals TODO(verify).",
+    "isToxic": false,
     "funFact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/65.webp"
     ],
+    "imageCredit": {
+      "observer": "megan_pratt1",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gossypium_hirsutum"
   },
   "66": {
@@ -2874,10 +3270,16 @@
       "Harvest seed pods when plants turn golden-brown before pods shatter open"
     ],
     "toxicityNote": "Non-toxic in normal culinary use; mustard oil contains erucic acid and allyl isothiocyanate which gives it a pungent sharp bite. Safe and widely consumed.",
+    "isToxic": false,
     "funFact": "The characteristic pungent nasal heat of mustard is only released when seeds or leaves are crushed in water, which activates the myrosinase enzyme to produce allyl isothiocyanate.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/66.webp"
     ],
+    "imageCredit": {
+      "observer": "Emilia Sierra",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Brassica_juncea"
   },
   "67": {
@@ -2917,10 +3319,16 @@
       "Pinch out side-suckers from leaf axils on indeterminate varieties to focus energy on fruit ripening"
     ],
     "toxicityNote": "RIPE FRUIT IS SAFE AND EDIBLE. FOLIAGE AND GREEN UNRIPE FRUITS ARE TOXIC: Leaves, stems, and unripened green tomatoes contain toxic glycoalkaloids (solanine and tomatine). Ingestion of green plant parts can cause abdominal pain, vomiting, and diarrhea in humans and pets.",
+    "isToxic": false,
     "funFact": "Botanically, the tomato is a true berry, but a famous 1893 US Supreme Court case (Nix v. Hedden) legally classified it as a vegetable for taxation purposes because it is eaten as part of the main meal.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&q=80"
+      "/species/67.webp"
     ],
+    "imageCredit": {
+      "observer": "Ajay Malik.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tomato"
   },
   "68": {
@@ -2961,10 +3369,16 @@
       "Apply high-potash fertilizer when flower buds initiate"
     ],
     "toxicityNote": "Fruit is culinary safe; capsaicin is an intense mucous membrane irritant. Wash hands thoroughly after chopping; avoid touching eyes. Excessive intake can cause gastric pain. Keep away from household pets.",
+    "isToxic": false,
     "funFact": "The fiery heat in chillies is measured on the Scoville Heat Scale; capsaicin does not cause an actual physical burn, but tricks sensory nerve endings into signaling extreme heat to the brain.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&q=80"
+      "/species/68.webp"
     ],
+    "imageCredit": {
+      "observer": "chrissietinder",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Capsicum_annuum"
   },
   "69": {
@@ -3005,10 +3419,16 @@
       "Harvest fruits while skin remains glossy; dull skin indicates overripe bitter seeds"
     ],
     "toxicityNote": "Cooked fruit is safe and nutritious. RAW FOLIAGE AND STEMS ARE TOXIC: Leaves and raw unripened fruit contain the toxic glycoalkaloid solanine; do not consume raw green parts or allow pets to chew foliage.",
+    "isToxic": false,
     "funFact": "Botanical and linguistic records confirm that brinjal was domesticated in India over 4,000 years ago, and Sanskrit literature documents over 30 distinct historical culinary varieties.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/69.webp"
     ],
+    "imageCredit": {
+      "observer": "Sereana Seuvou",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Eggplant"
   },
   "70": {
@@ -3049,10 +3469,16 @@
       "Harvest pods every 2-3 days while they are tender and snap easily; old pods become tough and stringy"
     ],
     "toxicityNote": "Completely non-toxic; pods, leaves, and seeds are edible and safe for humans and animals.",
+    "isToxic": false,
     "funFact": "India is the world's undisputed king of okra production, harvesting over 60% of the entire global commercial okra crop each year.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/70.webp"
     ],
+    "imageCredit": {
+      "observer": "kc8328thamonwan",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Okra"
   },
   "71": {
@@ -3093,10 +3519,16 @@
       "Hill soil up around growing stems regularly to protect swelling tubers from sunlight exposure"
     ],
     "toxicityNote": "TUBERS ARE SAFE WHEN SOUND. GREEN PARTS AND SPROUTS ARE TOXIC: Green sun-exposed potato peel, green tubers, sprouts, and all aboveground foliage contain poisonous solanine and chaconine glycoalkaloids. Ingestion causes nausea, vomiting, abdominal cramping, and headaches. NEVER eat green potatoes.",
+    "isToxic": false,
     "funFact": "Potatoes are underground modified stems (tubers), not roots; the 'eyes' of a potato are actually dormant axillary buds capable of sprouting into new clonal plants.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80"
+      "/species/71.webp"
     ],
+    "imageCredit": {
+      "observer": "김도윤",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Potato"
   },
   "72": {
@@ -3137,10 +3569,16 @@
       "Allow harvested bulbs to dry and cure in a well-ventilated shaded space for several weeks"
     ],
     "toxicityNote": "SAFE FOR HUMANS. TOXIC TO PETS: Contains organosulfoxides and N-propyl disulfide that are highly toxic to dogs, cats, and horses, destroying red blood cells and triggering life-threatening hemolytic anemia.",
+    "isToxic": false,
     "funFact": "Onions make you cry because slicing cell walls mixes sulfenic acids with enzymes to create syn-propanethial-S-oxide gas, which reacts with tear-duct moisture to form mild sulfuric acid.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/72.webp"
     ],
+    "imageCredit": {
+      "observer": "jeanelz",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Onion"
   },
   "73": {
@@ -3181,10 +3619,16 @@
       "Sow successive seeds every 3 weeks for an uninterrupted supply of fresh tender leaves"
     ],
     "toxicityNote": "Non-toxic and edible; a harmless genetic variation in OR6A2 olfactory receptor genes causes cilantro to taste intensely like soap to about 10-15% of people.",
+    "isToxic": false,
     "funFact": "Every part of the coriander plant is edible — the tender leafy greens (cilantro), the flowers, the dried seeds (coriander), and even the pungent roots which form the base of Thai curry pastes.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/73.webp"
     ],
+    "imageCredit": {
+      "observer": "Юрий",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Coriander"
   },
   "74": {
@@ -3224,10 +3668,16 @@
       "Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window"
     ],
     "toxicityNote": "Safe and wholesome; contains high concentrations of natural dietary oxalic acid, which can bind calcium and contribute to kidney stone formation in susceptible individuals TODO(verify).",
+    "isToxic": false,
     "funFact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&q=80"
+      "/species/74.webp"
     ],
+    "imageCredit": {
+      "observer": "Thassanee Duangnin",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Spinach"
   },
   "75": {
@@ -3268,10 +3718,16 @@
       "Water generously and consistently during vine growth and fruit swelling"
     ],
     "toxicityNote": "WARNING: NORMAL SWEET LAUKI IS SAFE. BITTER BOTTLE GOURD IS EXTREMELY TOXIC: Never consume bottle gourd juice that tastes bitter. Bitter gourds contain high levels of toxic cucurbitacins B and D, which cause acute toxic shock, hematemesis (vomiting blood), gastrointestinal bleeding, and organ failure. Always taste a small raw piece before juicing or cooking; discard immediately if bitter.",
+    "isToxic": false,
     "funFact": "Dried, hollowed bottle gourds were among the world's very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/75.webp"
     ],
+    "imageCredit": {
+      "observer": "Sulaiman Inuwa Muhammad",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Calabash"
   },
   "76": {
@@ -3312,10 +3768,16 @@
       "Mulch soil beneath developing fruits with straw to prevent rot from ground moisture"
     ],
     "toxicityNote": "Non-toxic; flesh, blossoms, tender leaves, and seeds are completely edible and safe for humans and pets.",
+    "isToxic": false,
     "funFact": "In Bengali cuisine, practically zero waste is generated from pumpkin: the flesh, tender climbing shoot tips (kumro shaak), yellow flowers (kumro phul bhaja), and seeds are all prized delicacies.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/76.webp"
     ],
+    "imageCredit": {
+      "observer": "abdlkrim",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cucurbita_moschata"
   },
   "77": {
@@ -3356,10 +3818,16 @@
       "Harvest cucumbers while crisp and firm before seeds enlarge and skins turn yellow"
     ],
     "toxicityNote": "Safe and wholesome; occasional bitter cucumbers contain elevated cucurbitacins (usually concentrated near the stem end) and should be trimmed or discarded.",
+    "isToxic": false,
     "funFact": "Ancient Sanskrit texts mention cucumber cultivation under the name 'Trapusha' over three millennia ago, confirming India as the original botanical homeland of the global cucumber.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=600&q=80"
+      "/species/77.webp"
     ],
+    "imageCredit": {
+      "observer": "dongjing123",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cucumber"
   },
   "78": {
@@ -3400,10 +3868,16 @@
       "Keep soil loose around the base of plants during flowering and pegging stages"
     ],
     "toxicityNote": "Non-toxic; peanuts are one of the most common severe food allergens, capable of triggering life-threatening anaphylaxis in allergic individuals. Ensure peanuts are stored dry to avoid toxic aflatoxin mold.",
+    "isToxic": false,
     "funFact": "Peanuts are not true nuts at all, but botanical legumes related to peas and beans, famous for their unique habit of flowering in the air and ripening their pods underground.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/78.webp"
     ],
+    "imageCredit": {
+      "observer": "pcharris",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Peanut"
   },
   "79": {
@@ -3444,10 +3918,16 @@
       "Retting: harvested stalks must be submerged in slow-flowing fresh water for 2-3 weeks to soften and strip fibers"
     ],
     "toxicityNote": "Tender young leaves are a safe, edible vegetable; mature seeds contain cardiac glycosides (olitoriside) and should not be consumed TODO(verify).",
+    "isToxic": false,
     "funFact": "Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as 'The Golden Fiber' for its natural golden sheen and vital economic importance.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/79.webp"
     ],
+    "imageCredit": {
+      "observer": "Mashudu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corchorus_olitorius"
   },
   "80": {
@@ -3488,10 +3968,16 @@
       "If growing in water jars, change the water every 7-10 days to maintain oxygenation and prevent algae"
     ],
     "toxicityNote": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-shaped calcium oxalate crystals (raphides). Chewing any part causes immediate intense burning and stinging of the mouth, tongue, and lips, excessive drooling, difficulty swallowing, and vomiting in cats, dogs, and humans.",
+    "isToxic": true,
     "funFact": "Golden Pothos earned the nickname 'Devil's Ivy' because it is nearly impossible to kill and stays vibrantly green even when neglected in windowless dark corners.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600&q=80"
+      "/species/80.webp"
     ],
+    "imageCredit": {
+      "observer": "ELIZE JANICA AQUINO",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Epipremnum_aureum"
   },
   "81": {
@@ -3532,10 +4018,16 @@
       "Use well-aerated cactus or succulent potting soil with perlite and pumice"
     ],
     "toxicityNote": "MILD-TO-MODERATE TOXICITY: Foliage contains saponins. Ingestion by cats and dogs causes excessive salivation, vomiting, nausea, diarrhea, and lethargy.",
+    "isToxic": true,
     "funFact": "Unlike most houseplants that release oxygen only during daytime photosynthesis, the Snake Plant performs CAM photosynthesis, releasing oxygen throughout the night, making it ideal for bedrooms.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/81.webp"
     ],
+    "imageCredit": {
+      "observer": "Manuel Raab",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dracaena_trifasciata"
   },
   "82": {
@@ -3576,10 +4068,16 @@
       "Snip off dangling spiderettes and root them in moist soil or water for effortless propagation"
     ],
     "toxicityNote": "NON-TOXIC: Completely safe for cats, dogs, and children. Cats are often attracted to spider plants because they contain mild compounds with a mild hallucinogenic/catnip-like effect on felines, though it is physically harmless.",
+    "isToxic": false,
     "funFact": "A single healthy mother Spider Plant can produce dozens of dangling baby plantlets simultaneously on its arching stolons, giving rise to its common name 'Hen and Chickens'.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80"
+      "/species/82.webp"
     ],
+    "imageCredit": {
+      "observer": "Petra Holland",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chlorophytum_comosum"
   },
   "83": {
@@ -3620,10 +4118,16 @@
       "Water thoroughly when the top 2-3 inches of soil dry; wipe dust off broad leaves with a damp cloth"
     ],
     "toxicityNote": "FOLIAGE AND UNRIPE FRUIT ARE TOXIC: All vegetative parts contain sharp needle-like insoluble calcium oxalate crystals (raphides). Chewing foliage causes intense oral burning, swelling of tongue and throat, and digestive distress in pets and humans. Only the completely ripe fruit (whose outer green scales fall off voluntarily) is edible.",
+    "isToxic": false,
     "funFact": "The natural holes in Monstera leaves are called 'fenestrations' (from the Latin for window); they allow hurricane winds to pass through without tearing the leaf and let sunlight filter down to lower foliage.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80"
+      "/species/83.webp"
     ],
+    "imageCredit": {
+      "observer": "carolwest",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Monstera_deliciosa"
   },
   "84": {
@@ -3663,10 +4167,16 @@
       "Wipe broad leaves periodically to remove dust and maintain high photosynthetic efficiency"
     ],
     "toxicityNote": "TOXIC TO DOGS AND CATS: Contains insoluble calcium oxalate crystals. Ingestion causes immediate oral pain, burning of lips and tongue, drooling, difficulty swallowing, and vomiting. Keep out of reach of domestic pets.",
+    "isToxic": true,
     "funFact": "The white 'flower' of the Peace Lily is not a true flower at all, but a modified leaf called a spathe that serves as a protective hood and billboard to guide pollinators to the tiny true flowers on the spadix.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/84.webp"
     ],
+    "imageCredit": {
+      "observer": "Dhandara Manini",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Spathiphyllum_wallisii"
   },
   "85": {
@@ -3707,10 +4217,16 @@
       "Clean leaves with a soft damp cloth to keep the glossy surface free of dust and mineral deposits"
     ],
     "toxicityNote": "MILD-TO-MODERATE TOXICITY: The milky latex contains ficin and psoralens. Contact with skin or eyes causes irritation and dermatitis; ingestion can cause vomiting, drooling, and mouth irritation in dogs and cats.",
+    "isToxic": false,
     "funFact": "The incredible Living Root Bridges of Meghalaya, some carrying foot traffic for over 500 years, are meticulously grown and woven by indigenous Khasi villagers using the living aerial roots of Ficus elastica.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/85.webp"
     ],
+    "imageCredit": {
+      "observer": "大坑東宣道小學",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_elastica"
   },
   "86": {
@@ -3751,10 +4267,16 @@
       "Plant in porous, gritty succulent/cactus potting mix with perlite or pumice"
     ],
     "toxicityNote": "TOXIC TO CATS AND DOGS: Ingestion by pets causes vomiting, depression, ataxia (unsteady gait), and slow heart rate. Keep placed on high shelves away from household pets.",
+    "isToxic": true,
     "funFact": "Jade plants can live for over 70 to 100 years, often passed down through multiple family generations as living family heirlooms.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/86.webp"
     ],
+    "imageCredit": {
+      "observer": "Craig Peter",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crassula_ovata"
   },
   "87": {
@@ -3795,10 +4317,16 @@
       "Extremely drought tolerant; requires virtually no supplemental watering once established"
     ],
     "toxicityNote": "Fruit flesh and pads are non-toxic and edible. MECHANICAL IRRITATION HAZARD: The tiny microscopic hair-like barbed spines (glochids) easily detach and penetrate skin or mucous membranes, causing persistent severe mechanical dermatitis, itching, and pain. Handle only with thick leather gloves or tongs.",
+    "isToxic": false,
     "funFact": "Prickly pear cladodes are the traditional host plant for cochineal insects (Dactylopius coccus), the historic source of natural carmine red dye used to color royal fabrics, cosmetics, and foods.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/87.webp"
     ],
+    "imageCredit": {
+      "observer": "Melissa Sinka",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Opuntia_ficus-indica"
   },
   "88": {
@@ -3838,10 +4366,16 @@
       "Keep potting soil consistently moist but well-drained; never allow the root ball to dry out completely"
     ],
     "toxicityNote": "NON-TOXIC: Completely safe and non-toxic for cats, dogs, birds, and children.",
+    "isToxic": false,
     "funFact": "The popular Boston Fern originated in 1894 when a Massachusetts florist noticed a spontaneous mutation with wider, more gracefully arching and ruffled fronds among a shipment of wild sword ferns.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/88.webp"
     ],
+    "imageCredit": {
+      "observer": "Carlos/Giancarla Ross (AnimeBirder)",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nephrolepis_exaltata"
   },
   "89": {
@@ -3879,10 +4413,16 @@
       "Keep away from cold air conditioners and drafty doorways; prefers temperatures above 16°C"
     ],
     "toxicityNote": "TOXIC TO PETS AND CHILDREN: Contains insoluble needle-like calcium oxalate crystals. Chewing any part causes immediate intense burning and swelling of the mouth, tongue, and throat, excessive drooling, and digestive distress.",
+    "isToxic": true,
     "funFact": "In China and throughout East Asia, Aglaonema has been cultivated for centuries as an auspicious good-luck plant believed to bring good fortune, prosperity, and positive chi into the home.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/89.webp"
     ],
+    "imageCredit": {
+      "observer": "James K. Wetterer",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aglaonema_commutatum"
   },
   "90": {
@@ -3923,10 +4463,16 @@
       "Always wear gloves when pruning or propagating; wash hands thoroughly after handling"
     ],
     "toxicityNote": "HIGHLY TOXIC: Known as 'Dumb Cane' because chewing any part causes immediate excruciating burning, intense inflammation of the tongue, lips, and vocal cords, causing temporary loss of speech ('dumbness'). Swelling can obstruct airways and cause asphyxiation. Extremely dangerous to dogs, cats, and small children.",
+    "isToxic": true,
     "funFact": "The name 'Dumb Cane' refers to the horrific historical practice of punishing enslaved individuals by forcing them to chew the plant's stems, which caused their tongues to swell so violently that they were unable to speak for days.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1593482892290-f54927ae1bf6?w=600&q=80"
+      "/species/90.webp"
     ],
+    "imageCredit": {
+      "observer": "MARIA PAULINA CEBALLOS GARCIA",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dieffenbachia_seguine"
   },
   "91": {
@@ -3968,10 +4514,16 @@
       "Simply lay a detached mature leaf flat on moist soil to propagate dozens of new plantlets"
     ],
     "toxicityNote": "TOXIC TO LIVESTOCK AND PETS: Contains bufadienolide cardiac glycosides (bryotoxins). Highly toxic to grazing animals, cattle, dogs, and cats, causing severe cardiac arrhythmias, tremors, vomiting, and potential heart failure. Handle with care around pets.",
+    "isToxic": true,
     "funFact": "A single fallen leaf of Patharchatta can survive pinned to a bulletin board with zero soil or water for weeks while sprouting a dozen independent baby plants from its scalloped edges, earning it the title 'The Life Plant'.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/91.webp"
     ],
+    "imageCredit": {
+      "observer": "Jenny Ju",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kalanchoe_pinnata"
   },
   "92": {
@@ -4011,10 +4563,16 @@
       "Stake tall giant varieties in exposed locations to prevent lodging from heavy winds"
     ],
     "toxicityNote": "Non-toxic; seeds, petals, and sprouts are edible and completely safe for humans and household pets.",
+    "isToxic": false,
     "funFact": "A single sunflower head is not a single flower, but an inflorescence of thousands of individual florets arranged in interlocking Fibonacci spirals, maximizing packing efficiency.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/92.webp"
     ],
+    "imageCredit": {
+      "observer": "Mackenzie Goldthwait",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Helianthus_annuus"
   },
   "93": {
@@ -4055,10 +4613,16 @@
       "Deadhead spent flowers regularly to encourage continuous blooming flushes"
     ],
     "toxicityNote": "Non-toxic; edible and completely safe around dogs, cats, and small children.",
+    "isToxic": false,
     "funFact": "The name 'daisy' is a contraction of the Old English 'daeges eage' ('day's eye'), so called because the flower opens its petals at dawn and closes them tightly at sunset.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/93.webp"
     ],
+    "imageCredit": {
+      "observer": "drfishy62",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bellis_perennis"
   },
   "94": {
@@ -4099,10 +4663,16 @@
       "Harvest roots in autumn when inulin and bitter principles are most concentrated"
     ],
     "toxicityNote": "Non-toxic; leaves, flowers, and roots are fully edible. Milky stem latex may cause mild skin contact dermatitis in very sensitive individuals TODO(verify).",
+    "isToxic": false,
     "funFact": "The name Dandelion comes from the French 'dent-de-lion', meaning 'lion's tooth', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/94.webp"
     ],
+    "imageCredit": {
+      "observer": "Nantar Kuja",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taraxacum_officinale"
   },
   "95": {
@@ -4142,10 +4712,16 @@
       "Prune lightly after summer blooming to prevent woodiness and encourage bushy growth"
     ],
     "toxicityNote": "Safe in culinary amounts; concentrated essential oil is toxic if swallowed, especially to cats and dogs who lack the liver enzymes to metabolize linalool TODO(verify).",
+    "isToxic": false,
     "funFact": "The name Lavender comes from the Latin verb 'lavare' (to wash), because ancient Romans extensively perfumed their public thermal baths and laundry with fragrant lavender blossoms.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=600&q=80"
+      "/species/95.webp"
     ],
+    "imageCredit": {
+      "observer": "Anatole Maugendre",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lavandula_angustifolia"
   },
   "96": {
@@ -4185,10 +4761,16 @@
       "Prune regularly to shape the shrub and prevent the lower stems from turning bare and woody"
     ],
     "toxicityNote": "Culinary amounts are completely safe; large medicinal doses of rosemary oil can trigger gastrointestinal irritation and are contraindicated in pregnancy TODO(verify). Safe around pets in small quantities.",
+    "isToxic": false,
     "funFact": "The botanical name Rosmarinus translates poetically from Latin as 'dew of the sea' (ros = dew, marinus = sea), describing its natural habitat clinging to misty coastal Mediterranean cliffs.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/96.webp"
     ],
+    "imageCredit": {
+      "observer": "Rubén Frías",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rosemary"
   },
   "97": {
@@ -4229,10 +4811,16 @@
       "Pinch off terminal flower spikes immediately as they appear to keep leaves sweet, lush, and vegetative"
     ],
     "toxicityNote": "Non-toxic and edible; completely safe for human culinary consumption and safe around household pets.",
+    "isToxic": false,
     "funFact": "When soaked in water for just 10 minutes, sweet basil seeds (Sabja) swell to over thirty times their original volume, forming a transparent jelly bead around each seed that cools the body during hot Indian summers.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1618375531912-867984bdfd87?w=600&q=80"
+      "/species/97.webp"
     ],
+    "imageCredit": {
+      "observer": "UNIRSE Lidia marian,Arce aldana",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Basil"
   },
   "98": {
@@ -4272,10 +4860,16 @@
       "Provide full spring sunlight and moderate water; withhold watering during hot summer bulb dormancy"
     ],
     "toxicityNote": "TOXIC TO PETS AND HUMANS: All parts, especially the subterranean bulbs, contain allergenic lactones (tulipalin A and B) and tulipin. Ingestion causes severe vomiting, diarrhea, drooling, and depression in dogs and cats; handling bulbs can trigger 'tulip fingers' contact dermatitis.",
+    "isToxic": true,
     "funFact": "During the peak of Dutch 'Tulip Mania' in February 1637, a single rare 'Semper Augustus' tulip bulb sold for the price of a luxurious grand canal house in Amsterdam before the market abruptly crashed.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80"
+      "/species/98.webp"
     ],
+    "imageCredit": {
+      "observer": "nevinbelcher",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tulipa_gesneriana"
   },
   "99": {
@@ -4316,10 +4910,16 @@
       "Naturally deer, rodent, and pest resistant due to alkaloid content"
     ],
     "toxicityNote": "HIGHLY TOXIC: All parts of the plant, especially the bulbs, contain toxic phenanthridine alkaloids (lycorine) and needle-like calcium oxalate crystals. Ingestion causes severe nausea, projectile vomiting, diarrhea, abdominal pain, cardiac arrhythmias, and convulsions in humans, dogs, and cats.",
+    "isToxic": true,
     "funFact": "Daffodils are completely immune to garden rodents, squirrels, and deer, who instinctively avoid digging up or chewing the bulbs because of their intense toxicity.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/99.webp"
     ],
+    "imageCredit": {
+      "observer": "Beth King",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus"
   },
   "100": {
@@ -4359,10 +4959,16 @@
       "Mulch soil heavily to maintain root coolness and moisture during hot summer weeks"
     ],
     "toxicityNote": "DEADLY HAZARD FOR CATS: True lilies (Lilium species) are EXTREMELY TOXIC AND FATAL TO CATS. Ingestion of even microscopic amounts — a bite of a leaf, licking pollen off fur, or drinking water from a vase holding cut lilies — causes rapid, irreversible acute kidney failure and death within 36-72 hours. Moderately toxic to dogs and humans (vomiting). NEVER keep true lilies in homes with cats.",
+    "isToxic": true,
     "funFact": "Unlike most other lilies, the Tiger Lily produces small, glossy black pea-sized aerial bulbils in the axils of its leaves, which drop to the ground and sprout into identical clones of the parent plant.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/100.webp"
     ],
+    "imageCredit": {
+      "observer": "shaboinginator5000",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lilium_lancifolium"
   },
   "101": {
@@ -4402,10 +5008,16 @@
       "Disbud side flower buds if aiming for giant 'dinnerplate' exhibition-sized blooms"
     ],
     "toxicityNote": "MILD TOXICITY: Contains phototoxic polyacetylene compounds that can cause mild skin irritation and dermatitis, as well as mild digestive upset and vomiting in dogs and cats if ingested.",
+    "isToxic": true,
     "funFact": "The national flower of Mexico, Dahlias are octoploids — meaning they possess eight sets of homologous chromosomes, which accounts for their astounding diversity of flower shapes, sizes, and colors.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/101.webp"
     ],
+    "imageCredit": {
+      "observer": "Archer Lamason",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dahlia_pinnata"
   },
   "102": {
@@ -4445,10 +5057,16 @@
       "Deadhead faded blooms continuously to trigger rapid flushes of new buds"
     ],
     "toxicityNote": "NON-TOXIC: Completely safe and non-toxic for dogs, cats, horses, and children.",
+    "isToxic": false,
     "funFact": "In 2016, a bright orange Zinnia became the very first flower to bloom in space, grown aboard the International Space Station's Veggie facility by astronaut Scott Kelly.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/102.webp"
     ],
+    "imageCredit": {
+      "observer": "Jhoan Sebastian Cifuentes Guarin",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zinnia_elegans"
   },
   "103": {
@@ -4488,10 +5106,16 @@
       "Pinch back stem tips when young to encourage bushy branching and more flower stalks"
     ],
     "toxicityNote": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, and humans.",
+    "isToxic": false,
     "funFact": "Spanish priests in Mexico named this flower 'Cosmos' (from the Greek word for order, harmony, and universe) because of the remarkably orderly and even arrangement of its petals.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/103.webp"
     ],
+    "imageCredit": {
+      "observer": "Hope Hespenheide",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cosmos_bipinnatus"
   },
   "104": {
@@ -4532,10 +5156,16 @@
       "Water at root base; avoid splashing water on leaves to prevent fungal rust and powdery mildew"
     ],
     "toxicityNote": "TOXIC TO DOGS AND CATS: Foliage contains natural pyrethrins, sesquiterpene lactones, and irritating oils. Ingestion causes vomiting, diarrhea, drooling, incoordination, and potential skin dermatitis.",
+    "isToxic": true,
     "funFact": "Chrysanthemums naturally synthesize pyrethrins, organic compounds that attack insect nervous systems, making them nature's own built-in bug repellent.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1508747703725-719777637510?w=600&q=80"
+      "/species/104.webp"
     ],
+    "imageCredit": {
+      "observer": "zgy",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chrysanthemum_indicum"
   },
   "105": {
@@ -4575,10 +5205,16 @@
       "Water around the root zone, keeping moisture away from the crown and flower stalks"
     ],
     "toxicityNote": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, horses, and small children.",
+    "isToxic": false,
     "funFact": "Gerbera is the fifth most popular cut flower in the entire world, trailing only rose, carnation, chrysanthemum, and tulip in global trade volume.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/105.webp"
     ],
+    "imageCredit": {
+      "observer": "Les Marches du Vivant",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gerbera_jamesonii"
   },
   "106": {
@@ -4618,10 +5254,16 @@
       "Water or mist daily during the hot monsoon growing season; reduce watering slightly in dry winter"
     ],
     "toxicityNote": "Non-toxic; safe and non-hazardous to humans and domestic pets. Traditional cultural hair adornment.",
+    "isToxic": false,
     "funFact": "In Assam, the flowering of Kopou Phool marks the arrival of the spring Bihu festival; according to folklore, a Bihu dancer's hair arrangement is incomplete without this sacred fox-tail blossom.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/106.webp"
     ],
+    "imageCredit": {
+      "observer": "adokania",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rhynchostylis_retusa"
   },
   "107": {
@@ -4662,10 +5304,16 @@
       "Must be contained in closed artificial tubs or ponds; never allow escape into public waterways"
     ],
     "toxicityNote": "Foliage contains calcium oxalate crystals causing throat burning if chewed. Wild plants bioaccumulate toxic heavy metals (lead, cadmium, arsenic) and water pathogens from polluted waters, making wild plants dangerous to ingest.",
+    "isToxic": true,
     "funFact": "Dubbed the 'Terror of Bengal' in the early 20th century, its runaway growth clogged waterways, choked fish populations of oxygen, and halted river navigation throughout the Ganges-Brahmaputra delta.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80"
+      "/species/107.webp"
     ],
+    "imageCredit": {
+      "observer": "Jeeson",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pontederia_crassipes"
   },
   "108": {
@@ -4706,10 +5354,16 @@
       "Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy"
     ],
     "toxicityNote": "TOXIC IN VOLUME TO LIVESTOCK: Contains the non-protein amino acid mimosine. Ingestion of large quantities by grazing cattle or horses can cause hair loss, thyroid enlargement, and digestive disorders TODO(verify). Safe to touch.",
+    "isToxic": true,
     "funFact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/108.webp"
     ],
+    "imageCredit": {
+      "observer": "Steve Wu",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mimosa_pudica"
   },
   "109": {
@@ -4750,10 +5404,16 @@
       "Burn or compost safely under plastic sheeting to kill seed viability"
     ],
     "toxicityNote": "HIGHLY TOXIC HAZARD: Contains potent sesquiterpene lactones (chiefly parthenin). Contact triggers severe allergic contact dermatitis ('parthenium dermatitis'), eczema, facial swelling, blisters, and skin cracking in humans. Airborne pollen causes severe asthma, allergic rhinitis, and hay fever. Highly toxic to cattle, goats, and horses, causing mouth ulcers, liver damage, alopecia, and bitter, unpalatable milk.",
+    "isToxic": true,
     "funFact": "Parthenium entered India in 1955 contaminated in food-aid wheat shipments from the United States under the PL-480 program, rapidly earning the moniker 'Congress Grass'.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/109.webp"
     ],
+    "imageCredit": {
+      "observer": "陳士訓",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Parthenium_hysterophorus"
   },
   "110": {
@@ -4794,10 +5454,16 @@
       "Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation"
     ],
     "toxicityNote": "Non-toxic in normal amounts; clover contains traces of cyanogenic glycosides and can cause foamy bloat in ruminant livestock if grazed excessively without dry roughage TODO(verify).",
+    "isToxic": false,
     "funFact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/110.webp"
     ],
+    "imageCredit": {
+      "observer": "Cesar Ormazabal",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trifolium_repens"
   },
   "111": {
@@ -4838,10 +5504,16 @@
       "Grows slowly for centuries; requires virtually no pruning once main architectural limbs are established"
     ],
     "toxicityNote": "TOXIC TO HORSES, DOGS, AND CATTLE: Acorns, young leaves, and buds contain high concentrations of gallotannins and tannic acid. Ingestion by livestock or pets can cause severe gastrointestinal ulceration, bloody diarrhea, abdominal pain, and acute renal (kidney) failure. Humans must leach tannins out with water before cooking acorns.",
+    "isToxic": true,
     "funFact": "An English oak tree can live for over 1,000 years: an old English proverb notes, 'Three hundred years growing, three hundred years living, and three hundred years dying.'",
     "referenceImages": [
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80"
+      "/species/111.webp"
     ],
+    "imageCredit": {
+      "observer": "Stanislav Murashkin",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"
+    },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Quercus_robur"
   }
 }

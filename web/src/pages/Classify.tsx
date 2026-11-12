@@ -37,25 +37,25 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
   {
     name: 'Ocimum tenuiflorum',
     common: 'Tulsi (High Confidence)',
-    url: 'https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=400&q=80',
+    url: '/species/0.webp',
     fixtureIndex: 0,
   },
   {
     name: 'Hibiscus rosa-sinensis',
     common: 'Hibiscus (Medium Confidence)',
-    url: 'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=400&q=80',
+    url: '/species/20.webp',
     fixtureIndex: 1,
   },
   {
     name: 'Ocimum basilicum',
     common: 'Sweet Basil (Genus Fallback)',
-    url: 'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?w=400&q=80',
+    url: '/species/97.webp',
     fixtureIndex: 2,
   },
   {
     name: 'Non-Plant / Texture',
     common: 'Pebble (Unknown / Rejected)',
-    url: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&q=80',
+    url: '/species/sample_pebble.png',
     fixtureIndex: 3,
   },
 ];
@@ -530,8 +530,8 @@ export function Classify() {
                   </div>
                 )}
 
-                {/* Toxicity Warning */}
-                {topSpecies.toxicityNote && (
+                {/* Toxicity / Safety Note */}
+                {topSpecies.isToxic ? (
                   <div className="liquid-glass rounded-xl p-4 border border-rose-500/30 bg-rose-950/20 text-rose-200 flex items-start gap-3">
                     <span className="text-base" aria-hidden="true">⚠️</span>
                     <div>
@@ -539,7 +539,15 @@ export function Classify() {
                       <p className="text-[11px] leading-relaxed mt-0.5">{topSpecies.toxicityNote}</p>
                     </div>
                   </div>
-                )}
+                ) : topSpecies.toxicityNote ? (
+                  <div className="liquid-glass rounded-xl p-4 border border-emerald-500/20 bg-emerald-950/10 text-emerald-100/90 flex items-start gap-3">
+                    <span className="text-base" aria-hidden="true">🌿</span>
+                    <div>
+                      <p className="font-semibold text-xs text-emerald-300">Safety &amp; Edibility</p>
+                      <p className="text-[11px] leading-relaxed mt-0.5 text-white/80">{topSpecies.toxicityNote}</p>
+                    </div>
+                  </div>
+                ) : null}
               </>
             ) : (
               <div className="liquid-glass rounded-xl p-5 border border-white/10 space-y-2" data-glow="">

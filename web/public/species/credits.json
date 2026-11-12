@@ -1,0 +1,786 @@
+{
+  "0": {
+    "id": 0,
+    "observer": "pikun",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg",
+    "file": "raw/0_ocimum_tenuiflorum/118.jpg"
+  },
+  "1": {
+    "id": 1,
+    "observer": "sanahawwa",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg",
+    "file": "raw/1_azadirachta_indica/110.jpg"
+  },
+  "2": {
+    "id": 2,
+    "observer": "Steven Mlodinow",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625536592/original.jpg",
+    "file": "raw/2_aloe_vera/112.jpg"
+  },
+  "3": {
+    "id": 3,
+    "observer": "偷米",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg",
+    "file": "raw/3_curcuma_longa/110.jpg"
+  },
+  "4": {
+    "id": 4,
+    "observer": "Zuleika Peralta",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg",
+    "file": "raw/4_zingiber_officinale/118.jpg"
+  },
+  "5": {
+    "id": 5,
+    "observer": "Finn Rautenbach",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg",
+    "file": "raw/5_withania_somnifera/11.jpg"
+  },
+  "6": {
+    "id": 6,
+    "observer": "Green Bull",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg",
+    "file": "raw/6_tinospora_cordifolia/122.jpg"
+  },
+  "7": {
+    "id": 7,
+    "observer": "tahli-jade",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg",
+    "file": "raw/7_bacopa_monnieri/119.jpg"
+  },
+  "8": {
+    "id": 8,
+    "observer": "Bikash Kumar Sahoo",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg",
+    "file": "raw/8_phyllanthus_emblica/11.jpg"
+  },
+  "9": {
+    "id": 9,
+    "observer": "foaspotter",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg",
+    "file": "raw/9_murraya_koenigii/124.jpg"
+  },
+  "10": {
+    "id": 10,
+    "observer": "Biodiversity Restoration Registry Kigamboni.",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg",
+    "file": "raw/10_moringa_oleifera/106.jpg"
+  },
+  "11": {
+    "id": 11,
+    "observer": "Priya Priya",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg",
+    "file": "raw/11_aegle_marmelos/113.jpg"
+  },
+  "12": {
+    "id": 12,
+    "observer": "Kailas Erande",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg",
+    "file": "raw/12_terminalia_arjuna/133.jpg"
+  },
+  "13": {
+    "id": 13,
+    "observer": "Sayali Bakore",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg",
+    "file": "raw/13_saraca_asoca/116.jpg"
+  },
+  "14": {
+    "id": 14,
+    "observer": "連亮惟",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg",
+    "file": "raw/14_piper_betle/122.jpg"
+  },
+  "15": {
+    "id": 15,
+    "observer": "Biodiversity Restoration Registry Kigamboni.",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605049920/original.jpg",
+    "file": "raw/15_cymbopogon_citratus/12.jpg"
+  },
+  "16": {
+    "id": 16,
+    "observer": "lynettescott",
+    "license": "CC0",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643458773/original.jpg",
+    "file": "raw/16_mentha_spicata/105.jpg"
+  },
+  "17": {
+    "id": 17,
+    "observer": "Raja Sekhar Chimirala",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg",
+    "file": "raw/17_ficus_religiosa/105.jpg"
+  },
+  "18": {
+    "id": 18,
+    "observer": "Sushant Kumar Mishra",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626942186/original.jpg",
+    "file": "raw/18_ficus_benghalensis/114.jpg"
+  },
+  "19": {
+    "id": 19,
+    "observer": "Wanda G Jackson",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg",
+    "file": "raw/19_andrographis_paniculata/119.jpg"
+  },
+  "20": {
+    "id": 20,
+    "observer": "Silky Refina Marshellia",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg",
+    "file": "raw/20_hibiscus_rosa_sinensis/104.jpg"
+  },
+  "21": {
+    "id": 21,
+    "observer": "Ernesto Rodriguez",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632297674/original.jpg",
+    "file": "raw/21_tagetes_erecta/117.jpg"
+  },
+  "22": {
+    "id": 22,
+    "observer": "Io Siu",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg",
+    "file": "raw/22_jasminum_sambac/119.jpg"
+  },
+  "23": {
+    "id": 23,
+    "observer": "cgbolas",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg",
+    "file": "raw/23_nelumbo_nucifera/118.jpg"
+  },
+  "24": {
+    "id": 24,
+    "observer": "amandrews",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg",
+    "file": "raw/24_rosa/124.jpg"
+  },
+  "25": {
+    "id": 25,
+    "observer": "fmunoz",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg",
+    "file": "raw/25_plumeria_rubra/102.jpg"
+  },
+  "26": {
+    "id": 26,
+    "observer": "bradwarren",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg",
+    "file": "raw/26_nerium_oleander/112.jpg"
+  },
+  "27": {
+    "id": 27,
+    "observer": "Noopur🍀",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/461875164/original.jpeg",
+    "file": "raw/27_bougainvillea_spectabilis/121.jpg"
+  },
+  "28": {
+    "id": 28,
+    "observer": "benjaminsisko",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg",
+    "file": "raw/28_clitoria_ternatea/105.jpg"
+  },
+  "29": {
+    "id": 29,
+    "observer": "rushitha_jain",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg",
+    "file": "raw/29_nyctanthes_arbor_tristis/118.jpg"
+  },
+  "30": {
+    "id": 30,
+    "observer": "Raja Sekhar Chimirala",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg",
+    "file": "raw/30_delonix_regia/117.jpg"
+  },
+  "31": {
+    "id": 31,
+    "observer": "amynmann",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg",
+    "file": "raw/31_catharanthus_roseus/101.jpg"
+  },
+  "32": {
+    "id": 32,
+    "observer": "Thoodi Harsha",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg",
+    "file": "raw/32_ixora_coccinea/128.jpg"
+  },
+  "33": {
+    "id": 33,
+    "observer": "Francois (Red)",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg",
+    "file": "raw/33_lantana_camara/11.jpg"
+  },
+  "34": {
+    "id": 34,
+    "observer": "timmeschke",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg",
+    "file": "raw/34_celosia_argentea/112.jpg"
+  },
+  "35": {
+    "id": 35,
+    "observer": "Tharuni Sangonda",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg",
+    "file": "raw/35_crossandra_infundibuliformis/118.jpg"
+  },
+  "36": {
+    "id": 36,
+    "observer": "Drew Baxter",
+    "license": "CC0",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg",
+    "file": "raw/36_canna_indica/104.jpg"
+  },
+  "37": {
+    "id": 37,
+    "observer": "Lynn Katsoulis",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620293016/original.jpg",
+    "file": "raw/37_impatiens_balsamina/115.jpg"
+  },
+  "38": {
+    "id": 38,
+    "observer": "Aditya Bari",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616097106/original.jpg",
+    "file": "raw/38_cassia_fistula/124.jpg"
+  },
+  "39": {
+    "id": 39,
+    "observer": "Jordan",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg",
+    "file": "raw/39_butea_monosperma/11.jpg"
+  },
+  "40": {
+    "id": 40,
+    "observer": "Raja Sekhar Chimirala",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg",
+    "file": "raw/40_mangifera_indica/119.jpg"
+  },
+  "41": {
+    "id": 41,
+    "observer": "Sam Rickert",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg",
+    "file": "raw/41_cocos_nucifera/10.jpg"
+  },
+  "42": {
+    "id": 42,
+    "observer": "Manuel Raab",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg",
+    "file": "raw/42_musa_acuminata/109.jpg"
+  },
+  "43": {
+    "id": 43,
+    "observer": "Harry Hill",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg",
+    "file": "raw/43_carica_papaya/121.jpg"
+  },
+  "44": {
+    "id": 44,
+    "observer": "Roqui Bello",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg",
+    "file": "raw/44_psidium_guajava/120.jpg"
+  },
+  "45": {
+    "id": 45,
+    "observer": "謝麗霦",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg",
+    "file": "raw/45_punica_granatum/12.jpg"
+  },
+  "46": {
+    "id": 46,
+    "observer": "keirfawinat",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg",
+    "file": "raw/46_artocarpus_heterophyllus/128.jpg"
+  },
+  "47": {
+    "id": 47,
+    "observer": "Mohamed SAOUPKAI",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg",
+    "file": "raw/47_tamarindus_indica/107.jpg"
+  },
+  "48": {
+    "id": 48,
+    "observer": "Austin Smith",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg",
+    "file": "raw/48_syzygium_cumini/110.jpg"
+  },
+  "49": {
+    "id": 49,
+    "observer": "Lynette",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg",
+    "file": "raw/49_manilkara_zapota/122.jpg"
+  },
+  "50": {
+    "id": 50,
+    "observer": "Amara Malik",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg",
+    "file": "raw/50_annona_squamosa/108.jpg"
+  },
+  "51": {
+    "id": 51,
+    "observer": "rafa perazzolo",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/419656927/original.jpeg",
+    "file": "raw/51_citrus_limon/119.jpg"
+  },
+  "52": {
+    "id": 52,
+    "observer": "Gaurav S. Soman.",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg",
+    "file": "raw/52_tectona_grandis/111.jpg"
+  },
+  "53": {
+    "id": 53,
+    "observer": "Bikram Gyawali",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg",
+    "file": "raw/53_shorea_robusta/119.jpg"
+  },
+  "54": {
+    "id": 54,
+    "observer": "Raja Sekhar Chimirala",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg",
+    "file": "raw/54_bambusa_vulgaris/107.jpg"
+  },
+  "55": {
+    "id": 55,
+    "observer": "eagle100",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg",
+    "file": "raw/55_areca_catechu/104.jpg"
+  },
+  "56": {
+    "id": 56,
+    "observer": "Darrell Parsons",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg",
+    "file": "raw/56_phoenix_dactylifera/101.jpg"
+  },
+  "57": {
+    "id": 57,
+    "observer": "ankitha_jayanth",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg",
+    "file": "raw/57_bombax_ceiba/118.jpg"
+  },
+  "58": {
+    "id": 58,
+    "observer": "Hilal Ram",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg",
+    "file": "raw/58_samanea_saman/112.jpg"
+  },
+  "59": {
+    "id": 59,
+    "observer": "felixgwj",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg",
+    "file": "raw/59_eucalyptus_globulus/100.jpg"
+  },
+  "60": {
+    "id": 60,
+    "observer": "Chitra Shanker",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg",
+    "file": "raw/60_oryza_sativa/119.jpg"
+  },
+  "61": {
+    "id": 61,
+    "observer": "Francis Stiteler",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg",
+    "file": "raw/61_triticum_aestivum/124.jpg"
+  },
+  "62": {
+    "id": 62,
+    "observer": "Karol Łanocha",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg",
+    "file": "raw/62_zea_mays/107.jpg"
+  },
+  "63": {
+    "id": 63,
+    "observer": "FO12071Saowanit",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg",
+    "file": "raw/63_saccharum_officinarum/115.jpg"
+  },
+  "64": {
+    "id": 64,
+    "observer": "kusa-to-uo",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg",
+    "file": "raw/64_camellia_sinensis/124.jpg"
+  },
+  "65": {
+    "id": 65,
+    "observer": "megan_pratt1",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg",
+    "file": "raw/65_gossypium_hirsutum/122.jpg"
+  },
+  "66": {
+    "id": 66,
+    "observer": "Emilia Sierra",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg",
+    "file": "raw/66_brassica_juncea/103.jpg"
+  },
+  "67": {
+    "id": 67,
+    "observer": "Ajay Malik.",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg",
+    "file": "raw/67_solanum_lycopersicum/103.jpg"
+  },
+  "68": {
+    "id": 68,
+    "observer": "chrissietinder",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg",
+    "file": "raw/68_capsicum_annuum/116.jpg"
+  },
+  "69": {
+    "id": 69,
+    "observer": "Sereana Seuvou",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg",
+    "file": "raw/69_solanum_melongena/101.jpg"
+  },
+  "70": {
+    "id": 70,
+    "observer": "kc8328thamonwan",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg",
+    "file": "raw/70_abelmoschus_esculentus/119.jpg"
+  },
+  "71": {
+    "id": 71,
+    "observer": "김도윤",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg",
+    "file": "raw/71_solanum_tuberosum/118.jpg"
+  },
+  "72": {
+    "id": 72,
+    "observer": "jeanelz",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg",
+    "file": "raw/72_allium_cepa/11.jpg"
+  },
+  "73": {
+    "id": 73,
+    "observer": "Юрий",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg",
+    "file": "raw/73_coriandrum_sativum/116.jpg"
+  },
+  "74": {
+    "id": 74,
+    "observer": "Thassanee Duangnin",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg",
+    "file": "raw/74_spinacia_oleracea/111.jpg"
+  },
+  "75": {
+    "id": 75,
+    "observer": "Sulaiman Inuwa Muhammad",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg",
+    "file": "raw/75_lagenaria_siceraria/102.jpg"
+  },
+  "76": {
+    "id": 76,
+    "observer": "abdlkrim",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg",
+    "file": "raw/76_cucurbita_moschata/119.jpg"
+  },
+  "77": {
+    "id": 77,
+    "observer": "dongjing123",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg",
+    "file": "raw/77_cucumis_sativus/109.jpg"
+  },
+  "78": {
+    "id": 78,
+    "observer": "pcharris",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg",
+    "file": "raw/78_arachis_hypogaea/115.jpg"
+  },
+  "79": {
+    "id": 79,
+    "observer": "Mashudu",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg",
+    "file": "raw/79_corchorus_olitorius/109.jpg"
+  },
+  "80": {
+    "id": 80,
+    "observer": "ELIZE JANICA AQUINO",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg",
+    "file": "raw/80_epipremnum_aureum/104.jpg"
+  },
+  "81": {
+    "id": 81,
+    "observer": "Manuel Raab",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg",
+    "file": "raw/81_dracaena_trifasciata/102.jpg"
+  },
+  "82": {
+    "id": 82,
+    "observer": "Petra Holland",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg",
+    "file": "raw/82_chlorophytum_comosum/108.jpg"
+  },
+  "83": {
+    "id": 83,
+    "observer": "carolwest",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg",
+    "file": "raw/83_monstera_deliciosa/106.jpg"
+  },
+  "84": {
+    "id": 84,
+    "observer": "Dhandara Manini",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg",
+    "file": "raw/84_spathiphyllum_wallisii/122.jpg"
+  },
+  "85": {
+    "id": 85,
+    "observer": "大坑東宣道小學",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg",
+    "file": "raw/85_ficus_elastica/116.jpg"
+  },
+  "86": {
+    "id": 86,
+    "observer": "Craig Peter",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg",
+    "file": "raw/86_crassula_ovata/115.jpg"
+  },
+  "87": {
+    "id": 87,
+    "observer": "Melissa Sinka",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg",
+    "file": "raw/87_opuntia_ficus_indica/119.jpg"
+  },
+  "88": {
+    "id": 88,
+    "observer": "Carlos/Giancarla Ross (AnimeBirder)",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg",
+    "file": "raw/88_nephrolepis_exaltata/125.jpg"
+  },
+  "89": {
+    "id": 89,
+    "observer": "James K. Wetterer",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg",
+    "file": "raw/89_aglaonema_commutatum/101.jpg"
+  },
+  "90": {
+    "id": 90,
+    "observer": "MARIA PAULINA CEBALLOS GARCIA",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg",
+    "file": "raw/90_dieffenbachia_seguine/129.jpg"
+  },
+  "91": {
+    "id": 91,
+    "observer": "Jenny Ju",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg",
+    "file": "raw/91_kalanchoe_pinnata/109.jpg"
+  },
+  "92": {
+    "id": 92,
+    "observer": "Mackenzie Goldthwait",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg",
+    "file": "raw/92_helianthus_annuus/103.jpg"
+  },
+  "93": {
+    "id": 93,
+    "observer": "drfishy62",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg",
+    "file": "raw/93_bellis_perennis/120.jpg"
+  },
+  "94": {
+    "id": 94,
+    "observer": "Nantar Kuja",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg",
+    "file": "raw/94_taraxacum_officinale/119.jpg"
+  },
+  "95": {
+    "id": 95,
+    "observer": "Anatole Maugendre",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg",
+    "file": "raw/95_lavandula_angustifolia/116.jpg"
+  },
+  "96": {
+    "id": 96,
+    "observer": "Rubén Frías",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg",
+    "file": "raw/96_salvia_rosmarinus/117.jpg"
+  },
+  "97": {
+    "id": 97,
+    "observer": "UNIRSE Lidia marian,Arce aldana",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg",
+    "file": "raw/97_ocimum_basilicum/109.jpg"
+  },
+  "98": {
+    "id": 98,
+    "observer": "nevinbelcher",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg",
+    "file": "raw/98_tulipa_gesneriana/111.jpg"
+  },
+  "99": {
+    "id": 99,
+    "observer": "Beth King",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg",
+    "file": "raw/99_narcissus_pseudonarcissus/104.jpg"
+  },
+  "100": {
+    "id": 100,
+    "observer": "shaboinginator5000",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg",
+    "file": "raw/100_lilium_lancifolium/110.jpg"
+  },
+  "101": {
+    "id": 101,
+    "observer": "Archer Lamason",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg",
+    "file": "raw/101_dahlia_pinnata/122.jpg"
+  },
+  "102": {
+    "id": 102,
+    "observer": "Jhoan Sebastian Cifuentes Guarin",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg",
+    "file": "raw/102_zinnia_elegans/103.jpg"
+  },
+  "103": {
+    "id": 103,
+    "observer": "Hope Hespenheide",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg",
+    "file": "raw/103_cosmos_bipinnatus/11.jpg"
+  },
+  "104": {
+    "id": 104,
+    "observer": "zgy",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg",
+    "file": "raw/104_chrysanthemum_indicum/112.jpg"
+  },
+  "105": {
+    "id": 105,
+    "observer": "Les Marches du Vivant",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg",
+    "file": "raw/105_gerbera_jamesonii/116.jpg"
+  },
+  "106": {
+    "id": 106,
+    "observer": "adokania",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg",
+    "file": "raw/106_rhynchostylis_retusa/104.jpg"
+  },
+  "107": {
+    "id": 107,
+    "observer": "Jeeson",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg",
+    "file": "raw/107_pontederia_crassipes/11.jpg"
+  },
+  "108": {
+    "id": 108,
+    "observer": "Steve Wu",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg",
+    "file": "raw/108_mimosa_pudica/103.jpg"
+  },
+  "109": {
+    "id": 109,
+    "observer": "陳士訓",
+    "license": "CC-BY-NC",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg",
+    "file": "raw/109_parthenium_hysterophorus/117.jpg"
+  },
+  "110": {
+    "id": 110,
+    "observer": "Cesar Ormazabal",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg",
+    "file": "raw/110_trifolium_repens/126.jpg"
+  },
+  "111": {
+    "id": 111,
+    "observer": "Stanislav Murashkin",
+    "license": "CC-BY",
+    "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg",
+    "file": "raw/111_quercus_robur/103.jpg"
+  }
+}

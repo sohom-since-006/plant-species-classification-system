@@ -10,7 +10,13 @@
     "origin": "indian",
     "names_hindi": "धान (Dhan)",
     "names_bengali": "ধান (Dhan)",
-    "other_names": ["Paddy", "Dhan", "Asian Rice", "Chawal", "Shali"],
+    "other_names": [
+      "Paddy",
+      "Dhan",
+      "Asian Rice",
+      "Chawal",
+      "Shali"
+    ],
     "description": "The quintessential cereal grass of tropical Asia, cultivated in flooded paddy terraces and alluvial plains to nourish more than half of the human global population.",
     "identifying_features": [
       "Erect annual clumping grass with hollow, jointed round culms up to 1-1.8 m tall",
@@ -32,9 +38,15 @@
     "toxicity_note": "Non-toxic; raw husks are indigestible and must be milled. Cooked rice is one of the gentlest hypoallergenic foods known.",
     "fun_fact": "India is the world's largest exporter of rice, cultivating thousands of fragrant heritage varieties including the legendary long-grain Basmati and aromatic Gobindobhog.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?w=600&q=80"
+      "/species/60.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Rice"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rice",
+    "image_credit": {
+      "observer": "Chitra Shanker",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 61,
@@ -47,7 +59,13 @@
     "origin": "global",
     "names_hindi": "गेहूं (Gehun)",
     "names_bengali": "গম (Gom)",
-    "other_names": ["Bread Wheat", "Common Wheat", "Gehun", "Gom", "Godhuma"],
+    "other_names": [
+      "Bread Wheat",
+      "Common Wheat",
+      "Gehun",
+      "Gom",
+      "Godhuma"
+    ],
     "description": "The world's foremost cool-season temperate cereal grass, bearing dense awned spikes of golden grains that provide the flour foundation for rotis, breads, and pastas.",
     "identifying_features": [
       "Upright annual tufted grass with hollow ribbed stems reaching 0.6 to 1.2 m in height",
@@ -70,9 +88,15 @@
     "toxicity_note": "Non-toxic; contains gluten proteins which cause immune reactions in individuals with celiac disease or gluten sensitivity.",
     "fun_fact": "Common bread wheat is an allohexaploid plant, meaning its complex genome contains six sets of chromosomes derived from three distinct ancestral wild grass species.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/61.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Common_wheat"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Common_wheat",
+    "image_credit": {
+      "observer": "Francis Stiteler",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 62,
@@ -85,7 +109,13 @@
     "origin": "global",
     "names_hindi": "मक्का (Makka)",
     "names_bengali": "ভুট্টা (Bhutta)",
-    "other_names": ["Corn", "Indian Corn", "Makka", "Bhutta", "Sweetcorn"],
+    "other_names": [
+      "Corn",
+      "Indian Corn",
+      "Makka",
+      "Bhutta",
+      "Sweetcorn"
+    ],
     "description": "A robust, tall annual giant cereal grass with stout prop roots, broad arching leaves, terminal male tassel flowers, and ears of tightly packed sweet or starchy kernels.",
     "identifying_features": [
       "Tall, solid, bamboo-like unbranched erect stalk reaching 2-3 meters in height, supported by stout aerial prop roots at base",
@@ -108,9 +138,15 @@
     "toxicity_note": "Non-toxic; corn kernels and silks are completely safe and edible for humans and domestic animals.",
     "fun_fact": "Every single strand of silk on an ear of corn connects to a single egg inside, meaning every single kernel on a cob must be individually pollinated by a grain of airborne pollen.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=600&q=80"
+      "/species/62.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Maize"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Maize",
+    "image_credit": {
+      "observer": "Karol Łanocha",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 63,
@@ -123,7 +159,13 @@
     "origin": "global",
     "names_hindi": "गन्ना (Ganna)",
     "names_bengali": "আখ (Aakh)",
-    "other_names": ["Noble Cane", "Ganna", "Aakh", "Ikshu", "Khabbu"],
+    "other_names": [
+      "Noble Cane",
+      "Ganna",
+      "Aakh",
+      "Ikshu",
+      "Khabbu"
+    ],
     "description": "A gigantic, thick-stemmed perennial clumping grass with stout, jointed, fibrous stalks brimming with sweet sucrose-rich juice, grown as the world's primary sugar source.",
     "identifying_features": [
       "Massive clumping stalks (culms) 3 to 5 meters tall and 3 to 5 cm thick, ringed with noticeable nodes",
@@ -146,9 +188,15 @@
     "toxicity_note": "Completely non-toxic; cane juice and jaggery are safe foods; moldy red-rot sugarcane should be avoided.",
     "fun_fact": "India was the first country in the world to invent the process of crystallizing sugarcane juice into solid crystals (Sanskrit: 'Khanda', origin of the English word 'candy') over 2,500 years ago.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/63.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Saccharum_officinarum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Saccharum_officinarum",
+    "image_credit": {
+      "observer": "FO12071Saowanit",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 64,
@@ -161,7 +209,13 @@
     "origin": "indian",
     "names_hindi": "चाय (Chai)",
     "names_bengali": "চা (Cha)",
-    "other_names": ["Tea Plant", "Chai", "Cha", "Camellia", "Assamica"],
+    "other_names": [
+      "Tea Plant",
+      "Chai",
+      "Cha",
+      "Camellia",
+      "Assamica"
+    ],
     "description": "An evergreen glossy-leaved shrub pruned into flat-topped bushes across rolling misty hills, whose tender young bud flushes yield black, green, oolong, and white teas.",
     "identifying_features": [
       "Pruned flat-topped evergreen bushes (plucking tables) with dense, woody branching",
@@ -184,9 +238,15 @@
     "toxicity_note": "Non-toxic to humans in beverage use; caffeine content makes concentrated leaves toxic to cats and dogs if ingested TODO(verify).",
     "fun_fact": "All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1563822249548-9a72b6353cd1?w=600&q=80"
+      "/species/64.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Camellia_sinensis"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Camellia_sinensis",
+    "image_credit": {
+      "observer": "kusa-to-uo",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 65,
@@ -199,7 +259,13 @@
     "origin": "global",
     "names_hindi": "कपास (Kapas)",
     "names_bengali": "তুলা (Tula)",
-    "other_names": ["Upland Cotton", "Kapas", "Tula", "White Gold", "Rui"],
+    "other_names": [
+      "Upland Cotton",
+      "Kapas",
+      "Tula",
+      "White Gold",
+      "Rui"
+    ],
     "description": "A branching subtropical shrub bearing cream-to-pink mallow flowers, lobed leaves, and leathery green bolls that burst open at maturity to reveal snowy clouds of soft cellulose lint.",
     "identifying_features": [
       "Erect, branching herbaceous shrub reaching 1 to 1.5 m with reddish hairy stems",
@@ -222,9 +288,15 @@
     "toxicity_note": "Lint and oil are safe; raw seeds and foliage contain the toxic polyphenol gossypol, which can cause cardiac and reproductive toxicity in non-ruminant animals TODO(verify).",
     "fun_fact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/65.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Gossypium_hirsutum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gossypium_hirsutum",
+    "image_credit": {
+      "observer": "megan_pratt1",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 66,
@@ -237,7 +309,13 @@
     "origin": "indian",
     "names_hindi": "सरसों (Sarson)",
     "names_bengali": "সর্ষে (Shorshe)",
-    "other_names": ["Indian Mustard", "Brown Mustard", "Sarson", "Rai", "Shorshe"],
+    "other_names": [
+      "Indian Mustard",
+      "Brown Mustard",
+      "Sarson",
+      "Rai",
+      "Shorshe"
+    ],
     "description": "A cool-season annual agricultural herb that carpets winter fields in sea of radiant canary-yellow 4-petaled blossoms, yielding pungent leaves and fiery oil-rich seeds.",
     "identifying_features": [
       "Erect, smooth glaucous branching green stem up to 1-1.5 meters tall",
@@ -260,9 +338,15 @@
     "toxicity_note": "Non-toxic in normal culinary use; mustard oil contains erucic acid and allyl isothiocyanate which gives it a pungent sharp bite. Safe and widely consumed.",
     "fun_fact": "The characteristic pungent nasal heat of mustard is only released when seeds or leaves are crushed in water, which activates the myrosinase enzyme to produce allyl isothiocyanate.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80"
+      "/species/66.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Brassica_juncea"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brassica_juncea",
+    "image_credit": {
+      "observer": "Emilia Sierra",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 67,
@@ -275,7 +359,12 @@
     "origin": "global",
     "names_hindi": "टमाटर (Tamatar)",
     "names_bengali": "টমেটো (Tomato)",
-    "other_names": ["Common Tomato", "Tamatar", "Tomato", "Love Apple"],
+    "other_names": [
+      "Common Tomato",
+      "Tamatar",
+      "Tomato",
+      "Love Apple"
+    ],
     "description": "A sprawling, gland-dotted annual herb with aromatic dissected leaves, yellow star-shaped blossoms, and juicy red berries that are a cornerstone of modern world gastronomy.",
     "identifying_features": [
       "Sprawling, glandular-pubescent weak stems covered in sticky hairs that release a strong, pungent odor",
@@ -298,9 +387,15 @@
     "toxicity_note": "RIPE FRUIT IS SAFE AND EDIBLE. FOLIAGE AND GREEN UNRIPE FRUITS ARE TOXIC: Leaves, stems, and unripened green tomatoes contain toxic glycoalkaloids (solanine and tomatine). Ingestion of green plant parts can cause abdominal pain, vomiting, and diarrhea in humans and pets.",
     "fun_fact": "Botanically, the tomato is a true berry, but a famous 1893 US Supreme Court case (Nix v. Hedden) legally classified it as a vegetable for taxation purposes because it is eaten as part of the main meal.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=600&q=80"
+      "/species/67.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Tomato"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tomato",
+    "image_credit": {
+      "observer": "Ajay Malik.",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 68,
@@ -313,7 +408,13 @@
     "origin": "global",
     "names_hindi": "मिर्च (Mirch)",
     "names_bengali": "লঙ্কা (Lanka)",
-    "other_names": ["Hot Pepper", "Chilli Pepper", "Mirch", "Lanka", "Hari Mirch"],
+    "other_names": [
+      "Hot Pepper",
+      "Chilli Pepper",
+      "Mirch",
+      "Lanka",
+      "Hari Mirch"
+    ],
     "description": "A bushy herbaceous plant producing solitary white star flowers and glossy elongated pods containing spicy capsaicin that gives heat and fire to Indian cuisine.",
     "identifying_features": [
       "Bushy, angular-stemmed compact plant reaching 0.5 to 1 meter in height",
@@ -336,9 +437,15 @@
     "toxicity_note": "Fruit is culinary safe; capsaicin is an intense mucous membrane irritant. Wash hands thoroughly after chopping; avoid touching eyes. Excessive intake can cause gastric pain. Keep away from household pets.",
     "fun_fact": "The fiery heat in chillies is measured on the Scoville Heat Scale; capsaicin does not cause an actual physical burn, but tricks sensory nerve endings into signaling extreme heat to the brain.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&q=80"
+      "/species/68.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Capsicum_annuum"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Capsicum_annuum",
+    "image_credit": {
+      "observer": "chrissietinder",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 69,
@@ -351,7 +458,13 @@
     "origin": "indian",
     "names_hindi": "बैंगन (Baingan)",
     "names_bengali": "বেগুন (Begun)",
-    "other_names": ["Eggplant", "Aubergine", "Baingan", "Begun", "Vangi"],
+    "other_names": [
+      "Eggplant",
+      "Aubergine",
+      "Baingan",
+      "Begun",
+      "Vangi"
+    ],
     "description": "A robust, bushy annual vegetable herb bearing starry violet flowers and large, glossy, deep-purple fleshy berries beloved across India for hearty, tender roasted and curried dishes.",
     "identifying_features": [
       "Bushy, coarse erect stem up to 1-1.5 m, sometimes armed with sharp prickles on calyx and stem",
@@ -374,9 +487,15 @@
     "toxicity_note": "Cooked fruit is safe and nutritious. RAW FOLIAGE AND STEMS ARE TOXIC: Leaves and raw unripened fruit contain the toxic glycoalkaloid solanine; do not consume raw green parts or allow pets to chew foliage.",
     "fun_fact": "Botanical and linguistic records confirm that brinjal was domesticated in India over 4,000 years ago, and Sanskrit literature documents over 30 distinct historical culinary varieties.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80"
+      "/species/69.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Eggplant"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eggplant",
+    "image_credit": {
+      "observer": "Sereana Seuvou",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 70,
@@ -389,7 +508,13 @@
     "origin": "global",
     "names_hindi": "भिंडी (Bhindi)",
     "names_bengali": "ঢেঁড়শ (Dherosh)",
-    "other_names": ["Lady's Finger", "Bhindi", "Dherosh", "Gumbo", "Bamia"],
+    "other_names": [
+      "Lady's Finger",
+      "Bhindi",
+      "Dherosh",
+      "Gumbo",
+      "Bamia"
+    ],
     "description": "A tall, erect warm-season annual herb with hibiscus-like pale yellow flowers and elongated ridged green seed pods prized for their tender texture and natural mucilaginous thickening.",
     "identifying_features": [
       "Stout, erect semi-woody hairy stem growing 1 to 2 meters tall",
@@ -412,9 +537,15 @@
     "toxicity_note": "Completely non-toxic; pods, leaves, and seeds are edible and safe for humans and animals.",
     "fun_fact": "India is the world's undisputed king of okra production, harvesting over 60% of the entire global commercial okra crop each year.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80"
+      "/species/70.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Okra"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Okra",
+    "image_credit": {
+      "observer": "kc8328thamonwan",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 71,
@@ -427,7 +558,13 @@
     "origin": "global",
     "names_hindi": "आलू (Aloo)",
     "names_bengali": "আলু (Aloo)",
-    "other_names": ["Common Potato", "Aloo", "Alu", "Batata", "Spud"],
+    "other_names": [
+      "Common Potato",
+      "Aloo",
+      "Alu",
+      "Batata",
+      "Spud"
+    ],
     "description": "The world's premier tuber crop, a sprawling nightshade family herb bearing starchy underground stem tubers that form the backbone of Indian street food and global cooking.",
     "identifying_features": [
       "Sprawling herbaceous green stems with pinnately compound leaves composed of ovate leaflets",
@@ -450,9 +587,15 @@
     "toxicity_note": "TUBERS ARE SAFE WHEN SOUND. GREEN PARTS AND SPROUTS ARE TOXIC: Green sun-exposed potato peel, green tubers, sprouts, and all aboveground foliage contain poisonous solanine and chaconine glycoalkaloids. Ingestion causes nausea, vomiting, abdominal cramping, and headaches. NEVER eat green potatoes.",
     "fun_fact": "Potatoes are underground modified stems (tubers), not roots; the 'eyes' of a potato are actually dormant axillary buds capable of sprouting into new clonal plants.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=600&q=80"
+      "/species/71.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Potato"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Potato",
+    "image_credit": {
+      "observer": "김도윤",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 72,
@@ -465,7 +608,13 @@
     "origin": "global",
     "names_hindi": "प्याज़ (Pyaz)",
     "names_bengali": "পেঁয়াজ (Penyaj)",
-    "other_names": ["Common Onion", "Pyaz", "Peyaj", "Kanda", "Palandu"],
+    "other_names": [
+      "Common Onion",
+      "Pyaz",
+      "Peyaj",
+      "Kanda",
+      "Palandu"
+    ],
     "description": "A biennial pungent bulb herb with hollow cylindrical leaves, globose spherical umbels of starry white flowers, and layered fleshy underground bulbs indispensable in world cooking.",
     "identifying_features": [
       "Hollow, cylindrical, glaucous bluish-green leaves growing in a fan from the underground basal stem plate",
@@ -488,9 +637,15 @@
     "toxicity_note": "SAFE FOR HUMANS. TOXIC TO PETS: Contains organosulfoxides and N-propyl disulfide that are highly toxic to dogs, cats, and horses, destroying red blood cells and triggering life-threatening hemolytic anemia.",
     "fun_fact": "Onions make you cry because slicing cell walls mixes sulfenic acids with enzymes to create syn-propanethial-S-oxide gas, which reacts with tear-duct moisture to form mild sulfuric acid.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80"
+      "/species/72.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Onion"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Onion",
+    "image_credit": {
+      "observer": "jeanelz",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 73,
@@ -503,7 +658,13 @@
     "origin": "global",
     "names_hindi": "धनिया (Dhaniya)",
     "names_bengali": "ধনে (Dhone)",
-    "other_names": ["Cilantro", "Chinese Parsley", "Dhaniya", "Dhone", "Kothmir"],
+    "other_names": [
+      "Cilantro",
+      "Chinese Parsley",
+      "Dhaniya",
+      "Dhone",
+      "Kothmir"
+    ],
     "description": "A feathery, aromatic annual herb whose refreshing citrus-herbal leaves (cilantro) and warm, spicy-citrus dried spherical seeds (coriander) are central to Indian cookery.",
     "identifying_features": [
       "Slender, erect hollow branching stems up to 30-60 cm tall",
@@ -526,9 +687,15 @@
     "toxicity_note": "Non-toxic and edible; a harmless genetic variation in OR6A2 olfactory receptor genes causes cilantro to taste intensely like soap to about 10-15% of people.",
     "fun_fact": "Every part of the coriander plant is edible — the tender leafy greens (cilantro), the flowers, the dried seeds (coriander), and even the pungent roots which form the base of Thai curry pastes.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80"
+      "/species/73.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Coriander"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coriander",
+    "image_credit": {
+      "observer": "Юрий",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"
+    },
+    "is_toxic": false
   },
   {
     "id": 74,
@@ -541,7 +708,12 @@
     "origin": "global",
     "names_hindi": "पालक (Palak)",
     "names_bengali": "পালং শাক (Palang Shak)",
-    "other_names": ["Common Spinach", "Palak", "Palang Shak", "Spinacia"],
+    "other_names": [
+      "Common Spinach",
+      "Palak",
+      "Palang Shak",
+      "Spinacia"
+    ],
     "description": "A cool-season leafy annual vegetable forming basal rosettes of succulent, deep-green tender leaves celebrated worldwide for their rich iron, folate, and vitamin content.",
     "identifying_features": [
       "Basal rosette of succulent, deep-green, ovate to triangular-hastate leaves with prominent veins",
@@ -564,8 +736,14 @@
     "toxicity_note": "Safe and wholesome; contains high concentrations of natural dietary oxalic acid, which can bind calcium and contribute to kidney stone formation in susceptible individuals TODO(verify).",
     "fun_fact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
     "reference_images": [
-      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=600&q=80"
+      "/species/74.webp"
     ],
-    "wikipedia_url": "https://en.wikipedia.org/wiki/Spinach"
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spinach",
+    "image_credit": {
+      "observer": "Thassanee Duangnin",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"
+    },
+    "is_toxic": false
   }
 ]

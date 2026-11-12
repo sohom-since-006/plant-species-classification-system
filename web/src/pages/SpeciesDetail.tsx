@@ -88,17 +88,34 @@ export function SpeciesDetail() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="w-full h-96 rounded-3xl overflow-hidden bg-black/40 border border-[var(--glass-edge-mid)] relative">
             <img
-              src={
-                species.referenceImages?.[0] ||
-                'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=800&q=80'
-              }
+              src={species.referenceImages?.[0] || '/species/neutral_leaf.svg'}
               alt={species.commonName}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.src = '/species/neutral_leaf.svg';
+              }}
             />
-            {species.toxicityNote && (
+            {species.isToxic && (
               <div className="absolute top-4 left-4 bg-rose-500/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1.5 shadow-lg">
                 <AlertTriangle className="w-3.5 h-3.5" />
                 <span>Toxic Specimen</span>
+              </div>
+            )}
+            {species.imageCredit && (
+              <div className="absolute bottom-3 right-3 bg-black/75 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-mono text-[var(--fg-subtle)] flex items-center gap-1.5 border border-white/10 max-w-[90%] truncate">
+                <span className="truncate">Photo: {species.imageCredit.observer || 'Dataset observation'}</span>
+                {species.imageCredit.license && <span className="shrink-0">• {species.imageCredit.license}</span>}
+                {species.imageCredit.source_url && (
+                  <a
+                    href={species.imageCredit.source_url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-[var(--accent)] hover:underline ml-0.5 inline-flex items-center shrink-0"
+                    aria-label="View source observation"
+                  >
+                    <ExternalLink className="w-2.5 h-2.5 ml-0.5" />
+                  </a>
+                )}
               </div>
             )}
           </div>
@@ -189,18 +206,28 @@ export function SpeciesDetail() {
           )}
         </div>
 
-        {/* Prominent Toxicity Warning if toxic */}
-        {species.toxicityNote && (
+        {/* Toxicity / Safety Notice */}
+        {species.isToxic ? (
           <div className="rounded-3xl p-6 bg-rose-500/10 border border-rose-500/30 flex items-start gap-4">
             <AlertTriangle className="w-6 h-6 text-rose-400 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <h4 className="font-heading italic text-lg text-rose-300">Toxicity Notice</h4>
+              <h4 className="font-heading italic text-lg text-rose-300">Toxicity Warning</h4>
               <p className="text-xs font-body text-rose-200/90 leading-relaxed">
                 {species.toxicityNote}
               </p>
             </div>
           </div>
-        )}
+        ) : species.toxicityNote ? (
+          <div className="liquid-glass rounded-3xl p-6 border border-[var(--glass-edge-mid)] flex items-start gap-4">
+            <Info className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <h4 className="font-heading italic text-lg text-[var(--fg)]">Safety &amp; Edibility Profile</h4>
+              <p className="text-xs font-body text-[var(--fg-muted)] leading-relaxed">
+                {species.toxicityNote}
+              </p>
+            </div>
+          </div>
+        ) : null}
 
         {/* Fun Fact */}
         {species.funFact && (

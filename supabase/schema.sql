@@ -24,8 +24,10 @@ create table if not exists public.species (
   uses                 text[] default '{}',
   care_tips            text[] default '{}',
   toxicity_note        text,
+  is_toxic             boolean not null default false,
   fun_fact             text,
   reference_images     text[] default '{}',
+  image_credit         jsonb,
   wikipedia_url        text,
   created_at           timestamptz default now()
 );

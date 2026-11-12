@@ -41,7 +41,7 @@ export function History() {
         imageUrl:
           pred.imagePath ||
           sp?.referenceImages?.[0] ||
-          'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=400&q=80',
+          '/species/neutral_leaf.svg',
         slug: sp?.slug,
       };
     });
@@ -193,6 +193,9 @@ export function History() {
                         alt={item.commonName}
                         className="w-full h-full object-cover"
                         loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = '/species/neutral_leaf.svg';
+                        }}
                       />
                     </div>
                     <div>

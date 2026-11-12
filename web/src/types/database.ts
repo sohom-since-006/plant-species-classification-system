@@ -43,8 +43,10 @@ export interface Database {
           uses: string[];
           care_tips: string[];
           toxicity_note: string | null;
+          is_toxic: boolean;
           fun_fact: string | null;
           reference_images: string[];
+          image_credit: Json | null;
           wikipedia_url: string | null;
           created_at: string;
         };
@@ -67,8 +69,10 @@ export interface Database {
           uses?: string[];
           care_tips?: string[];
           toxicity_note?: string | null;
+          is_toxic?: boolean;
           fun_fact?: string | null;
           reference_images?: string[];
+          image_credit?: Json | null;
           wikipedia_url?: string | null;
           created_at?: string;
         };
@@ -91,8 +95,10 @@ export interface Database {
           uses?: string[];
           care_tips?: string[];
           toxicity_note?: string | null;
+          is_toxic?: boolean;
           fun_fact?: string | null;
           reference_images?: string[];
+          image_credit?: Json | null;
           wikipedia_url?: string | null;
           created_at?: string;
         };
