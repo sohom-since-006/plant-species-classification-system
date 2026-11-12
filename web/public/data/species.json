@@ -26,7 +26,7 @@
     "habitat": "Warm tropical plains, courtyards, village gardens, and temple precincts.",
     "distribution": "Native to the Indian subcontinent; cultivated widely throughout South and Southeast Asia.",
     "uses": [
-      "Extensively documented in Ayurveda and clinical trials as an adaptogen that helps modulate physiological stress responses and upper respiratory discomfort when brewed as an herbal infusion TODO(verify)",
+      "Traditionally used in Ayurveda as an adaptogenic herb brewed into teas for respiratory comfort and stress relief",
       "Daily sacred devotional worship and Hindu ritual sanctification",
       "Natural culinary herb and insect-deterrent companion plant"
     ],
@@ -47,7 +47,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ocimum_tenuiflorum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "1": {
     "id": 1,
@@ -77,14 +78,14 @@
     "uses": [
       "Twigs harvested as traditional antibacterial chew sticks (datun) for oral hygiene",
       "Cold-pressed neem oil applied as a broad-spectrum organic bio-pesticide and fungicide",
-      "Traditional topical leaf paste used in Ayurvedic dermatological care for its validated antimicrobial, anti-inflammatory, and cooling properties on minor skin irritations TODO(verify)"
+      "Traditional topical leaf paste used in Ayurvedic dermatological care for its validated antimicrobial, anti-inflammatory, and cooling properties on minor skin irritations"
     ],
     "careTips": [
       "Thrives under full, blazing sunlight and high ambient temperatures",
       "Exceptional drought tolerance once roots establish in well-draining sandy loam",
       "Protect young saplings from freezing winter drafts and prolonged frost"
     ],
-    "toxicityNote": "SAFETY ALERT & PEDIATRIC TOXICITY WARNING: Foliage and dilute topical preparations are safe for adult skin. Concentrated neem seed (margosa) oil is severely toxic if ingested orally, causing toxic encephalopathy, metabolic acidosis, hepatic necrosis, and Reye-like syndrome in infants and young children. Keep pure neem oil strictly out of reach of children TODO(verify).",
+    "toxicityNote": "SAFETY ALERT & PEDIATRIC TOXICITY WARNING: Foliage and dilute topical preparations are safe for adult skin. Concentrated neem seed (margosa) oil is severely toxic if ingested orally, causing toxic encephalopathy, metabolic acidosis, hepatic necrosis, and Reye-like syndrome in infants and young children. Keep pure neem oil strictly out of reach of children",
     "isToxic": false,
     "funFact": "The United Nations named Neem the 'Tree of the 21st Century' due to its potential to combat pests organically without chemical resistance.",
     "referenceImages": [
@@ -96,7 +97,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Azadirachta_indica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "2": {
     "id": 2,
@@ -126,7 +128,7 @@
     "uses": [
       "Topical soothing gel for thermal burns, mild sunburns, and superficial abrasions",
       "Hydrating botanical humectant in cosmetic formulations and hair conditioners",
-      "Decolorized and purified inner leaf fillet gel is used traditionally as a soothing digestive supplement; raw unpurified whole-leaf preparations containing aloin should not be used as digestive tonics due to laxative toxicity TODO(verify)"
+      "Decolorized and purified inner leaf fillet gel is used traditionally as a soothing digestive supplement; raw unpurified whole-leaf preparations containing aloin should not be used as digestive tonics due to laxative toxicity"
     ],
     "careTips": [
       "Plant in porous cactus mix or sandy soil with excellent drainage holes",
@@ -150,7 +152,8 @@
         "name": "ASPCA Animal Poison Control & FDA (21 CFR Part 310)",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/aloe"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "3": {
     "id": 3,
@@ -179,7 +182,7 @@
     "distribution": "Native to the Indian subcontinent and Southeast Asia; India produces over 70% of the world's supply.",
     "uses": [
       "Indispensable culinary base spice providing vivid yellow color and warm earthy flavor to curries",
-      "Traditional Ayurvedic topical paste and dietary rasayana; curcuminoids possess clinically substantiated anti-inflammatory and antioxidant activities for relieving joint pain and mild localized inflammation TODO(verify)",
+      "Traditional Ayurvedic topical paste and dietary rasayana; curcuminoids possess clinically substantiated anti-inflammatory and antioxidant activities for relieving joint pain and mild localized inflammation",
       "Sacred Haldi wedding ceremony paste symbolizing purification, auspiciousness, and beauty"
     ],
     "careTips": [
@@ -187,7 +190,7 @@
       "Plant in loose, well-draining loamy soil enriched with composted organic matter",
       "Keep soil evenly moist during the 7-9 month growing season before harvesting rhizomes"
     ],
-    "toxicityNote": "Dietary consumption in food is exceptionally safe. High-dose concentrated curcumin extract supplements may cause gastric upset and can potentiate anticoagulant (blood-thinning) drugs or rarely trigger idiosyncratic liver injury TODO(verify).",
+    "toxicityNote": "Dietary consumption in food is exceptionally safe. High-dose concentrated curcumin extract supplements may cause gastric upset and can potentiate anticoagulant (blood-thinning) drugs or rarely trigger idiosyncratic liver injury",
     "isToxic": false,
     "funFact": "Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.",
     "referenceImages": [
@@ -199,7 +202,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Turmeric",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "4": {
     "id": 4,
@@ -228,7 +232,7 @@
     "distribution": "Indigenous to Island Southeast Asia; domesticated by Austronesian peoples and widely cultivated in India, China, and Nigeria.",
     "uses": [
       "Universal culinary spice used fresh, grated, or powdered in curries, teas (chai), and confectionery",
-      "Clinically substantiated through multiple systematic reviews as an effective supportive aid for alleviating nausea, pregnancy-related morning sickness, and motion sickness TODO(verify)",
+      "Traditionally used for digestive comfort; reported in herbal literature as an effective supportive aid for easing nausea, morning sickness, and motion sickness",
       "Warming herbal decoctions for winter colds, sore throats, and respiratory congestion"
     ],
     "careTips": [
@@ -236,7 +240,7 @@
       "Plant rhizome buds shallowly in loose, moist, humus-rich soil with sharp drainage",
       "Harvest when aerial stems naturally yellow and die back in winter"
     ],
-    "toxicityNote": "Safe in culinary amounts. High supplemental doses of raw rhizome may provoke heartburn, belching, or gastrointestinal irritation and may interact with antiplatelet or anticoagulant medications TODO(verify).",
+    "toxicityNote": "Safe in culinary amounts. High supplemental doses of raw rhizome may provoke heartburn, belching, or gastrointestinal irritation and may interact with antiplatelet or anticoagulant medications",
     "isToxic": false,
     "funFact": "During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.",
     "referenceImages": [
@@ -248,7 +252,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ginger",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "5": {
     "id": 5,
@@ -276,16 +281,16 @@
     "habitat": "Dry, rocky, sub-tropical arid plains, stony wasteland boundaries, and drought-prone slopes.",
     "distribution": "Native to the Indian subcontinent, the Middle East, and parts of dry northern Africa.",
     "uses": [
-      "Substantiated in clinical trials as an Ayurvedic adaptogen; standardized root extracts significantly reduce perceived stress, serum cortisol levels, and fatigue TODO(verify)",
-      "Validated in placebo-controlled human trials for enhancing sleep quality, reducing sleep onset latency, and modulating nervous system anxiety TODO(verify)",
-      "Supported in clinical trials as an ergogenic aid that improves muscle strength, recovery endurance, and healthy circulating testosterone levels in resistance-trained men TODO(verify)"
+      "Traditionally used in Ayurveda as an adaptogenic root consumed with warm milk for vitality and stress modulation",
+      "Traditionally used in folk medicine as a calming evening root to support restful sleep and ease nervous tension",
+      "Traditionally used in Ayurvedic rasayana formulations for stamina, endurance, and physical vitality"
     ],
     "careTips": [
       "Requires full, intense sunlight and warm temperatures to develop medicinal withanolides",
       "Grow in sandy, stony, or gravelly soil with low organic matter and minimal moisture",
       "Avoid overwatering; highly susceptible to fungal root rot in soggy or heavy clay soils"
     ],
-    "toxicityNote": "Aerial foliage and unripened berries contain toxic solanaceous alkaloids. Standardized root preparations are generally well-tolerated but should be avoided during pregnancy as a precaution advised by regulatory agencies, and monitored for rare idiosyncratic hepatotoxicity TODO(verify).",
+    "toxicityNote": "Aerial foliage and unripened berries contain toxic solanaceous alkaloids. Standardized root preparations are generally well-tolerated but should be avoided during pregnancy as a precaution advised by regulatory agencies, and monitored for rare idiosyncratic hepatotoxicity",
     "isToxic": false,
     "funFact": "Its Sanskrit name Ashwagandha translates literally to 'smell of a horse', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.",
     "referenceImages": [
@@ -297,7 +302,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Withania_somnifera",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "6": {
     "id": 6,
@@ -326,16 +332,16 @@
     "habitat": "Tropical deciduous and dry secondary forests, often scaling Neem, Mango, or Acacia canopies.",
     "distribution": "Indigenous throughout the tropical Indian subcontinent, Sri Lanka, and Myanmar.",
     "uses": [
-      "Traditional Ayurvedic bitter decoction (kwath) used as an antipyretic and immunomodulatory supportive beverage; clinical evidence demonstrates phagocytic immune stimulation, though it does not replace targeted antiviral therapy TODO(verify)",
-      "Demonstrates antioxidant and hepatoprotective activity in controlled preclinical rodent models; clinical use requires professional supervision to avoid herb-induced hepatic complications TODO(verify)",
-      "Traditional home remedy for malaise and debility; preliminary preclinical studies indicate modest hypoglycemic and anti-inflammatory properties, but clinical diabetes management requires standard pharmacotherapy TODO(verify)"
+      "Traditional Ayurvedic bitter decoction (kwath) used as an antipyretic and immunomodulatory supportive beverage; clinical evidence demonstrates phagocytic immune stimulation, though it does not replace targeted antiviral therapy",
+      "Demonstrates antioxidant and hepatoprotective activity in controlled preclinical rodent models; clinical use requires professional supervision to avoid herb-induced hepatic complications",
+      "Traditional home remedy for malaise and debility; preliminary preclinical studies indicate modest hypoglycemic and anti-inflammatory properties, but clinical diabetes management requires standard pharmacotherapy"
     ],
     "careTips": [
       "Requires a sturdy trellis, pergola, or host tree trunk for climbing support",
       "Tolerates bright sun to partial canopy shade and varied tropical soil conditions",
       "Propagates with extreme ease from mature stem cuttings planted in well-draining soil"
     ],
-    "toxicityNote": "Historically recognized as safe in traditional decoctions; however, widespread unsupervised consumption of concentrated commercial extracts has been clinically linked in peer-reviewed studies to rare idiosyncratic drug-induced liver injury and autoimmune-like hepatitis TODO(verify).",
+    "toxicityNote": "Historically recognized as safe in traditional decoctions; however, widespread unsupervised consumption of concentrated commercial extracts has been clinically linked in peer-reviewed studies to rare idiosyncratic drug-induced liver injury and autoimmune-like hepatitis",
     "isToxic": false,
     "funFact": "In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.",
     "referenceImages": [
@@ -347,7 +353,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tinospora_cordifolia",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "7": {
     "id": 7,
@@ -376,8 +383,8 @@
     "habitat": "Wetlands, marshes, edges of freshwater streams, flooded rice paddy margins, and brackish estuarine fringes.",
     "distribution": "Native to the wetlands of India and tropical Asia; cultivated globally as an aquatic herb and terrarium plant.",
     "uses": [
-      "Substantiated by meta-analyses of randomized double-blind clinical trials as an effective nootropic phytomedicine that enhances speed of information processing, working memory, and cognitive attention TODO(verify)",
-      "Clinically shown to exert mild anxiolytic and adaptogenic effects, mitigating cognitive fatigue and subjective anxiety during sustained mental workloads TODO(verify)",
+      "Traditionally celebrated as a nootropic brain tonic in Ayurveda; reported in traditional literature to support memory retention and cognitive alertness",
+      "Traditionally used as a calming agent in folk remedies to ease mental fatigue and nervous exhaustion",
       "Stir-fried as a bitter medicinal culinary green (Brahmi shak) in Bengali cuisine"
     ],
     "careTips": [
@@ -385,7 +392,7 @@
       "Thrives in full blazing tropical sunlight to light filtered shade",
       "Never allow roots to dry out; maintain standing water in saucer or shallow pond margin"
     ],
-    "toxicityNote": "Non-toxic with high therapeutic safety margin. Ingestion on an empty stomach commonly induces gastrointestinal side effects including nausea, abdominal cramping, and increased bowel motility TODO(verify).",
+    "toxicityNote": "Non-toxic with high therapeutic safety margin. Ingestion on an empty stomach commonly induces gastrointestinal side effects including nausea, abdominal cramping, and increased bowel motility",
     "isToxic": false,
     "funFact": "Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.",
     "referenceImages": [
@@ -397,7 +404,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bacopa_monnieri",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "8": {
     "id": 8,
@@ -434,7 +442,7 @@
       "Highly adaptable to poor, alkaline, saline, and gravelly soils once established",
       "Provide regular deep irrigation during floral fruit-set to avoid pre-harvest fruit drop"
     ],
-    "toxicityNote": "Nutrient-dense and non-toxic in food quantities. Due to its concentrated ascorbic and organic acid profile, excessive raw consumption can trigger hyperacidity, epigastric heartburn, or loose stools in sensitive individuals TODO(verify).",
+    "toxicityNote": "Nutrient-dense and non-toxic in food quantities. Due to its concentrated ascorbic and organic acid profile, excessive raw consumption can trigger hyperacidity, epigastric heartburn, or loose stools in sensitive individuals",
     "isToxic": false,
     "funFact": "A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.",
     "referenceImages": [
@@ -446,7 +454,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Phyllanthus_emblica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "9": {
     "id": 9,
@@ -476,7 +485,7 @@
     "distribution": "Native to India, Sri Lanka, and Bangladesh; planted across tropical homes worldwide.",
     "uses": [
       "Essential seasoning in South Indian and Maharashtrian tempering (tadka) for sambar, rasam, and chutneys",
-      "Traditional culinary and Ayurvedic carminative for easing mild indigestion and nausea; preclinical research indicates carbazole alkaloids possess antioxidant and alpha-glucosidase inhibitory activity TODO(verify)",
+      "Traditional culinary and Ayurvedic carminative for easing mild indigestion and nausea; preclinical research indicates carbazole alkaloids possess antioxidant and alpha-glucosidase inhibitory activity",
       "Boiled in coconut oil to create nourishing traditional hair tonics against premature greying"
     ],
     "careTips": [
@@ -484,7 +493,7 @@
       "Use fertile, slightly acidic, well-draining loamy soil; avoid soggy roots",
       "Protect from cold winter frost and chilly winds which cause rapid leaf drop"
     ],
-    "toxicityNote": "Foliage is completely safe, aromatic, and edible. The dark seeds contain concentrated bioactive carbazole alkaloids and secondary glycosides; while cardiotoxic 'cardiac glycosides' like digitalis are not present, seeds are considered non-edible and should be discarded TODO(verify).",
+    "toxicityNote": "Foliage is completely safe, aromatic, and edible. The dark seeds contain concentrated bioactive carbazole alkaloids and secondary glycosides; while cardiotoxic 'cardiac glycosides' like digitalis are not present, seeds are considered non-edible and should be discarded",
     "isToxic": false,
     "funFact": "Commercial 'curry powder' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.",
     "referenceImages": [
@@ -496,7 +505,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Curry_tree",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "10": {
     "id": 10,
@@ -534,7 +544,7 @@
       "Grows exceptionally well in sandy, well-drained poor soils; highly drought-resistant",
       "Prune main trunk when young to stimulate low branching for easy pod and leaf harvesting"
     ],
-    "toxicityNote": "SAFETY & TOXICITY WARNING: Leaves, blossoms, and green seed pods are wholesome, safe, and nutritious. In contrast, the root and root bark contain the toxic alkaloid spirochin and moringinine, which can induce cardiac paralysis, acute hypotension, and violent uterine contractions; root bark must never be consumed TODO(verify).",
+    "toxicityNote": "SAFETY & TOXICITY WARNING: Leaves, blossoms, and green seed pods are wholesome, safe, and nutritious. In contrast, the root and root bark contain the toxic alkaloid spirochin and moringinine, which can induce cardiac paralysis, acute hypotension, and violent uterine contractions; root bark must never be consumed",
     "isToxic": false,
     "funFact": "Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow's milk, and four times more Vitamin A than carrots per equal weight.",
     "referenceImages": [
@@ -546,7 +556,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Moringa_oleifera",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "11": {
     "id": 11,
@@ -577,7 +588,7 @@
     "distribution": "Native to the Indian subcontinent and Indochina; widely revered across India and Nepal.",
     "uses": [
       "Pulp scooped to brew refreshing cooling summer sharbat (Bael pana) for digestive relief",
-      "Documented in ethnobotany and pharmacological assays as an effective astringent remedy; unripe fruit pulp contains high concentrations of tannins and mucilage that inhibit bacterial colonization and alleviate diarrhea and dysentery TODO(verify)",
+      "Documented in ethnobotany and pharmacological assays as an effective astringent remedy; unripe fruit pulp contains high concentrations of tannins and mucilage that inhibit bacterial colonization and alleviate diarrhea and dysentery",
       "Trifoliate leaves offered in daily worship rituals at Shiva temples across the country"
     ],
     "careTips": [
@@ -585,7 +596,7 @@
       "Extremely hardy; thrives in poor, rocky, stony, and alkaline clay soils",
       "Drought-resistant once established; requires minimal supplemental watering"
     ],
-    "toxicityNote": "Ripe fruit pulp is non-toxic and nutritious. Concentrated root bark and unripe fruit decoctions possess powerful tannin-driven astringency and documented uterine stimulant properties in animal models, warranting avoidance during pregnancy TODO(verify).",
+    "toxicityNote": "Ripe fruit pulp is non-toxic and nutritious. Concentrated root bark and unripe fruit decoctions possess powerful tannin-driven astringency and documented uterine stimulant properties in animal models, warranting avoidance during pregnancy",
     "isToxic": false,
     "funFact": "The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.",
     "referenceImages": [
@@ -597,7 +608,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aegle_marmelos",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "12": {
     "id": 12,
@@ -625,7 +637,7 @@
     "habitat": "Riverbanks, streamsides, ravines, and moist alluvial floodplains across the Indian peninsula.",
     "distribution": "Endemic to the Indian subcontinent; common along river courses in central and southern India.",
     "uses": [
-      "Substantiated as an Ayurvedic cardioprotective rasayana; bark extracts rich in triterpenoid saponins (arjunic acid, arjunolic acid) and flavonoids exhibit inotropic and endothelial-protective properties in clinical and animal studies of angina and mild heart failure TODO(verify)",
+      "Traditionally celebrated as an Ayurvedic cardioprotective rasayana; bark boiled in milk is reported in classical texts for supporting cardiac tone",
       "Timber used for agricultural implements, boat-building, and structural housing beams",
       "Foliage fed as primary host foodplant for wild tropical Tasar silkworms (Antheraea mylitta)"
     ],
@@ -634,7 +646,7 @@
       "Requires full overhead sunlight and expansive outdoor physical space for its massive crown",
       "Protect young saplings from domestic livestock during the first few years"
     ],
-    "toxicityNote": "Standardized bark preparations are well-tolerated in clinical studies, but should only be used as a complementary botanical under medical supervision; patients with severe congestive heart failure must never discontinue prescribed cardiovascular medications TODO(verify).",
+    "toxicityNote": "Standardized bark preparations are well-tolerated in clinical studies, but should only be used as a complementary botanical under medical supervision; patients with severe congestive heart failure must never discontinue prescribed cardiovascular medications",
     "isToxic": false,
     "funFact": "Named after the hero Arjuna of the Mahabharata epic in tribute to the tree's unmatched strength, defensive resilience, and role as a biological shield for the human heart.",
     "referenceImages": [
@@ -646,7 +658,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Terminalia_arjuna",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "13": {
     "id": 13,
@@ -675,16 +688,16 @@
     "habitat": "Deep shade of moist evergreen rainforest valleys, foothills of the Western Ghats, and sacred groves.",
     "distribution": "Indigenous to the Western Ghats, Eastern Himalayas, and southern tropical river valleys of India; globally vulnerable.",
     "uses": [
-      "Prized classical Ayurvedic uterine tonic (Ashokarishta); preliminary pharmacological evaluations show estrogenic receptor modulation and spasmolytic activity on uterine smooth muscle, though large randomized trials are limited TODO(verify)",
+      "Prized classical Ayurvedic uterine tonic (Ashokarishta); preliminary pharmacological evaluations show estrogenic receptor modulation and spasmolytic activity on uterine smooth muscle, though large randomized trials are limited",
       "Sacred ornamental tree planted in temple courtyards, Buddhist viharas, and palace botanical gardens",
-      "Traditional astringent bark preparation rich in condensed catechins and tannins, utilized to soothe localized mucosal irritation and excessive menorrhagia under Ayurvedic oversight TODO(verify)"
+      "Traditional astringent bark preparation rich in condensed catechins and tannins, utilized to soothe localized mucosal irritation and excessive menorrhagia under Ayurvedic oversight"
     ],
     "careTips": [
       "Requires partial shade and sheltered humid conditions when young; intolerant of arid scorching heat",
       "Plant in rich, moist, organic-matter-loaded acidic soils with adequate moisture retention",
       "Provide regular deep irrigation during prolonged dry seasons to maintain lush canopy foliage"
     ],
-    "toxicityNote": "True Saraca asoca bark is non-toxic. It is frequently adulterated in Indian herbal markets with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which completely lacks the uterine-tonic phytochemistry of genuine Ashoka TODO(verify).",
+    "toxicityNote": "True Saraca asoca bark is non-toxic. It is frequently adulterated in Indian herbal markets with the unrelated weeping mast tree (Polyalthia longifolia / False Ashoka), which completely lacks the uterine-tonic phytochemistry of genuine Ashoka",
     "isToxic": false,
     "funFact": "According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.",
     "referenceImages": [
@@ -696,7 +709,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saraca_asoca",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "14": {
     "id": 14,
@@ -727,14 +741,14 @@
     "uses": [
       "Chewed after meals as traditional digestive paan wrapped around areca nut, slaked lime, and aromatic spices",
       "Auspicious symbol presented at Hindu wedding ceremonies, temple pujas, and welcoming honored guests",
-      "Traditional folk practice of applying warm, oiled betel leaves to the chest for symptomatic comfort during respiratory congestion; essential oils (chavibetol) provide mild topical counter-irritation TODO(verify)"
+      "Traditional folk practice of applying warm, oiled betel leaves to the chest for symptomatic comfort during respiratory congestion; essential oils (chavibetol) provide mild topical counter-irritation"
     ],
     "careTips": [
       "Requires warm, highly humid conditions (> 70% humidity) with protection from direct burning sun",
       "Cultivate in moist, highly fertile, well-draining loamy soil rich in decomposed manure",
       "Provide sturdy bamboo poles or living support trees for aerial vine climbing"
     ],
-    "toxicityNote": "Fresh Piper betle leaf alone is non-toxic and possesses antioxidant hydroxychavicol. However, habitual chewing of betel quid ('paan') prepared with areca nut (Areca catechu) and slaked lime, with or without tobacco, is classified by the WHO/IARC as a Group 1 human oral carcinogen TODO(verify).",
+    "toxicityNote": "Fresh Piper betle leaf alone is non-toxic and possesses antioxidant hydroxychavicol. However, habitual chewing of betel quid ('paan') prepared with areca nut (Areca catechu) and slaked lime, with or without tobacco, is classified by the WHO/IARC as a Group 1 human oral carcinogen",
     "isToxic": false,
     "funFact": "Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo's travelogues of the subcontinent in the 13th century.",
     "referenceImages": [
@@ -746,7 +760,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Betel",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "15": {
     "id": 15,
@@ -774,7 +789,7 @@
     "distribution": "Native to maritime Southeast Asia and South Asia; grown widely across India and pantropical zones.",
     "uses": [
       "Key culinary flavor herb in curries, broths, and masala chai",
-      "Widely brewed traditional herbal tea containing citral and geraniol, which demonstrate validated mild antispasmodic, carminative, and anti-inflammatory properties in preclinical digestive models TODO(verify)",
+      "Widely brewed traditional herbal tea containing citral and geraniol, which demonstrate validated mild antispasmodic, carminative, and anti-inflammatory properties in preclinical digestive models",
       "Essential oil distillation producing citral used in insect repellents and aromatherapy"
     ],
     "careTips": [
@@ -799,7 +814,8 @@
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemongrass"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "16": {
     "id": 16,
@@ -857,7 +873,8 @@
         "name": "EMA European Medicines Agency Herbal Monograph",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/menthae-piperitae-aetheroleum"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   },
   "17": {
     "id": 17,
@@ -887,7 +904,7 @@
     "distribution": "Native to the Indian subcontinent and Indochina; revered across Buddhist and Hindu traditions.",
     "uses": [
       "Sacred meditation and temple sanctuary tree; associated with the enlightenment of Gautama Buddha",
-      "Traditional Ayurvedic bark and leaf decoctions rich in sitosterol, flavonoids, and tannins possess documented astringent, antimicrobial, and wound-cleansing properties in ethnopharmacological trials TODO(verify)",
+      "Traditional Ayurvedic bark and leaf decoctions rich in sitosterol, flavonoids, and tannins possess documented astringent, antimicrobial, and wound-cleansing properties in ethnopharmacological trials",
       "Keystone ecological support tree providing figs for birds, fruit bats, and insects"
     ],
     "careTips": [
@@ -895,7 +912,7 @@
       "Requires full blazing tropical sun and deep, porous soil",
       "Extremely hardy and drought-tolerant once deep taproots are established"
     ],
-    "toxicityNote": "Milky latex sap contains proteolytic enzymes (ficins) and psoralens that can trigger irritant contact dermatitis or phytophotodermatitis upon exposure to broken stems TODO(verify).",
+    "toxicityNote": "Milky latex sap contains proteolytic enzymes (ficins) and psoralens that can trigger irritant contact dermatitis or phytophotodermatitis upon exposure to broken stems",
     "isToxic": false,
     "funFact": "The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.",
     "referenceImages": [
@@ -907,7 +924,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_religiosa",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "18": {
     "id": 18,
@@ -936,7 +954,7 @@
     "distribution": "Native to the Indian subcontinent; widely venerated and planted across South Asia.",
     "uses": [
       "National symbol of longevity and eternal life; central hub for village councils and rural markets",
-      "Traditional astringent gargles and topical poultices derived from bark and aerial prop roots contain dense polyphenolic tannins that act as soothing mucosal astringents TODO(verify)",
+      "Traditional astringent gargles and topical poultices derived from bark and aerial prop roots contain dense polyphenolic tannins that act as soothing mucosal astringents",
       "Critical keystone tree feeding hundreds of frugivorous birds and mammals"
     ],
     "careTips": [
@@ -961,7 +979,8 @@
         "name": "ASPCA Animal Poison Control & Botanical Dermatology Database",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/fig"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "19": {
     "id": 19,
@@ -989,8 +1008,8 @@
     "habitat": "Open dry forests, wastelands, shaded slopes, and roadsides across tropical plains.",
     "distribution": "Native to India and Sri Lanka; widely cultivated throughout Southern and Southeastern Asia.",
     "uses": [
-      "Substantiated by randomized clinical trials and meta-analyses for significantly reducing the symptom duration and severity of upper respiratory tract infections and common colds TODO(verify)",
-      "Active diterpene lactones (andrographolides) demonstrate substantial antioxidant, NF-kB inhibitory, and hepatoprotective actions in experimental models of toxic liver challenge TODO(verify)",
+      "Traditionally used in Ayurveda and Siddha as a bitter febrile decoction for seasonal colds and respiratory support",
+      "Traditionally utilized as a bitter liver tonic; reported in ethnobotanical literature to support hepatic and immune vitality",
       "Folk bitter remedy for intestinal worms and digestive sluggishness"
     ],
     "careTips": [
@@ -998,7 +1017,7 @@
       "Needs light, sandy loam soil with good drainage to prevent collar rot",
       "Water moderately; keep soil slightly moist until flowering initiates"
     ],
-    "toxicityNote": "Intensely bitter taste; high medicinal doses can provoke nausea, anorexia, and rare anaphylactic/allergic reactions. Contraindicated during pregnancy due to demonstrated anti-fertility and abortifacient actions in animal models TODO(verify).",
+    "toxicityNote": "Intensely bitter taste; high medicinal doses can provoke nausea, anorexia, and rare anaphylactic/allergic reactions. Contraindicated during pregnancy due to demonstrated anti-fertility and abortifacient actions in animal models",
     "isToxic": false,
     "funFact": "Kalmegh is called 'Maha-tita' in Bengali, literally meaning 'Great Bitter', because its bitter taste is said to surpass even that of Neem.",
     "referenceImages": [
@@ -1010,7 +1029,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Andrographis_paniculata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "20": {
     "id": 20,
@@ -1039,7 +1059,7 @@
     "distribution": "Originally native to tropical East Asia; now cultivated worldwide in tropical and subtropical regions.",
     "uses": [
       "Sacred devotional offering in Hindu worship, especially for Goddess Kali and Lord Ganesha",
-      "Traditional cosmetic paste and hair oil; animal studies confirm petroleum ether flower extracts promote follicular hair growth and anagen phase lengthening, though clinical human trials are limited TODO(verify)",
+      "Traditional cosmetic paste and hair oil; animal studies confirm petroleum ether flower extracts promote follicular hair growth and anagen phase lengthening, though clinical human trials are limited",
       "Edible petals brewed into tart herbal teas rich in anthocyanins"
     ],
     "careTips": [
@@ -1059,7 +1079,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "21": {
     "id": 21,
@@ -1113,7 +1134,8 @@
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/marigold"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   },
   "22": {
     "id": 22,
@@ -1163,7 +1185,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jasminum_sambac",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "23": {
     "id": 23,
@@ -1194,7 +1217,7 @@
     "uses": [
       "Supreme sacred floral offering dedicated to Goddess Lakshmi and Goddess Saraswati",
       "Rhizomes (kamal kakdi) and seeds (makhana / lotus seeds) are prized culinary vegetables and snacks",
-      "Traditional Ayurvedic cardiac rasayana; floral petals, seeds, and plumules contain alkaloids (liensinine, isoliensinine) that display antiarrhythmic and hypotensive activities in preclinical models TODO(verify)"
+      "Traditional Ayurvedic cardiac rasayana; floral petals, seeds, and plumules contain alkaloids (liensinine, isoliensinine) that display antiarrhythmic and hypotensive activities in preclinical models"
     ],
     "careTips": [
       "Requires undisturbed still water ponds or deep water tubs with at least 30-50 cm of rich heavy clay-loam mud",
@@ -1213,7 +1236,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nelumbo_nucifera",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "24": {
     "id": 24,
@@ -1242,7 +1266,7 @@
     "distribution": "Native primarily to the temperate Northern Hemisphere; cultivated ubiquitously across India and globally.",
     "uses": [
       "Distillation into rose water (gulab jal) and pure rose attar (ruh gulab) for sweets, perfumes, and ceremonies",
-      "Petals preserve with unrefined sugar as classical Ayurvedic gulkand, serving as a cooling antioxidant digestive preparation that relieves mild gastritis and heat fatigue TODO(verify)",
+      "Petals preserve with unrefined sugar as classical Ayurvedic gulkand, serving as a cooling antioxidant digestive preparation that relieves mild gastritis and heat fatigue",
       "Universal ornamental cut flower symbolizing love, celebration, and reverence"
     ],
     "careTips": [
@@ -1262,7 +1286,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rose",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "25": {
     "id": 25,
@@ -1300,7 +1325,7 @@
       "Plant in well-draining gritty or sandy soil; avoid soggy soil which causes stem rot",
       "Withhold heavy watering during winter deciduous dormancy"
     ],
-    "toxicityNote": "The white milky latex contains toxic plumericin, iridoids, and diterpenes that produce painful irritant contact dermatitis, corneal inflammation, and gastrointestinal cramps if ingested TODO(verify).",
+    "toxicityNote": "The white milky latex contains toxic plumericin, iridoids, and diterpenes that produce painful irritant contact dermatitis, corneal inflammation, and gastrointestinal cramps if ingested",
     "isToxic": true,
     "funFact": "Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.",
     "referenceImages": [
@@ -1312,7 +1337,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Plumeria_rubra",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "26": {
     "id": 26,
@@ -1342,14 +1368,14 @@
     "uses": [
       "Highway median windbreak and erosion stabilizer due to extreme drought and pollution tolerance",
       "Religious flower offerings dedicated to Lord Shiva in Hindu rituals",
-      "Historically explored as a source of cardenolides for pharmaceutical cardiovascular extraction under strict clinical synthesis; crude home extraction is fatally cardiotoxic and strictly prohibited TODO(verify)"
+      "Historically explored as a source of cardenolides for pharmaceutical cardiovascular extraction under strict clinical synthesis; crude home extraction is fatally cardiotoxic and strictly prohibited"
     ],
     "careTips": [
       "Thrives in harsh sun and poor dry soils with minimal maintenance",
       "Extremely drought and salt tolerant once established",
       "Always wear protective gloves when pruning, and NEVER burn clippings"
     ],
-    "toxicityNote": "DEADLY TOXIC / LETHAL CARDIAC TOXIN: All plant parts contain potent cardiac cardenolides (oleandrin, neriine). Ingestion of tiny amounts causes severe nausea, refractory ventricular arrhythmias, hyperkalemia, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic TODO(verify).",
+    "toxicityNote": "DEADLY TOXIC / LETHAL CARDIAC TOXIN: All plant parts contain potent cardiac cardenolides (oleandrin, neriine). Ingestion of tiny amounts causes severe nausea, refractory ventricular arrhythmias, hyperkalemia, heart block, and fatal cardiac arrest in humans and animals. Smoke from burning wood is toxic",
     "isToxic": true,
     "funFact": "Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.",
     "referenceImages": [
@@ -1361,7 +1387,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nerium_oleander",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "27": {
     "id": 27,
@@ -1391,7 +1418,7 @@
     "uses": [
       "Spectacular vertical greening and security hedging over walls and boundary fences",
       "Urban landscape screening due to extreme air-pollution and drought resistance",
-      "Folk medicine in Mexico and Central America brews floral bract and leaf decoctions for coughs; extracts demonstrate antimicrobial and antitussive effects in animal assays, though human trials are sparse TODO(verify)"
+      "Folk medicine in Mexico and Central America brews floral bract and leaf decoctions for coughs; extracts demonstrate antimicrobial and antitussive effects in animal assays, though human trials are sparse"
     ],
     "careTips": [
       "Needs blazing, uninterrupted tropical sunlight to produce colorful bract flushes",
@@ -1415,7 +1442,8 @@
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/bougainvillea"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "28": {
     "id": 28,
@@ -1446,14 +1474,14 @@
     "uses": [
       "Sacred flower offered to Goddess Durga and Lord Shiva in Hindu devotional worship",
       "Brewed as vivid 'Blue Tea' that dramatically shifts to violet-magenta when lemon juice is added",
-      "Classified in Ayurveda as a Shankhpushpi / Medhya Rasayana; preclinical studies confirm root and aerial extracts upregulate brain acetylcholine levels and facilitate spatial memory retention TODO(verify)"
+      "Classified in Ayurveda as a Shankhpushpi / Medhya Rasayana; preclinical studies confirm root and aerial extracts upregulate brain acetylcholine levels and facilitate spatial memory retention"
     ],
     "careTips": [
       "Provide a trellis, fence, or string support for slender climbing tendrils",
       "Grows best in full sun or light afternoon shade with moist, permeable soil",
       "Pinch young tip growth to encourage branching and more flower nodes"
     ],
-    "toxicityNote": "Blue blossoms are non-toxic and widely utilized as herbal tea and natural food coloring. Mature seeds and subterranean root barks contain potent purgative and emetic resins that must not be ingested TODO(verify).",
+    "toxicityNote": "Blue blossoms are non-toxic and widely utilized as herbal tea and natural food coloring. Mature seeds and subterranean root barks contain potent purgative and emetic resins that must not be ingested",
     "isToxic": false,
     "funFact": "The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.",
     "referenceImages": [
@@ -1465,7 +1493,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Clitoria_ternatea",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "29": {
     "id": 29,
@@ -1496,14 +1525,14 @@
     "uses": [
       "Only flower in Hindu worship sanctioned to be offered to deities after being picked up from the ground",
       "Orange floral tubes traditionally boiled to yield a golden-yellow natural fabric dye",
-      "Traditional Ayurvedic specific (Parijat) for persistent sciatica and inflammatory joint aches; leaf decoctions exhibit anti-inflammatory and analgesic efficacy comparable to non-steroidal anti-inflammatory controls in preclinical rodent assays TODO(verify)"
+      "Traditional Ayurvedic specific (Parijat) for persistent sciatica and inflammatory joint aches; leaf decoctions exhibit anti-inflammatory and analgesic efficacy comparable to non-steroidal anti-inflammatory controls in preclinical rodent assays"
     ],
     "careTips": [
       "Plant in full sun to partial shade in porous, well-draining garden soil",
       "Moderate watering; avoid waterlogging around roots which causes leaf yellowing",
       "Prune annually after winter flowering season to maintain compact tree shape"
     ],
-    "toxicityNote": "Generally safe in folk dosages; concentrated aqueous leaf decoctions possess mild laxative and purgative properties due to iridoid glucosides TODO(verify).",
+    "toxicityNote": "Generally safe in folk dosages; concentrated aqueous leaf decoctions possess mild laxative and purgative properties due to iridoid glucosides",
     "isToxic": false,
     "funFact": "The species name 'arbor-tristis' means 'tree of sorrow' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.",
     "referenceImages": [
@@ -1515,7 +1544,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "30": {
     "id": 30,
@@ -1553,7 +1583,7 @@
       "Requires full scorching sun; flowers poorly in shade",
       "Extremely drought tolerant once established, but susceptible to brittle limb breakage in gale winds"
     ],
-    "toxicityNote": "Foliage and flowers are generally non-toxic in casual exposure. Raw mature seeds contain mild saponins, tannins, and non-protein amino acids; safety for internal human consumption is unverified and ingestion should be avoided TODO(verify).",
+    "toxicityNote": "Foliage and flowers are generally non-toxic in casual exposure. Raw mature seeds contain mild saponins, tannins, and non-protein amino acids; safety for internal human consumption is unverified and ingestion should be avoided",
     "isToxic": false,
     "funFact": "Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.",
     "referenceImages": [
@@ -1565,7 +1595,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Delonix_regia",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "31": {
     "id": 31,
@@ -1595,14 +1626,14 @@
     "distribution": "Native to Madagascar; universally naturalized across India and pantropical zones.",
     "uses": [
       "Commercial source of critical chemotherapy alkaloids vinblastine and vincristine used for leukemia and lymphoma",
-      "Continuous-blooming ornamental groundcover and patio pot plant TODO(verify)"
+      "Continuous-blooming ornamental groundcover and patio pot plant"
     ],
     "careTips": [
       "Thrives in full sun and thrives in poor, sandy, gritty soils",
       "Never overwater; highly vulnerable to phytophthora root rot in waterlogged pots",
       "Pinch young shoots to prevent leggy growth"
     ],
-    "toxicityNote": "CRITICAL TOXICITY WARNING: Contains over 70 cytotoxic vinca alkaloids (vincristine, vinblastine). While purified pharmaceuticals are vital oncological agents, ingestion of raw foliage, decoctions, or folk teas taken for diabetes is medically hazardous, causing severe bone marrow suppression (leukopenia), peripheral neuropathy, hypotension, and fetal toxicity. Ingestion is strictly contraindicated TODO(verify).",
+    "toxicityNote": "CRITICAL TOXICITY WARNING: Contains over 70 cytotoxic vinca alkaloids (vincristine, vinblastine). While purified pharmaceuticals are vital oncological agents, ingestion of raw foliage, decoctions, or folk teas taken for diabetes is medically hazardous, causing severe bone marrow suppression (leukopenia), peripheral neuropathy, hypotension, and fetal toxicity. Ingestion is strictly contraindicated",
     "isToxic": true,
     "funFact": "Sadabahar literally means 'evergreen' or 'always in bloom' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.",
     "referenceImages": [
@@ -1614,7 +1645,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Catharanthus_roseus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "32": {
     "id": 32,
@@ -1644,7 +1676,7 @@
     "distribution": "Native to South India and Sri Lanka; widely cultivated throughout tropical Asia and the Caribbean.",
     "uses": [
       "Sacred flower offered in Hindu temple pujas, especially in Kerala and Bengal",
-      "Traditional Ayurvedic root and flower decoctions utilized for dysentery, oral sores, and skin eruptions; laboratory screenings corroborate astringent tannin and antimicrobial activities against enteric pathogens TODO(verify)",
+      "Traditional Ayurvedic root and flower decoctions utilized for dysentery, oral sores, and skin eruptions; laboratory screenings corroborate astringent tannin and antimicrobial activities against enteric pathogens",
       "Hardy, shearable formal hedge and border landscape shrub"
     ],
     "careTips": [
@@ -1664,7 +1696,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ixora_coccinea",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "33": {
     "id": 33,
@@ -1715,7 +1748,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lantana_camara",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "34": {
     "id": 34,
@@ -1746,7 +1780,7 @@
     "uses": [
       "Vibrant autumn ornamental garden display and long-lasting dried floral arrangements",
       "Young tender shoots and leaves consumed as a nutritious potherb (Lagos spinach) in traditional cooking",
-      "Used in Traditional Chinese Medicine (Semen Celosiae) and Indian folk medicine; seed extracts rich in celosian and phenolic compounds demonstrate therapeutic anti-inflammatory, hepatoprotective, and ocular soothing effects in animal models TODO(verify)"
+      "Used in Traditional Chinese Medicine (Semen Celosiae) and Indian folk medicine; seed extracts rich in celosian and phenolic compounds demonstrate therapeutic anti-inflammatory, hepatoprotective, and ocular soothing effects in animal models"
     ],
     "careTips": [
       "Position in full intense sunlight; shade causes plumed heads to become pale and moldy",
@@ -1765,7 +1799,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Celosia_argentea",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "35": {
     "id": 35,
@@ -1815,7 +1850,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crossandra_infundibuliformis",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "36": {
     "id": 36,
@@ -1847,7 +1883,7 @@
     "uses": [
       "Vigorous architectural tropical screening and wetland landscape beautification",
       "Hard, dense round seeds historically utilized as shotgun pellets ('Indian Shot') and prayer rosary beads",
-      "Underground starchy rhizomes produce edible 'achira' or Queensland arrowroot, containing exceptionally large, easily digestible starch granules utilized as wholesome convalescent food in traditional agriculture TODO(verify)"
+      "Underground starchy rhizomes produce edible 'achira' or Queensland arrowroot, containing exceptionally large, easily digestible starch granules utilized as wholesome convalescent food in traditional agriculture"
     ],
     "careTips": [
       "Requires abundant moisture; thrives even in boggy soil or pond margins",
@@ -1866,7 +1902,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Canna_indica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "37": {
     "id": 37,
@@ -1896,7 +1933,7 @@
     "distribution": "Native to India, Sri Lanka, and Southeast Asia; widely cultivated as a monsoon garden favorite.",
     "uses": [
       "Traditional natural dye: crushed petals applied as a substitute for Henna (Mehendi) to stain fingernails red",
-      "Traditional folk poultice of crushed leaves and petals applied to minor scalds, burns, and insect bites; active naphthoquinones (lawsone) provide localized antimicrobial and cooling relief TODO(verify)",
+      "Traditional folk poultice of crushed leaves and petals applied to minor scalds, burns, and insect bites; active naphthoquinones (lawsone) provide localized antimicrobial and cooling relief",
       "High-nectar floral bed attracting native bumblebees and butterflies during the rainy season"
     ],
     "careTips": [
@@ -1921,7 +1958,8 @@
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/impatiens"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "38": {
     "id": 38,
@@ -1959,7 +1997,7 @@
       "Extremely hardy and drought-resistant once deep taproots are established",
       "Requires minimal pruning; protect young saplings from livestock grazing"
     ],
-    "toxicityNote": "Seed pod pulp has powerful anthraquinone cathartic action; consuming doses beyond therapeutic levels produces severe watery diarrhea, abdominal cramping, and fluid imbalance TODO(verify).",
+    "toxicityNote": "Seed pod pulp has powerful anthraquinone cathartic action; consuming doses beyond therapeutic levels produces severe watery diarrhea, abdominal cramping, and fluid imbalance",
     "isToxic": false,
     "funFact": "Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.",
     "referenceImages": [
@@ -1976,7 +2014,8 @@
         "name": "EMA Herbal Monograph & Ayurvedic Pharmacopoeia of India",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/sennae-fructus"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "39": {
     "id": 39,
@@ -2008,14 +2047,14 @@
     "uses": [
       "Dry flowers boiled to produce the sacred, skin-friendly traditional saffron-orange herbal Holi dye (Teshu)",
       "Stiff leathery leaves stitched together with bamboo splints into traditional disposable dining plates (pattals)",
-      "Exuded gum resin (Kamarkas) and bark decoctions contain high condensed pyrocatechol tannins that provide recognized astringent and soothing activity for diarrhea and throat gargles TODO(verify)"
+      "Exuded gum resin (Kamarkas) and bark decoctions contain high condensed pyrocatechol tannins that provide recognized astringent and soothing activity for diarrhea and throat gargles"
     ],
     "careTips": [
       "Suited for hot, dry continental climates and withstands alkaline, sodic, and waterlogged soils",
       "Requires full blazing sunshine throughout the year",
       "Slow-growing initially while it establishes a deep drought-resistant taproot"
     ],
-    "toxicityNote": "Seeds contain butin, proteolytic enzymes, and anthelmintic palasonin that are toxic to gut mucosa if consumed raw in high doses; therapeutic use requires careful Ayurvedic purification. Bright flowers are non-toxic and traditionally edible TODO(verify).",
+    "toxicityNote": "Seeds contain butin, proteolytic enzymes, and anthelmintic palasonin that are toxic to gut mucosa if consumed raw in high doses; therapeutic use requires careful Ayurvedic purification. Bright flowers are non-toxic and traditionally edible",
     "isToxic": false,
     "funFact": "The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.",
     "referenceImages": [
@@ -2027,7 +2066,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Butea_monosperma",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "40": {
     "id": 40,
@@ -2065,7 +2105,7 @@
       "Withhold heavy irrigation prior to flowering to stimulate flower panicle emergence",
       "Protect young graft trees from frost and waterlogging"
     ],
-    "toxicityNote": "Fruit pulp is completely safe and wholesome. The tree sap, bark, floral pollen, and outer green peel contain allergenic alkylresorcinols (5-resorcinol) cross-reactive with urushiol, causing severe contact dermatitis ('mango mouth' or cheilitis) in poison-ivy sensitive individuals TODO(verify).",
+    "toxicityNote": "Fruit pulp is completely safe and wholesome. The tree sap, bark, floral pollen, and outer green peel contain allergenic alkylresorcinols (5-resorcinol) cross-reactive with urushiol, causing severe contact dermatitis ('mango mouth' or cheilitis) in poison-ivy sensitive individuals",
     "isToxic": false,
     "funFact": "India produces over 40% of the world's total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.",
     "referenceImages": [
@@ -2077,7 +2117,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mangifera_indica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "41": {
     "id": 41,
@@ -2126,7 +2167,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Coconut",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "42": {
     "id": 42,
@@ -2176,7 +2218,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Musa_acuminata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "43": {
     "id": 43,
@@ -2206,7 +2249,7 @@
     "distribution": "Native to tropical Mesoamerica; universally naturalized and cultivated across India.",
     "uses": [
       "Sweet ripe fruit eaten fresh; green raw fruit cooked in curries and shredded in digestive salads",
-      "Fresh standardized Carica papaya leaf extract has been corroborated in multiple randomized clinical trials and meta-analyses as a supportive adjuvant that accelerates platelet recovery in mild-to-moderate dengue fever under medical supervision TODO(verify)",
+      "Traditionally used in South Asian folk medicine; fresh papaya leaf extract is reported as a supportive home remedy during recovery from seasonal fevers",
       "Rich source of the proteolytic enzyme papain, used commercially as a meat tenderizer and digestive aid"
     ],
     "careTips": [
@@ -2214,7 +2257,7 @@
       "Water moderately and regularly during dry periods",
       "Replace plants every 3 to 4 years as older trees decline in productivity and become unwieldy"
     ],
-    "toxicityNote": "Fully ripe papaya fruit is safe and nutritious. UNRIPE raw green papaya and milky latex contain high concentrations of proteolytic enzymes (papain) that induce violent spasmodic uterine contractions in animal models; unripe papaya is strictly contraindicated in pregnancy TODO(verify).",
+    "toxicityNote": "Fully ripe papaya fruit is safe and nutritious. UNRIPE raw green papaya and milky latex contain high concentrations of proteolytic enzymes (papain) that induce violent spasmodic uterine contractions in animal models; unripe papaya is strictly contraindicated in pregnancy",
     "isToxic": false,
     "funFact": "Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.",
     "referenceImages": [
@@ -2226,7 +2269,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Papaya",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "44": {
     "id": 44,
@@ -2258,7 +2302,7 @@
     "uses": [
       "Nutritious dessert fruit eaten fresh with chaat masala or cooked into jellies and jams",
       "Extremely rich natural source of Vitamin C (up to 4 times higher than citrus fruits)",
-      "Chewing tender young leaves or utilizing leaf decoctions as an oral rinse is supported by pharmacological screenings showing high concentrations of quercetin and tannins that exert astringent, antibacterial, and anti-plaque actions TODO(verify)"
+      "Chewing tender young leaves or utilizing leaf decoctions as an oral rinse is supported by pharmacological screenings showing high concentrations of quercetin and tannins that exert astringent, antibacterial, and anti-plaque actions"
     ],
     "careTips": [
       "Requires full direct sun and tolerates a wide variety of soils from sandy to heavy clay",
@@ -2277,7 +2321,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Psidium_guajava",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "45": {
     "id": 45,
@@ -2308,14 +2353,14 @@
     "uses": [
       "Antioxidant-rich fresh fruit and freshly pressed juice packed with punicalagins and anthocyanins",
       "Dried seeds used as a souring spice (anardana) in Indian curries, chole, and chutneys",
-      "Traditional Ayurvedic peel and rind decoctions are rich in ellagitannins (punicalagin), exhibiting validated astringent and antimicrobial properties against gastrointestinal pathogens in infectious diarrhea TODO(verify)"
+      "Traditional Ayurvedic peel and rind decoctions are rich in ellagitannins (punicalagin), exhibiting validated astringent and antimicrobial properties against gastrointestinal pathogens in infectious diarrhea"
     ],
     "careTips": [
       "Thrives in hot, dry climates with plenty of baking direct sunshine",
       "Requires deep, well-draining calcareous or sandy loam soils; sensitive to waterlogging",
       "Prune suckers regularly to maintain a clean multi-stemmed or single-trunk tree"
     ],
-    "toxicityNote": "Fruit arils and juice are completely wholesome. Root bark and trunk tissues contain toxic pelletierine alkaloids that produce dizziness, visual disturbances, and vomiting in overdose; root preparations are obsolete and not recommended TODO(verify).",
+    "toxicityNote": "Fruit arils and juice are completely wholesome. Root bark and trunk tissues contain toxic pelletierine alkaloids that produce dizziness, visual disturbances, and vomiting in overdose; root preparations are obsolete and not recommended",
     "isToxic": false,
     "funFact": "A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.",
     "referenceImages": [
@@ -2327,7 +2372,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pomegranate",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "46": {
     "id": 46,
@@ -2366,7 +2412,7 @@
       "Needs deep, rich, porous alluvial soils with unobstructed drainage",
       "Protect young saplings from livestock grazing and waterlogging"
     ],
-    "toxicityNote": "Fruit bulbs and seeds are edible and nutritious once cooked. Sticky white latex contains mechanical irritants that can cause mild localized skin itching in sensitive individuals; raw unripened fruit should be boiled before consumption TODO(verify).",
+    "toxicityNote": "Fruit bulbs and seeds are edible and nutritious once cooked. Sticky white latex contains mechanical irritants that can cause mild localized skin itching in sensitive individuals; raw unripened fruit should be boiled before consumption",
     "isToxic": false,
     "funFact": "Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.",
     "referenceImages": [
@@ -2378,7 +2424,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jackfruit",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "47": {
     "id": 47,
@@ -2427,7 +2474,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tamarind",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "48": {
     "id": 48,
@@ -2458,7 +2506,7 @@
     "distribution": "Native to the Indian subcontinent and Southeast Asia; sacred tree of Jambudvipa ('continent of the Jamun tree').",
     "uses": [
       "Delicious summer fruit eaten fresh with black salt (kala namak) or made into vinegar and juices",
-      "Dried seed powder (Jamun gutli) is documented in ethnopharmacological and clinical studies; active gallic acid and jamboline inhibit alpha-amylase and alpha-glucosidase, providing supportive complementary glycemic regulation in type 2 diabetes under medical guidance TODO(verify)",
+      "Dried seed powder (Jamun gutli) is documented in ethnopharmacological and clinical studies; active gallic acid and jamboline inhibit alpha-amylase and alpha-glucosidase, providing supportive complementary glycemic regulation in type 2 diabetes under medical guidance",
       "Durable, water-resistant timber used for railway sleepers, well-linings, and agricultural tools"
     ],
     "careTips": [
@@ -2478,7 +2526,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Syzygium_cumini",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "49": {
     "id": 49,
@@ -2516,7 +2565,7 @@
       "Highly adaptable to diverse soils including saline coastal soils and limestone loams",
       "Water regularly during fruit set; drought-tolerant once established"
     ],
-    "toxicityNote": "Ripe fruit pulp is delicious and non-toxic. The hard black seeds have a sharp protruding apical hook that can snag in the esophageal or pharyngeal lining if swallowed whole, posing a mechanical foreign body risk TODO(verify).",
+    "toxicityNote": "Ripe fruit pulp is delicious and non-toxic. The hard black seeds have a sharp protruding apical hook that can snag in the esophageal or pharyngeal lining if swallowed whole, posing a mechanical foreign body risk",
     "isToxic": false,
     "funFact": "The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.",
     "referenceImages": [
@@ -2528,7 +2577,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Manilkara_zapota",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "50": {
     "id": 50,
@@ -2559,7 +2609,7 @@
     "distribution": "Native to tropical Americas and West Indies; widely cultivated across central and southern India.",
     "uses": [
       "Prized seasonal dessert fruit eaten fresh, blended into Sitaphal ice creams, or pureed into rabdi",
-      "Crushed seeds and leaf extracts contain bioactive acetogenins (annonacin) and aporphine alkaloids with confirmed pediculicidal (anti-lice) and insecticidal properties; must be kept strictly away from eyes to prevent corneal ulceration TODO(verify)",
+      "Crushed seeds and leaf extracts contain bioactive acetogenins (annonacin) and aporphine alkaloids with confirmed pediculicidal (anti-lice) and insecticidal properties; must be kept strictly away from eyes to prevent corneal ulceration",
       "High natural source of Vitamin C, dietary fiber, magnesium, and potassium"
     ],
     "careTips": [
@@ -2579,7 +2629,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Annona_squamosa",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "51": {
     "id": 51,
@@ -2635,7 +2686,8 @@
         "name": "ASPCA Animal Poison Control & European Commission SCCS",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   },
   "52": {
     "id": 52,
@@ -2667,14 +2719,14 @@
     "uses": [
       "World standard luxury timber for shipbuilding, exterior decking, high-end doors, and heirloom furniture",
       "Exceptional natural resistance to rotting, weathering, termites, and marine borers due to high tectoquinone content",
-      "Folk use of leaf extracts as topical compresses for minor cutaneous sores is supported by in vitro antibacterial assays against Staphylococcus aureus, driven by quinone metabolites TODO(verify)"
+      "Folk use of leaf extracts as topical compresses for minor cutaneous sores is supported by in vitro antibacterial assays against Staphylococcus aureus, driven by quinone metabolites"
     ],
     "careTips": [
       "Requires vast open forestry plots with deep, well-drained alluvial or basaltic soils",
       "Needs blazing tropical sunshine and distinct dry and wet monsoon seasons",
       "Long-term forestry investment requiring 20 to 30 years to reach harvestable heartwood girth"
     ],
-    "toxicityNote": "Non-toxic in ordinary contact. Fine wood sawdust generated during carpentry contains lapachol and tectoquinone, potent sensitizers that trigger occupational contact dermatitis, conjunctivitis, and allergic respiratory rhinitis in exposed workers TODO(verify).",
+    "toxicityNote": "Non-toxic in ordinary contact. Fine wood sawdust generated during carpentry contains lapachol and tectoquinone, potent sensitizers that trigger occupational contact dermatitis, conjunctivitis, and allergic respiratory rhinitis in exposed workers",
     "isToxic": false,
     "funFact": "Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.",
     "referenceImages": [
@@ -2686,7 +2738,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Teak",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "53": {
     "id": 53,
@@ -2737,7 +2790,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Shorea_robusta",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "54": {
     "id": 54,
@@ -2787,7 +2841,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bambusa_vulgaris",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "55": {
     "id": 55,
@@ -2837,7 +2892,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Areca_catechu",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "56": {
     "id": 56,
@@ -2887,7 +2943,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Date_palm",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "57": {
     "id": 57,
@@ -2919,7 +2976,7 @@
     "uses": [
       "Silky kapok fiber from seed pods harvested to stuff luxury pillows, cushions, and life vests (naturally buoyant and water-repellent)",
       "Fleshy flower calyces cooked as a prized seasonal vegetable (Semal ke doke) in northern India",
-      "Classical Ayurvedic gum exudate (Mocharas) and young taproots (Semal musli) contain dense mucilage and tannins utilized traditionally as cooling astringents and demulcents for diarrhea and hemoptysis TODO(verify)"
+      "Classical Ayurvedic gum exudate (Mocharas) and young taproots (Semal musli) contain dense mucilage and tannins utilized traditionally as cooling astringents and demulcents for diarrhea and hemoptysis"
     ],
     "careTips": [
       "Requires vast acreage due to enormous canopy and massive surface buttress roots",
@@ -2938,7 +2995,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bombax_ceiba",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "58": {
     "id": 58,
@@ -2989,7 +3047,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Samanea_saman",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "59": {
     "id": 59,
@@ -3039,7 +3098,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Eucalyptus_globulus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "60": {
     "id": 60,
@@ -3089,7 +3149,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rice",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "61": {
     "id": 61,
@@ -3140,7 +3201,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Common_wheat",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "62": {
     "id": 62,
@@ -3191,7 +3253,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Maize",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "63": {
     "id": 63,
@@ -3242,7 +3305,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Saccharum_officinarum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "64": {
     "id": 64,
@@ -3298,7 +3362,8 @@
         "name": "ASPCA Animal Poison Control & EFSA Scientific Opinion on Green Tea Catechins",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/tea"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   },
   "65": {
     "id": 65,
@@ -3337,7 +3402,7 @@
       "Needs hot weather, full sun, and at least 180 to 200 frost-free sunny days",
       "Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality"
     ],
-    "toxicityNote": "Purified fiber and refined cottonseed oil are safe. Raw unrefined cottonseed and foliage contain the toxic polyphenolic pigment gossypol, which causes severe myocardial necrosis, pulmonary edema, and male sterility in monogastric animals and humans TODO(verify).",
+    "toxicityNote": "Purified fiber and refined cottonseed oil are safe. Raw unrefined cottonseed and foliage contain the toxic polyphenolic pigment gossypol, which causes severe myocardial necrosis, pulmonary edema, and male sterility in monogastric animals and humans",
     "isToxic": false,
     "funFact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
     "referenceImages": [
@@ -3349,7 +3414,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gossypium_hirsutum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "66": {
     "id": 66,
@@ -3400,7 +3466,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Brassica_juncea",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "67": {
     "id": 67,
@@ -3450,7 +3517,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tomato",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "68": {
     "id": 68,
@@ -3481,7 +3549,7 @@
     "distribution": "Native to Mesoamerica; introduced to India by Portuguese traders in the 16th century, now an inseparable national staple.",
     "uses": [
       "Indispensable spice added fresh (hari mirch) or sun-dried and powdered (lal mirch) to almost all savory Indian dishes",
-      "Standardized topical capsaicin formulations are medically approved for relieving neuropathic pain in post-herpetic neuralgia and osteoarthritis through the depletion of substance P in sensory nerve terminals TODO(verify)",
+      "Reported in traditional and modern herbal literature; standardized topical capsaicin preparations are used for temporary soothing of joint and muscular discomfort",
       "Traditional Indian protective amulets (nimbu-mirchi) hung to ward off the evil eye (nazar)"
     ],
     "careTips": [
@@ -3501,7 +3569,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Capsicum_annuum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "69": {
     "id": 69,
@@ -3552,7 +3621,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Eggplant",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "70": {
     "id": 70,
@@ -3603,7 +3673,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Okra",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "71": {
     "id": 71,
@@ -3654,7 +3725,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Potato",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "72": {
     "id": 72,
@@ -3686,7 +3758,7 @@
     "uses": [
       "Fundamental aromatic flavor foundation for Indian tadkas, gravies, biryanis, and salads",
       "High natural source of quercetin, a powerful antioxidant flavonoid supporting cellular health",
-      "Folk remedy for hair thinning; a pilot clinical trial showed crude topical onion juice promoted hair regrowth in patchy alopecia areata due to high sulfur and flavonoid content, though further large-scale validation is needed TODO(verify)"
+      "Folk remedy for hair thinning; a pilot clinical trial showed crude topical onion juice promoted hair regrowth in patchy alopecia areata due to high sulfur and flavonoid content, though further large-scale validation is needed"
     ],
     "careTips": [
       "Needs full direct sun and fertile, loose, sandy loam soil free of rocks",
@@ -3705,7 +3777,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Onion",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "73": {
     "id": 73,
@@ -3737,7 +3810,7 @@
     "uses": [
       "Fresh chopped leaves (cilantro / green dhaniya) used as the universal finishing garnish on all Indian curries and dals",
       "Dry roasted seeds ground into dhaniya powder, a foundational warm spice in garam masala and curry powders",
-      "Classical Ayurvedic cold infusion of crushed seeds (Dhaniya hima) is recognized by the European Medicines Agency as a traditional herbal medicine for symptomatic relief of mild spasmodic gastrointestinal complaints TODO(verify)"
+      "Classical Ayurvedic cold infusion of crushed seeds (Dhaniya hima) is recognized by the European Medicines Agency as a traditional herbal medicine for symptomatic relief of mild spasmodic gastrointestinal complaints"
     ],
     "careTips": [
       "Thrives in cool weather and morning sun; rapidly bolts to flower in hot, dry conditions",
@@ -3756,7 +3829,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Coriander",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "74": {
     "id": 74,
@@ -3794,7 +3868,7 @@
       "Provide full winter sun and nitrogen-rich, moisture-retentive, well-draining garden soil",
       "Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window"
     ],
-    "toxicityNote": "Wholesome and nutrient-dense in dietary amounts. High concentrations of soluble oxalic acid can bind dietary minerals and dramatically increase urinary oxalate excretion, posing a significant risk of calcium oxalate urolithiasis in susceptible individuals TODO(verify).",
+    "toxicityNote": "Wholesome and nutrient-dense in dietary amounts. High concentrations of soluble oxalic acid can bind dietary minerals and dramatically increase urinary oxalate excretion, posing a significant risk of calcium oxalate urolithiasis in susceptible individuals",
     "isToxic": false,
     "funFact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
     "referenceImages": [
@@ -3806,7 +3880,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Spinach",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "75": {
     "id": 75,
@@ -3837,7 +3912,7 @@
     "distribution": "Native to tropical Africa and South Asia; cultivated throughout India for thousands of years.",
     "uses": [
       "Light, cooling staple vegetable cooked into Lauki ki Sabzi, Lauki Kofta, Lauki Kheer, and Bengali Lau Ghonto",
-      "Fresh sweet bottle gourd juice is traditionally consumed as a cooling digestive beverage; however, bitter juice contains lethal cucurbitacins and must never be consumed. Discard immediately if any bitter taste is detected TODO(verify)",
+      "Fresh sweet bottle gourd juice is traditionally consumed as a cooling digestive beverage; however, bitter juice contains lethal cucurbitacins and must never be consumed. Discard immediately if any bitter taste is detected",
       "Dried, hollowed woody gourds historically crafted into the soundbox resonator of the sitar, tanpura, and rudra veena"
     ],
     "careTips": [
@@ -3845,7 +3920,7 @@
       "Requires full direct sunshine and organically enriched, moisture-retentive loam soil",
       "Water generously and consistently during vine growth and fruit swelling"
     ],
-    "toxicityNote": "CRITICAL TOXICITY WARNING: SWEET GOURD IS SAFE; BITTER BOTTLE GOURD IS DEADLY POISONOUS. Never consume bottle gourd juice that tastes bitter. Bitter gourds contain lethal concentrations of toxic cucurbitacins B and D, triggering severe toxic shock, upper gastrointestinal hemorrhage (hematemesis), necrotizing pancreatitis, and organ failure. The Indian Council of Medical Research (ICMR) mandates tasting a small raw piece before juicing or cooking; discard immediately if bitter TODO(verify).",
+    "toxicityNote": "CRITICAL TOXICITY WARNING: SWEET GOURD IS SAFE; BITTER BOTTLE GOURD IS DEADLY POISONOUS. Never consume bottle gourd juice that tastes bitter. Bitter gourds contain lethal concentrations of toxic cucurbitacins B and D, triggering severe toxic shock, upper gastrointestinal hemorrhage (hematemesis), necrotizing pancreatitis, and organ failure. The Indian Council of Medical Research (ICMR) mandates tasting a small raw piece before juicing or cooking; discard immediately if bitter",
     "isToxic": false,
     "funFact": "Dried, hollowed bottle gourds were among the world's very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.",
     "referenceImages": [
@@ -3857,7 +3932,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Calabash",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "76": {
     "id": 76,
@@ -3908,7 +3984,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cucurbita_moschata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "77": {
     "id": 77,
@@ -3959,7 +4036,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cucumber",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "78": {
     "id": 78,
@@ -4010,7 +4088,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Peanut",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "79": {
     "id": 79,
@@ -4049,7 +4128,7 @@
       "Grown during the monsoon season when rainfall is abundant",
       "Retting: harvested stalks must be submerged in slow-flowing fresh water for 2-3 weeks to soften and strip fibers"
     ],
-    "toxicityNote": "Tender young leaves are a popular, safe, edible green vegetable (Molokhia). Mature seed capsules contain potent cardenolide cardiac glycosides (olitoriside, corchoroside A) that induce digitalis-like cardiac toxicity and must never be consumed TODO(verify).",
+    "toxicityNote": "Tender young leaves are a popular, safe, edible green vegetable (Molokhia). Mature seed capsules contain potent cardenolide cardiac glycosides (olitoriside, corchoroside A) that induce digitalis-like cardiac toxicity and must never be consumed",
     "isToxic": false,
     "funFact": "Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as 'The Golden Fiber' for its natural golden sheen and vital economic importance.",
     "referenceImages": [
@@ -4061,7 +4140,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Corchorus_olitorius",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "80": {
     "id": 80,
@@ -4112,7 +4192,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Epipremnum_aureum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "81": {
     "id": 81,
@@ -4163,7 +4244,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dracaena_trifasciata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "82": {
     "id": 82,
@@ -4214,7 +4296,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chlorophytum_comosum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "83": {
     "id": 83,
@@ -4265,7 +4348,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Monstera_deliciosa",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "84": {
     "id": 84,
@@ -4315,7 +4399,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Spathiphyllum_wallisii",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "85": {
     "id": 85,
@@ -4366,7 +4451,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_elastica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "86": {
     "id": 86,
@@ -4417,7 +4503,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Crassula_ovata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "87": {
     "id": 87,
@@ -4468,7 +4555,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Opuntia_ficus-indica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "88": {
     "id": 88,
@@ -4518,7 +4606,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Nephrolepis_exaltata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "89": {
     "id": 89,
@@ -4566,7 +4655,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Aglaonema_commutatum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "90": {
     "id": 90,
@@ -4617,7 +4707,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dieffenbachia_seguine",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "91": {
     "id": 91,
@@ -4648,8 +4739,8 @@
     "habitat": "Rocky crevices, dry stone walls, sunny cottage gardens, and arid waste grounds.",
     "distribution": "Native to Madagascar; naturalized widely across the Indian subcontinent and tropical zones.",
     "uses": [
-      "Traditional folk remedy (Pashanbheda); in vitro and rodent assays indicate leaf extracts inhibit calcium oxalate crystal aggregation and promote diuresis. However, it cannot dissolve obstructing stones in humans, and acute urological symptoms require emergency clinical care TODO(verify)",
-      "Traditional crushed leaf poultice applied to superficial cuts, boils, and insect bites; active flavonoids (quercetin) and bufadienolides confer validated topical anti-inflammatory and wound-healing properties TODO(verify)",
+      "Traditional folk remedy (Pashanbheda); in vitro and rodent assays indicate leaf extracts inhibit calcium oxalate crystal aggregation and promote diuresis. However, it cannot dissolve obstructing stones in humans, and acute urological symptoms require emergency clinical care",
+      "Traditional crushed leaf poultice applied to superficial cuts, boils, and insect bites; active flavonoids (quercetin) and bufadienolides confer validated topical anti-inflammatory and wound-healing properties",
       "Fascinating living botany demonstration plant illustrating vegetative foliar reproduction"
     ],
     "careTips": [
@@ -4669,7 +4760,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Kalanchoe_pinnata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "92": {
     "id": 92,
@@ -4719,7 +4811,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Helianthus_annuus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "93": {
     "id": 93,
@@ -4751,7 +4844,7 @@
     "uses": [
       "Classic cool-season garden edging, rockery border plant, and flowering groundcover",
       "Tender young leaves and flower petals are edible, traditionally added to fresh spring salads",
-      "Traditional European herbal specific (Bruisewort); topical floral extracts contain polyacetylenes and saponins that assist in resolving superficial skin contusions, bruises, and muscular tenderness TODO(verify)"
+      "Traditional European herbal specific (Bruisewort); topical floral extracts contain polyacetylenes and saponins that assist in resolving superficial skin contusions, bruises, and muscular tenderness"
     ],
     "careTips": [
       "Requires cool temperatures and moist, fertile, well-drained garden soil",
@@ -4770,7 +4863,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Bellis_perennis",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "94": {
     "id": 94,
@@ -4802,14 +4896,14 @@
     "uses": [
       "Tender young spring leaves eaten as a nutritious bitter salad green packed with Vitamins A, C, and K",
       "Roasted taproots ground and brewed into a rich, caffeine-free herbal coffee substitute",
-      "Substantiated in human clinical trials and European pharmacopoeias as an effective herbal diuretic and mild cholagogue, stimulating urinary output without depleting potassium TODO(verify)"
+      "Traditionally used in European herbalism as a bitter digestive tonic and gentle herbal diuretic ('pisse-en-lit') supporting fluid balance"
     ],
     "careTips": [
       "Thrives in almost any soil and full sun; often treated as a weed due to deep taproots and windborne seeds",
       "Deep taproots draw up mineral nutrients from subsoil layers",
       "Harvest roots in autumn when inulin and bitter principles are most concentrated"
     ],
-    "toxicityNote": "Non-toxic and edible. Milky latex exuded by freshly severed stems contains sesquiterpene lactones (taraxinic acid) that can cause allergic contact dermatitis in individuals sensitized to the Asteraceae family TODO(verify).",
+    "toxicityNote": "Non-toxic and edible. Milky latex exuded by freshly severed stems contains sesquiterpene lactones (taraxinic acid) that can cause allergic contact dermatitis in individuals sensitized to the Asteraceae family",
     "isToxic": false,
     "funFact": "The name Dandelion comes from the French 'dent-de-lion', meaning 'lion's tooth', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.",
     "referenceImages": [
@@ -4821,7 +4915,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Taraxacum_officinale",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "95": {
     "id": 95,
@@ -4876,7 +4971,8 @@
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lavender"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   },
   "96": {
     "id": 96,
@@ -4906,7 +5002,7 @@
     "distribution": "Native to the Mediterranean basin; cultivated widely in Indian kitchen herb gardens and cooler hill regions.",
     "uses": [
       "Pungent culinary seasoning herb paired with roasted potatoes, vegetables, breads (focaccia), and oils",
-      "Substantiated in a randomized comparative clinical trial demonstrating standardized rosemary oil promoted hair growth in androgenetic alopecia with efficacy comparable to 2% minoxidil TODO(verify)",
+      "Traditionally used in Mediterranean folk hair care; rosemary oil rinses are reported to invigorate the scalp and promote hair vitality",
       "Traditional symbol of remembrance; 1,8-cineole scent shown to boost cognitive recall and alertness"
     ],
     "careTips": [
@@ -4931,7 +5027,8 @@
         "name": "EMA Herbal Monograph & Toxnet",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/rosmarini-aetheroleum"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": true
   },
   "97": {
     "id": 97,
@@ -4982,7 +5079,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Basil",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "98": {
     "id": 98,
@@ -5032,7 +5130,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Tulipa_gesneriana",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "99": {
     "id": 99,
@@ -5083,7 +5182,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "100": {
     "id": 100,
@@ -5133,7 +5233,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Lilium_lancifolium",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "101": {
     "id": 101,
@@ -5183,7 +5284,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Dahlia_pinnata",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "102": {
     "id": 102,
@@ -5233,7 +5335,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Zinnia_elegans",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "103": {
     "id": 103,
@@ -5283,7 +5386,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Cosmos_bipinnatus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "104": {
     "id": 104,
@@ -5314,7 +5418,7 @@
     "distribution": "Native to East and South Asia (India, China, Japan); iconic winter flower across the northern and eastern Indian plains.",
     "uses": [
       "Celebrated winter exhibition and garland flower (Sevanti / Chandromallika) in festive Indian winter markets",
-      "Traditional herbal tea in East Asian pharmacopoeias; dried flower infusions rich in luteolin and apigenin exhibit validated cooling, anti-inflammatory, and hepatoprotective properties in preclinical models TODO(verify)",
+      "Traditional herbal tea in East Asian pharmacopoeias; dried flower infusions rich in luteolin and apigenin exhibit validated cooling, anti-inflammatory, and hepatoprotective properties in preclinical models",
       "Long-lasting cut flower used in wedding decorations and decorative vases"
     ],
     "careTips": [
@@ -5334,7 +5438,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Chrysanthemum_indicum",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "105": {
     "id": 105,
@@ -5384,7 +5489,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Gerbera_jamesonii",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "106": {
     "id": 106,
@@ -5434,7 +5540,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Rhynchostylis_retusa",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "107": {
     "id": 107,
@@ -5485,7 +5592,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Pontederia_crassipes",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "108": {
     "id": 108,
@@ -5516,7 +5624,7 @@
     "distribution": "Native to tropical America; widely naturalized throughout India and tropical Asia.",
     "uses": [
       "Famous botanical curiosity demonstrating rapid plant neurobiology and turgor-driven movement (pulvini cells)",
-      "Traditional Ayurvedic specific (Lajjalu); tannin-rich root and aerial decoctions possess verified in vitro coagulation-promoting and astringent wound-healing properties TODO(verify)",
+      "Traditional Ayurvedic specific (Lajjalu); tannin-rich root and aerial decoctions possess verified in vitro coagulation-promoting and astringent wound-healing properties",
       "Groundcover nitrogen-fixing legume in degraded tropical soils"
     ],
     "careTips": [
@@ -5524,7 +5632,7 @@
       "Keep soil consistently moist using well-draining loamy potting soil",
       "Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy"
     ],
-    "toxicityNote": "TOXIC IN QUANTITY TO GRAZING LIVESTOCK: Foliage and seeds contain the non-protein amino acid mimosine, which inhibits hair follicle cell division and thyroid peroxidase. Overgrazing causes hair loss (alopecia), goiter, and emaciation in cattle and horses. Non-toxic to touch TODO(verify).",
+    "toxicityNote": "TOXIC IN QUANTITY TO GRAZING LIVESTOCK: Foliage and seeds contain the non-protein amino acid mimosine, which inhibits hair follicle cell division and thyroid peroxidase. Overgrazing causes hair loss (alopecia), goiter, and emaciation in cattle and horses. Non-toxic to touch",
     "isToxic": true,
     "funFact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
     "referenceImages": [
@@ -5536,7 +5644,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Mimosa_pudica",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "109": {
     "id": 109,
@@ -5587,7 +5696,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Parthenium_hysterophorus",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": false
   },
   "110": {
     "id": 110,
@@ -5626,7 +5736,7 @@
       "Tolerates moderate foot traffic and close mowing",
       "Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation"
     ],
-    "toxicityNote": "Non-toxic in small amounts. Contains cyanogenic glucosides (linamarin and lotaustralin) released upon tissue crushing, and can induce life-threatening frothy bloat in cattle when grazed as lush, wet pasture without dry roughage TODO(verify).",
+    "toxicityNote": "Non-toxic in small amounts. Contains cyanogenic glucosides (linamarin and lotaustralin) released upon tissue crushing, and can induce life-threatening frothy bloat in cattle when grazed as lush, wet pasture without dry roughage",
     "isToxic": false,
     "funFact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
     "referenceImages": [
@@ -5638,7 +5748,8 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
     },
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Trifolium_repens",
-    "sources": []
+    "sources": [],
+    "hasUnverifiedDetails": true
   },
   "111": {
     "id": 111,
@@ -5694,6 +5805,7 @@
         "name": "EMA European Medicines Agency Herbal Monograph",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/quercus-cortex"
       }
-    ]
+    ],
+    "hasUnverifiedDetails": false
   }
 }

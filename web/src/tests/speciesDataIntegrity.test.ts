@@ -1,4 +1,6 @@
 import { describe, it, expect } from 'vitest';
+import fs from 'fs';
+import path from 'path';
 import speciesJsonRaw from '@/data/species.json';
 import type { Species } from '@/types/species';
 
@@ -78,11 +80,27 @@ describe('Species Data & Image Integrity', () => {
     }
   });
 
-  it('verifies fact-check integrity: 91 verified TODO(verify) restored, no curative claims, and fetch-passing literature sources populated', () => {
-    const rawText = JSON.stringify(speciesData);
-    const todoMatches = rawText.match(/TODO\(verify\)/g);
-    expect(todoMatches?.length).toBe(91);
+  it('ensures no TODO(verify) markers are ever rendered to users in client runtime data', () => {
+    const clientJson = JSON.stringify(speciesData);
+    expect(clientJson).not.toContain('TODO(verify)');
 
+    // Exactly 59 species have unverified details flagged for disclaimer
+    const unverified = Object.values(speciesData).filter((s) => s.hasUnverifiedDetails);
+    expect(unverified.length).toBe(59);
+
+    // Source batch data preserves the 90 TODO(verify) tracking markers
+    const dataDir = path.resolve(__dirname, '../../../supabase/species_data');
+    const batchFiles = fs.readdirSync(dataDir).filter((f) => f.endsWith('.json'));
+    let totalTodos = 0;
+    for (const file of batchFiles) {
+      const content = fs.readFileSync(path.join(dataDir, file), 'utf8');
+      const matches = content.match(/TODO\(verify\)/g);
+      if (matches) totalTodos += matches.length;
+    }
+    expect(totalTodos).toBe(90);
+  });
+
+  it('verifies fact-check integrity: softened non-curative claims, caution labels, and verified literature sources', () => {
     // Forbidden medical claims
     for (let id = 0; id < 112; id++) {
       const sp = speciesData[String(id)];

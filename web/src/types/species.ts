@@ -35,6 +35,7 @@ export interface Species {
   } | null;
   wikipediaUrl: string | null;
   sources?: SpeciesSource[];
+  hasUnverifiedDetails?: boolean;
 }
 
 export interface SpeciesLookAlike {

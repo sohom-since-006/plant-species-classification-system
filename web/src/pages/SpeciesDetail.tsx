@@ -221,6 +221,12 @@ export function SpeciesDetail() {
           )}
         </div>
 
+        {species.hasUnverifiedDetails && (
+          <p className="text-[11px] font-mono text-[var(--fg-subtle)] text-center -mt-4">
+            Educational information, not medical advice. Some details are not independently verified.
+          </p>
+        )}
+
         {/* Toxicity / Safety Notice */}
         {species.isToxic || (species.toxicityNote && (species.toxicityNote.includes('WARNING') || species.toxicityNote.includes('TOXIC') || species.toxicityNote.includes('ALERT'))) ? (
           <div className="rounded-3xl p-6 bg-rose-500/10 border border-rose-500/30 flex items-start gap-4">

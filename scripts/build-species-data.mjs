@@ -197,11 +197,20 @@ export function buildAndValidateSpeciesData() {
   const clientSpeciesMap = {};
   const metaMap = {};
 
+  // Helper to scrub internal developer markers from user-facing runtime strings
+  function stripTodo(str) {
+    if (!str || typeof str !== 'string') return str;
+    return str.replace(/\s*TODO\(verify\)\.?/g, '').trim();
+  }
+
   for (let id = 0; id < 112; id++) {
     const s = speciesMap.get(id);
     allSpecies.push(s);
 
-    // Format camelCase object for client runtime
+    const fullJson = JSON.stringify(s);
+    const hasUnverifiedDetails = fullJson.includes('TODO(verify)');
+
+    // Format camelCase object for client runtime (scrubbing raw TODO markers for user-facing views)
     const clientRecord = {
       id: s.id,
       slug: s.slug,
@@ -214,19 +223,20 @@ export function buildAndValidateSpeciesData() {
       namesHindi: s.names_hindi || null,
       namesBengali: s.names_bengali || null,
       otherNames: s.other_names || [],
-      description: s.description,
-      identifyingFeatures: s.identifying_features || [],
-      habitat: s.habitat || null,
-      distribution: s.distribution || null,
-      uses: s.uses || [],
-      careTips: s.care_tips || [],
-      toxicityNote: s.toxicity_note || null,
+      description: stripTodo(s.description),
+      identifyingFeatures: (s.identifying_features || []).map(stripTodo),
+      habitat: stripTodo(s.habitat) || null,
+      distribution: stripTodo(s.distribution) || null,
+      uses: (s.uses || []).map(stripTodo),
+      careTips: (s.care_tips || []).map(stripTodo),
+      toxicityNote: stripTodo(s.toxicity_note) || null,
       isToxic: Boolean(s.is_toxic),
-      funFact: s.fun_fact || null,
+      funFact: stripTodo(s.fun_fact) || null,
       referenceImages: s.reference_images || [],
       imageCredit: s.image_credit || null,
       wikipediaUrl: s.wikipedia_url || null,
       sources: s.sources || [],
+      hasUnverifiedDetails,
     };
 
     clientSpeciesMap[id] = clientRecord;

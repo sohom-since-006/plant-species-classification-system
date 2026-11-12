@@ -138,12 +138,12 @@ Evaluated on 3,401 held-out test split specimens across all 112 cataloged specie
 | docs/TESTING.md | Test strategy |
 | docs/MasterPrompt.md | One prompt to build the whole site |
 
-## ⚠️ Disclaimer
+## ⚠️ Limitations & Botanical Verification
 
-Predictions are probabilistic and can be wrong, especially for look-alike
-species or low-quality photos. Medicinal and edibility information is
-educational only and is not medical advice. Never consume a plant based on
-this app's identification.
+- **Catalog Scope:** PlantAI supports a closed catalog of 112 botanical species (~70 Indian native/cultivated species and ~42 global ornamentals).
+- **Probabilistic Predictions:** Predictions are probabilistic and can produce errors, particularly with non-plant imagery, extreme close-ups, or visually indistinct look-alikes.
+- **Botanical & Medicinal Information:** Medicinal and traditional uses are strictly educational information, not medical advice. While 14 claims are backed by direct public literature sources (ASPCA Animal Poison Control and European Medicines Agency Herbal Monographs), remaining traditional folk claims are cautiously softened and tracked in [`docs/KNOWN_LIMITATIONS.md`](docs/KNOWN_LIMITATIONS.md).
+- **Safety Precedence:** Never consume, ingest, or apply any plant medicinally based on an algorithmic prediction. Consult a certified healthcare professional or botanist.
 
 ## 🙏 Acknowledgements
 
@@ -154,5 +154,3 @@ on GBIF and iNaturalist. Photographer credits and licenses are logged in
 ## 📄 License
 
 MIT License for code. Dataset images preserve their respective original CC licenses (CC0, CC-BY, CC-BY-NC).
-
-```
