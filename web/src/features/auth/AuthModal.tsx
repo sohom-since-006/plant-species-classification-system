@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSession } from './useSession';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { X, ArrowUpRight } from '@/components/icons';
+import { BrandLogo } from '@/components/brand';
 
 export function AuthModal() {
   const {
@@ -76,8 +77,8 @@ export function AuthModal() {
 
         {/* Modal Header */}
         <div className="space-y-1.5 text-center">
-          <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500/10 text-[var(--accent)] border border-emerald-500/30 mb-1">
-            <span className="font-heading italic font-bold text-lg">P</span>
+          <div className="inline-flex items-center justify-center w-11 h-11 rounded-full liquid-glass text-[var(--accent)] border border-emerald-500/30 mb-1">
+            <BrandLogo size={24} />
           </div>
           <h2 id="auth-modal-title" className="font-heading italic text-2xl text-[var(--fg)]">
             {mode === 'signin' ? 'Welcome Back' : 'Create Botanical Profile'}

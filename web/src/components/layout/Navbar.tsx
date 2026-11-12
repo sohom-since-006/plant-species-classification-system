@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { ArrowUpRight, Menu, X, User as UserIcon } from '@/components/icons';
+import { BrandLogo } from '@/components/brand';
 import { useSession } from '@/features/auth/useSession';
 
 const links = [
@@ -30,14 +31,14 @@ export function Navbar() {
     <>
       <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16" role="navigation">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Monogram */}
+          {/* Brand Logo Monogram */}
           <Link
             to="/"
             data-glow=""
             className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0 hover:scale-105 transition-transform"
             aria-label="Plant Species Classification System Home"
           >
-            <span className="font-heading italic text-2xl leading-none text-[var(--fg)]">P</span>
+            <BrandLogo size={28} />
           </Link>
 
           {/* Center nav pill — hidden on mobile */}
