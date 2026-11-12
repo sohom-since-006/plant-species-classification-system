@@ -179,7 +179,7 @@
     "distribution": "Native to tropical America; widely naturalized throughout India and tropical Asia.",
     "uses": [
       "Famous botanical curiosity demonstrating rapid plant neurobiology and turgor-driven movement (pulvini cells)",
-      "Traditional Ayurvedic specific (Lajjalu); tannin-rich root and aerial decoctions possess verified in vitro coagulation-promoting and astringent wound-healing properties.",
+      "Traditional Ayurvedic specific (Lajjalu); tannin-rich root and aerial decoctions possess verified in vitro coagulation-promoting and astringent wound-healing properties TODO(verify)",
       "Groundcover nitrogen-fixing legume in degraded tropical soils"
     ],
     "care_tips": [
@@ -187,7 +187,7 @@
       "Keep soil consistently moist using well-draining loamy potting soil",
       "Avoid triggering leaf folding excessively, as moving leaves consumes considerable biochemical energy"
     ],
-    "toxicity_note": "TOXIC IN QUANTITY TO GRAZING LIVESTOCK: Foliage and seeds contain the non-protein amino acid mimosine, which inhibits hair follicle cell division and thyroid peroxidase. Overgrazing causes hair loss (alopecia), goiter, and emaciation in cattle and horses. Non-toxic to touch.",
+    "toxicity_note": "TOXIC IN QUANTITY TO GRAZING LIVESTOCK: Foliage and seeds contain the non-protein amino acid mimosine, which inhibits hair follicle cell division and thyroid peroxidase. Overgrazing causes hair loss (alopecia), goiter, and emaciation in cattle and horses. Non-toxic to touch TODO(verify).",
     "fun_fact": "The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.",
     "reference_images": [
       "/species/108.webp"
@@ -199,16 +199,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
     },
     "is_toxic": true,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Toxicon / Reis et al.) & USDA Agricultural Research Service",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808657/"
-      },
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Ahmad et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497755/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 109,
@@ -298,7 +289,7 @@
       "Tolerates moderate foot traffic and close mowing",
       "Inoculate seed with Rhizobium leguminosarum before planting to maximize nitrogen fixation"
     ],
-    "toxicity_note": "Non-toxic in small amounts. Contains cyanogenic glucosides (linamarin and lotaustralin) released upon tissue crushing, and can induce life-threatening frothy bloat in cattle when grazed as lush, wet pasture without dry roughage.",
+    "toxicity_note": "Non-toxic in small amounts. Contains cyanogenic glucosides (linamarin and lotaustralin) released upon tissue crushing, and can induce life-threatening frothy bloat in cattle when grazed as lush, wet pasture without dry roughage TODO(verify).",
     "fun_fact": "The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.",
     "reference_images": [
       "/species/110.webp"
@@ -310,12 +301,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Agric Food Chem / Collinge & Hughes) & USDA ARS",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808658/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 111,

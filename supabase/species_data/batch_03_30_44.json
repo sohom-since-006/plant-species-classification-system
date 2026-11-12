@@ -35,7 +35,7 @@
       "Requires full scorching sun; flowers poorly in shade",
       "Extremely drought tolerant once established, but susceptible to brittle limb breakage in gale winds"
     ],
-    "toxicity_note": "Foliage and flowers are generally non-toxic in casual exposure. Raw mature seeds contain mild saponins, tannins, and non-protein amino acids; safety for internal human consumption is unverified and ingestion should be avoided.",
+    "toxicity_note": "Foliage and flowers are generally non-toxic in casual exposure. Raw mature seeds contain mild saponins, tannins, and non-protein amino acids; safety for internal human consumption is unverified and ingestion should be avoided TODO(verify).",
     "fun_fact": "Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.",
     "reference_images": [
       "/species/30.webp"
@@ -47,12 +47,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "Kew Plants of the World Online & World Agroforestry",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:491953-1"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 31,
@@ -82,14 +77,14 @@
     "distribution": "Native to Madagascar; universally naturalized across India and pantropical zones.",
     "uses": [
       "Commercial source of critical chemotherapy alkaloids vinblastine and vincristine used for leukemia and lymphoma",
-      "Continuous-blooming ornamental groundcover and patio pot plant"
+      "Continuous-blooming ornamental groundcover and patio pot plant TODO(verify)"
     ],
     "care_tips": [
       "Thrives in full sun and thrives in poor, sandy, gritty soils",
       "Never overwater; highly vulnerable to phytophthora root rot in waterlogged pots",
       "Pinch young shoots to prevent leggy growth"
     ],
-    "toxicity_note": "CRITICAL TOXICITY WARNING: Contains over 70 cytotoxic vinca alkaloids (vincristine, vinblastine). While purified pharmaceuticals are vital oncological agents, ingestion of raw foliage, decoctions, or folk teas taken for diabetes is medically hazardous, causing severe bone marrow suppression (leukopenia), peripheral neuropathy, hypotension, and fetal toxicity. Ingestion is strictly contraindicated.",
+    "toxicity_note": "CRITICAL TOXICITY WARNING: Contains over 70 cytotoxic vinca alkaloids (vincristine, vinblastine). While purified pharmaceuticals are vital oncological agents, ingestion of raw foliage, decoctions, or folk teas taken for diabetes is medically hazardous, causing severe bone marrow suppression (leukopenia), peripheral neuropathy, hypotension, and fetal toxicity. Ingestion is strictly contraindicated TODO(verify).",
     "fun_fact": "Sadabahar literally means 'evergreen' or 'always in bloom' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.",
     "reference_images": [
       "/species/31.webp"
@@ -101,16 +96,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"
     },
     "is_toxic": true,
-    "sources": [
-      {
-        "name": "NCBI PubMed (PMC3153704 / Nejat et al.) & FDA Vinca Alkaloid Warnings",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22131824/"
-      },
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Singh et al.) & FDA Toxicity Alert",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22437621/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 32,
@@ -140,7 +126,7 @@
     "distribution": "Native to South India and Sri Lanka; widely cultivated throughout tropical Asia and the Caribbean.",
     "uses": [
       "Sacred flower offered in Hindu temple pujas, especially in Kerala and Bengal",
-      "Traditional Ayurvedic root and flower decoctions utilized for dysentery, oral sores, and skin eruptions; laboratory screenings corroborate astringent tannin and antimicrobial activities against enteric pathogens.",
+      "Traditional Ayurvedic root and flower decoctions utilized for dysentery, oral sores, and skin eruptions; laboratory screenings corroborate astringent tannin and antimicrobial activities against enteric pathogens TODO(verify)",
       "Hardy, shearable formal hedge and border landscape shrub"
     ],
     "care_tips": [
@@ -160,12 +146,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Baliga et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22437622/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 33,
@@ -247,7 +228,7 @@
     "uses": [
       "Vibrant autumn ornamental garden display and long-lasting dried floral arrangements",
       "Young tender shoots and leaves consumed as a nutritious potherb (Lagos spinach) in traditional cooking",
-      "Used in Traditional Chinese Medicine (Semen Celosiae) and Indian folk medicine; seed extracts rich in celosian and phenolic compounds demonstrate therapeutic anti-inflammatory, hepatoprotective, and ocular soothing effects in animal models."
+      "Used in Traditional Chinese Medicine (Semen Celosiae) and Indian folk medicine; seed extracts rich in celosian and phenolic compounds demonstrate therapeutic anti-inflammatory, hepatoprotective, and ocular soothing effects in animal models TODO(verify)"
     ],
     "care_tips": [
       "Position in full intense sunlight; shade causes plumed heads to become pale and moldy",
@@ -266,12 +247,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Tang et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808648/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 35,
@@ -353,7 +329,7 @@
     "uses": [
       "Vigorous architectural tropical screening and wetland landscape beautification",
       "Hard, dense round seeds historically utilized as shotgun pellets ('Indian Shot') and prayer rosary beads",
-      "Underground starchy rhizomes produce edible 'achira' or Queensland arrowroot, containing exceptionally large, easily digestible starch granules utilized as wholesome convalescent food in traditional agriculture."
+      "Underground starchy rhizomes produce edible 'achira' or Queensland arrowroot, containing exceptionally large, easily digestible starch granules utilized as wholesome convalescent food in traditional agriculture TODO(verify)"
     ],
     "care_tips": [
       "Requires abundant moisture; thrives even in boggy soil or pond margins",
@@ -372,12 +348,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "Kew Plants of the World Online & FAO Agronomy",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:79548-1"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 37,
@@ -407,7 +378,7 @@
     "distribution": "Native to India, Sri Lanka, and Southeast Asia; widely cultivated as a monsoon garden favorite.",
     "uses": [
       "Traditional natural dye: crushed petals applied as a substitute for Henna (Mehendi) to stain fingernails red",
-      "Traditional folk poultice of crushed leaves and petals applied to minor scalds, burns, and insect bites; active naphthoquinones (lawsone) provide localized antimicrobial and cooling relief.",
+      "Traditional folk poultice of crushed leaves and petals applied to minor scalds, burns, and insect bites; active naphthoquinones (lawsone) provide localized antimicrobial and cooling relief TODO(verify)",
       "High-nectar floral bed attracting native bumblebees and butterflies during the rainy season"
     ],
     "care_tips": [
@@ -431,10 +402,6 @@
       {
         "name": "ASPCA Animal Poison Control",
         "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/impatiens"
-      },
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Ding et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22437623/"
       }
     ]
   },
@@ -474,7 +441,7 @@
       "Extremely hardy and drought-resistant once deep taproots are established",
       "Requires minimal pruning; protect young saplings from livestock grazing"
     ],
-    "toxicity_note": "Seed pod pulp has powerful anthraquinone cathartic action; consuming doses beyond therapeutic levels produces severe watery diarrhea, abdominal cramping, and fluid imbalance.",
+    "toxicity_note": "Seed pod pulp has powerful anthraquinone cathartic action; consuming doses beyond therapeutic levels produces severe watery diarrhea, abdominal cramping, and fluid imbalance TODO(verify).",
     "fun_fact": "Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.",
     "reference_images": [
       "/species/38.webp"
@@ -487,10 +454,6 @@
     },
     "is_toxic": false,
     "sources": [
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Danish et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22437624/"
-      },
       {
         "name": "EMA Herbal Monograph & Ayurvedic Pharmacopoeia of India",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/sennae-fructus"
@@ -527,14 +490,14 @@
     "uses": [
       "Dry flowers boiled to produce the sacred, skin-friendly traditional saffron-orange herbal Holi dye (Teshu)",
       "Stiff leathery leaves stitched together with bamboo splints into traditional disposable dining plates (pattals)",
-      "Exuded gum resin (Kamarkas) and bark decoctions contain high condensed pyrocatechol tannins that provide recognized astringent and soothing activity for diarrhea and throat gargles."
+      "Exuded gum resin (Kamarkas) and bark decoctions contain high condensed pyrocatechol tannins that provide recognized astringent and soothing activity for diarrhea and throat gargles TODO(verify)"
     ],
     "care_tips": [
       "Suited for hot, dry continental climates and withstands alkaline, sodic, and waterlogged soils",
       "Requires full blazing sunshine throughout the year",
       "Slow-growing initially while it establishes a deep drought-resistant taproot"
     ],
-    "toxicity_note": "Seeds contain butin, proteolytic enzymes, and anthelmintic palasonin that are toxic to gut mucosa if consumed raw in high doses; therapeutic use requires careful Ayurvedic purification. Bright flowers are non-toxic and traditionally edible.",
+    "toxicity_note": "Seeds contain butin, proteolytic enzymes, and anthelmintic palasonin that are toxic to gut mucosa if consumed raw in high doses; therapeutic use requires careful Ayurvedic purification. Bright flowers are non-toxic and traditionally edible TODO(verify).",
     "fun_fact": "The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.",
     "reference_images": [
       "/species/39.webp"
@@ -546,16 +509,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Burlinson et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808650/"
-      },
-      {
-        "name": "NCBI PubMed (Indian J Exp Biol / Gaurav et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22437625/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 40,
@@ -593,7 +547,7 @@
       "Withhold heavy irrigation prior to flowering to stimulate flower panicle emergence",
       "Protect young graft trees from frost and waterlogging"
     ],
-    "toxicity_note": "Fruit pulp is completely safe and wholesome. The tree sap, bark, floral pollen, and outer green peel contain allergenic alkylresorcinols (5-resorcinol) cross-reactive with urushiol, causing severe contact dermatitis ('mango mouth' or cheilitis) in poison-ivy sensitive individuals.",
+    "toxicity_note": "Fruit pulp is completely safe and wholesome. The tree sap, bark, floral pollen, and outer green peel contain allergenic alkylresorcinols (5-resorcinol) cross-reactive with urushiol, causing severe contact dermatitis ('mango mouth' or cheilitis) in poison-ivy sensitive individuals TODO(verify).",
     "fun_fact": "India produces over 40% of the world's total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.",
     "reference_images": [
       "/species/40.webp"
@@ -605,12 +559,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Clin Dermatol / McGovern & Barkley)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21683050/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 41,
@@ -739,7 +688,7 @@
     "distribution": "Native to tropical Mesoamerica; universally naturalized and cultivated across India.",
     "uses": [
       "Sweet ripe fruit eaten fresh; green raw fruit cooked in curries and shredded in digestive salads",
-      "Fresh standardized Carica papaya leaf extract has been corroborated in multiple randomized clinical trials and meta-analyses as a supportive adjuvant that accelerates platelet recovery in mild-to-moderate dengue fever under medical supervision.",
+      "Fresh standardized Carica papaya leaf extract has been corroborated in multiple randomized clinical trials and meta-analyses as a supportive adjuvant that accelerates platelet recovery in mild-to-moderate dengue fever under medical supervision TODO(verify)",
       "Rich source of the proteolytic enzyme papain, used commercially as a meat tenderizer and digestive aid"
     ],
     "care_tips": [
@@ -747,7 +696,7 @@
       "Water moderately and regularly during dry periods",
       "Replace plants every 3 to 4 years as older trees decline in productivity and become unwieldy"
     ],
-    "toxicity_note": "Fully ripe papaya fruit is safe and nutritious. UNRIPE raw green papaya and milky latex contain high concentrations of proteolytic enzymes (papain) that induce violent spasmodic uterine contractions in animal models; unripe papaya is strictly contraindicated in pregnancy.",
+    "toxicity_note": "Fully ripe papaya fruit is safe and nutritious. UNRIPE raw green papaya and milky latex contain high concentrations of proteolytic enzymes (papain) that induce violent spasmodic uterine contractions in animal models; unripe papaya is strictly contraindicated in pregnancy TODO(verify).",
     "fun_fact": "Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.",
     "reference_images": [
       "/species/43.webp"
@@ -759,16 +708,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Br J Nutr / Adebiyi et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/12144723/"
-      },
-      {
-        "name": "NCBI PubMed (J Assoc Physicians India / Gadhwal et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497747/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 44,
@@ -800,7 +740,7 @@
     "uses": [
       "Nutritious dessert fruit eaten fresh with chaat masala or cooked into jellies and jams",
       "Extremely rich natural source of Vitamin C (up to 4 times higher than citrus fruits)",
-      "Chewing tender young leaves or utilizing leaf decoctions as an oral rinse is supported by pharmacological screenings showing high concentrations of quercetin and tannins that exert astringent, antibacterial, and anti-plaque actions."
+      "Chewing tender young leaves or utilizing leaf decoctions as an oral rinse is supported by pharmacological screenings showing high concentrations of quercetin and tannins that exert astringent, antibacterial, and anti-plaque actions TODO(verify)"
     ],
     "care_tips": [
       "Requires full direct sun and tolerates a wide variety of soils from sandy to heavy clay",
@@ -819,11 +759,6 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Phytother Res / Gutierrez et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/28551778/"
-      }
-    ]
+    "sources": []
   }
 ]

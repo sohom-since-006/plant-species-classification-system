@@ -295,7 +295,7 @@
       "Needs hot weather, full sun, and at least 180 to 200 frost-free sunny days",
       "Keep dry and warm during boll bursting and lint harvesting to preserve fiber quality"
     ],
-    "toxicity_note": "Purified fiber and refined cottonseed oil are safe. Raw unrefined cottonseed and foliage contain the toxic polyphenolic pigment gossypol, which causes severe myocardial necrosis, pulmonary edema, and male sterility in monogastric animals and humans.",
+    "toxicity_note": "Purified fiber and refined cottonseed oil are safe. Raw unrefined cottonseed and foliage contain the toxic polyphenolic pigment gossypol, which causes severe myocardial necrosis, pulmonary edema, and male sterility in monogastric animals and humans TODO(verify).",
     "fun_fact": "Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.",
     "reference_images": [
       "/species/65.webp"
@@ -307,12 +307,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Toxicol Appl Pharmacol / Kenar et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808654/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 66,
@@ -444,7 +439,7 @@
     "distribution": "Native to Mesoamerica; introduced to India by Portuguese traders in the 16th century, now an inseparable national staple.",
     "uses": [
       "Indispensable spice added fresh (hari mirch) or sun-dried and powdered (lal mirch) to almost all savory Indian dishes",
-      "Standardized topical capsaicin formulations are medically approved for relieving neuropathic pain in post-herpetic neuralgia and osteoarthritis through the depletion of substance P in sensory nerve terminals.",
+      "Standardized topical capsaicin formulations are medically approved for relieving neuropathic pain in post-herpetic neuralgia and osteoarthritis through the depletion of substance P in sensory nerve terminals TODO(verify)",
       "Traditional Indian protective amulets (nimbu-mirchi) hung to ward off the evil eye (nazar)"
     ],
     "care_tips": [
@@ -464,12 +459,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Cochrane Database Syst Rev / Derry et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497751/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 69,
@@ -654,7 +644,7 @@
     "uses": [
       "Fundamental aromatic flavor foundation for Indian tadkas, gravies, biryanis, and salads",
       "High natural source of quercetin, a powerful antioxidant flavonoid supporting cellular health",
-      "Folk remedy for hair thinning; a pilot clinical trial showed crude topical onion juice promoted hair regrowth in patchy alopecia areata due to high sulfur and flavonoid content, though further large-scale validation is needed."
+      "Folk remedy for hair thinning; a pilot clinical trial showed crude topical onion juice promoted hair regrowth in patchy alopecia areata due to high sulfur and flavonoid content, though further large-scale validation is needed TODO(verify)"
     ],
     "care_tips": [
       "Needs full direct sun and fertile, loose, sandy loam soil free of rocks",
@@ -673,12 +663,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Dermatol / Sharquie & Al-Obaidi)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/12126069/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 73,
@@ -710,7 +695,7 @@
     "uses": [
       "Fresh chopped leaves (cilantro / green dhaniya) used as the universal finishing garnish on all Indian curries and dals",
       "Dry roasted seeds ground into dhaniya powder, a foundational warm spice in garam masala and curry powders",
-      "Classical Ayurvedic cold infusion of crushed seeds (Dhaniya hima) is recognized by the European Medicines Agency as a traditional herbal medicine for symptomatic relief of mild spasmodic gastrointestinal complaints."
+      "Classical Ayurvedic cold infusion of crushed seeds (Dhaniya hima) is recognized by the European Medicines Agency as a traditional herbal medicine for symptomatic relief of mild spasmodic gastrointestinal complaints TODO(verify)"
     ],
     "care_tips": [
       "Thrives in cool weather and morning sun; rapidly bolts to flower in hot, dry conditions",
@@ -729,12 +714,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "EMA Herbal Monograph & Ayurvedic Pharmacopoeia",
-        "url": "https://www.ema.europa.eu/en/medicines/herbal/coriandri-fructus"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 74,
@@ -772,7 +752,7 @@
       "Provide full winter sun and nitrogen-rich, moisture-retentive, well-draining garden soil",
       "Harvest outer leaves continuously (cut-and-come-again) to prolong the vegetative harvest window"
     ],
-    "toxicity_note": "Wholesome and nutrient-dense in dietary amounts. High concentrations of soluble oxalic acid can bind dietary minerals and dramatically increase urinary oxalate excretion, posing a significant risk of calcium oxalate urolithiasis in susceptible individuals.",
+    "toxicity_note": "Wholesome and nutrient-dense in dietary amounts. High concentrations of soluble oxalic acid can bind dietary minerals and dramatically increase urinary oxalate excretion, posing a significant risk of calcium oxalate urolithiasis in susceptible individuals TODO(verify).",
     "fun_fact": "The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.",
     "reference_images": [
       "/species/74.webp"
@@ -784,11 +764,6 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Am J Clin Nutr / Chai & Liebman) & Harvard Health",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497752/"
-      }
-    ]
+    "sources": []
   }
 ]

@@ -28,7 +28,7 @@
     "distribution": "Native to tropical Africa and South Asia; cultivated throughout India for thousands of years.",
     "uses": [
       "Light, cooling staple vegetable cooked into Lauki ki Sabzi, Lauki Kofta, Lauki Kheer, and Bengali Lau Ghonto",
-      "Fresh sweet bottle gourd juice is traditionally consumed as a cooling digestive beverage; however, bitter juice contains lethal cucurbitacins and must never be consumed. Discard immediately if any bitter taste is detected.",
+      "Fresh sweet bottle gourd juice is traditionally consumed as a cooling digestive beverage; however, bitter juice contains lethal cucurbitacins and must never be consumed. Discard immediately if any bitter taste is detected TODO(verify)",
       "Dried, hollowed woody gourds historically crafted into the soundbox resonator of the sitar, tanpura, and rudra veena"
     ],
     "care_tips": [
@@ -36,7 +36,7 @@
       "Requires full direct sunshine and organically enriched, moisture-retentive loam soil",
       "Water generously and consistently during vine growth and fruit swelling"
     ],
-    "toxicity_note": "CRITICAL TOXICITY WARNING: SWEET GOURD IS SAFE; BITTER BOTTLE GOURD IS DEADLY POISONOUS. Never consume bottle gourd juice that tastes bitter. Bitter gourds contain lethal concentrations of toxic cucurbitacins B and D, triggering severe toxic shock, upper gastrointestinal hemorrhage (hematemesis), necrotizing pancreatitis, and organ failure. The Indian Council of Medical Research (ICMR) mandates tasting a small raw piece before juicing or cooking; discard immediately if bitter.",
+    "toxicity_note": "CRITICAL TOXICITY WARNING: SWEET GOURD IS SAFE; BITTER BOTTLE GOURD IS DEADLY POISONOUS. Never consume bottle gourd juice that tastes bitter. Bitter gourds contain lethal concentrations of toxic cucurbitacins B and D, triggering severe toxic shock, upper gastrointestinal hemorrhage (hematemesis), necrotizing pancreatitis, and organ failure. The Indian Council of Medical Research (ICMR) mandates tasting a small raw piece before juicing or cooking; discard immediately if bitter TODO(verify).",
     "fun_fact": "Dried, hollowed bottle gourds were among the world's very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.",
     "reference_images": [
       "/species/75.webp"
@@ -48,16 +48,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Indian J Med Res / ICMR Advisory on Bottle Gourd)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808655/"
-      },
-      {
-        "name": "Indian Council of Medical Research (ICMR) & Indian J Med Res",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/22131824/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 76,
@@ -249,7 +240,7 @@
       "Grown during the monsoon season when rainfall is abundant",
       "Retting: harvested stalks must be submerged in slow-flowing fresh water for 2-3 weeks to soften and strip fibers"
     ],
-    "toxicity_note": "Tender young leaves are a popular, safe, edible green vegetable (Molokhia). Mature seed capsules contain potent cardenolide cardiac glycosides (olitoriside, corchoroside A) that induce digitalis-like cardiac toxicity and must never be consumed.",
+    "toxicity_note": "Tender young leaves are a popular, safe, edible green vegetable (Molokhia). Mature seed capsules contain potent cardenolide cardiac glycosides (olitoriside, corchoroside A) that induce digitalis-like cardiac toxicity and must never be consumed TODO(verify).",
     "fun_fact": "Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as 'The Golden Fiber' for its natural golden sheen and vital economic importance.",
     "reference_images": [
       "/species/79.webp"
@@ -261,12 +252,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Toxicon / Negm et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/21808656/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 80,

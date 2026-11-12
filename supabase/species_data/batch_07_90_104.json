@@ -79,8 +79,8 @@
     "habitat": "Rocky crevices, dry stone walls, sunny cottage gardens, and arid waste grounds.",
     "distribution": "Native to Madagascar; naturalized widely across the Indian subcontinent and tropical zones.",
     "uses": [
-      "Traditional folk remedy (Pashanbheda); in vitro and rodent assays indicate leaf extracts inhibit calcium oxalate crystal aggregation and promote diuresis. However, it cannot dissolve obstructing stones in humans, and acute urological symptoms require emergency clinical care.",
-      "Traditional crushed leaf poultice applied to superficial cuts, boils, and insect bites; active flavonoids (quercetin) and bufadienolides confer validated topical anti-inflammatory and wound-healing properties.",
+      "Traditional folk remedy (Pashanbheda); in vitro and rodent assays indicate leaf extracts inhibit calcium oxalate crystal aggregation and promote diuresis. However, it cannot dissolve obstructing stones in humans, and acute urological symptoms require emergency clinical care TODO(verify)",
+      "Traditional crushed leaf poultice applied to superficial cuts, boils, and insect bites; active flavonoids (quercetin) and bufadienolides confer validated topical anti-inflammatory and wound-healing properties TODO(verify)",
       "Fascinating living botany demonstration plant illustrating vegetative foliar reproduction"
     ],
     "care_tips": [
@@ -100,16 +100,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"
     },
     "is_toxic": true,
-    "sources": [
-      {
-        "name": "NCBI PubMed (Ayu / Yadav et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/26609235/"
-      },
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Kamboj & Saluja)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497753/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 92,
@@ -191,7 +182,7 @@
     "uses": [
       "Classic cool-season garden edging, rockery border plant, and flowering groundcover",
       "Tender young leaves and flower petals are edible, traditionally added to fresh spring salads",
-      "Traditional European herbal specific (Bruisewort); topical floral extracts contain polyacetylenes and saponins that assist in resolving superficial skin contusions, bruises, and muscular tenderness."
+      "Traditional European herbal specific (Bruisewort); topical floral extracts contain polyacetylenes and saponins that assist in resolving superficial skin contusions, bruises, and muscular tenderness TODO(verify)"
     ],
     "care_tips": [
       "Requires cool temperatures and moist, fertile, well-drained garden soil",
@@ -210,12 +201,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "EMA Herbal Monograph & German Commission E",
-        "url": "https://www.ema.europa.eu/en/medicines/herbal/bellidis-perennis-flos"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 94,
@@ -247,14 +233,14 @@
     "uses": [
       "Tender young spring leaves eaten as a nutritious bitter salad green packed with Vitamins A, C, and K",
       "Roasted taproots ground and brewed into a rich, caffeine-free herbal coffee substitute",
-      "Substantiated in human clinical trials and European pharmacopoeias as an effective herbal diuretic and mild cholagogue, stimulating urinary output without depleting potassium."
+      "Substantiated in human clinical trials and European pharmacopoeias as an effective herbal diuretic and mild cholagogue, stimulating urinary output without depleting potassium TODO(verify)"
     ],
     "care_tips": [
       "Thrives in almost any soil and full sun; often treated as a weed due to deep taproots and windborne seeds",
       "Deep taproots draw up mineral nutrients from subsoil layers",
       "Harvest roots in autumn when inulin and bitter principles are most concentrated"
     ],
-    "toxicity_note": "Non-toxic and edible. Milky latex exuded by freshly severed stems contains sesquiterpene lactones (taraxinic acid) that can cause allergic contact dermatitis in individuals sensitized to the Asteraceae family.",
+    "toxicity_note": "Non-toxic and edible. Milky latex exuded by freshly severed stems contains sesquiterpene lactones (taraxinic acid) that can cause allergic contact dermatitis in individuals sensitized to the Asteraceae family TODO(verify).",
     "fun_fact": "The name Dandelion comes from the French 'dent-de-lion', meaning 'lion's tooth', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.",
     "reference_images": [
       "/species/94.webp"
@@ -266,16 +252,7 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"
     },
     "is_toxic": false,
-    "sources": [
-      {
-        "name": "EMA Herbal Monograph",
-        "url": "https://www.ema.europa.eu/en/medicines/herbal/taraxaci-officinalis-herba-cum-radice"
-      },
-      {
-        "name": "NCBI PubMed (J Altern Complement Med / Clare et al.) & EMA",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19678785/"
-      }
-    ]
+    "sources": []
   },
   {
     "id": 95,
@@ -360,7 +337,7 @@
     "distribution": "Native to the Mediterranean basin; cultivated widely in Indian kitchen herb gardens and cooler hill regions.",
     "uses": [
       "Pungent culinary seasoning herb paired with roasted potatoes, vegetables, breads (focaccia), and oils",
-      "Substantiated in a randomized comparative clinical trial demonstrating standardized rosemary oil promoted hair growth in androgenetic alopecia with efficacy comparable to 2% minoxidil.",
+      "Substantiated in a randomized comparative clinical trial demonstrating standardized rosemary oil promoted hair growth in androgenetic alopecia with efficacy comparable to 2% minoxidil TODO(verify)",
       "Traditional symbol of remembrance; 1,8-cineole scent shown to boost cognitive recall and alertness"
     ],
     "care_tips": [
@@ -384,10 +361,6 @@
       {
         "name": "EMA Herbal Monograph & Toxnet",
         "url": "https://www.ema.europa.eu/en/medicines/herbal/rosmarini-aetheroleum"
-      },
-      {
-        "name": "NCBI PubMed (Skinmed / Panahi et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/25842469/"
       }
     ]
   },
@@ -772,7 +745,7 @@
     "distribution": "Native to East and South Asia (India, China, Japan); iconic winter flower across the northern and eastern Indian plains.",
     "uses": [
       "Celebrated winter exhibition and garland flower (Sevanti / Chandromallika) in festive Indian winter markets",
-      "Traditional herbal tea in East Asian pharmacopoeias; dried flower infusions rich in luteolin and apigenin exhibit validated cooling, anti-inflammatory, and hepatoprotective properties in preclinical models.",
+      "Traditional herbal tea in East Asian pharmacopoeias; dried flower infusions rich in luteolin and apigenin exhibit validated cooling, anti-inflammatory, and hepatoprotective properties in preclinical models TODO(verify)",
       "Long-lasting cut flower used in wedding decorations and decorative vases"
     ],
     "care_tips": [
@@ -792,11 +765,6 @@
       "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"
     },
     "is_toxic": true,
-    "sources": [
-      {
-        "name": "NCBI PubMed (J Ethnopharmacol / Wang et al.)",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24497754/"
-      }
-    ]
+    "sources": []
   }
 ]

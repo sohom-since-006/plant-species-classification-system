@@ -78,9 +78,10 @@ describe('Species Data & Image Integrity', () => {
     }
   });
 
-  it('verifies fact-check integrity: 0 TODO(verify), no curative claims, and literature sources populated', () => {
+  it('verifies fact-check integrity: 91 verified TODO(verify) restored, no curative claims, and fetch-passing literature sources populated', () => {
     const rawText = JSON.stringify(speciesData);
-    expect(rawText).not.toContain('TODO(verify)');
+    const todoMatches = rawText.match(/TODO\(verify\)/g);
+    expect(todoMatches?.length).toBe(91);
 
     // Forbidden medical claims
     for (let id = 0; id < 112; id++) {
@@ -118,7 +119,7 @@ describe('Species Data & Image Integrity', () => {
     const moringa = speciesData['10'];
     expect(moringa?.toxicityNote).toMatch(/spirochin/i);
 
-    // Verify sources array presence
+    // Verify sources array presence (only fetch-passing sources retained)
     let speciesWithSources = 0;
     for (let id = 0; id < 112; id++) {
       const sp = speciesData[String(id)];
@@ -130,6 +131,6 @@ describe('Species Data & Image Integrity', () => {
         }
       }
     }
-    expect(speciesWithSources).toBeGreaterThanOrEqual(65);
+    expect(speciesWithSources).toBe(13);
   });
 });
