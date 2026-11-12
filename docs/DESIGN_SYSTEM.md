@@ -97,10 +97,6 @@ Dark-mode `--glass-edge-hi` is 0.45 for `.liquid-glass` and 0.5 for `-strong`; m
   --glass-edge-hi: rgba(255,255,255,0.50);
   --glass-edge-mid: rgba(255,255,255,0.20);
 }
-:root[data-theme="light"] .liquid-glass-strong {
-  --glass-edge-hi: rgba(0,0,0,0.28);
-  --glass-edge-mid: rgba(0,0,0,0.10);
-}
 ```
 
 ## Components

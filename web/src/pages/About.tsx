@@ -12,7 +12,10 @@ import {
   User,
 } from '@/components/icons';
 
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
+
 export function About() {
+  useDocumentTitle('About');
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
       {/* Synchronized Hero with scroll blur + fade */}

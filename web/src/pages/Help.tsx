@@ -10,6 +10,7 @@ import {
   ArrowUpRight,
 } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 interface FaqItem {
   id: string;
@@ -65,6 +66,7 @@ const FAQS: FaqItem[] = [
 ];
 
 export function Help() {
+  useDocumentTitle('Field Guide & FAQ');
   const [searchQuery, setSearchQuery] = useState('');
   const [openIds, setOpenIds] = useState<Set<string>>(new Set(['good-photo', 'why-not-confident']));
 

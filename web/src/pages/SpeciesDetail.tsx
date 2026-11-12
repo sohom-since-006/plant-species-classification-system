@@ -5,12 +5,18 @@ import { SolidButton } from '@/components/ui/SolidButton';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { ArrowUpRight, Info, Leaf, AlertTriangle, ExternalLink } from '@/components/icons';
 import { useSpeciesDetailQuery } from '@/features/species/useSpeciesQueries';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 const DistributionPanel = lazy(() => import('@/features/distribution/DistributionPanel'));
 
 export function SpeciesDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { data, isLoading } = useSpeciesDetailQuery(slug);
+
+  const title = data?.species
+    ? `${data.species.commonName} (${data.species.scientificName})`
+    : 'Species Monograph';
+  useDocumentTitle(title);
 
   if (isLoading) {
     return (
@@ -90,6 +96,10 @@ export function SpeciesDetail() {
             <img
               src={species.referenceImages?.[0] || '/species/neutral_leaf.svg'}
               alt={species.commonName}
+              width={640}
+              height={384}
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.currentTarget.src = '/species/neutral_leaf.svg';

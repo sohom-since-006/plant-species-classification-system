@@ -69,3 +69,4 @@ export function downloadCsv(csvContent: string, filename = 'plantai_batch_predic
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
 }
+

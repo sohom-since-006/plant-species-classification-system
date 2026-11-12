@@ -52,7 +52,7 @@ export function FadingVideo({ src, className = '', style, poster }: FadingVideoP
       muted
       loop={sources.length <= 1}
       playsInline
-      preload="auto"
+      preload="metadata"
       onEnded={handleEnded}
     />
   );

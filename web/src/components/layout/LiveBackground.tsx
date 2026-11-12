@@ -82,9 +82,9 @@ export function LiveBackground() {
 
     updateDprAndSize();
 
-    // Particle count: ~90 on desktop, 40 on mobile
+    // Particle count: 75 on desktop, 30 on small desktop, 16 on touch devices
     const isMobile = width < 768;
-    const particleCount = isMobile ? 40 : 90;
+    const particleCount = !hasFinePointer ? 16 : isMobile ? 30 : 75;
 
     const particles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {

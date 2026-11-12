@@ -41,9 +41,7 @@ const richSpeciesList = [
     ],
     toxicityNote: 'Generally recognized as safe; excessive medicinal use during pregnancy should be avoided TODO(verify).',
     funFact: 'In classical Sanskrit literature, Tulsi literally translates to "the incomparable one".',
-    referenceImages: [
-      'https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=600&q=80',
-    ],
+    referenceImages: ['/species/0.webp'],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Ocimum_tenuiflorum',
   },
   {
@@ -81,7 +79,7 @@ const richSpeciesList = [
     toxicityNote: 'Leaves and external preparations are safe; concentrated neem seed oil is toxic if ingested in large doses, particularly for young children TODO(verify).',
     funFact: 'The United Nations declared Neem as the "tree of the 21st century" for its ecological and medicinal potential.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1596726694602-0e3658253ce6?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Azadirachta_indica',
   },
@@ -120,7 +118,7 @@ const richSpeciesList = [
     toxicityNote: 'Inner clear gel is generally safe; the yellow bitter latex (aloin) found beneath the leaf rind is a potent laxative and should not be ingested in quantity TODO(verify).',
     funFact: 'Ancient Egyptian stone carvings depict Aloe Vera as the "plant of immortality", gifted at pharaohs\' funerals.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Aloe_vera',
   },
@@ -159,7 +157,7 @@ const richSpeciesList = [
     toxicityNote: 'Leaves are edible and nutritious; the dark berry seeds contain toxic glycosides and should never be consumed TODO(verify).',
     funFact: 'Despite its common name, Curry Leaf is not the source of curry powder, which is a British colonial spice blend.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Curry_tree',
   },
@@ -198,7 +196,7 @@ const richSpeciesList = [
     toxicityNote: 'Milky latex may irritate sensitive eyes or mucous membranes; non-lethal TODO(verify).',
     funFact: 'Peepal leaves release oxygen during both daytime and nocturnal hours through a modified Crassulacean Acid Metabolism mechanism TODO(verify).',
     referenceImages: [
-      'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Ficus_religiosa',
   },
@@ -237,7 +235,7 @@ const richSpeciesList = [
     toxicityNote: 'White sap can cause mild contact dermatitis or skin irritation TODO(verify).',
     funFact: 'The Great Banyan Tree in Kolkata covers over 3.5 acres and has survived two major cyclones.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Ficus_benghalensis',
   },
@@ -276,7 +274,7 @@ const richSpeciesList = [
     toxicityNote: 'Non-toxic to humans; pet ingestion may cause mild digestive discomfort TODO(verify).',
     funFact: 'Historically called "Shoeblackplant" because its crushed petals were used to polish footwear in parts of Asia.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis',
   },
@@ -315,7 +313,7 @@ const richSpeciesList = [
     toxicityNote: 'EXTREMELY TOXIC: All parts contain lethal cardiac glycosides (oleandrin). Ingestion of even small amounts can cause fatal cardiac arrhythmias in humans and pets. Never burn prunings.',
     funFact: 'Oleander was the first plant to bloom in Hiroshima following the atomic blast in 1945, becoming the city\'s official flower.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1598880940371-c756e015fea1?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Nerium_oleander',
   },
@@ -354,7 +352,7 @@ const richSpeciesList = [
     toxicityNote: 'Sap and outer peel contain urushiol-related alkylresorcinols, which can induce contact dermatitis or allergic rashes in sensitive individuals TODO(verify).',
     funFact: 'Mango trees have been cultivated in South Asia for over 4,000 years. Mughal Emperor Akbar planted an orchard of 100,000 mango trees at Lakhi Bagh in Darbhanga.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Mangifera_indica',
   },
@@ -393,7 +391,7 @@ const richSpeciesList = [
     toxicityNote: 'Toxic to cats, dogs, and horses due to insoluble calcium oxalate crystals which cause oral swelling and drooling TODO(verify).',
     funFact: 'Dubbed "Devil\'s Ivy" because it remains vigorously green even when neglected in near darkness.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Epipremnum_aureum',
   },
@@ -432,7 +430,7 @@ const richSpeciesList = [
     toxicityNote: 'Completely non-toxic to humans, dogs, and cats.',
     funFact: 'Sweet Basil seeds swell up to 10 times their volume in water, creating a jelly-like cooling coating.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Basil',
   },
@@ -471,7 +469,7 @@ const richSpeciesList = [
     toxicityNote: 'Contains mimosine, a non-protein amino acid; mild toxicity if ingested in substantial quantity by livestock TODO(verify).',
     funFact: 'The leaf folding reflex is driven by rapid potassium and water efflux from specialized swollen hinges called pulvini.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Mimosa_pudica',
   },
@@ -510,7 +508,7 @@ const richSpeciesList = [
     toxicityNote: 'Raw acorns and foliage contain concentrated tannins that are toxic to horses and cattle if eaten in quantity TODO(verify).',
     funFact: 'Mature English Oaks can live for over 1,000 years and support more biodiversity than any other native tree in the British Isles.',
     referenceImages: [
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80',
+      '/species/0.webp',
     ],
     wikipediaUrl: 'https://en.wikipedia.org/wiki/Quercus_robur',
   },

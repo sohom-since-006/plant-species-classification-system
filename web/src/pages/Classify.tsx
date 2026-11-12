@@ -16,6 +16,7 @@ import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
 import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { BatchModeSection } from '@/features/classify/BatchModeSection';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { useHistoryService } from '@/features/history/useHistoryService';
 import { useSession } from '@/features/auth/useSession';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
@@ -62,6 +63,7 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
 ];
 
 export function Classify() {
+  useDocumentTitle('Identify Specimen');
   const location = useLocation();
   const { showToast } = useToast();
   const { user } = useSession();

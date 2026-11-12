@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 import { FadingVideo } from '@/components/motion/FadingVideo';
 import { BlurText } from '@/components/motion/BlurText';
@@ -22,6 +23,7 @@ import {
 } from '@/components/icons';
 
 export function Home() {
+  useDocumentTitle();
   const navigate = useNavigate();
   const [speciesCount, setSpeciesCount] = useState('120+');
   const prefersReducedMotion =

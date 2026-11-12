@@ -31,14 +31,24 @@ export function Navbar() {
     <>
       <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16" role="navigation">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Brand Logo Monogram */}
+          {/* Brand Logo Monogram & Name */}
           <Link
             to="/"
             data-glow=""
-            className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0 hover:scale-105 transition-transform"
-            aria-label="Plant Species Classification System Home"
+            className="flex items-center gap-3 shrink-0 hover:opacity-95 transition-opacity"
+            aria-label="PlantAI - Plant Species Classification System Home"
           >
-            <BrandLogo size={28} />
+            <div className="liquid-glass h-12 w-12 rounded-full flex items-center justify-center shrink-0">
+              <BrandLogo size={28} />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-heading italic text-2xl text-white tracking-wide leading-none">
+                PlantAI
+              </span>
+              <span className="text-[10px] font-mono uppercase text-emerald-400 tracking-wider hidden sm:inline">
+                Neural Vision
+              </span>
+            </div>
           </Link>
 
           {/* Center nav pill — hidden on mobile */}
@@ -96,9 +106,9 @@ export function Navbar() {
           {/* Right: mobile menu toggle */}
           <div className="flex items-center gap-2 md:hidden">
             <button
-              className="liquid-glass h-10 w-10 rounded-full flex items-center justify-center text-[var(--fg)]"
+              className="liquid-glass h-11 w-11 min-h-[44px] min-w-[44px] rounded-full flex items-center justify-center text-[var(--fg)]"
               onClick={() => setMobileOpen(true)}
-              aria-label="Open menu"
+              aria-label="Open navigation menu"
               type="button"
               data-glow=""
             >
@@ -117,11 +127,14 @@ export function Navbar() {
           />
           <div className="absolute top-0 right-0 h-full w-72 liquid-glass-strong p-6 flex flex-col gap-6">
             <div className="flex justify-between items-center">
-              <span className="font-heading italic text-lg text-[var(--fg)]">Menu</span>
+              <div className="flex items-center gap-2">
+                <BrandLogo size={22} />
+                <span className="font-heading italic text-xl text-[var(--fg)]">PlantAI</span>
+              </div>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 rounded-full text-[var(--fg-muted)] hover:text-[var(--fg)]"
-                aria-label="Close menu"
+                className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full text-[var(--fg-muted)] hover:text-[var(--fg)]"
+                aria-label="Close navigation menu"
                 type="button"
               >
                 <X className="w-5 h-5" aria-hidden="true" />

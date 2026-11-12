@@ -5,8 +5,10 @@ import { Play, BarChart, Cpu, HardDrive } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { UserHistoryStats } from '@/features/dashboard/UserHistoryStats';
 import { ModelInsightsSection } from '@/features/dashboard/ModelInsightsSection';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function Dashboard() {
+  useDocumentTitle('Dashboard & Telemetry');
   const [benchmarkRunning, setBenchmarkRunning] = useState(false);
   const [localBenchmarkResult, setLocalBenchmarkResult] = useState<number | null>(null);
 

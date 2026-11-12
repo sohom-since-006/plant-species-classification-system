@@ -42,9 +42,10 @@ export function initCursorGlow(): () => void {
     return () => {};
   }
 
-  // Check for fine pointer and hover support (skip touch devices)
+  // Check for fine pointer, hover support, and reduced motion (skip touch and reduced-motion)
   const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
-  if (!finePointerQuery.matches) {
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!finePointerQuery.matches || reducedMotionQuery.matches) {
     return () => {};
   }
 

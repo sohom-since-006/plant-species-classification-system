@@ -11,8 +11,10 @@ import { useSession } from '@/features/auth/useSession';
 import { getSpeciesById } from '@/services/speciesService';
 import { isSupabaseConfigured } from '@/lib/supabase';
 import { useToast } from '@/components/ui/useToast';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function History() {
+  useDocumentTitle('Field Journal');
   const { user } = useSession();
   const { showToast } = useToast();
   const { predictions, isLoading, deletePrediction, clearHistory } = useHistoryService();

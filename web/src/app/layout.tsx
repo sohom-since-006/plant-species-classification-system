@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { PageBackground } from '@/components/layout/PageBackground';
+import { OfflineBanner } from '@/components/layout/OfflineBanner';
 import { pageTransition, pageTransitionReduced, usePrefersReducedMotion } from '@/lib/motion';
 import { initCursorGlow } from '@/lib/cursorGlow';
 
@@ -24,9 +25,10 @@ export function Layout() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="relative min-h-screen flex flex-col overflow-x-hidden">
       <PageBackground />
       <Navbar />
+      <OfflineBanner />
       <main className="flex-1 w-full relative">
         <AnimatePresence mode="wait">
           <motion.div

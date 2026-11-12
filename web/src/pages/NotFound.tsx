@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { ArrowUpRight } from '@/components/icons';
+import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function NotFound() {
+  useDocumentTitle('404 Specimen Not Found');
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
       {/* Synchronized Hero with scroll blur + fade */}
