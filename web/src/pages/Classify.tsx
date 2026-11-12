@@ -47,13 +47,18 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
     url: '/species/sample_hibiscus.webp',
   },
   {
+    name: 'Parthenium hysterophorus',
+    common: 'Parthenium (Low Confidence)',
+    url: '/species/sample_parthenium.webp',
+  },
+  {
     name: 'Ocimum basilicum',
-    common: 'Sweet Basil (Low Confidence)',
+    common: 'Sweet Basil (Unsure / Below Threshold)',
     url: '/species/sample_sweet_basil.webp',
   },
   {
     name: 'Non-Plant Specimen',
-    common: 'Pebble (Unknown / Rejected)',
+    common: 'Pebble (Non-Plant / Rejected)',
     url: '/species/sample_pebble.webp',
   },
 ];

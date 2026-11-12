@@ -1,6 +1,7 @@
 import type { ClassificationResult, Prediction } from '@/types/prediction';
 import { determineTier } from './postprocess';
 import { computeSimilar, computeCosineSimilarity } from './similar';
+import { defaultModelMeta } from './modelMetaDefaults';
 
 export interface SingleImageInference {
   probs: Float32Array;
@@ -11,6 +12,10 @@ export interface SingleImageInference {
 export interface FusionOptions {
   threshold?: number;
   tau?: number;
+  tierBoundaries?: {
+    high?: number;
+    medium?: number;
+  };
   mlWeight?: number;
   visualWeight?: number;
   genusBonus?: number;
@@ -94,8 +99,9 @@ function buildResultFromProbsAndEmbedding(
   const top1Prob = top3[0]?.prob ?? 0;
   const top1Id = top3[0]?.speciesId ?? 0;
 
-  const threshold = options?.threshold ?? 0.35;
-  const tau = options?.tau ?? 0.31;
+  const threshold = options?.threshold ?? defaultModelMeta.threshold;
+  const tau = options?.tau ?? defaultModelMeta.tau;
+  const tierBoundaries = options?.tierBoundaries ?? defaultModelMeta.tierBoundaries;
   const centroids = options?.centroids ?? {};
 
   // Compute cosine similarity to predicted class centroid
@@ -109,7 +115,7 @@ function buildResultFromProbsAndEmbedding(
 
   // Rejection rule
   const isUnknown = top1Prob < threshold || maxCosine < tau;
-  const tier = determineTier(top1Prob, isUnknown);
+  const tier = determineTier(top1Prob, isUnknown, tierBoundaries);
 
   // Similar species calculation
   const similarMatches = computeSimilar(
@@ -118,19 +124,20 @@ function buildResultFromProbsAndEmbedding(
     centroids,
     top1Id,
     {
-      mlWeight: options?.mlWeight ?? 0.6,
-      visualWeight: options?.visualWeight ?? 0.4,
-      genusBonus: options?.genusBonus ?? 0.05,
+      mlWeight: options?.mlWeight ?? defaultModelMeta.mlWeight,
+      visualWeight: options?.visualWeight ?? defaultModelMeta.visualWeight,
+      genusBonus: options?.genusBonus ?? defaultModelMeta.genusBonus,
       genusList: options?.genusList ?? {},
       topK: 4,
       excludeTop1: true,
     },
   );
 
-  // Genus fallback: if top-1 < 0.60, not unknown, and top 3 share genus
+  // Genus fallback: if top-1 < medium boundary, not unknown, and top 3 share genus
   let genusFallback: string | null = null;
   const genusList = options?.genusList;
-  if (!isUnknown && top1Prob < 0.60 && genusList) {
+  const mediumBoundary = options?.tierBoundaries?.medium ?? defaultModelMeta.tierBoundaries.medium;
+  if (!isUnknown && top1Prob < mediumBoundary && genusList) {
     const g0 = genusList[top3[0]?.speciesId ?? -1];
     const g1 = genusList[top3[1]?.speciesId ?? -1];
     const g2 = genusList[top3[2]?.speciesId ?? -1];

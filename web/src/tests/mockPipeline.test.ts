@@ -15,14 +15,15 @@ describe('Tier Logic Boundaries (TRD Section 5)', () => {
     expect(determineTier(0.60)).toBe('medium');
   });
 
-  it('assigns "low" tier when confidence is below 0.60 down to 0.35', () => {
+  it('assigns "low" tier when confidence is below 0.60 down to threshold (0.57)', () => {
     expect(determineTier(0.599)).toBe('low');
-    expect(determineTier(0.50)).toBe('low');
-    expect(determineTier(0.35)).toBe('low');
+    expect(determineTier(0.58)).toBe('low');
+    expect(determineTier(0.57)).toBe('low');
   });
 
-  it('assigns "unknown" tier when confidence is below 0.35', () => {
-    expect(determineTier(0.349)).toBe('unknown');
+  it('assigns "unknown" tier when confidence is below threshold (0.57)', () => {
+    expect(determineTier(0.569)).toBe('unknown');
+    expect(determineTier(0.35)).toBe('unknown');
     expect(determineTier(0.15)).toBe('unknown');
     expect(determineTier(0.0)).toBe('unknown');
   });
@@ -46,13 +47,13 @@ describe('Post-processing & Genus Fallback', () => {
   });
 
   it('triggers genus fallback when top-1 < 0.60 and top-3 share genus', () => {
-    // 3 species of Ocimum with logits yielding top-1 prob ~ 0.49 (between 0.35 and 0.60)
-    const logits = new Float32Array([3.0, 2.5, 2.0, 0.1]);
+    // 3 species of Ocimum with logits yielding top-1 prob ~ 0.58 (between 0.57 and 0.60)
+    const logits = new Float32Array([3.35, 2.5, 2.0, 0.1]);
     const genusList = ['Ocimum', 'Ocimum', 'Ocimum', 'Solanum'];
 
     const result = postprocess(logits, 1.0, { genusList });
 
-    expect(result.top3[0]?.prob).toBeGreaterThanOrEqual(0.35);
+    expect(result.top3[0]?.prob).toBeGreaterThanOrEqual(0.57);
     expect(result.top3[0]?.prob).toBeLessThan(0.60);
     expect(result.tier).toBe('low');
     expect(result.genusFallback).toBe('Ocimum');

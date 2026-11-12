@@ -1,9 +1,14 @@
 import type { Tier, ClassificationResult, Prediction, SimilarMatch } from '@/types/prediction';
+import { defaultModelMeta } from './modelMetaDefaults';
 
 export interface PostprocessOptions {
   temperature?: number;
   probThreshold?: number;
   tau?: number;
+  tierBoundaries?: {
+    high?: number;
+    medium?: number;
+  };
   maxCentroidSim?: number;
   genusList?: string[];
   modelVersion?: string;
@@ -13,20 +18,27 @@ export interface PostprocessOptions {
 
 /**
  * Determine classification tier based on calibrated top-1 probability.
- * Boundaries per TRD Section 5:
- *   High:    > 0.85
- *   Medium:  0.60 to 0.85
- *   Low:     0.35 to 0.60
- *   Unknown: < 0.35 or when unknown rejection flag is explicitly active
+ * Boundaries per model_meta.json & TRD Section 5:
+ *   High:    > high boundary (default 0.85)
+ *   Medium:  medium boundary (default 0.60) to high
+ *   Low:     rejection threshold (default 0.57) to medium
+ *   Unknown: < threshold or when unknown rejection flag is explicitly active
  */
-export function determineTier(top1Prob: number, isUnknown = false): Tier {
-  if (isUnknown || top1Prob < 0.35) {
+export function determineTier(
+  top1Prob: number,
+  isUnknown = false,
+  tierBoundaries?: { high?: number; medium?: number; threshold?: number },
+): Tier {
+  const threshold = tierBoundaries?.threshold ?? defaultModelMeta.threshold;
+  if (isUnknown || top1Prob < threshold) {
     return 'unknown';
   }
-  if (top1Prob > 0.85) {
+  const high = tierBoundaries?.high ?? defaultModelMeta.tierBoundaries.high;
+  const medium = tierBoundaries?.medium ?? defaultModelMeta.tierBoundaries.medium;
+  if (top1Prob > high) {
     return 'high';
   }
-  if (top1Prob >= 0.60) {
+  if (top1Prob >= medium) {
     return 'medium';
   }
   return 'low';
@@ -38,7 +50,7 @@ export function determineTier(top1Prob: number, isUnknown = false): Tier {
  */
 export function computeCalibratedProbabilities(
   logits: Float32Array,
-  temperature = 0.7129,
+  temperature = defaultModelMeta.temperature,
 ): Float32Array {
   if (logits.length === 0) {
     return new Float32Array(0);
@@ -78,7 +90,7 @@ export function computeCalibratedProbabilities(
  */
 export function postprocess(
   logits: Float32Array,
-  temperature = 0.7129,
+  temperature = defaultModelMeta.temperature,
   options?: PostprocessOptions,
 ): ClassificationResult {
   if (logits.length === 0) {
@@ -88,7 +100,7 @@ export function postprocess(
       unknown: true,
       similar: [],
       camData: null,
-      modelVersion: options?.modelVersion ?? '1.0.0',
+      modelVersion: options?.modelVersion ?? defaultModelMeta.version,
       genusFallback: null,
     };
   }
@@ -105,18 +117,20 @@ export function postprocess(
 
   // 3. Unknown rejection rule:
   // Reject when max probability < probThreshold OR max centroid cosine similarity < tau
-  const probThreshold = options?.probThreshold ?? 0.35;
-  const tau = options?.tau ?? 0.31;
+  const probThreshold = options?.probThreshold ?? defaultModelMeta.threshold;
+  const tau = options?.tau ?? defaultModelMeta.tau;
+  const tierBoundaries = options?.tierBoundaries ?? defaultModelMeta.tierBoundaries;
   const maxCentroidSim = options?.maxCentroidSim ?? 1.0;
 
   const isUnknown = top1Prob < probThreshold || maxCentroidSim < tau;
 
   // 4. Tier assignment
-  const tier = determineTier(top1Prob, isUnknown);
+  const tier = determineTier(top1Prob, isUnknown, tierBoundaries);
 
-  // 5. Genus fallback: if top-1 < 0.60, and top-3 share same genus
+  // 5. Genus fallback: if top-1 < medium boundary, and top-3 share same genus
   let genusFallback: string | null = null;
-  if (top1Prob < 0.60 && options?.genusList && options.genusList.length >= 3) {
+  const mediumBoundary = options?.tierBoundaries?.medium ?? defaultModelMeta.tierBoundaries.medium;
+  if (top1Prob < mediumBoundary && options?.genusList && options.genusList.length >= 3) {
     const g0 = options.genusList[top3[0]?.speciesId ?? -1];
     const g1 = options.genusList[top3[1]?.speciesId ?? -1];
     const g2 = options.genusList[top3[2]?.speciesId ?? -1];
@@ -131,7 +145,7 @@ export function postprocess(
     unknown: isUnknown,
     similar: options?.similarMatches ?? [],
     camData: options?.camData ?? null,
-    modelVersion: options?.modelVersion ?? '1.0.0',
+    modelVersion: options?.modelVersion ?? defaultModelMeta.version,
     genusFallback,
   };
 }

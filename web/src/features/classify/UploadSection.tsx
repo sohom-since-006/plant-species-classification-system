@@ -200,7 +200,7 @@ export function UploadSection({
             Or test with a sample specimen:
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {sampleImages.map((sample) => (
             <button
               key={sample.name}

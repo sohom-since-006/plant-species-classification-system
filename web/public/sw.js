@@ -11,6 +11,7 @@ const PRECACHE_URLS = [
   '/species/neutral_leaf.svg',
   '/species/sample_tulsi.webp',
   '/species/sample_hibiscus.webp',
+  '/species/sample_parthenium.webp',
   '/species/sample_sweet_basil.webp',
   '/species/sample_pebble.webp',
 ];

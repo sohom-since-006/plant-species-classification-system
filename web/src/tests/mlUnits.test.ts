@@ -74,14 +74,17 @@ describe('Postprocessing, Calibration & Tiers', () => {
     expect(sum).toBeCloseTo(1.0, 5);
   });
 
-  it('classifies confidence tiers correctly per TRD Section 5', () => {
+  it('classifies confidence tiers correctly per TRD Section 5 and model_meta.json', () => {
     expect(determineTier(0.8501)).toBe('high');
     expect(determineTier(0.85)).toBe('medium');
     expect(determineTier(0.60)).toBe('medium');
     expect(determineTier(0.599)).toBe('low');
-    expect(determineTier(0.35)).toBe('low');
-    expect(determineTier(0.349)).toBe('unknown');
+    expect(determineTier(0.57)).toBe('low');
+    expect(determineTier(0.569)).toBe('unknown');
+    expect(determineTier(0.35)).toBe('unknown');
     expect(determineTier(0.95, true)).toBe('unknown');
+    // Supports custom thresholds if provided
+    expect(determineTier(0.35, false, { threshold: 0.35 })).toBe('low');
   });
 
   it('rejects when max probability is below threshold (0.57)', () => {

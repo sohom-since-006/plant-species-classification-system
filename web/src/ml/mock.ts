@@ -59,7 +59,7 @@ function generateSyntheticCam(): Float32Array {
  *  0: High Confidence (> 0.85) - Tulsi
  *  1: Medium Confidence (0.60 - 0.85) - Tropical Hibiscus
  *  2: Low Confidence (< 0.60) with Genus Fallback - Sweet Basil vs Tulsi (genus Ocimum)
- *  3: Unknown / Not a Plant (prob < 0.35, rejected)
+ *  3: Unknown / Not a Plant (rejected out-of-distribution)
  */
 export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
   // Case 0: High confidence (> 0.85) - Tulsi
@@ -118,7 +118,7 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
     genusFallback: 'Ocimum',
   },
 
-  // Case 3: Unknown / Not a plant (prob < 0.35, rejected)
+  // Case 3: Unknown / Not a plant (prob < rejection threshold, rejected)
   3: {
     top3: [
       { speciesId: 80, prob: 0.23 },

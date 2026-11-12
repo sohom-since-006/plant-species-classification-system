@@ -253,7 +253,7 @@ export function ModelInsightsSection() {
                 <p className="text-[10px] text-[var(--fg-subtle)]">Rejects if max probability &lt; threshold</p>
               </div>
               <span className="text-[var(--accent)] font-semibold text-sm">
-                {data?.thresholds?.prob_threshold ?? 0.57}
+                {data?.thresholds?.prob_threshold != null ? data.thresholds.prob_threshold : '—'}
               </span>
             </div>
 
@@ -263,7 +263,7 @@ export function ModelInsightsSection() {
                 <p className="text-[10px] text-[var(--fg-subtle)]">Cosine distance to genus cluster</p>
               </div>
               <span className="text-[var(--accent)] font-semibold text-sm">
-                {data?.thresholds?.tau_threshold ?? 0.31}
+                {data?.thresholds?.tau_threshold != null ? data.thresholds.tau_threshold : '—'}
               </span>
             </div>
 
@@ -273,7 +273,7 @@ export function ModelInsightsSection() {
                 <p className="text-[10px] text-[var(--fg-subtle)]">Tuned via Platt scaling</p>
               </div>
               <span className="text-teal-300 font-semibold text-sm">
-                {data?.calibration?.temperature ?? 0.7129}
+                {data?.calibration?.temperature != null ? data.calibration.temperature : '—'}
               </span>
             </div>
           </div>

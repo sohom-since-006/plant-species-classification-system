@@ -48,9 +48,9 @@ ONNX outputs: `logits [1,N]`, `embedding [1,1280]`, `features [1,1280,7,7]`.
 Post-process:
 1. `probs = softmax(logits / T)`.
 2. Top-3 by probability.
-3. Unknown rule: reject if `max(probs) < 0.35` OR `max cosine(embedding, centroid) < tau`; tau is tuned on the non-plant set and stored in `model_meta.json`.
-4. Tier: High >0.85, Medium 0.60-0.85, Low <0.60.
-5. Genus fallback: if top-1 < 0.60 and the top-3 share a genus, show "Likely genus X".
+3. Unknown rule: reject if `max(probs) < threshold` OR `max cosine(embedding, centroid) < tau`. The rejection parameters (`threshold` = 0.57, `tau` = 0.31), calibration temperature `T` (0.7129), and tier boundaries are defined in `web/public/models/model_meta.json` as the single source of truth for the browser runtime (tuned on the non-plant and evaluation sets).
+4. Tier: High (>= highBoundary, default 0.85), Medium (>= mediumBoundary, default 0.60), Low (< mediumBoundary and >= threshold). All boundaries are configured in `model_meta.json`.
+5. Genus fallback: if top-1 < mediumBoundary (0.60) and the top-3 share a genus, show "Likely genus X".
 
 ## 6. Similar Species Engine
 For each species k other than the top-1:

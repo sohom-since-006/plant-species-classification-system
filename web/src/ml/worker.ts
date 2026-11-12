@@ -182,8 +182,9 @@ self.onmessage = async (e: MessageEvent<WorkerInMessage>) => {
       });
 
       const classificationResult = fuseMultiPhotoInference(singleInferences, {
-        threshold: 0.35, // TRD Section 5: reject if max(probs) < 0.35 OR max cosine < tau
+        threshold: bundle.meta.threshold,
         tau: bundle.meta.tau,
+        tierBoundaries: bundle.meta.tierBoundaries,
         mlWeight: bundle.meta.mlWeight,
         visualWeight: bundle.meta.visualWeight,
         genusBonus: bundle.meta.genusBonus,
