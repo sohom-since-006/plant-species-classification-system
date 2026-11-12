@@ -43,8 +43,7 @@ Base is monochrome; accent is a restrained botanical green used sparingly (confi
   - Minimum display time of 250 ms per stage to eliminate stutter on fast devices.
   - Staged reveal: upon completion, the scanner dissolves into the ResultCard, triggering sequential reveals for the confidence ring, top predictions, and detailed tabs.
 - **Interactive Live Background (`ParticleBackground`):**
-  - Dark mode: 35-50 drifting emerald and teal glowing spores.
-  - Light mode: subtle golden-amber pollen granules.
+  - Atmospheric dark theme: 35-50 drifting emerald and teal glowing spores.
   - Physics: gentle cursor repulsion/attraction field within a 120 px radius.
   - Battery/GPU budget: DPR capped at 1.5; animation completely pauses when tab is hidden (`document.hidden`). Touch devices run low-velocity ambient drift with no pointer interaction.
 - **Cursor Spotlight Glow:**
@@ -53,7 +52,7 @@ Base is monochrome; accent is a restrained botanical green used sparingly (confi
 - **Reduced Motion:** When `prefers-reduced-motion` is detected, all parallax, blur transitions, spore drift, scan line sweeps, and spring bounces are bypassed; immediate static opacity crossfades are used instead.
 
 ## Layout
-- Navbar: fixed, glass pill. Left monogram "P", center links with a primary "Identify" button, right theme toggle (and avatar when logged in). Collapses to a menu on mobile.
+- Navbar: fixed, glass pill. Left brand logo, center links with a primary "Identify" button (and avatar when logged in). Collapses to a menu on mobile.
 - Content width: max 1200 px on app pages; landing sections are full-bleed.
 - Cards: `rounded-[1.25rem]`, `p-6`, glass with cursor spotlight illumination.
 

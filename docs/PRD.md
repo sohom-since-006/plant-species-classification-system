@@ -17,7 +17,7 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 - G2: Show calibrated confidence, so "90%" really means about 90%.
 - G3: Give similar-species suggestions with percentages.
 - G4: Run fast (under 2 s after the model loads) and free to host.
-- G5: Deliver a cinematic, polished UI with dark and light modes.
+- G5: Deliver a cinematic, polished UI in an atmospheric dark botanical theme.
 
 ## 4. Non-goals (v1)
 - Plant disease detection
@@ -52,7 +52,7 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 | F12 | Batch classification with CSV export | P2 |
 | F13 | Feedback: correct/wrong, suggest the right species | P1 |
 | F14 | Model dashboard: accuracy, confusion matrix, per-class table | P1 |
-| F15 | Dark/light mode toggle, remembers choice | P0 |
+| F15 | Dark-mode atmospheric theme enforcement | P0 |
 | F16 | Parallax landing page | P0 |
 | F17 | Optional auth (email, Google); guests allowed | P2 |
 | F18 | About, Help/FAQ, 404 pages | P1 |

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: dark;
   --bg: #000000;
   --fg: #ffffff;
   --fg-muted: rgba(255,255,255,0.8);
@@ -26,37 +27,14 @@
   --spore-color: rgba(110, 231, 168, 0.65);
 }
 
-:root[data-theme="light"],
-.light {
-  --bg: #F4F6F0;
-  --fg: #0B0B0C;
-  --fg-muted: rgba(11, 11, 12, 0.75);
-  --fg-subtle: rgba(11, 11, 12, 0.55);
-  --glass-fill: rgba(255, 255, 255, 0.65);
-  --glass-edge-hi: rgba(255, 255, 255, 0.85);
-  --glass-edge-mid: rgba(0, 0, 0, 0.08);
-  --glass-inset: rgba(255, 255, 255, 0.50);
-  --accent: #1F7A4D;
-  --warn: #B7791F;
-  --danger: #C53030;
-  --cta-bg: #0B0B0C;
-  --cta-fg: #ffffff;
-  --overlay-tint: #eaf3ed;
-  --overlay-tint-rgb: 234, 243, 237;
-
-  /* Light mode glow tokens */
-  --glow-color: rgba(31, 122, 77, 0.12);
-  --glow-edge: rgba(31, 122, 77, 0.35);
-  --glow-radius: 280px;
-  --spore-color: rgba(31, 122, 77, 0.55);
-}
-
 html {
+  color-scheme: dark;
   overflow-x: hidden;
   max-width: 100vw;
 }
 
 body {
+  color-scheme: dark;
   background: var(--bg);
   color: var(--fg);
   font-family: 'Barlow', sans-serif;

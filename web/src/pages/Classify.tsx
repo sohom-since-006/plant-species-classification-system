@@ -15,6 +15,7 @@ import { ResultCard } from '@/features/classify/ResultCard';
 import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
 import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
+import { BatchModeSection } from '@/features/classify/BatchModeSection';
 import { useHistoryService } from '@/features/history/useHistoryService';
 import { useSession } from '@/features/auth/useSession';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
@@ -81,6 +82,7 @@ export function Classify() {
   const [forcedFixture, setForcedFixture] = useState<number | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
   const [optInThumbnail, setOptInThumbnail] = useState(false);
+  const [classifyMode, setClassifyMode] = useState<'single' | 'batch'>('single');
 
   // Model loading & worker lifecycle state
   const [workerStatus, setWorkerStatus] = useState<ModelWorkerState>('unloaded');
@@ -698,9 +700,47 @@ export function Classify() {
           </div>
         )}
 
+        {/* ─── Mode Switcher (Single vs Batch) ────────────────────── */}
+        <div className="flex items-center justify-center">
+          <div
+            className="liquid-glass p-1.5 rounded-full border border-white/10 flex items-center gap-1.5 shadow-xl"
+            role="tablist"
+            aria-label="Classification Mode Selection"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={classifyMode === 'single'}
+              onClick={() => setClassifyMode('single')}
+              className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
+                classifyMode === 'single'
+                  ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
+                  : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
+              }`}
+            >
+              Single Specimen
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={classifyMode === 'batch'}
+              onClick={() => setClassifyMode('batch')}
+              className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
+                classifyMode === 'batch'
+                  ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
+                  : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
+              }`}
+            >
+              Batch Mode (Up to 10)
+            </button>
+          </div>
+        </div>
+
         {/* ─── Classification Work Area ───────────────────────────── */}
         <div className="liquid-glass-strong rounded-3xl p-6 md:p-10 border border-white/15 shadow-2xl space-y-8">
-          {photos.length === 0 ? (
+          {classifyMode === 'batch' ? (
+            <BatchModeSection />
+          ) : photos.length === 0 ? (
             /* Upload Zone + Samples */
             <UploadSection
               onFileSelect={(file) => addPhoto(file)}

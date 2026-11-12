@@ -1,19 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Identify plant species from a photo using on-device AI. 120+ species, calibrated confidence, attention heatmaps, and look-alike matching." />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Identify plant species from a photo using on-device AI. 112 catalogued species, calibrated confidence, attention heatmaps, and look-alike matching." />
     <title>Plant Species Classification System</title>
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-
-    <!-- Dark theme enforcement -->
-    <script>
-      try {
-        localStorage.removeItem('theme');
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } catch (e) {}
-    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +17,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="bg-black text-white">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

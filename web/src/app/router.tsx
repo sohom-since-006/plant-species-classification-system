@@ -67,9 +67,7 @@ export function AppRouter() {
             path="dashboard"
             element={
               <Suspense fallback={<PageLoadingFallback />}>
-                <ProtectedRoute featureName="Analytical Dashboard">
-                  <Dashboard />
-                </ProtectedRoute>
+                <Dashboard />
               </Suspense>
             }
           />

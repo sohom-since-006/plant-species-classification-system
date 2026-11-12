@@ -58,24 +58,11 @@ export function LiveBackground() {
       finePointerQuery.addEventListener('change', onPointerMediaChange);
     }
 
-    // Detect light vs dark theme
-    const isLightMode = () =>
-      document.documentElement.getAttribute('data-theme') === 'light' ||
-      document.documentElement.classList.contains('light');
-
-    // Pre-render spore sprites
-    // Dark mode sprites: Mint, Teal, Amber
-    const darkSprites = [
+    // Pre-render spore sprites (Dark botanical theme: Mint, Teal, Amber)
+    const sporeSprites = [
       createOffscreenSprite('rgba(110, 231, 168, 0.95)', 'rgba(110, 231, 168, 0.25)'), // Mint
       createOffscreenSprite('rgba(45, 212, 191, 0.90)', 'rgba(45, 212, 191, 0.22)'),   // Teal
       createOffscreenSprite('rgba(245, 194, 107, 0.85)', 'rgba(245, 194, 107, 0.20)'), // Amber
-    ];
-
-    // Light mode pollen sprites: Sage Green, Olive, Amber
-    const lightSprites = [
-      createOffscreenSprite('rgba(31, 122, 77, 0.45)', 'rgba(31, 122, 77, 0.12)'),
-      createOffscreenSprite('rgba(16, 185, 129, 0.40)', 'rgba(16, 185, 129, 0.10)'),
-      createOffscreenSprite('rgba(183, 121, 31, 0.40)', 'rgba(183, 121, 31, 0.10)'),
     ];
 
     let width = (canvas.width = window.innerWidth);
@@ -149,14 +136,12 @@ export function LiveBackground() {
     // Render single frame for reduced motion
     const renderStaticFrame = () => {
       ctx.clearRect(0, 0, width, height);
-      const light = isLightMode();
-      const sprites = light ? lightSprites : darkSprites;
 
       for (const p of particles) {
-        const sprite = sprites[p.spriteIndex];
+        const sprite = sporeSprites[p.spriteIndex];
         if (!sprite) continue;
         const diameter = p.size * 8;
-        ctx.globalAlpha = light ? p.alpha * 0.65 : p.alpha;
+        ctx.globalAlpha = p.alpha;
         ctx.drawImage(sprite, p.x - diameter / 2, p.y - diameter / 2, diameter, diameter);
       }
       ctx.globalAlpha = 1.0;
@@ -185,8 +170,6 @@ export function LiveBackground() {
       const t0 = performance.now();
 
       ctx.clearRect(0, 0, width, height);
-      const light = isLightMode();
-      const sprites = light ? lightSprites : darkSprites;
 
       // Cursor spotlight smoothing
       if (hasFinePointer && cursorActive) {
@@ -202,15 +185,9 @@ export function LiveBackground() {
           spotlightY,
           280,
         );
-        if (light) {
-          spotGrad.addColorStop(0, 'rgba(31, 122, 77, 0.05)');
-          spotGrad.addColorStop(0.5, 'rgba(31, 122, 77, 0.015)');
-          spotGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        } else {
-          spotGrad.addColorStop(0, 'rgba(110, 231, 168, 0.07)');
-          spotGrad.addColorStop(0.5, 'rgba(45, 212, 191, 0.025)');
-          spotGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        }
+        spotGrad.addColorStop(0, 'rgba(110, 231, 168, 0.07)');
+        spotGrad.addColorStop(0.5, 'rgba(45, 212, 191, 0.025)');
+        spotGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
         ctx.fillStyle = spotGrad;
         ctx.fillRect(0, 0, width, height);
       }
@@ -244,10 +221,10 @@ export function LiveBackground() {
         if (p.y < -15) p.y = height + 15;
         else if (p.y > height + 15) p.y = -15;
 
-        const sprite = sprites[p.spriteIndex];
+        const sprite = sporeSprites[p.spriteIndex];
         if (!sprite) continue;
         const diameter = p.size * 7;
-        ctx.globalAlpha = light ? p.alpha * 0.7 : p.alpha;
+        ctx.globalAlpha = p.alpha;
         ctx.drawImage(sprite, p.x - diameter / 2, p.y - diameter / 2, diameter, diameter);
       }
       ctx.globalAlpha = 1.0;

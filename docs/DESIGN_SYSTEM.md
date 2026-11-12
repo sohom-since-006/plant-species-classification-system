@@ -1,8 +1,9 @@
-# DESIGN SYSTEM
+# DESIGN SYSTEM (Dark-Mode Only)
 
 ## Tokens (CSS variables, `styles/index.css`)
 ```css
-:root, :root[data-theme="dark"] {
+:root {
+  color-scheme: dark;
   --bg: #000000;
   --fg: #ffffff;
   --fg-muted: rgba(255,255,255,0.8);
@@ -20,25 +21,6 @@
   --glow-edge: rgba(110, 231, 168, 0.45);
   --glow-radius: 280px;
   --spore-color: rgba(110, 231, 168, 0.65);
-}
-:root[data-theme="light"] {
-  --bg: #F8F9FA;
-  --fg: #0B0B0C;
-  --fg-muted: rgba(11,11,12,0.65);
-  --fg-subtle: rgba(11,11,12,0.5);
-  --glass-fill: rgba(0,0,0,0.02);
-  --glass-edge-hi: rgba(0,0,0,0.22);
-  --glass-edge-mid: rgba(0,0,0,0.08);
-  --glass-inset: rgba(255,255,255,0.7);
-  --accent: #1F7A4D;
-  --warn: #B7791F;
-  --danger: #C53030;
-  --cta-bg: #0B0B0C;
-  --cta-fg: #ffffff;
-  --glow-color: rgba(31, 122, 77, 0.12);
-  --glow-edge: rgba(31, 122, 77, 0.35);
-  --glow-radius: 280px;
-  --spore-color: rgba(183, 121, 31, 0.55);
 }
 html, body { background: var(--bg); color: var(--fg); font-family: 'Barlow', sans-serif; }
 ```

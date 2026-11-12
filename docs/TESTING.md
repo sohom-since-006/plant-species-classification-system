@@ -29,14 +29,14 @@ Web: Vitest, React Testing Library, Playwright, axe-core. ML: pytest, scikit-lea
   - `SeasonalityChart`: renders 12-month data series, handles zero months, aria-label describes peak sighting months.
   - `FoundInList`: sorts regions descending by count, displays clean percentage/sighting badges.
   - Dashboard graphs (`AccuracyChart`, `FamilyBreakdown`, `SplitChart`, `HistoryTimeline`): render accurately with mock and real data, handle missing metrics gracefully.
-- **Global UI:** ThemeToggle (persists, sets `data-theme`), SpeciesFilters, Modal (spring open/close, focus-trap), Toast (`aria-live`).
+- **Global UI:** SpeciesFilters, Modal (spring open/close, focus-trap), Toast (`aria-live`).
 
 ## 3. End-to-End (Playwright)
 1. Landing loads, headline visible, "Start Identifying" navigates to `/classify`.
 2. Upload a fixture photo, click Identify, observe `ScanAnimation` progressing through stages, then see result card, confidence, Top-3, and similar species.
 3. Classify Details tab: click Details tab, verify "Where it's found" distribution map, regional list, and seasonality chart render.
 4. Upload a non-plant fixture, see the "unknown" message.
-5. Toggle dark/light; the choice persists after reload and switches particle background between spores and pollen.
+5. Verify consistent dark botanical theme across all pages without layout shift or white flash.
 6. Explore: search "tulsi", see species counts by family chart, open detail page, see distribution map, seasonality chart, and look-alikes.
 7. History: saved prediction appears; confidence tiers over time graph renders; delete works; CSV downloads.
 8. Dashboard: verify images per species, Indian vs global split, family breakdown, per-class table, confusion matrix, and calibration diagram render.

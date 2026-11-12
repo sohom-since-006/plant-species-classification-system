@@ -44,7 +44,7 @@ Run typecheck, lint, and tests before declaring any task done.
 - Don't send user images anywhere unless the user opted in.
 
 ## Definition of Done
-Typecheck, lint and tests pass. The feature works in both themes and on mobile (360 px). Keyboard accessible. No console errors. Docs updated if behavior changed.
+Typecheck, lint and tests pass. The feature works in the dark botanical theme and on mobile (360 px). Keyboard accessible. No console errors. Docs updated if behavior changed.
 
 ## Commit Style
 Conventional commits: `feat:`, `fix:`, `docs:`, `test:`, `refactor:`, `chore:`.

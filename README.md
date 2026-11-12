@@ -19,7 +19,7 @@ with global coverage.
 - Species library with search and filters
 - Prediction history, batch classification, and feedback
 - Model performance dashboard (accuracy, confusion matrix, calibration)
-- Dark and light mode, parallax landing page, responsive UI
+- Atmospheric dark botanical UI, parallax landing page, responsive design
 
 ## 🧱 Tech Stack
 

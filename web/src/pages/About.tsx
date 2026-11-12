@@ -1,88 +1,273 @@
+import { Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
-import { Globe, Leaf, Lightbulb, Info } from '@/components/icons';
-import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import {
+  Globe,
+  Leaf,
+  Lightbulb,
+  ShieldCheck,
+  Cpu,
+  ExternalLink,
+  AlertTriangle,
+  ArrowUpRight,
+  User,
+} from '@/components/icons';
 
 export function About() {
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
       {/* Synchronized Hero with scroll blur + fade */}
       <PageHero
-        badge="OPEN SCIENCE & EDGE AI"
-        title="About The System"
-        italicSubtitle="Private Botanical Intelligence"
-        description="A modern, high-precision plant species classification platform engineered to run entirely within your web browser using on-device neural networks."
+        badge="BOTANICAL INTELLIGENCE & OPEN SCIENCE"
+        title="About PlantAI"
+        italicSubtitle="Private On-Device Botanical Intelligence"
+        description="PlantAI is an open-source, client-side biodiversity platform designed to deliver private, real-time plant species classification directly inside modern web browsers without sending images to remote clouds."
       />
 
-      <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-12">
-        {/* Core Pillars */}
-        <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <StaggerItem>
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 h-full" data-glow="">
-              <Leaf className="w-8 h-8 text-[var(--accent)]" />
-              <h2 className="font-heading italic text-2xl text-[var(--fg)]">
-                Uncompromising Privacy
-              </h2>
-              <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
-                Traditional plant identification apps send every photo you take to remote cloud servers for analysis. Our system executes the entire convolutional neural vision model directly on your device via ONNX Runtime Web. Your photos never leave your device.
-              </p>
-            </div>
-          </StaggerItem>
-
-          <StaggerItem>
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 h-full" data-glow="">
-              <Lightbulb className="w-8 h-8 text-[var(--accent)]" />
-              <h2 className="font-heading italic text-2xl text-[var(--fg)]">
-                Zero-latency Edge Inference
-              </h2>
-              <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
-                By utilizing WebAssembly SIMD and WebGL/WebGPU acceleration, models execute in a background Web Worker without freezing your UI thread, delivering instant classifications in under two seconds even on weak mobile connections or offline.
-              </p>
-            </div>
-          </StaggerItem>
-
-          <StaggerItem>
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 h-full" data-glow="">
-              <Globe className="w-8 h-8 text-[var(--accent)]" />
-              <h2 className="font-heading italic text-2xl text-[var(--fg)]">
-                Open Biodiversity Data
-              </h2>
-              <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
-                Our taxonomy hierarchies and training samples originate from open scientific biodiversity networks, including GBIF (Global Biodiversity Information Facility) and iNaturalist community research grade observations.
-              </p>
-            </div>
-          </StaggerItem>
-
-          <StaggerItem>
-            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4 h-full" data-glow="">
-              <Leaf className="w-8 h-8 text-[var(--accent)]" />
-              <h2 className="font-heading italic text-2xl text-[var(--fg)]">
-                Honest Calibrated Confidence
-              </h2>
-              <p className="text-sm text-[var(--fg-muted)] leading-relaxed">
-                Instead of overconfident black-box answers, the system presents temperature-calibrated probabilities, highlights close look-alikes, and explicitly informs you when an image is ambiguous or out of distribution.
-              </p>
-            </div>
-          </StaggerItem>
-        </Stagger>
-
-        {/* Botanical Safety Notice */}
-        <div className="liquid-glass rounded-2xl p-6 flex items-start gap-4 text-xs font-body text-[var(--fg-muted)]">
-          <Info className="w-5 h-5 text-[var(--warn)] shrink-0 mt-0.5" />
-          <p>
-            <strong className="text-[var(--fg)]">Botanical &amp; Medicinal Safety:</strong>{' '}
-            Automated visual recognition cannot replace an expert botanist or toxicologist. Never consume, prepare teas, or apply any wild plant based on automated identification. Certain toxic look-alikes (e.g. hemlock vs wild carrot) require microscopic inspection.
+      <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-16">
+        {/* Project Purpose */}
+        <section aria-labelledby="purpose-heading" className="space-y-4">
+          <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
+            <Leaf className="w-4 h-4" />
+            <span>Mission &amp; Purpose</span>
+          </div>
+          <h2 id="purpose-heading" className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)]">
+            Democratizing Botanical Knowledge With Complete Privacy
+          </h2>
+          <p className="text-sm md:text-base text-[var(--fg-muted)] leading-relaxed font-body">
+            Plant identification is critical for ecology, agriculture, conservation, and education. Traditional identification applications transmit every user photograph across remote commercial servers, creating privacy risks, requiring constant high-bandwidth internet connectivity, and operating as opaque black boxes. 
           </p>
-        </div>
+          <p className="text-sm md:text-base text-[var(--fg-muted)] leading-relaxed font-body">
+            <strong>PlantAI</strong> reimagines plant classification as a local utility. By combining compact modern neural vision architectures with WebAssembly SIMD and WebGPU acceleration, PlantAI executes full convolutional inference entirely within your browser memory. Your images never leave your computer or phone.
+          </p>
+        </section>
 
-        {/* Open Source Credits */}
-        <div className="liquid-glass rounded-3xl p-8 text-center space-y-4">
-          <h3 className="font-heading italic text-2xl text-[var(--fg)]">
-            Built on Open Tools
+        {/* How It Works - 4 Steps */}
+        <section aria-labelledby="how-it-works-heading" className="space-y-6">
+          <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
+            <Cpu className="w-4 h-4" />
+            <span>Architecture &amp; Pipeline</span>
+          </div>
+          <h2 id="how-it-works-heading" className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)]">
+            How It Works: 4-Stage Edge Pipeline
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="liquid-glass-strong rounded-3xl p-6 md:p-8 space-y-3 border border-white/10" data-glow="">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono font-bold text-sm">
+                01
+              </div>
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Specimen Capture</h3>
+              <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
+                Upload or capture 1 to 3 photos of leaf venation, blossoms, fruit, or tree bark. Multi-view aggregation averages embeddings to overcome single-angle occlusion.
+              </p>
+            </div>
+
+            <div className="liquid-glass-strong rounded-3xl p-6 md:p-8 space-y-3 border border-white/10" data-glow="">
+              <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 font-mono font-bold text-sm">
+                02
+              </div>
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Edge Preprocessing</h3>
+              <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
+                Images are read, downscaled, EXIF-oriented, and normalized to ImageNet color distributions ($224 \times 224$ pixels) locally on the browser main thread without any server transfer.
+              </p>
+            </div>
+
+            <div className="liquid-glass-strong rounded-3xl p-6 md:p-8 space-y-3 border border-white/10" data-glow="">
+              <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-mono font-bold text-sm">
+                03
+              </div>
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Off-Thread Neural Inference</h3>
+              <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
+                A dedicated Web Worker invokes ONNX Runtime Web with SIMD acceleration to execute the MobileNetV4 vision model, generating class logits and genus embeddings in under 2 seconds.
+              </p>
+            </div>
+
+            <div className="liquid-glass-strong rounded-3xl p-6 md:p-8 space-y-3 border border-white/10" data-glow="">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-mono font-bold text-sm">
+                04
+              </div>
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Calibrated Taxonomy &amp; Safety</h3>
+              <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
+                Raw logits are scaled with temperature calibration ($T=0.7129$). If confidence is below 57% or centroid distance exceeds $\tau=0.31$, the specimen is safely rejected rather than guessing.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Dataset & Credits */}
+        <section aria-labelledby="dataset-heading" className="liquid-glass rounded-3xl p-6 md:p-10 border border-white/10 space-y-6">
+          <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
+            <Globe className="w-4 h-4" />
+            <span>Open Biodiversity Data</span>
+          </div>
+          <h2 id="dataset-heading" className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)]">
+            Open Scientific Datasets &amp; Community Credits
+          </h2>
+          <p className="text-xs sm:text-sm text-[var(--fg-muted)] leading-relaxed font-body">
+            Our training and reference imagery are sourced exclusively from scientific biodiversity archives, primarily <strong>iNaturalist</strong> research-grade observations mediated via the <strong>Global Biodiversity Information Facility (GBIF)</strong>. All photos are published under open Creative Commons licenses:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+            <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+              <span className="font-mono text-xs text-emerald-400 font-semibold">CC0 1.0</span>
+              <p className="text-xs text-[var(--fg)] font-medium">Public Domain Dedication</p>
+              <p className="text-[11px] text-[var(--fg-subtle)]">Free worldwide dedication with no restrictions.</p>
+            </div>
+            <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+              <span className="font-mono text-xs text-sky-400 font-semibold">CC-BY 4.0</span>
+              <p className="text-xs text-[var(--fg)] font-medium">Attribution Required</p>
+              <p className="text-[11px] text-[var(--fg-subtle)]">Free usage with explicit credit to naturalist observers.</p>
+            </div>
+            <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+              <span className="font-mono text-xs text-amber-400 font-semibold">CC-BY-NC 4.0</span>
+              <p className="text-xs text-[var(--fg)] font-medium">Non-Commercial ShareAlike</p>
+              <p className="text-[11px] text-[var(--fg-subtle)]">Open educational and academic research access.</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10">
+            <p className="text-xs text-[var(--fg-muted)]">
+              Every specimen image displayed in PlantAI contains explicit naturalist attribution.
+            </p>
+            <a
+              href="/species/credits.json"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--accent)] hover:underline"
+            >
+              <span>View Raw Dataset Credits JSON</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </section>
+
+        {/* Model Summary & Privacy */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Model Summary */}
+          <div className="liquid-glass rounded-3xl p-6 md:p-8 space-y-4 border border-white/10">
+            <div className="flex items-center gap-2 text-teal-400 font-mono text-xs uppercase">
+              <Lightbulb className="w-4 h-4" />
+              <span>Model Summary</span>
+            </div>
+            <h3 className="font-heading italic text-xl text-[var(--fg)]">
+              MobileNetV4 Neural Architecture
+            </h3>
+            <ul className="space-y-2 text-xs font-mono text-[var(--fg-muted)]">
+              <li className="flex justify-between border-b border-white/5 pb-1">
+                <span>Architecture</span>
+                <span className="text-[var(--fg)]">MobileNetV4 Small</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-1">
+                <span>Cataloged Species</span>
+                <span className="text-[var(--fg)]">112 Classes</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-1">
+                <span>Botanical Families</span>
+                <span className="text-[var(--fg)]">50+ Families</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-1">
+                <span>Quantization &amp; Format</span>
+                <span className="text-[var(--fg)]">FP32 ONNX Web</span>
+              </li>
+              <li className="flex justify-between border-b border-white/5 pb-1">
+                <span>Held-Out Top-1</span>
+                <span className="text-emerald-400 font-bold">83.68%</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Held-Out Top-5</span>
+                <span className="text-emerald-400 font-bold">94.33%</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Privacy Guarantee */}
+          <div className="liquid-glass rounded-3xl p-6 md:p-8 space-y-4 border border-white/10 flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs uppercase">
+                <ShieldCheck className="w-4 h-4" />
+                <span>Zero-Data Privacy Guarantee</span>
+              </div>
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">
+                Images Stay In Your Browser
+              </h3>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed font-body">
+                PlantAI operates entirely client-side. When you take or upload a photo, it is loaded into your browser's private canvas memory, transformed into WebGL/WASM tensor buffers, and evaluated on your local CPU or GPU.
+              </p>
+              <p className="text-xs text-[var(--fg-muted)] leading-relaxed font-body">
+                We never store, log, or send your photos to remote servers. The optional cloud history feature saves only the classified species name and confidence score; thumbnail storage requires an explicit per-scan checkbox opt-in.
+              </p>
+            </div>
+            <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] font-mono">
+              ✓ Compliant with strict client privacy principles.
+            </div>
+          </div>
+        </section>
+
+        {/* Limitations & Botanical Safety Disclaimer */}
+        <section aria-label="System Limitations and Safety" className="rounded-3xl p-6 md:p-8 bg-rose-500/10 border border-rose-500/30 space-y-3">
+          <div className="flex items-center gap-2 text-rose-300 font-mono text-xs uppercase">
+            <AlertTriangle className="w-4 h-4 shrink-0" />
+            <span>Strict Botanical &amp; Medical Disclaimer</span>
+          </div>
+          <h3 className="font-heading italic text-xl text-rose-200">
+            System Limitations &amp; Safety Protocol
           </h3>
-          <p className="text-xs text-[var(--fg-muted)] max-w-xl mx-auto">
-            Powered by PyTorch, ONNX Runtime Web, Vite, React, Tailwind CSS, and Framer Motion. Distributed under the MIT Open Source license.
+          <p className="text-xs text-rose-100/90 leading-relaxed font-body">
+            <strong>1. Scope:</strong> PlantAI is currently trained on 112 specific botanical species. Non-plant photos, uncataloged wild flora, or cultivars will be flagged as "Low Confidence" or rejected by the out-of-distribution distance filter.
           </p>
-        </div>
+          <p className="text-xs text-rose-100/90 leading-relaxed font-body">
+            <strong>2. Not an Edibility or Medical Tool:</strong> NEVER ingest, prepare teas from, or apply any wild plant or berry based on automated computer vision identification. Deadly poisonous plants (such as Water Hemlock) frequently mimic harmless culinary or medicinal herbs. Always consult a certified botanist or medical professional.
+          </p>
+        </section>
+
+        {/* Project Authors & Academic Credits (Placeholders) */}
+        <section aria-labelledby="authors-heading" className="liquid-glass rounded-3xl p-6 md:p-10 border border-white/10 space-y-6">
+          <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
+            <User className="w-4 h-4" />
+            <span>Project Credits &amp; Attribution</span>
+          </div>
+          <h2 id="authors-heading" className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)]">
+            Academic &amp; Development Team
+          </h2>
+          <p className="text-xs sm:text-sm text-[var(--fg-muted)] leading-relaxed font-body">
+            PlantAI was conceptualized and developed as an open applied research initiative in computer vision and on-device machine learning for biodiversity conservation.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+            <div className="liquid-glass-subtle p-5 rounded-2xl border border-white/10 space-y-2">
+              <span className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Developers &amp; Researchers</span>
+              <p className="font-heading italic text-lg text-[var(--accent)]">
+                [Team / Developer Names]
+              </p>
+              <p className="text-xs text-[var(--fg-muted)] font-mono">
+                Core Engineering, Neural Architecture, &amp; On-Device Optimization
+              </p>
+            </div>
+
+            <div className="liquid-glass-subtle p-5 rounded-2xl border border-white/10 space-y-2">
+              <span className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Institution &amp; Faculty</span>
+              <p className="font-heading italic text-lg text-[var(--fg)]">
+                [College / Department]
+              </p>
+              <p className="text-xs text-[var(--fg-muted)] font-mono">
+                Department of Computer Science &amp; Biological Sciences
+              </p>
+            </div>
+          </div>
+
+          <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+            <p className="text-xs font-mono text-[var(--fg-subtle)]">
+              License: MIT Open Source • Distributed under academic fair use.
+            </p>
+            <Link
+              to="/explore"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--accent)] hover:underline"
+            >
+              <span>Explore Cataloged Taxa</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );
