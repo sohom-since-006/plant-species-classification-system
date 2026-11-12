@@ -41,9 +41,8 @@ function sqlEscape(val) {
 }
 
 function sqlArray(arr) {
-  if (!arr || arr.length === 0) return "'{}'";
-  const escaped = arr.map((item) => `"${String(item).replace(/"/g, '\\"')}"`).join(',');
-  return `'{${escaped}}'`;
+  if (!arr || arr.length === 0) return 'ARRAY[]::text[]';
+  return `ARRAY[${arr.map(sqlEscape).join(', ')}]::text[]`;
 }
 
 export function buildAndValidateSpeciesData() {
@@ -331,3 +330,4 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     process.exit(1);
   }
 }
+
