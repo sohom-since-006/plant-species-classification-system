@@ -3,109 +3,45 @@ import { useParams, Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Skeleton } from '@/components/ui/Skeleton';
-import { ArrowUpRight, Info, Leaf } from '@/components/icons';
-import { MOCK_SPECIES } from '@/data/mockSpecies';
+import { ArrowUpRight, Info, Leaf, AlertTriangle, ExternalLink } from '@/components/icons';
+import { useSpeciesDetailQuery } from '@/features/species/useSpeciesQueries';
 
 const DistributionPanel = lazy(() => import('@/features/distribution/DistributionPanel'));
 
-type SpeciesDetailData = {
-  commonName: string;
-  scientificName: string;
-  family: string;
-  order: string;
-  origin: string;
-  habitat: string;
-  sunlight: string;
-  water: string;
-  imageUrl: string;
-  description: string;
-  lookAlikes: { name: string; distinction: string }[];
-};
-
-const DEFAULT_SPECIES: SpeciesDetailData = {
-  commonName: 'Chinese Hibiscus',
-  scientificName: 'Hibiscus rosa-sinensis',
-  family: 'Malvaceae',
-  order: 'Malvales',
-  origin: 'Vanuatu & Tropical Asia',
-  habitat: 'Tropical and subtropical lowlands',
-  sunlight: 'Full direct sunlight (6+ hours)',
-  water: 'Consistent moisture, well-draining soil',
-  imageUrl:
-    'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=800&q=80',
-  description:
-    'A flamboyant evergreen flowering shrub renowned globally for its large, trumpet-shaped blossoms. Features glossy ovate leaves with serrated margins and an elongated staminal column typical of Malvaceae.',
-  lookAlikes: [
-    {
-      name: 'Hibiscus syriacus (Rose of Sharon)',
-      distinction: 'Deciduous shrub, hardier in colder climates with lobed leaves.',
-    },
-    {
-      name: 'Malvaviscus arboreus (Turk’s Cap)',
-      distinction: 'Blossoms remain tightly closed and pendulous.',
-    },
-  ],
-};
-
-const SPECIES_CATALOG: Record<string, SpeciesDetailData> = {
-  'hibiscus-rosa-sinensis': DEFAULT_SPECIES,
-  'monstera-deliciosa': {
-    commonName: 'Swiss Cheese Plant',
-    scientificName: 'Monstera deliciosa',
-    family: 'Araceae',
-    order: 'Alismatales',
-    origin: 'Tropical rainforests of Southern Mexico',
-    habitat: 'Humid rainforest understory',
-    sunlight: 'Bright indirect light',
-    water: 'Allow top 5 cm of soil to dry between waterings',
-    imageUrl:
-      'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80',
-    description:
-      'An epiphytic climbing vine that develops large perforated leaves (fenestrations) allowing light and heavy rain winds to pass through without tearing the foliage.',
-    lookAlikes: [
-      {
-        name: 'Monstera adansonii',
-        distinction: 'Significantly smaller leaves with enclosed oval holes.',
-      },
-      {
-        name: 'Epipremnum pinnatum (Cebu Blue)',
-        distinction: 'Narrower leaf blade with pinnate incisions.',
-      },
-    ],
-  },
-  'ocimum-tenuiflorum': {
-    commonName: 'Holy Basil (Tulsi)',
-    scientificName: 'Ocimum tenuiflorum',
-    family: 'Lamiaceae',
-    order: 'Lamiales',
-    origin: 'Indian Subcontinent & Southeast Asia',
-    habitat: 'Tropical warm plains, sacred herb gardens',
-    sunlight: 'Full morning to afternoon sun',
-    water: 'Moderate regular watering',
-    imageUrl:
-      'https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1?w=800&q=80',
-    description:
-      'An erect, much-branched subshrub with green or purple ovate serrated leaves and pungent fragrant essential oils containing eugenol.',
-    lookAlikes: [
-      {
-        name: 'Ocimum basilicum (Sweet Basil)',
-        distinction: 'Leaves are smoother, glossier, and sweeter in scent without hairy stems.',
-      },
-      {
-        name: 'Ocimum gratissimum (African Basil)',
-        distinction: 'Coarser, larger foliage with strong clove-like aroma.',
-      },
-    ],
-  },
-};
-
 export function SpeciesDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const { data, isLoading } = useSpeciesDetailQuery(slug);
 
-  const species = (slug && SPECIES_CATALOG[slug]) || DEFAULT_SPECIES;
-  const matchedMock = MOCK_SPECIES.find(
-    (s) => s.slug === slug || s.scientificName.toLowerCase() === species.scientificName.toLowerCase(),
-  );
+  if (isLoading) {
+    return (
+      <div className="max-w-5xl mx-auto px-6 py-24 space-y-8 text-[var(--fg)]">
+        <Skeleton className="h-48 rounded-3xl" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Skeleton className="h-96 rounded-3xl" />
+          <Skeleton className="h-96 rounded-3xl" />
+        </div>
+      </div>
+    );
+  }
+
+  if (!data || !data.species) {
+    return (
+      <div className="max-w-xl mx-auto px-6 py-28 text-center space-y-4 text-[var(--fg)]">
+        <h2 className="font-heading italic text-3xl">Species Not Found</h2>
+        <p className="text-xs text-[var(--fg-muted)]">
+          The requested botanical monograph could not be retrieved from the catalog.
+        </p>
+        <div className="pt-4">
+          <Link to="/explore">
+            <SolidButton className="text-xs px-5 py-2">Return to Catalog</SolidButton>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const { species, lookAlikes } = data;
+  const regionalNames = [species.namesHindi, species.namesBengali].filter(Boolean).join(' • ');
 
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
@@ -116,7 +52,13 @@ export function SpeciesDetail() {
         italicSubtitle={species.scientificName}
         description={species.description}
       >
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-2">
+        {regionalNames && (
+          <p className="text-sm font-medium text-[var(--accent)] font-body text-center -mt-2">
+            Regional Names: {regionalNames}
+          </p>
+        )}
+
+        <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
           <Link to="/classify">
             <SolidButton className="text-xs px-5 py-2">
               Scan This Plant <ArrowUpRight className="w-3.5 h-3.5" />
@@ -128,18 +70,37 @@ export function SpeciesDetail() {
           >
             ← Back to Archive
           </Link>
+          {species.wikipediaUrl && (
+            <a
+              href={species.wikipediaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="liquid-glass text-xs font-mono px-4 py-2 rounded-full text-white/70 hover:text-white flex items-center gap-1.5 transition-colors"
+            >
+              Wikipedia <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
         </div>
       </PageHero>
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-12">
         {/* Specimen Media & Taxonomy overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="w-full h-96 rounded-3xl overflow-hidden bg-black/40 border border-[var(--glass-edge-mid)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="w-full h-96 rounded-3xl overflow-hidden bg-black/40 border border-[var(--glass-edge-mid)] relative">
             <img
-              src={species.imageUrl}
+              src={
+                species.referenceImages?.[0] ||
+                'https://images.unsplash.com/photo-1550950158-d0d960dff51b?w=800&q=80'
+              }
               alt={species.commonName}
               className="w-full h-full object-cover"
             />
+            {species.toxicityNote && (
+              <div className="absolute top-4 left-4 bg-rose-500/90 text-white backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono flex items-center gap-1.5 shadow-lg">
+                <AlertTriangle className="w-3.5 h-3.5" />
+                <span>Toxic Specimen</span>
+              </div>
+            )}
           </div>
 
           <div className="liquid-glass-strong rounded-3xl p-8 space-y-6">
@@ -153,58 +114,143 @@ export function SpeciesDetail() {
                 <dd className="text-[var(--fg)] font-semibold">{species.family}</dd>
               </div>
               <div className="flex justify-between border-b border-[var(--glass-edge-mid)] pb-2">
-                <dt className="text-[var(--fg-subtle)]">Order</dt>
-                <dd className="text-[var(--fg)] font-semibold">{species.order}</dd>
+                <dt className="text-[var(--fg-subtle)]">Genus</dt>
+                <dd className="text-[var(--fg)] font-semibold italic">{species.genus}</dd>
               </div>
               <div className="flex justify-between border-b border-[var(--glass-edge-mid)] pb-2">
-                <dt className="text-[var(--fg-subtle)]">Native Origin</dt>
-                <dd className="text-[var(--fg)] font-semibold">{species.origin}</dd>
+                <dt className="text-[var(--fg-subtle)]">Plant Type</dt>
+                <dd className="text-[var(--accent)] font-semibold capitalize">{species.plantType}</dd>
               </div>
               <div className="flex justify-between border-b border-[var(--glass-edge-mid)] pb-2">
-                <dt className="text-[var(--fg-subtle)]">Natural Habitat</dt>
-                <dd className="text-[var(--fg)] font-semibold">{species.habitat}</dd>
+                <dt className="text-[var(--fg-subtle)]">Origin</dt>
+                <dd className="text-[var(--fg)] font-semibold capitalize">{species.origin}</dd>
               </div>
               <div className="flex justify-between border-b border-[var(--glass-edge-mid)] pb-2">
-                <dt className="text-[var(--fg-subtle)]">Light Requirement</dt>
-                <dd className="text-[var(--accent)] font-semibold">{species.sunlight}</dd>
+                <dt className="text-[var(--fg-subtle)]">Habitat</dt>
+                <dd className="text-[var(--fg)] font-semibold max-w-[200px] text-right truncate">
+                  {species.habitat || 'Tropical and subtropical zones'}
+                </dd>
               </div>
               <div className="flex justify-between pb-1">
-                <dt className="text-[var(--fg-subtle)]">Moisture Regime</dt>
-                <dd className="text-[var(--accent)] font-semibold">{species.water}</dd>
+                <dt className="text-[var(--fg-subtle)]">Distribution</dt>
+                <dd className="text-[var(--fg)] font-semibold max-w-[200px] text-right truncate">
+                  {species.distribution || 'Subcontinental flora'}
+                </dd>
               </div>
             </dl>
           </div>
         </div>
 
-        {/* Look-alikes comparison */}
-        <div className="liquid-glass rounded-3xl p-8 space-y-6">
-          <div className="flex items-center gap-2">
-            <Leaf className="w-5 h-5 text-[var(--accent)]" />
+        {/* Identifying Features */}
+        {species.identifyingFeatures && species.identifyingFeatures.length > 0 && (
+          <div className="liquid-glass rounded-3xl p-8 space-y-4">
             <h3 className="font-heading italic text-2xl text-[var(--fg)]">
-              Diagnostic Look-alikes &amp; Confusions
+              Morphological &amp; Identifying Features
             </h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-body text-[var(--fg-muted)]">
+              {species.identifyingFeatures.map((feat, idx) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-[var(--accent)] text-base leading-none">•</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {species.lookAlikes.map((item) => (
-              <div
-                key={item.name}
-                className="liquid-glass-strong rounded-2xl p-5 space-y-2 border border-[var(--glass-edge-mid)]"
-              >
-                <h4 className="font-heading italic text-lg text-[var(--fg)]">
-                  {item.name}
-                </h4>
-                <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
-                  {item.distinction}
-                </p>
-              </div>
-            ))}
-          </div>
+        )}
+
+        {/* Traditional Uses & Care Tips */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {species.uses && species.uses.length > 0 && (
+            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4">
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Traditional Uses</h3>
+              <ul className="space-y-2 text-xs font-body text-[var(--fg-muted)]">
+                {species.uses.map((u, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-[var(--accent)]">•</span>
+                    <span>{u}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {species.careTips && species.careTips.length > 0 && (
+            <div className="liquid-glass-strong rounded-3xl p-8 space-y-4">
+              <h3 className="font-heading italic text-xl text-[var(--fg)]">Cultivation &amp; Care</h3>
+              <ul className="space-y-2 text-xs font-body text-[var(--fg-muted)]">
+                {species.careTips.map((c, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-[var(--accent)]">•</span>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
+
+        {/* Prominent Toxicity Warning if toxic */}
+        {species.toxicityNote && (
+          <div className="rounded-3xl p-6 bg-rose-500/10 border border-rose-500/30 flex items-start gap-4">
+            <AlertTriangle className="w-6 h-6 text-rose-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <h4 className="font-heading italic text-lg text-rose-300">Toxicity Notice</h4>
+              <p className="text-xs font-body text-rose-200/90 leading-relaxed">
+                {species.toxicityNote}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Fun Fact */}
+        {species.funFact && (
+          <div className="liquid-glass rounded-2xl p-6 border-l-4 border-[var(--accent)]">
+            <p className="text-xs font-mono uppercase tracking-wider text-[var(--accent)] font-semibold">
+              Botanical Fact
+            </p>
+            <p className="mt-1 text-xs font-body italic text-[var(--fg)] leading-relaxed">
+              &ldquo;{species.funFact}&rdquo;
+            </p>
+          </div>
+        )}
+
+        {/* Look-alikes comparison */}
+        {lookAlikes && lookAlikes.length > 0 && (
+          <div className="liquid-glass rounded-3xl p-8 space-y-6">
+            <div className="flex items-center gap-2">
+              <Leaf className="w-5 h-5 text-[var(--accent)]" />
+              <h3 className="font-heading italic text-2xl text-[var(--fg)]">
+                Diagnostic Look-alikes &amp; Confusions
+              </h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {lookAlikes.map((item) => (
+                <div
+                  key={item.id}
+                  className="liquid-glass-strong rounded-2xl p-5 space-y-2 border border-[var(--glass-edge-mid)]"
+                >
+                  <h4 className="font-heading italic text-lg text-[var(--fg)]">
+                    {item.species.commonName} ({item.species.scientificName})
+                  </h4>
+                  <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
+                    {item.distinction}
+                  </p>
+                  <Link
+                    to={`/species/${item.species.slug}`}
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--accent)] hover:underline pt-1"
+                  >
+                    View look-alike monograph →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Where It's Found - Coarse Occurrence Distribution */}
         <div className="space-y-4">
           <Suspense fallback={<Skeleton className="h-80 rounded-3xl" />}>
-            <DistributionPanel speciesId={matchedMock?.id} />
+            <DistributionPanel speciesId={species.id} />
           </Suspense>
         </div>
 

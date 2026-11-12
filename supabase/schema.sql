@@ -160,6 +160,13 @@ create policy "feedback insert"
 
 -- Bucket `uploads`: private, max 5 MB per object, allowed types image/jpeg, image/png, image/webp
 -- Path format: {user_id}/{uuid}.jpg
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('uploads', 'uploads', false, 5242880, array['image/jpeg', 'image/png', 'image/webp'])
+on conflict (id) do update set
+  public = false,
+  file_size_limit = 5242880,
+  allowed_mime_types = array['image/jpeg', 'image/png', 'image/webp'];
+
 drop policy if exists "uploads insert own" on storage.objects;
 create policy "uploads insert own"
   on storage.objects for insert

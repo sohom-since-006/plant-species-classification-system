@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Layout } from '@/app/layout';
 import { Home } from '@/pages/Home';
+import { ProtectedRoute } from '@/features/auth/ProtectedRoute';
 
 // Route-level code splitting so non-landing pages and heavy chart dependencies are isolated
 const Classify = lazy(() => import('@/pages/Classify').then((m) => ({ default: m.Classify })));
@@ -56,7 +57,9 @@ export function AppRouter() {
             path="history"
             element={
               <Suspense fallback={<PageLoadingFallback />}>
-                <History />
+                <ProtectedRoute featureName="Field History">
+                  <History />
+                </ProtectedRoute>
               </Suspense>
             }
           />
@@ -64,7 +67,9 @@ export function AppRouter() {
             path="dashboard"
             element={
               <Suspense fallback={<PageLoadingFallback />}>
-                <Dashboard />
+                <ProtectedRoute featureName="Analytical Dashboard">
+                  <Dashboard />
+                </ProtectedRoute>
               </Suspense>
             }
           />

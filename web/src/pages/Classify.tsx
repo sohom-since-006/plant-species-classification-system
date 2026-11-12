@@ -15,7 +15,8 @@ import { ResultCard } from '@/features/classify/ResultCard';
 import { SimilarSpecies } from '@/features/classify/SimilarSpecies';
 import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
-import { useHistoryStore } from '@/features/history/useHistoryStore';
+import { useHistoryService } from '@/features/history/useHistoryService';
+import { useSession } from '@/features/auth/useSession';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
 import { isMockMode } from '@/ml/mock';
 import {
@@ -25,7 +26,7 @@ import {
   getWorkerState,
   type ModelWorkerState,
 } from '@/ml/pipelineRunner';
-import type { ClassificationResult, SavedPrediction, PipelineStage } from '@/types/prediction';
+import type { ClassificationResult, PipelineStage } from '@/types/prediction';
 import type { Species } from '@/types/species';
 import { ArrowUpRight, History, Leaf } from '@/components/icons';
 import { springDefault, easeOutExpo, DURATION_PAGE, DURATION_BASE, usePrefersReducedMotion } from '@/lib/motion';
@@ -62,7 +63,8 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
 export function Classify() {
   const location = useLocation();
   const { showToast } = useToast();
-  const addPrediction = useHistoryStore((state) => state.addPrediction);
+  const { user } = useSession();
+  const { savePrediction, isSaving } = useHistoryService();
   const prefersReduced = usePrefersReducedMotion();
 
   const [photos, setPhotos] = useState<PhotoItem[]>([]);
@@ -78,6 +80,7 @@ export function Classify() {
   const [result, setResult] = useState<ClassificationResult | null>(null);
   const [forcedFixture, setForcedFixture] = useState<number | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
+  const [optInThumbnail, setOptInThumbnail] = useState(false);
 
   // Model loading & worker lifecycle state
   const [workerStatus, setWorkerStatus] = useState<ModelWorkerState>('unloaded');
@@ -302,32 +305,26 @@ export function Classify() {
     setIsSaved(false);
   };
 
-  const handleSaveToHistory = () => {
-    if (!result || isSaved) return;
+  const handleSaveToHistory = async () => {
+    if (!result || isSaved || isSaving) return;
 
-    const topId = result.top3[0]?.speciesId;
-    const resolved = typeof topId === 'number' ? getSpeciesById(topId) : undefined;
-    const topProb = result.top3[0]?.prob ?? 0;
-    const regional = [resolved?.namesHindi, resolved?.namesBengali].filter(Boolean).join(' • ');
-
-    const entry: SavedPrediction = {
-      id: `pred_${Date.now()}`,
-      speciesId: topId ?? null,
-      confidence: topProb,
-      tier: result.tier,
-      top3: result.top3,
-      similar: result.similar,
-      imagePath: photos[0]?.previewUrl ?? null,
-      modelVersion: result.modelVersion,
-      createdAt: new Date().toISOString(),
-      speciesName: resolved
-        ? `${resolved.commonName} (${resolved.scientificName})${regional ? ` — ${regional}` : ''}`
-        : 'Unrecognized Specimen',
-    };
-
-    addPrediction(entry);
-    setIsSaved(true);
-    showToast('Saved to your local identification history!');
+    try {
+      await savePrediction({
+        result,
+        imageSource: photos[0]?.file ?? null,
+        optInUpload: optInThumbnail,
+      });
+      setIsSaved(true);
+      showToast(
+        user
+          ? optInThumbnail
+            ? 'Saved to cloud history with photo thumbnail!'
+            : 'Saved to cloud history (photo kept private on device)!'
+          : 'Saved to local device history!',
+      );
+    } catch {
+      showToast('Could not save prediction to history.');
+    }
   };
 
   const handleDownloadResultImage = () => {
@@ -592,7 +589,13 @@ export function Classify() {
       },
       {
         label: 'Feedback',
-        content: <FeedbackPanel predictedSpeciesId={topSpecies?.id} />,
+        content: (
+          <FeedbackPanel
+            predictedSpeciesId={topSpecies?.id}
+            confidence={result.top3[0]?.prob}
+            modelVersion={result.modelVersion}
+          />
+        ),
       },
     ];
   }, [result, topSpecies, speciesMap, photos]);
@@ -835,34 +838,49 @@ export function Classify() {
               </div>
 
               {/* Action Buttons: Save, Download, Classify Another */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <SolidButton
-                  onClick={handleSaveToHistory}
-                  disabled={isSaved}
-                  data-glow=""
-                  className="text-xs px-4 py-2.5 rounded-full"
-                >
-                  <History className="w-3.5 h-3.5 mr-1.5" />
-                  <span>{isSaved ? 'Saved to History' : 'Save to History'}</span>
-                </SolidButton>
+              <div className="space-y-3 pt-2">
+                <div className="flex flex-wrap items-center gap-3">
+                  <SolidButton
+                    onClick={handleSaveToHistory}
+                    disabled={isSaved || isSaving}
+                    data-glow=""
+                    className="text-xs px-4 py-2.5 rounded-full"
+                  >
+                    <History className="w-3.5 h-3.5 mr-1.5" />
+                    <span>{isSaving ? 'Saving...' : isSaved ? 'Saved to History' : 'Save to History'}</span>
+                  </SolidButton>
 
-                <button
-                  onClick={handleDownloadResultImage}
-                  data-glow=""
-                  className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white hover:text-[var(--accent)] border border-white/15 transition-all hover:scale-105"
-                  type="button"
-                >
-                  Download Summary Image
-                </button>
+                  <button
+                    onClick={handleDownloadResultImage}
+                    data-glow=""
+                    className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white hover:text-[var(--accent)] border border-white/15 transition-all hover:scale-105 cursor-pointer"
+                    type="button"
+                  >
+                    Download Summary Image
+                  </button>
 
-                <button
-                  onClick={handleReset}
-                  data-glow=""
-                  className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white/80 hover:text-white border border-white/15 ml-auto transition-colors"
-                  type="button"
-                >
-                  Classify Another Plant
-                </button>
+                  <button
+                    onClick={handleReset}
+                    data-glow=""
+                    className="liquid-glass px-4 py-2.5 rounded-full text-xs font-medium text-white/80 hover:text-white border border-white/15 ml-auto transition-colors cursor-pointer"
+                    type="button"
+                  >
+                    Classify Another Plant
+                  </button>
+                </div>
+
+                {/* Privacy opt-in toggle for thumbnail upload */}
+                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-white/70 select-none hover:text-white/90 transition-colors">
+                  <input
+                    type="checkbox"
+                    checked={optInThumbnail}
+                    onChange={(e) => setOptInThumbnail(e.target.checked)}
+                    className="rounded border-white/20 text-emerald-500 focus:ring-emerald-400 bg-white/5 cursor-pointer"
+                  />
+                  <span>
+                    Include photo thumbnail in cloud history (Default: off — photos remain private on your device)
+                  </span>
+                </label>
               </div>
 
               {/* Multi-Tab Deep Dive: Details, Similar, Heatmap, Feedback */}
