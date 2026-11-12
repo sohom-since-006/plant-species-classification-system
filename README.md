@@ -1,5 +1,11 @@
 # 🌿 Plant Species Classification System (PlantAI)
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-plantai--ml.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://plantai-ml.vercel.app)
+[![Catalog](https://img.shields.io/badge/Catalog-112%20Species-34D399?style=for-the-badge)](https://plantai-ml.vercel.app/explore)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20On--Device-6EE7A8?style=for-the-badge)](https://plantai-ml.vercel.app/classify)
+
+**Live Production URL:** [https://plantai-ml.vercel.app/](https://plantai-ml.vercel.app/)
+
 **PlantAI** is an ML-powered, on-device botanical intelligence web application that identifies plant species from a photo of a leaf,
 flower, fruit, or the whole plant. It returns the species with a calibrated
 confidence score, similar-species suggestions with match percentages, an
