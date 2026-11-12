@@ -88,7 +88,7 @@ Rough timeline assumes steady daily work; adjust to your deadline.
 ## Phase 9: Ship (Day 21)
 - [ ] Push to GitHub, connect Vercel, add env vars, deploy
 - [ ] Smoke-test production, test sign-up, history, feedback
-- [ ] Final README (metrics, screenshots, team), demo video
+- [ ] Final README (metrics, screenshots), demo video
 
 ## Risks & Fallbacks
 | Risk | Fallback |

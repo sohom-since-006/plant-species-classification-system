@@ -107,7 +107,7 @@ Read `metrics.json` and model statistics: metric cards (Top-1, Top-5, macro F1, 
 *(PROPOSED dependencies: Recharts for charts and react-simple-maps / lightweight GeoJSON SVG for maps; require user approval before installing).*
 
 ### `/about`, `/help`, 404
-About: objective, dataset and licenses, model architecture, methodology flowchart, privacy note, team (team and contributor credits). Help: photo tips (single leaf or flower, good light, plain background, fill the frame), supported formats, FAQ accordion, limits (110-130 species only), disclaimers. A friendly leaf-themed 404.
+About: objective, dataset and licenses, model architecture, methodology flowchart, privacy note, and limitations. Help: photo tips (single leaf or flower, good light, plain background, fill the frame), supported formats, FAQ accordion, limits (110-130 species only), disclaimers. A friendly leaf-themed 404.
 
 ### Auth (optional, P2)
 Supabase email and Google login in a glass modal; guests everywhere else. Sync theme to `profiles`.

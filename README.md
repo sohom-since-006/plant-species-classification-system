@@ -153,6 +153,6 @@ on GBIF and iNaturalist. Photographer credits and licenses are logged in
 
 ## 📄 License
 
-[Choose a license, e.g. MIT, for the code. Dataset images keep their
-original licenses.]
+MIT License for code. Dataset images preserve their respective original CC licenses (CC0, CC-BY, CC-BY-NC).
+
 ```

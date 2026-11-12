@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { PageHero } from '@/components/layout/PageHero';
 import {
   Globe,
@@ -8,8 +7,6 @@ import {
   Cpu,
   ExternalLink,
   AlertTriangle,
-  ArrowUpRight,
-  User,
 } from '@/components/icons';
 
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
@@ -221,55 +218,6 @@ export function About() {
           <p className="text-xs text-rose-100/90 leading-relaxed font-body">
             <strong>2. Not an Edibility or Medical Tool:</strong> NEVER ingest, prepare teas from, or apply any wild plant or berry based on automated computer vision identification. Deadly poisonous plants (such as Water Hemlock) frequently mimic harmless culinary or medicinal herbs. Always consult a certified botanist or medical professional.
           </p>
-        </section>
-
-        {/* Project Authors & Academic Credits (Placeholders) */}
-        <section aria-labelledby="authors-heading" className="liquid-glass rounded-3xl p-6 md:p-10 border border-white/10 space-y-6">
-          <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
-            <User className="w-4 h-4" />
-            <span>Project Credits &amp; Attribution</span>
-          </div>
-          <h2 id="authors-heading" className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)]">
-            Academic &amp; Development Team
-          </h2>
-          <p className="text-xs sm:text-sm text-[var(--fg-muted)] leading-relaxed font-body">
-            PlantAI was conceptualized and developed as an open applied research initiative in computer vision and on-device machine learning for biodiversity conservation.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-            <div className="liquid-glass-subtle p-5 rounded-2xl border border-white/10 space-y-2">
-              <span className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Developers &amp; Researchers</span>
-              <p className="font-heading italic text-lg text-[var(--accent)]">
-                [Team / Developer Names]
-              </p>
-              <p className="text-xs text-[var(--fg-muted)] font-mono">
-                Core Engineering, Neural Architecture, &amp; On-Device Optimization
-              </p>
-            </div>
-
-            <div className="liquid-glass-subtle p-5 rounded-2xl border border-white/10 space-y-2">
-              <span className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Institution &amp; Faculty</span>
-              <p className="font-heading italic text-lg text-[var(--fg)]">
-                [College / Department]
-              </p>
-              <p className="text-xs text-[var(--fg-muted)] font-mono">
-                Department of Computer Science &amp; Biological Sciences
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-xs font-mono text-[var(--fg-subtle)]">
-              License: MIT Open Source • Distributed under academic fair use.
-            </p>
-            <Link
-              to="/explore"
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--accent)] hover:underline"
-            >
-              <span>Explore Cataloged Taxa</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
         </section>
       </div>
     </div>

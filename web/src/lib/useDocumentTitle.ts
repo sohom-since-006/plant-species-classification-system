@@ -18,3 +18,4 @@ export function useDocumentTitle(pageTitle?: string): void {
     };
   }, [pageTitle]);
 }
+

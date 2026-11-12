@@ -18,7 +18,7 @@
 | `/species/:slug` | Species detail | Full info and look-alikes |
 | `/history` | History | Past predictions |
 | `/dashboard` | Model dashboard | Metrics and evaluation |
-| `/about` | About | Project, dataset, method, team |
+| `/about` | About | Project, dataset, method, limitations |
 | `/help` | Help/FAQ | Photo tips and questions |
 | `*` | 404 | Friendly not-found page |
 
