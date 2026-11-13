@@ -14,13 +14,12 @@ import {
   Area,
   CartesianGrid,
 } from 'recharts';
-import { useSession } from '@/features/auth/useSession';
 import { useHistoryService } from '@/features/history/useHistoryService';
 import { computeUserStats } from './userStats';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
-import { Sparkles, Leaf, History, ArrowUpRight, ShieldCheck, Lock } from '@/components/icons';
+import { Sparkles, Leaf, History, ArrowUpRight } from '@/components/icons';
 
 interface CustomTooltipProps {
   active?: boolean;
@@ -52,7 +51,6 @@ function DarkTooltip({ active, payload, label }: CustomTooltipProps) {
 }
 
 export function UserHistoryStats() {
-  const { user, openAuthModal, loading: authLoading } = useSession();
   const { predictions, isLoading: historyLoading } = useHistoryService();
 
   const stats = useMemo(() => {
@@ -60,7 +58,7 @@ export function UserHistoryStats() {
   }, [predictions]);
 
   // Loading skeleton
-  if (authLoading || historyLoading) {
+  if (historyLoading) {
     return (
       <div className="space-y-6" aria-busy="true" role="status" aria-label="Loading personal scan telemetry">
         <div className="flex items-center justify-between">
@@ -81,38 +79,7 @@ export function UserHistoryStats() {
     );
   }
 
-  // Guest State - prompt to sign in for personal stats
-  if (!user) {
-    return (
-      <div className="liquid-glass-strong rounded-3xl p-8 md:p-12 border border-[var(--glass-edge-mid)] text-center space-y-6 relative overflow-hidden" data-glow="">
-        <div className="w-16 h-16 rounded-2xl bg-[var(--accent-dim)] border border-[var(--accent-glow)] flex items-center justify-center mx-auto text-[var(--accent)]">
-          <Lock className="w-8 h-8" />
-        </div>
-        <div className="max-w-xl mx-auto space-y-2">
-          <h2 className="font-heading italic text-2xl md:text-3xl text-[var(--fg)]">
-            Personal Field Telemetry
-          </h2>
-          <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
-            Sign in to synchronize your botanical field scans across devices, monitor your personal confidence calibration, and track species family diversity over time.
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-          <SolidButton onClick={openAuthModal} className="text-xs px-6 py-2.5">
-            <ShieldCheck className="w-4 h-4" />
-            Sign In to Unlock Telemetry
-          </SolidButton>
-          <Link
-            to="/classify"
-            className="liquid-glass text-xs font-mono px-5 py-2.5 rounded-full text-[var(--fg)] hover:text-[var(--accent)] flex items-center gap-1.5 transition-colors"
-          >
-            Try Free Scan <ArrowUpRight className="w-3.5 h-3.5" />
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
-  // Authenticated with zero scans - Empty State
+  // Zero scans in this session - Empty State
   if (stats.totalScans === 0) {
     return (
       <div className="liquid-glass-strong rounded-3xl p-8 md:p-12 border border-[var(--glass-edge-mid)] text-center space-y-6" data-glow="">
@@ -121,10 +88,10 @@ export function UserHistoryStats() {
         </div>
         <div className="max-w-md mx-auto space-y-2">
           <h2 className="font-heading italic text-2xl text-[var(--fg)]">
-            No Scan Telemetry Yet
+            No Session Telemetry Yet
           </h2>
           <p className="text-xs text-[var(--fg-muted)] leading-relaxed">
-            You haven't saved any botanical predictions to your field journal yet. Scan a specimen or test one of the herbarium samples to begin generating personal insights.
+            You haven't saved any botanical classifications in this browser session yet. Scan a plant or test one of the sample specimens to see real-time session telemetry.
           </p>
         </div>
         <div className="pt-2">

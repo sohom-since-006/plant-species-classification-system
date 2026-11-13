@@ -54,7 +54,7 @@ const FAQS: FaqItem[] = [
     category: 'Security',
     badge: 'Zero-Cloud',
     q: 'Are my photographs uploaded to any remote server or third-party cloud?',
-    a: 'Never. PlantAI executes the entire neural vision network locally on your device via ONNX Runtime Web using WebAssembly and WebGPU. Your photos never leave your device memory and are discarded immediately after classification. If you sign in and click "Save to Field History", only the prediction metadata (species id, confidence, date) is saved. Specimen thumbnail storage requires an explicit checkbox opt-in per scan.',
+    a: 'Never. PlantAI executes the entire neural vision network locally on your device via ONNX Runtime Web using WebAssembly and WebGPU. Your photos never leave your device memory and are discarded immediately after classification. There are no accounts, profiles, or logins. If you click "Save to Field History", predictions are saved only in temporary session storage and cleared automatically when you close your browser tab. No photo or specimen image ever leaves your browser.',
   },
   {
     id: 'supported-species',

@@ -23,7 +23,7 @@ with global coverage. All neural inference executes 100% client-side with comple
 - Attention heatmap (CAM) showing what the model looked at
 - "Not a plant / unknown" rejection and genus-level fallback
 - Species library with search and filters
-- Prediction history, batch classification, and feedback
+- Temporary session-only prediction history (zero account required, cleared when tab closes), batch classification, and anonymous feedback
 - Model performance dashboard (accuracy, confusion matrix, calibration)
 - Atmospheric dark botanical UI, parallax landing page, responsive design
 
@@ -34,7 +34,7 @@ with global coverage. All neural inference executes 100% client-side with comple
 | Frontend | React, Vite, TypeScript, Tailwind CSS, Framer Motion |
 | In-browser inference | ONNX Runtime Web |
 | Training | Python 3.11, PyTorch, EfficientNet-B0 |
-| Database / Auth / Storage | Supabase |
+| Database & Telemetry | Supabase (Species Catalog & Anonymous Feedback) |
 | Hosting / CI | Vercel, GitHub |
 
 ## 📁 Project Structure

@@ -7,15 +7,12 @@ import { ArrowUpRight, Clock, Camera, Info, X, Trash2 } from '@/components/icons
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { CountUp } from '@/components/motion/CountUp';
 import { useHistoryService } from '@/features/history/useHistoryService';
-import { useSession } from '@/features/auth/useSession';
 import { getSpeciesById } from '@/services/speciesService';
-import { isSupabaseConfigured } from '@/lib/supabase';
 import { useToast } from '@/components/ui/useToast';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
 
 export function History() {
   useDocumentTitle('Field Journal');
-  const { user } = useSession();
   const { showToast } = useToast();
   const { predictions, isLoading, deletePrediction, clearHistory } = useHistoryService();
   const [showClearConfirm, setShowClearConfirm] = useState(false);
@@ -66,7 +63,7 @@ export function History() {
     setDeletingId(id);
     try {
       await deletePrediction(id);
-      showToast('Record removed from history.');
+      showToast('Record removed from session history.');
     } catch {
       showToast('Could not delete record.');
     } finally {
@@ -78,7 +75,7 @@ export function History() {
     try {
       await clearHistory();
       setShowClearConfirm(false);
-      showToast('Identification log cleared.');
+      showToast('Session identification log cleared.');
     } catch {
       showToast('Could not clear history.');
     }
@@ -90,21 +87,23 @@ export function History() {
       <PageHero
         badge="BOTANICAL FIELD LOG"
         title="Identification History"
-        italicSubtitle="Your Personal Herbarium"
-        description={
-          user
-            ? 'Review past classifications synced securely to your cloud account. User photos are stored only if opted in; botanical metadata is synced with strict Row Level Security.'
-            : 'Review past plant classifications saved securely in your browser cache. All inference logs and photos are strictly on-device, preserving full field privacy.'
-        }
+        italicSubtitle="Your Temporary Session Log"
+        description="Review plant classifications from your current browsing session. History is stored temporarily in your browser session and is cleared when you close this browser tab."
       />
 
       <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-8">
+        {/* Session Notice Banner */}
+        <div className="liquid-glass rounded-2xl p-4 flex items-center gap-3 border border-emerald-500/20 text-xs text-white/90">
+          <Info className="w-4 h-4 text-[var(--accent)] shrink-0" />
+          <span>History is temporary and is cleared when you close this browser tab.</span>
+        </div>
+
         {/* KPI Summary Strip */}
         <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <StaggerItem>
             <div className="liquid-glass rounded-2xl p-4 text-center" data-glow="">
               <p className="text-xs font-body font-semibold uppercase tracking-wider text-[var(--fg-subtle)]">
-                Total Scans
+                Session Scans
               </p>
               <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-1">
                 <CountUp value={items.length} />
@@ -143,7 +142,7 @@ export function History() {
                 Storage
               </p>
               <p className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)] mt-2">
-                {user && isSupabaseConfigured ? 'Cloud Sync' : 'Local Device'}
+                Session Only
               </p>
             </div>
           </StaggerItem>
@@ -279,10 +278,10 @@ export function History() {
           <div className="liquid-glass rounded-3xl p-12 text-center space-y-4">
             <Camera className="w-10 h-10 text-[var(--fg-subtle)] mx-auto" />
             <h3 className="font-heading italic text-2xl text-[var(--fg)]">
-              No History Recorded Yet
+              No History Recorded in This Session
             </h3>
             <p className="text-xs text-[var(--fg-muted)] max-w-sm mx-auto">
-              Scan plants using your camera or upload photos. All classifications are safely recorded in your herbarium log.
+              Scan plants or select a sample specimen. Classifications are saved temporarily in this browser session.
             </p>
             <div className="pt-2">
               <Link to="/classify">
@@ -307,9 +306,9 @@ export function History() {
       {showClearConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md">
           <div className="liquid-glass-strong rounded-2xl p-6 max-w-sm w-full space-y-4 border border-rose-500/30">
-            <h3 className="font-heading italic text-xl text-white">Clear All History?</h3>
+            <h3 className="font-heading italic text-xl text-white">Clear Session History?</h3>
             <p className="text-xs text-white/70 leading-relaxed font-body">
-              This will permanently delete all saved identification logs from your account and device. This action cannot be undone.
+              This will clear all saved identification logs from your current browser session. This action cannot be undone.
             </p>
             <div className="flex items-center justify-end gap-3 pt-2">
               <button

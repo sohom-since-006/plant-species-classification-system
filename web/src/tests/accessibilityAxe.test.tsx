@@ -4,7 +4,6 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import axe from 'axe-core';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ToastProvider } from '@/components/ui/Toast';
-import { AuthProvider } from '@/features/auth/AuthContext';
 import { Home } from '@/pages/Home';
 import { Classify } from '@/pages/Classify';
 import { Explore } from '@/pages/Explore';
@@ -31,11 +30,9 @@ function renderWithProviders(ui: React.ReactElement, initialRoute = '/') {
   return render(
     <QueryClientProvider client={queryClient}>
       <ToastProvider>
-        <AuthProvider>
-          <MemoryRouter initialEntries={[initialRoute]}>
-            {ui}
-          </MemoryRouter>
-        </AuthProvider>
+        <MemoryRouter initialEntries={[initialRoute]}>
+          {ui}
+        </MemoryRouter>
       </ToastProvider>
     </QueryClientProvider>,
   );

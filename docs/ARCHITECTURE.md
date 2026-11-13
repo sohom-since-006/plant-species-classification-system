@@ -7,11 +7,11 @@
                  +-------------+-------------+
                                | push to main
                                v
-+---------+      +-------------+-------------+      +----------------+
-| Browser | <--> |   Vercel (static React)   |      |   Supabase     |
-|         |      |   + /models/*.onnx etc.   |      |  Postgres/Auth |
-|  ONNX   |      +---------------------------+      |  Storage/RLS   |
-| Runtime |                                         +--------^-------+
++---------+      +-------------+-------------+      +------------------+
+| Browser | <--> |   Vercel (static React)   |      |     Supabase     |
+|         |      |   + /models/*.onnx etc.   |      |  Postgres / RLS  |
+|  ONNX   |      +---------------------------+      | (Catalog & Notes)|
+| Runtime |                                         +--------^---------+
 |  (WASM) |-------------- supabase-js (anon + RLS) -----------+
 +----+----+
      |
@@ -21,7 +21,7 @@
 
 ## 2. Two Pipelines
 **Offline (your laptop, once):** species list -> download images -> clean/split -> train -> evaluate -> export ONNX + metadata -> build coarse distribution (`06_build_distribution.py`) -> copy artifacts into `web/public/models/` and `web/public/data/`.
-**Online (user's browser):** load model -> classify on-device -> optionally save history/feedback to Supabase.
+**Online (user's browser):** load model -> classify on-device -> store temporary prediction in sessionStorage -> optional anonymous feedback to Supabase.
 
 ## 3. Frontend Modules
 ```
@@ -34,10 +34,8 @@ web/src/
     species/      SpeciesGrid, SpeciesFilters, SpeciesInfo
     distribution/ DistributionMap, SeasonalityChart, FoundInList, useDistribution
     charts/       AccuracyChart, FamilyBreakdown, SplitChart, HistoryTimeline
-                  (PROPOSED: Recharts, react-simple-maps pending user approval)
-    history/      HistoryList, HistoryStore
-    dashboard/    MetricsCards, ConfusionMatrix, ClassTable, CalibrationChart
-    auth/         AuthModal, useSession
+    history/      HistoryList, useHistoryStore, useHistoryService
+    dashboard/    MetricsCards, ConfusionMatrix, ClassTable, CalibrationChart, UserHistoryStats
   ml/
     worker.ts     Web Worker entry
     preprocess.ts resize/crop/normalize
@@ -54,7 +52,7 @@ web/src/
   lib/            supabase.ts, theme.ts, format.ts, csv.ts, cursorGlow.ts
   styles/         index.css (glass classes, tokens, glow variables)
   config/         media.ts (video URLs), constants.ts
-  types/          species.ts, distribution.ts, ml.ts
+  types/          species.ts, distribution.ts, ml.ts, database.ts
 ```
 
 ## 4. ML Runtime Details
@@ -68,7 +66,7 @@ web/src/
 2. The worker preprocesses, runs ONNX, returns logits/embedding/features.
 3. `postprocess` applies T, tiers, and the unknown rule. `similar` ranks look-alikes. `cam` builds the heatmap.
 4. The UI fetches species record and distribution data (`species_distribution.json` / Supabase cache) and triggers a staged result reveal.
-5. If the user chose "save": a row goes to `predictions` (Supabase if logged in, otherwise IndexedDB).
+5. If the user chose "save": prediction is saved to `sessionStorage` (temporary session history, capped at 50, cleared when the browser tab closes).
 
 ## 6. Resilience
 - Species details have a bundled `species.json` and `species_distribution.json` fallback, so identification and distribution mapping work offline and if Supabase is down.
@@ -88,7 +86,7 @@ CSS variables on `:root[data-theme="dark"|"light"]`, toggled by `theme.ts`, pers
 |---|---|
 | On-device inference | Free hosting, privacy, no cold starts |
 | EfficientNet-B0 | Best accuracy/size/speed for 6 GB training and browser |
-| Supabase | Auth + DB + storage in one free tier |
+| Supabase | Species catalog + anonymous feedback in one free tier |
 | CAM instead of Grad-CAM | Exact for GAP+linear heads, runs without gradients |
 | Static species fallback | Resilience and instant first paint |
 | Coarse regional distribution JSON | Compact payload (<300 KB), zero GPS coordinate privacy risks, high speed |

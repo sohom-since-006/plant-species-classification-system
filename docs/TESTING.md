@@ -38,7 +38,7 @@ Web: Vitest, React Testing Library, Playwright, axe-core. ML: pytest, scikit-lea
 4. Upload a non-plant fixture, see the "unknown" message.
 5. Verify consistent dark botanical theme across all pages without layout shift or white flash.
 6. Explore: search "tulsi", see species counts by family chart, open detail page, see distribution map, seasonality chart, and look-alikes.
-7. History: saved prediction appears; confidence tiers over time graph renders; delete works; CSV downloads.
+7. History: saved prediction appears in session storage; confidence tiers over time graph renders from session history; delete works; clear all works; CSV downloads.
 8. Dashboard: verify images per species, Indian vs global split, family breakdown, per-class table, confusion matrix, and calibration diagram render.
 9. Reduced-motion verification: emulate `prefers-reduced-motion: reduce`, confirm scan laser sweeps, particle drift, and landing parallax are completely disabled.
 10. Offline-ish: block Supabase and confirm identification and distribution display still work via bundled static fallbacks.
@@ -61,7 +61,7 @@ Run on Chromium, Firefox and WebKit; plus mobile viewports (Pixel 5, iPhone 13).
 - **Performance:** model load, time to first result (target under 2 s), Lighthouse at least 85 performance, 60 fps animation budget.
 - **Accessibility:** axe has zero serious violations; keyboard-only run-through; contrast checks on both themes; reduced-motion verified on all animated components.
 - **Responsive:** 360, 768, 1280, 1920 px screenshots.
-- **Security:** try uploading a renamed `.exe`, an oversized file, and a corrupted image; confirm RLS by trying to read another user's rows with a second account; check headers with a scanner.
+- **Security:** try uploading a renamed `.exe`, an oversized file, and a corrupted image; confirm RLS on species (read-only) and feedback (insert-only, no client read); check headers with a scanner.
 
 ## 6. Manual Test Checklist (before release)
 - [ ] Ten real photos per category (leaf, flower, fruit, whole plant) from your phone

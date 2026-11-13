@@ -18,20 +18,15 @@ Execute the following in your Supabase project's **SQL Editor** in exact order:
 
 1. **Schema & Policies**:
    - Run [`supabase/schema.sql`](file:///supabase/schema.sql)
-   - Configures the 6 application tables (`species`, `species_look_alikes`, `model_versions`, `profiles`, `predictions`, `feedback`)
-   - Enables Row Level Security (RLS) on all tables
-   - Creates the private storage bucket `uploads` (5 MB file limit, user-isolated folder policies)
+   - Configures the 4 application tables (`species`, `species_look_alikes`, `model_versions`, `feedback`)
+   - Enables Row Level Security (RLS) on all tables (read-only reference data, insert-only anonymous feedback)
 2. **Species Reference Data**:
    - Run [`supabase/seed.sql`](file:///supabase/seed.sql)
    - Populates reference catalog of 112 Indian botanical species with taxonomies, regional vernacular names, and look-alikes.
-3. **Authentication & URL Configuration (Critical for Email Confirmation & Redirects)**:
-   - In the Supabase Dashboard, navigate to **Authentication > URL Configuration**.
-   - Set **Site URL** to your production URL: `https://plantai-ml.vercel.app` (never leave this as `http://localhost:3000`).
-   - Under **Redirect URLs**, add the following allow-list patterns:
-     - `https://plantai-ml.vercel.app/**`
-     - `https://*.vercel.app/**` (for preview deployments)
-     - `http://localhost:5173/**` (for local development)
-   - *Why this is mandatory*: When users sign up, Supabase sends a verification email. If your production URL is not in Supabase's allow-list, Supabase rejects the client's `emailRedirectTo` and falls back to `http://localhost:3000`, causing "localhost refused to connect" errors upon email confirmation.
+3. **Authentication Settings**:
+   - The application is 100% public with no user accounts, no login, and no profile data.
+   - In the Supabase Dashboard, navigate to **Authentication > Sign Up** and toggle off **Allow new users to sign up** (or under **Authentication > Providers**, disable Email/OAuth providers).
+   - Prediction history is stored temporarily in client `sessionStorage` and cleared when the browser tab closes.
 
 ---
 

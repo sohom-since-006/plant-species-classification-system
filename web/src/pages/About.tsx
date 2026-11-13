@@ -194,7 +194,7 @@ export function About() {
                 PlantAI operates entirely client-side. When you take or upload a photo, it is loaded into your browser's private canvas memory, transformed into WebGL/WASM tensor buffers, and evaluated on your local CPU or GPU.
               </p>
               <p className="text-xs text-[var(--fg-muted)] leading-relaxed font-body">
-                We never store, log, or send your photos to remote servers. The optional cloud history feature saves only the classified species name and confidence score; thumbnail storage requires an explicit per-scan checkbox opt-in.
+                We never store, log, or send your photos to remote servers. No accounts or sign-ins exist. Your identification history is temporary and stored only in your browser's session storage, clearing completely when you close the tab.
               </p>
             </div>
             <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] font-mono">

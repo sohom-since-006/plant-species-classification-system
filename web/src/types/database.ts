@@ -140,27 +140,6 @@ export interface Database {
           },
         ];
       };
-      profiles: {
-        Row: {
-          id: string;
-          display_name: string | null;
-          theme: 'dark' | 'light';
-          created_at: string;
-        };
-        Insert: {
-          id: string;
-          display_name?: string | null;
-          theme?: 'dark' | 'light';
-          created_at?: string;
-        };
-        Update: {
-          id?: string;
-          display_name?: string | null;
-          theme?: 'dark' | 'light';
-          created_at?: string;
-        };
-        Relationships: [];
-      };
       model_versions: {
         Row: {
           version: string;
@@ -194,64 +173,9 @@ export interface Database {
         };
         Relationships: [];
       };
-      predictions: {
-        Row: {
-          id: string;
-          user_id: string;
-          species_id: number | null;
-          confidence: number;
-          tier: Tier;
-          top3: Json;
-          similar: Json;
-          image_path: string | null;
-          model_version: string | null;
-          created_at: string;
-        };
-        Insert: {
-          id?: string;
-          user_id: string;
-          species_id?: number | null;
-          confidence: number;
-          tier: Tier;
-          top3: Json;
-          similar?: Json;
-          image_path?: string | null;
-          model_version?: string | null;
-          created_at?: string;
-        };
-        Update: {
-          id?: string;
-          user_id?: string;
-          species_id?: number | null;
-          confidence?: number;
-          tier?: Tier;
-          top3?: Json;
-          similar?: Json;
-          image_path?: string | null;
-          model_version?: string | null;
-          created_at?: string;
-        };
-        Relationships: [
-          {
-            foreignKeyName: 'predictions_species_id_fkey';
-            columns: ['species_id'];
-            isOneToOne: false;
-            referencedRelation: 'species';
-            referencedColumns: ['id'];
-          },
-          {
-            foreignKeyName: 'predictions_model_version_fkey';
-            columns: ['model_version'];
-            isOneToOne: false;
-            referencedRelation: 'model_versions';
-            referencedColumns: ['version'];
-          },
-        ];
-      };
       feedback: {
         Row: {
           id: string;
-          user_id: string | null;
           predicted_species: number | null;
           correct_species: number | null;
           was_correct: boolean;
@@ -262,7 +186,6 @@ export interface Database {
         };
         Insert: {
           id?: string;
-          user_id?: string | null;
           predicted_species?: number | null;
           correct_species?: number | null;
           was_correct: boolean;
@@ -273,7 +196,6 @@ export interface Database {
         };
         Update: {
           id?: string;
-          user_id?: string | null;
           predicted_species?: number | null;
           correct_species?: number | null;
           was_correct?: boolean;

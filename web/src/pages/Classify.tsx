@@ -18,7 +18,6 @@ import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { BatchModeSection } from '@/features/classify/BatchModeSection';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { useHistoryService } from '@/features/history/useHistoryService';
-import { useSession } from '@/features/auth/useSession';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
 import { isMockMode } from '@/ml/mock';
 import { runMlStartupSelfCheck } from '@/ml/selfCheck';
@@ -68,7 +67,6 @@ export function Classify() {
   useDocumentTitle('Identify Specimen');
   const location = useLocation();
   const { showToast } = useToast();
-  const { user } = useSession();
   const { savePrediction, isSaving } = useHistoryService();
   const prefersReduced = usePrefersReducedMotion();
 
@@ -85,7 +83,6 @@ export function Classify() {
   const [result, setResult] = useState<ClassificationResult | null>(null);
   const [forcedFixture, setForcedFixture] = useState<number | undefined>(undefined);
   const [isSaved, setIsSaved] = useState(false);
-  const [optInThumbnail, setOptInThumbnail] = useState(false);
   const [classifyMode, setClassifyMode] = useState<'single' | 'batch'>('single');
 
   // Model loading & worker lifecycle state
@@ -363,17 +360,9 @@ export function Classify() {
     try {
       await savePrediction({
         result,
-        imageSource: photos[0]?.file ?? null,
-        optInUpload: optInThumbnail,
       });
       setIsSaved(true);
-      showToast(
-        user
-          ? optInThumbnail
-            ? 'Saved to cloud history with photo thumbnail!'
-            : 'Saved to cloud history (photo kept private on device)!'
-          : 'Saved to local device history!',
-      );
+      showToast('Saved to temporary session history!');
     } catch {
       showToast('Could not save prediction to history.');
     }
@@ -978,19 +967,6 @@ export function Classify() {
                     Classify Another Plant
                   </button>
                 </div>
-
-                {/* Privacy opt-in toggle for thumbnail upload */}
-                <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-white/70 select-none hover:text-white/90 transition-colors">
-                  <input
-                    type="checkbox"
-                    checked={optInThumbnail}
-                    onChange={(e) => setOptInThumbnail(e.target.checked)}
-                    className="rounded border-white/20 text-emerald-500 focus:ring-emerald-400 bg-white/5 cursor-pointer"
-                  />
-                  <span>
-                    Include photo thumbnail in cloud history (Default: off — photos remain private on your device)
-                  </span>
-                </label>
               </div>
 
               {/* Multi-Tab Deep Dive: Details, Similar, Heatmap, Feedback */}

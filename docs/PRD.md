@@ -48,13 +48,13 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 | F8 | Attention heatmap overlay (CAM) with original side by side | P1 |
 | F9 | Multi-photo mode (up to 3 images, fused prediction) | P1 |
 | F10 | Species library: search, filter by family/type/origin | P0 |
-| F11 | Prediction history (local for guests, Supabase for users) | P1 |
+| F11 | Prediction history (session-only, capped at 50, cleared on tab close) | P1 |
 | F12 | Batch classification with CSV export | P2 |
-| F13 | Feedback: correct/wrong, suggest the right species | P1 |
+| F13 | Feedback: anonymous correct/wrong, suggest the right species | P1 |
 | F14 | Model dashboard: accuracy, confusion matrix, per-class table | P1 |
 | F15 | Dark-mode atmospheric theme enforcement | P0 |
 | F16 | Parallax landing page | P0 |
-| F17 | Optional auth (email, Google); guests allowed | P2 |
+| F17 | Zero-account public app (no login, no signup, no stored user data) | P2 |
 | F18 | About, Help/FAQ, 404 pages | P1 |
 | F19 | Share/download result as image | P2 |
 | F20 | "Where it's found" distribution: coarse map, "Found in" regional list, seasonality chart | P1 |
@@ -70,7 +70,7 @@ and give overconfident wrong answers. Few cover common Indian plants well.
 - Model size: ONNX under 25 MB.
 - Accessibility: WCAG 2.1 AA, keyboard navigable, reduced-motion support (disables scan animation, particle drift, parallax).
 - Responsive: 360 px to 1920 px.
-- Privacy: images are processed on-device; uploading is opt-in; distribution uses coarse regional counts without exact coordinates.
+- Privacy: images are processed 100% on-device; no photos ever leave the browser; distribution uses coarse regional counts without exact coordinates.
 - Reliability: graceful errors for bad files, no WebGL/WASM support, offline model failure.
 
 ## 8. Success Metrics

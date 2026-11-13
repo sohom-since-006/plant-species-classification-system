@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SolidButton } from '@/components/ui/SolidButton';
-import { ArrowUpRight, Menu, X, User as UserIcon } from '@/components/icons';
+import { ArrowUpRight, Menu, X } from '@/components/icons';
 import { BrandLogo } from '@/components/brand';
-import { useSession } from '@/features/auth/useSession';
 
 const links = [
   { to: '/', label: 'Home' },
@@ -20,12 +19,6 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { user, signOut, openAuthModal } = useSession();
-
-  const userDisplayName =
-    (user?.user_metadata?.name as string | undefined) ||
-    user?.email?.split('@')[0] ||
-    'Botanist';
 
   return (
     <>
@@ -71,37 +64,8 @@ export function Navbar() {
             </Link>
           </div>
 
-          {/* Right: Auth controls on desktop */}
-          <div className="hidden md:flex items-center gap-2">
-            {user ? (
-              <div className="liquid-glass rounded-full px-3 py-1 flex items-center gap-2 text-xs border border-white/10" data-glow="">
-                <div className="w-6 h-6 rounded-full bg-[var(--accent)]/20 text-[var(--accent)] flex items-center justify-center font-mono font-bold text-[10px]">
-                  {userDisplayName.charAt(0).toUpperCase()}
-                </div>
-                <span className="text-[var(--fg)] font-body truncate max-w-[110px]" title={userDisplayName}>
-                  {userDisplayName}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => signOut()}
-                  className="text-[11px] font-mono text-[var(--fg-subtle)] hover:text-rose-400 ml-1 transition-colors"
-                  title="Sign Out"
-                >
-                  Sign Out
-                </button>
-              </div>
-            ) : (
-              <button
-                type="button"
-                onClick={openAuthModal}
-                data-glow=""
-                className="liquid-glass rounded-full px-4 py-2 text-xs font-body font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] flex items-center gap-1.5 border border-white/10 hover:border-white/20 transition-all"
-              >
-                <UserIcon className="w-3.5 h-3.5" aria-hidden="true" />
-                <span>Sign In</span>
-              </button>
-            )}
-          </div>
+          {/* Desktop right balance spacer */}
+          <div className="hidden md:block w-36" aria-hidden="true" />
 
           {/* Right: mobile menu toggle */}
           <div className="flex items-center gap-2 md:hidden">
@@ -158,42 +122,6 @@ export function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
-            </div>
-
-            {/* Mobile Auth button */}
-            <div className="pt-2 border-t border-white/10">
-              {user ? (
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2.5 px-2 py-1.5">
-                    <div className="w-7 h-7 rounded-full bg-[var(--accent)]/20 text-[var(--accent)] flex items-center justify-center font-mono font-bold text-xs">
-                      {userDisplayName.charAt(0).toUpperCase()}
-                    </div>
-                    <span className="text-xs text-[var(--fg)] font-body truncate">{userDisplayName}</span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      signOut();
-                      setMobileOpen(false);
-                    }}
-                    className="w-full py-2 rounded-xl text-xs font-body text-rose-300 bg-rose-500/10 hover:bg-rose-500/20 transition-colors"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => {
-                    openAuthModal();
-                    setMobileOpen(false);
-                  }}
-                  className="w-full py-2.5 rounded-xl text-xs font-body text-[var(--fg)] liquid-glass border border-white/10 flex items-center justify-center gap-2"
-                >
-                  <UserIcon className="w-4 h-4" />
-                  <span>Sign In / Register</span>
-                </button>
-              )}
             </div>
 
             <Link to="/classify" onClick={() => setMobileOpen(false)}>

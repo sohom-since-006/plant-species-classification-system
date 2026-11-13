@@ -1,28 +1,31 @@
 import { create } from 'zustand';
 import type { SavedPrediction } from '@/types/prediction';
 
-const STORAGE_KEY = 'plant_history_predictions';
+const SESSION_STORAGE_KEY = 'plant_session_history';
+const MAX_HISTORY_ITEMS = 50;
 
-function loadInitial(): SavedPrediction[] {
-  if (typeof window === 'undefined') return [];
+function loadSessionHistory(): SavedPrediction[] {
+  if (typeof window === 'undefined' || typeof sessionStorage === 'undefined') return [];
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : [];
+    const raw = sessionStorage.getItem(SESSION_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
   } catch {
     return [];
   }
 }
 
-function persist(items: SavedPrediction[]): void {
-  if (typeof window === 'undefined') return;
+function persistSessionHistory(items: SavedPrediction[]): void {
+  if (typeof window === 'undefined' || typeof sessionStorage === 'undefined') return;
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(items));
   } catch {
-    // quota exceeded or private mode
+    // SessionStorage quota exceeded or storage disabled
   }
 }
 
-type HistoryState = {
+export type HistoryState = {
   predictions: SavedPrediction[];
   loading: boolean;
   addPrediction: (prediction: SavedPrediction) => void;
@@ -31,28 +34,28 @@ type HistoryState = {
 };
 
 export const useHistoryStore = create<HistoryState>((set) => ({
-  predictions: loadInitial(),
+  predictions: loadSessionHistory(),
   loading: false,
 
   addPrediction: (prediction) =>
     set((state) => {
-      // Avoid duplicate consecutive saves of identical id
+      // Remove duplicate if same id exists, place newest first, cap at 50
       const filtered = state.predictions.filter((p) => p.id !== prediction.id);
-      const updated = [prediction, ...filtered];
-      persist(updated);
+      const updated = [prediction, ...filtered].slice(0, MAX_HISTORY_ITEMS);
+      persistSessionHistory(updated);
       return { predictions: updated };
     }),
 
   deletePrediction: (id) =>
     set((state) => {
       const updated = state.predictions.filter((p) => p.id !== id);
-      persist(updated);
+      persistSessionHistory(updated);
       return { predictions: updated };
     }),
 
   clearHistory: () =>
     set(() => {
-      persist([]);
+      persistSessionHistory([]);
       return { predictions: [] };
     }),
 }));
