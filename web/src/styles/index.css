@@ -97,6 +97,29 @@ body {
   pointer-events: none;
 }
 
+/* ─── Mobile Performance Optimizations (max-width: 767px or coarse pointer) ─── */
+@media (max-width: 767px), (pointer: coarse) {
+  .liquid-glass {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(8, 28, 18, 0.88);
+  }
+
+  .liquid-glass-strong {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(5, 19, 11, 0.94);
+  }
+
+  /* Override excessive backdrop blur utilities on mobile to eliminate GPU compositor stalls */
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  .backdrop-blur-xl {
+    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+}
+
 /* ─── Cursor glow & spotlight ─────────────────────────────────── */
 
 @media (hover: hover) and (pointer: fine) {

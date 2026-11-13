@@ -26,9 +26,23 @@ export function Home() {
   useDocumentTitle();
   const navigate = useNavigate();
   const [speciesCount, setSpeciesCount] = useState('120+');
+  const [isMobile, setIsMobile] = useState(false);
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const check = () => {
+      setIsMobile(
+        window.innerWidth < 768 ||
+        window.matchMedia('(pointer: coarse)').matches
+      );
+    };
+    check();
+    window.addEventListener('resize', check, { passive: true });
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Attempt to read real species count from model_meta.json
   useEffect(() => {
@@ -82,10 +96,11 @@ export function Home() {
         {/* Background video at 120% scale with parallax drift & adjusted center-weighted crop */}
         <motion.div
           className="absolute -left-[10%] -top-[10%] w-[120%] h-[120%] pointer-events-none"
-          style={{ y: prefersReducedMotion ? '0%' : heroVideoY }}
+          style={{ y: prefersReducedMotion || isMobile ? '0%' : heroVideoY }}
         >
           <FadingVideo
             src={MEDIA.hero}
+            poster={MEDIA.heroPoster}
             className="w-full h-full object-cover object-center"
           />
         </motion.div>
@@ -104,8 +119,8 @@ export function Home() {
           className="absolute top-[18%] left-[-8%] md:left-[2%] w-[580px] h-[580px] rounded-full pointer-events-none blur-[120px] will-change-transform"
           style={{
             background: 'radial-gradient(circle, #10B981 0%, #14B8A6 45%, transparent 70%)',
-            animation: prefersReducedMotion ? 'none' : 'hero-glow-drift 24s ease-in-out infinite alternate',
-            opacity: prefersReducedMotion ? 0.18 : undefined,
+            animation: prefersReducedMotion || isMobile ? 'none' : 'hero-glow-drift 24s ease-in-out infinite alternate',
+            opacity: prefersReducedMotion || isMobile ? 0.18 : undefined,
           }}
           aria-hidden="true"
         />
@@ -115,16 +130,6 @@ export function Home() {
           isHero
           className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center pt-16 md:pt-12 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
         >
-          {/* Badge (delay 0.4) */}
-          <Reveal delay={0.4} className="mb-6">
-            <div className="liquid-glass rounded-full px-4 py-1.5 inline-flex items-center gap-2.5 text-xs text-white/90 shadow-lg border border-white/10">
-              <span className="px-2 py-0.5 rounded-full bg-white text-black font-semibold text-[10px] tracking-wider uppercase">
-                New
-              </span>
-              <span>120+ species identified instantly, right in your browser</span>
-            </div>
-          </Reveal>
-
           {/* Headline, Tagline & Subtitle with soft radial dark-green text scrim */}
           <div className="relative max-w-5xl mx-auto">
             {/* Soft text scrim: blurred radial dark-green gradient for guaranteed >= 4.5:1 contrast */}
@@ -251,10 +256,11 @@ export function Home() {
         {/* Background video with subtle 0.2x parallax and soft depth-of-field blur */}
         <motion.div
           className="absolute inset-0 w-full h-[120%] pointer-events-none -top-[10%]"
-          style={{ y: prefersReducedMotion ? '0%' : capVideoY }}
+          style={{ y: prefersReducedMotion || isMobile ? '0%' : capVideoY }}
         >
           <FadingVideo
             src={MEDIA.capabilities}
+            poster={MEDIA.capabilitiesPoster}
             className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </motion.div>
@@ -397,10 +403,11 @@ export function Home() {
         {/* Background How-It-Works video atmosphere (boomerang seamless loop with soft blur) */}
         <motion.div
           className="absolute inset-0 w-full h-[120%] pointer-events-none -top-[10%]"
-          style={{ y: prefersReducedMotion ? '0%' : howVideoY }}
+          style={{ y: prefersReducedMotion || isMobile ? '0%' : howVideoY }}
         >
           <FadingVideo
             src={MEDIA.howItWorks}
+            poster={MEDIA.howItWorksPoster}
             className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </motion.div>
@@ -431,7 +438,7 @@ export function Home() {
           <div className="space-y-6">
             {/* Step 1: Upload */}
             <ScrollBlur
-              className="sticky top-14 md:top-16 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 backdrop-blur-2xl shadow-2xl"
+              className="relative md:sticky md:top-16 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 shadow-2xl"
               yOffset={16}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -459,7 +466,7 @@ export function Home() {
 
             {/* Step 2: Analyze */}
             <ScrollBlur
-              className="sticky top-18 md:top-20 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 backdrop-blur-2xl shadow-2xl"
+              className="relative md:sticky md:top-24 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 shadow-2xl"
               yOffset={16}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -492,7 +499,7 @@ export function Home() {
 
             {/* Step 3: Understand */}
             <ScrollBlur
-              className="sticky top-22 md:top-24 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 backdrop-blur-2xl shadow-2xl"
+              className="relative md:sticky md:top-32 liquid-glass-strong rounded-[2rem] p-6 md:p-8 border border-white/15 shadow-2xl"
               yOffset={16}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -541,6 +548,7 @@ export function Home() {
         <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
           <FadingVideo
             src={MEDIA.cta}
+            poster={MEDIA.ctaPoster}
             className="w-full h-full object-cover scale-[1.04] filter blur-[5px]"
           />
         </div>

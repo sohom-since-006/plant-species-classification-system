@@ -145,3 +145,4 @@ export async function runMlStartupSelfCheck(): Promise<StartupCheckResult> {
 
   return cachedCheckPromise;
 }
+

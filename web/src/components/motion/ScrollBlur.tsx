@@ -107,11 +107,11 @@ export function ScrollBlur({
   return (
     <motion.div
       ref={containerRef}
-      className={`will-change-[transform,opacity,filter] ${className}`}
+      className={`${isMobile ? 'will-change-[opacity]' : 'will-change-[transform,opacity,filter]'} ${className}`}
       style={{
         opacity: targetOpacity,
-        y: prefersReduced ? 0 : targetY,
-        filter: prefersReduced ? 'none' : filter,
+        y: prefersReduced || isMobile ? 0 : targetY,
+        filter: prefersReduced || isMobile ? 'none' : filter,
       }}
     >
       {children}

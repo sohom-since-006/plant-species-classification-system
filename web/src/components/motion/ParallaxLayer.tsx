@@ -18,6 +18,9 @@ export function ParallaxLayer({
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobile =
+    typeof window !== 'undefined' &&
+    (window.innerWidth < 768 || window.matchMedia('(pointer: coarse)').matches);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -27,7 +30,7 @@ export function ParallaxLayer({
   const yMovement = speed * 150;
   const y = useTransform(scrollYProgress, [0, 1], [-yMovement, yMovement]);
 
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || isMobile) {
     return (
       <div ref={ref} className={className} style={style}>
         {children}

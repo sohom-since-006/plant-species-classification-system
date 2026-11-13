@@ -1,4 +1,4 @@
-import { useRef, type ReactNode } from 'react';
+import { useRef, useState, useEffect, type ReactNode } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { BlurText } from '@/components/motion/BlurText';
 import { Reveal } from '@/components/motion/Reveal';
@@ -33,9 +33,23 @@ export function PageHero({
   compact = false,
 }: PageHeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const check = () => {
+      setIsMobile(
+        window.innerWidth < 768 ||
+        window.matchMedia('(pointer: coarse)').matches
+      );
+    };
+    check();
+    window.addEventListener('resize', check, { passive: true });
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   // Track scroll progress through this hero section
   const { scrollYProgress } = useScroll({
@@ -80,8 +94,8 @@ export function PageHero({
         }`}
         style={{
           opacity: prefersReducedMotion ? 1 : opacity,
-          y: prefersReducedMotion ? 0 : y,
-          filter: prefersReducedMotion ? 'none' : filter,
+          y: prefersReducedMotion || isMobile ? 0 : y,
+          filter: prefersReducedMotion || isMobile ? 'none' : filter,
         }}
       >
         {/* Optional Badge */}

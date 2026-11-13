@@ -30,3 +30,4 @@ if (fs.existsSync(srcDir)) {
 } else {
   console.warn(`[copy-ort-wasm] Source directory ${srcDir} does not exist. Skipping copy.`);
 }
+

@@ -82,9 +82,10 @@ export function LiveBackground() {
 
     updateDprAndSize();
 
-    // Particle count: 75 on desktop, 30 on small desktop, 16 on touch devices
+    // Particle count: 75 on desktop, 30 on small desktop, 12 on touch/mobile
     const isMobile = width < 768;
-    const particleCount = !hasFinePointer ? 16 : isMobile ? 30 : 75;
+    const isTouchOrMobile = isMobile || !hasFinePointer;
+    const particleCount = isTouchOrMobile ? 12 : isMobile ? 30 : 75;
 
     const particles: Particle[] = [];
     for (let i = 0; i < particleCount; i++) {
@@ -108,7 +109,7 @@ export function LiveBackground() {
       });
     }
 
-    // Cursor tracking
+    // Cursor tracking (desktop with fine pointer only)
     let targetMouseX = -9999;
     let targetMouseY = -9999;
     let spotlightX = -9999;
@@ -116,7 +117,7 @@ export function LiveBackground() {
     let cursorActive = false;
 
     const onPointerMove = (e: PointerEvent) => {
-      if (!hasFinePointer) return;
+      if (!hasFinePointer || isTouchOrMobile) return;
       targetMouseX = e.clientX;
       targetMouseY = e.clientY;
       cursorActive = true;
@@ -130,10 +131,12 @@ export function LiveBackground() {
       cursorActive = false;
     };
 
-    window.addEventListener('pointermove', onPointerMove, { passive: true });
-    document.addEventListener('pointerleave', onPointerLeave, { passive: true });
+    if (hasFinePointer && !isTouchOrMobile) {
+      window.addEventListener('pointermove', onPointerMove, { passive: true });
+      document.addEventListener('pointerleave', onPointerLeave, { passive: true });
+    }
 
-    // Render single frame for reduced motion
+    // Render single frame for reduced motion or mobile/touch battery & CPU saving
     const renderStaticFrame = () => {
       ctx.clearRect(0, 0, width, height);
 
@@ -147,7 +150,7 @@ export function LiveBackground() {
       ctx.globalAlpha = 1.0;
     };
 
-    if (prefersReduced) {
+    if (prefersReduced || isTouchOrMobile) {
       renderStaticFrame();
       return () => {
         window.removeEventListener('pointermove', onPointerMove);
