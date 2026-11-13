@@ -21,6 +21,7 @@ import { useHistoryService } from '@/features/history/useHistoryService';
 import { useSession } from '@/features/auth/useSession';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
 import { isMockMode } from '@/ml/mock';
+import { runMlStartupSelfCheck } from '@/ml/selfCheck';
 import {
   runClassificationPipeline,
   STAGE_LABELS,
@@ -96,33 +97,51 @@ export function Classify() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+  const workAreaRef = useRef<HTMLDivElement>(null);
+  const createdUrlsRef = useRef<Set<string>>(new Set());
 
-  // Eagerly preheat model worker on Classify page mount if not in mock mode
+  // Startup self-check & eager preheat of model worker on mount (if not in mock mode)
   useEffect(() => {
+    let cancelled = false;
+
     if (!isMockMode) {
-      try {
-        getOrCreateWorker((progress, message) => {
-          setWorkerProgress(progress);
-          setWorkerMsg(message);
-          if (progress >= 1.0) {
-            setWorkerStatus('ready');
-          } else {
-            setWorkerStatus('loading');
-          }
-        });
-        const current = getWorkerState();
-        setWorkerStatus(current.state);
-        setWorkerProgress(current.progress);
-        setWorkerMsg(current.message);
-        setWorkerErr(current.error);
-        if (current.state === 'loading') {
-          setShowProgressBanner(true);
+      void runMlStartupSelfCheck().then((check) => {
+        if (cancelled) return;
+        if (!check.ok) {
+          setWorkerStatus('error');
+          setWorkerErr(check.error || 'Browser ML environment self-check failed.');
+          return;
         }
-      } catch (e) {
-        setWorkerStatus('error');
-        setWorkerErr(e instanceof Error ? e.message : String(e));
-      }
+
+        try {
+          getOrCreateWorker((progress, message) => {
+            if (cancelled) return;
+            setWorkerProgress(progress);
+            setWorkerMsg(message);
+            if (progress >= 1.0) {
+              setWorkerStatus('ready');
+            } else {
+              setWorkerStatus('loading');
+            }
+          });
+          const current = getWorkerState();
+          setWorkerStatus(current.state);
+          setWorkerProgress(current.progress);
+          setWorkerMsg(current.message);
+          setWorkerErr(current.error);
+          if (current.state === 'loading') {
+            setShowProgressBanner(true);
+          }
+        } catch (e) {
+          setWorkerStatus('error');
+          setWorkerErr(e instanceof Error ? e.message : String(e));
+        }
+      });
     }
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Auto-hide progress banner 1.5 seconds after reaching 100% / ready state
@@ -149,6 +168,7 @@ export function Classify() {
     const initialFile = (location.state as { initialFile?: File })?.initialFile;
     if (initialFile && photos.length === 0) {
       const url = URL.createObjectURL(initialFile);
+      createdUrlsRef.current.add(url);
       setPhotos([
         {
           id: `initial_${Date.now()}`,
@@ -159,15 +179,17 @@ export function Classify() {
     }
   }, [location.state, photos.length]);
 
-  // Clean up object URLs and abort controller on unmount
+  // Clean up object URLs and abort controller ONLY on unmount
   useEffect(() => {
+    const urls = createdUrlsRef.current;
     return () => {
-      photos.forEach((p) => URL.revokeObjectURL(p.previewUrl));
+      urls.forEach((url) => URL.revokeObjectURL(url));
+      urls.clear();
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
     };
-  }, [photos]);
+  }, []);
 
   const addPhoto = (file: File, forcedIdx?: number) => {
     // Cancel any stale inference run immediately
@@ -182,6 +204,7 @@ export function Classify() {
       return;
     }
     const url = URL.createObjectURL(file);
+    createdUrlsRef.current.add(url);
     setPhotos((prev) => [
       ...prev,
       {
@@ -197,6 +220,11 @@ export function Classify() {
     setIsDone(false);
     setError(null);
     setIsSaved(false);
+
+    // Smoothly scroll work area below fixed navbar
+    setTimeout(() => {
+      workAreaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   };
 
   const removePhoto = (id: string) => {
@@ -209,7 +237,10 @@ export function Classify() {
 
     setPhotos((prev) => {
       const item = prev.find((p) => p.id === id);
-      if (item) URL.revokeObjectURL(item.previewUrl);
+      if (item && item.previewUrl.startsWith('blob:')) {
+        URL.revokeObjectURL(item.previewUrl);
+        createdUrlsRef.current.delete(item.previewUrl);
+      }
       return prev.filter((p) => p.id !== id);
     });
     setResult(null);
@@ -231,10 +262,12 @@ export function Classify() {
       const file = new File([blob], `${sample.name.replace(/\s+/g, '_')}.webp`, {
         type: blob.type || 'image/webp',
       });
+      const objectUrl = URL.createObjectURL(blob);
+      createdUrlsRef.current.add(objectUrl);
       const photoItem: PhotoItem = {
         id: `sample_${Date.now()}`,
         file,
-        previewUrl: sample.url,
+        previewUrl: objectUrl,
       };
       setPhotos([photoItem]);
       setForcedFixture(undefined);
@@ -242,6 +275,11 @@ export function Classify() {
       setIsDone(false);
       setError(null);
       setIsSaved(false);
+
+      // Smoothly scroll to classification work area with clear navbar clearance
+      setTimeout(() => {
+        workAreaRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
 
       // Execute on-device neural inference on the real sample image
       void handleIdentify([file]);
@@ -752,7 +790,10 @@ export function Classify() {
         </div>
 
         {/* ─── Classification Work Area ───────────────────────────── */}
-        <div className="liquid-glass-strong rounded-3xl p-6 md:p-10 border border-white/15 shadow-2xl space-y-8">
+        <div
+          ref={workAreaRef}
+          className="scroll-mt-28 md:scroll-mt-36 liquid-glass-strong rounded-3xl p-6 md:p-10 border border-white/15 shadow-2xl space-y-8"
+        >
           {classifyMode === 'batch' ? (
             <BatchModeSection />
           ) : photos.length === 0 ? (
@@ -796,13 +837,16 @@ export function Classify() {
 
               {/* ─── Analyzing or Error State: Active Scanning Preview ──── */}
               {(isAnalyzing || error) && activePhoto && (
-                <div className="space-y-6">
+                <div className="space-y-6 pt-2">
                   {/* Photo Preview with ScanOverlay */}
                   <div className="relative aspect-[4/3] max-h-96 w-full rounded-2xl overflow-hidden liquid-glass border border-white/15 shadow-2xl bg-black/40">
                     <img
                       src={activePhoto.previewUrl}
-                      alt="Active Specimen Scan"
+                      alt={activePhoto.file?.name ? `Active scan: ${activePhoto.file.name}` : 'Specimen photograph being analyzed'}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = '/species/neutral_leaf.svg';
+                      }}
                     />
                     <ScanOverlay
                       isScanning={isAnalyzing}
@@ -871,8 +915,11 @@ export function Classify() {
                 >
                   <img
                     src={photos[0]?.previewUrl}
-                    alt="Classified Specimen"
+                    alt={topSpecies?.commonName ? `${topSpecies.commonName} specimen photograph` : 'Classified plant specimen'}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.src = '/species/neutral_leaf.svg';
+                    }}
                   />
                   <ScanOverlay
                     isScanning={false}

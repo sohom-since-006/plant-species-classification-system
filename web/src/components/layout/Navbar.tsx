@@ -29,7 +29,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-4 left-0 right-0 z-50 px-8 lg:px-16" role="navigation">
+      <nav className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-8 lg:px-16" role="navigation">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Brand Logo Monogram & Name */}
           <Link

@@ -215,11 +215,11 @@ export function ScanOverlay({
         </svg>
       )}
 
-      {/* ─── Mock Mode Disclaimer Caption ─────────────────────────── */}
+      {/* ─── Scanning Feature Detection Caption ─────────────────────────── */}
       {isScanning && visiblePoints.length > 0 && (
         <div className="absolute bottom-2 inset-x-2 text-center pointer-events-none z-20">
           <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-black/60 text-white/60 backdrop-blur-xs border border-white/10">
-            Simulated structural points (Phase 4: real CAM feature peaks)
+            Scanning botanical morphological landmarks
           </span>
         </div>
       )}

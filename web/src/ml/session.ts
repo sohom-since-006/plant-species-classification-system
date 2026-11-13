@@ -59,15 +59,20 @@ let loadingPromise: Promise<ModelBundle> | null = null;
 
 /**
  * Configure onnxruntime-web environment defaults.
+ * Forces single-threaded WASM (no SharedArrayBuffer / COOP/COEP dependency)
+ * and resolves local bundled .wasm and .mjs binaries from `/wasm/`.
  */
-function configureOrtEnvironment() {
+export function configureOrtEnvironment() {
   if (typeof ort !== 'undefined' && ort.env?.wasm) {
     ort.env.wasm.numThreads = 1;
     ort.env.wasm.simd = true;
-    // Set fallback wasm CDN path matching pinned version 1.31.1
-    if (!ort.env.wasm.wasmPaths) {
-      ort.env.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.31.1/dist/';
-    }
+    const origin =
+      typeof self !== 'undefined' && self.location?.origin
+        ? self.location.origin
+        : typeof window !== 'undefined' && window.location?.origin
+          ? window.location.origin
+          : '';
+    ort.env.wasm.wasmPaths = `${origin}/wasm/`;
   }
 }
 

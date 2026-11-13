@@ -52,6 +52,7 @@ web/.env.local
 # Build Outputs & Bundler Caches
 web/dist/
 web/dist-ssr/
+web/public/wasm/
 .turbo/
 .cache/
 

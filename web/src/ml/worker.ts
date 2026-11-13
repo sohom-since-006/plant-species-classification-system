@@ -1,5 +1,5 @@
 import * as ort from 'onnxruntime-web';
-import { loadModelBundle, type ModelBundle } from './session';
+import { loadModelBundle, configureOrtEnvironment, type ModelBundle } from './session';
 import { preprocessRawData, type RawImageData } from './preprocess';
 import { computeCalibratedProbabilities } from './postprocess';
 import { computeCAM } from './cam';
@@ -33,6 +33,9 @@ export type WorkerOutMessage =
 
 let bundle: ModelBundle | null = null;
 let activeRequestId: string | null = null;
+
+// Ensure ort environment is initialized with single-threaded WASM and local wasm paths
+configureOrtEnvironment();
 
 self.onmessage = async (e: MessageEvent<WorkerInMessage>) => {
   const msg = e.data;
