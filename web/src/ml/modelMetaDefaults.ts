@@ -1,4 +1,4 @@
-import modelMeta from '../../public/models/model_meta.json';
+import modelMeta from '@/models/model_meta.json';
 
 export interface ModelMetadataShape {
   version: string;

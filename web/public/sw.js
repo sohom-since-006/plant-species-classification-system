@@ -1,5 +1,5 @@
 // PlantAI Service Worker for Offline Execution
-const CACHE_NAME = 'plantai-cache-v1';
+const CACHE_NAME = 'plantai-cache-v2';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -36,27 +36,42 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+self.addEventListener('message', (event) => {
+  if (event.data === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
 self.addEventListener('fetch', (event) => {
   // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
 
-  // Skip supabase API requests and browser-sync/vite dev websockets
+  // Skip supabase API requests and dev websockets
   if (url.origin !== self.location.origin && !url.hostname.includes('fonts.gstatic.com')) {
     return;
   }
 
-  // Network-first for HTML navigation, stale-while-revalidate for assets
+  // Network-first for all HTML navigations to prevent stale route shells after deploy
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request).catch(() => {
-        return caches.match('/') || caches.match('/index.html');
-      })
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          return caches.match('/') || caches.match('/index.html');
+        })
     );
     return;
   }
 
+  // Assets (scripts, images, styles): stale-while-revalidate for speed, fallback to offline asset
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
@@ -74,7 +89,7 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         }
 
-        // Cache local assets
+        // Cache local immutable assets
         if (url.pathname.startsWith('/assets/') || url.pathname.startsWith('/species/')) {
           const clonedResponse = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clonedResponse));

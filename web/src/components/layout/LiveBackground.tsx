@@ -23,7 +23,7 @@ function createOffscreenSprite(
   canvas.width = diameter;
   canvas.height = diameter;
   const ctx = canvas.getContext('2d');
-  if (!ctx) return canvas;
+  if (!ctx || typeof ctx.createRadialGradient !== 'function') return canvas;
 
   const radius = diameter / 2;
   const grad = ctx.createRadialGradient(radius, radius, 0, radius, radius, radius);

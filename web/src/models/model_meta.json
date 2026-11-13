@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "numSpecies": 112,
+  "inputSize": 224,
+  "resize": 256,
+  "crop": 224,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "temperature": 0.7129,
+  "tau": 0.31,
+  "threshold": 0.57,
+  "tierBoundaries": {
+    "high": 0.85,
+    "medium": 0.6
+  },
+  "mlWeight": 0.6,
+  "visualWeight": 0.4,
+  "genusBonus": 0.05,
+  "camWeightsShape": [
+    112,
+    1280
+  ],
+  "modelFile": "plant_model.v1.onnx",
+  "camWeightsFile": "cam_weights.v1.bin",
+  "centroidsFile": "centroids.v1.json",
+  "labelsFile": "labels.json",
+  "metricsFile": "metrics.json",
+  "files": {
+    "model": "plant_model.v1.onnx",
+    "modelFallback": "plant_model.onnx",
+    "camWeights": "cam_weights.v1.bin",
+    "camWeightsFallback": "cam_weights.bin",
+    "centroids": "centroids.v1.json",
+    "centroidsFallback": "centroids.json",
+    "labels": "labels.json",
+    "metrics": "metrics.json"
+  },
+  "exportedAt": "2026-11-11T17:57:47.864617+00:00"
+}

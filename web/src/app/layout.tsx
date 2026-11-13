@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { PageBackground } from '@/components/layout/PageBackground';
 import { OfflineBanner } from '@/components/layout/OfflineBanner';
+import { ErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { pageTransition, pageTransitionReduced, usePrefersReducedMotion } from '@/lib/motion';
 import { initCursorGlow } from '@/lib/cursorGlow';
 
@@ -30,18 +31,17 @@ export function Layout() {
       <Navbar />
       <OfflineBanner />
       <main className="flex-1 w-full relative">
-        <AnimatePresence mode="wait">
+        <ErrorBoundary>
           <motion.div
             key={location.pathname}
             variants={prefersReduced ? pageTransitionReduced : pageTransition}
             initial="initial"
             animate="animate"
-            exit="exit"
             className="w-full h-full"
           >
             <Outlet />
           </motion.div>
-        </AnimatePresence>
+        </ErrorBoundary>
       </main>
       <Footer />
     </div>

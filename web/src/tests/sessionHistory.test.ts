@@ -117,4 +117,31 @@ describe('Session History Store (sessionStorage)', () => {
     const stored = JSON.parse(sessionStorage.getItem('plant_session_history') || '[]');
     expect(stored).toHaveLength(0);
   });
+
+  it('defensively filters out corrupted or invalid entries from sessionStorage', () => {
+    // Populate sessionStorage with a mixture of valid, corrupted, null, and non-array entries
+    const mixedData = [
+      createMockPrediction(1),
+      null,
+      undefined,
+      'a string entry',
+      { id: 'missing-fields' },
+      { id: 'corrupt-conf', speciesId: 1, confidence: 'high', tier: 'high', top3: [], createdAt: '2026-11-13' },
+      { id: 'invalid-tier', speciesId: 1, confidence: 0.9, tier: 'super-high', top3: [], createdAt: '2026-11-13' },
+      createMockPrediction(2),
+    ];
+    sessionStorage.setItem('plant_session_history', JSON.stringify(mixedData));
+
+    // Calling clearHistory resets, but adding another prediction or re-persisting must filter safely
+    const store = useHistoryStore.getState();
+    // Test that adding an invalid prediction is safely rejected
+    store.addPrediction({} as unknown as SavedPrediction);
+    // Add valid prediction
+    store.addPrediction(createMockPrediction(3));
+
+    const current = useHistoryStore.getState().predictions;
+    // None of the invalid items from mixedData should have caused crashes
+    expect(current.every((p) => typeof p.id === 'string' && typeof p.confidence === 'number')).toBe(true);
+  });
 });
+

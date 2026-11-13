@@ -48,6 +48,9 @@ export default defineConfig(({ mode, command }) => {
     worker: {
       format: 'es',
     },
+    build: {
+      sourcemap: true,
+    },
   };
 });
 
