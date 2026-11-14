@@ -144,6 +144,36 @@ class MultiIndexHash:
         results.sort(key=lambda item: (item[0], item[1]))
         return results
 
+    def query(
+        self, h: int, hashes: list[int], max_dist: int = DEFAULT_HAMMING_THRESHOLD
+    ) -> list[tuple[int, int]]:
+        """Find all indexed items with Hamming distance <= max_dist to h. Returns list of (index, dist)."""
+        candidates: set[int] = set()
+        for c_idx, (shift, mask) in enumerate(self.chunk_defs):
+            chunk_val = (h >> shift) & mask
+            if chunk_val in self.tables[c_idx]:
+                candidates.update(self.tables[c_idx][chunk_val])
+
+        results: list[tuple[int, int]] = []
+        for idx in candidates:
+            dist = (h ^ hashes[idx]).bit_count()
+            if dist <= max_dist:
+                results.append((idx, dist))
+        results.sort(key=lambda item: item[0])
+        return results
+
+
+def to_dhash_int(h: str | int) -> int:
+    """Parse a 16-hex or decimal dhash string into an integer."""
+    if isinstance(h, int):
+        return h
+    h = h.strip()
+    return (
+        int(h, 16)
+        if len(h) == 16 and all(c in "0123456789abcdefABCDEF" for c in h)
+        else int(h)
+    )
+
 
 @dataclass
 class ImageScanResult:
@@ -289,8 +319,27 @@ def load_credits_map(credits_csv: Path) -> dict[str, str]:
     return credits_map
 
 
+def parse_species_filter(filter_str: str | None) -> set[int] | None:
+    """Parse a string like '0,1,2' or '0-5' into a set of integer IDs."""
+    if not filter_str:
+        return None
+    ids: set[int] = set()
+    for token in filter_str.split(","):
+        token = token.strip()
+        if not token:
+            continue
+        if "-" in token:
+            start_str, end_str = token.split("-", 1)
+            start, end = int(start_str.strip()), int(end_str.strip())
+            ids.update(range(start, end + 1))
+        else:
+            ids.add(int(token))
+    return ids
+
+
 def discover_files(
     data_dir: Path,
+    species_filter: set[int] | None = None,
 ) -> list[tuple[Path, str, int, str]]:
     """Discover all botanical candidate images across raw/, extra/, and real_test/ directories.
 
@@ -308,6 +357,8 @@ def discover_files(
                     sid = int(sp_dir.name.split("_", 1)[0])
                 except (ValueError, IndexError):
                     continue
+                if species_filter is not None and sid not in species_filter:
+                    continue
                 for f in sorted(sp_dir.iterdir()):
                     if f.is_file() and f.suffix.lower() in supported_exts:
                         rel = f.relative_to(data_dir).as_posix()
@@ -322,6 +373,8 @@ def discover_files(
                     sid = int(sp_dir.name.split("_", 1)[0])
                 except (ValueError, IndexError):
                     continue
+                if species_filter is not None and sid not in species_filter:
+                    continue
                 for f in sorted(sp_dir.iterdir()):
                     if f.is_file() and f.suffix.lower() in supported_exts:
                         rel = f.relative_to(data_dir).as_posix()
@@ -335,6 +388,8 @@ def discover_files(
                 try:
                     sid = int(sp_dir.name.split("_", 1)[0])
                 except (ValueError, IndexError):
+                    continue
+                if species_filter is not None and sid not in species_filter:
                     continue
                 for f in sorted(sp_dir.iterdir()):
                     if f.is_file() and f.suffix.lower() in supported_exts:
@@ -450,10 +505,13 @@ class GroupInfo:
 def cluster_and_group(
     kept_images: list[ImageScanResult],
     hamming_threshold: int = DEFAULT_HAMMING_THRESHOLD,
+    existing_rows: list[dict[str, str]] | None = None,
 ) -> tuple[
     dict[str, int],  # relative_path -> group_id
     list[dict[str, Any]],  # cross_species_near_duplicates
     list[tuple[int, int, int]],  # near_duplicate_pairs
+    dict[int, str],  # group_id -> forced_split
+    list[ImageScanResult],  # rejected_cross_split
 ]:
     """Form initial groups and cluster near-duplicates with Union-Find via MultiIndexHash."""
     # Separate held-out real_test images (they do not participate in train/val/test groups)
@@ -472,6 +530,25 @@ def cluster_and_group(
     uf = UnionFind()
     for g_key in image_initial_groups:
         uf.find(g_key)
+
+    initial_forced_splits: dict[str, set[str]] = defaultdict(set)
+    if existing_rows:
+        existing_hashes = [to_dhash_int(r["dhash"]) for r in existing_rows]
+        existing_mih = MultiIndexHash()
+        for idx, h in enumerate(existing_hashes):
+            existing_mih.add(idx, h)
+
+        for idx, r in enumerate(train_pool):
+            assert r.dhash is not None
+            matches = existing_mih.query(r.dhash, existing_hashes, max_dist=hamming_threshold)
+            if matches:
+                splits = {
+                    existing_rows[m[0]]["split"]
+                    for m in matches
+                    if existing_rows[m[0]]["split"] in {"train", "val", "test"}
+                }
+                g_key = image_initial_groups[idx]
+                initial_forced_splits[g_key].update(splits)
 
     # Multi-index hashing for fast Hamming distance <= threshold
     mih = MultiIndexHash()
@@ -509,21 +586,59 @@ def cluster_and_group(
         # Merge groups connected by near-duplicate clusters
         uf.union(g_u, g_v)
 
-    # Assign contiguous deterministic group IDs to roots
+    # Detect roots that span multiple existing splits
+    root_splits: dict[str, set[str]] = defaultdict(set)
+    for g_key, splits in initial_forced_splits.items():
+        root_splits[uf.find(g_key)].update(splits)
+
+    conflicted_roots = {root for root, splits in root_splits.items() if len(splits) > 1}
+    rejected_cross_split: list[ImageScanResult] = []
+    if conflicted_roots:
+        logger.warning(
+            "Found %d near-duplicate roots spanning conflicting splits; rejecting images in these clusters",
+            len(conflicted_roots),
+        )
+        surviving_pool: list[ImageScanResult] = []
+        surviving_groups: list[str] = []
+        for r, g_key in zip(train_pool, image_initial_groups):
+            root = uf.find(g_key)
+            if root in conflicted_roots:
+                r.status = "near_duplicate"
+                rejected_cross_split.append(r)
+                logger.info(
+                    "Rejecting %s (sp %d) due to cross-split near-duplicate conflict with %s",
+                    r.relative_path,
+                    r.species_id,
+                    root_splits[root],
+                )
+            else:
+                surviving_pool.append(r)
+                surviving_groups.append(g_key)
+        train_pool = surviving_pool
+        image_initial_groups = surviving_groups
+
+    # Assign contiguous deterministic group IDs to surviving roots
     unique_roots = sorted({uf.find(g) for g in image_initial_groups})
     root_to_gid = {root: i for i, root in enumerate(unique_roots)}
+
+    group_constraints: dict[int, str] = {}
+    for root, gid in root_to_gid.items():
+        splits = root_splits.get(root)
+        if splits and len(splits) == 1:
+            group_constraints[gid] = next(iter(splits))
 
     image_to_gid: dict[str, int] = {}
     for r, g_key in zip(train_pool, image_initial_groups):
         image_to_gid[r.relative_path] = root_to_gid[uf.find(g_key)]
 
-    return image_to_gid, cross_species_near_dupes, nd_pairs
+    return image_to_gid, cross_species_near_dupes, nd_pairs, group_constraints, rejected_cross_split
 
 
 def split_groups_stratified(
     kept_images: list[ImageScanResult],
     image_to_gid: dict[str, int],
     seed: int = DEFAULT_SEED,
+    group_constraints: dict[int, str] | None = None,
 ) -> tuple[
     dict[str, str],  # relative_path -> split
     dict[str, int],  # split -> count
@@ -576,6 +691,13 @@ def split_groups_stratified(
     }
     group_split_assignment: dict[int, str] = {}
 
+    if group_constraints:
+        for gid, chosen in group_constraints.items():
+            if gid in groups_map:
+                group_split_assignment[gid] = chosen
+                for img in groups_map[gid]:
+                    current[img.species_id][chosen] += 1
+
     # Sort groups deterministically for reproducible assignment
     # 1. Multi-species groups first so they satisfy deficits before single-species fill quotas
     # 2. Stable shuffle with seeded RNG
@@ -585,6 +707,8 @@ def split_groups_stratified(
     sorted_groups.sort(key=lambda g: len(g.species_counts) > 1, reverse=True)
 
     for g in sorted_groups:
+        if g.group_id in group_split_assignment:
+            continue
         test_needed = g.allow_test and any(
             current[s]["test"] < targets[s]["test"] for s in g.species_counts
         )
@@ -762,11 +886,13 @@ def execute_cleaning_pipeline(
     hamming_threshold: int = DEFAULT_HAMMING_THRESHOLD,
     num_workers: int = DEFAULT_WORKERS,
     dry_run: bool = False,
+    species_ids: str | None = None,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     """Execute the full dataset cleaning, deduplication, grouping, and split pipeline."""
     species_info = load_species_list(species_list_csv)
     credits_map = load_credits_map(credits_csv)
-    candidates = discover_files(data_dir)
+    species_filter = parse_species_filter(species_ids)
+    candidates = discover_files(data_dir, species_filter=species_filter)
 
     if not candidates:
         logger.warning("No candidate images discovered in %s", data_dir)
@@ -775,6 +901,20 @@ def execute_cleaning_pipeline(
             "dry_run": dry_run,
         }
         return empty_report, {}
+
+    # Load existing splits.csv rows if filtering species
+    existing_rows: list[dict[str, str]] = []
+    base_gid = 0
+    splits_csv = data_dir / "splits.csv"
+    if species_filter is not None and splits_csv.exists():
+        with open(splits_csv, mode="r", newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                sid = int(row["species_id"])
+                if sid not in species_filter:
+                    existing_rows.append(row)
+        if existing_rows:
+            base_gid = max((int(r["group_id"]) for r in existing_rows), default=-1) + 1
 
     # 1. Quality Filters & Exact Duplicate Detection
     kept_images, rejected_images, cross_species_exact_dupes = scan_dataset(
@@ -786,13 +926,29 @@ def execute_cleaning_pipeline(
     )
 
     # 2. Near-duplicate Clustering via Union-Find & MIH
-    image_to_gid, cross_species_near_dupes, _nd_pairs = cluster_and_group(
-        kept_images, hamming_threshold=hamming_threshold
+    (
+        image_to_gid,
+        cross_species_near_dupes,
+        _nd_pairs,
+        group_constraints,
+        rejected_cross_split,
+    ) = cluster_and_group(
+        kept_images,
+        hamming_threshold=hamming_threshold,
+        existing_rows=existing_rows if existing_rows else None,
     )
+
+    if rejected_cross_split:
+        rej_paths = {r.relative_path for r in rejected_cross_split}
+        kept_images = [r for r in kept_images if r.relative_path not in rej_paths]
+        rejected_images.extend(rejected_cross_split)
 
     # 3. Stratified Split (80/10/10) per species
     file_to_split, split_sizes, flagged_minimums = split_groups_stratified(
-        kept_images, image_to_gid, seed=seed
+        kept_images,
+        image_to_gid,
+        seed=seed,
+        group_constraints=group_constraints if group_constraints else None,
     )
 
     # 4. Check held-out real_test photos against train
@@ -810,6 +966,9 @@ def execute_cleaning_pipeline(
         "aspect_ratio": sum(1 for r in rejected_images if r.status == "aspect_ratio"),
         "exact_duplicate": sum(
             1 for r in rejected_images if r.status == "exact_duplicate"
+        ),
+        "near_duplicate": sum(
+            1 for r in rejected_images if r.status == "near_duplicate"
         ),
         "total_rejected": len(rejected_images),
     }
@@ -883,18 +1042,24 @@ def execute_cleaning_pipeline(
         # Write ml/data/splits.csv
         splits_csv = data_dir / "splits.csv"
         splits_csv.parent.mkdir(parents=True, exist_ok=True)
+
         with open(splits_csv, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow(
                 ["file", "species_id", "split", "group_id", "dhash", "source"]
             )
+            # Write preserved existing rows first
+            for r in existing_rows:
+                writer.writerow([r["file"], r["species_id"], r["split"], r["group_id"], r["dhash"], r["source"]])
+            # Append newly cleaned rows
             for r in kept_images:
                 rel = r.relative_path
                 split = file_to_split[rel]
                 gid = image_to_gid.get(rel, -1)
+                adjusted_gid = base_gid + gid if gid >= 0 else -1
                 assert r.dhash is not None
                 dhash_hex = f"{r.dhash:016x}"
-                writer.writerow([rel, r.species_id, split, gid, dhash_hex, r.source])
+                writer.writerow([rel, r.species_id, split, adjusted_gid, dhash_hex, r.source])
 
         # Write ml/data/cleaning_report.json
         report_file = data_dir / "cleaning_report.json"
@@ -903,6 +1068,26 @@ def execute_cleaning_pipeline(
 
         # Write web/public/data/dataset_stats.json
         web_stats_json.parent.mkdir(parents=True, exist_ok=True)
+        # If species_filter was used, compute overall dashboard stats from combined splits.csv
+        if species_filter is not None and splits_csv.exists():
+            with open(splits_csv, mode="r", newline="", encoding="utf-8") as f:
+                all_split_rows = list(csv.DictReader(f))
+            all_split_sizes = {
+                "train": sum(1 for r in all_split_rows if r["split"] == "train"),
+                "val": sum(1 for r in all_split_rows if r["split"] == "val"),
+                "test": sum(1 for r in all_split_rows if r["split"] == "test"),
+            }
+            all_per_species = Counter(int(r["species_id"]) for r in all_split_rows)
+            dataset_stats["split_sizes"] = all_split_sizes
+            dataset_stats["total_images"] = len(all_split_rows)
+            dataset_stats["images_per_species"] = [
+                {
+                    "species": species_info.get(sid, {}).get("common_name", f"Species_{sid}"),
+                    "count": all_per_species.get(sid, 0),
+                }
+                for sid in sorted(species_info.keys())
+            ]
+
         with open(web_stats_json, mode="w", encoding="utf-8") as f:
             json.dump(dataset_stats, f, indent=2, ensure_ascii=False)
 
@@ -1067,6 +1252,12 @@ def main() -> None:
         help="Maximum Hamming distance for near-duplicate clustering (default: 5)",
     )
     parser.add_argument(
+        "--species-ids",
+        type=str,
+        default=None,
+        help="Comma-separated species IDs or ranges to process (e.g. '112-149').",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Execute inspection and splitting in memory without modifying files on disk.",
@@ -1085,6 +1276,7 @@ def main() -> None:
         hamming_threshold=args.hamming_threshold,
         num_workers=args.workers,
         dry_run=args.dry_run,
+        species_ids=args.species_ids,
     )
 
     print_cleaning_report(report)

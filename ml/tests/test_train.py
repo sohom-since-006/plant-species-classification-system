@@ -2,7 +2,7 @@
 
 Tests:
   1. Data loader refuses test and real_test partitions and loads only train/val.
-  2. Model output shapes (logits Bx112, embedding Bx1280, features Bx1280x7x7).
+  2. Model output shapes (logits Bx150, embedding Bx1280, features Bx1280x7x7).
   3. Pretrained mean and std match TRD specification.
   4. Tiny-batch overfit sanity test (loss decreases across gradient steps).
   5. Phased transfer learning parameter freezing and unfreezing.
@@ -38,7 +38,7 @@ load_dataset_records = train_module.load_dataset_records
 def test_model_output_shapes_and_constants() -> None:
     """Verify that PlantClassifier produces exact TRD tensor shapes and ImageNet constants."""
     batch_size = 2
-    num_classes = 112
+    num_classes = 150
     model = PlantClassifier(num_classes=num_classes, pretrained=False)
 
     # 1. ImageNet mean and std
@@ -161,3 +161,21 @@ def test_tiny_batch_overfit_sanity() -> None:
     assert (
         final_loss < initial_loss * 0.2
     ), f"Optimization failed to overfit tiny batch: initial {initial_loss:.4f} vs final {final_loss:.4f}"
+
+
+def test_v1_baseline_protection_on_resume(tmp_path: Path) -> None:
+    """Verify that attempting to resume from or overwrite the v1 baseline run raises an error."""
+    import pytest
+
+    with pytest.raises(
+        ValueError,
+        match="Cannot resume into or overwrite baseline v1 run '20261110_095819'",
+    ):
+        train_module.run_training_pipeline(
+            splits_csv=Path("ml/data/splits.csv"),
+            species_list_csv=Path("ml/species_list.csv"),
+            data_dir=Path("ml/data"),
+            runs_dir=tmp_path,
+            resume_path=Path("ml/runs/20261110_095819/last.pt"),
+            smoke=True,
+        )

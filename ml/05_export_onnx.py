@@ -55,11 +55,22 @@ logging.basicConfig(
 )
 logger = logging.getLogger("export_onnx")
 
-DEFAULT_VERSION = "1.0.0"
+DEFAULT_VERSION = "2.0.0"
 DEFAULT_SEED = 42
 DEFAULT_PARITY_SAMPLES = 50
 MAX_UNQUANTIZED_SIZE_MB = 25.0
 PARITY_LOGITS_TOLERANCE = 1e-3
+
+
+def get_version_tag(version: str) -> str:
+    """Derive version tag for versioned artifact filenames.
+
+    E.g. '2.0.0' -> 'v2', '2.1.0' -> 'v2.1.0'.
+    """
+    parts = version.split(".")
+    if len(parts) >= 2 and (parts[1] != "0" or (len(parts) >= 3 and parts[2] != "0")):
+        return f"v{version}"
+    return f"v{parts[0]}"
 
 
 def seed_everything(seed: int = DEFAULT_SEED) -> None:
@@ -356,7 +367,7 @@ def export_cam_weights(
         )
 
     # Write versioned and unversioned
-    ver_tag = f"v{version.split('.')[0]}"
+    ver_tag = get_version_tag(version)
     v_path = output_dir / f"cam_weights.{ver_tag}.bin"
     default_path = output_dir / "cam_weights.bin"
 
@@ -406,7 +417,7 @@ def export_centroids(
         vec = norm_centroids[i].tolist()
         centroids_dict[str(i)] = [round(float(v), 4) for v in vec]
 
-    ver_tag = f"v{version.split('.')[0]}"
+    ver_tag = get_version_tag(version)
     v_path = output_dir / f"centroids.{ver_tag}.json"
     default_path = output_dir / "centroids.json"
 
@@ -442,7 +453,7 @@ def export_model_meta(
             "prob_threshold": 0.35,
         }
 
-    ver_tag = f"v{version.split('.')[0]}"
+    ver_tag = get_version_tag(version)
     meta = {
         "version": version,
         "numSpecies": len(labels_meta),
@@ -465,7 +476,7 @@ def export_model_meta(
         "modelFile": f"plant_model.{ver_tag}.onnx",
         "camWeightsFile": f"cam_weights.{ver_tag}.bin",
         "centroidsFile": f"centroids.{ver_tag}.json",
-        "labelsFile": "labels.json",
+        "labelsFile": f"labels.{ver_tag}.json",
         "metricsFile": "metrics.json",
         "files": {
             "model": f"plant_model.{ver_tag}.onnx",
@@ -474,7 +485,8 @@ def export_model_meta(
             "camWeightsFallback": "cam_weights.bin",
             "centroids": f"centroids.{ver_tag}.json",
             "centroidsFallback": "centroids.json",
-            "labels": "labels.json",
+            "labels": f"labels.{ver_tag}.json",
+            "labelsFallback": "labels.json",
             "metrics": "metrics.json",
         },
         "exportedAt": datetime.datetime.now(datetime.UTC).isoformat(),
@@ -483,6 +495,13 @@ def export_model_meta(
     meta_path = output_dir / "model_meta.json"
     with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2)
+
+    # Sync to web/src/models/model_meta.json to prevent threshold drift
+    src_models_meta = Path("web/src/models/model_meta.json")
+    if src_models_meta.parent.exists():
+        with open(src_models_meta, "w", encoding="utf-8") as f:
+            json.dump(meta, f, indent=2)
+        logger.info("Synchronized %s with production model_meta.json", src_models_meta)
 
     logger.info("Exported model_meta.json (version %s)", version)
     return meta_path
@@ -809,7 +828,7 @@ def main() -> None:
     }
 
     # 2. Export ONNX model
-    ver_tag = f"v{args.version.split('.')[0]}"
+    ver_tag = get_version_tag(args.version)
     versioned_onnx_path = output_dir / f"plant_model.{ver_tag}.onnx"
     default_onnx_path = output_dir / "plant_model.onnx"
 
@@ -844,10 +863,20 @@ def main() -> None:
         seed=args.seed,
     )
 
-    # 5. Export labels.json
-    labels_out = output_dir / "labels.json"
-    with open(labels_out, "w", encoding="utf-8") as f:
+    # 5. Export labels.v2.json and labels.json
+    labels_v_out = output_dir / f"labels.{ver_tag}.json"
+    with open(labels_v_out, "w", encoding="utf-8") as f:
         json.dump(labels_meta, f, indent=2)
+    labels_out = output_dir / "labels.json"
+    shutil.copyfile(labels_v_out, labels_out)
+
+    # Clean out any old v1 artifacts to keep web/public/models pristine
+    for old_artifact in output_dir.glob("*.v1.*"):
+        try:
+            old_artifact.unlink()
+            logger.info("Purged obsolete v1 artifact: %s", old_artifact.name)
+        except Exception as exc:
+            logger.warning("Could not delete %s: %s", old_artifact, exc)
 
     # 6. Export CAM weights
     cam_shape, cam_kb = export_cam_weights(model, output_dir, args.version)

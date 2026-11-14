@@ -32,7 +32,7 @@ RUNS_DIR = ML_DIR / "runs"
 
 
 def get_latest_checkpoint() -> tuple[Path, Path] | None:
-    """Find latest best.pt and labels.json in ml/runs."""
+    """Find best.pt and labels.json in ml/runs corresponding to the exported artifacts."""
     if not RUNS_DIR.exists():
         return None
     candidates = [
@@ -42,6 +42,27 @@ def get_latest_checkpoint() -> tuple[Path, Path] | None:
     ]
     if not candidates:
         return None
+
+    # Match checkpoint to exported cam_weights.bin if present
+    cam_path = MODELS_DIR / "cam_weights.bin"
+    if cam_path.is_file():
+        cam_data = np.fromfile(cam_path, dtype=np.float16)
+        for d in candidates:
+            ckpt = torch.load(d / "best.pt", map_location="cpu", weights_only=True)
+            sd = (
+                ckpt["model_state_dict"]
+                if isinstance(ckpt, dict) and "model_state_dict" in ckpt
+                else ckpt
+            )
+            if "backbone.classifier.weight" in sd:
+                weight = (
+                    sd["backbone.classifier.weight"].numpy().astype(np.float16).flatten()
+                )
+                if len(weight) == len(cam_data) and np.allclose(
+                    cam_data, weight, atol=1e-3
+                ):
+                    return d / "best.pt", d / "labels.json"
+
     candidates.sort(key=lambda p: p.stat().st_mtime, reverse=True)
     latest = candidates[0]
     return latest / "best.pt", latest / "labels.json"

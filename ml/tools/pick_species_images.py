@@ -10,6 +10,7 @@ For each species id 0..111:
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import os
@@ -37,7 +38,31 @@ def compute_sharpness(img: Image.Image) -> float:
     return float(np.var(gx) + np.var(gy))
 
 
+def parse_ids_arg(arg: str | None, max_id: int) -> list[int]:
+    """Parse comma-separated IDs or ranges (e.g. '112-149')."""
+    if not arg or arg.lower() == "all":
+        return list(range(max_id))
+    ids: list[int] = []
+    for part in arg.split(","):
+        part = part.strip()
+        if "-" in part:
+            s, e = part.split("-", 1)
+            ids.extend(range(int(s), int(e) + 1))
+        elif part.isdigit():
+            ids.append(int(part))
+    return sorted(list(set(ids)))
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Select representative photos for botanical species.")
+    parser.add_argument(
+        "--ids",
+        type=str,
+        default="all",
+        help="Comma-separated species IDs or ranges to process (e.g. '112-149' or 'all').",
+    )
+    args = parser.parse_args()
+
     repo_root = ML_DIR.parent
     raw_dir = ML_DIR / "data" / "raw"
     credits_csv_path = ML_DIR / "data" / "dataset_credits.csv"
@@ -60,8 +85,18 @@ def main() -> None:
                 }
     print(f"Loaded {len(credits_lookup)} credit records from dataset_credits.csv")
 
+    species_list_path = ML_DIR / "species_list.csv"
+    species_ids: list[int] = []
+    if species_list_path.exists():
+        with open(species_list_path, mode="r", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                species_ids.append(int(row["id"]))
+    if not species_ids:
+        species_ids = list(range(150))
+    total_species = len(species_ids)
+
     # 2. Load splits to find clean training files
-    train_files_by_species: dict[int, list[str]] = {i: [] for i in range(112)}
+    train_files_by_species: dict[int, list[str]] = {i: [] for i in species_ids}
     if splits_csv_path.exists():
         with open(splits_csv_path, mode="r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
@@ -83,13 +118,18 @@ def main() -> None:
     if best_pt_path:
         print(f"Loading checkpoint from: {best_pt_path}")
         try:
-            model = PlantClassifier(num_classes=112, pretrained=False)
             checkpoint = torch.load(best_pt_path, map_location="cpu")
             state_dict = checkpoint.get("state_dict", checkpoint)
+            if "model_state_dict" in checkpoint:
+                state_dict = checkpoint["model_state_dict"]
             clean_state = {k.replace("module.", ""): v for k, v in state_dict.items()}
+            # Infer num_classes from linear classifier weight shape
+            cls_weight = clean_state.get("classifier.linear.weight")
+            model_classes = cls_weight.shape[0] if cls_weight is not None else total_species
+            model = PlantClassifier(num_classes=model_classes, pretrained=False)
             model.load_state_dict(clean_state, strict=False)
             model.eval()
-            print("Model loaded successfully in eval mode.")
+            print(f"Model ({model_classes} classes) loaded successfully in eval mode.")
         except Exception as e:
             print(f"Warning: could not load model weights ({e}). Falling back to heuristic picking.")
             model = None
@@ -115,13 +155,24 @@ def main() -> None:
         tensor = TF.normalize(tensor, mean=list(TRD_MEAN), std=list(TRD_STD))
         return tensor.unsqueeze(0)
 
-    # 4. Iterate over species 0..111
+    # 4. Iterate over selected species
+    credits_json_path = out_dir / "credits.json"
     final_credits: dict[str, dict[str, Any]] = {}
+    if credits_json_path.exists():
+        try:
+            with open(credits_json_path, mode="r", encoding="utf-8") as f:
+                final_credits = json.load(f)
+        except Exception:
+            final_credits = {}
+
+    selected_ids = set(parse_ids_arg(args.ids, max_id=total_species))
+    target_species = [s for s in species_ids if s in selected_ids]
+
     created_count = 0
     missing_species: list[int] = []
 
-    print("\nPicking representative photos for 112 species...")
-    for sp_id in range(112):
+    print(f"\nPicking representative photos for {len(target_species)} species (catalog: {total_species})...")
+    for sp_id in target_species:
         candidate_paths = train_files_by_species.get(sp_id, [])
 
         # Fallback if splits list was empty: list raw directory
@@ -156,7 +207,7 @@ def main() -> None:
                     # Model prediction confidence if model is available
                     confidence = 0.5
                     correct_class = True
-                    if model is not None:
+                    if model is not None and sp_id < model.num_classes:
                         inp = preprocess_image(img_rgb)
                         with torch.no_grad():
                             logits = model(inp)
@@ -215,8 +266,8 @@ def main() -> None:
             "file": best_file_rel,
         }
 
-        if (sp_id + 1) % 20 == 0 or sp_id == 111:
-            print(f"  Processed {sp_id + 1}/112 species...")
+        if (sp_id + 1) % 20 == 0 or sp_id == (total_species - 1):
+            print(f"  Processed {sp_id + 1}/{total_species} species...")
 
     # Write web/public/species/credits.json
     credits_json_path = out_dir / "credits.json"
@@ -226,8 +277,9 @@ def main() -> None:
 
     print("\n" + "=" * 50)
     print(f"SPECIES IMAGES GENERATION REPORT:")
-    print(f"  Images created: {created_count} / 112")
+    print(f"  Images created: {created_count} / {len(target_species)}")
     print(f"  Missing species: {missing_species}")
+    print(f"  Total catalog entries in credits.json: {len(final_credits)}")
     print("=" * 50)
 
 

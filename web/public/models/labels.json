@@ -782,5 +782,271 @@
     "scientific_name": "Quercus robur",
     "family": "Fagaceae",
     "genus": "Quercus"
+  },
+  "112": {
+    "species_id": 112,
+    "common_name": "Rangoon creeper",
+    "scientific_name": "Combretum indicum",
+    "family": "Combretaceae",
+    "genus": "Combretum"
+  },
+  "113": {
+    "species_id": 113,
+    "common_name": "Flame lily",
+    "scientific_name": "Gloriosa superba",
+    "family": "Colchicaceae",
+    "genus": "Gloriosa"
+  },
+  "114": {
+    "species_id": 114,
+    "common_name": "Passion fruit",
+    "scientific_name": "Passiflora edulis",
+    "family": "Passifloraceae",
+    "genus": "Passiflora"
+  },
+  "115": {
+    "species_id": 115,
+    "common_name": "Railway creeper",
+    "scientific_name": "Ipomoea cairica",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea"
+  },
+  "116": {
+    "species_id": 116,
+    "common_name": "Cypress vine",
+    "scientific_name": "Ipomoea quamoclit",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea"
+  },
+  "117": {
+    "species_id": 117,
+    "common_name": "English ivy",
+    "scientific_name": "Hedera helix",
+    "family": "Araliaceae",
+    "genus": "Hedera"
+  },
+  "118": {
+    "species_id": 118,
+    "common_name": "Golden trumpet",
+    "scientific_name": "Allamanda cathartica",
+    "family": "Apocynaceae",
+    "genus": "Allamanda"
+  },
+  "119": {
+    "species_id": 119,
+    "common_name": "Bleeding heart vine",
+    "scientific_name": "Clerodendrum thomsoniae",
+    "family": "Lamiaceae",
+    "genus": "Clerodendrum"
+  },
+  "120": {
+    "species_id": 120,
+    "common_name": "Flame vine",
+    "scientific_name": "Pyrostegia venusta",
+    "family": "Bignoniaceae",
+    "genus": "Pyrostegia"
+  },
+  "121": {
+    "species_id": 121,
+    "common_name": "Bengal clockvine",
+    "scientific_name": "Thunbergia grandiflora",
+    "family": "Acanthaceae",
+    "genus": "Thunbergia"
+  },
+  "122": {
+    "species_id": 122,
+    "common_name": "Coral vine",
+    "scientific_name": "Antigonon leptopus",
+    "family": "Polygonaceae",
+    "genus": "Antigonon"
+  },
+  "123": {
+    "species_id": 123,
+    "common_name": "Croton",
+    "scientific_name": "Codiaeum variegatum",
+    "family": "Euphorbiaceae",
+    "genus": "Codiaeum"
+  },
+  "124": {
+    "species_id": 124,
+    "common_name": "Arrowhead plant",
+    "scientific_name": "Syngonium podophyllum",
+    "family": "Araceae",
+    "genus": "Syngonium"
+  },
+  "125": {
+    "species_id": 125,
+    "common_name": "Heartleaf philodendron",
+    "scientific_name": "Philodendron hederaceum",
+    "family": "Araceae",
+    "genus": "Philodendron"
+  },
+  "126": {
+    "species_id": 126,
+    "common_name": "Tree philodendron",
+    "scientific_name": "Thaumatophyllum bipinnatifidum",
+    "family": "Araceae",
+    "genus": "Thaumatophyllum"
+  },
+  "127": {
+    "species_id": 127,
+    "common_name": "Corn plant",
+    "scientific_name": "Dracaena fragrans",
+    "family": "Asparagaceae",
+    "genus": "Dracaena"
+  },
+  "128": {
+    "species_id": 128,
+    "common_name": "Song of India",
+    "scientific_name": "Dracaena reflexa",
+    "family": "Asparagaceae",
+    "genus": "Dracaena"
+  },
+  "129": {
+    "species_id": 129,
+    "common_name": "Flamingo flower",
+    "scientific_name": "Anthurium andraeanum",
+    "family": "Araceae",
+    "genus": "Anthurium"
+  },
+  "130": {
+    "species_id": 130,
+    "common_name": "Bird of paradise",
+    "scientific_name": "Strelitzia reginae",
+    "family": "Strelitziaceae",
+    "genus": "Strelitzia"
+  },
+  "131": {
+    "species_id": 131,
+    "common_name": "Wandering dude",
+    "scientific_name": "Tradescantia zebrina",
+    "family": "Commelinaceae",
+    "genus": "Tradescantia"
+  },
+  "132": {
+    "species_id": 132,
+    "common_name": "Weeping fig",
+    "scientific_name": "Ficus benjamina",
+    "family": "Moraceae",
+    "genus": "Ficus"
+  },
+  "133": {
+    "species_id": 133,
+    "common_name": "Lace fern",
+    "scientific_name": "Asparagus setaceus",
+    "family": "Asparagaceae",
+    "genus": "Asparagus"
+  },
+  "134": {
+    "species_id": 134,
+    "common_name": "Golden cane palm",
+    "scientific_name": "Dypsis lutescens",
+    "family": "Arecaceae",
+    "genus": "Dypsis"
+  },
+  "135": {
+    "species_id": 135,
+    "common_name": "Calla lily",
+    "scientific_name": "Zantedeschia aethiopica",
+    "family": "Araceae",
+    "genus": "Zantedeschia"
+  },
+  "136": {
+    "species_id": 136,
+    "common_name": "Morpankhi",
+    "scientific_name": "Platycladus orientalis",
+    "family": "Cupressaceae",
+    "genus": "Platycladus"
+  },
+  "137": {
+    "species_id": 137,
+    "common_name": "Nag Champa",
+    "scientific_name": "Plumeria pudica",
+    "family": "Apocynaceae",
+    "genus": "Plumeria"
+  },
+  "138": {
+    "species_id": 138,
+    "common_name": "Crape jasmine",
+    "scientific_name": "Tabernaemontana divaricata",
+    "family": "Apocynaceae",
+    "genus": "Tabernaemontana"
+  },
+  "139": {
+    "species_id": 139,
+    "common_name": "Yellow bells",
+    "scientific_name": "Tecoma stans",
+    "family": "Bignoniaceae",
+    "genus": "Tecoma"
+  },
+  "140": {
+    "species_id": 140,
+    "common_name": "Desert rose",
+    "scientific_name": "Adenium obesum",
+    "family": "Apocynaceae",
+    "genus": "Adenium"
+  },
+  "141": {
+    "species_id": 141,
+    "common_name": "Night-blooming jasmine",
+    "scientific_name": "Cestrum nocturnum",
+    "family": "Solanaceae",
+    "genus": "Cestrum"
+  },
+  "142": {
+    "species_id": 142,
+    "common_name": "Moss rose",
+    "scientific_name": "Portulaca grandiflora",
+    "family": "Portulacaceae",
+    "genus": "Portulaca"
+  },
+  "143": {
+    "species_id": 143,
+    "common_name": "Coleus",
+    "scientific_name": "Coleus scutellarioides",
+    "family": "Lamiaceae",
+    "genus": "Coleus"
+  },
+  "144": {
+    "species_id": 144,
+    "common_name": "Copperleaf",
+    "scientific_name": "Acalypha wilkesiana",
+    "family": "Euphorbiaceae",
+    "genus": "Acalypha"
+  },
+  "145": {
+    "species_id": 145,
+    "common_name": "Crown of thorns",
+    "scientific_name": "Euphorbia milii",
+    "family": "Euphorbiaceae",
+    "genus": "Euphorbia"
+  },
+  "146": {
+    "species_id": 146,
+    "common_name": "Blue plumbago",
+    "scientific_name": "Plumbago auriculata",
+    "family": "Plumbaginaceae",
+    "genus": "Plumbago"
+  },
+  "147": {
+    "species_id": 147,
+    "common_name": "Crown flower",
+    "scientific_name": "Calotropis gigantea",
+    "family": "Apocynaceae",
+    "genus": "Calotropis"
+  },
+  "148": {
+    "species_id": 148,
+    "common_name": "Golden dewdrop",
+    "scientific_name": "Duranta erecta",
+    "family": "Verbenaceae",
+    "genus": "Duranta"
+  },
+  "149": {
+    "species_id": 149,
+    "common_name": "Cannonball tree",
+    "scientific_name": "Couroupita guianensis",
+    "family": "Lecythidaceae",
+    "genus": "Couroupita"
   }
 }

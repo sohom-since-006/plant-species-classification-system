@@ -29,7 +29,7 @@ class PlantClassifier(nn.Module):
 
     def __init__(
         self,
-        num_classes: int = 112,
+        num_classes: int = 150,
         pretrained: bool = True,
         drop_rate: float = 0.2,
     ) -> None:

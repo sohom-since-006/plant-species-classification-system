@@ -133,7 +133,7 @@ def bench_model_only(
         f"\n[2/3] Benchmarking Model only ({layout_name}, {num_steps} steps, batch_size={batch_size})...",
         flush=True,
     )
-    model = PlantClassifier(num_classes=112, pretrained=False).to(device)
+    model = PlantClassifier(num_classes=150, pretrained=False).to(device)
     if channels_last:
         model = model.to(memory_format=torch.channels_last)
     model.train()
@@ -145,7 +145,7 @@ def bench_model_only(
     x = torch.randn(batch_size, 3, 224, 224, device=device)
     if channels_last:
         x = x.to(memory_format=torch.channels_last)
-    y = torch.randint(0, 112, (batch_size,), device=device)
+    y = torch.randint(0, 150, (batch_size,), device=device)
 
     # Warm-up
     for _ in range(warmup_steps):

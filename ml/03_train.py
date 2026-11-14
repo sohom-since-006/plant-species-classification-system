@@ -241,11 +241,14 @@ def load_dataset_records(
         r["split"] in ("test", "real_test") for r in train_rows + val_rows
     ), "CRITICAL LEAKAGE DETECTED: test or real_test partition present in train/val rows!"
 
-    # Build species_id to contiguous 0..N-1 class index mapping
-    all_sids = sorted(
-        {int(r["species_id"]) for r in train_rows}
-        | {int(r["species_id"]) for r in val_rows}
-    )
+    # Build species_id to contiguous 0..N-1 class index mapping from species_list.csv (if available)
+    if species_meta:
+        all_sids = sorted(species_meta.keys())
+    else:
+        all_sids = sorted(
+            {int(r["species_id"]) for r in train_rows}
+            | {int(r["species_id"]) for r in val_rows}
+        )
     sid_to_class: dict[int, int] = {sid: idx for idx, sid in enumerate(all_sids)}
 
     train_records: list[dict[str, Any]] = []
@@ -467,6 +470,7 @@ def save_checkpoint(
     phase: int,
     metrics: dict[str, float],
     config: dict[str, Any],
+    global_epoch: int | None = None,
 ) -> None:
     """Save training state dictionary and configuration."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -476,6 +480,7 @@ def save_checkpoint(
         "scheduler_state_dict": scheduler.state_dict(),
         "scaler_state_dict": scaler.state_dict(),
         "epoch": epoch,
+        "global_epoch": global_epoch if global_epoch is not None else epoch,
         "phase": phase,
         "metrics": metrics,
         "config": config,
@@ -516,6 +521,8 @@ def run_training_pipeline(
         species_meta,
     ) = load_dataset_records(splits_csv, species_list_csv)
 
+    full_train_count = len(train_records)
+
     # If smoke test, sample 5% of training data and 1 epoch per phase
     if smoke:
         logger.info(
@@ -535,70 +542,167 @@ def run_training_pipeline(
 
     num_classes = len(sid_to_class)
 
-    # 2. Setup run directory
-    timestamp = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
-    run_dir = runs_dir / timestamp
-    run_dir.mkdir(parents=True, exist_ok=True)
+    # 2. Setup run directory and baseline v1 protection
+    checkpoint: dict[str, Any] | None = None
+    start_phase1_epoch = 1
+    start_phase2_epoch = 1
+    best_val_loss = float("inf")
+    patience_counter = 0
+
+    if resume_path is not None:
+        norm_path = str(resume_path).replace("\\", "/")
+        if "20261110_095819" in norm_path:
+            raise ValueError(
+                "Protection error: Cannot resume into or overwrite baseline v1 run '20261110_095819'. "
+                "Baseline v1 artifacts must remain read-only."
+            )
+
+        target_file = resume_path
+        if target_file.is_dir():
+            target_file = target_file / "last.pt"
+            if not target_file.exists():
+                ckpts = sorted(resume_path.glob("checkpoint_epoch_*.pt"))
+                if ckpts:
+                    target_file = ckpts[-1]
+                else:
+                    raise FileNotFoundError(
+                        f"No checkpoint file found in directory {resume_path}"
+                    )
+        if not target_file.is_file():
+            raise FileNotFoundError(f"Checkpoint file not found: {target_file}")
+
+        run_dir = target_file.parent
+        logger.info(
+            "Resuming training from checkpoint: %s (run dir: %s)",
+            target_file,
+            run_dir,
+        )
+        checkpoint = torch.load(target_file, map_location=device, weights_only=False)
+        resumed_phase = int(checkpoint.get("phase", 1))
+        resumed_epoch = int(checkpoint.get("epoch", 1))
+
+        if (run_dir / "best.pt").exists():
+            try:
+                b_ckpt = torch.load(
+                    run_dir / "best.pt", map_location="cpu", weights_only=False
+                )
+                best_val_loss = float(
+                    b_ckpt.get("metrics", {}).get("val_loss", float("inf"))
+                )
+            except Exception:
+                best_val_loss = float(
+                    checkpoint.get("metrics", {}).get("val_loss", float("inf"))
+                )
+        else:
+            best_val_loss = float(
+                checkpoint.get("metrics", {}).get("val_loss", float("inf"))
+            )
+
+        if resumed_phase == 1:
+            if resumed_epoch < phase1_epochs:
+                start_phase1_epoch = resumed_epoch + 1
+                logger.info(
+                    "Resuming Phase 1 at epoch %d/%d (checkpoint was epoch %d)",
+                    start_phase1_epoch,
+                    phase1_epochs,
+                    resumed_epoch,
+                )
+            else:
+                start_phase1_epoch = phase1_epochs + 1
+                start_phase2_epoch = 1
+                logger.info(
+                    "Phase 1 already completed in checkpoint (epoch %d/%d). Starting Phase 2 at epoch 1/%d.",
+                    resumed_epoch,
+                    phase1_epochs,
+                    phase2_epochs,
+                )
+        elif resumed_phase == 2:
+            start_phase1_epoch = phase1_epochs + 1
+            start_phase2_epoch = resumed_epoch + 1
+            logger.info(
+                "Resuming Phase 2 at epoch %d/%d (checkpoint was epoch %d)",
+                start_phase2_epoch,
+                phase2_epochs,
+                resumed_epoch,
+            )
+    else:
+        timestamp = datetime.datetime.now(datetime.UTC).strftime("%Y%m%d_%H%M%S")
+        run_dir = runs_dir / timestamp
+        run_dir.mkdir(parents=True, exist_ok=True)
 
     # Save labels.json mapping class index to species id and taxonomic names
-    class_to_sid = {idx: sid for sid, idx in sid_to_class.items()}
-    labels_dict: dict[str, Any] = {}
-    for idx in range(num_classes):
-        sid = class_to_sid[idx]
-        meta = species_meta.get(sid, {})
-        labels_dict[str(idx)] = {
-            "species_id": sid,
-            "common_name": meta.get("common_name", f"Species_{sid}"),
-            "scientific_name": meta.get("scientific_name", "Unknown"),
-            "family": meta.get("family", "Unknown"),
-            "genus": meta.get("genus", "Unknown"),
+    labels_path = run_dir / "labels.json"
+    if not labels_path.exists():
+        class_to_sid = {idx: sid for sid, idx in sid_to_class.items()}
+        labels_dict: dict[str, Any] = {}
+        for idx in range(num_classes):
+            sid = class_to_sid[idx]
+            meta = species_meta.get(sid, {})
+            labels_dict[str(idx)] = {
+                "species_id": sid,
+                "common_name": meta.get("common_name", f"Species_{sid}"),
+                "scientific_name": meta.get("scientific_name", "Unknown"),
+                "family": meta.get("family", "Unknown"),
+                "genus": meta.get("genus", "Unknown"),
+            }
+        with open(labels_path, mode="w", encoding="utf-8") as f:
+            json.dump(labels_dict, f, indent=2, ensure_ascii=False)
+
+    train_config_path = run_dir / "train_config.json"
+    if not train_config_path.exists():
+        train_config = {
+            "num_classes": num_classes,
+            "phase1_epochs": phase1_epochs,
+            "phase2_epochs": phase2_epochs,
+            "batch_size": batch_size,
+            "num_workers": num_workers,
+            "patience": patience,
+            "smoke": smoke,
+            "seed": seed,
+            "embedding_dim": EMBEDDING_DIM,
+            "backbone": "efficientnet_b0",
+            "device": str(device),
+            "gpu_name": (
+                torch.cuda.get_device_name(0) if device.type == "cuda" else "CPU"
+            ),
+            "train_samples": len(train_records),
+            "val_samples": len(val_records),
         }
-
-    with open(run_dir / "labels.json", mode="w", encoding="utf-8") as f:
-        json.dump(labels_dict, f, indent=2, ensure_ascii=False)
-
-    train_config = {
-        "num_classes": num_classes,
-        "phase1_epochs": phase1_epochs,
-        "phase2_epochs": phase2_epochs,
-        "batch_size": batch_size,
-        "num_workers": num_workers,
-        "patience": patience,
-        "smoke": smoke,
-        "seed": seed,
-        "embedding_dim": EMBEDDING_DIM,
-        "backbone": "efficientnet_b0",
-        "device": str(device),
-        "gpu_name": torch.cuda.get_device_name(0) if device.type == "cuda" else "CPU",
-        "train_samples": len(train_records),
-        "val_samples": len(val_records),
-    }
-    with open(run_dir / "train_config.json", mode="w", encoding="utf-8") as f:
-        json.dump(train_config, f, indent=2, ensure_ascii=False)
+        with open(train_config_path, mode="w", encoding="utf-8") as f:
+            json.dump(train_config, f, indent=2, ensure_ascii=False)
+    else:
+        with open(train_config_path, mode="r", encoding="utf-8") as f:
+            train_config = json.load(f)
 
     # Setup metrics.csv
     metrics_file = run_dir / "metrics.csv"
-    with open(metrics_file, mode="w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(
-            [
-                "epoch",
-                "phase",
-                "train_loss",
-                "val_loss",
-                "val_top1",
-                "val_top5",
-                "lr",
-                "seconds",
-            ]
-        )
+    if not metrics_file.exists():
+        with open(metrics_file, mode="w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(
+                [
+                    "epoch",
+                    "phase",
+                    "train_loss",
+                    "val_loss",
+                    "val_top1",
+                    "val_top5",
+                    "lr",
+                    "seconds",
+                ]
+            )
 
     # 3. Model instantiation
-    model = PlantClassifier(num_classes=num_classes, pretrained=True)
+    model = PlantClassifier(num_classes=num_classes, pretrained=(checkpoint is None))
     model = model.to(device)
 
     criterion = nn.CrossEntropyLoss(label_smoothing=DEFAULT_LABEL_SMOOTHING)
     scaler = torch.amp.GradScaler(device.type, enabled=device.type == "cuda")
+
+    if checkpoint is not None:
+        model.load_state_dict(checkpoint["model_state_dict"])
+        if "scaler_state_dict" in checkpoint and device.type == "cuda":
+            scaler.load_state_dict(checkpoint["scaler_state_dict"])
 
     # Automatic CUDA OOM fallback handling
     current_batch_size = batch_size
@@ -614,107 +718,102 @@ def run_training_pipeline(
 
     train_loader, val_loader = get_loaders(current_batch_size)
 
-    best_val_loss = float("inf")
-    patience_counter = 0
     total_train_images_processed = 0
     total_training_wall_time = 0.0
     last_steady_ips = 0.0
 
     # ─── PHASE 1: Backbone Frozen (Head Only) ─────────────────────────
-    logger.info("=== Starting Phase 1: Backbone Frozen (%d epochs) ===", phase1_epochs)
-    model.freeze_backbone()
-
-    optimizer_p1 = torch.optim.AdamW(
-        filter(lambda p: p.requires_grad, model.parameters()),
-        lr=1e-3,
-        weight_decay=1e-2,
-    )
-    scheduler_p1 = torch.optim.lr_scheduler.CosineAnnealingLR(
-        optimizer_p1, T_max=max(1, phase1_epochs), eta_min=1e-5
-    )
-
-    for epoch in range(1, phase1_epochs + 1):
-        try:
-            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
-                model=model,
-                loader=train_loader,
-                optimizer=optimizer_p1,
-                scaler=scaler,
-                criterion=criterion,
-                device=device,
-            )
-        except torch.cuda.OutOfMemoryError:
-            logger.warning(
-                "CUDA OOM in Phase 1! Falling back batch size: %d -> 16",
-                current_batch_size,
-            )
-            torch.cuda.empty_cache()
-            current_batch_size = 16
-            train_loader, val_loader = get_loaders(current_batch_size)
-            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
-                model=model,
-                loader=train_loader,
-                optimizer=optimizer_p1,
-                scaler=scaler,
-                criterion=criterion,
-                device=device,
-            )
-
-        last_steady_ips = steady_ips
-        scheduler_p1.step()
-        v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
-        total_train_images_processed += n_imgs
-        total_training_wall_time += elapsed
-
-        current_lr = optimizer_p1.param_groups[0]["lr"]
+    if start_phase1_epoch <= phase1_epochs:
         logger.info(
-            "Phase 1 | Epoch %d/%d - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
-            epoch,
-            phase1_epochs,
-            t_loss,
-            v_loss,
-            top1,
-            top5,
-            current_lr,
-            elapsed,
-            steady_ips,
+            "=== Starting Phase 1: Backbone Frozen (%d epochs) ===", phase1_epochs
+        )
+        model.freeze_backbone()
+
+        optimizer_p1 = torch.optim.AdamW(
+            filter(lambda p: p.requires_grad, model.parameters()),
+            lr=1e-3,
+            weight_decay=1e-2,
+        )
+        scheduler_p1 = torch.optim.lr_scheduler.CosineAnnealingLR(
+            optimizer_p1, T_max=max(1, phase1_epochs), eta_min=1e-5
         )
 
-        with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
-            csv.writer(f).writerow(
-                [
-                    epoch,
-                    1,
-                    f"{t_loss:.4f}",
-                    f"{v_loss:.4f}",
-                    f"{top1:.2f}",
-                    f"{top5:.2f}",
-                    f"{current_lr:.2e}",
-                    f"{elapsed:.1f}",
-                ]
+        if checkpoint is not None and checkpoint.get("phase") == 1:
+            if "optimizer_state_dict" in checkpoint:
+                optimizer_p1.load_state_dict(checkpoint["optimizer_state_dict"])
+            if "scheduler_state_dict" in checkpoint:
+                scheduler_p1.load_state_dict(checkpoint["scheduler_state_dict"])
+
+        for epoch in range(start_phase1_epoch, phase1_epochs + 1):
+            global_epoch = epoch
+            try:
+                t_loss, elapsed, n_imgs, steady_ips = train_epoch(
+                    model=model,
+                    loader=train_loader,
+                    optimizer=optimizer_p1,
+                    scaler=scaler,
+                    criterion=criterion,
+                    device=device,
+                )
+            except torch.cuda.OutOfMemoryError:
+                logger.warning(
+                    "CUDA OOM in Phase 1! Falling back batch size: %d -> 16",
+                    current_batch_size,
+                )
+                torch.cuda.empty_cache()
+                current_batch_size = 16
+                train_loader, val_loader = get_loaders(current_batch_size)
+                t_loss, elapsed, n_imgs, steady_ips = train_epoch(
+                    model=model,
+                    loader=train_loader,
+                    optimizer=optimizer_p1,
+                    scaler=scaler,
+                    criterion=criterion,
+                    device=device,
+                )
+
+            last_steady_ips = steady_ips
+            scheduler_p1.step()
+            v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
+            total_train_images_processed += n_imgs
+            total_training_wall_time += elapsed
+
+            current_lr = optimizer_p1.param_groups[0]["lr"]
+            logger.info(
+                "Phase 1 | Epoch %d/%d - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
+                epoch,
+                phase1_epochs,
+                t_loss,
+                v_loss,
+                top1,
+                top5,
+                current_lr,
+                elapsed,
+                steady_ips,
             )
 
-        metrics_now = {
-            "train_loss": t_loss,
-            "val_loss": v_loss,
-            "top1": top1,
-            "top5": top5,
-        }
-        save_checkpoint(
-            run_dir / "last.pt",
-            model,
-            optimizer_p1,
-            scheduler_p1,
-            scaler,
-            epoch,
-            1,
-            metrics_now,
-            train_config,
-        )
-        if v_loss < best_val_loss:
-            best_val_loss = v_loss
+            with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
+                csv.writer(f).writerow(
+                    [
+                        global_epoch,
+                        1,
+                        f"{t_loss:.4f}",
+                        f"{v_loss:.4f}",
+                        f"{top1:.2f}",
+                        f"{top5:.2f}",
+                        f"{current_lr:.2e}",
+                        f"{elapsed:.1f}",
+                    ]
+                )
+
+            metrics_now = {
+                "train_loss": t_loss,
+                "val_loss": v_loss,
+                "top1": top1,
+                "top5": top5,
+            }
             save_checkpoint(
-                run_dir / "best.pt",
+                run_dir / f"checkpoint_epoch_{global_epoch:02d}.pt",
                 model,
                 optimizer_p1,
                 scheduler_p1,
@@ -723,123 +822,179 @@ def run_training_pipeline(
                 1,
                 metrics_now,
                 train_config,
+                global_epoch=global_epoch,
             )
+            save_checkpoint(
+                run_dir / "last.pt",
+                model,
+                optimizer_p1,
+                scheduler_p1,
+                scaler,
+                epoch,
+                1,
+                metrics_now,
+                train_config,
+                global_epoch=global_epoch,
+            )
+            if v_loss < best_val_loss:
+                best_val_loss = v_loss
+                save_checkpoint(
+                    run_dir / "best.pt",
+                    model,
+                    optimizer_p1,
+                    scheduler_p1,
+                    scaler,
+                    epoch,
+                    1,
+                    metrics_now,
+                    train_config,
+                    global_epoch=global_epoch,
+                )
+    else:
+        logger.info(
+            "Phase 1 already completed in previous run. Skipping to Phase 2."
+        )
 
     # ─── PHASE 2: Full Fine-tuning ────────────────────────────────────
-    logger.info("=== Starting Phase 2: Full Fine-tuning (%d epochs) ===", phase2_epochs)
-    model.unfreeze_backbone()
-
-    param_groups = model.get_param_groups(
-        backbone_lr=2e-4, head_lr=1e-3, weight_decay=1e-2
-    )
-    optimizer_p2 = torch.optim.AdamW(param_groups)
-    scheduler_p2 = torch.optim.lr_scheduler.CosineAnnealingLR(
-        optimizer_p2, T_max=max(1, phase2_epochs), eta_min=1e-6
-    )
-
-    for epoch in range(1, phase2_epochs + 1):
-        global_epoch = phase1_epochs + epoch
-        try:
-            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
-                model=model,
-                loader=train_loader,
-                optimizer=optimizer_p2,
-                scaler=scaler,
-                criterion=criterion,
-                device=device,
-            )
-        except torch.cuda.OutOfMemoryError:
-            logger.warning(
-                "CUDA OOM in Phase 2! Falling back batch size: %d -> 16",
-                current_batch_size,
-            )
-            torch.cuda.empty_cache()
-            current_batch_size = 16
-            train_loader, val_loader = get_loaders(current_batch_size)
-            t_loss, elapsed, n_imgs, steady_ips = train_epoch(
-                model=model,
-                loader=train_loader,
-                optimizer=optimizer_p2,
-                scaler=scaler,
-                criterion=criterion,
-                device=device,
-            )
-
-        last_steady_ips = steady_ips
-        scheduler_p2.step()
-        v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
-        total_train_images_processed += n_imgs
-        total_training_wall_time += elapsed
-
-        current_lr = optimizer_p2.param_groups[0]["lr"]
+    if start_phase2_epoch <= phase2_epochs:
         logger.info(
-            "Phase 2 | Epoch %d/%d (Global %d) - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
-            epoch,
-            phase2_epochs,
-            global_epoch,
-            t_loss,
-            v_loss,
-            top1,
-            top5,
-            current_lr,
-            elapsed,
-            steady_ips,
+            "=== Starting Phase 2: Full Fine-tuning (%d epochs) ===", phase2_epochs
+        )
+        model.unfreeze_backbone()
+
+        param_groups = model.get_param_groups(
+            backbone_lr=2e-4, head_lr=1e-3, weight_decay=1e-2
+        )
+        optimizer_p2 = torch.optim.AdamW(param_groups)
+        scheduler_p2 = torch.optim.lr_scheduler.CosineAnnealingLR(
+            optimizer_p2, T_max=max(1, phase2_epochs), eta_min=1e-6
         )
 
-        with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
-            csv.writer(f).writerow(
-                [
-                    global_epoch,
-                    2,
-                    f"{t_loss:.4f}",
-                    f"{v_loss:.4f}",
-                    f"{top1:.2f}",
-                    f"{top5:.2f}",
-                    f"{current_lr:.2e}",
-                    f"{elapsed:.1f}",
-                ]
+        if checkpoint is not None and checkpoint.get("phase") == 2:
+            if "optimizer_state_dict" in checkpoint:
+                optimizer_p2.load_state_dict(checkpoint["optimizer_state_dict"])
+            if "scheduler_state_dict" in checkpoint:
+                scheduler_p2.load_state_dict(checkpoint["scheduler_state_dict"])
+
+        for epoch in range(start_phase2_epoch, phase2_epochs + 1):
+            global_epoch = phase1_epochs + epoch
+            try:
+                t_loss, elapsed, n_imgs, steady_ips = train_epoch(
+                    model=model,
+                    loader=train_loader,
+                    optimizer=optimizer_p2,
+                    scaler=scaler,
+                    criterion=criterion,
+                    device=device,
+                )
+            except torch.cuda.OutOfMemoryError:
+                logger.warning(
+                    "CUDA OOM in Phase 2! Falling back batch size: %d -> 16",
+                    current_batch_size,
+                )
+                torch.cuda.empty_cache()
+                current_batch_size = 16
+                train_loader, val_loader = get_loaders(current_batch_size)
+                t_loss, elapsed, n_imgs, steady_ips = train_epoch(
+                    model=model,
+                    loader=train_loader,
+                    optimizer=optimizer_p2,
+                    scaler=scaler,
+                    criterion=criterion,
+                    device=device,
+                )
+
+            last_steady_ips = steady_ips
+            scheduler_p2.step()
+            v_loss, top1, top5 = evaluate(model, val_loader, criterion, device)
+            total_train_images_processed += n_imgs
+            total_training_wall_time += elapsed
+
+            current_lr = optimizer_p2.param_groups[0]["lr"]
+            logger.info(
+                "Phase 2 | Epoch %d/%d (Global %d) - Train Loss: %.4f, Val Loss: %.4f, Top-1: %.2f%%, Top-5: %.2f%%, LR: %.2e (%.1fs, Steady: %.1f img/s)",
+                epoch,
+                phase2_epochs,
+                global_epoch,
+                t_loss,
+                v_loss,
+                top1,
+                top5,
+                current_lr,
+                elapsed,
+                steady_ips,
             )
 
-        metrics_now = {
-            "train_loss": t_loss,
-            "val_loss": v_loss,
-            "top1": top1,
-            "top5": top5,
-        }
-        save_checkpoint(
-            run_dir / "last.pt",
-            model,
-            optimizer_p2,
-            scheduler_p2,
-            scaler,
-            global_epoch,
-            2,
-            metrics_now,
-            train_config,
-        )
+            with open(metrics_file, mode="a", newline="", encoding="utf-8") as f:
+                csv.writer(f).writerow(
+                    [
+                        global_epoch,
+                        2,
+                        f"{t_loss:.4f}",
+                        f"{v_loss:.4f}",
+                        f"{top1:.2f}",
+                        f"{top5:.2f}",
+                        f"{current_lr:.2e}",
+                        f"{elapsed:.1f}",
+                    ]
+                )
 
-        if v_loss < (best_val_loss - 1e-4):
-            best_val_loss = v_loss
-            patience_counter = 0
+            metrics_now = {
+                "train_loss": t_loss,
+                "val_loss": v_loss,
+                "top1": top1,
+                "top5": top5,
+            }
             save_checkpoint(
-                run_dir / "best.pt",
+                run_dir / f"checkpoint_epoch_{global_epoch:02d}.pt",
                 model,
                 optimizer_p2,
                 scheduler_p2,
                 scaler,
-                global_epoch,
+                epoch,
                 2,
                 metrics_now,
                 train_config,
+                global_epoch=global_epoch,
             )
-        else:
-            patience_counter += 1
-            if patience_counter >= patience and not smoke:
-                logger.info(
-                    "Early stopping triggered after %d epochs without improvement.",
-                    patience,
+            save_checkpoint(
+                run_dir / "last.pt",
+                model,
+                optimizer_p2,
+                scheduler_p2,
+                scaler,
+                epoch,
+                2,
+                metrics_now,
+                train_config,
+                global_epoch=global_epoch,
+            )
+
+            if v_loss < (best_val_loss - 1e-4):
+                best_val_loss = v_loss
+                patience_counter = 0
+                save_checkpoint(
+                    run_dir / "best.pt",
+                    model,
+                    optimizer_p2,
+                    scheduler_p2,
+                    scaler,
+                    epoch,
+                    2,
+                    metrics_now,
+                    train_config,
+                    global_epoch=global_epoch,
                 )
-                break
+            else:
+                patience_counter += 1
+                if patience_counter >= patience and not smoke:
+                    logger.info(
+                        "Early stopping triggered after %d epochs without improvement.",
+                        patience,
+                    )
+                    break
+    else:
+        logger.info("Phase 2 already completed in previous run.")
 
     # Telemetry and throughput analysis
     throughput_ips = total_train_images_processed / max(0.001, total_training_wall_time)
@@ -849,15 +1004,21 @@ def run_training_pipeline(
         else 0.0
     )
 
-    full_epoch_images = 26306
+    full_epoch_images = full_train_count
     effective_ips = last_steady_ips if last_steady_ips > 0 else throughput_ips
     est_full_epoch_seconds = full_epoch_images / max(0.001, effective_ips)
+    total_planned_epochs = (
+        (phase1_epochs + phase2_epochs) if not smoke else (DEFAULT_PHASE1_EPOCHS + DEFAULT_PHASE2_EPOCHS)
+    )
+    est_total_training_seconds = est_full_epoch_seconds * total_planned_epochs
 
     telemetry: dict[str, Any] = {
         "run_dir": str(run_dir.resolve()),
         "images_per_second": round(throughput_ips, 2),
         "steady_state_images_per_second": round(last_steady_ips, 2),
         "estimated_full_epoch_seconds": round(est_full_epoch_seconds, 1),
+        "estimated_total_training_seconds": round(est_total_training_seconds, 1),
+        "total_planned_epochs": total_planned_epochs,
         "peak_gpu_memory_mb": round(peak_vram_mb, 1),
         "total_images_processed": total_train_images_processed,
         "total_wall_time_seconds": round(total_training_wall_time, 2),
@@ -968,6 +1129,13 @@ def main() -> None:
     print(
         f"Estimated Time per Full Epoch:      {results['estimated_full_epoch_seconds']:.1f}s "
         f"(~{results['estimated_full_epoch_seconds'] / 60:.1f} min)"
+    )
+    est_total_min = results.get("estimated_total_training_seconds", 0.0) / 60
+    est_total_hr = est_total_min / 60
+    total_planned = results.get("total_planned_epochs", 33)
+    print(
+        f"Estimated Total Training Time:      {results.get('estimated_total_training_seconds', 0.0):.1f}s "
+        f"(~{est_total_min:.1f} min / ~{est_total_hr:.2f} hrs across {total_planned} epochs)"
     )
     print(f"Peak GPU VRAM Allocated:            {results['peak_gpu_memory_mb']} MB")
     print(f"Best Validation Loss:               {results['best_val_loss']}")
