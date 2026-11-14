@@ -32,4 +32,4 @@ Browser client code must strictly match these steps:
 5. **Tensor Shape**:
    - Shape: `[1, 3, 224, 224]` in NCHW layout (channel first).
 6. **Calibration**:
-   - Raw model logits are divided by temperature **T = 0.7129** before softmax.
+   - Raw model logits are divided by temperature **T = 0.7181** before softmax.

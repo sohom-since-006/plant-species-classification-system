@@ -50,6 +50,8 @@ web/.env
 web/.env.local
 
 # Build Outputs & Bundler Caches
+.vite/
+web/.vite/
 web/dist/
 web/dist-ssr/
 web/public/wasm/

@@ -22,7 +22,7 @@
 
 ## 3. Species List
 `ml/species_list.csv`: `id, common_name, scientific_name, family, genus, type, origin, hindi_name, bengali_name, notes`.
-Candidate groups (112 species, exact ids 0..111 preserved):
+Candidate groups (150 species, exact ids 0..149 preserved; v1 IDs 0..111 immutable, v2 IDs 112..149 appended):
 - Indian medicinal/sacred: Tulsi, Neem, Aloe vera, Turmeric, Ginger, Ashwagandha, Giloy, Brahmi, Amla, Curry leaf, Moringa, Bael, Arjuna, Ashoka, Betel, Lemongrass, Mint, Peepal, Banyan, Kalmegh
 - Indian flowers: Hibiscus, Marigold, Jasmine, Lotus, Rose (genus-level Rosa spp., id 24), Frangipani, Oleander, Bougainvillea, Butterfly pea / Aparajita (Clitoria ternatea, id 28, replaces Tuberose), Night jasmine, Gulmohar, Periwinkle, Ixora, Lantana, Cockscomb, Crossandra, Canna, Balsam, Amaltas, Palash
 - Indian trees/fruit: Mango, Coconut, Banana, Papaya, Guava, Pomegranate, Jackfruit, Tamarind, Jamun, Sapota, Custard apple, Lemon, Teak, Sal, Bamboo, Areca palm, Date palm, Silk cotton, Rain tree, Eucalyptus

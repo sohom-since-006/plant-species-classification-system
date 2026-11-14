@@ -88,7 +88,7 @@ export function About() {
               </div>
               <h3 className="font-heading italic text-xl text-[var(--fg)]">Calibrated Taxonomy &amp; Safety</h3>
               <p className="text-xs md:text-sm text-[var(--fg-muted)] leading-relaxed">
-                Raw logits are scaled with temperature calibration ($T=0.7129$). If confidence is below 57% or centroid distance exceeds $\tau=0.31$, the specimen is safely rejected rather than guessing.
+                Raw logits are scaled with temperature calibration ($T=0.7181$). Outcomes are mapped into High (&gt; 85%), Medium (60% to 85%), and Low (&lt; 60%). If top-1 confidence is below 57% or centroid distance exceeds $\tau=0.32$, the system reports &quot;Not confident&quot; and displays the Top-3 candidates below the rejection threshold.
               </p>
             </div>
           </div>
@@ -150,16 +150,16 @@ export function About() {
               <span>Model Summary</span>
             </div>
             <h3 className="font-heading italic text-xl text-[var(--fg)]">
-              MobileNetV4 Neural Architecture
+              EfficientNet-B0 Neural Architecture
             </h3>
             <ul className="space-y-2 text-xs font-mono text-[var(--fg-muted)]">
               <li className="flex justify-between border-b border-white/5 pb-1">
                 <span>Architecture</span>
-                <span className="text-[var(--fg)]">MobileNetV4 Small</span>
+                <span className="text-[var(--fg)]">EfficientNet-B0</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-1">
                 <span>Cataloged Species</span>
-                <span className="text-[var(--fg)]">112 Classes</span>
+                <span className="text-[var(--fg)]">150 Classes</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-1">
                 <span>Botanical Families</span>
@@ -170,12 +170,12 @@ export function About() {
                 <span className="text-[var(--fg)]">FP32 ONNX Web</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-1">
-                <span>Held-Out Top-1</span>
-                <span className="text-emerald-400 font-bold">83.68%</span>
+                <span>Test-Set Top-1</span>
+                <span className="text-emerald-400 font-bold">83.88%</span>
               </li>
               <li className="flex justify-between">
-                <span>Held-Out Top-5</span>
-                <span className="text-emerald-400 font-bold">94.33%</span>
+                <span>Test-Set Top-5</span>
+                <span className="text-emerald-400 font-bold">94.39%</span>
               </li>
             </ul>
           </div>
@@ -213,10 +213,13 @@ export function About() {
             System Limitations &amp; Safety Protocol
           </h3>
           <p className="text-xs text-rose-100/90 leading-relaxed font-body">
-            <strong>1. Scope:</strong> PlantAI is currently trained on 112 specific botanical species. Non-plant photos, uncataloged wild flora, or cultivars will be flagged as "Low Confidence" or rejected by the out-of-distribution distance filter.
+            <strong>1. Scope:</strong> PlantAI is currently trained on 150 specific botanical species. Non-plant photos, uncataloged wild flora, or cultivars will be flagged as &quot;Not confident&quot; with Top-3 candidates below the threshold or rejected by the out-of-distribution distance filter.
           </p>
           <p className="text-xs text-rose-100/90 leading-relaxed font-body">
-            <strong>2. Not an Edibility or Medical Tool:</strong> NEVER ingest, prepare teas from, or apply any wild plant or berry based on automated computer vision identification. Deadly poisonous plants (such as Water Hemlock) frequently mimic harmless culinary or medicinal herbs. Always consult a certified botanist or medical professional.
+            <strong>2. Photo Composition &amp; Real-World Limitations:</strong> Classification accuracy depends heavily on the photo. Plants photographed out of flower, unusual angles, poor lighting, or heavily cultivated varieties can be misidentified. Always check the confidence tier and review the Top-3 candidates before drawing conclusions. Published performance metrics reflect benchmark test-set evaluations.
+          </p>
+          <p className="text-xs text-rose-100/90 leading-relaxed font-body">
+            <strong>3. Not an Edibility or Medical Tool:</strong> NEVER ingest, prepare teas from, or apply any wild plant or berry based on automated computer vision identification. Deadly poisonous plants (such as Water Hemlock) frequently mimic harmless culinary or medicinal herbs. Always consult a certified botanist or medical professional.
           </p>
         </section>
       </div>

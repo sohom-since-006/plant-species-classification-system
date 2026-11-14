@@ -77,7 +77,7 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
       { speciesId: 1, ml: 0.01, visual: 0.44, final: 0.182 }, // Neem
     ],
     camData: generateSyntheticCam(),
-    modelVersion: 'mock-v1.0.0-calibrated',
+    modelVersion: 'mock-v2.0.0-calibrated',
     genusFallback: null,
   },
 
@@ -96,7 +96,7 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
       { speciesId: 0, ml: 0.02, visual: 0.39, final: 0.168 },
     ],
     camData: generateSyntheticCam(),
-    modelVersion: 'mock-v1.0.0-calibrated',
+    modelVersion: 'mock-v2.0.0-calibrated',
     genusFallback: null,
   },
 
@@ -114,7 +114,7 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
       { speciesId: 9, ml: 0.03, visual: 0.48, final: 0.210 },
     ],
     camData: generateSyntheticCam(),
-    modelVersion: 'mock-v1.0.0-calibrated',
+    modelVersion: 'mock-v2.0.0-calibrated',
     genusFallback: 'Ocimum',
   },
 
@@ -129,7 +129,7 @@ export const MOCK_FIXTURES: Record<number, ClassificationResult> = {
     unknown: true,
     similar: [],
     camData: null,
-    modelVersion: 'mock-v1.0.0-calibrated',
+    modelVersion: 'mock-v2.0.0-calibrated',
     genusFallback: null,
   },
 };

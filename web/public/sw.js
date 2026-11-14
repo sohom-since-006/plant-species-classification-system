@@ -1,5 +1,6 @@
 // PlantAI Service Worker for Offline Execution
 const CACHE_NAME = 'plantai-cache-v2';
+const CURRENT_MODEL_CACHE_PREFIX = 'plantai-models-v2';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -29,7 +30,12 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME && !name.startsWith('plantai-models-'))
+          .filter((name) => {
+            if (name === CACHE_NAME) return false;
+            // Keep current v2 model cache; purge obsolete v1 or other versions
+            if (name.startsWith(CURRENT_MODEL_CACHE_PREFIX)) return false;
+            return true;
+          })
           .map((name) => caches.delete(name))
       );
     }).then(() => self.clients.claim())

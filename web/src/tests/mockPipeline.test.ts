@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { determineTier, postprocess } from '@/ml/postprocess';
+import { defaultModelMeta } from '@/ml/modelMetaDefaults';
 import { getMockResult, hashImageInput, MOCK_FIXTURES } from '@/ml/mock';
 
 describe('Tier Logic Boundaries (TRD Section 5)', () => {
@@ -15,15 +16,13 @@ describe('Tier Logic Boundaries (TRD Section 5)', () => {
     expect(determineTier(0.60)).toBe('medium');
   });
 
-  it('assigns "low" tier when confidence is below 0.60 down to threshold (0.57)', () => {
+  it('assigns "low" tier when confidence is below 0.60 down to threshold', () => {
     expect(determineTier(0.599)).toBe('low');
-    expect(determineTier(0.58)).toBe('low');
-    expect(determineTier(0.57)).toBe('low');
+    expect(determineTier(defaultModelMeta.threshold)).toBe('low');
   });
 
-  it('assigns "unknown" tier when confidence is below threshold (0.57)', () => {
-    expect(determineTier(0.569)).toBe('unknown');
-    expect(determineTier(0.35)).toBe('unknown');
+  it('assigns "unknown" tier when confidence is below threshold', () => {
+    expect(determineTier(defaultModelMeta.threshold - 0.001)).toBe('unknown');
     expect(determineTier(0.15)).toBe('unknown');
     expect(determineTier(0.0)).toBe('unknown');
   });

@@ -30,11 +30,11 @@ describe('Species Resolution and Content Completeness', () => {
     expect(mango.toxicityNote).toBeTruthy();
   });
 
-  it('guarantees every species index 0..111 has real taxonomy and regional names (never "Species #N")', () => {
+  it('guarantees every species index 0..149 has real taxonomy and regional names (never "Species #N")', () => {
     const all = getAllSpecies();
-    expect(all.length).toBe(112);
+    expect(all.length).toBe(150);
 
-    for (let id = 0; id < 112; id++) {
+    for (let id = 0; id < 150; id++) {
       const sp = getSpeciesById(id);
       expect(sp.id).toBe(id);
       expect(sp.commonName).not.toContain('Species #');
@@ -47,7 +47,7 @@ describe('Species Resolution and Content Completeness', () => {
     }
   });
 
-  it('verifies that all 112 species have rich monograph content (0 missing)', () => {
+  it('verifies that all 150 species have rich monograph content (0 missing)', () => {
     const missing = getMissingContentIds();
     expect(missing).toBeInstanceOf(Array);
     expect(missing).toEqual([]);
@@ -127,7 +127,7 @@ describe('SimilarSpecies Component with Real Species', () => {
     expect(screen.getByText('Terminalia arjuna')).toBeInTheDocument();
   });
 
-  it('renders "Not confident this is one of the 112 species" for pebble / non-plant fixture 3', () => {
+  it('renders "Not confident this is one of the 150 species" for pebble / non-plant fixture 3', () => {
     const pebbleResult = MOCK_FIXTURES[3]!;
     const topSpecies = getSpeciesById(pebbleResult.top3[0]!.speciesId);
     const candidateSpecies = pebbleResult.top3.map((p) => getSpeciesById(p.speciesId));
@@ -142,10 +142,10 @@ describe('SimilarSpecies Component with Real Species', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Not confident this is one of the 112 species')).toBeInTheDocument();
+    expect(screen.getByText('Not confident this is one of the 150 species')).toBeInTheDocument();
     expect(screen.getByText('Unknown')).toBeInTheDocument();
     expect(
-      screen.getByText(/The neural model could not match this specimen to one of the 112 cataloged plant classes with sufficient confidence./)
+      screen.getByText(/The neural model could not match this specimen to one of the 150 cataloged plant classes with sufficient confidence./)
     ).toBeInTheDocument();
   });
 

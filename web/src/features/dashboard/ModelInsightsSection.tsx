@@ -107,12 +107,12 @@ export function ModelInsightsSection() {
             Open Neural Model Insights
           </h2>
           <p className="text-xs sm:text-sm text-[var(--fg-muted)] mt-1 max-w-2xl">
-            Empirical validation results evaluated on held-out test specimens (3,401 images across all 112 cataloged species). Real data with zero fabricated statistics.
+            Empirical validation results evaluated on held-out test specimens (4,939 images across all 150 cataloged species). Real data with zero fabricated statistics.
           </p>
         </div>
         <div className="text-right text-xs font-mono text-[var(--fg-subtle)] shrink-0 self-start sm:self-auto">
           <p>Evaluated: {evalDate}</p>
-          <p className="text-[var(--accent)]">Dataset Split: 3,401 test items</p>
+          <p className="text-[var(--accent)]">Dataset Split: 4,939 test items</p>
         </div>
       </div>
 
@@ -122,7 +122,7 @@ export function ModelInsightsSection() {
           <div className="liquid-glass-strong rounded-2xl p-5 border border-white/10" data-glow="">
             <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Top-1 Accuracy</p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--accent)] mt-2">
-              {isLoading ? '...' : `${data?.test_top1_accuracy ?? '83.7'}%`}
+              {isLoading ? '...' : `${data?.test_top1_accuracy ?? '83.9'}%`}
             </p>
             <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Exact single species match</p>
           </div>
@@ -132,7 +132,7 @@ export function ModelInsightsSection() {
           <div className="liquid-glass-strong rounded-2xl p-5 border border-white/10" data-glow="">
             <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Top-5 Accuracy</p>
             <p className="font-heading italic text-3xl sm:text-4xl text-[var(--fg)] mt-2">
-              {isLoading ? '...' : `${data?.test_top5_accuracy ?? '94.3'}%`}
+              {isLoading ? '...' : `${data?.test_top5_accuracy ?? '94.4'}%`}
             </p>
             <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Candidate pool coverage</p>
           </div>
@@ -142,9 +142,9 @@ export function ModelInsightsSection() {
           <div className="liquid-glass-strong rounded-2xl p-5 border border-white/10" data-glow="">
             <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Macro F1-Score</p>
             <p className="font-heading italic text-3xl sm:text-4xl text-emerald-400 mt-2">
-              {isLoading ? '...' : data?.macro_f1?.toFixed(3) ?? '0.834'}
+              {isLoading ? '...' : data?.macro_f1?.toFixed(3) ?? '0.833'}
             </p>
-            <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Balanced across 112 classes</p>
+            <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Balanced across 150 classes</p>
           </div>
         </StaggerItem>
 
@@ -153,14 +153,14 @@ export function ModelInsightsSection() {
             <p className="text-[11px] font-mono uppercase text-[var(--fg-subtle)]">Calibrated ECE</p>
             <div className="flex items-baseline gap-2 mt-2">
               <span className="font-heading italic text-3xl sm:text-4xl text-teal-400">
-                {isLoading ? '...' : `${data?.calibration?.test_ece_after ?? '1.18'}%`}
+                {isLoading ? '...' : `${data?.calibration?.test_ece_after ?? '1.41'}%`}
               </span>
               <span className="text-[11px] font-mono text-[var(--fg-subtle)] line-through">
-                {data?.calibration?.test_ece_before ?? '15.56'}%
+                {data?.calibration?.test_ece_before ?? '15.49'}%
               </span>
             </div>
             <p className="text-[11px] font-mono text-teal-300/80 mt-1">
-              $T={data?.calibration?.temperature ?? '0.713'}$ (Platt scaling)
+              $T={data?.calibration?.temperature ?? '0.718'}$ (Platt scaling)
             </p>
           </div>
         </StaggerItem>
@@ -291,7 +291,7 @@ export function ModelInsightsSection() {
             <div className="flex items-center gap-2 text-rose-400">
               <AlertTriangle className="w-4 h-4 shrink-0" />
               <h3 className="font-heading italic text-xl text-[var(--fg)]">
-                The 14 Weakest Species ($F_1 &lt; 0.70$)
+                The {data?.classes_below_f1_70?.length ?? 16} Weakest Species ($F_1 &lt; 0.70$)
               </h3>
             </div>
             <p className="text-xs text-[var(--fg-muted)] mt-1">
@@ -299,7 +299,7 @@ export function ModelInsightsSection() {
             </p>
           </div>
           <span className="text-xs font-mono px-3 py-1 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20 shrink-0 self-start sm:self-auto">
-            14 / 112 Species
+            {data?.classes_below_f1_70?.length ?? 16} / 150 Species
           </span>
         </div>
 

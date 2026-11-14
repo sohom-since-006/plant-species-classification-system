@@ -26,7 +26,7 @@ export function FeedbackPanel({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
 
-  // All cataloged 112 species for correction picker
+  // All cataloged 150 species for correction picker
   const allSpecies = useMemo(() => getAllSpecies(), []);
 
   const filteredSpecies = useMemo(() => {
@@ -174,7 +174,7 @@ export function FeedbackPanel({
             />
           </div>
 
-          {/* Filtered Species list (112 species) */}
+          {/* Filtered Species list (150 species) */}
           <div className="max-h-56 overflow-y-auto space-y-1.5 pr-1">
             {filteredSpecies.map((s) => {
               const isSelected = selectedCorrectSpeciesId === s.id;

@@ -38,27 +38,27 @@ const DistributionPanel = lazy(() => import('@/features/distribution/Distributio
 const SAMPLE_SPECIMENS: SampleImage[] = [
   {
     name: 'Ocimum tenuiflorum',
-    common: 'Tulsi (High Confidence)',
+    common: 'Tulsi (High Confidence • 97.8%)',
     url: '/species/sample_tulsi.webp',
   },
   {
     name: 'Hibiscus rosa-sinensis',
-    common: 'Hibiscus (Medium Confidence)',
+    common: 'Hibiscus (Medium Confidence • 72.7%)',
     url: '/species/sample_hibiscus.webp',
   },
   {
     name: 'Parthenium hysterophorus',
-    common: 'Parthenium (Low Confidence)',
+    common: 'Parthenium (Borderline / Below 57% Threshold)',
     url: '/species/sample_parthenium.webp',
   },
   {
     name: 'Ocimum basilicum',
-    common: 'Sweet Basil (Unsure / Below Threshold)',
+    common: 'Sweet Basil (Unsure • 51.8%)',
     url: '/species/sample_sweet_basil.webp',
   },
   {
     name: 'Non-Plant Specimen',
-    common: 'Pebble (Non-Plant / Rejected)',
+    common: 'Pebble (Non-Plant • Rejected by τ and Threshold)',
     url: '/species/sample_pebble.webp',
   },
 ];
@@ -153,7 +153,7 @@ export function Classify() {
     }
   }, [workerStatus, workerProgress]);
 
-  // Species Lookup Map (contains all 112 cataloged species)
+  // Species Lookup Map (contains all 150 cataloged species)
   const speciesMap = useMemo(() => {
     const map = new Map<number, Species>();
     getAllSpecies().forEach((s) => map.set(s.id, s));

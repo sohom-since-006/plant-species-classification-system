@@ -21,6 +21,7 @@ import {
   upsampleCAM,
 } from '@/ml/cam';
 import { fuseMultiPhotoInference } from '@/ml/fuse';
+import { defaultModelMeta } from '@/ml/modelMetaDefaults';
 
 describe('ML Preprocessing Pipeline', () => {
   it('resizes shorter side to 256 and center-crops 224x224 into NCHW float32', () => {
@@ -65,7 +66,7 @@ describe('ML Preprocessing Pipeline', () => {
 describe('Postprocessing, Calibration & Tiers', () => {
   it('computes numerically stable temperature-scaled softmax', () => {
     const logits = new Float32Array([1000, 1000, 1000]); // Large numbers that would overflow naive exp
-    const probs = computeCalibratedProbabilities(logits, 0.7129);
+    const probs = computeCalibratedProbabilities(logits, 0.7181);
     expect(probs.length).toBe(3);
     expect(probs[0]).toBeCloseTo(1 / 3, 4);
     expect(probs[1]).toBeCloseTo(1 / 3, 4);
@@ -79,9 +80,9 @@ describe('Postprocessing, Calibration & Tiers', () => {
     expect(determineTier(0.85)).toBe('medium');
     expect(determineTier(0.60)).toBe('medium');
     expect(determineTier(0.599)).toBe('low');
-    expect(determineTier(0.57)).toBe('low');
-    expect(determineTier(0.569)).toBe('unknown');
-    expect(determineTier(0.35)).toBe('unknown');
+    expect(determineTier(defaultModelMeta.threshold)).toBe('low');
+    expect(determineTier(defaultModelMeta.threshold - 0.001)).toBe('unknown');
+    expect(determineTier(0.15)).toBe('unknown');
     expect(determineTier(0.95, true)).toBe('unknown');
     // Supports custom thresholds if provided
     expect(determineTier(0.35, false, { threshold: 0.35 })).toBe('low');
@@ -90,17 +91,17 @@ describe('Postprocessing, Calibration & Tiers', () => {
   it('rejects when max probability is below threshold (0.57)', () => {
     // Logits yielding max probability ~ 0.50
     const logits = new Float32Array([1.0, 0.9, 0.1]);
-    const res = postprocess(logits, 0.7129, { probThreshold: 0.57, tau: 0.31 });
+    const res = postprocess(logits, 0.7181, { probThreshold: 0.57, tau: 0.32 });
     expect(res.unknown).toBe(true);
     expect(res.top3.length).toBe(3);
   });
 
-  it('rejects when centroid cosine similarity is below tau (0.31)', () => {
-    // High probability ~ 0.99, but centroid similarity low (e.g. 0.20 < 0.31)
+  it('rejects when centroid cosine similarity is below tau (0.32)', () => {
+    // High probability ~ 0.99, but centroid similarity low (e.g. 0.20 < 0.32)
     const logits = new Float32Array([10.0, 1.0, 0.1]);
-    const res = postprocess(logits, 0.7129, {
+    const res = postprocess(logits, 0.7181, {
       probThreshold: 0.57,
-      tau: 0.31,
+      tau: 0.32,
       maxCentroidSim: 0.20,
     });
     expect(res.unknown).toBe(true);

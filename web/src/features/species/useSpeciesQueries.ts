@@ -36,7 +36,7 @@ export function mapDbSpeciesToClient(row: DbSpeciesRow): Species {
 }
 
 /**
- * TanStack Query hook to fetch all 112 species catalog from Supabase,
+ * TanStack Query hook to fetch all 150 species catalog from Supabase,
  * with bundled species.json as seamless offline fallback.
  */
 export function useSpeciesListQuery() {

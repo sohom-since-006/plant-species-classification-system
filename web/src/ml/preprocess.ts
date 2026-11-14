@@ -231,6 +231,10 @@ export function preprocessImage(
     throw new Error('Failed to acquire 2D canvas rendering context.');
   }
 
+  // Ensure high-quality antialiasing when downscaling large photos
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
+
   // Draw white background to handle transparent PNGs
   ctx.fillStyle = '#FFFFFF';
   ctx.fillRect(0, 0, processW, processH);

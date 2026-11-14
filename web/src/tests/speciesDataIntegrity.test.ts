@@ -7,8 +7,8 @@ import type { Species } from '@/types/species';
 const speciesData = speciesJsonRaw as Record<string, Species>;
 
 describe('Species Data & Image Integrity', () => {
-  it('contains all 112 species (0..111)', () => {
-    for (let id = 0; id < 112; id++) {
+  it('contains all 150 species (0..149)', () => {
+    for (let id = 0; id < 150; id++) {
       const sp = speciesData[String(id)];
       expect(sp).toBeDefined();
       expect(sp?.id).toBe(id);
@@ -16,7 +16,7 @@ describe('Species Data & Image Integrity', () => {
   });
 
   it('uses local webp image paths and no external unsplash URLs', () => {
-    for (let id = 0; id < 112; id++) {
+    for (let id = 0; id < 150; id++) {
       const sp = speciesData[String(id)];
       expect(sp).toBeDefined();
       if (!sp) continue;
@@ -67,7 +67,7 @@ describe('Species Data & Image Integrity', () => {
   });
 
   it('includes proper image credits for dataset provenance', () => {
-    for (let id = 0; id < 112; id++) {
+    for (let id = 0; id < 150; id++) {
       const sp = speciesData[String(id)];
       expect(sp).toBeDefined();
       if (!sp) continue;
@@ -102,7 +102,7 @@ describe('Species Data & Image Integrity', () => {
 
   it('verifies fact-check integrity: softened non-curative claims, caution labels, and verified literature sources', () => {
     // Forbidden medical claims
-    for (let id = 0; id < 112; id++) {
+    for (let id = 0; id < 150; id++) {
       const sp = speciesData[String(id)];
       if (!sp) continue;
       const combined = [sp.toxicityNote || '', ...sp.uses].join(' ');
@@ -139,7 +139,7 @@ describe('Species Data & Image Integrity', () => {
 
     // Verify sources array presence (only fetch-passing sources retained)
     let speciesWithSources = 0;
-    for (let id = 0; id < 112; id++) {
+    for (let id = 0; id < 150; id++) {
       const sp = speciesData[String(id)];
       if (sp && sp.sources && sp.sources.length > 0) {
         speciesWithSources++;

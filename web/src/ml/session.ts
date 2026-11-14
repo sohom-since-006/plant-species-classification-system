@@ -183,7 +183,25 @@ export async function loadModelBundle(
     }
     const meta = (await metaRes.json()) as ModelMetadata;
 
-    const cacheName = `plant-model-v${meta.version || '1.0.0'}`;
+    const cacheName = `plantai-models-v${meta.version || '2.0.0'}`;
+
+    // Purge obsolete model caches so browsers never mix old cached v1 models with new labels
+    if (typeof caches !== 'undefined') {
+      try {
+        const keys = await caches.keys();
+        await Promise.all(
+          keys
+            .filter(
+              (name) =>
+                (name.startsWith('plantai-models-') || name.startsWith('plant-model-')) &&
+                name !== cacheName,
+            )
+            .map((name) => caches.delete(name)),
+        );
+      } catch {
+        // Ignore cache cleanup errors
+      }
+    }
 
     // 2. Fetch labels.json
     onProgress?.({
@@ -191,7 +209,7 @@ export async function loadModelBundle(
       progress: 0.15,
       message: 'Loading botanical species taxonomy...',
     });
-    const labelsUrl = `${baseUrl}/${meta.labelsFile || 'labels.json'}`;
+    const labelsUrl = `${baseUrl}/${meta.labelsFile || 'labels.v2.json'}`;
     const labelsBuffer = await fetchWithCache(labelsUrl, cacheName);
     const labelsText = new TextDecoder().decode(labelsBuffer);
     const labels = JSON.parse(labelsText) as Record<string, SpeciesLabel>;
@@ -211,7 +229,7 @@ export async function loadModelBundle(
       progress: 0.30,
       message: 'Loading species visual centroids...',
     });
-    const centroidsUrl = `${baseUrl}/${meta.centroidsFile || 'centroids.v1.json'}`;
+    const centroidsUrl = `${baseUrl}/${meta.centroidsFile || 'centroids.v2.json'}`;
     const centroidsBuffer = await fetchWithCache(centroidsUrl, cacheName);
     const centroidsText = new TextDecoder().decode(centroidsBuffer);
     const centroids = JSON.parse(centroidsText) as Record<string, number[]>;
@@ -222,11 +240,11 @@ export async function loadModelBundle(
       progress: 0.45,
       message: 'Loading visual attention weights...',
     });
-    const camUrl = `${baseUrl}/${meta.camWeightsFile || 'cam_weights.v1.bin'}`;
+    const camUrl = `${baseUrl}/${meta.camWeightsFile || 'cam_weights.v2.bin'}`;
     const camWeights = await fetchWithCache(camUrl, cacheName);
 
     // 5. Fetch ONNX model file with real progress tracking
-    const modelUrl = `${baseUrl}/${meta.modelFile || 'plant_model.v1.onnx'}`;
+    const modelUrl = `${baseUrl}/${meta.modelFile || 'plant_model.v2.onnx'}`;
     const modelBuffer = await fetchWithCache(
       modelUrl,
       cacheName,

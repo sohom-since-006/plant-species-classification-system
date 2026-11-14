@@ -449,7 +449,7 @@ export function BatchModeSection() {
                 </div>
                 {selectedItemForModal.result.unknown && (
                   <p className="text-xs text-rose-300 font-mono mt-1">
-                    Out of distribution: cosine distance to genus centroid exceeds τ=0.31 or probability &lt; 57%.
+                    Out of distribution: cosine distance to genus centroid exceeds τ=0.32 or probability &lt; 57%.
                   </p>
                 )}
               </div>

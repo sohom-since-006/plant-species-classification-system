@@ -40,10 +40,10 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
           {isUnknown ? (
             <div>
               <h2 className="font-heading italic text-2xl sm:text-3xl text-white">
-                Not confident this is one of the 112 species
+                Not confident this is one of the 150 species
               </h2>
               <p className="font-body text-sm text-white/70 mt-1">
-                The neural model could not match this specimen to one of the 112 cataloged plant classes with sufficient confidence.
+                The neural model could not match this specimen to one of the 150 cataloged plant classes with sufficient confidence.
               </p>
             </div>
           ) : (

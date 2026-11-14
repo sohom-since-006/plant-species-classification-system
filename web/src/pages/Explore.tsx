@@ -70,7 +70,7 @@ export function Explore() {
       <PageHero
         badge="BOTANICAL ARCHIVE"
         title="Explore Species Library"
-        italicSubtitle="112 Cataloged Species"
+        italicSubtitle="150 Cataloged Species"
         description="Search across hundreds of verified specimens, regional ethnobotanical names, ecological distributions, and diagnostic morphology."
       >
         {/* Real-time search input */}

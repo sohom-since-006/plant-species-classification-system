@@ -99,7 +99,7 @@ export function hasRichContent(id: number): boolean {
 }
 
 /**
- * Returns list of species IDs among 0..111 that currently lack full content.
+ * Returns list of species IDs among 0..149 that currently lack full content.
  */
 export function getMissingContentIds(): number[] {
   const allIds = Object.keys(speciesMeta).map(Number).sort((a, b) => a - b);
@@ -107,7 +107,7 @@ export function getMissingContentIds(): number[] {
 }
 
 /**
- * Returns an array of all 112 species recognized by the model.
+ * Returns an array of all 150 species recognized by the model.
  */
 export function getAllSpecies(): Species[] {
   return Object.keys(speciesMeta)

@@ -1,6 +1,7 @@
 import type { ClassificationResult, PipelineStage, PipelineStageEvent } from '@/types/prediction';
 import { getMockResult, hashString, isMockMode } from '@/ml/mock';
 import type { RawImageData } from '@/ml/preprocess';
+import { applyOrientationTransform, getExifOrientation, getTransformedDimensions } from '@/ml/exif';
 import type { WorkerInMessage, WorkerOutMessage } from '@/ml/worker';
 
 export type { PipelineStage, PipelineStageEvent };
@@ -31,7 +32,7 @@ let activeJobId = 0;
 
 /**
  * Extracts raw pixel data from File, Blob, or URL in browser main thread.
- * Handles EXIF orientation, huge images (>2048px downscaling), and transparent PNGs.
+ * Handles EXIF orientation, huge images (>2048px downscaling with high-quality smoothing), and transparent PNGs.
  */
 export async function extractRawImageData(photo: File | Blob | string): Promise<RawImageData> {
   let blob: Blob;
@@ -43,20 +44,35 @@ export async function extractRawImageData(photo: File | Blob | string): Promise<
   }
 
   let imgSource: ImageBitmap | HTMLImageElement;
+  let orientation = 1;
+
   if (typeof createImageBitmap !== 'undefined') {
     try {
       imgSource = await createImageBitmap(blob, { imageOrientation: 'from-image' });
     } catch {
+      try {
+        const arrayBuf = await blob.arrayBuffer();
+        orientation = getExifOrientation(arrayBuf);
+      } catch {
+        orientation = 1;
+      }
       imgSource = await loadHtmlImage(blob);
     }
   } else {
+    try {
+      const arrayBuf = await blob.arrayBuffer();
+      orientation = getExifOrientation(arrayBuf);
+    } catch {
+      orientation = 1;
+    }
     imgSource = await loadHtmlImage(blob);
   }
 
-  const width = imgSource.width;
-  const height = imgSource.height;
+  const rawW = imgSource.width;
+  const rawH = imgSource.height;
+  const { width, height } = getTransformedDimensions(rawW, rawH, orientation);
 
-  // Downscale giant images
+  // Downscale giant images with aspect ratio preserved
   let targetW = width;
   let targetH = height;
   const maxDim = 2048;
@@ -86,10 +102,25 @@ export async function extractRawImageData(photo: File | Blob | string): Promise<
     throw new Error('Failed to acquire 2D canvas context.');
   }
 
+  // Ensure high-quality antialiasing when downscaling large photos
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
+
   // Composite over white for transparent PNGs
   ctx.fillStyle = '#FFFFFF';
   ctx.fillRect(0, 0, targetW, targetH);
-  ctx.drawImage(imgSource as CanvasImageSource, 0, 0, targetW, targetH);
+
+  if (orientation > 1) {
+    ctx.save();
+    const scaleFactorW = targetW / width;
+    const scaleFactorH = targetH / height;
+    ctx.scale(scaleFactorW, scaleFactorH);
+    applyOrientationTransform(ctx, orientation, rawW, rawH);
+    ctx.drawImage(imgSource as CanvasImageSource, 0, 0, rawW, rawH);
+    ctx.restore();
+  } else {
+    ctx.drawImage(imgSource as CanvasImageSource, 0, 0, targetW, targetH);
+  }
 
   const imgData = ctx.getImageData(0, 0, targetW, targetH);
   return {

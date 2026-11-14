@@ -22,7 +22,7 @@ Execute the following in your Supabase project's **SQL Editor** in exact order:
    - Enables Row Level Security (RLS) on all tables (read-only reference data, insert-only anonymous feedback)
 2. **Species Reference Data**:
    - Run [`supabase/seed.sql`](file:///supabase/seed.sql)
-   - Populates reference catalog of 112 Indian botanical species with taxonomies, regional vernacular names, and look-alikes.
+   - Populates reference catalog of 150 botanical species with taxonomies, regional vernacular names, and look-alikes.
 3. **Authentication Settings**:
    - The application is 100% public with no user accounts, no login, and no profile data.
    - In the Supabase Dashboard, navigate to **Authentication > Sign Up** and toggle off **Allow new users to sign up** (or under **Authentication > Providers**, disable Email/OAuth providers).

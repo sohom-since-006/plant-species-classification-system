@@ -1,7 +1,7 @@
 # 🌿 Plant Species Classification System (PlantAI)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-plantai--ml.vercel.app-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://plantai-ml.vercel.app)
-[![Catalog](https://img.shields.io/badge/Catalog-112%20Species-34D399?style=for-the-badge)](https://plantai-ml.vercel.app/explore)
+[![Catalog](https://img.shields.io/badge/Catalog-150%20Species-34D399?style=for-the-badge)](https://plantai-ml.vercel.app/explore)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25%20On--Device-6EE7A8?style=for-the-badge)](https://plantai-ml.vercel.app/classify)
 
 **Live Production URL:** [https://plantai-ml.vercel.app/](https://plantai-ml.vercel.app/)
@@ -17,7 +17,7 @@ with global coverage. All neural inference executes 100% client-side with comple
 ## ✨ Features
 
 - Image upload, drag-and-drop, and camera capture
-- Classification of ~130 species (about 70 Indian, 60 global)
+- Classification of 150 botanical species (Indian native flora, popular climbers, and houseplants)
 - Calibrated confidence with Top-3 predictions
 - Similar-species engine with ML %, Visual Match %, and Final Match %
 - Attention heatmap (CAM) showing what the model looked at
@@ -114,17 +114,17 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 3. Add the two environment variables.
 4. Deploy. Every push to `main` redeploys automatically.
 
-## 📊 Model Results (Test-Set Evaluation, v1.0.0)
+## 📊 Model Results (Test-Set Evaluation, v2.0.0)
 
-Evaluated on 3,401 held-out test split specimens across all 112 cataloged species.
+Evaluated on 4,939 held-out test split specimens across all 150 cataloged species.
 
 | Metric | Result | Target |
 |---|---|---|
-| Top-1 accuracy | **83.68%** | ≥ 80% |
-| Top-5 accuracy | **94.33%** | ≥ 92% |
-| Macro F1-score | **0.834** | ≥ 0.80 |
-| Expected Calibration Error (ECE) | **1.18%** (Platt $T=0.713$) | < 3.0% |
-| Model size (ONNX Web) | **38.2 MB** | < 45 MB |
+| Top-1 accuracy | **83.88%** | ≥ 80% |
+| Top-5 accuracy | **94.39%** | ≥ 92% |
+| Macro F1-score | **0.835** | ≥ 0.80 |
+| Expected Calibration Error (ECE) | **1.41%** (Platt $T=0.7181$) | < 3.0% |
+| Model size (ONNX Web) | **16.0 MB** | < 45 MB |
 
 ## 📚 Documentation
 
@@ -146,7 +146,7 @@ Evaluated on 3,401 held-out test split specimens across all 112 cataloged specie
 
 ## ⚠️ Limitations & Botanical Verification
 
-- **Catalog Scope:** PlantAI supports a closed catalog of 112 botanical species (~70 Indian native/cultivated species and ~42 global ornamentals).
+- **Catalog Scope:** PlantAI supports a closed catalog of 150 botanical species (~80 Indian native/cultivated species and ~70 popular climbers, houseplants, and ornamentals).
 - **Probabilistic Predictions:** Predictions are probabilistic and can produce errors, particularly with non-plant imagery, extreme close-ups, or visually indistinct look-alikes.
 - **Botanical & Medicinal Information:** Medicinal and traditional uses are strictly educational information, not medical advice. While 14 claims are backed by direct public literature sources (ASPCA Animal Poison Control and European Medicines Agency Herbal Monographs), remaining traditional folk claims are cautiously softened and tracked in [`docs/KNOWN_LIMITATIONS.md`](docs/KNOWN_LIMITATIONS.md).
 - **Safety Precedence:** Never consume, ingest, or apply any plant medicinally based on an algorithmic prediction. Consult a certified healthcare professional or botanist.

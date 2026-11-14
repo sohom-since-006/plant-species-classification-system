@@ -32,15 +32,22 @@ const FAQS: FaqItem[] = [
     id: 'why-not-confident',
     category: 'Diagnostics',
     badge: 'Rejection Gate',
-    q: 'Why does the app say "We\'re not sure" or mark a specimen as "Unknown / Rejected"?',
-    a: 'PlantAI employs dual out-of-distribution (OOD) rejection gates: maximum calibrated probability below 57% (threshold 0.57) or cosine distance to genus embedding centroids exceeding τ=0.31. When an image is blurry, captures a non-plant object (like a pebble, fabric, or food), or depicts a plant not present in our 112 cataloged species, the model refuses to guess and safely marks it as rejected.',
+    q: 'Why does the app say "Not confident this is one of the 150 species"?',
+    a: 'PlantAI employs dual out-of-distribution (OOD) rejection gates: maximum calibrated probability below 57% (threshold 0.57) or cosine distance to genus embedding centroids exceeding τ=0.32. When an image is blurry, captures a non-plant object (like a pebble, fabric, or food), or depicts an uncataloged specimen, the model refuses to guess and safely reports "Not confident", presenting the Top-3 candidate matches with caution advice.',
   },
   {
     id: 'confidence-tiers',
     category: 'Model Telemetry',
     badge: 'Calibration',
-    q: 'What do the confidence tiers (High, Medium, Low, Unknown) mean?',
-    a: '• High (> 85%): Strong taxonomic alignment. On our held-out test split, High-tier classifications achieve 97.4% empirical accuracy.\n• Medium (60% – 85%): Likely match (74.1% test accuracy). Review similar look-alikes to verify distinguishing petal counts or margins.\n• Low (< 60%): Ambiguous or degraded specimen (37.7% test accuracy). Genus-level fallback is recommended.\n• Unknown / Rejected: Image failed confidence or centroid thresholds. Retake photo with clearer focus.',
+    q: 'What do the confidence tiers (High, Medium, Low, Not Confident) mean?',
+    a: '• High (> 85%): Strong taxonomic alignment. On our held-out test split, High-tier classifications achieve 97.5% test accuracy.\n• Medium (60% – 85%): Likely match (72.5% test accuracy). Review similar look-alikes to verify distinguishing traits.\n• Low (< 60% down to 57% threshold): Ambiguous or degraded specimen (36.7% test accuracy). Genus-level fallback is recommended.\n• Not Confident / Rejected (< 57% or τ < 0.32): Specimen falls below the 57% probability rejection threshold or exceeds visual distance limits. The app displays the Top-3 candidates below the threshold with an explicit caution notice.\n\nNote: All stated metrics are test-set metrics on held-out reference evaluation data. Accuracy on field photos depends on the photo; always verify the confidence tier and Top-3.',
+  },
+  {
+    id: 'photo-limitations',
+    category: 'Diagnostics',
+    badge: 'Field Limitations',
+    q: 'Can real photos be misidentified, and what are the system limitations?',
+    a: 'Yes. Classification accuracy depends heavily on the photo. Plants photographed out of flower, captured from unusual angles or extreme close-ups, in harsh lighting, or representing heavily cultivated domestic varieties can be misidentified. Because reference datasets contain predominantly blooming specimens, non-flowering vegetative leaves have higher ambiguity. Always check the confidence tier and inspect the Top-3 candidate species before trusting an outcome.',
   },
   {
     id: 'supported-formats',
@@ -59,9 +66,9 @@ const FAQS: FaqItem[] = [
   {
     id: 'supported-species',
     category: 'Taxonomy',
-    badge: '112 Taxa',
+    badge: '150 Taxa',
     q: 'Which plant species are currently supported by the model?',
-    a: 'The system recognizes 112 botanical species across more than 50 families, focusing on prevalent medicinal, culinary, ornamental, and native plants of South Asia and worldwide flora (including Tulsi, Neem, Peepal, Aloe vera, Lemongrass, Hibiscus, Mint, Banyan, and Ashoka). You can browse the complete interactive herbarium on the Explore page.',
+    a: 'The system recognizes 150 botanical species across more than 50 families, focusing on prevalent medicinal, culinary, ornamental, and native plants of South Asia and worldwide flora (including Tulsi, Neem, Peepal, Aloe vera, Lemongrass, Hibiscus, Mint, Banyan, and Ashoka). You can browse the complete interactive herbarium on the Explore page.',
   },
 ];
 
@@ -276,7 +283,7 @@ export function Help() {
                               to="/explore"
                               className="inline-flex items-center gap-1 font-mono text-xs text-[var(--accent)] hover:underline"
                             >
-                              <span>Browse 112 Supported Species in Explore Catalog</span>
+                              <span>Browse 150 Supported Species in Explore Catalog</span>
                               <ArrowUpRight className="w-3.5 h-3.5" />
                             </Link>
                           </div>
