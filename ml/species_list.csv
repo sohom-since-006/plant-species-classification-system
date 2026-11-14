@@ -111,3 +111,41 @@ id,common_name,scientific_name,family,genus,type,origin,hindi_name,bengali_name,
 109,Parthenium,Parthenium hysterophorus,Asteraceae,Parthenium,herb,global,गाजर घास,গাজর ঘাস,Carrot grass / Santa Maria feverfew
 110,Clover,Trifolium repens,Fabaceae,Trifolium,herb,global,तिपतिया घास,তিপাত্তা ঘাস,White clover. Vague group resolved to T. repens. TODO(verify) vernacular names
 111,Oak,Quercus robur,Fagaceae,Quercus,tree,global,बलूत,ওক গাছ,English oak / Pedunculate oak. Vague group resolved to Q. robur. TODO(verify) vernacular names
+112,Rangoon creeper,Combretum indicum,Combretaceae,Combretum,climber,both,मधुमालती,মধুমঞ্জরী,Madhumalti / Fragrant clusters white to red
+113,Flame lily,Gloriosa superba,Colchicaceae,Gloriosa,climber,indian,कलिहारी,উলটচণ্ডাল,Kalihari / State flower of Tamil Nadu
+114,Passion fruit,Passiflora edulis,Passifloraceae,Passiflora,climber,global,कृष्ण कमल,ঝুমকালতা,Krishna kamal / Edible fruit and corona flowers
+115,Railway creeper,Ipomoea cairica,Convolvulaceae,Ipomoea,climber,both,रेलवे क्रीपर,রেললতা,Coastal morning glory with 5-lobed leaves
+116,Cypress vine,Ipomoea quamoclit,Convolvulaceae,Ipomoea,climber,global,कामलता,তারালতা,Kamalata / Pinnate fern-like leaves with star flowers
+117,English ivy,Hedera helix,Araliaceae,Hedera,climber,global,आइवी,ইংলিশ আইভি,Classic evergreen creeping vine with lobed leaves
+118,Golden trumpet,Allamanda cathartica,Apocynaceae,Allamanda,climber,global,पीली हरकन्द,অ্যালামন্ডা,Yellow bell vine / Large trumpet flowers
+119,Bleeding heart vine,Clerodendrum thomsoniae,Lamiaceae,Clerodendrum,climber,global,ब्लीडिंग हार्ट,রক্তঝরা ফুল,White bag calyx with bright crimson petals
+120,Flame vine,Pyrostegia venusta,Bignoniaceae,Pyrostegia,climber,global,गोल्डन शावर,ফ্লেম ভাইন,Orange trumpet vine / Winter blooming creeper
+121,Bengal clockvine,Thunbergia grandiflora,Acanthaceae,Thunbergia,climber,indian,नीललता,নীলকণ্ঠ লতা,Large pale blue trumpets in hanging racemes
+122,Coral vine,Antigonon leptopus,Polygonaceae,Antigonon,climber,global,अनंतलता,অনন্তলতা,Mexican creeper / Chain of love with pink sprays
+123,Croton,Codiaeum variegatum,Euphorbiaceae,Codiaeum,shrub,global,क्रोटन,পাতাবাহার,Patabahar / Highly variegated tropical leathery foliage
+124,Arrowhead plant,Syngonium podophyllum,Araceae,Syngonium,climber,global,ऐरोहेड,অ্যারোহেড প্ল্যান্ট,Goosefoot / Variegated arrow-shaped leaves
+125,Heartleaf philodendron,Philodendron hederaceum,Araceae,Philodendron,climber,global,फिलोडेंड्रॉन,ফিলোডেন্ড্রন,Glossy heart-shaped foliage trailing houseplant
+126,Tree philodendron,Thaumatophyllum bipinnatifidum,Araceae,Thaumatophyllum,herb,global,सेलोम,সেলুম,Selloum / Large deeply lobed wavy leaves
+127,Corn plant,Dracaena fragrans,Asparagaceae,Dracaena,shrub,global,कॉर्न प्लांट,কর্ন প্ল্যান্ট,Striped arching glossy leaves on thick canes
+128,Song of India,Dracaena reflexa,Asparagaceae,Dracaena,shrub,global,सॉन्ग ऑफ इंडिया,সং অফ ইন্ডিয়া,Spiral lanceolate leaves with golden yellow margins
+129,Flamingo flower,Anthurium andraeanum,Araceae,Anthurium,herb,global,एन्थ्यूरियम,অ্যান্থুরিয়াম,Waxy red or pink spathes with upright spadix
+130,Bird of paradise,Strelitzia reginae,Strelitziaceae,Strelitzia,herb,global,बर्ड ऑफ पैराडाइज,বার্ড অব প্যারাডাইস,Crane-like orange and electric blue blossoms
+131,Wandering dude,Tradescantia zebrina,Commelinaceae,Tradescantia,herb,global,ज़ेब्रा स्पाइडरवॉर्ट,জেব্রিনা,Silver and green striped leaves with purple undersides
+132,Weeping fig,Ficus benjamina,Moraceae,Ficus,tree,both,फिकस बेंजामिना,বেনজামিনা ডুমুর,Graceful drooping branches with pointed glossy leaves
+133,Lace fern,Asparagus setaceus,Asparagaceae,Asparagus,climber,global,शतावरी फर्न,অ্যাসপারাগাস ফার্ন,Feathery cloud-like delicate foliage
+134,Golden cane palm,Dypsis lutescens,Arecaceae,Dypsis,tree,global,अरेका पाम,আরেকা পাম,Areca palm / Top indoor clumping palm with golden stems
+135,Calla lily,Zantedeschia aethiopica,Araceae,Zantedeschia,herb,global,काला लिली,কালা লিলি,Pure white funnel spathe enclosing yellow spadix
+136,Morpankhi,Platycladus orientalis,Cupressaceae,Platycladus,tree,both,मोरपंखी,মোরপাখা,Oriental arborvitae / Thuja orientalis / Conifer sprays
+137,Nag Champa,Plumeria pudica,Apocynaceae,Plumeria,shrub,global,नाग चम्पा,নাগ চম্পা,Bridal bouquet / Fiddle-shaped leaves and pure white petals
+138,Crape jasmine,Tabernaemontana divaricata,Apocynaceae,Tabernaemontana,shrub,indian,चाँदनी,তগর,Chandni / Tagar / Snow-white pinwheel blossoms
+139,Yellow bells,Tecoma stans,Bignoniaceae,Tecoma,shrub,global,पीली घंटी,হলুদ ঘণ্টা,Yellow trumpetbush / Clusters of golden yellow bells
+140,Desert rose,Adenium obesum,Apocynaceae,Adenium,succulent,global,डेजर्ट रोज,মরু গোলাপ,Swollen bonsai caudex with vivid pink/red flowers
+141,Night-blooming jasmine,Cestrum nocturnum,Solanaceae,Cestrum,shrub,global,रात की रानी,হাসনুহানা,Raat ki rani / Hasnuhana / Intensely fragrant at night
+142,Moss rose,Portulaca grandiflora,Portulacaceae,Portulaca,succulent,global,नौबजिया,ন'টার ফুল,9 o clock flower / Nau bajiya / Low succulent herb
+143,Coleus,Coleus scutellarioides,Lamiaceae,Coleus,herb,both,कोलियस,কোলিয়াস,Painted nettle / Vivid velvet multicolored leaves
+144,Copperleaf,Acalypha wilkesiana,Euphorbiaceae,Acalypha,shrub,global,ताँबा पत्ता,লাল পাতা,Jacobs coat / Multicolored copper-red serrated foliage
+145,Crown of thorns,Euphorbia milii,Euphorbiaceae,Euphorbia,succulent,global,कांटों का ताज,কাঁটা মুকুট,Spiny succulent with bright red petaloid bracts
+146,Blue plumbago,Plumbago auriculata,Plumbaginaceae,Plumbago,shrub,global,नीलचित्रक,নীল চিত্রক,Cape leadwort / Sky-blue floral clusters
+147,Crown flower,Calotropis gigantea,Apocynaceae,Calotropis,shrub,indian,मदार,আকন্দ,Madar / Aak / Akanda / Sacred lilac-white crown flowers
+148,Golden dewdrop,Duranta erecta,Verbenaceae,Duranta,shrub,global,नीलकण्ठ झाड़ी,নীলকণ্ঠ গুল্ম,Skyflower / Blue-purple cascades and golden berries
+149,Cannonball tree,Couroupita guianensis,Lecythidaceae,Couroupita,tree,global,नागकेसर वृक्ष,নাগলিঙ্গম,Nagalingam / Shivling tree / Large fragrant cauliflorous blooms

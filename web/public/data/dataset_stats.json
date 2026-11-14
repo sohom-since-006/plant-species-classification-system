@@ -1,8 +1,8 @@
 {
   "split_sizes": {
-    "train": 26306,
-    "val": 3406,
-    "test": 3401
+    "train": 38217,
+    "val": 4931,
+    "test": 4939
   },
   "images_per_species": [
     {
@@ -452,20 +452,172 @@
     {
       "species": "Oak",
       "count": 290
+    },
+    {
+      "species": "Rangoon creeper",
+      "count": 399
+    },
+    {
+      "species": "Flame lily",
+      "count": 394
+    },
+    {
+      "species": "Passion fruit",
+      "count": 400
+    },
+    {
+      "species": "Railway creeper",
+      "count": 397
+    },
+    {
+      "species": "Cypress vine",
+      "count": 396
+    },
+    {
+      "species": "English ivy",
+      "count": 400
+    },
+    {
+      "species": "Golden trumpet",
+      "count": 396
+    },
+    {
+      "species": "Bleeding heart vine",
+      "count": 396
+    },
+    {
+      "species": "Flame vine",
+      "count": 398
+    },
+    {
+      "species": "Bengal clockvine",
+      "count": 399
+    },
+    {
+      "species": "Coral vine",
+      "count": 399
+    },
+    {
+      "species": "Croton",
+      "count": 400
+    },
+    {
+      "species": "Arrowhead plant",
+      "count": 395
+    },
+    {
+      "species": "Heartleaf philodendron",
+      "count": 398
+    },
+    {
+      "species": "Tree philodendron",
+      "count": 250
+    },
+    {
+      "species": "Corn plant",
+      "count": 398
+    },
+    {
+      "species": "Song of India",
+      "count": 398
+    },
+    {
+      "species": "Flamingo flower",
+      "count": 398
+    },
+    {
+      "species": "Bird of paradise",
+      "count": 399
+    },
+    {
+      "species": "Wandering dude",
+      "count": 397
+    },
+    {
+      "species": "Weeping fig",
+      "count": 400
+    },
+    {
+      "species": "Lace fern",
+      "count": 398
+    },
+    {
+      "species": "Golden cane palm",
+      "count": 394
+    },
+    {
+      "species": "Calla lily",
+      "count": 400
+    },
+    {
+      "species": "Morpankhi",
+      "count": 399
+    },
+    {
+      "species": "Nag Champa",
+      "count": 397
+    },
+    {
+      "species": "Crape jasmine",
+      "count": 398
+    },
+    {
+      "species": "Yellow bells",
+      "count": 399
+    },
+    {
+      "species": "Desert rose",
+      "count": 400
+    },
+    {
+      "species": "Night-blooming jasmine",
+      "count": 397
+    },
+    {
+      "species": "Moss rose",
+      "count": 398
+    },
+    {
+      "species": "Coleus",
+      "count": 399
+    },
+    {
+      "species": "Copperleaf",
+      "count": 393
+    },
+    {
+      "species": "Crown of thorns",
+      "count": 400
+    },
+    {
+      "species": "Blue plumbago",
+      "count": 400
+    },
+    {
+      "species": "Crown flower",
+      "count": 399
+    },
+    {
+      "species": "Golden dewdrop",
+      "count": 396
+    },
+    {
+      "species": "Cannonball tree",
+      "count": 400
     }
   ],
   "indian_vs_global": [
     {
       "name": "Native (Indian)",
-      "value": 48
+      "value": 52
     },
     {
       "name": "Introduced (Global)",
-      "value": 61
+      "value": 93
     },
     {
       "name": "Invasive",
-      "value": 3
+      "value": 0
     }
   ],
   "family_breakdown": [
@@ -478,7 +630,19 @@
       "count": 10
     },
     {
+      "family": "Araceae",
+      "count": 10
+    },
+    {
       "family": "Lamiaceae",
+      "count": 8
+    },
+    {
+      "family": "Apocynaceae",
+      "count": 8
+    },
+    {
+      "family": "Solanaceae",
       "count": 6
     },
     {
@@ -486,7 +650,7 @@
       "count": 6
     },
     {
-      "family": "Solanaceae",
+      "family": "Moraceae",
       "count": 5
     },
     {
@@ -494,11 +658,11 @@
       "count": 5
     },
     {
-      "family": "Araceae",
+      "family": "Asparagaceae",
       "count": 5
     },
     {
-      "family": "Moraceae",
+      "family": "Arecaceae",
       "count": 4
     },
     {
@@ -506,11 +670,7 @@
       "count": 3
     },
     {
-      "family": "Apocynaceae",
-      "count": 3
-    },
-    {
-      "family": "Arecaceae",
+      "family": "Acanthaceae",
       "count": 3
     },
     {
@@ -522,15 +682,23 @@
       "count": 3
     },
     {
+      "family": "Euphorbiaceae",
+      "count": 3
+    },
+    {
       "family": "Zingiberaceae",
       "count": 2
     },
     {
-      "family": "Acanthaceae",
+      "family": "Combretaceae",
       "count": 2
     },
     {
       "family": "Oleaceae",
+      "count": 2
+    },
+    {
+      "family": "Verbenaceae",
       "count": 2
     },
     {
@@ -542,15 +710,19 @@
       "count": 2
     },
     {
-      "family": "Asparagaceae",
-      "count": 2
-    },
-    {
       "family": "Crassulaceae",
       "count": 2
     },
     {
       "family": "Liliaceae",
+      "count": 2
+    },
+    {
+      "family": "Convolvulaceae",
+      "count": 2
+    },
+    {
+      "family": "Bignoniaceae",
       "count": 2
     },
     {
@@ -578,10 +750,6 @@
       "count": 1
     },
     {
-      "family": "Combretaceae",
-      "count": 1
-    },
-    {
       "family": "Piperaceae",
       "count": 1
     },
@@ -599,10 +767,6 @@
     },
     {
       "family": "Rubiaceae",
-      "count": 1
-    },
-    {
-      "family": "Verbenaceae",
       "count": 1
     },
     {
@@ -672,9 +836,49 @@
     {
       "family": "Fagaceae",
       "count": 1
+    },
+    {
+      "family": "Colchicaceae",
+      "count": 1
+    },
+    {
+      "family": "Passifloraceae",
+      "count": 1
+    },
+    {
+      "family": "Araliaceae",
+      "count": 1
+    },
+    {
+      "family": "Polygonaceae",
+      "count": 1
+    },
+    {
+      "family": "Strelitziaceae",
+      "count": 1
+    },
+    {
+      "family": "Commelinaceae",
+      "count": 1
+    },
+    {
+      "family": "Cupressaceae",
+      "count": 1
+    },
+    {
+      "family": "Portulacaceae",
+      "count": 1
+    },
+    {
+      "family": "Plumbaginaceae",
+      "count": 1
+    },
+    {
+      "family": "Lecythidaceae",
+      "count": 1
     }
   ],
-  "total_images": 33113,
-  "total_species": 112,
-  "generated_at": "2026-11-10T07:10:34.338422+00:00"
+  "total_images": 48087,
+  "total_species": 150,
+  "generated_at": "2026-11-13T18:17:42.754088+00:00"
 }

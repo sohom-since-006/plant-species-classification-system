@@ -5807,5 +5807,1935 @@
       }
     ],
     "hasUnverifiedDetails": false
+  },
+  "112": {
+    "id": 112,
+    "slug": "combretum-indicum",
+    "commonName": "Rangoon creeper",
+    "scientificName": "Combretum indicum",
+    "family": "Combretaceae",
+    "genus": "Combretum",
+    "plantType": "climber",
+    "origin": "both",
+    "namesHindi": "मधुमालती (Madhumalti)",
+    "namesBengali": "মধুমঞ্জরী (Madhumanjari)",
+    "otherNames": [
+      "Chinese honeysuckle",
+      "Madhumalti",
+      "Vilayati chameli"
+    ],
+    "description": "A vigorous woody climbing liana famous for fragrant pendulous tubular flower clusters that open white at dusk, turn pink the next morning, and deepen into rich crimson red by afternoon to attract different pollinators.",
+    "identifyingFeatures": [
+      "Clusters of pendulous star-shaped tubular flowers transitioning through white, pink, and dark red colors",
+      "Opposite, oblong to elliptic leaves with acuminated tips and distinct sunken veins",
+      "Woody climbing vine utilizing persistent spine-like petiole bases to hook onto supports",
+      "Five-winged, sharply angled woody fruit capsules ripening to dark brown"
+    ],
+    "habitat": "Secondary tropical forests, riverbanks, gardens, trellises, pergolas, and boundary fences.",
+    "distribution": "Native to tropical Asia (India, Myanmar, Malaysia, Philippines); widely cultivated across tropical and subtropical zones globally.",
+    "uses": [
+      "Highly prized ornamental pergola and fence climber valued for night fragrance and color-changing blossoms",
+      "Traditional medicine uses seeds as an anthelmintic for roundworms and pinworms (dosage caution required)",
+      "Nectar source for long-tongued hawk moths (at night) and butterflies and sunbirds (during daytime)"
+    ],
+    "careTips": [
+      "Provide a sturdy arbor, pergola, or trellis capable of supporting a heavy woody vine",
+      "Plant in full sun for abundant floral cascades; tolerates partial shade with fewer blooms",
+      "Water deeply during warm summer growth; prune hard in late winter before spring growth begins"
+    ],
+    "toxicityNote": "Seeds contain quisqualic acid; consuming ripe seeds in excess causes nausea, vomiting, abdominal pain, and diarrhea. Leaves and flowers are considered non-toxic.",
+    "isToxic": true,
+    "funFact": "The flowers change color and orientation over 3 days: white and horizontal at night to attract hawk moths, then vertical and crimson by day to invite butterflies and sunbirds.",
+    "referenceImages": [
+      "/species/112.webp"
+    ],
+    "imageCredit": {
+      "observer": "teaddy",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608601691/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Combretum_indicum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "113": {
+    "id": 113,
+    "slug": "gloriosa-superba",
+    "commonName": "Flame lily",
+    "scientificName": "Gloriosa superba",
+    "family": "Colchicaceae",
+    "genus": "Gloriosa",
+    "plantType": "climber",
+    "origin": "indian",
+    "namesHindi": "कलिहारी (Kalihari)",
+    "namesBengali": "উলটচণ্ডাল (Ulat chandal)",
+    "otherNames": [
+      "Glory Lily",
+      "Climbing Lily",
+      "Agnishikha",
+      "Kalihari",
+      "Tiger claw"
+    ],
+    "description": "A magnificent deciduous climbing herb with tendril-tipped leaves and reflexed, wavy-margined fiery red-and-yellow flowers resembling leaping tongues of flame. It is the official state flower of Tamil Nadu.",
+    "identifyingFeatures": [
+      "Showy solitary nodding flowers with 6 reflexed, wavy-margined petals starting bright yellow and maturing to brilliant crimson",
+      "Bright green lanceolate leaves ending in coiled tendril tips used for climbing",
+      "Stamens spreading widely outward horizontally with prominent versatile yellow anthers",
+      "V-shaped underground fleshy tubers containing potent alkaloids"
+    ],
+    "habitat": "Thickets, forest edges, deciduous scrub, hedges, and coastal sandy plains across peninsular India.",
+    "distribution": "Native to tropical and southern Africa and tropical Asia, widely distributed across India, Sri Lanka, and Southeast Asia.",
+    "uses": [
+      "State flower of Tamil Nadu (known as Kanthal) and national flower of Zimbabwe",
+      "Commercial industrial source of colchicine and thiocolchicoside used pharmaceutically for gout and arthritis",
+      "Important botanical in Ayurvedic medicine (Langali / Kalihari) utilized after rigorous traditional purification"
+    ],
+    "careTips": [
+      "Plant fleshy V-shaped tubers horizontally 8–10 cm deep in well-draining sandy loam",
+      "Provide light trellis or bamboo sticks for tendril-bearing leaf tips to grasp",
+      "Allow tubers to rest completely dry during winter dormancy; withhold water until spring shoots emerge"
+    ],
+    "toxicityNote": "HIGHLY TOXIC: All parts—especially tubers and seeds—contain lethal concentrations of colchicine. Ingestion causes severe gastrointestinal collapse, respiratory failure, organ failure, and death.",
+    "isToxic": true,
+    "funFact": "Gloriosa climbs not with stems or aerial roots, but with the modified tips of its leaves, which coil into sensitive grasp tendrils upon touching supports.",
+    "referenceImages": [
+      "/species/113.webp"
+    ],
+    "imageCredit": {
+      "observer": "Daniel Papworth",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605324039/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Gloriosa_superba",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "114": {
+    "id": 114,
+    "slug": "passiflora-edulis",
+    "commonName": "Passion fruit",
+    "scientificName": "Passiflora edulis",
+    "family": "Passifloraceae",
+    "genus": "Passiflora",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "कृष्ण कमल (Krishna kamal)",
+    "namesBengali": "ঝুমকালতা (Jhumkalata)",
+    "otherNames": [
+      "Passion fruit vine",
+      "Purple granadilla",
+      "Maracujá",
+      "Krishna kamal"
+    ],
+    "description": "A vigorous tendril-climbing evergreen vine famed for fascinating cosmic-looking flowers with a wavy fringe corona, followed by aromatic, nutrient-dense purple or yellow edible fruits filled with gelatinous pulp.",
+    "identifyingFeatures": [
+      "Complex intricate flowers with 5 white petals, 5 sepals, and an intense purple-and-white radiating filament corona",
+      "Deeply 3-lobed glossy alternate leaves with finely serrated margins and two glands on the petiole",
+      "Simple, unbranched axillary coiled tendrils climbing vigorously over trees and fences",
+      "Round to oval fruits with a tough outer rind ripening to deep purple or yellow, packed with pulpy seeds"
+    ],
+    "habitat": "Subtropical forest fringes, orchards, home garden arbors, and terraced slopes.",
+    "distribution": "Native to southern Brazil, Paraguay, and northern Argentina; widely cultivated in the Western Ghats, NE India, and tropics worldwide.",
+    "uses": [
+      "Major commercial fruit crop harvested for juice, desserts, mocktails, and fresh consumption",
+      "Spectacular ornamental vine for archways, privacy screens, and pollinator gardens",
+      "Rich in dietary fiber, vitamins A and C, iron, and antioxidant polyphenols"
+    ],
+    "careTips": [
+      "Requires full sun (at least 6 hours daily) and rich, well-draining fertile soil",
+      "Needs strong wire trellising or chain-link fencing to support heavy foliage and fruit clusters",
+      "Water consistently during flowering and fruit development; protect roots with organic mulch"
+    ],
+    "toxicityNote": "Ripe fruit pulp is delicious and completely safe. Unripe green fruits, stems, and leaves contain cyanogenic glycosides and should never be consumed raw.",
+    "isToxic": false,
+    "funFact": "Spanish Christian missionaries named it 'passion flower' because floral structures symbolically resembled the Passion of Christ: 3 stigmas for 3 nails, 5 anthers for 5 wounds, and the corona for the crown of thorns.",
+    "referenceImages": [
+      "/species/114.webp"
+    ],
+    "imageCredit": {
+      "observer": "Erika Mitchell",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605512434/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Passiflora_edulis",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "115": {
+    "id": 115,
+    "slug": "ipomoea-cairica",
+    "commonName": "Railway creeper",
+    "scientificName": "Ipomoea cairica",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "plantType": "climber",
+    "origin": "both",
+    "namesHindi": "रेलवे क्रीपर (Railway creeper)",
+    "namesBengali": "রেললতা (Rail-lata)",
+    "otherNames": [
+      "Coast morning glory",
+      "Mile-a-minute vine",
+      "Five-fingered morning glory"
+    ],
+    "description": "An extremely fast-growing perennial twinning creeper with distinctive palmately 5-lobed leaves and delicate lavender-to-magenta trumpet flowers, commonly seen draping railway fences and roadside hedges across India.",
+    "identifyingFeatures": [
+      "Distinctive palmately divided leaves with 5 to 7 radiating lanceolate leaflets",
+      "Funnelform trumpet flowers (5–7 cm across) in shades of lavender, pale purple, or pink with a dark purple throat",
+      "Slender, glabrous twinning stems that climb swiftly over fences and smother adjacent shrubs",
+      "Smooth globular 4-valved capsule enclosing small hairy seeds"
+    ],
+    "habitat": "Railway tracks, disturbed wasteland, roadside hedges, coastal dunes, and fence lines.",
+    "distribution": "Native to tropical Africa and Asia; naturalized pantropically across warm temperate and tropical regions.",
+    "uses": [
+      "Quick-cover evergreen screen for chain-link fences, railway corridors, and boundary walls",
+      "Attracts honeybees, solitary bees, and butterflies with abundant morning nectar",
+      "Erosion control on roadside embankments and disturbed slopes"
+    ],
+    "careTips": [
+      "Grows vigorously in almost any soil type in full sun with minimal attention",
+      "Requires strict pruning and containment to prevent it from outcompeting weaker ornamental garden species",
+      "Drought-hardy once established; thrives in warm tropical climates without extra fertilizer"
+    ],
+    "toxicityNote": "NON-TOXIC to humans in casual contact. Ingestion of seeds in large quantities may cause mild stomach upset due to indole alkaloids typical of morning glory seeds.",
+    "isToxic": false,
+    "funFact": "Called 'Railway creeper' across India because colonial engineers planted it alongside railway stations and track fences to suppress dust and provide year-round green floral cover.",
+    "referenceImages": [
+      "/species/115.webp"
+    ],
+    "imageCredit": {
+      "observer": "s60117",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604676641/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ipomoea_cairica",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "116": {
+    "id": 116,
+    "slug": "ipomoea-quamoclit",
+    "commonName": "Cypress vine",
+    "scientificName": "Ipomoea quamoclit",
+    "family": "Convolvulaceae",
+    "genus": "Ipomoea",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "कामलता (Kamalata)",
+    "namesBengali": "তারালता (Taralata)",
+    "otherNames": [
+      "Cardinal climber",
+      "Star glory",
+      "Hummingbird vine",
+      "Kamalata"
+    ],
+    "description": "A graceful annual twining vine with airy, thread-like pinnatisect ferny foliage and vivid scarlet star-shaped tubular flowers beloved by hummingbirds, sunbirds, and butterflies.",
+    "identifyingFeatures": [
+      "Finely dissected feather-like leaves with numerous linear, thread-like segments",
+      "Brilliant scarlet-red (rarely white or pink) 5-pointed star flowers with a long slender floral tube",
+      "Delicate twinning light-green stems winding clockwise up vertical supports",
+      "Small ovate 4-celled fruit capsules containing dark brown to black seeds"
+    ],
+    "habitat": "Cottage gardens, porch trellises, sunny balconies, hedge borders, and disturbed fields.",
+    "distribution": "Native to tropical South and Central America; naturalized and beloved in Indian gardens for centuries.",
+    "uses": [
+      "Premier ornamental vine for light trellises, hanging baskets, balcony railings, and bamboo obelisks",
+      "Exceptional pollinator plant that magnetically attracts sunbirds, hawk moths, and swallowtail butterflies",
+      "Traditional cooling folk poultices made from crushed fresh foliage for boils"
+    ],
+    "careTips": [
+      "Sow seeds in spring in full sun; nick seed coat or soak in warm water overnight for rapid germination",
+      "Requires light support such as twine, mesh, or thin bamboo canes to ascend",
+      "Provide moderate regular watering; avoid high-nitrogen fertilizers that encourage foliage at the expense of blooms"
+    ],
+    "toxicityNote": "Like many morning glories, the seeds contain small traces of lysergic alkaloids and can cause mild nausea if ingested in quantity. Foliage is harmless.",
+    "isToxic": false,
+    "funFact": "Known as 'Taralata' (Star Vine) in Bengali due to its precise five-pointed star shape that appears to twinkle against feathery emerald foliage.",
+    "referenceImages": [
+      "/species/116.webp"
+    ],
+    "imageCredit": {
+      "observer": "Carlos Domínguez-Rodríguez",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605421054/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ipomoea_quamoclit",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "117": {
+    "id": 117,
+    "slug": "hedera-helix",
+    "commonName": "English ivy",
+    "scientificName": "Hedera helix",
+    "family": "Araliaceae",
+    "genus": "Hedera",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "आइवी (Ivy)",
+    "namesBengali": "ইংলিশ আইভি (English ivy)",
+    "otherNames": [
+      "Common ivy",
+      "European ivy",
+      "Hedera"
+    ],
+    "description": "A classic evergreen woody climbing vine that clings to brick, stone, and trees using adhesive aerial rootlets, featuring leathery 3-to-5 lobed dark green leaves with pale veins.",
+    "identifyingFeatures": [
+      "Juvenile climbing leaves with 3 to 5 triangular lobes, glossy dark-green upper surface, and whitish veins",
+      "Adult flowering stems with unlobed rhombic leaves, small yellowish-green umbel flowers, and black berries",
+      "Dense clusters of adventitious aerial clinging rootlets emerging along the stems",
+      "Evergreen perennial habit capable of forming dense groundcovers or ascending tall brick facades"
+    ],
+    "habitat": "Temperate and subtropical woodlands, masonry walls, shaded garden borders, and indoor terrariums.",
+    "distribution": "Native to Europe, western Asia, and northern Africa; cultivated worldwide as an ornamental vine and indoor houseplant.",
+    "uses": [
+      "Popular trailing indoor houseplant famous for high air-filtration efficiency (benzene, formaldehyde)",
+      "Groundcover for deep shade under trees where grass refuses to grow",
+      "Masonry cover providing thermal insulation to exterior stone buildings"
+    ],
+    "careTips": [
+      "Thrives in bright indirect light to medium shade indoors; avoid scorching direct afternoon sun",
+      "Allow top inch of potting mix to dry between waterings; avoid soggy waterlogged soil",
+      "Wipe leaves occasionally with a damp cloth to remove dust and discourage spider mites"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Leaves and berries contain triterpenoid saponins (hederagenin). Ingestion can cause vomiting, diarrhea, and salivation in pets; sap may cause contact dermatitis.",
+    "isToxic": true,
+    "funFact": "English ivy shows dramatic heterophylly: while juvenile vines climbing walls have 3–5 lobed leaves, mature branches that reach sunlight produce unlobed oval leaves and flowers.",
+    "referenceImages": [
+      "/species/117.webp"
+    ],
+    "imageCredit": {
+      "observer": "Plana Baptiste",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604480891/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Hedera_helix",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "118": {
+    "id": 118,
+    "slug": "allamanda-cathartica",
+    "commonName": "Golden trumpet",
+    "scientificName": "Allamanda cathartica",
+    "family": "Apocynaceae",
+    "genus": "Allamanda",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "पीली हरकन्द (Peeli harkand)",
+    "namesBengali": "অ্যালামন্ডা (Allamanda)",
+    "otherNames": [
+      "Yellow bell vine",
+      "Buttercup flower",
+      "Peeli ghanti vine"
+    ],
+    "description": "A robust, sprawling tropical climbing shrub with glossy whorled leaves and large, luminous golden-yellow trumpet-shaped blossoms with a fruity fragrance.",
+    "identifyingFeatures": [
+      "Large brilliant golden-yellow bell-shaped flowers (8–12 cm wide) with orange-yellow throat stripes",
+      "Glossy, leathery oblong-lanceolate leaves arranged in whorls of 4 along stout green stems",
+      "Exudes a sticky white milky latex from all broken tissues",
+      "Prickly, spiny globular seed capsules (burr-like) containing winged flat seeds"
+    ],
+    "habitat": "Tropical gardens, coastal resorts, roadside hedges, fences, and warm verandas.",
+    "distribution": "Native to Brazil and tropical America; naturalized throughout the tropics including coastal India and Southeast Asia.",
+    "uses": [
+      "Spectacular flowering vine for fences, pergolas, porticos, and driveway entrance gates",
+      "Provides uninterrupted flowering throughout tropical summer and monsoon seasons",
+      "Attracts carpenter bees, hawkmoths, and butterflies"
+    ],
+    "careTips": [
+      "Requires full tropical sun (6+ hours daily) for profuse continuous blooming",
+      "Water regularly during active growth; allow topsoil to dry slightly between watering cycles",
+      "Prune vigorously in early spring to encourage bushy branching and fresh flowering wood"
+    ],
+    "toxicityNote": "TOXIC: All parts of the plant and its milky sap contain iridoid lactones (allamandin). Ingestion causes violent vomiting, stomach cramps, and diarrhea. Sap causes skin irritation.",
+    "isToxic": true,
+    "funFact": "The specific epithet 'cathartica' is derived from the Greek 'katharsis' (purging), referencing historical medicinal use as a drastic emetic and purgative.",
+    "referenceImages": [
+      "/species/118.webp"
+    ],
+    "imageCredit": {
+      "observer": "capacoscar",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608518086/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Allamanda_cathartica",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "119": {
+    "id": 119,
+    "slug": "clerodendrum-thomsoniae",
+    "commonName": "Bleeding heart vine",
+    "scientificName": "Clerodendrum thomsoniae",
+    "family": "Lamiaceae",
+    "genus": "Clerodendrum",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "ब्लीडिंग हार्ट (Bleeding heart)",
+    "namesBengali": "রক্তঝরা ফুল (Rakta-jhora phul)",
+    "otherNames": [
+      "Bagflower",
+      "Glorybower",
+      "Bleeding glory-bower"
+    ],
+    "description": "An enchanting evergreen twinning climber producing lantern-like inflated snowy white calyces from which emerge bright crimson corolla lobes with long protruding stamens, giving the impression of drops of blood.",
+    "identifyingFeatures": [
+      "Hanging floral cymes consisting of inflated pure-white pouch calyces and contrasting blood-red petals",
+      "Slender floral stamens and styles protruding 2–3 cm far beyond the crimson petals",
+      "Opposite, dark emerald ovate leaves with prominent depressed veins and smooth margins",
+      "Slender, woody twining stems that climb gracefully without thorns or tendrils"
+    ],
+    "habitat": "Tropical shaded borders, conservatory arbors, balcony grills, and sheltered humid verandas.",
+    "distribution": "Native to tropical West Africa (Cameroon to Senegal); cultivated worldwide in tropical and warm subtropical gardens.",
+    "uses": [
+      "High-contrast ornamental climber for shaded trellises, balcony grills, and hanging baskets",
+      "Outstanding container patio specimen trained on wire topiary hoops",
+      "Nectar source for butterflies and hoverflies"
+    ],
+    "careTips": [
+      "Prefers bright dappled light or morning sun; protect from harsh afternoon sun which bleaches white calyces",
+      "Maintain consistently moist, organically rich, well-draining soil",
+      "Pinch back stem tips after blooming to encourage bushier growth and multi-stem flower heads"
+    ],
+    "toxicityNote": "NON-TOXIC to cats, dogs, and humans. Safe for family households and pet-friendly indoor gardens.",
+    "isToxic": false,
+    "funFact": "Named by botanist William Balfour Baikie in honor of the late wife of Rev. William Cooper Thomson, a Scottish missionary and physician in Old Calabar, Nigeria.",
+    "referenceImages": [
+      "/species/119.webp"
+    ],
+    "imageCredit": {
+      "observer": "Marlon Chavez",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608957060/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Clerodendrum_thomsoniae",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "120": {
+    "id": 120,
+    "slug": "pyrostegia-venusta",
+    "commonName": "Flame vine",
+    "scientificName": "Pyrostegia venusta",
+    "family": "Bignoniaceae",
+    "genus": "Pyrostegia",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "गोल्डन शावर (Golden shower vine)",
+    "namesBengali": "ফ্লেম ভাইন (Flame vine)",
+    "otherNames": [
+      "Orange trumpet vine",
+      "Golden shower creeper",
+      "Flame flower"
+    ],
+    "description": "A spectacular vigorous evergreen woody tendril-climber that blankets roofs, fences, and pergolas in a dazzling sea of tubular fiery-orange flowers throughout winter and early spring.",
+    "identifyingFeatures": [
+      "Dense hanging clusters of bright orange, slender tubular blossoms with reflexed petal lobes",
+      "Compound leaves with 2 to 3 ovate leaflets and a terminal 3-parted branched climbing tendril",
+      "Vigorous branching woody stems climbing up to 15 meters over walls and trees",
+      "Exserted yellow stamens extending beyond the narrow curved orange floral tube"
+    ],
+    "habitat": "Subtropical garden walls, roof pergolas, driveway arches, and sunny hillside fences.",
+    "distribution": "Native to southern Brazil, Bolivia, Paraguay, and Argentina; widely grown across India (especially Bangalore and Pune) and global tropics.",
+    "uses": [
+      "Premier winter-flowering ornamental vine covering boundary walls, carports, and overhead trellises",
+      "Provides vital winter nectar for honeybees, sunbirds, and hummingbirds when few other plants bloom",
+      "Fast erosion cover for exposed tropical banks"
+    ],
+    "careTips": [
+      "Plant in full blazing sun to ensure maximum flower development; shaded plants produce only leaves",
+      "Water regularly during establishment, but tolerates dry spells once rooted",
+      "Prune heavily immediately after winter flowering ends to keep growth under control"
+    ],
+    "toxicityNote": "NON-TOXIC to humans and domestic animals under normal circumstances.",
+    "isToxic": false,
+    "funFact": "The genus name 'Pyrostegia' comes from Greek 'pyr' (fire) and 'stege' (covering/roof), literally describing its habit of covering entire building roofs in fiery orange blossoms.",
+    "referenceImages": [
+      "/species/120.webp"
+    ],
+    "imageCredit": {
+      "observer": "Christopher David Benda",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606172836/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Pyrostegia_venusta",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "121": {
+    "id": 121,
+    "slug": "thunbergia-grandiflora",
+    "commonName": "Bengal clockvine",
+    "scientificName": "Thunbergia grandiflora",
+    "family": "Acanthaceae",
+    "genus": "Thunbergia",
+    "plantType": "climber",
+    "origin": "indian",
+    "namesHindi": "नीललता (Neellata)",
+    "namesBengali": "নীলকণ্ঠ লতা (Neelkantha lata)",
+    "otherNames": [
+      "Blue skyflower",
+      "Blue trumpet vine",
+      "Bengal trumpet",
+      "Neellata"
+    ],
+    "description": "A vigorous perennial woody twining climber native to northeastern India, famous for pendulous racemes of large, pale lavender-blue or sky-blue trumpet flowers with pale yellow throats.",
+    "identifyingFeatures": [
+      "Large trumpet-shaped sky-blue to lavender flowers (up to 8 cm across) with creamy-yellow throats in hanging racemes",
+      "Opposite, rough-textured cordate leaves with pointed lobes and prominent tooth-like serrations",
+      "Vigorous rope-like twinning woody stems with massive underground tuberous root storage systems",
+      "Globular beak-tipped fruit capsules that fling seeds outward upon drying"
+    ],
+    "habitat": "Moist deciduous forests, river valleys, large garden pergolas, and highway trellises.",
+    "distribution": "Native to northeastern India (Bengal, Assam), Bangladesh, and southern China; cultivated across the world's tropics.",
+    "uses": [
+      "Spectacular heavy pergola and gazebo vine offering dense green shade and cascading blue flowers",
+      "Traditional poultices from leaves used in folk remedies for snake bites and stomach aches in Assam",
+      "Favorite nectar plant for carpenter bees and large swallowtail butterflies"
+    ],
+    "careTips": [
+      "Requires substantial arbor or metal pergola structure capable of carrying large woody weight",
+      "Thrives in fertile, organically rich, moist but well-drained soil in full sun to partial shade",
+      "Prune hard in late winter or early spring to manage massive vegetative spread"
+    ],
+    "toxicityNote": "NON-TOXIC: Safe around children and domestic pets. No reported human or animal toxicities.",
+    "isToxic": false,
+    "funFact": "Native to the tea-growing hill regions of Bengal and Assam, it can grow up to 20 meters tall into forest canopy trees with tuberous roots that can weigh over 50 kilograms.",
+    "referenceImages": [
+      "/species/121.webp"
+    ],
+    "imageCredit": {
+      "observer": "Chris D Thomas",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610417421/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thunbergia_grandiflora",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "122": {
+    "id": 122,
+    "slug": "antigonon-leptopus",
+    "commonName": "Coral vine",
+    "scientificName": "Antigonon leptopus",
+    "family": "Polygonaceae",
+    "genus": "Antigonon",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "अनंतलता (Anantlata)",
+    "namesBengali": "অনন্তলতা (Anantalata)",
+    "otherNames": [
+      "Chain of love",
+      "Mexican creeper",
+      "Queen's wreath",
+      "Confederate vine"
+    ],
+    "description": "A rapid-growing tendril-climbing perennial vine with arrow-shaped wavy leaves and profusely blooming branched racemes of vivid coral-pink or rose-colored floral clusters that terminate in delicate clinging tendrils.",
+    "identifyingFeatures": [
+      "Arching panicles of dainty, bright coral-pink flowers with petal-like sepals",
+      "Floral branch tips ending in branching, coiled climbing tendrils",
+      "Crinkled, wavy arrow-shaped or heart-shaped (cordate) alternate leaves with prominent reticulate veins",
+      "Underground edible tuberous rootstocks that allow survival through severe dry spells"
+    ],
+    "habitat": "Disturbed urban fences, railway borders, tropical gardens, coastal slopes, and sunny walls.",
+    "distribution": "Native to Mexico and Central America; naturalized and abundant throughout India, Southeast Asia, and Pacific islands.",
+    "uses": [
+      "Popular flowering fence and arbor cover blooming year-round in frost-free tropical gardens",
+      "Major nectar and pollen source for honeybees; produces light aromatic honey",
+      "Traditional tea brewed from aerial parts in Mexican folk medicine for coughs and flu"
+    ],
+    "careTips": [
+      "Thrives in full sun and handles poor, rocky, or sandy soils with high heat tolerance",
+      "Water moderately; highly drought-tolerant once tuberous roots establish",
+      "Cut back severely to ground level in winter or early spring if vine becomes messy or overgrown"
+    ],
+    "toxicityNote": "NON-TOXIC: Tubers are roasted and eaten in rural Mexico. Safe for children and household animals.",
+    "isToxic": false,
+    "funFact": "Referred to as 'Chain of Love' across the Caribbean because each delicate flowering branch ends in a tender heart-shaped spray with climbing tendrils.",
+    "referenceImages": [
+      "/species/122.webp"
+    ],
+    "imageCredit": {
+      "observer": "ssnp133",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604349588/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Antigonon_leptopus",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "123": {
+    "id": 123,
+    "slug": "codiaeum-variegatum",
+    "commonName": "Croton",
+    "scientificName": "Codiaeum variegatum",
+    "family": "Euphorbiaceae",
+    "genus": "Codiaeum",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "क्रोटन (Croton)",
+    "namesBengali": "পাতাবাহার (Patabahar)",
+    "otherNames": [
+      "Garden croton",
+      "Variegated laurel",
+      "Patabahar"
+    ],
+    "description": "A vibrant evergreen tropical shrub renowned worldwide for thick, leathery glossy leaves showcasing an astonishing mosaic of colors including fiery scarlet, amber yellow, bright orange, bronze, and deep forest green.",
+    "identifyingFeatures": [
+      "Thick, leathery, glossy leaves displaying dramatic multicolored patterns (red, yellow, orange, green, purple)",
+      "Enormous diversity in leaf shapes (broad ovate, ribbon-like, twisted spiral, or oak-leaf lobed) across cultivars",
+      "Exudes a clear-to-milky sap when stems or leaves are snapped",
+      "Inconspicuous small white star-like male and female flowers in long axillary racemes"
+    ],
+    "habitat": "Tropical shrub borders, foundation plantings, hotel lobbies, and bright indoor verandas.",
+    "distribution": "Native to Indonesia, Malaysia, Australia, and western Pacific islands; ubiquitous as an ornamental across India.",
+    "uses": [
+      "Top tropical landscape accent shrub providing year-round vibrant color without relying on flowers",
+      "Popular indoor and patio potted specimen for well-lit rooms and corporate atriums",
+      "Traditional hedge planting along boundary fences and pathways"
+    ],
+    "careTips": [
+      "Requires bright indirect light or several hours of direct morning sun to maintain vivid leaf coloration",
+      "Keep soil evenly moist using room-temperature water; avoid letting roots sit in standing saucers",
+      "Maintain high humidity; mist leaves regularly or place over pebble trays in air-conditioned interiors"
+    ],
+    "toxicityNote": "TOXIC: Plant sap contains phorbol esters. Ingestion can cause severe mouth irritation, vomiting, and diarrhea. Sap causes contact eczema and skin rash.",
+    "isToxic": true,
+    "funFact": "In Bengali it is called 'Patabahar' (Joy of Leaves) because its ever-changing multicolored foliage provides the visual impact of an eternal spring garden without flowers.",
+    "referenceImages": [
+      "/species/123.webp"
+    ],
+    "imageCredit": {
+      "observer": "lianne tolentino",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608106908/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Codiaeum_variegatum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "124": {
+    "id": 124,
+    "slug": "syngonium-podophyllum",
+    "commonName": "Arrowhead plant",
+    "scientificName": "Syngonium podophyllum",
+    "family": "Araceae",
+    "genus": "Syngonium",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "ऐरोहेड (Arrowhead)",
+    "namesBengali": "অ্যারোহেড প্ল্যান্ট (Arrowhead plant)",
+    "otherNames": [
+      "Goosefoot vine",
+      "African evergreen",
+      "Nephthytis",
+      "Arrowhead vine"
+    ],
+    "description": "A popular indoor trailing or climbing evergreen aroid characterized by juvenile arrow-shaped leaves with silver, cream, or pink variegation, transforming into multi-lobed leaves as it matures.",
+    "identifyingFeatures": [
+      "Juvenile leaves distinctly arrow-shaped (sagittate) with pale mint-green or silvery-white centers",
+      "Mature leaves dividing into 3 to 5 distinct radiating finger-like leaflets as the vine climbs",
+      "Slender creeping or climbing green stems equipped with aerial roots at each node",
+      "Typical aroid inflorescence of greenish spathes enclosing cream spadices (rare indoors)"
+    ],
+    "habitat": "Tropical rainforest understories, moss poles, hanging baskets, and indoor water propagation jars.",
+    "distribution": "Native to tropical America (Mexico to Bolivia); grown globally as one of the most resilient indoor plants.",
+    "uses": [
+      "Top air-purifying indoor houseplant effective in removing airborne formaldehyde and toluene",
+      "Ideal for hanging baskets, moss-pole climbing displays, and terrarium enclosures",
+      "Can be grown indefinitely in simple glass jars of clean water without soil"
+    ],
+    "careTips": [
+      "Thrives in medium to bright indirect light; tolerates low-light conditions with slower growth",
+      "Water when the top 2–3 cm of potting soil feels dry; reduce frequency during winter",
+      "Provide a coir or moss pole if you want the vine to climb and develop larger mature leaves"
+    ],
+    "toxicityNote": "TOXIC TO PETS: Contains insoluble calcium oxalate crystals. Chewing foliage causes intense mouth irritation, drooling, burning sensations of lips and tongue, and difficulty swallowing.",
+    "isToxic": true,
+    "funFact": "Syngonium undergoes complete leaf metamorphosis: young plants kept in pots remain compact arrowheads, but when allowed to climb a tall tree in the wild, leaves divide into 5–9 large separate leaflets.",
+    "referenceImages": [
+      "/species/124.webp"
+    ],
+    "imageCredit": {
+      "observer": "richmondfarmer",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607547565/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Syngonium_podophyllum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "125": {
+    "id": 125,
+    "slug": "philodendron-hederaceum",
+    "commonName": "Heartleaf philodendron",
+    "scientificName": "Philodendron hederaceum",
+    "family": "Araceae",
+    "genus": "Philodendron",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "फिलोडेंड्रॉन (Philodendron)",
+    "namesBengali": "ফিলোডেন্ড্রন (Philodendron)",
+    "otherNames": [
+      "Sweetheart plant",
+      "Heart-leaf ivy",
+      "Philodendron scandens"
+    ],
+    "description": "An enduring, beginner-friendly indoor climbing or trailing evergreen vine featuring smooth, deep-green, heart-shaped leaves with long pointed tips that cascade gracefully from shelves and baskets.",
+    "identifyingFeatures": [
+      "Perfectly cordate (heart-shaped) glossy leaves with extended tapering pointed tips (drip tips)",
+      "Emerging juvenile leaves often emerge with a distinctive bronze or coppery-pink translucence",
+      "Flexible, slender trailing stems bearing small aerial root nubs at leaf nodes",
+      "Translucent paper-like leaf sheaths (cataphylls) that dry and persist along stems"
+    ],
+    "habitat": "Neotropical humid rainforest canopies, mossy tree trunks, bookshelf planters, and hanging baskets.",
+    "distribution": "Native to Central America and the Caribbean; cultured globally as one of the most widely kept houseplants.",
+    "uses": [
+      "Premier trailing houseplant for office desks, high bookshelves, and macramé hanging planters",
+      "Demonstrated in NASA Clean Air Study to remove indoor air pollutants like formaldehyde",
+      "Excellent for terrariums, vivarium backgrounds, and green vertical living walls"
+    ],
+    "careTips": [
+      "Adaptable to low, medium, or bright indirect light; keep shielded from harsh scorching sun",
+      "Water when top half of potting soil is dry; remarkably forgiving of occasional forgotten watering",
+      "Prune leggy trailing vines just above a node to stimulate dense bushy growth at the crown"
+    ],
+    "toxicityNote": "TOXIC: Contains insoluble needle-like calcium oxalate raphides. Ingestion causes oral pain, burning of lips and tongue, vomiting, and excessive drooling in dogs and cats.",
+    "isToxic": true,
+    "funFact": "The name Philodendron comes from the Greek 'philo-' (love) and 'dendron' (tree), describing its natural passion for clinging lovingly to tropical rainforest tree trunks.",
+    "referenceImages": [
+      "/species/125.webp"
+    ],
+    "imageCredit": {
+      "observer": "Reirei",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605673885/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Philodendron_hederaceum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "126": {
+    "id": 126,
+    "slug": "thaumatophyllum-bipinnatifidum",
+    "commonName": "Tree philodendron",
+    "scientificName": "Thaumatophyllum bipinnatifidum",
+    "family": "Araceae",
+    "genus": "Thaumatophyllum",
+    "plantType": "herb",
+    "origin": "global",
+    "namesHindi": "सेलोम (Selloum)",
+    "namesBengali": "সেলুম (Selloum)",
+    "otherNames": [
+      "Philodendron selloum",
+      "Lacy tree philodendron",
+      "Horsehead philodendron",
+      "Split-leaf philodendron"
+    ],
+    "description": "A magnificent large architectural evergreen aroid featuring massive, deeply incised, wavy-margined glossy leaves and a stout trunk covered in striking eye-like leaf scars and thick aerial roots.",
+    "identifyingFeatures": [
+      "Enormous leathery glossy leaves (up to 1 m long) deeply pinnately lobed with wavy, undulating margins",
+      "Heavy, stout semi-woody trunk marked with distinctive oval eye-shaped drop scars from fallen leaves",
+      "Long, fleshy, rope-like aerial roots anchoring into soil from upper trunk nodes",
+      "Large brownish-purple spathe surrounding a cream-colored spadix that produces metabolic heat during bloom"
+    ],
+    "habitat": "Subtropical forest floors, swamp margins, shady villa courtyards, and large living room corners.",
+    "distribution": "Native to tropical South America (southeastern Brazil, Bolivia, Paraguay, Argentina); popular landscape plant in warm regions.",
+    "uses": [
+      "Dramatic architectural statement plant for tropical landscaping, luxury courtyards, and hotel lobbies",
+      "Effective outdoor shaded ground cover and foundation border in frost-free climates",
+      "Excellent long-lived large container specimen for bright patios and verandas"
+    ],
+    "careTips": [
+      "Give ample floor space to accommodate its wide, spreading sculptural canopy",
+      "Provide bright indirect light or dappled sunlight; tolerates morning sun well",
+      "Keep soil consistently moist during warm months, allowing surface to dry slightly between waterings"
+    ],
+    "toxicityNote": "TOXIC: Contains microscopic calcium oxalate crystals. Chewing cause burning sensation of tongue and throat, vomiting, and swelling of the pharynx in pets.",
+    "isToxic": true,
+    "funFact": "Flowers of Thaumatophyllum can generate their own heat through thermogenesis, heating up to 45°C (113°F) above ambient air to volatilize scents and attract pollinating scarab beetles.",
+    "referenceImages": [
+      "/species/126.webp"
+    ],
+    "imageCredit": {
+      "observer": "mckaydee",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605009148/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Thaumatophyllum_bipinnatifidum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "127": {
+    "id": 127,
+    "slug": "dracaena-fragrans",
+    "commonName": "Corn plant",
+    "scientificName": "Dracaena fragrans",
+    "family": "Asparagaceae",
+    "genus": "Dracaena",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "कॉर्न प्लांट (Corn plant)",
+    "namesBengali": "কর্ন প্ল্যান্ট (Corn plant)",
+    "otherNames": [
+      "False palm",
+      "Happy plant",
+      "Chinese money tree",
+      "Dracaena massangeana"
+    ],
+    "description": "A slow-growing woody evergreen shrub producing thick cane-like stems topped with graceful rosettes of broad, arching glossy green strap leaves, frequently variegated with a central lime-yellow stripe.",
+    "identifyingFeatures": [
+      "Stout woody gray canes (stems) topped with crown clusters of arching sword-shaped leaves",
+      "Broad glossy ribbon leaves with wavy margins, commonly sporting a broad central golden-yellow band ('Massangeana')",
+      "Highly fragrant nocturnal flowers in rounded pom-pom panicles followed by orange berries (rare indoors)",
+      "Upright architectural silhouette ideal for indoor corners"
+    ],
+    "habitat": "Upland tropical rainforests of Africa, shaded understories, office buildings, and living spaces.",
+    "distribution": "Native to tropical Africa (Sudan to Mozambique and Angola); cultivated worldwide as one of the most common houseplants.",
+    "uses": [
+      "Stalwart commercial interior plant favored for corporate offices and home living areas",
+      "High ranking on NASA clean air tests for removal of indoor volatile compounds (xylene, formaldehyde)",
+      "Low-maintenance structural accent for low-light indoor corners"
+    ],
+    "careTips": [
+      "Thrives in medium to bright indirect light; survives surprisingly well in lower-light indoor areas",
+      "Water thoroughly only when the top 50% of potting mix is dry; sensitive to overwatering and fluoride in tap water",
+      "Use filtered or rainwater if leaf tips turn brown due to chlorine and fluoride sensitivity"
+    ],
+    "toxicityNote": "TOXIC TO CATS AND DOGS: Contains steroidal saponins. Ingestion causes vomiting (occasionally with blood), depression, anorexia, hypersalivation, and dilated pupils in cats.",
+    "isToxic": true,
+    "funFact": "Named 'fragrans' (fragrant) because its nocturnal blossoms release an intoxicating sweet jasmine-honey perfume that can fill an entire household.",
+    "referenceImages": [
+      "/species/127.webp"
+    ],
+    "imageCredit": {
+      "observer": "James K. Wetterer",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607536014/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dracaena_fragrans",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "128": {
+    "id": 128,
+    "slug": "dracaena-reflexa",
+    "commonName": "Song of India",
+    "scientificName": "Dracaena reflexa",
+    "family": "Asparagaceae",
+    "genus": "Dracaena",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "सॉन्ग ऑफ इंडिया (Song of India)",
+    "namesBengali": "সং অফ ইন্ডিয়া (Song of India)",
+    "otherNames": [
+      "Pleomele reflexa",
+      "Song of Jamaica",
+      "Reflexed dracaena"
+    ],
+    "description": "A striking architectural evergreen shrub with densely spiraling lance-shaped leaves dramatically edged in bright golden yellow and lime green on irregularly branching woody stems.",
+    "identifyingFeatures": [
+      "Dense, alternating whorls of stiff, pointed lanceolate leaves spiraling around woody stems",
+      "Rich dark-green leaf centers bordered by broad, luminous golden-yellow and cream margins ('Variegata')",
+      "Characteristic reflexed (downward curling) leaf tips giving the foliage a flowing fountain appearance",
+      "Multiple branching woody stems creating a bushy, sculptural silhouette"
+    ],
+    "habitat": "Coastal thickets and tropical forests of Indian Ocean islands; popular in tropical landscape borders and indoor atriums.",
+    "distribution": "Native to Mozambique, Madagascar, Mauritius, and adjacent Indian Ocean islands; cultivated pantropically.",
+    "uses": [
+      "High-end decorative indoor foliage plant that adds bright golden highlights to modern interior designs",
+      "Top-performing outdoor border shrub and hedge in frost-free tropical gardens",
+      "Effective natural indoor air purifier absorbing benzene, toluene, and trichloroethylene"
+    ],
+    "careTips": [
+      "Requires bright indirect sunlight to preserve vivid golden leaf margins; fades to dull green in deep shade",
+      "Allow top 3–4 cm of soil to dry between waterings; avoid standing water in decorative outer pots",
+      "Prune tall branches in spring to stimulate fresh multi-stem bushy growth lower down the canes"
+    ],
+    "toxicityNote": "TOXIC TO PETS: Contains steroidal saponins toxic to dogs and cats. Ingestion results in drooling, vomiting, loss of appetite, and lethargy.",
+    "isToxic": true,
+    "funFact": "Despite its worldwide trade name 'Song of India', this species is not actually native to India, but to Madagascar and the Mascarene Islands of the Indian Ocean.",
+    "referenceImages": [
+      "/species/128.webp"
+    ],
+    "imageCredit": {
+      "observer": "Peter Pannam",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604403515/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dracaena_reflexa",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "129": {
+    "id": 129,
+    "slug": "anthurium-andraeanum",
+    "commonName": "Flamingo flower",
+    "scientificName": "Anthurium andraeanum",
+    "family": "Araceae",
+    "genus": "Anthurium",
+    "plantType": "herb",
+    "origin": "global",
+    "namesHindi": "एन्थ्यूरियम (Anthurium)",
+    "namesBengali": "অ্যান্থুরিয়াম (Anthurium)",
+    "otherNames": [
+      "Painter's palette",
+      "Oilcloth flower",
+      "Tailflower",
+      "Flamingo lily"
+    ],
+    "description": "An exotic epiphytic evergreen tropical perennial celebrated for heart-shaped, glossy patent-leather-like spathes in vivid red, coral, or pink, centered by a slender upright creamy-yellow spadix.",
+    "identifyingFeatures": [
+      "Heart-shaped (cordate) waxy, glossy modified leaf bract (spathe) with a lacquered plastic-like sheen",
+      "Straight, cylindrical, tail-like central floral spike (spadix) carrying hundreds of tiny true flowers",
+      "Deep emerald-green leathery arrow-to-heart-shaped foliage held on long, stiff petioles",
+      "Epiphytic climbing habit producing fleshy aerial roots in humid environments"
+    ],
+    "habitat": "Neotropical montane cloud forests, warm humid shade-houses, and modern indoor living spaces.",
+    "distribution": "Native to southwestern Colombia and northwestern Ecuador; hybridized and cultivated globally.",
+    "uses": [
+      "Premier cut flower celebrated for unrivaled vase life of 4 to 6 weeks in floral arrangements",
+      "Elite flowering houseplant providing continuous blooms practically all year round indoors",
+      "NASA Clean Air Study plant showing high absorption rates of formaldehyde, ammonia, and xylene"
+    ],
+    "careTips": [
+      "Needs bright, warm, filtered indirect light; never expose to direct sun which scorches waxy spathes",
+      "Pot in coarse, highly aerated orchid-bark mix (peat, perlite, bark chunks) to prevent root suffocation",
+      "Keep humidity above 50%; mist foliage or set on humidity trays; water when top inch of bark feels dry"
+    ],
+    "toxicityNote": "TOXIC: Entire plant contains insoluble calcium oxalate needles. Ingestion causes intense burning of mouth and throat, voice loss (aphonia), blistering, and gastric pain.",
+    "isToxic": true,
+    "funFact": "What is commonly called the Anthurium 'flower' is actually a modified leaf called a spathe; the true flowers are microscopic bumps lining the central yellow pencil-like spadix.",
+    "referenceImages": [
+      "/species/129.webp"
+    ],
+    "imageCredit": {
+      "observer": "Ana Carla Bastos",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606966906/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Anthurium_andraeanum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "130": {
+    "id": 130,
+    "slug": "strelitzia-reginae",
+    "commonName": "Bird of paradise",
+    "scientificName": "Strelitzia reginae",
+    "family": "Strelitziaceae",
+    "genus": "Strelitzia",
+    "plantType": "herb",
+    "origin": "global",
+    "namesHindi": "बर्ड ऑफ पैराडाइज (Bird of paradise)",
+    "namesBengali": "বার্ড অব প্যারাডাইস (Bird of paradise)",
+    "otherNames": [
+      "Crane flower",
+      "Strelitzia",
+      "Swallow lily"
+    ],
+    "description": "An iconic architectural evergreen perennial producing stiff, banana-like gray-green leaves and spectacular blossoms resembling the crested head of an exotic tropical crane with fiery orange sepals and vivid purple-blue petals.",
+    "identifyingFeatures": [
+      "Inflorescence emerging from a horizontal, boat-shaped woody spathe (beak) perched atop a tall leafless stalk",
+      "Dramatic floral crest of 3 brilliant orange sepals and 3 electric blue petals resembling an exotic bird plumage",
+      "Clumping habit of long-petioled, paddle-shaped glaucous green leaves resembling small banana leaves",
+      "Hard, round black seeds bearing a bright orange fuzzy aril (seed coat)"
+    ],
+    "habitat": "Coastal thickets, riverine bush, subtropical garden lawns, and sunny greenhouse atriums.",
+    "distribution": "Native to eastern coast of South Africa (KwaZulu-Natal and Eastern Cape); iconic landscape plant worldwide.",
+    "uses": [
+      "World-renowned luxury landscape accent plant and architectural feature for modern estates",
+      "Prestigious cut flower in international floriculture trade lasting weeks in arrangements",
+      "Official city flower of Los Angeles, California"
+    ],
+    "careTips": [
+      "Requires bright sun (4 to 6 hours direct sunlight daily) to produce flowers; will not bloom in dark rooms",
+      "Plant in deep, rich, well-draining soil mix; water deeply during warm season, allowing surface to dry between waterings",
+      "Feed monthly during active spring and summer growth with a balanced liquid fertilizer"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Seeds and fruit contain toxic tannins and unknown alkaloids causing mild vomiting, diarrhea, and drowsiness in dogs and cats if ingested.",
+    "isToxic": true,
+    "funFact": "In nature, the flowers are pollinated by sunbirds that perch on the boat-shaped spathe; their body weight pushes down the blue petals, dusting pollen onto the bird's feet and chest.",
+    "referenceImages": [
+      "/species/130.webp"
+    ],
+    "imageCredit": {
+      "observer": "Eric Wille",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616850384/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Strelitzia_reginae",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "131": {
+    "id": 131,
+    "slug": "tradescantia-zebrina",
+    "commonName": "Wandering dude",
+    "scientificName": "Tradescantia zebrina",
+    "family": "Commelinaceae",
+    "genus": "Tradescantia",
+    "plantType": "herb",
+    "origin": "global",
+    "namesHindi": "ज़ेब्रा स्पाइडरवॉर्ट (Zebra spiderwort)",
+    "namesBengali": "জেব্রিনা (Zebrina)",
+    "otherNames": [
+      "Inch plant",
+      "Silver inch plant",
+      "Zebra plant",
+      "Wandering Jew"
+    ],
+    "description": "A rapid-growing trailing perennial succulent herb featuring ovate leaves striped in glittering metallic silver and olive green on the upper surface, with a rich, uniform magenta-purple underside.",
+    "identifyingFeatures": [
+      "Foliage upper surface marked by two broad glittering silver-white longitudinal bands flanking a green center",
+      "Underside of leaves and succulent stems uniformly colored a rich royal purple or magenta",
+      "Small 3-petaled bright pink-to-magenta flowers appearing sporadically between leaf bracts",
+      "Succulent trailing stems rooting eagerly at every joint or leaf node touching soil"
+    ],
+    "habitat": "Tropical wet forests, rocky riverbanks, indoor hanging baskets, and shady garden borders.",
+    "distribution": "Native to southern Mexico, Central America, and Colombia; grown globally as an effortless trailing houseplant.",
+    "uses": [
+      "Premier hanging basket plant providing cascading ribbons of shimmering purple and silver foliage",
+      "Groundcover for frost-free shaded tropical gardens and understory borders",
+      "One of the easiest plants to propagate in water or soil for novice gardeners"
+    ],
+    "careTips": [
+      "Thrives in bright indirect sunlight; higher light produces deeper purple pigmentation and brighter silver stripes",
+      "Water thoroughly when top 2–3 cm of soil is dry; avoid letting water sit on fuzzy leaf surfaces",
+      "Pinch back stem tips regularly to prevent trailing vines from becoming bare or leggy near the soil"
+    ],
+    "toxicityNote": "MILDLY TOXIC TO PETS: Sap contains microscopic calcium oxalate raphides. Contact causes skin irritation, itching, and redness (contact dermatitis) in cats and dogs.",
+    "isToxic": true,
+    "funFact": "Called 'Inch plant' because the stems grow so fast they seem to gain an inch every few days, and a tiny one-inch stem cutting can root and become a full plant within weeks.",
+    "referenceImages": [
+      "/species/131.webp"
+    ],
+    "imageCredit": {
+      "observer": "ch_zong",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605362482/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tradescantia_zebrina",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "132": {
+    "id": 132,
+    "slug": "ficus-benjamina",
+    "commonName": "Weeping fig",
+    "scientificName": "Ficus benjamina",
+    "family": "Moraceae",
+    "genus": "Ficus",
+    "plantType": "tree",
+    "origin": "both",
+    "namesHindi": "फिकस बेंजामिना (Ficus benjamina)",
+    "namesBengali": "বেনজামিনা ডুমুর (Benjamina dumur)",
+    "otherNames": [
+      "Benjamin fig",
+      "Ficus tree",
+      "Weeping Chinese banyan"
+    ],
+    "description": "An elegant evergreen tree featuring gracefully drooping slender branches laden with dense, glossy, oval pointed leaves, widely cultivated both as a stately outdoor avenue tree and an indoor potted specimen.",
+    "identifyingFeatures": [
+      "Arching, pendulous (weeping) branchlets bearing glossy, leathery pointed oval leaves with an acuminated drip-tip",
+      "Smooth light gray bark on trunk and major branches",
+      "Abundant sticky white milky latex released from any damaged bark, leaf, or twig",
+      "Small round figs (syconia) borne in pairs, ripening from green to orange-red and purple-black"
+    ],
+    "habitat": "Monsoon tropical forests, riverbanks, city parks, residential avenues, and indoor atriums.",
+    "distribution": "Native to India, southern China, Southeast Asia, Malaysia, and northern Australia; planted worldwide.",
+    "uses": [
+      "One of the most famous indoor topiary trees, often grown with intricately braided trunks",
+      "Stately shade and avenue tree across Indian cities providing extensive canopy and bird forage",
+      "Noted effectiveness in NASA clean air trials for removing gaseous formaldehyde and xylene"
+    ],
+    "careTips": [
+      "Requires bright, stable indirect sunlight; sensitive to being moved and may drop leaves if relocated abruptly",
+      "Water when the top 3 cm of soil is dry; reduce watering frequency during cool winter months",
+      "Avoid cold drafts, air conditioning vents, and sudden environmental changes to prevent leaf shed"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Milky latex sap contains ficin and furocoumarins. Can cause skin irritation and rash; ingestion causes gastrointestinal upset, vomiting, and drooling in pets.",
+    "isToxic": true,
+    "funFact": "The weeping fig is the official state tree of Bangkok, Thailand, where gigantic multi-trunked specimens shade temples and canals.",
+    "referenceImages": [
+      "/species/132.webp"
+    ],
+    "imageCredit": {
+      "observer": "Vanessa Sánchez",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605714058/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ficus_benjamina",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "133": {
+    "id": 133,
+    "slug": "asparagus-setaceus",
+    "commonName": "Lace fern",
+    "scientificName": "Asparagus setaceus",
+    "family": "Asparagaceae",
+    "genus": "Asparagus",
+    "plantType": "climber",
+    "origin": "global",
+    "namesHindi": "शतावरी फर्न (Shatavari fern)",
+    "namesBengali": "অ্যাসপারাগাস ফার্ন (Asparagus fern)",
+    "otherNames": [
+      "Common asparagus fern",
+      "Climbing asparagus",
+      "Plumosa fern",
+      "Emerald fern"
+    ],
+    "description": "A delicate, scrambling evergreen perennial climber characterized by feathery, cloud-like horizontal sprays of ultra-fine needle-like modified stems (cladodes) resembling delicate lace.",
+    "identifyingFeatures": [
+      "Flat horizontal triangular tiers of airy, feathery, needle-like green branchlets (cladodes)",
+      "Slender, wiry climbing green stems bearing small backward-pointing sharp spines (modified true leaves)",
+      "Tiny greenish-white bell-shaped flowers borne at the branchlet tips, followed by small round berries turning black",
+      "Fleshy, tuberous root system allowing survival during dry spells"
+    ],
+    "habitat": "Rainforest understories, shaded coastal valleys, floral greenhouse benches, and living room planters.",
+    "distribution": "Native to southern and eastern Africa; cultivated worldwide as an ornamental houseplant and floral filler.",
+    "uses": [
+      "Essential green filler in the global floral arrangement industry, adding ethereal texture to bridal bouquets",
+      "Popular indoor specimen for bookshelves, terrariums, and bathroom window sills",
+      "Trellised climber for shady tropical courtyard walls and sheltered veranda borders"
+    ],
+    "careTips": [
+      "Prefers bright dappled light or soft morning sun; harsh direct sunlight scorches and yellows needle cladodes",
+      "Keep soil evenly moist but never waterlogged; mist frequently to simulate humid rainforest conditions",
+      "Trim yellowing or overgrown wiry canes at the soil line to stimulate fresh emerald fronds from the crown"
+    ],
+    "toxicityNote": "TOXIC TO CATS AND DOGS: Contains sapogenins. Repeated skin contact causes allergic dermatitis; ingestion of the black berries causes gastric pain, vomiting, and diarrhea.",
+    "isToxic": true,
+    "funFact": "Despite its common name 'Lace Fern', this plant is not a true fern at all—it does not reproduce via spores, but is a flowering seed plant belonging to the Asparagus family.",
+    "referenceImages": [
+      "/species/133.webp"
+    ],
+    "imageCredit": {
+      "observer": "Ben Gruhot",
+      "license": "CC-BY",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604980978/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Asparagus_setaceus",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "134": {
+    "id": 134,
+    "slug": "dypsis-lutescens",
+    "commonName": "Golden cane palm",
+    "scientificName": "Dypsis lutescens",
+    "family": "Arecaceae",
+    "genus": "Dypsis",
+    "plantType": "tree",
+    "origin": "global",
+    "namesHindi": "अरेका पाम (Areca palm)",
+    "namesBengali": "আরেকা পাম (Areca palm)",
+    "otherNames": [
+      "Areca palm",
+      "Yellow butterfly palm",
+      "Bamboo palm",
+      "Chrysalidocarpus lutescens"
+    ],
+    "description": "A graceful clumping multi-stemmed feather palm with golden-yellow petioles, slender bamboo-like canes, and arching feathery fronds, celebrated as one of the world's most popular indoor and landscape palms.",
+    "identifyingFeatures": [
+      "Multiple clustering slender, ringed bamboo-like green canes rising in a tight vase-shaped clump",
+      "Gracefully arching feather fronds (pinnate) with 80 to 100 narrow, lanceolate leaflets",
+      "Distinctive golden-yellow to orange-yellow coloring on petioles and crownshaft sheaths",
+      "Panicles of small yellow flowers followed by small yellow-to-purple oval fruits"
+    ],
+    "habitat": "Coastal sand dunes, tropical riverbanks, hotel atriums, garden lawns, and indoor office courtyards.",
+    "distribution": "Native to eastern Madagascar; cultivated universally across tropical, subtropical, and indoor locations globally.",
+    "uses": [
+      "Foremost indoor potted palm worldwide, celebrated for naturalizing interior architecture with lush tropical grace",
+      "Top-ranked plant in NASA clean air research for humidifying dry indoor air and absorbing airborne toxics",
+      "Excellent dense outdoor privacy screen and tropical boundary hedge in warm climates"
+    ],
+    "careTips": [
+      "Thrives in bright indirect light; can tolerate mild morning sun outdoors, but avoid scorching afternoon rays",
+      "Water when top 2–3 cm of potting soil dries out; ensure planter drainage holes are completely clear",
+      "Flush potting soil occasionally with distilled or rainwater to prevent brown leaf tips caused by fluoride and mineral salts"
+    ],
+    "toxicityNote": "NON-TOXIC: Completely safe and non-toxic to dogs, cats, and humans. Certified pet-friendly houseplant.",
+    "isToxic": false,
+    "funFact": "While endangered in its native wild riverbank habitats of Madagascar, it has become one of the most commercially propagated plants on planet Earth with millions grown annually in nurseries.",
+    "referenceImages": [
+      "/species/134.webp"
+    ],
+    "imageCredit": {
+      "observer": "Karen McCabe",
+      "license": "CC0",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604561585/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Dypsis_lutescens",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "135": {
+    "id": 135,
+    "slug": "zantedeschia-aethiopica",
+    "commonName": "Calla lily",
+    "scientificName": "Zantedeschia aethiopica",
+    "family": "Araceae",
+    "genus": "Zantedeschia",
+    "plantType": "herb",
+    "origin": "global",
+    "namesHindi": "काला लिली (Calla lily)",
+    "namesBengali": "কালা লিলি (Calla lily)",
+    "otherNames": [
+      "Arum lily",
+      "White calla",
+      "Lily of the Nile",
+      "Trumpet lily"
+    ],
+    "description": "A majestic clumping semi-evergreen perennial herb with glossy arrow-shaped leaves and pure-white trumpet-shaped funnel spathes enclosing a bright golden spadix.",
+    "identifyingFeatures": [
+      "Pristine, creamy-white funnel-shaped floral spathe with a gentle flare and recurved tip",
+      "Central upright, bright yellow-orange cylindrical spadix covered in tiny true blossoms",
+      "Large, lush arrow-to-heart-shaped (sagittate) emerald-green leaves on long fleshy spongy stems",
+      "Thick underground rhizomatous tuberous root system"
+    ],
+    "habitat": "Stream margins, marshy meadows, garden water features, damp ditches, and cool conservatory beds.",
+    "distribution": "Native to southern Africa (Lesotho, South Africa, Eswatini); naturalized on multiple continents.",
+    "uses": [
+      "Iconic wedding flower and floral arrangement centerpiece symbolizing purity and timeless sophistication",
+      "Stunning marginal aquatic accent for garden ponds, water features, and damp bog gardens",
+      "Container patio display for spring and summer blooming"
+    ],
+    "careTips": [
+      "Enjoys full sun in cool climates, or morning sun with afternoon shade in hot tropical regions",
+      "Requires abundant moisture; thrives with soil kept consistently moist or standing in shallow pond water margins",
+      "Protect rhizomes from heavy freezing frost; mulch well in winter or store dormant tubers indoors"
+    ],
+    "toxicityNote": "TOXIC: Contains sharp insoluble calcium oxalate crystals. Ingestion produces immediate burning of lips, tongue, and throat, vomiting, difficulty swallowing, and excessive drooling in animals.",
+    "isToxic": true,
+    "funFact": "The calla lily is neither a true lily (Liliaceae) nor a calla; Swedish botanist Carl Linnaeus placed it in the genus Calla, but it was later moved to Zantedeschia, named in honor of Italian botanist Giovanni Zantedeschi.",
+    "referenceImages": [
+      "/species/135.webp"
+    ],
+    "imageCredit": {
+      "observer": "asm25",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605730161/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Zantedeschia_aethiopica",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "136": {
+    "id": 136,
+    "slug": "platycladus-orientalis",
+    "commonName": "Morpankhi",
+    "scientificName": "Platycladus orientalis",
+    "family": "Cupressaceae",
+    "genus": "Platycladus",
+    "plantType": "tree",
+    "origin": "both",
+    "namesHindi": "मोरपंखी (Morpankhi)",
+    "namesBengali": "মোরপাখা (Morpakha)",
+    "otherNames": [
+      "Oriental arborvitae",
+      "Thuja orientalis",
+      "Biota orientalis",
+      "Chinese thuja"
+    ],
+    "description": "An evergreen coniferous tree or large conical shrub revered in Indian gardens, characterized by dense, vertical, fan-like planar sprays of bright green scale-like foliage resembling the feathers of a peacock.",
+    "identifyingFeatures": [
+      "Branchlets arranged in distinctive flat, vertical, fan-shaped planar sprays",
+      "Tiny, overlapping scale-like leaves with a gland along the back, emitting a resinous aroma when bruised",
+      "Ovoid-globular fleshy cones (1.5–2.5 cm) ripening from glaucous blue-green to woody brown with recurved horn-like scales",
+      "Neat, formal conical to columnar crown habit with reddish-brown fibrous shredding bark"
+    ],
+    "habitat": "Temple courtyards, residential front gardens, formal hedges, rocky limestone hills, and bonsai collections.",
+    "distribution": "Native to northwestern China, Korea, and eastern Russia; widely planted across India, Central Asia, and warm temperate zones.",
+    "uses": [
+      "Auspicious residential garden tree in India, traditionally associated with wisdom and placed in schoolbooks for good luck",
+      "Popular formal hedge, topiary, and living boundary screen due to its dense, neat vertical foliage",
+      "Important herb in Traditional Chinese Medicine (Baizi / Ce Bai Ye) for promoting hair health and calming nerves"
+    ],
+    "careTips": [
+      "Plant in full sun for tightest foliage density and richest green coloration; tolerates light shade",
+      "Thrives in well-drained, moderately fertile soil; extremely tolerant of alkaline limestone soils and urban smog",
+      "Drought-hardy once established; avoid poorly drained clay where stagnant water can cause root rot"
+    ],
+    "toxicityNote": "NON-TOXIC to humans under normal landscape exposure. Foliage contains thujone essential oils that may cause mild digestive discomfort in pets if chewed in large amounts.",
+    "isToxic": false,
+    "funFact": "Across northern and central India, school children traditionally tuck Morpankhi leaf sprays inside textbook pages, affectionately believing it sharpens memory and exam performance.",
+    "referenceImages": [
+      "/species/136.webp"
+    ],
+    "imageCredit": {
+      "observer": "Jacques HALLOT",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/611935972/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Platycladus",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "137": {
+    "id": 137,
+    "slug": "plumeria-pudica",
+    "commonName": "Nag Champa",
+    "scientificName": "Plumeria pudica",
+    "family": "Apocynaceae",
+    "genus": "Plumeria",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "नाग चम्पा (Nag Champa)",
+    "namesBengali": "নাগ চম্পা (Nag Champa)",
+    "otherNames": [
+      "Bridal bouquet",
+      "White frangipani",
+      "Fiddle-leaf plumeria",
+      "Wild plumeria"
+    ],
+    "description": "A profusely blooming tropical evergreen shrub characterized by unique spoon-shaped or fiddle-shaped leaves and dense bouquets of pristine snow-white flowers with bright yellow centers, retaining foliage year-round.",
+    "identifyingFeatures": [
+      "Distinctive fiddle-shaped or spoon-shaped leaves with narrow bases and flared, lobed tips",
+      "Dense terminal clusters of pure white 5-petaled flowers with a small yellow eye, largely unscented",
+      "Evergreen or semi-evergreen habit, retaining foliage much longer into winter than Plumeria rubra",
+      "Smooth grayish-green succulent stems exuding milky white latex when cut"
+    ],
+    "habitat": "Tropical residential gardens, median strips, temple courtyards, and container patio displays.",
+    "distribution": "Native to Colombia, Panama, and Venezuela; massively popular and cultivated across India, Thailand, and the tropics.",
+    "uses": [
+      "One of the best landscape shrubs for continuous, non-stop white floral displays throughout the year in India",
+      "Popular ornamental shrub for residential entranceways and temple gardens",
+      "Used for floral garlands, altar offerings, and floating bowl decorations"
+    ],
+    "careTips": [
+      "Requires full tropical sun (at least 6 hours daily) for maximum flowering performance",
+      "Water moderately; allow the soil to dry out between waterings to prevent root and stem rot",
+      "Prune lightly to shape and encourage multiple flowering branch tips"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Like all members of the Apocynaceae family, the white milky latex sap can irritate skin and eyes. Ingestion causes stomach upset in pets.",
+    "isToxic": true,
+    "funFact": "Known as 'Nag Champa' in India because the unusual flared shape of its leaf apex closely resembles the expanded hood of a cobra (Nag).",
+    "referenceImages": [
+      "/species/137.webp"
+    ],
+    "imageCredit": {
+      "observer": "Gabriel Andrade",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609746082/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Plumeria_pudica",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "138": {
+    "id": 138,
+    "slug": "tabernaemontana-divaricata",
+    "commonName": "Crape jasmine",
+    "scientificName": "Tabernaemontana divaricata",
+    "family": "Apocynaceae",
+    "genus": "Tabernaemontana",
+    "plantType": "shrub",
+    "origin": "indian",
+    "namesHindi": "चाँदनी (Chandni)",
+    "namesBengali": "তগর (Tagar)",
+    "otherNames": [
+      "Pinwheel flower",
+      "East Indian rosebay",
+      "Nandi vardhanam",
+      "Chandni",
+      "Tagar"
+    ],
+    "description": "A beautiful evergreen flowering shrub native to India, renowned for glossy dark-green leaves and dazzling snow-white 5-lobed pinwheel blossoms that glow luminous in the moonlight.",
+    "identifyingFeatures": [
+      "Pure white 5-lobed corolla with lobes curving or twisted like a children's pinwheel toy",
+      "Glossy, deep-green elliptic-oblong opposite leaves with prominent arched veins",
+      "Dichotomously branching stems exuding a white milky latex when snapped",
+      "Fragrant blossoms, especially in the evening and during warm monsoon nights"
+    ],
+    "habitat": "Home gardens, sacred temple groves, public parks, road dividers, and tropical shrub borders.",
+    "distribution": "Native to India, Bangladesh, Nepal, and Southeast Asia; widely cultivated across tropical regions.",
+    "uses": [
+      "Sacred flowering shrub across India, flowers widely plucked for daily puja and temple worship",
+      "Traditional Ayurvedic remedies utilize milky latex for eye inflammation and root decoctions for toothache",
+      "Standard landscaping hedge and foundation planting providing dependable white blooms year-round"
+    ],
+    "careTips": [
+      "Thrives in full sun to partial afternoon shade; requires at least 4 hours of sun for rich blooming",
+      "Maintain consistently moist, organically rich, well-draining soil",
+      "Prune after the monsoon flowering flush to maintain a compact, bushy rounded shrub"
+    ],
+    "toxicityNote": "MILDLY TOXIC: All plant parts contain indole alkaloids (coronaridine, voacangine). The white latex can cause eye irritation; ingestion causes nausea and vomiting in pets.",
+    "isToxic": true,
+    "funFact": "In Hindi it is poetically called 'Chandni' (Moonlight) because its radiant white pinwheel blossoms appear to shine like scattered stars under a full moon.",
+    "referenceImages": [
+      "/species/138.webp"
+    ],
+    "imageCredit": {
+      "observer": "daniel_oleander",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610295100/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tabernaemontana_divaricata",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "139": {
+    "id": 139,
+    "slug": "tecoma-stans",
+    "commonName": "Yellow bells",
+    "scientificName": "Tecoma stans",
+    "family": "Bignoniaceae",
+    "genus": "Tecoma",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "पीली घंटी (Peeli ghanti)",
+    "namesBengali": "হলুদ ঘণ্টা (Holud ghonta)",
+    "otherNames": [
+      "Yellow trumpetbush",
+      "Yellow elder",
+      "Ginger-thomas",
+      "Esperanza"
+    ],
+    "description": "A fast-growing, sun-loving ornamental shrub or small tree bearing dense terminal clusters of luminous golden-yellow trumpet-shaped blossoms with subtle orange-red throat markings and serrated pinnate foliage.",
+    "identifyingFeatures": [
+      "Large clusters of brilliant golden-yellow bell-to-trumpet flowers with faint red interior throat guidelines",
+      "Opposite pinnately compound leaves with 5 to 13 sharply serrated (toothed) lanceolate leaflets",
+      "Long, slender dangling bean-like brown seed capsules (10–20 cm) containing winged seeds",
+      "Upright branching woody shrub habit reaching 4–6 meters if left unpruned"
+    ],
+    "habitat": "Roadside verges, highway dividers, urban park borders, dry rocky slopes, and home gardens.",
+    "distribution": "Native to the Americas (Texas and Florida to Argentina); naturalized and widespread in urban areas across India.",
+    "uses": [
+      "One of the most resilient and drought-hardy street landscaping plants, extensively planted on urban highway medians",
+      "Continuous nectar and pollen buffet for honeybees, bumblebees, sunbirds, and butterflies",
+      "Traditional Mexican herbal remedies use leaf teas for managing diabetes (tecomine alkaloid)"
+    ],
+    "careTips": [
+      "Requires full, blazing sun for heavy flowering; flowers poorly in shade",
+      "Extremely drought-tolerant once established; water only when the topsoil is completely dry",
+      "Prune spent flower clusters and dangling seed pods to stimulate rapid re-blooming"
+    ],
+    "toxicityNote": "NON-TOXIC to humans under normal landscape handling. Contains alkaloids that may cause mild stomach upset if foliage is eaten by livestock in huge quantities.",
+    "isToxic": false,
+    "funFact": "Tecoma stans is the official national flower of the Bahamas and the official floral emblem of the United States Virgin Islands.",
+    "referenceImages": [
+      "/species/139.webp"
+    ],
+    "imageCredit": {
+      "observer": "Claire Buxton",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610303766/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Tecoma_stans",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "140": {
+    "id": 140,
+    "slug": "adenium-obesum",
+    "commonName": "Desert rose",
+    "scientificName": "Adenium obesum",
+    "family": "Apocynaceae",
+    "genus": "Adenium",
+    "plantType": "succulent",
+    "origin": "global",
+    "namesHindi": "डेजर्ट रोज (Desert rose)",
+    "namesBengali": "মরু গোলাপ (Moru golap)",
+    "otherNames": [
+      "Desert azalea",
+      "Impala lily",
+      "Sabi star",
+      "Mock azalea"
+    ],
+    "description": "A striking succulent shrub featuring a swollen, sculpted basal water-storage trunk (caudex) resembling a natural bonsai, topped with spirals of glossy leathery leaves and flamboyant trumpet flowers in shades of pink, red, and white.",
+    "identifyingFeatures": [
+      "Massively swollen, grotesque or sculptured succulent basal stem (caudex) storing water",
+      "Vivid 5-lobed bell-shaped flowers in red, rose-pink, or white, often with contrasting margins or centers",
+      "Glossy, leathery spiraling oblanceolate leaves clustered at the branch tips",
+      "Stout fleshy branches exuding a clear or milky sap when broken"
+    ],
+    "habitat": "Arid scrublands, rocky desert hillsides, succulent container gardens, and balcony collections.",
+    "distribution": "Native to the Sahel region of Africa (Mauritania to Somalia) and Arabian Peninsula; prized globally by succulent hobbyists.",
+    "uses": [
+      "One of the world's most prized flowering succulent bonsai plants, sculpted into unique living art forms",
+      "High-heat tolerant container plant for sunny balconies, terraces, and desert landscapes",
+      "Historical use of concentrated sap as an arrow poison by traditional hunters in Africa"
+    ],
+    "careTips": [
+      "Requires full intense sunlight (at least 6 hours daily); insufficient light prevents blooming and weakens the caudex",
+      "Plant in an ultra-porous cactus potting mix (gravel, perlite, coarse sand, and pumice)",
+      "Water thoroughly in summer only when soil is bone dry; reduce watering almost completely during winter dormancy"
+    ],
+    "toxicityNote": "HIGHLY TOXIC: The sap contains potent cardiac glycosides (including ouabain). Ingestion causes severe cardiac arrhythmias, vomiting, diarrhea, and can be fatal to pets.",
+    "isToxic": true,
+    "funFact": "In indigenous African tribal hunting, the toxic sap was boiled down to create a lethal arrow poison used to bring down large game like antelopes and elephants.",
+    "referenceImages": [
+      "/species/140.webp"
+    ],
+    "imageCredit": {
+      "observer": "mathias_dezetter",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610914765/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Adenium_obesum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "141": {
+    "id": 141,
+    "slug": "cestrum-nocturnum",
+    "commonName": "Night-blooming jasmine",
+    "scientificName": "Cestrum nocturnum",
+    "family": "Solanaceae",
+    "genus": "Cestrum",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "रात की रानी (Raat ki rani)",
+    "namesBengali": "হাসনুহানা (Hasnuhana)",
+    "otherNames": [
+      "Lady of the night",
+      "Queen of the night",
+      "Raat ki rani",
+      "Hasnuhana"
+    ],
+    "description": "A sprawling woody evergreen shrub celebrated across South Asia for slender tubular greenish-white flowers that open after sunset to release an overwhelming, intoxicatingly sweet nocturnal fragrance that can drift hundreds of meters.",
+    "identifyingFeatures": [
+      "Clusters of slender, tubular greenish-white to pale cream flowers that open exclusively at night",
+      "Intense, pervasive sweet perfume released after dusk that fills the surrounding night air",
+      "Smooth, lanceolate alternate glossy green leaves with entire margins",
+      "Small globular white berries containing toxic seeds"
+    ],
+    "habitat": "Residential gardens, courtyard corners, near bedroom windows, and park borders.",
+    "distribution": "Native to the West Indies and Central America; deeply naturalized and ubiquitous across India and South Asia.",
+    "uses": [
+      "Renowned fragrant garden shrub traditionally planted near bedroom verandas and courtyard sitting areas",
+      "Night pollinators feast: magnetically attracts hawkmoths, sphinx moths, and nocturnal insects",
+      "Popular ornamental shrub for tropical and subtropical border plantings"
+    ],
+    "careTips": [
+      "Plant in full sun to partial shade in well-draining garden soil",
+      "Provide regular watering during warm growing months; mulch to keep root zone cool",
+      "Prune back heavily after flowering flushes to prevent lanky growth and encourage fresh flowering stems"
+    ],
+    "toxicityNote": "TOXIC: All parts of the plant—especially the white berries—contain solanine and atropine-like alkaloids. Ingestion causes fever, rapid pulse, dizziness, hallucinations, and vomiting.",
+    "isToxic": true,
+    "funFact": "Despite its common Hindi name 'Raat ki Rani' and English name 'Night-blooming Jasmine', it is not a true jasmine (Oleaceae) but a member of the nightshade family (Solanaceae), closely related to tomatoes and potatoes.",
+    "referenceImages": [
+      "/species/141.webp"
+    ],
+    "imageCredit": {
+      "observer": "Digvijay",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/609089201/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Cestrum_nocturnum",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "142": {
+    "id": 142,
+    "slug": "portulaca-grandiflora",
+    "commonName": "Moss rose",
+    "scientificName": "Portulaca grandiflora",
+    "family": "Portulacaceae",
+    "genus": "Portulaca",
+    "plantType": "succulent",
+    "origin": "global",
+    "namesHindi": "नौबजिया (Nau bajiya)",
+    "namesBengali": "ন'টার ফুল (Notar phul)",
+    "otherNames": [
+      "10 o'clock flower",
+      "Sun rose",
+      "Rose moss",
+      "Purslane"
+    ],
+    "description": "A low-growing, sun-worshipping succulent annual ground cover with cylindrical fleshy leaves and brilliant rose-like blossoms in dazzling shades of magenta, red, orange, yellow, and white that open wide under bright morning sun.",
+    "identifyingFeatures": [
+      "Showy cup-shaped or rose-like ruffled flowers in dazzling colors that open in morning sunlight and close by late afternoon",
+      "Fleshy, cylindrical (terete) needle-like succulent leaves arranged alternately along reddish stems",
+      "Low-creeping, mat-forming habit rarely exceeding 15 cm in height",
+      "Small cup-shaped capsule containing tiny, iridescent metallic black seeds"
+    ],
+    "habitat": "Sunny rock gardens, balcony planters, edge borders, hanging baskets, and sandy dry soil.",
+    "distribution": "Native to Argentina, southern Brazil, and Uruguay; grown universally in warm climates around the globe.",
+    "uses": [
+      "Exceptional heat-tolerant annual carpet bedding for blazing sunny borders and rockeries",
+      "Ideal for shallow balcony bowls, hanging baskets, and rooftop garden containers",
+      "Provides vital morning nectar for small solitary bees, honeybees, and skippers"
+    ],
+    "careTips": [
+      "Requires absolute full sun; flowers will not open properly on cloudy days or in shaded locations",
+      "Prefers lean, gritty, well-draining sandy soil; over-fertilizing causes lush foliage with few flowers",
+      "Water sparingly; extremely drought-tolerant and susceptible to stem rot if over-watered"
+    ],
+    "toxicityNote": "MILDLY TOXIC TO PETS: Contains soluble calcium oxalates. Ingestion in significant amounts can cause drooling, vomiting, and tremors in cats and dogs.",
+    "isToxic": true,
+    "funFact": "Known widely across India as 'Nau Bajiya' (9 o'clock) or 'Das Bajiya' (10 o'clock) because its flowers open with clockwork precision as soon as the morning sun strikes the petals.",
+    "referenceImages": [
+      "/species/142.webp"
+    ],
+    "imageCredit": {
+      "observer": "diana_selenelr",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606482371/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Portulaca_grandiflora",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "143": {
+    "id": 143,
+    "slug": "coleus-scutellarioides",
+    "commonName": "Coleus",
+    "scientificName": "Coleus scutellarioides",
+    "family": "Lamiaceae",
+    "genus": "Coleus",
+    "plantType": "herb",
+    "origin": "both",
+    "namesHindi": "कोलियस (Coleus)",
+    "namesBengali": "কোলিয়াস (Coleus)",
+    "otherNames": [
+      "Painted nettle",
+      "Flame nettle",
+      "Plectranthus scutellarioides",
+      "Solenostemon scutellarioides"
+    ],
+    "description": "A beloved bushy herbaceous perennial celebrated for its electrifying, kaleidoscopic velvet-textured leaves combining vivid shades of magenta, chartreuse, lime green, burgundy, copper, and cream.",
+    "identifyingFeatures": [
+      "Square, succulent four-angled stems typical of the mint family (Lamiaceae)",
+      "Opposite ovate leaves with serrated margins, displaying kaleidoscopic multicolored color patterns",
+      "Velvety soft leaf texture with contrasting colored margins or center blotches",
+      "Upright terminal spikes of tiny two-lipped pale blue to purple flowers"
+    ],
+    "habitat": "Tropical forest borders, garden flower beds, balcony containers, and bright indoor spaces.",
+    "distribution": "Native to Southeast Asia through Australia; cultivated worldwide as one of the most diverse foliage plants.",
+    "uses": [
+      "Top bedding and container plant offering continuous explosive color without depending on blooms",
+      "Popular houseplant for bright windowsills, living walls, and plant arrangements",
+      "Effortless water propagation: stem cuttings root in water within a few days"
+    ],
+    "careTips": [
+      "Enjoys bright indirect sunlight or gentle morning sun; harsh hot sun can scorch leaves or bleach colors",
+      "Keep soil consistently moist but never soggy; wilts dramatically when thirsty but recovers quickly upon watering",
+      "Pinch off flower spikes as they appear to redirect plant energy toward dense, colorful leaf production"
+    ],
+    "toxicityNote": "MILDLY TOXIC TO PETS: Contains essential oils and diterpenes. Can cause mild vomiting, diarrhea, and lethargy if chewed by dogs or cats.",
+    "isToxic": true,
+    "funFact": "Coleus exhibits one of the most diverse arrays of leaf color variations in the entire plant kingdom, with hundreds of named varieties created through centuries of botanical breeding.",
+    "referenceImages": [
+      "/species/143.webp"
+    ],
+    "imageCredit": {
+      "observer": "verbautista",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610612196/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Coleus_scutellarioides",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "144": {
+    "id": 144,
+    "slug": "acalypha-wilkesiana",
+    "commonName": "Copperleaf",
+    "scientificName": "Acalypha wilkesiana",
+    "family": "Euphorbiaceae",
+    "genus": "Acalypha",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "ताँबा पत्ता (Tamba patta)",
+    "namesBengali": "লাল পাতা (Lal patta)",
+    "otherNames": [
+      "Jacob's coat",
+      "Beefsteak plant",
+      "Fijian fire plant",
+      "Copperleaf plant"
+    ],
+    "description": "A fast-growing evergreen tropical shrub boasting large, heart-shaped serrated leaves splashed with an eye-catching blend of coppery green, bronze, fiery red, rose-pink, and creamy white margins.",
+    "identifyingFeatures": [
+      "Broadly ovate, coarsely toothed leaves with an iridescent coppery-red, bronze, or crimson mottled coloration",
+      "Inconspicuous, drooping catkin-like spikes of tiny reddish flowers hidden among foliage",
+      "Erect, bushy branching woody shrub habit reaching 2 to 3 meters in height",
+      "Foliage color intensifies in full sun and warmer temperatures"
+    ],
+    "habitat": "Tropical shrub borders, residential foundation plantings, park hedges, and coastal landscapes.",
+    "distribution": "Native to Fiji and adjacent South Pacific islands; widely grown as a hedging shrub across the tropics.",
+    "uses": [
+      "Top-tier hedging and border shrub providing continuous vibrant coppery-crimson foliage",
+      "Accent specimen for tropical and subtropical landscaping",
+      "Traditional Polynesian folk medicine used leaf decoctions for soothing skin dermatoses"
+    ],
+    "careTips": [
+      "Plant in full sun to partial shade; full sun produces the richest, most vibrant foliage colors",
+      "Water regularly to keep soil moist; benefits from organic mulching around the root zone",
+      "Prune back in early spring to encourage dense branching and lush new brightly colored shoots"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Sap can cause mild skin irritation and redness. Ingestion may cause mild gastrointestinal upset in household pets.",
+    "isToxic": true,
+    "funFact": "Named in honor of Admiral Charles Wilkes (1798–1877), the American naval officer and explorer who commanded the historic United States Exploring Expedition to the South Pacific.",
+    "referenceImages": [
+      "/species/144.webp"
+    ],
+    "imageCredit": {
+      "observer": "Mike Dikamba",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606510910/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Acalypha_wilkesiana",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "145": {
+    "id": 145,
+    "slug": "euphorbia-milii",
+    "commonName": "Crown of thorns",
+    "scientificName": "Euphorbia milii",
+    "family": "Euphorbiaceae",
+    "genus": "Euphorbia",
+    "plantType": "succulent",
+    "origin": "global",
+    "namesHindi": "कांटों का ताज (Kanton ka taaj)",
+    "namesBengali": "কাঁটা মুকুট (Kanta mukut)",
+    "otherNames": [
+      "Christ plant",
+      "Christ thorn",
+      "Corona de Cristo"
+    ],
+    "description": "A spiny, drought-hardy semi-succulent shrub bearing sharp woody thorns, obovate bright green leaves, and long-lasting pairs of vivid petal-like floral bracts (cyathia) in brilliant scarlet, pink, or yellow.",
+    "identifyingFeatures": [
+      "Dense, sharp straight woody spines (up to 3 cm long) covering stout, grooved gray-brown succulent stems",
+      "Pairs of bright petal-like modified bracts (cyathia) in crimson red, salmon, or yellow surrounding tiny true flowers",
+      "Tear-drop shaped obovate green leaves clustered predominantly near stem tips",
+      "Copious poisonous white milky latex exuded whenever any stem, leaf, or spine is damaged"
+    ],
+    "habitat": "Rocky granite slopes, arid scrublands, balcony containers, rockeries, and security hedges.",
+    "distribution": "Native to Madagascar; cultured globally as a virtually indestructible flowering succulent.",
+    "uses": [
+      "Outstanding flowering succulent for full-sun containers, desert landscapes, and sunny balconies",
+      "Virtually year-round continuous blooming in frost-free tropical environments",
+      "Planted as an impenetrable thorny barrier hedge along property boundaries"
+    ],
+    "careTips": [
+      "Requires full direct sunlight (at least 4–6 hours daily) for profuse, vibrant flowering",
+      "Plant in fast-draining cactus and succulent mix; water thoroughly only when soil is completely dry",
+      "Wear protective gloves when pruning to avoid contact with the caustic, skin-blistering white milky sap"
+    ],
+    "toxicityNote": "HIGHLY TOXIC: The milky sap contains caustic phorbol esters. Contact causes intense skin burning, blistering, and temporary blindness if rubbed into eyes. Ingestion causes severe burning of mouth and stomach.",
+    "isToxic": true,
+    "funFact": "Legend claims that the thorny branches of this Madagascan succulent were used to weave the crown of thorns placed on Jesus Christ during the Crucifixion, giving rise to its enduring common name.",
+    "referenceImages": [
+      "/species/145.webp"
+    ],
+    "imageCredit": {
+      "observer": "bottanydot",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610229488/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Euphorbia_milii",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "146": {
+    "id": 146,
+    "slug": "plumbago-auriculata",
+    "commonName": "Blue plumbago",
+    "scientificName": "Plumbago auriculata",
+    "family": "Plumbaginaceae",
+    "genus": "Plumbago",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "नीलचित्रक (Neelchitrak)",
+    "namesBengali": "নীল চিত্রক (Neel chitrak)",
+    "otherNames": [
+      "Cape leadwort",
+      "Cape plumbago",
+      "Sky flower",
+      "Neelchitrak"
+    ],
+    "description": "A sprawling evergreen scrambling shrub celebrated for profuse, rounded trusses of delicate phlox-like sky-blue or baby-blue flowers that bloom almost continuously through warm weather.",
+    "identifyingFeatures": [
+      "Spherical clusters of 5-petaled sky-blue flowers (rarely white) with a slender floral tube",
+      "Floral calyces covered in sticky, gland-tipped hairs that catch on clothing and animal fur",
+      "Alternate, oblong-spathulate bright green leaves with small ear-like stipules (auricles) at petiole bases",
+      "Sprawling, arching woody stems capable of scrambling up fences or spilling over retaining walls"
+    ],
+    "habitat": "Coastal scrub, dry hillsides, garden borders, retaining walls, and sunny balconies.",
+    "distribution": "Native to South Africa; widely cultivated and naturalized across India and warm regions globally.",
+    "uses": [
+      "Premier blue-flowering landscape shrub for sunny banks, retaining walls, and cascading hedges",
+      "One of the few reliable sources of true sky-blue floral coloration in tropical horticulture",
+      "Larval host plant for the common zebra blue butterfly (Leptotes plinius)"
+    ],
+    "careTips": [
+      "Thrives in full blazing sun; flowering decreases noticeably in shady positions",
+      "Extremely heat and drought-tolerant once established in well-draining garden soil",
+      "Prune hard in late winter or early spring to remove woody tangles and stimulate energetic new blooming shoots"
+    ],
+    "toxicityNote": "MILDLY TOXIC: Sap contains plumbagin, which can cause skin irritation, blistering, and dermatitis upon prolonged contact. Ingestion causes nausea.",
+    "isToxic": true,
+    "funFact": "The sticky glandular hairs on the calyces trap small insects, a trait historically thought to protect developing seeds or represent proto-carnivorous behavior.",
+    "referenceImages": [
+      "/species/146.webp"
+    ],
+    "imageCredit": {
+      "observer": "Sascha Packheiser",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605643194/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Plumbago_auriculata",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "147": {
+    "id": 147,
+    "slug": "calotropis-gigantea",
+    "commonName": "Crown flower",
+    "scientificName": "Calotropis gigantea",
+    "family": "Apocynaceae",
+    "genus": "Calotropis",
+    "plantType": "shrub",
+    "origin": "indian",
+    "namesHindi": "मदार (Madar)",
+    "namesBengali": "আকন্দ (Akanda)",
+    "otherNames": [
+      "Giant milkweed",
+      "Aak",
+      "Madar",
+      "Akanda",
+      "Bowstring hemp"
+    ],
+    "description": "A tough, drought-resilient large evergreen shrub native to India, renowned for thick waxy leaves covered in white woolly pubescence and extraordinary crown-like lilac-purple or white flowers sacred in Hindu rituals.",
+    "identifyingFeatures": [
+      "Unique star-shaped flowers with a prominent raised central five-pointed crown (corona) in lilac, lavender, or white",
+      "Large, thick, leathery obovate-oblong leaves with a glaucous blue-green tint and fine white downy coating",
+      "Stems and leaves exude a copious, highly irritating white milky latex when bruised",
+      "Boat-shaped curved, inflated follicle pods that split open to release seeds attached to silky white tufts"
+    ],
+    "habitat": "Arid wasteland, sandy coastal dunes, roadside ditches, dry scrublands, and sacred temple grounds.",
+    "distribution": "Native to India, Sri Lanka, Nepal, China, and Southeast Asia; naturalized in tropical arid regions worldwide.",
+    "uses": [
+      "Sacred ritual flower across India, flowers offered to Lord Shiva and Lord Hanuman",
+      "Crucial larval food plant for the majestic plain tiger butterfly (Danaus chrysippus)",
+      "Stem fibers yield exceptionally durable, water-resistant cordage traditionally used for fishing nets and bowstrings",
+      "Extensive use in traditional Ayurveda (Arka) for skin ailments, rheumatism, and counter-irritants (under expert supervision)"
+    ],
+    "careTips": [
+      "Thrives in full scorching sun and poor sandy or gravelly soils where other plants perish",
+      "Virtually immune to drought once rooted; never requires supplementary irrigation in garden settings",
+      "Wear gloves and protective goggles when trimming to safeguard against caustic milky sap"
+    ],
+    "toxicityNote": "HIGHLY TOXIC: Milky latex contains potent cardenolides (calotropin, calotoxin). Ingestion can cause fatal heart attacks, vomiting, and convulsions. Contact with eyes causes severe corneal damage and temporary blindness.",
+    "isToxic": true,
+    "funFact": "The silky white floss attached to Calotropis seeds was traditionally gathered in rural India to stuff soft pillows and mattresses because it is naturally water-repellent and resistant to insects.",
+    "referenceImages": [
+      "/species/147.webp"
+    ],
+    "imageCredit": {
+      "observer": "Pubudini Jayakody",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605374603/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Calotropis_gigantea",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "148": {
+    "id": 148,
+    "slug": "duranta-erecta",
+    "commonName": "Golden dewdrop",
+    "scientificName": "Duranta erecta",
+    "family": "Verbenaceae",
+    "genus": "Duranta",
+    "plantType": "shrub",
+    "origin": "global",
+    "namesHindi": "नीलकण्ठ झाड़ी (Neelkanth jhari)",
+    "namesBengali": "নীলকণ্ঠ গুল্ম (Neelkantha gulma)",
+    "otherNames": [
+      "Skyflower",
+      "Pigeon berry",
+      "Golden dewdrop",
+      "Duranta"
+    ],
+    "description": "A graceful, vigorous sprawling evergreen shrub or small tree featuring arching branches hung with cascading racemes of soft lavender-blue flowers, followed by drooping clusters of lustrous golden-orange berries.",
+    "identifyingFeatures": [
+      "Cascading terminal panicles of dainty, 5-lobed sky-blue or lilac flowers with wavy white petal borders",
+      "Heavy hanging clusters of bright golden-yellow to orange globular berries (golden dewdrops) persisting on branches",
+      "Opposite, bright green elliptic to ovate leaves, frequently accompanied by sharp axillary spines on older stems",
+      "Arching, drooping branches creating a fountain-like weeping shrub habit"
+    ],
+    "habitat": "Residential gardens, park hedges, roadside dividers, and coastal hillsides.",
+    "distribution": "Native to the tropical Americas (Florida and West Indies to Brazil); planted universally across India.",
+    "uses": [
+      "One of the most popular formal hedge and privacy screening shrubs in Indian urban gardens",
+      "High nectar production attracts abundant swallowtails, skippers, and honeybees",
+      "Weeping fountain specimen for large lawn containers and patio backgrounds"
+    ],
+    "careTips": [
+      "Plant in full sun to maximize blooming cascades and dense golden berry clusters",
+      "Tolerates diverse soil types as long as drainage is adequate; fairly drought-hardy once rooted",
+      "Responds exceptionally well to heavy shearing and topiary shaping"
+    ],
+    "toxicityNote": "TOXIC: The attractive golden berries and foliage contain saponins and cardiac glycosides. Ingestion of berries can cause fever, nausea, vomiting, convulsions, and has caused fatalities in small pets and children.",
+    "isToxic": true,
+    "funFact": "Called 'Golden dewdrop' because the heavy clusters of bright orange-yellow berries look like shimmering golden drops of morning dew dangling along weeping branches.",
+    "referenceImages": [
+      "/species/148.webp"
+    ],
+    "imageCredit": {
+      "observer": "domdom52",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608271493/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Duranta_erecta",
+    "sources": [],
+    "hasUnverifiedDetails": false
+  },
+  "149": {
+    "id": 149,
+    "slug": "couroupita-guianensis",
+    "commonName": "Cannonball tree",
+    "scientificName": "Couroupita guianensis",
+    "family": "Lecythidaceae",
+    "genus": "Couroupita",
+    "plantType": "tree",
+    "origin": "global",
+    "namesHindi": "नागकेसर वृक्ष (Nagkesar vriksh)",
+    "namesBengali": "নাগলিঙ্গম (Nagalingam)",
+    "otherNames": [
+      "Nagalingam",
+      "Shivling tree",
+      "Ayahuma",
+      "Cannonball tree"
+    ],
+    "description": "A magnificent large tropical deciduous tree renowned for cauliflory, producing huge, sweetly scented bizarre pink-orange blossoms that emerge directly from tangled woody racemes on the trunk, followed by large heavy spherical wooden cannonballs.",
+    "identifyingFeatures": [
+      "Cauliflorous habit: large exotic flowers and heavy cannonball fruits borne on woody tangled racemes emerging directly from the main trunk",
+      "Striking, deeply fragrant flowers (up to 10 cm) with 6 thick salmon-pink concave petals and a curving hood-like white-and-pink staminal ring resembling a cobra protecting a Shiva lingam",
+      "Enormous spherical, woody brown fruits (15–24 cm diameter) resembling iron cannonballs",
+      "Dense crown of obovate leaves clustered at branch ends, shed completely several times a year"
+    ],
+    "habitat": "Sacred Hindu temple grounds, botanical gardens, royal palace parks, and tropical rainforests.",
+    "distribution": "Native to the Guianas and tropical South America; revered and extensively planted around Shiva temples across India and Sri Lanka.",
+    "uses": [
+      "Sacred tree planted beside Shiva temples across South India; flowers revered as divine symbols of the Shivalinga hooded by the serpent Shesha",
+      "Spectacular botanical curiosity planted in major botanical gardens and university campuses worldwide",
+      "Traditional Amazonian remedies utilize bark decoctions for malaria and skin infections"
+    ],
+    "careTips": [
+      "Requires expansive outdoor space away from walkways and parked cars due to heavy falling cannonball fruits",
+      "Thrives in rich, humid, deep alluvial soils in warm tropical climates",
+      "Needs full sunlight to support large canopy growth and prolific cauliflorous blooming"
+    ],
+    "toxicityNote": "NON-TOXIC flowers. However, falling mature cannonball fruits can weigh up to 3 kg and pose severe physical impact hazard to people walking underneath. The fruit pulp has an unpleasant pungent smell when broken.",
+    "isToxic": false,
+    "funFact": "In India, the tree is known as 'Nagalingam' because the central curved staminal hood mirrors a many-headed cobra (Naga) shielding the sacred Shiva Lingam resting on the floral disc.",
+    "referenceImages": [
+      "/species/149.webp"
+    ],
+    "imageCredit": {
+      "observer": "coralaviles",
+      "license": "CC-BY-NC",
+      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606483061/original.jpg"
+    },
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Couroupita_guianensis",
+    "sources": [],
+    "hasUnverifiedDetails": false
   }
 }

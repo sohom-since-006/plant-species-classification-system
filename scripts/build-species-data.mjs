@@ -90,7 +90,7 @@ export function buildAndValidateSpeciesData() {
 
     for (const s of batch) {
       const id = s.id;
-      if (typeof id !== 'number' || id < 0 || id > 111) {
+      if (typeof id !== 'number' || id < 0 || id > 149) {
         errors.push(`Invalid species id '${id}' in ${file}`);
         continue;
       }
@@ -169,7 +169,7 @@ export function buildAndValidateSpeciesData() {
     }
   }
 
-  // Check that all 112 IDs are present
+  // Check that all 150 IDs are present
   const presentIds = Array.from(speciesMap.keys()).sort((a, b) => a - b);
   const missingIds = labelIds.filter((id) => !speciesMap.has(id));
 
@@ -192,7 +192,7 @@ export function buildAndValidateSpeciesData() {
   console.log(`\nValidation PASSED for all ${speciesMap.size} species!`);
   console.log(`Verified total TODO(verify) markers: ${todoCount}`);
 
-  // Build sorted species list (0..111)
+  // Build sorted species list (0..149)
   const allSpecies = [];
   const clientSpeciesMap = {};
   const metaMap = {};
@@ -203,7 +203,7 @@ export function buildAndValidateSpeciesData() {
     return str.replace(/\s*TODO\(verify\)\.?/g, '').trim();
   }
 
-  for (let id = 0; id < 112; id++) {
+  for (let id = 0; id < 150; id++) {
     const s = speciesMap.get(id);
     allSpecies.push(s);
 
