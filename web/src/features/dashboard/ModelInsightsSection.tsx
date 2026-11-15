@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { AlertTriangle, CheckCircle, Info, Sparkles, Activity } from '@/components/icons';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 interface TierData {
   range: string;
@@ -107,7 +108,7 @@ export function ModelInsightsSection() {
             Open Neural Model Insights
           </h2>
           <p className="text-xs sm:text-sm text-[var(--fg-muted)] mt-1 max-w-2xl">
-            Empirical validation results evaluated on held-out test specimens (4,939 images across all 150 cataloged species). Real data with zero fabricated statistics.
+            Empirical validation results evaluated on held-out test specimens (4,939 images across all {SPECIES_COUNT_LABEL}). Real data with zero fabricated statistics.
           </p>
         </div>
         <div className="text-right text-xs font-mono text-[var(--fg-subtle)] shrink-0 self-start sm:self-auto">
@@ -144,7 +145,7 @@ export function ModelInsightsSection() {
             <p className="font-heading italic text-3xl sm:text-4xl text-emerald-400 mt-2">
               {isLoading ? '...' : data?.macro_f1?.toFixed(3) ?? '0.833'}
             </p>
-            <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Balanced across 150 classes</p>
+            <p className="text-[11px] font-mono text-[var(--fg-muted)] mt-1">Balanced across {SPECIES_COUNT_LABEL}</p>
           </div>
         </StaggerItem>
 
@@ -299,7 +300,7 @@ export function ModelInsightsSection() {
             </p>
           </div>
           <span className="text-xs font-mono px-3 py-1 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20 shrink-0 self-start sm:self-auto">
-            {data?.classes_below_f1_70?.length ?? 16} / 150 Species
+            {data?.classes_below_f1_70?.length ?? 16} / {SPECIES_COUNT_LABEL}
           </span>
         </div>
 

@@ -145,7 +145,7 @@ describe('SimilarSpecies Component with Real Species', () => {
     expect(screen.getByText('Not confident this is one of the 150 species')).toBeInTheDocument();
     expect(screen.getByText('Unknown')).toBeInTheDocument();
     expect(
-      screen.getByText(/The neural model could not match this specimen to one of the 150 cataloged plant classes with sufficient confidence./)
+      screen.getByText(/The neural model could not match this specimen to one of the 150 species with sufficient confidence./)
     ).toBeInTheDocument();
   });
 

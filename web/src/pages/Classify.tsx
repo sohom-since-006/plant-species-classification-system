@@ -17,6 +17,7 @@ import { HeatmapView } from '@/features/classify/HeatmapView';
 import { FeedbackPanel } from '@/features/classify/FeedbackPanel';
 import { BatchModeSection } from '@/features/classify/BatchModeSection';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 import { useHistoryService } from '@/features/history/useHistoryService';
 import { getAllSpecies, getSpeciesById, hasRichContent, fetchSpeciesById } from '@/services/speciesService';
 import { isMockMode } from '@/ml/mock';
@@ -64,7 +65,7 @@ const SAMPLE_SPECIMENS: SampleImage[] = [
 ];
 
 export function Classify() {
-  useDocumentTitle('Identify Specimen');
+  useDocumentTitle(`Identify Specimen (${SPECIES_COUNT_LABEL})`);
   const location = useLocation();
   const { showToast } = useToast();
   const { savePrediction, isSaving } = useHistoryService();
@@ -721,7 +722,7 @@ export function Classify() {
         badge="ON-DEVICE BOTANICAL VISION"
         title="Classify Any Plant"
         italicSubtitle="Private Edge Intelligence"
-        description="Drop a leaf or blossom photograph to identify species, calibrated confidence, attention heatmaps, and look-alike nuances. 100% processed locally on your device."
+        description={`Drop a leaf or blossom photograph to identify across ${SPECIES_COUNT_LABEL}, calibrated confidence, attention heatmaps, and look-alike nuances. 100% processed locally on your device.`}
         className="!pt-4 md:!pt-6 !min-h-[220px] pb-6"
       />
 

@@ -4,6 +4,7 @@ import { SolidButton } from '@/components/ui/SolidButton';
 import { useToast } from '@/components/ui/useToast';
 import { getAllSpecies } from '@/services/speciesService';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 export type FeedbackPanelProps = {
   predictedSpeciesId?: number;
@@ -14,7 +15,7 @@ export type FeedbackPanelProps = {
 export function FeedbackPanel({
   predictedSpeciesId,
   confidence,
-  modelVersion = 'plant_model.v1.onnx',
+  modelVersion = 'plant_model.v2.onnx',
 }: FeedbackPanelProps) {
   const { showToast } = useToast();
   const [rating, setRating] = useState<'correct' | 'incorrect' | null>(null);
@@ -160,7 +161,7 @@ export function FeedbackPanel({
       {rating === 'incorrect' && (
         <div className="liquid-glass rounded-2xl p-5 border border-white/15 space-y-4">
           <label className="block text-xs font-mono uppercase tracking-wider text-white/80">
-            What is the actual species? (Optional)
+            What is the actual species? (Optional — search all {SPECIES_COUNT_LABEL})
           </label>
 
           <div className="relative">

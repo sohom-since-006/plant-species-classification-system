@@ -13,7 +13,7 @@ enthusiasts. Existing apps are often paywalled, send every photo to a server,
 and give overconfident wrong answers. Few cover common Indian plants well.
 
 ## 3. Goals
-- G1: Identify about 110-130 species with high accuracy from mixed plant parts.
+- G1: Identify 150 species with high accuracy from mixed plant parts.
 - G2: Show calibrated confidence, so "90%" really means about 90%.
 - G3: Give similar-species suggestions with percentages.
 - G4: Run fast (under 2 s after the model loads) and free to host.

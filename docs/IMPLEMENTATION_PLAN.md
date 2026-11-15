@@ -9,7 +9,7 @@ Rough timeline assumes steady daily work; adjust to your deadline.
 - [ ] Verify GPU: `python -c "import torch; print(torch.cuda.is_available())"`
 
 ## Phase 1: Data (Days 2-3)
-- [ ] Finalize `species_list.csv` (110-130 species)
+- [ ] Finalize `species_list.csv` (150 species)
 - [ ] `01_download_images.py`: parallel download per species (ThreadPoolExecutor, 8 workers), log licenses, resilient retries
 - [ ] Review image counts; swap species below 150 images
 - [ ] `02_clean_dataset.py`: dedupe, remove broken/small, grouped stratified split

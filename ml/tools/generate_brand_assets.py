@@ -53,7 +53,7 @@ def generate_assets():
     draw.text((600, 365), headline, font=font_serif, fill=(255, 255, 255, 255), anchor="mm")
 
     # Draw Subtitle
-    sub = "PlantAI  •  Private On-Device Botanical Intelligence  •  112 Species  •  WASM / WebGPU"
+    sub = "PlantAI  •  Private On-Device Botanical Intelligence  •  150 Species  •  WASM / WebGPU"
     draw.text((600, 430), sub, font=font_subtitle, fill=(200, 210, 205, 210), anchor="mm")
 
     # Draw bottom glass pill

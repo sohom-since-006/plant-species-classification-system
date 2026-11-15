@@ -1,3 +1,9 @@
+import richSpeciesRaw from '@/data/species.json';
+
+/** Single source of truth for total cataloged species count */
+export const SPECIES_COUNT = Object.keys(richSpeciesRaw).length;
+export const SPECIES_COUNT_LABEL = `${SPECIES_COUNT} species`;
+
 /** Confidence tier thresholds */
 export const TIER_THRESHOLDS = {
   high: 0.85,

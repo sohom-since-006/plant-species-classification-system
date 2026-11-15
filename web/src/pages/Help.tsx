@@ -11,6 +11,7 @@ import {
 } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 interface FaqItem {
   id: string;
@@ -32,7 +33,7 @@ const FAQS: FaqItem[] = [
     id: 'why-not-confident',
     category: 'Diagnostics',
     badge: 'Rejection Gate',
-    q: 'Why does the app say "Not confident this is one of the 150 species"?',
+    q: `Why does the app say "Not confident this is one of the ${SPECIES_COUNT_LABEL}"?`,
     a: 'PlantAI employs dual out-of-distribution (OOD) rejection gates: maximum calibrated probability below 57% (threshold 0.57) or cosine distance to genus embedding centroids exceeding τ=0.32. When an image is blurry, captures a non-plant object (like a pebble, fabric, or food), or depicts an uncataloged specimen, the model refuses to guess and safely reports "Not confident", presenting the Top-3 candidate matches with caution advice.',
   },
   {
@@ -66,14 +67,14 @@ const FAQS: FaqItem[] = [
   {
     id: 'supported-species',
     category: 'Taxonomy',
-    badge: '150 Taxa',
+    badge: `${SPECIES_COUNT_LABEL}`,
     q: 'Which plant species are currently supported by the model?',
-    a: 'The system recognizes 150 botanical species across more than 50 families, focusing on prevalent medicinal, culinary, ornamental, and native plants of South Asia and worldwide flora (including Tulsi, Neem, Peepal, Aloe vera, Lemongrass, Hibiscus, Mint, Banyan, and Ashoka). You can browse the complete interactive herbarium on the Explore page.',
+    a: `The system recognizes ${SPECIES_COUNT_LABEL} across more than 50 families, focusing on prevalent medicinal, culinary, ornamental, and native plants of South Asia and worldwide flora (including Tulsi, Neem, Peepal, Aloe vera, Lemongrass, Hibiscus, Mint, Banyan, and Ashoka). You can browse the complete interactive herbarium on the Explore page.`,
   },
 ];
 
 export function Help() {
-  useDocumentTitle('Field Guide & FAQ');
+  useDocumentTitle(`Field Guide & FAQ (${SPECIES_COUNT_LABEL})`);
   const [searchQuery, setSearchQuery] = useState('');
   const [openIds, setOpenIds] = useState<Set<string>>(new Set(['good-photo', 'why-not-confident']));
 
@@ -283,7 +284,7 @@ export function Help() {
                               to="/explore"
                               className="inline-flex items-center gap-1 font-mono text-xs text-[var(--accent)] hover:underline"
                             >
-                              <span>Browse 150 Supported Species in Explore Catalog</span>
+                              <span>Browse {SPECIES_COUNT_LABEL} in Explore Catalog</span>
                               <ArrowUpRight className="w-3.5 h-3.5" />
                             </Link>
                           </div>

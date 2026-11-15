@@ -10,9 +10,10 @@ import {
 } from '@/components/icons';
 
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 export function About() {
-  useDocumentTitle('About');
+  useDocumentTitle(`About (${SPECIES_COUNT_LABEL})`);
   return (
     <div className="relative w-full pb-24 text-[var(--fg)]">
       {/* Synchronized Hero with scroll blur + fade */}
@@ -159,7 +160,7 @@ export function About() {
               </li>
               <li className="flex justify-between border-b border-white/5 pb-1">
                 <span>Cataloged Species</span>
-                <span className="text-[var(--fg)]">150 Classes</span>
+                <span className="text-[var(--fg)]">{SPECIES_COUNT_LABEL}</span>
               </li>
               <li className="flex justify-between border-b border-white/5 pb-1">
                 <span>Botanical Families</span>
@@ -213,7 +214,7 @@ export function About() {
             System Limitations &amp; Safety Protocol
           </h3>
           <p className="text-xs text-rose-100/90 leading-relaxed font-body">
-            <strong>1. Scope:</strong> PlantAI is currently trained on 150 specific botanical species. Non-plant photos, uncataloged wild flora, or cultivars will be flagged as &quot;Not confident&quot; with Top-3 candidates below the threshold or rejected by the out-of-distribution distance filter.
+            <strong>1. Scope:</strong> PlantAI is currently trained on {SPECIES_COUNT_LABEL}. Non-plant photos, uncataloged wild flora, or cultivars will be flagged as &quot;Not confident&quot; with Top-3 candidates below the threshold or rejected by the out-of-distribution distance filter.
           </p>
           <p className="text-xs text-rose-100/90 leading-relaxed font-body">
             <strong>2. Photo Composition &amp; Real-World Limitations:</strong> Classification accuracy depends heavily on the photo. Plants photographed out of flower, unusual angles, poor lighting, or heavily cultivated varieties can be misidentified. Always check the confidence tier and review the Top-3 candidates before drawing conclusions. Published performance metrics reflect benchmark test-set evaluations.

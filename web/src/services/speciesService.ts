@@ -1,7 +1,10 @@
 import type { Species, PlantType, Origin } from '@/types/species';
 import { supabase } from '@/lib/supabase';
+import { SPECIES_COUNT, SPECIES_COUNT_LABEL } from '@/config/constants';
 import speciesMetaRaw from '@/data/species_meta.json';
 import richSpeciesRaw from '@/data/species.json';
+
+export { SPECIES_COUNT, SPECIES_COUNT_LABEL };
 
 interface SpeciesMetaEntry {
   id: number;

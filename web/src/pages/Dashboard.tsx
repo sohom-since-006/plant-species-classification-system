@@ -6,9 +6,10 @@ import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { UserHistoryStats } from '@/features/dashboard/UserHistoryStats';
 import { ModelInsightsSection } from '@/features/dashboard/ModelInsightsSection';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 export function Dashboard() {
-  useDocumentTitle('Dashboard & Telemetry');
+  useDocumentTitle(`Dashboard & Telemetry (${SPECIES_COUNT_LABEL})`);
   const [benchmarkRunning, setBenchmarkRunning] = useState(false);
   const [localBenchmarkResult, setLocalBenchmarkResult] = useState<number | null>(null);
 

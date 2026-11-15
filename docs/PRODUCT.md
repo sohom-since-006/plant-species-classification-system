@@ -38,12 +38,12 @@
 - **Wrong prediction:** thumbs-down, pick the correct species from a searchable list, submit.
 
 ## Landing Page Copy (default)
-- Badge: "New | 120+ species identified instantly, right in your browser"
+- Badge: "New | 150 species identified instantly, right in your browser"
 - Headline: "Plant Species Classification System"
 - Tagline: "Know Every Plant You Meet"
 - Sub: "Upload a photo of a leaf, flower, or whole plant. Get the species, an honest confidence score, look-alike matches, and everything worth knowing, with no sign-up and no photo ever leaving your device."
 - CTAs: "Start Identifying" / "See How It Works"
-- Stat cards: "< 2 s | Average time to identify a plant", "120+ | Species, from Indian herbs to global garden favorites" (numbers updated from real metrics after training)
+- Stat cards: "< 2 s | Average time to identify a plant", "150 | Species, from Indian herbs to global garden favorites" (numbers updated from real metrics after training)
 - Trust bar text: "Built on open biodiversity data from"; names: GBIF, iNaturalist, PyTorch, ONNX, Supabase
 - Capabilities heading: "Plant science, made effortless"
   - Identify: tags [Leaf, Flower, Fruit, Whole Plant], "Snap or upload any part of a plant. Our model recognizes species across Indian and global flora in seconds."

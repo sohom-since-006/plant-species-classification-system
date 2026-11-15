@@ -6,6 +6,7 @@ import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { useSpeciesListQuery } from '@/features/species/useSpeciesQueries';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { SolidButton } from '@/components/ui/SolidButton';
+import { SPECIES_COUNT_LABEL } from '@/config/constants';
 
 const CATEGORIES = [
   'All',
@@ -20,7 +21,7 @@ const CATEGORIES = [
 ];
 
 export function Explore() {
-  useDocumentTitle('Explore Herbarium');
+  useDocumentTitle(`Explore Herbarium (${SPECIES_COUNT_LABEL})`);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(24);
@@ -70,7 +71,7 @@ export function Explore() {
       <PageHero
         badge="BOTANICAL ARCHIVE"
         title="Explore Species Library"
-        italicSubtitle="150 Cataloged Species"
+        italicSubtitle={`${SPECIES_COUNT_LABEL} Cataloged`}
         description="Search across hundreds of verified specimens, regional ethnobotanical names, ecological distributions, and diagnostic morphology."
       >
         {/* Real-time search input */}

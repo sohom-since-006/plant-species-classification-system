@@ -49,11 +49,11 @@ atmosphere with a dark gradient overlay to keep text at 4.5:1 contrast.
 
 ### 1. Hero (`h-screen`)
 - Background `<FadingVideo>` at `absolute left-1/2 top-0 -translate-x-1/2 object-cover object-top`, `width:120%; height:120%`.
-- Badge (delay 0.4): `liquid-glass rounded-full` with a white "New" chip and text "120+ species identified instantly, right in your browser".
+- Badge (delay 0.4): `liquid-glass rounded-full` with a white "New" chip and text "150 species identified instantly, right in your browser".
 - Headline via BlurText: **"Plant Species Classification System"** (classes `text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic leading-[0.8] tracking-[-4px]`, max-w-5xl) with tagline **"Know Every Plant You Meet"** in `font-heading italic text-2xl` directly under it.
 - Sub (delay 0.8): "Upload a photo of a leaf, flower, or whole plant. Get the species, an honest confidence score, look-alike matches, and everything worth knowing, with no sign-up and no photo ever leaving your device."
 - CTAs (delay 1.1): "Start Identifying" (`liquid-glass-strong rounded-full px-5 py-2.5`, ArrowUpRight) and "See How It Works" (Play icon, scrolls to section 3).
-- Stat cards (delay 1.3), two `liquid-glass p-5 w-[220px] rounded-[1.25rem]`: Clock "< 2 s / Average time to identify a plant"; Globe "120+ / Species, from Indian herbs to global garden favorites". Read the real species count from `model_meta.json` when present. Numbers use `text-4xl font-heading italic tracking-[-1px]`.
+- Stat cards (delay 1.3), two `liquid-glass p-5 w-[220px] rounded-[1.25rem]`: Clock "< 2 s / Average time to identify a plant"; Globe "150 / Species, from Indian herbs to global garden favorites". Read the real species count from `model_meta.json` when present. Numbers use `text-4xl font-heading italic tracking-[-1px]`.
 - Trust bar (delay 1.4): glass pill "Built on open biodiversity data and open tools", then names GBIF, iNaturalist, PyTorch, ONNX, Supabase in `font-heading italic text-2xl md:text-3xl`.
 - Parallax: video translates at about 0.3x scroll; hero content fades and blurs slightly as it leaves.
 

@@ -12,6 +12,7 @@ import { UploadZone } from '@/components/ui/UploadZone';
 import { ConfidenceRing } from '@/components/ui/ConfidenceRing';
 import { MatchBar } from '@/components/ui/MatchBar';
 import { MEDIA } from '@/config/media';
+import { SPECIES_COUNT, SPECIES_COUNT_LABEL } from '@/config/constants';
 import {
   ArrowUpRight,
   Play,
@@ -25,7 +26,7 @@ import {
 export function Home() {
   useDocumentTitle();
   const navigate = useNavigate();
-  const [speciesCount, setSpeciesCount] = useState('120+');
+  const [speciesCount, setSpeciesCount] = useState(`${SPECIES_COUNT}`);
   const [isMobile, setIsMobile] = useState(false);
   const prefersReducedMotion =
     typeof window !== 'undefined' &&
@@ -50,11 +51,13 @@ export function Home() {
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data && typeof data.num_classes === 'number') {
-          setSpeciesCount(`${data.num_classes}+`);
+          setSpeciesCount(`${data.num_classes}`);
+        } else if (data && typeof data.numSpecies === 'number') {
+          setSpeciesCount(`${data.numSpecies}`);
         }
       })
       .catch(() => {
-        // Fallback already set to 120+
+        // Fallback already set to SPECIES_COUNT
       });
   }, []);
 
@@ -158,7 +161,7 @@ export function Home() {
             {/* Subtitle (delay 0.8) */}
             <Reveal delay={0.8} className="mt-5 max-w-2xl mx-auto">
               <p className="text-sm md:text-base font-body font-light text-white/90 leading-relaxed">
-                Upload a photo of a leaf, flower, or whole plant. Get the species, an honest
+                Upload a photo of a leaf, flower, or whole plant. Identify across {SPECIES_COUNT_LABEL} with an honest
                 confidence score, look-alike matches, and everything worth knowing, with no sign-up
                 and no photo ever leaving your device.
               </p>
@@ -315,8 +318,7 @@ export function Home() {
                       Identify
                     </h3>
                     <p className="mt-2 text-sm font-light leading-snug max-w-[32ch] text-white/75">
-                      Snap or upload any part of a plant. Our model recognizes species across Indian
-                      and global flora in seconds.
+                      Snap or upload any part of a plant. Our model recognizes across {SPECIES_COUNT_LABEL} in seconds.
                     </p>
                   </div>
                 </div>
@@ -569,7 +571,7 @@ export function Home() {
                 Ready to meet your plants?
               </h2>
               <p className="mt-4 text-base md:text-lg font-light text-white/80 max-w-xl mx-auto">
-                Identify species instantly in your browser with private, on-device machine learning.
+                Identify across {SPECIES_COUNT_LABEL} instantly in your browser with private, on-device machine learning.
               </p>
             </Reveal>
           </ScrollBlur>
