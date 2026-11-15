@@ -128,7 +128,7 @@ export function Home() {
         {/* Hero Content Container — calibrated so it stays sharp for the first 28% of scroll, then blurs out */}
         <ScrollBlur
           isHero
-          className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center pt-16 md:pt-12 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
+          className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center pt-36 sm:pt-28 md:pt-12 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
         >
           {/* Headline, Tagline & Subtitle with soft radial dark-green text scrim */}
           <div className="relative max-w-5xl mx-auto">

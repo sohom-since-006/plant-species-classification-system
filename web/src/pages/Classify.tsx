@@ -679,12 +679,50 @@ export function Classify() {
         }}
       />
 
+      {/* ─── Mode Switcher (Single vs Batch) in dedicated row below navbar ────────────────────── */}
+      <div className="pt-24 md:pt-28 pb-2 px-4 flex items-center justify-center">
+        <div
+          className="liquid-glass p-1.5 rounded-full border border-white/10 flex items-center gap-1.5 shadow-xl"
+          role="tablist"
+          aria-label="Classification Mode Selection"
+        >
+          <button
+            type="button"
+            role="tab"
+            aria-selected={classifyMode === 'single'}
+            onClick={() => setClassifyMode('single')}
+            className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
+              classifyMode === 'single'
+                ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
+                : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
+            }`}
+          >
+            Single Specimen
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={classifyMode === 'batch'}
+            onClick={() => setClassifyMode('batch')}
+            className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
+              classifyMode === 'batch'
+                ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
+                : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
+            }`}
+          >
+            Batch Mode (Up to 10)
+          </button>
+        </div>
+      </div>
+
       {/* Synchronized Hero Header */}
       <PageHero
+        compact
         badge="ON-DEVICE BOTANICAL VISION"
         title="Classify Any Plant"
         italicSubtitle="Private Edge Intelligence"
         description="Drop a leaf or blossom photograph to identify species, calibrated confidence, attention heatmaps, and look-alike nuances. 100% processed locally on your device."
+        className="!pt-4 md:!pt-6 !min-h-[220px] pb-6"
       />
 
       {/* Main Container */}
@@ -741,42 +779,6 @@ export function Classify() {
             </button>
           </div>
         )}
-
-        {/* ─── Mode Switcher (Single vs Batch) ────────────────────── */}
-        <div className="flex items-center justify-center">
-          <div
-            className="liquid-glass p-1.5 rounded-full border border-white/10 flex items-center gap-1.5 shadow-xl"
-            role="tablist"
-            aria-label="Classification Mode Selection"
-          >
-            <button
-              type="button"
-              role="tab"
-              aria-selected={classifyMode === 'single'}
-              onClick={() => setClassifyMode('single')}
-              className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
-                classifyMode === 'single'
-                  ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
-                  : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
-              }`}
-            >
-              Single Specimen
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={classifyMode === 'batch'}
-              onClick={() => setClassifyMode('batch')}
-              className={`px-5 py-2 rounded-full text-xs font-mono transition-all ${
-                classifyMode === 'batch'
-                  ? 'bg-[var(--accent)] text-black font-semibold shadow-md'
-                  : 'text-[var(--fg-muted)] hover:text-[var(--fg)]'
-              }`}
-            >
-              Batch Mode (Up to 10)
-            </button>
-          </div>
-        </div>
 
         {/* ─── Classification Work Area ───────────────────────────── */}
         <div
