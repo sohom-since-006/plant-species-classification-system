@@ -109,4 +109,41 @@ describe('Row Level Security (RLS) Policy Verification (Public / No-Auth Archite
       expect(RlsPolicyEngine.evalFeedbackSelect()).toBe(false);
     });
   });
+
+  describe('Migration Script Invariants (migration_species_columns.sql)', () => {
+    const migrationPath = path.resolve(__dirname, '../../../supabase/migration_species_columns.sql');
+    const migrationSql = fs.existsSync(migrationPath) ? fs.readFileSync(migrationPath, 'utf8') : '';
+
+    it('verifies migration_species_columns.sql exists and contains diagnostic queries', () => {
+      expect(migrationSql.length).toBeGreaterThan(0);
+      expect(migrationSql).toMatch(/information_schema\.columns/i);
+      expect(migrationSql).toMatch(/table_name\s*=\s*'species'/i);
+    });
+
+    it('ensures every column inserted by seed_new_112_149.sql is idempotently added', () => {
+      const seedNewPath = path.resolve(__dirname, '../../../supabase/seed_new_112_149.sql');
+      const seedSql = fs.readFileSync(seedNewPath, 'utf8');
+
+      // Extract column names from the INSERT header
+      const match = seedSql.match(/insert into public\.species \(([\s\S]*?)\) values/i);
+      expect(match).toBeTruthy();
+      const rawCols = match?.[1] ?? '';
+      const cols = rawCols
+        .split(',')
+        .map((c) => c.trim().toLowerCase())
+        .filter((c) => c.length > 0 && c !== 'id');
+
+      // Every non-id column must have an "add column if not exists" directive
+      for (const col of cols) {
+        const regex = new RegExp(`add\\s+column\\s+if\\s+not\\s+exists\\s+${col}\\b`, 'i');
+        expect(migrationSql).toMatch(regex);
+      }
+    });
+
+    it('ensures check constraints for plant_type (with epiphyte) and origin are included', () => {
+      expect(migrationSql).toMatch(/'epiphyte'/);
+      expect(migrationSql).toMatch(/species_plant_type_check/);
+      expect(migrationSql).toMatch(/species_origin_check/);
+    });
+  });
 });
