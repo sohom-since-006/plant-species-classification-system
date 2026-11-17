@@ -63,6 +63,8 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+*.docx
+*.doc
 
 # OS and IDE files
 .DS_Store
