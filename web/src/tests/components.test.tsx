@@ -17,6 +17,8 @@ describe('Landing Page & Layout Components', () => {
 
     expect(screen.getByLabelText(/Plant Species Classification System Home/i)).toBeInTheDocument();
     expect(screen.getAllByText('Identify').length).toBeGreaterThan(0);
+    expect(screen.getByRole('link', { name: 'Traits' })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'Help' })).not.toBeInTheDocument();
   });
 
   it('renders Footer with disclaimers and credits', () => {

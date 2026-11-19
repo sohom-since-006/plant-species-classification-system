@@ -10,7 +10,6 @@ const links = [
   { to: '/identify-traits', label: 'Traits' },
   { to: '/history', label: 'History' },
   { to: '/dashboard', label: 'Dashboard' },
-  { to: '/help', label: 'Help' },
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
