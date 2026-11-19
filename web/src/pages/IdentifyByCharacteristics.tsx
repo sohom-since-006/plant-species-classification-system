@@ -123,7 +123,7 @@ export function IdentifyByCharacteristics() {
         <div className="liquid-glass rounded-2xl p-4 mb-8 border border-amber-500/30 bg-amber-950/20 text-xs text-amber-200/90 flex items-start gap-3">
           <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="leading-relaxed">
-            <strong>Limitation:</strong> Accuracy on simulated data (99.5%) measures how well the tree learned the simulated botanical trait ranges, not real-world field accuracy. In real field conditions, accuracy depends on observer measurement precision, leaf phenological maturity, and non-blooming seasons. Under our empirical noise stress tests (±30% noise &amp; 30% missingness), top-1 accuracy degrades to 95.3% (96.0% top-3).
+            <strong>Limitation:</strong> Accuracy on simulated data (99.5%) measures how well the tree learned the simulated botanical trait ranges, not real-world field accuracy. Field testing on physical plants remains pending (<em>n</em> = 0 real measured specimens). In real field conditions, accuracy depends on observer measurement precision, leaf phenological maturity, and non-blooming seasons. Under our empirical noise stress tests (&plusmn;30% noise &amp; 30% missingness), top-1 accuracy degrades to 95.3% (96.0% top-3).
           </div>
         </div>
 
@@ -601,6 +601,9 @@ export function IdentifyByCharacteristics() {
           </p>
           <p className="leading-relaxed">
             For physical laboratory measurements, see our benchmark on the <span className="text-white font-medium">UCI 100 Plant Species Leaves Dataset</span> (1,599 physical leaf specimens across 100 species; Decision Tree 50.84% CV / Random Forest 97.81% CV).
+          </p>
+          <p className="leading-relaxed">
+            <strong>Field Testing:</strong> Status is pending (<em>n</em> = 0 real measured specimens). The quick preset buttons above are demo examples derived from the trait table bounds for pipeline demonstration, not real physical measurements. Real field accuracy will be evaluated once wild measured specimens are added to <code className="px-1.5 py-0.5 bg-black/40 rounded border border-emerald-900/60 text-emerald-300 font-mono text-[10px]">data/traits/field_test_template.csv</code> with <code className="text-emerald-400 font-mono text-[10px]">source=measured</code>.
           </p>
         </div>
       </div>

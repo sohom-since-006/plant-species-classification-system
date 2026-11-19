@@ -1,940 +1,125 @@
 {
-  "specimens_count": 9,
-  "top1_accuracy": 1.0,
-  "top3_accuracy": 1.0,
-  "results": [
+  "status": "pending",
+  "n_measured_specimens": 0,
+  "measured_field_accuracy": {
+    "top1_accuracy": null,
+    "top3_accuracy": null,
+    "status_text": "pending (n = 0 real measured specimens)"
+  },
+  "n_demo_specimens": 9,
+  "demo_verification_only": {
+    "count": 9,
+    "notes": "Derived from trait table. Excluded from field accuracy."
+  },
+  "measured_results": [],
+  "demo_results": [
     {
       "specimen_index": 1,
+      "source": "demo_from_trait_table",
       "true_species_id": 0,
-      "specimen_label": "Tulsi",
+      "common_name": "Tulsi",
       "predicted_species_id": 0,
       "predicted_name": "Tulsi",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 10,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "ovate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "reticulate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "opposite",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "reticulate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "opposite",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "herb",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "herb",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'tree'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_margin_dentate",
-          "observed_category": "dentate",
-          "tested_category": "dentate",
-          "threshold": 0.5,
-          "rule": "leaf_margin is 'dentate'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Balcony pot specimen; crushed leaf emits strong clove/eugenol fragrance."
+      "trail_length": 10
     },
     {
       "specimen_index": 2,
+      "source": "demo_from_trait_table",
       "true_species_id": 1,
-      "specimen_label": "Neem",
+      "common_name": "Neem",
       "predicted_species_id": 1,
       "predicted_name": "Neem",
       "confidence": 0.9877,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 16,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "lanceolate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "pinnately_compound",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "pinnate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "alternate",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "pinnate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "alternate",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "tree",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "tree",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit is 'tree'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_alternate",
-          "observed_category": "alternate",
-          "tested_category": "alternate",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement is 'alternate'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_width_cm",
-          "observed": 14.2,
-          "threshold": 1.24,
-          "rule": "leaf_width_cm (14.2) <= 1.24",
-          "branch": "RIGHT (False)"
-        },
-        {
-          "feature": "leaf_type_bipinnately_compound",
-          "observed_category": "pinnately_compound",
-          "tested_category": "bipinnately_compound",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'bipinnately_compound'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_simple",
-          "observed_category": "pinnately_compound",
-          "tested_category": "simple",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'simple'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_width_cm",
-          "observed": 14.2,
-          "threshold": 5.02,
-          "rule": "leaf_width_cm (14.2) <= 5.02",
-          "branch": "RIGHT (False)"
-        },
-        {
-          "feature": "leaf_margin_entire",
-          "observed_category": "serrate",
-          "tested_category": "entire",
-          "threshold": 0.5,
-          "rule": "leaf_margin != 'entire'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_shape_ovate",
-          "observed_category": "lanceolate",
-          "tested_category": "ovate",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'ovate'",
-          "branch": "LEFT (No)"
-        }
-      ],
-      "notes": "Roadside mature shade tree; bitter sulfurous leaf odor upon bruising."
+      "trail_length": 16
     },
     {
       "specimen_index": 3,
+      "source": "demo_from_trait_table",
       "true_species_id": 2,
-      "specimen_label": "Aloe vera",
+      "common_name": "Aloe vera",
       "predicted_species_id": 2,
       "predicted_name": "Aloe vera",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 6,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "lanceolate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "absent_or_obscure",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "spiny_leaf_margins",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines != 'absent'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_shrub",
-          "observed_category": "succulent",
-          "tested_category": "shrub",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'shrub'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_length_cm",
-          "observed": 42.0,
-          "threshold": 20.96,
-          "rule": "leaf_length_cm (42.0) <= 20.96",
-          "branch": "RIGHT (False)"
-        }
-      ],
-      "notes": "Garden bed clump; thick mucilaginous leaves with spiny margins and yellow latex at cut base."
+      "trail_length": 6
     },
     {
       "specimen_index": 4,
+      "source": "demo_from_trait_table",
       "true_species_id": 17,
-      "specimen_label": "Peepal",
+      "common_name": "Peepal",
       "predicted_species_id": 17,
       "predicted_name": "Peepal",
       "confidence": 0.9872,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 16,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "cordate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "pinnate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "alternate",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "pinnate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "alternate",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "tree",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "tree",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit is 'tree'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_alternate",
-          "observed_category": "alternate",
-          "tested_category": "alternate",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement is 'alternate'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_width_cm",
-          "observed": 11.5,
-          "threshold": 1.24,
-          "rule": "leaf_width_cm (11.5) <= 1.24",
-          "branch": "RIGHT (False)"
-        },
-        {
-          "feature": "leaf_type_bipinnately_compound",
-          "observed_category": "simple",
-          "tested_category": "bipinnately_compound",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'bipinnately_compound'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_simple",
-          "observed_category": "simple",
-          "tested_category": "simple",
-          "threshold": 0.5,
-          "rule": "leaf_type is 'simple'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "petal_count",
-          "observed": 0.0,
-          "threshold": 2.0,
-          "rule": "petal_count (0.0) <= 2.00",
-          "branch": "LEFT (True)"
-        },
-        {
-          "feature": "leaf_shape_elliptic",
-          "observed_category": "cordate",
-          "tested_category": "elliptic",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'elliptic'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_shape_cordate",
-          "observed_category": "cordate",
-          "tested_category": "cordate",
-          "threshold": 0.5,
-          "rule": "leaf_shape is 'cordate'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Temple courtyard tree; prominent long caudate drip tips; milky latex from petiole."
+      "trail_length": 16
     },
     {
       "specimen_index": 5,
+      "source": "demo_from_trait_table",
       "true_species_id": 92,
-      "specimen_label": "Sunflower",
+      "common_name": "Sunflower",
       "predicted_species_id": 92,
       "predicted_name": "Sunflower",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 8,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "cordate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "palmate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "alternate",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "palmate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation is 'palmate'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "petal_count",
-          "observed": 0.0,
-          "threshold": 2.0,
-          "rule": "petal_count (0.0) <= 2.00",
-          "branch": "LEFT (True)"
-        },
-        {
-          "feature": "flower_present_yes",
-          "observed_category": "yes",
-          "tested_category": "yes",
-          "threshold": 0.5,
-          "rule": "flower_present is 'yes'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Agricultural patch; large solitary composite capitulum with yellow ray and disk florets."
+      "trail_length": 8
     },
     {
       "specimen_index": 6,
+      "source": "demo_from_trait_table",
       "true_species_id": 16,
-      "specimen_label": "Mint",
+      "common_name": "Mint",
       "predicted_species_id": 16,
       "predicted_name": "Mint",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 14,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "lanceolate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "pinnate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "opposite",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "pinnate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "opposite",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "herb",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "herb",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'tree'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_margin_dentate",
-          "observed_category": "serrate",
-          "tested_category": "dentate",
-          "threshold": 0.5,
-          "rule": "leaf_margin != 'dentate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_alternate",
-          "observed_category": "opposite",
-          "tested_category": "alternate",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'alternate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_shrub",
-          "observed_category": "herb",
-          "tested_category": "shrub",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'shrub'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "is_composite_head_no",
-          "observed_category": "no",
-          "tested_category": "no",
-          "threshold": 0.5,
-          "rule": "is_composite_head is 'no'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_shape_lanceolate",
-          "observed_category": "lanceolate",
-          "tested_category": "lanceolate",
-          "threshold": 0.5,
-          "rule": "leaf_shape is 'lanceolate'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Herb garden raised bed; square stems and refreshing spearmint aroma."
+      "trail_length": 14
     },
     {
       "specimen_index": 7,
+      "source": "demo_from_trait_table",
       "true_species_id": 20,
-      "specimen_label": "Hibiscus",
+      "common_name": "Hibiscus",
       "predicted_species_id": 20,
       "predicted_name": "Hibiscus",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 8,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "ovate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "palmate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "alternate",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "palmate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation is 'palmate'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "petal_count",
-          "observed": 5.0,
-          "threshold": 2.0,
-          "rule": "petal_count (5.0) <= 2.00",
-          "branch": "RIGHT (False)"
-        },
-        {
-          "feature": "leaf_shape_ovate",
-          "observed_category": "ovate",
-          "tested_category": "ovate",
-          "threshold": 0.5,
-          "rule": "leaf_shape is 'ovate'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Campus ornamental shrub; showy solitary scarlet flower with exerted staminal column."
+      "trail_length": 8
     },
     {
       "specimen_index": 8,
+      "source": "demo_from_trait_table",
       "true_species_id": 40,
-      "specimen_label": "Mango",
+      "common_name": "Mango",
       "predicted_species_id": 40,
       "predicted_name": "Mango",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 14,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "lanceolate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "pinnate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "alternate",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "pinnate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "alternate",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "tree",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "tree",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit is 'tree'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_alternate",
-          "observed_category": "alternate",
-          "tested_category": "alternate",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement is 'alternate'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_width_cm",
-          "observed": 6.4,
-          "threshold": 1.24,
-          "rule": "leaf_width_cm (6.4) <= 1.24",
-          "branch": "RIGHT (False)"
-        },
-        {
-          "feature": "leaf_type_bipinnately_compound",
-          "observed_category": "simple",
-          "tested_category": "bipinnately_compound",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'bipinnately_compound'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_simple",
-          "observed_category": "simple",
-          "tested_category": "simple",
-          "threshold": 0.5,
-          "rule": "leaf_type is 'simple'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "petal_count",
-          "observed": 5.0,
-          "threshold": 2.0,
-          "rule": "petal_count (5.0) <= 2.00",
-          "branch": "RIGHT (False)"
-        }
-      ],
-      "notes": "Orchard specimen; dark coriaceous foliage with aromatic resinous sap upon tearing."
+      "trail_length": 14
     },
     {
       "specimen_index": 9,
+      "source": "demo_from_trait_table",
       "true_species_id": 0,
-      "specimen_label": "Tulsi (Out of Bloom)",
+      "common_name": "Tulsi (Out of Bloom)",
       "predicted_species_id": 0,
       "predicted_name": "Tulsi",
       "confidence": 1.0,
       "top1_match": true,
       "top3_match": true,
-      "splits_count": 10,
-      "trail": [
-        {
-          "feature": "leaf_shape_palmate_lobed",
-          "observed_category": "ovate",
-          "tested_category": "palmate_lobed",
-          "threshold": 0.5,
-          "rule": "leaf_shape != 'palmate_lobed'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_type_trifoliolate",
-          "observed_category": "simple",
-          "tested_category": "trifoliolate",
-          "threshold": 0.5,
-          "rule": "leaf_type != 'trifoliolate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_parallel",
-          "observed_category": "reticulate",
-          "tested_category": "parallel",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'parallel'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "thorns_or_spines_absent",
-          "observed_category": "absent",
-          "tested_category": "absent",
-          "threshold": 0.5,
-          "rule": "thorns_or_spines is 'absent'",
-          "branch": "RIGHT (Yes)"
-        },
-        {
-          "feature": "leaf_arrangement_distichous",
-          "observed_category": "opposite",
-          "tested_category": "distichous",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'distichous'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_venation_palmate",
-          "observed_category": "reticulate",
-          "tested_category": "palmate",
-          "threshold": 0.5,
-          "rule": "leaf_venation != 'palmate'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_arrangement_spiral",
-          "observed_category": "opposite",
-          "tested_category": "spiral",
-          "threshold": 0.5,
-          "rule": "leaf_arrangement != 'spiral'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_climber",
-          "observed_category": "herb",
-          "tested_category": "climber",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'climber'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "plant_growth_habit_tree",
-          "observed_category": "herb",
-          "tested_category": "tree",
-          "threshold": 0.5,
-          "rule": "plant_growth_habit != 'tree'",
-          "branch": "LEFT (No)"
-        },
-        {
-          "feature": "leaf_margin_dentate",
-          "observed_category": "dentate",
-          "tested_category": "dentate",
-          "threshold": 0.5,
-          "rule": "leaf_margin is 'dentate'",
-          "branch": "RIGHT (Yes)"
-        }
-      ],
-      "notes": "Balcony pot winter specimen; vegetative state with no inflorescence present."
+      "trail_length": 10
     }
   ]
 }

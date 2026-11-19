@@ -11,16 +11,16 @@
 
 ## Executive Abstract
 
-Classical plant taxonomy has relied for centuries on *dichotomous keys*—sequential, rule-based branching decision frameworks that allow botanists, students, and field naturalists to distinguish species based on discrete morphological, vegetative, and reproductive characters. While modern computer vision models (such as our production `plant_model.v2.onnx` EfficientNet-B0 CNN) achieve strong predictive power directly from pixels, they operate as opaque, compute-intensive black boxes requiring high-resolution imagery and GPU/WASM accelerators.
+Classical plant taxonomy has relied for centuries on *dichotomous keys*—sequential, rule-based branching decision frameworks that allow botanists, students, and field naturalists to distinguish species based on discrete morphological, vegetative, and reproductive characters. While modern computer vision models (such as our production `plant_model.v2.onnx` EfficientNet-B0 CNN) achieve strong predictive power directly from pixels (83.88% Top-1 and 94.39% Top-5 accuracy across all 4,939 test images; the earlier draft figure of 92.4% was incorrect and has been replaced), they operate as opaque, compute-intensive black boxes requiring high-resolution imagery and GPU/WASM accelerators.
 
 This milestone develops, validates, and deploys a complementary **Symbolic Machine Learning System for Plant Classification using Decision Trees**. We engineered a 16-feature botanical schema spanning vegetative habit, phyllotaxis, foliar morphometrics, floral merosity, latex exudates, defensive armatures, and organoleptic aromas across **50 ecologically, agriculturally, and medicinally important species**. Trait bounds were compiled by an AI assistant from regional taxonomic floras (*Flora of China*, *Kew Plants of the World Online*, and *Botanical Survey of India*). Because reference repositories blocked automated verification scripts with Cloudflare anti-bot challenges (HTTP 403 Forbidden), all 50 species are formally cataloged with `needs_verification = yes` pending manual herbarium audit.
 
 To evaluate algorithmic behavior under biological variability, we simulated a dataset of 5,000 specimens incorporating biological range overlap, $\pm 6\%$ multiplicative Gaussian measurement noise, 3% novice observer classification error, and 5–8% seasonal trait missingness. Through Stratified 5-Fold Cross-Validation and cost-complexity pruning ($\alpha = 0.0005$), our tuned Decision Tree achieved an internal **Test Accuracy of 99.50%** and a **Macro F1-Score of 0.9950** at depth 17 with 52 leaf nodes, compared against a Random Forest baseline (99.90%). 
 
-Importantly, **high accuracy on simulated data measures how well the tree learned the simulated trait ranges, not field accuracy**. To rigorously test generalization, we conducted two additional real-world validations:
+Importantly, **high accuracy on simulated data measures how well the tree learned the simulated trait ranges, not field accuracy**. To rigorously test generalization, we conducted two additional real-world validations and established a physical field testing harness:
 1. **Noise Stress Testing on Unseen Seed:** Evaluating the frozen decision tree on data simulated with an unobserved random seed (`seed=999`) under escalating noise tiers ($\pm 6\%$ to $\pm 40\%$ noise, up to 35% missingness). Top-1 accuracy degraded gracefully from 99.7% to 93.7% (Top-3 remaining $\ge 94.8\%$).
 2. **Physical Laboratory Leaf Benchmark (UCI ID 241):** On the official UCI "One-Hundred Plant Species Leaves" dataset (1,599 real physical leaf specimens across 100 species, 192 continuous shape/margin/texture descriptors; CC BY 4.0), the Decision Tree achieved **50.84%** 5-fold CV accuracy (macro F1: 0.5074), while an ensemble Random Forest achieved **97.81%** (macro F1: 0.9781).
-3. **Physical Field Testing:** Evaluated on 9 physically measured specimens in `data/traits/field_test_template.csv` using `ml/decision_tree/04_field_test.py`, achieving **100.0% Top-1 and Top-3 accuracy**.
+3. **Physical Field Testing:** Status is **pending ($n = 0$ real measured specimens)**. The 9 template rows currently in `data/traits/field_test_template.csv` are marked `source=demo_from_trait_table`, derived from the trait table to verify the software execution pipeline, and are explicitly excluded from physical specimen or field accuracy claims.
 
 The model was serialized into a compact (~48 KB) JSON hierarchy and integrated into the React web application at `/identify-traits`. Operating 100% on-device with $< 0.1\text{ ms}$ evaluation latency, the web page provides continuous slider inputs, preset specimen loaders, and an explainable **Decision Trail** visualizing the exact taxonomic path from root to leaf node.
 
@@ -206,15 +206,15 @@ To provide an honest, unvarnished comparison, we evaluated:
 1. **Decision Tree (Tuned):** Evaluated on the held-out simulated trait test set ($1,000$ samples, 50 classes).
 2. **Random Forest Baseline (100 Trees):** Evaluated on the exact same simulated trait test set.
 3. **Production Vision CNN (EfficientNet-B0 ONNX):** Evaluated on real photographic test images (`ml/runs/20261113_190516/eval/`):
-   * *(a) Full 150-Species Test Set (4,500 real photos):* Evaluated from `metrics.json`.
-   * *(b) Restricted to 50 Tree Species (1,564 real photos):* Filtered strictly to test images of the 50 species in the decision tree catalog.
+   * *(a) Full 150-Species Test Set (4,939 real photos):* Evaluated from `metrics.json`, `confidence_tiers`, and `rejection.json`. The earlier draft figure of 92.4% was incorrect and has been replaced by the actual test set evaluation.
+   * *(b) Restricted to 50 Tree Species (1,564 real photos):* Filtered strictly to test images of the 50 species in the decision tree catalog from `confusion_matrix.csv`.
 
 | Performance Dimension | Decision Tree (Tuned) | Random Forest (100 Trees) | Vision CNN (50-Species Test Images) | Vision CNN (Full 150-Species Test Set) |
 |---|---|---|---|---|
 | **Input Modality** | Simulated Morphology Vectors | Simulated Morphology Vectors | Real RGB Photographs ($224 \times 224$) | Real RGB Photographs ($224 \times 224$) |
-| **Test Set Size** | 1,000 simulated samples | 1,000 simulated samples | 1,564 real test photographs | 4,500 real test photographs |
-| **Top-1 Accuracy** | **99.50%** | **99.90%** | **80.82%** (1,264 / 1,564) | **83.88%** (3,775 / 4,500) |
-| **Top-5 Accuracy** | **99.80%** | **100.0%** | **93.67%** (1,465 / 1,564) | **94.39%** (4,248 / 4,500) |
+| **Test Set Size** | 1,000 simulated samples | 1,000 simulated samples | 1,564 real test photographs | 4,939 real test photographs |
+| **Top-1 Accuracy** | **99.50%** (995 / 1,000) | **99.90%** (999 / 1,000) | **80.82%** (1,264 / 1,564) | **83.88%** (4,143 / 4,939) |
+| **Top-5 Accuracy** | **99.80%** (998 / 1,000) | **100.0%** (1,000 / 1,000) | **93.67%** (1,465 / 1,564) | **94.39%** (4,662 / 4,939) |
 | **Macro Precision** | **0.9952** | **0.9990** | **0.8332** | **0.8379** |
 | **Macro Recall** | **0.9950** | **0.9990** | **0.8078** | **0.8349** |
 | **Macro F1-Score** | **0.9950** | **0.9990** | **0.8142** | **0.8325** |
@@ -224,7 +224,7 @@ To provide an honest, unvarnished comparison, we evaluated:
 
 > [!WARNING]
 > **Modality Non-Comparability Notice:**  
-> The Decision Tree (simulated morphometrics) and the Vision CNN (real pixel photographs) are **not directly comparable**. The Decision Tree's 99.50% accuracy reflects its capacity to partition bounded botanical distributions under simulated noise; it does not indicate that symbolic decision trees surpass deep neural networks on real uncurated photographic inputs. In fact, when isolated to a 50-class closed-world submatrix, the CNN achieves **93.35% accuracy** and **0.9280 macro F1** directly from unassisted raw pixels.
+> The Decision Tree (simulated morphometrics) and the Vision CNN (real pixel photographs) are **not directly comparable**. The Decision Tree's 99.50% accuracy reflects its capacity to partition bounded botanical distributions under simulated noise; it does not indicate that symbolic decision trees surpass deep neural networks on real uncurated photographic inputs. In fact, when isolated to a 50-class closed-world submatrix, the CNN achieves **93.35% accuracy** (1,264 / 1,354) and **0.9280 macro F1** directly from unassisted raw pixels. The earlier draft figure of 92.4% was incorrect and has been replaced.
 
 ### 5.2 Confusion Matrix Analysis
 The confusion matrix (`docs/images/decision_tree/06_confusion_matrix.png`) exhibits a strong diagonal across all 50 species. 
@@ -307,6 +307,33 @@ We evaluated model degradation across escalating noise tiers:
 
 ---
 
+### 5.6 Comparative Synthesis: Side-by-Side Analysis of the Three Primary Results
+
+To clearly distinguish the capabilities, scope, and boundaries of the models evaluated in this research, Table 5 compares the three primary symbolic and tree-based experiments side by side:
+
+| Dimension | Experiment 1: Single Decision Tree on Simulated Botanical Data | Experiment 2: Single Decision Tree on Real Laboratory UCI Leaves | Experiment 3: Random Forest Ensemble on Real Laboratory UCI Leaves |
+|---|---|---|---|
+| **Data Provenance** | Simulated field specimens ($N=5,000$, 50 species) bounded by cited botanical floras | Real physical leaf specimens ($N=1,599$, 100 species) scanned at Royal Botanic Gardens, Kew | Real physical leaf specimens ($N=1,599$, 100 species) scanned at Royal Botanic Gardens, Kew |
+| **Feature Modality** | 16 multimodal human traits (habit, phyllotaxis, sap, scent, metric sizes) | 192 continuous digital descriptors (64 shape, 64 margin, 64 texture histograms) | 192 continuous digital descriptors (64 shape, 64 margin, 64 texture histograms) |
+| **Model Structure** | Single CART Tree (Depth 17, 52 leaf nodes, cost-complexity pruned) | Single CART Tree (Depth 16, tuned min-samples-split) | Ensemble of 100 Decision Trees with feature subsampling |
+| **Observed Accuracy** | **99.50% Test Accuracy** (Macro F1: **0.9950**) | **50.84% 5-Fold CV Accuracy** (Macro F1: **0.5074**) | **97.81% 5-Fold CV Accuracy** (Macro F1: **0.9781**) |
+
+#### Critical Analysis: What Each Result Does and Does Not Show
+
+1. **Single Decision Tree on Simulated Botanical Data (99.50%):**
+   * **What it shows:** Proves that given a rich multimodal combination of categorical architectural markers (growth habit, phyllotaxis, latex exudate, crushed leaf aroma) and quantitative dimensions, a single hierarchical tree has the mathematical expressive capacity to cleanly partition 50 species at shallow depth (depth 17). It validates that our cost-complexity pruning and feature engineering correctly encoded the botanical dichotomous couplets under moderate simulated noise and missingness.
+   * **What it does NOT show:** It does **not** demonstrate real-world field classification accuracy on wild unmeasured plants. Because the training and testing datasets were sampled from the same underlying min-max trait bounds, this 99.50% accuracy reflects internal model capacity and taxonomic consistency rather than real-world wild field generalization across unmodeled phenotypic plasticity.
+
+2. **Single Decision Tree on Real Laboratory UCI Leaves (50.84%):**
+   * **What it shows:** Highlights the severe limitation of a single axis-aligned decision tree when applied to high-dimensional ($D = 192$), purely continuous-valued, fine-grained physical features without categorical taxonomic anchors. With 100 classes and only 16 physical samples per class, orthogonal splits ($x_j \le \theta$) suffer from axis-aligned variance, repeatedly slicing through overlapping continuous histograms and yielding a modest **50.84% accuracy**.
+   * **What it does NOT show:** It does **not** indicate that decision trees are invalid for botany; rather, it underscores that traditional botanical keys depend heavily on *discrete qualitative characters* (e.g., *"leaves opposite vs. alternate"*, *"sap milky vs. watery"*) rather than subtle continuous differences in high-dimensional contour histograms.
+
+3. **Random Forest Ensemble on Real Laboratory UCI Leaves (97.81%):**
+   * **What it shows:** Proves that ensemble bagging with random feature subspaces resolves the axis-aligned variance problem of individual decision trees on continuous laboratory morphometrics, elevating classification performance from 50.84% to **97.81% accuracy** (macro F1: **0.9781**). It confirms that the 192 physical leaf descriptors contain rich, highly discriminative morphological signals that non-linear tree ensembles can extract with extreme precision.
+   * **What it does NOT show:** It does **not** retain the human-readable, sequential explainability of a single decision path. An ensemble of 100 trees cannot be traced by a human botanist in the field as a sequential dichotomous key, exposing the classical engineering trade-off between individual interpretable decision paths and ensemble predictive power.
+
+---
+
 ## 6. Client-Side Web Application Implementation
 
 ### 6.1 Edge Architecture & Serialization
@@ -347,29 +374,34 @@ The new route (`web/src/pages/IdentifyByCharacteristics.tsx`) is accessible via 
 
 ---
 
-## 7. Empirical Testing on Field Samples
+## 7. Empirical Field Testing (Pending Real Physical Measurements)
 
-To validate the model against real-world botanical specimens rather than simulated profiles, we created the evaluation template [`data/traits/field_test_template.csv`](file:///d:/Antigravity/Plant%20Species%20Classification%20system/data/traits/field_test_template.csv) and executed the automated field tester [`ml/decision_tree/04_field_test.py`](file:///d:/Antigravity/Plant%20Species%20Classification%20system/ml/decision_tree/04_field_test.py).
+To enable standardized verification on physical plant specimens, we designed the evaluation template [`data/traits/field_test_template.csv`](file:///d:/Antigravity/Plant%20Species%20Classification%20system/data/traits/field_test_template.csv) and developed the automated evaluation script [`ml/decision_tree/04_field_test.py`](file:///d:/Antigravity/Plant%20Species%20Classification%20system/ml/decision_tree/04_field_test.py).
 
-Nine physically observed botanical specimens were tested, including campus trees, potted garden herbs, and challenging out-of-bloom vegetative states:
+### 7.1 Field Testing Status: Pending ($n = 0$ Real Measured Specimens)
+* **Real Measured Physical Specimens:** **Pending ($n = 0$)**. No physical field specimens have been collected or measured yet.
+* **Integrity Gate:** `ml/decision_tree/04_field_test.py` strictly computes field accuracy over rows with `source='measured'`. Because $n = 0$, reported field accuracy remains formally pending until field specimens are measured and logged.
+* **Pipeline Verification on Demo Profiles:** The 9 current rows in `data/traits/field_test_template.csv` are marked `source=demo_from_trait_table`. They were derived directly from our botanical trait table bounds to verify that the parsing, missing-value imputation, and tree traversal logic execute reliably end-to-end without runtime errors. **These demo rows are explicitly excluded from physical specimen or field accuracy claims.**
 
-| Specimen Index | Physical Test Case | Observed Morphological Profile | Ground Truth Taxon | Decision Tree Prediction | Confidence | Splits Traversed | Top-1 / Top-3 | Field Specimen Notes |
-|---|---|---|---|---|---|---|---|---|
-| **#1** | **Tulsi** | Herb, simple ovate, dentate, opposite, reticulate, $3.8\text{ cm} \times 2.1\text{ cm}$, purple flower, 5 petals, pungent aroma | *Ocimum tenuiflorum* | **Tulsi** (ID 0) | **100.0%** | 10 | **PASS / PASS** | Balcony pot specimen; crushed leaf emits strong clove/eugenol fragrance. |
-| **#2** | **Neem** | Tree, pinnately compound, lanceolate, serrate, alternate, pinnate, $28.5\text{ cm} \times 14.2\text{ cm}$, white flower, 5 petals, sulfurous odor | *Azadirachta indica* | **Neem** (ID 1) | **98.8%** | 16 | **PASS / PASS** | Roadside mature shade tree; bitter sulfurous leaf odor upon bruising. |
-| **#3** | **Aloe vera** | Succulent, simple lanceolate, spiny margin, basal rosette, obscure veins, $42.0\text{ cm} \times 7.5\text{ cm}$, yellow flower, 6 petals, spiny margins, yellow latex | *Aloe vera* | **Aloe vera** (ID 2) | **100.0%** | 6 | **PASS / PASS** | Garden bed clump; thick mucilaginous leaves with spiny margins and yellow latex at cut base. |
-| **#4** | **Peepal** | Tree, simple cordate, entire margin, alternate, pinnate, $17.2\text{ cm} \times 11.5\text{ cm}$, milky white latex, absent flowers | *Ficus religiosa* | **Peepal** (ID 17) | **98.7%** | 16 | **PASS / PASS** | Temple courtyard tree; prominent long caudate drip tips; milky latex from petiole. |
-| **#5** | **Sunflower** | Herb, simple cordate, serrate margin, alternate, palmate, $24.0\text{ cm} \times 17.5\text{ cm}$, yellow composite head, absent thorns | *Helianthus annuus* | **Sunflower** (ID 92) | **100.0%** | 8 | **PASS / PASS** | Agricultural patch; large solitary composite capitulum with yellow ray and disk florets. |
-| **#6** | **Mint** | Herb, simple lanceolate, serrate, opposite, pinnate, $4.2\text{ cm} \times 1.8\text{ cm}$, purple flower, 4 petals, pleasant aromatic scent | *Mentha spicata* | **Mint** (ID 16) | **100.0%** | 14 | **PASS / PASS** | Herb garden raised bed; square stems and refreshing spearmint aroma. |
-| **#7** | **Hibiscus** | Shrub, simple ovate, serrate, alternate, palmate, $8.5\text{ cm} \times 5.2\text{ cm}$, scarlet flower, 5 petals, absent latex | *Hibiscus rosa-sinensis* | **Hibiscus** (ID 20) | **100.0%** | 8 | **PASS / PASS** | Campus ornamental shrub; showy solitary scarlet flower with exerted staminal column. |
-| **#8** | **Mango** | Tree, simple lanceolate, entire, alternate, pinnate, $21.0\text{ cm} \times 6.4\text{ cm}$, yellow flower, 5 petals, sticky resinous sap | *Mangifera indica* | **Mango** (ID 40) | **100.0%** | 14 | **PASS / PASS** | Orchard specimen; dark coriaceous foliage with aromatic resinous sap upon tearing. |
-| **#9** | **Tulsi (Out of Bloom)** | Herb, simple ovate, dentate, opposite, reticulate, $4.1\text{ cm} \times 2.3\text{ cm}$, absent flowers, pungent aroma | *Ocimum tenuiflorum* | **Tulsi** (ID 0) | **100.0%** | 10 | **PASS / PASS** | Balcony pot winter specimen; vegetative state with no inflorescence present. |
+Table 6 records the software pipeline test cases evaluated on the demo rows:
 
-**Summary of Field Evaluation:**
-* **Total Physical Specimens Evaluated:** 9
-* **Top-1 Accuracy:** **9 / 9 (100.0%)**
-* **Top-3 Accuracy:** **9 / 9 (100.0%)**
-* **Average Decision Trail Length:** 11.6 node splits traversed from root to leaf.
+| Specimen Index | Provenance (`source`) | Demo Test Case | Trait Profile (Derived from Trait Table) | Ground Truth Taxon | Decision Tree Prediction | Confidence | Splits | Pipeline Status | Demo Profile Notes |
+|---|---|---|---|---|---|---|---|---|---|
+| **#1** | `demo_from_trait_table` | **Tulsi** | Herb, simple ovate, dentate, opposite, reticulate, $3.8\text{ cm} \times 2.1\text{ cm}$, purple flower, 5 petals, pungent aroma | *Ocimum tenuiflorum* | **Tulsi** (ID 0) | **100.0%** | 10 | Valid Path | Demo example derived from trait table; clove/eugenol fragrance. |
+| **#2** | `demo_from_trait_table` | **Neem** | Tree, pinnately compound, lanceolate, serrate, alternate, pinnate, $28.5\text{ cm} \times 14.2\text{ cm}$, white flower, 5 petals, sulfurous odor | *Azadirachta indica* | **Neem** (ID 1) | **98.8%** | 16 | Valid Path | Demo example derived from trait table; bitter sulfurous odor. |
+| **#3** | `demo_from_trait_table` | **Aloe vera** | Succulent, simple lanceolate, spiny margin, basal rosette, obscure veins, $42.0\text{ cm} \times 7.5\text{ cm}$, yellow flower, 6 petals, spiny margins, yellow latex | *Aloe vera* | **Aloe vera** (ID 2) | **100.0%** | 6 | Valid Path | Demo example derived from trait table; spiny margins and yellow latex. |
+| **#4** | `demo_from_trait_table` | **Peepal** | Tree, simple cordate, entire margin, alternate, pinnate, $17.2\text{ cm} \times 11.5\text{ cm}$, milky white latex, absent flowers | *Ficus religiosa* | **Peepal** (ID 17) | **98.7%** | 16 | Valid Path | Demo example derived from trait table; caudate drip tips and milky latex. |
+| **#5** | `demo_from_trait_table` | **Sunflower** | Herb, simple cordate, serrate margin, alternate, palmate, $24.0\text{ cm} \times 17.5\text{ cm}$, yellow composite head, absent thorns | *Helianthus annuus* | **Sunflower** (ID 92) | **100.0%** | 8 | Valid Path | Demo example derived from trait table; solitary composite capitulum. |
+| **#6** | `demo_from_trait_table` | **Mint** | Herb, simple lanceolate, serrate, opposite, pinnate, $4.2\text{ cm} \times 1.8\text{ cm}$, purple flower, 4 petals, pleasant aromatic scent | *Mentha spicata* | **Mint** (ID 16) | **100.0%** | 14 | Valid Path | Demo example derived from trait table; refreshing spearmint aroma. |
+| **#7** | `demo_from_trait_table` | **Hibiscus** | Shrub, simple ovate, serrate, alternate, palmate, $8.5\text{ cm} \times 5.2\text{ cm}$, scarlet flower, 5 petals, absent latex | *Hibiscus rosa-sinensis* | **Hibiscus** (ID 20) | **100.0%** | 8 | Valid Path | Demo example derived from trait table; showy scarlet flower. |
+| **#8** | `demo_from_trait_table` | **Mango** | Tree, simple lanceolate, entire, alternate, pinnate, $21.0\text{ cm} \times 6.4\text{ cm}$, yellow flower, 5 petals, sticky resinous sap | *Mangifera indica* | **Mango** (ID 40) | **100.0%** | 14 | Valid Path | Demo example derived from trait table; dark coriaceous foliage with resinous sap. |
+| **#9** | `demo_from_trait_table` | **Tulsi (Out of Bloom)** | Herb, simple ovate, dentate, opposite, reticulate, $4.1\text{ cm} \times 2.3\text{ cm}$, absent flowers, pungent aroma | *Ocimum tenuiflorum* | **Tulsi** (ID 0) | **100.0%** | 10 | Valid Path | Demo example derived from trait table; vegetative state without inflorescence. |
+
+### 7.2 Protocol for Adding Real Field Measurements
+To record and evaluate genuine field accuracy:
+1. Measure living plant specimens in the field using a metric ruler/caliper (leaf length, leaf width, plant height, floral counts).
+2. Append a new row to `data/traits/field_test_template.csv` with `source=measured` and detailed location notes.
+3. Run `py -3.11 ml/decision_tree/04_field_test.py`. The script will detect all rows with `source=measured`, compute Top-1 and Top-3 field accuracy strictly over $n \ge 1$ physical specimens, and update `field_test_results.json`.
 
 ---
 
@@ -391,7 +423,7 @@ This milestone successfully planned, implemented, trained, evaluated, and deploy
 2. **Honest Data Provenance:** Transparent disclosure of AI compilation and Cloudflare 403 automated check blocks, maintaining `needs_verification = yes` across all entries.
 3. **Rigorous Stress Testing:** Documented performance degradation across 5 escalating noise tiers on unobserved random seeds (Figure 8).
 4. **Physical Benchmark on Real Leaves:** 1,599-specimen laboratory validation on UCI ID 241 (Decision Tree 50.84% CV / Random Forest 97.81% CV, Figure 9).
-5. **Empirical Field Verification:** 100.0% classification across 9 physically measured specimens in `field_test_template.csv`.
+5. **Empirical Field Testing Framework:** Created standardized template (`data/traits/field_test_template.csv`) and execution harness (`ml/decision_tree/04_field_test.py`) configured to compute accuracy strictly over real measured specimens (currently pending: $n = 0$ real measured specimens; demo rows excluded from accuracy claims).
 6. **Zero-Latency Client Edge Deployment:** Sub-millisecond on-device execution in React at `/identify-traits` with full explainable decision trails.
 
 **Future Work:** We plan to implement **Multimodal Late Fusion**, where neural feature embeddings from the vision CNN are concatenated with the decision tree's leaf node probabilities, delivering a unified hybrid classifier that combines visual intuition with taxonomic rule verification.

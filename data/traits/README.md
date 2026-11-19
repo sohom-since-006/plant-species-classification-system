@@ -14,7 +14,7 @@ This directory contains the curated botanical trait tables and field evaluation 
 * `traits_pilot.csv`: The initial 10-species pilot trait table created during the pilot verification phase.
 * `simulated_plant_traits_dataset.csv`: 5,000 simulated specimen records (100 per species) generated with uniform sampling within cited bounds, ±6% Gaussian measurement noise, 3% novice observer error, and 5–8% realistic field missingness.
 * `simulated_plant_traits_clean.csv`: Cleaned dataset with missing values handled (numerical median, categorical `'missing_or_unobserved'`).
-* `field_test_template.csv`: Standardized evaluation template containing physical specimen measurements (9 test specimens) used to test the decision tree in `ml/decision_tree/04_field_test.py`.
+* `field_test_template.csv`: Standardized evaluation template containing specimen traits and a mandatory `source` column (`source=demo_from_trait_table` vs `source=measured`). Evaluated by `ml/decision_tree/04_field_test.py`.
 
 ---
 
@@ -22,22 +22,18 @@ This directory contains the curated botanical trait tables and field evaluation 
 
 | Column Name | Data Type | Units / Valid Values | Description |
 |---|---|---|---|
-| `id` | Integer | `0` to `149` | Unique species index matching `ml/species_list.csv` and `supabase/seed.sql`. |
+| `species_id` | Integer | `0` to `149` | Unique species index matching `ml/species_list.csv` and `supabase/seed.sql`. |
 | `common_name` | String | e.g., "Tulsi", "Neem" | Primary English / vernacular name. |
-| `scientific_name` | String | e.g., "Ocimum tenuiflorum" | Botanical binomial nomenclature (Genus + specific epithet). |
-| `family` | String | e.g., "Lamiaceae", "Meliaceae" | Taxonomic botanical family. |
+| `source` | Categorical | `measured`, `demo_from_trait_table` | Data provenance: `measured` for real physical specimens; `demo_from_trait_table` for synthetic demo rows. |
 | `plant_growth_habit` | Categorical | `herb`, `shrub`, `tree`, `climber`, `grass`, `succulent`, `aquatic`, `epiphyte` | Primary architectural and structural growth habit. |
 | `leaf_type` | Categorical | `simple`, `pinnately_compound`, `bipinnately_compound`, `palmately_compound`, `trifoliolate`, `scale_or_reduced` | Primary morphological leaf complexity. |
 | `leaf_shape` | Categorical | `ovate`, `elliptic`, `lanceolate`, `linear`, `oblong`, `cordate`, `orbicular`, `palmate_lobed`, `pinnatisect`, `spatulate`, `needle_or_scale` | Geometric outline of typical mature leaf blade / leaflet. |
 | `leaf_margin` | Categorical | `entire`, `serrate`, `dentate`, `crenate`, `lobed`, `undulate`, `ciliate`, `spiny` | Outer margin boundary anatomy. |
 | `leaf_arrangement` | Categorical | `alternate`, `opposite`, `whorled`, `basal_rosette`, `spiral`, `distichous` | Phyllotaxis (arrangement of leaves along the stem). |
 | `leaf_venation` | Categorical | `pinnate`, `palmate`, `parallel`, `reticulate`, `arcuate`, `absent_or_obscure` | Pattern of veins in the blade. |
-| `leaf_length_min_cm` | Float | Centimeters (cm) | Minimum typical mature leaf blade / compound leaf length. |
-| `leaf_length_max_cm` | Float | Centimeters (cm) | Maximum typical mature leaf blade / compound leaf length. |
-| `leaf_width_min_cm` | Float | Centimeters (cm) | Minimum typical mature leaf blade / compound leaf width. |
-| `leaf_width_max_cm` | Float | Centimeters (cm) | Maximum typical mature leaf blade / compound leaf width. |
-| `plant_height_min_m` | Float | Meters (m) | Minimum typical mature vegetative plant height. |
-| `plant_height_max_m` | Float | Meters (m) | Maximum typical mature vegetative plant height. |
+| `leaf_length_cm` | Float | Centimeters (cm) | Typical mature leaf blade / compound leaf length. |
+| `leaf_width_cm` | Float | Centimeters (cm) | Typical mature leaf blade / compound leaf width. |
+| `plant_height_m` | Float | Meters (m) | Typical mature vegetative plant height. |
 | `flower_present` | Categorical | `yes`, `no`, `inconspicuous_or_absent` | Whether flowers are typically noticeable and present. |
 | `flower_color` | Categorical | `white`, `yellow`, `red_or_crimson`, `pink_or_magenta`, `purple_or_violet`, `blue`, `orange`, `green`, `brown_or_inconspicuous`, `multi_colored`, `not_applicable` | Conspicuous floral coloration. |
 | `petal_count` | Integer | `0` to `20` (capped) | Distinct petal / corolla lobe count (`0` for composite heads, apetalous flowers, or gymnosperms). |
@@ -45,13 +41,7 @@ This directory contains the curated botanical trait tables and field evaluation 
 | `thorns_or_spines` | Categorical | `absent`, `spines_or_thorns_on_stem`, `prickles`, `spiny_leaf_margins` | Presence and type of physical defensive armatures. |
 | `latex_or_sap` | Categorical | `watery_clear`, `milky_white`, `colored_yellow_red`, `sticky_resinous`, `none_apparent` | Biochemical exudate upon mechanical fracture of leaf or stem. |
 | `aroma_of_crushed_leaves` | Categorical | `none_or_faint`, `aromatic_pleasant`, `pungent_or_strong`, `citrusy`, `foul_or_rank`, `sweet_floral` | Volatile secondary metabolites released upon crushing foliage. |
-| `evidence_habit_morphology` | Categorical | `flora`, `observational`, `unverified` | Evidence basis for habit, leaf type, shape, margin, arrangement, and venation. |
-| `evidence_numeric_dimensions` | Categorical | `flora`, `observational`, `unverified` | Evidence basis for quantitative leaf and height dimensions. |
-| `evidence_floral` | Categorical | `flora`, `observational`, `unverified` | Evidence basis for floral presence, color, petal count, and composite status. |
-| `evidence_sensory_special` | Categorical | `flora`, `observational`, `unverified` | Evidence basis for aroma, sap/latex, and thorns/spines. |
-| `needs_verification` | Categorical | `no`, `yes` | Quality flag: `yes` for all 50 species due to Cloudflare-blocked automated verification. |
-| `source_url` | String | Valid HTTP/HTTPS URL | Botanical reference source. |
-| `source_notes` | String | Text description | Specific volume, page number, and diagnostic notes. |
+| `notes` | String | Text | Habitat, collection site, or specimen observations. |
 
 ---
 
@@ -126,3 +116,11 @@ All 50 species are compiled from authoritative references (Flora of China, Kew P
   * Substantial ($\pm 20\%$ noise, 20% missing): 97.7% Top-1, 98.2% Top-3
   * Severe ($\pm 30\%$ noise, 30% missing): 95.3% Top-1, 96.0% Top-3
   * Extreme ($\pm 40\%$ noise, 35% missing): 93.7% Top-1, 94.8% Top-3
+
+---
+
+## 5. Field Testing Status
+
+* **Status:** **Pending ($n = 0$ real measured specimens)**.
+* **Current Template Rows:** The 9 rows in `data/traits/field_test_template.csv` are marked `source=demo_from_trait_table`. They are synthetic profiles derived directly from the trait table bounds for pipeline testing and verification only.
+* **Integrity Gate:** `ml/decision_tree/04_field_test.py` strictly computes field accuracy over rows with `source=measured`. Until real physical specimens are measured and entered with `source=measured`, reported field accuracy remains pending ($n = 0$).

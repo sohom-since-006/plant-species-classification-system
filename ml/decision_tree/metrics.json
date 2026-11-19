@@ -37,8 +37,10 @@
       "architecture": "EfficientNet-B0 (plant_model.v2.onnx)",
       "modalities": "Raw RGB Imagery",
       "full_150_species": {
-        "samples_test": 4500,
+        "samples_test": 4939,
+        "correct_top1_count": 4143,
         "top1_accuracy": 0.8388,
+        "correct_top5_count": 4662,
         "top5_accuracy": 0.9439,
         "macro_precision": 0.8379,
         "macro_recall": 0.8349,
@@ -46,7 +48,9 @@
       },
       "restricted_to_50_tree_species": {
         "samples_test": 1564,
+        "correct_top1_count": 1264,
         "top1_accuracy": 0.8082,
+        "correct_top5_count": 1465,
         "top5_accuracy": 0.9367,
         "macro_precision": 0.8332,
         "macro_recall": 0.8078,
@@ -54,6 +58,7 @@
         "closed_world_50_accuracy": 0.9335,
         "closed_world_50_macro_f1": 0.9280
       },
+      "draft_figure_replacement": "The earlier draft figure of 92.4% was incorrect and replaced by the actual test set evaluation (83.88% on all 4,939 test images; 80.82% on the 1,564 test images of the 50 species).",
       "comparability_notice": "CNN (real photographs) and Decision Tree (simulated morphological traits) operate on distinct modalities and are not directly comparable."
     },
     "uci_leaves_real_data_benchmark": {
@@ -66,6 +71,14 @@
       "decision_tree_macro_f1": 0.5074,
       "random_forest_cv_acc": 0.9781,
       "random_forest_macro_f1": 0.9781
+    },
+    "field_testing": {
+      "status": "pending",
+      "n_measured_specimens": 0,
+      "top1_accuracy": null,
+      "top3_accuracy": null,
+      "demo_rows_count": 9,
+      "notice": "The 9 rows in field_test_template.csv are derived from the trait table (source=demo_from_trait_table) for pipeline verification only. Field accuracy is pending real measured specimens."
     }
   },
   "top_features": [
