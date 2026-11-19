@@ -6,8 +6,8 @@ import { ShieldCheck, Info } from '@/components/icons';
 const footerLinks = [
   { to: '/', label: 'Home' },
   { to: '/classify', label: 'Identify' },
-  { to: '/explore', label: 'Explore' },
   { to: '/identify-traits', label: 'Traits' },
+  { to: '/explore', label: 'Explore' },
   { to: '/history', label: 'History' },
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/help', label: 'Help' },

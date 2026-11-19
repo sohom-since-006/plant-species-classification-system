@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Navigation Regression After Classification', () => {
-  test('navigates classify -> history -> explore -> dashboard -> traits -> help (footer) with visible content', async ({
+  test('navigates classify -> traits -> explore -> history -> dashboard -> help (footer) with visible content', async ({
     page,
   }) => {
     test.setTimeout(90000);
@@ -19,12 +19,12 @@ test.describe('Navigation Regression After Classification', () => {
     const saveButton = page.locator('button:has-text("Save to History")').first();
     await expect(saveButton).toBeVisible({ timeout: 45000 });
 
-    // 4. Navigate to History via navbar link
-    const historyLink = page.locator('nav a[href="/history"]').first();
-    await historyLink.click();
-    const historyHeading = page.getByRole('heading', { level: 1 });
-    await expect(historyHeading).toBeVisible({ timeout: 10000 });
-    await expect(historyHeading).toContainText('Identification');
+    // 4. Navigate to Traits via navbar link
+    const traitsLink = page.locator('nav a[href="/identify-traits"]').first();
+    await traitsLink.click();
+    const traitsHeading = page.getByRole('heading', { level: 1 });
+    await expect(traitsHeading).toBeVisible({ timeout: 10000 });
+    await expect(traitsHeading).toContainText('Identify');
     await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
 
     // 5. Navigate to Explore via navbar link
@@ -35,20 +35,20 @@ test.describe('Navigation Regression After Classification', () => {
     await expect(exploreHeading).toContainText('Explore');
     await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
 
-    // 6. Navigate to Dashboard via navbar link
+    // 6. Navigate to History via navbar link
+    const historyLink = page.locator('nav a[href="/history"]').first();
+    await historyLink.click();
+    const historyHeading = page.getByRole('heading', { level: 1 });
+    await expect(historyHeading).toBeVisible({ timeout: 10000 });
+    await expect(historyHeading).toContainText('Identification');
+    await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
+
+    // 7. Navigate to Dashboard via navbar link
     const dashboardLink = page.locator('nav a[href="/dashboard"]').first();
     await dashboardLink.click();
     const dashboardHeading = page.getByRole('heading', { level: 1 });
     await expect(dashboardHeading).toBeVisible({ timeout: 10000 });
     await expect(dashboardHeading).toContainText('Dashboard');
-    await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
-
-    // 7. Navigate to Traits via navbar link
-    const traitsLink = page.locator('nav a[href="/identify-traits"]').first();
-    await traitsLink.click();
-    const traitsHeading = page.getByRole('heading', { level: 1 });
-    await expect(traitsHeading).toBeVisible({ timeout: 10000 });
-    await expect(traitsHeading).toContainText('Identify');
     await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
 
     // 8. Confirm Help is reachable via footer

@@ -8,8 +8,8 @@ import { Home } from '@/pages/Home';
 import { NotFound } from '@/pages/NotFound';
 
 describe('Landing Page & Layout Components', () => {
-  it('renders Navbar with links and CTA', () => {
-    render(
+  it('renders Navbar with links in correct order (Home -> Traits -> Explore) and CTA', () => {
+    const { container } = render(
       <BrowserRouter>
         <Navbar />
       </BrowserRouter>,
@@ -17,7 +17,11 @@ describe('Landing Page & Layout Components', () => {
 
     expect(screen.getByLabelText(/Plant Species Classification System Home/i)).toBeInTheDocument();
     expect(screen.getAllByText('Identify').length).toBeGreaterThan(0);
-    expect(screen.getByRole('link', { name: 'Traits' })).toBeInTheDocument();
+
+    // Verify link labels and order in desktop nav pill
+    const desktopLinks = container.querySelectorAll('.hidden.md\\:flex a[data-glow]');
+    const labels = Array.from(desktopLinks).map((el) => el.textContent?.trim());
+    expect(labels).toEqual(['Home', 'Traits', 'Explore', 'History', 'Dashboard']);
     expect(screen.queryByRole('link', { name: 'Help' })).not.toBeInTheDocument();
   });
 
