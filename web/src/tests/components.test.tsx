@@ -1,10 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { PageHero } from '@/components/layout/PageHero';
 import { Home } from '@/pages/Home';
+import { NotFound } from '@/pages/NotFound';
 
 describe('Landing Page & Layout Components', () => {
   it('renders Navbar with links and CTA', () => {
@@ -26,8 +27,8 @@ describe('Landing Page & Layout Components', () => {
     );
 
     expect(screen.getByText(/Identification is probabilistic/i)).toBeInTheDocument();
-    expect(screen.getByText(/GBIF/i)).toBeInTheDocument();
-    expect(screen.getByText(/iNaturalist/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/GBIF/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/iNaturalist/i).length).toBeGreaterThan(0);
   });
 
   it('renders Home page with headline and tagline', () => {
@@ -61,6 +62,22 @@ describe('Landing Page & Layout Components', () => {
     expect(screen.getByText('Title')).toBeInTheDocument();
     expect(screen.getByText('Botanical Subtitle')).toBeInTheDocument();
     expect(screen.getByText('Test description text')).toBeInTheDocument();
+  });
+
+  it('renders 404 Specimen Not Found when navigating to removed /about route', () => {
+    render(
+      <MemoryRouter initialEntries={['/about']}>
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </MemoryRouter>,
+    );
+
+    expect(screen.getByText(/404 BOTANICAL VOID/i)).toBeInTheDocument();
+    expect(screen.getByText(/Lost in the Canopy/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/The page or botanical specimen you are searching for does not exist/i),
+    ).toBeInTheDocument();
   });
 });
 

@@ -44,7 +44,7 @@ atmosphere with a dark gradient overlay to keep text at 4.5:1 contrast.
 
 ### Navbar (fixed, `top-4 left-0 right-0 z-50`, `px-8 lg:px-16`)
 - Left: `liquid-glass` circle (h-12 w-12) with italic "P" in `font-heading text-2xl`.
-- Center (hidden on mobile): `liquid-glass rounded-full p-1.5` pill with links Home, Identify, Explore, History, Dashboard, About, plus a solid CTA "Identify" with ArrowUpRight.
+- Center (hidden on mobile): `liquid-glass rounded-full p-1.5` pill with links Home, Explore, Traits, History, Dashboard, Help, plus a solid CTA "Identify" with ArrowUpRight.
 - Right: theme toggle (glass circle, sun/moon) and the avatar/Login button. Mobile: hamburger menu in a glass sheet.
 
 ### 1. Hero (`h-screen`)
@@ -106,8 +106,8 @@ Local (IndexedDB) for guests, Supabase `predictions` for logged-in users, thumbn
 Read `metrics.json` and model statistics: metric cards (Top-1, Top-5, macro F1, ECE, species count, model size), images per species graph, Indian vs global distribution split chart, family breakdown chart, confusion matrix heatmap (zoom and hover), top confused pairs, per-class table (sortable), and reliability calibration diagram. Show "TBD" if a value is missing. Never invent numbers.
 *(PROPOSED dependencies: Recharts for charts and react-simple-maps / lightweight GeoJSON SVG for maps; require user approval before installing).*
 
-### `/about`, `/help`, 404
-About: objective, dataset and licenses, model architecture, methodology flowchart, privacy note, and limitations. Help: photo tips (single leaf or flower, good light, plain background, fill the frame), supported formats, FAQ accordion, limits (110-130 species only), disclaimers. A friendly leaf-themed 404.
+### `/help`, 404
+Help: photo tips (single leaf or flower, good light, plain background, fill the frame), supported formats, FAQ accordion, limits (150 species), disclaimers, open dataset credits & licenses, model citation, and key system limitations. A friendly leaf-themed 404.
 
 ### Auth (optional, P2)
 Supabase email and Google login in a glass modal; guests everywhere else. Sync theme to `profiles`.

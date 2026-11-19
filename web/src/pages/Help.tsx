@@ -8,6 +8,8 @@ import {
   ChevronDown,
   Info,
   ArrowUpRight,
+  Globe,
+  ShieldCheck,
 } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
@@ -296,6 +298,151 @@ export function Help() {
               })}
             </div>
           )}
+        </section>
+
+        {/* Credits, Provenance & Limitations Section */}
+        <section
+          id="credits-limitations"
+          aria-labelledby="credits-heading"
+          className="space-y-8 pt-8 border-t border-white/10"
+        >
+          <div className="space-y-2">
+            <div className="flex items-center gap-2 text-[var(--accent)] font-mono text-xs uppercase tracking-wider">
+              <Globe className="w-4 h-4" />
+              <span>Open Science, Credits &amp; System Constraints</span>
+            </div>
+            <h2 id="credits-heading" className="font-heading italic text-2xl sm:text-3xl text-[var(--fg)]">
+              Dataset Credits, Model Citation &amp; Limitations
+            </h2>
+            <p className="text-xs sm:text-sm text-[var(--fg-muted)] leading-relaxed font-body">
+              PlantAI is built entirely on open biodiversity science, public community observations, and privacy-preserving client-side execution.
+            </p>
+          </div>
+
+          {/* Dataset & Community Credits */}
+          <div className="liquid-glass rounded-3xl p-6 md:p-8 space-y-4 border border-white/10">
+            <h3 className="font-heading italic text-xl text-[var(--fg)]">
+              Biodiversity Imagery &amp; Naturalist Credits
+            </h3>
+            <p className="text-xs sm:text-sm text-[var(--fg-muted)] leading-relaxed font-body">
+              All training and herbarium reference imagery are sourced from <strong>iNaturalist</strong> research-grade observations mediated through the <strong>Global Biodiversity Information Facility (GBIF)</strong>. Observations are published under standard open Creative Commons licenses:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+                <span className="font-mono text-xs text-emerald-400 font-semibold">CC0 1.0</span>
+                <p className="text-xs text-[var(--fg)] font-medium">Public Domain Dedication</p>
+                <p className="text-[11px] text-[var(--fg-subtle)]">Free worldwide dedication with no restrictions.</p>
+              </div>
+              <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+                <span className="font-mono text-xs text-sky-400 font-semibold">CC-BY 4.0</span>
+                <p className="text-xs text-[var(--fg)] font-medium">Attribution Required</p>
+                <p className="text-[11px] text-[var(--fg-subtle)]">Free usage with explicit credit to naturalist observers.</p>
+              </div>
+              <div className="liquid-glass-subtle p-4 rounded-2xl border border-white/5 space-y-1">
+                <span className="font-mono text-xs text-amber-400 font-semibold">CC-BY-NC 4.0</span>
+                <p className="text-xs text-[var(--fg)] font-medium">Non-Commercial ShareAlike</p>
+                <p className="text-[11px] text-[var(--fg-subtle)]">Open educational and academic research access.</p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs">
+              <p className="text-[var(--fg-muted)]">
+                Every species card and photograph credits the original naturalist contributor.
+              </p>
+              <a
+                href="/species/credits.json"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 font-mono text-[var(--accent)] hover:underline"
+              >
+                <span>View Raw Dataset Credits JSON</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Model Citation & Client-Side Privacy */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="liquid-glass rounded-3xl p-6 md:p-8 space-y-3 border border-white/10">
+              <div className="flex items-center gap-2 text-teal-400 font-mono text-xs uppercase">
+                <Lightbulb className="w-4 h-4" />
+                <span>Model Architecture &amp; Citation</span>
+              </div>
+              <h3 className="font-heading italic text-lg text-[var(--fg)]">
+                EfficientNet-B0 Neural Vision
+              </h3>
+              <ul className="space-y-2 text-xs font-mono text-[var(--fg-muted)]">
+                <li className="flex justify-between border-b border-white/5 pb-1">
+                  <span>Architecture</span>
+                  <span className="text-[var(--fg)]">EfficientNet-B0</span>
+                </li>
+                <li className="flex justify-between border-b border-white/5 pb-1">
+                  <span>Cataloged Taxa</span>
+                  <span className="text-[var(--fg)]">{SPECIES_COUNT_LABEL}</span>
+                </li>
+                <li className="flex justify-between border-b border-white/5 pb-1">
+                  <span>Inference Runtime</span>
+                  <span className="text-[var(--fg)]">ONNX Runtime Web (WASM SIMD)</span>
+                </li>
+                <li className="flex justify-between border-b border-white/5 pb-1">
+                  <span>Calibration</span>
+                  <span className="text-[var(--fg)]">Temperature Scaled (T=0.7181)</span>
+                </li>
+                <li className="flex justify-between border-b border-white/5 pb-1">
+                  <span>Test-Set Top-1 (N=4,939)</span>
+                  <span className="text-emerald-400 font-bold">83.88% (4,143 / 4,939)</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Test-Set Top-5 (N=4,939)</span>
+                  <span className="text-emerald-400 font-bold">94.39% (4,662 / 4,939)</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="liquid-glass rounded-3xl p-6 md:p-8 space-y-3 border border-white/10 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs uppercase">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span>Privacy Architecture</span>
+                </div>
+                <h3 className="font-heading italic text-lg text-[var(--fg)]">
+                  Photos Never Leave Your Browser
+                </h3>
+                <p className="text-xs text-[var(--fg-muted)] leading-relaxed font-body">
+                  PlantAI operates completely client-side. When you capture or upload a photograph, image bytes are loaded directly into browser canvas memory and evaluated on your local CPU or GPU using WebAssembly.
+                </p>
+                <p className="text-xs text-[var(--fg-muted)] leading-relaxed font-body">
+                  No images, telemetry, or personal identity are ever uploaded to remote servers. No accounts exist, and session history is stored locally in temporary browser memory.
+                </p>
+              </div>
+              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-[11px] font-mono">
+                ✓ 100% Client-Side • Zero Cloud Photo Transfer
+              </div>
+            </div>
+          </div>
+
+          {/* System Limitations & Safety Protocol */}
+          <div className="rounded-3xl p-6 md:p-8 bg-rose-500/10 border border-rose-500/30 space-y-3">
+            <div className="flex items-center gap-2 text-rose-300 font-mono text-xs uppercase">
+              <Info className="w-4 h-4 shrink-0" />
+              <span>Botanical Limitations &amp; Safety Protocol</span>
+            </div>
+            <h3 className="font-heading italic text-xl text-rose-200">
+              Key System Limitations
+            </h3>
+            <div className="space-y-2 text-xs text-rose-100/90 leading-relaxed font-body">
+              <p>
+                <strong>1. Closed-World Taxonomy (150 Species):</strong> PlantAI is specifically trained to recognize 150 species. Non-plant images, wild uncataloged species, or unusual cultivars trigger dual rejection gates (&lt; 57% calibrated probability or embedding distance &tau; &gt; 0.32) and are marked &quot;Not confident&quot;.
+              </p>
+              <p>
+                <strong>2. Dependency on Photo Quality:</strong> Classification accuracy depends heavily on the photo. Blur, poor lighting, extreme angles, or non-flowering vegetative specimens have higher visual ambiguity. Always examine the confidence tier and review Top-3 candidate matches.
+              </p>
+              <p>
+                <strong>3. Not a Medical or Foraging Tool:</strong> NEVER ingest, brew teas from, or apply any wild plant based on algorithmic computer vision predictions. Lethal toxic species closely resemble harmless herbs. Always consult a certified botanist or regional poison authority.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Botanical Safety Bottom Card */}

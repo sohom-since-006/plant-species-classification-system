@@ -41,7 +41,6 @@ const Explore = lazyWithRetry(() => import('@/pages/Explore').then((m) => ({ def
 const SpeciesDetail = lazyWithRetry(() => import('@/pages/SpeciesDetail').then((m) => ({ default: m.SpeciesDetail })));
 const History = lazyWithRetry(() => import('@/pages/History').then((m) => ({ default: m.History })));
 const Dashboard = lazyWithRetry(() => import('@/pages/Dashboard').then((m) => ({ default: m.Dashboard })));
-const About = lazyWithRetry(() => import('@/pages/About').then((m) => ({ default: m.About })));
 const Help = lazyWithRetry(() => import('@/pages/Help').then((m) => ({ default: m.Help })));
 const NotFound = lazyWithRetry(() => import('@/pages/NotFound').then((m) => ({ default: m.NotFound })));
 
@@ -105,14 +104,6 @@ export function AppRouter() {
               element={
                 <Suspense fallback={<PageLoadingFallback />}>
                   <Dashboard />
-                </Suspense>
-              }
-            />
-            <Route
-              path="about"
-              element={
-                <Suspense fallback={<PageLoadingFallback />}>
-                  <About />
                 </Suspense>
               }
             />

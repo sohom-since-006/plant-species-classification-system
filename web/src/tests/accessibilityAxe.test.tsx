@@ -10,7 +10,6 @@ import { Explore } from '@/pages/Explore';
 import { SpeciesDetail } from '@/pages/SpeciesDetail';
 import { Dashboard } from '@/pages/Dashboard';
 import { History } from '@/pages/History';
-import { About } from '@/pages/About';
 import { Help } from '@/pages/Help';
 import { NotFound } from '@/pages/NotFound';
 import { Navbar } from '@/components/layout/Navbar';
@@ -113,10 +112,6 @@ describe('Automated Axe Accessibility Audits (Sequential Suite)', () => {
     {
       name: 'History Page',
       render: () => renderWithProviders(<History />, '/history'),
-    },
-    {
-      name: 'About Page',
-      render: () => renderWithProviders(<About />, '/about'),
     },
     {
       name: 'Help Page',

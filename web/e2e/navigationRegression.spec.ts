@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Navigation Regression After Classification', () => {
-  test('navigates classify -> history -> explore -> dashboard -> about with visible content', async ({
+  test('navigates classify -> history -> explore -> dashboard -> help with visible content', async ({
     page,
   }) => {
     test.setTimeout(90000);
@@ -43,12 +43,12 @@ test.describe('Navigation Regression After Classification', () => {
     await expect(dashboardHeading).toContainText('Dashboard');
     await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
 
-    // 7. Navigate to About via navbar link
-    const aboutLink = page.locator('nav a[href="/about"]').first();
-    await aboutLink.click();
-    const aboutHeading = page.getByRole('heading', { level: 1 });
-    await expect(aboutHeading).toBeVisible({ timeout: 10000 });
-    await expect(aboutHeading).toContainText('About');
+    // 7. Navigate to Help via navbar link
+    const helpLink = page.locator('nav a[href="/help"]').first();
+    await helpLink.click();
+    const helpHeading = page.getByRole('heading', { level: 1 });
+    await expect(helpHeading).toBeVisible({ timeout: 10000 });
+    await expect(helpHeading).toContainText('Field Guide');
     await expect(page.locator('main > div')).toHaveCSS('opacity', '1', { timeout: 10000 });
   });
 });

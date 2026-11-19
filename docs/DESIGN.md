@@ -10,7 +10,7 @@ text. Think "luxury film title card meets field guide".
 | Area | Treatment |
 |---|---|
 | **Landing page** (`/`) | Full-screen cinematic video sections, parallax depth layers, blur-in text |
-| **App pages** (`/classify`, `/explore`, `/history`, `/dashboard`, `/about`, `/help`) | Interactive live background: drifting glowing spores (dark) or pollen (light) that softly react to cursor proximity, paired with cursor-following spotlight glows on glass cards and buttons. Content max-width 1200 px. |
+| **App pages** (`/classify`, `/explore`, `/identify-traits`, `/history`, `/dashboard`, `/help`) | Interactive live background: drifting glowing spores (dark) or pollen (light) that softly react to cursor proximity, paired with cursor-following spotlight glows on glass cards and buttons. Content max-width 1200 px. |
 
 ## Themes
 - **Dark (default):** black canvas, white text, glass fills near-transparent.
