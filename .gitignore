@@ -37,6 +37,8 @@ htmlcov/
 ml/data/
 ml/checkpoints/
 ml/runs/
+data/uci_leaves.zip
+data/uci_leaves/**/data/
 *.pt
 *.pth
 

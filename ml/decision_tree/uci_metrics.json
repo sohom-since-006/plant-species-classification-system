@@ -1,0 +1,32 @@
+{
+  "dataset": {
+    "name": "One-hundred plant species leaves data set (UCI ID 241)",
+    "citation": "Cope, J. et al. (2012); Mallah, C., Cope, J., Orwell, J. (2013)",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "samples_count": 1599,
+    "species_count": 100,
+    "features_count": 192,
+    "feature_breakdown": {
+      "shape_descriptors": 64,
+      "texture_descriptors": 64,
+      "margin_descriptors": 64
+    }
+  },
+  "evaluation_protocol": "Stratified 5-Fold Cross-Validation",
+  "models": {
+    "decision_tree": {
+      "accuracy": 0.5084,
+      "macro_precision": 0.5687,
+      "macro_recall": 0.5083,
+      "macro_f1": 0.5074,
+      "max_depth": 16
+    },
+    "random_forest": {
+      "accuracy": 0.9781,
+      "macro_precision": 0.9793,
+      "macro_recall": 0.9781,
+      "macro_f1": 0.9781,
+      "n_estimators": 100
+    }
+  }
+}

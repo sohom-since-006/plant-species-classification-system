@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef, lazy, Suspense } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
@@ -724,7 +724,19 @@ export function Classify() {
         italicSubtitle="Private Edge Intelligence"
         description={`Drop a leaf or blossom photograph to identify across ${SPECIES_COUNT_LABEL}, calibrated confidence, attention heatmaps, and look-alike nuances. 100% processed locally on your device.`}
         className="!pt-4 md:!pt-6 !min-h-[220px] pb-6"
-      />
+      >
+        <div className="mt-4 flex items-center justify-center">
+          <Link
+            to="/identify-traits"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono bg-emerald-950/40 text-emerald-300 border border-emerald-800/40 hover:bg-emerald-900/60 transition-colors"
+          >
+            <span>Have botanical traits without a photo?</span>
+            <span className="font-semibold text-emerald-400 flex items-center gap-1">
+              Try Decision Tree Key <ArrowUpRight className="w-3 h-3" />
+            </span>
+          </Link>
+        </div>
+      </PageHero>
 
       {/* Main Container */}
       <div className="max-w-5xl mx-auto px-6 md:px-12 space-y-8">

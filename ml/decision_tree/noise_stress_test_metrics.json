@@ -1,0 +1,107 @@
+[
+  {
+    "tier": "Tier 1 (Baseline)",
+    "noise_std_percent": 6,
+    "observer_error_percent": 3,
+    "missingness_percent": 6,
+    "frozen_dt": {
+      "top1_accuracy": 0.997,
+      "top3_accuracy": 0.998,
+      "macro_f1": 0.997
+    },
+    "retrained_dt": {
+      "top1_accuracy": 0.995,
+      "top3_accuracy": 0.995,
+      "macro_f1": 0.995
+    },
+    "random_forest": {
+      "top1_accuracy": 0.999,
+      "top3_accuracy": 1.0,
+      "macro_f1": 0.999
+    }
+  },
+  {
+    "tier": "Tier 2 (Moderate)",
+    "noise_std_percent": 12,
+    "observer_error_percent": 6,
+    "missingness_percent": 12,
+    "frozen_dt": {
+      "top1_accuracy": 0.991,
+      "top3_accuracy": 0.994,
+      "macro_f1": 0.991
+    },
+    "retrained_dt": {
+      "top1_accuracy": 0.995,
+      "top3_accuracy": 0.996,
+      "macro_f1": 0.995
+    },
+    "random_forest": {
+      "top1_accuracy": 0.998,
+      "top3_accuracy": 1.0,
+      "macro_f1": 0.998
+    }
+  },
+  {
+    "tier": "Tier 3 (Substantial)",
+    "noise_std_percent": 20,
+    "observer_error_percent": 12,
+    "missingness_percent": 20,
+    "frozen_dt": {
+      "top1_accuracy": 0.977,
+      "top3_accuracy": 0.9815,
+      "macro_f1": 0.9772
+    },
+    "retrained_dt": {
+      "top1_accuracy": 0.986,
+      "top3_accuracy": 0.989,
+      "macro_f1": 0.986
+    },
+    "random_forest": {
+      "top1_accuracy": 0.996,
+      "top3_accuracy": 1.0,
+      "macro_f1": 0.996
+    }
+  },
+  {
+    "tier": "Tier 4 (Severe)",
+    "noise_std_percent": 30,
+    "observer_error_percent": 20,
+    "missingness_percent": 30,
+    "frozen_dt": {
+      "top1_accuracy": 0.9535,
+      "top3_accuracy": 0.9605,
+      "macro_f1": 0.954
+    },
+    "retrained_dt": {
+      "top1_accuracy": 0.979,
+      "top3_accuracy": 0.987,
+      "macro_f1": 0.9793
+    },
+    "random_forest": {
+      "top1_accuracy": 0.987,
+      "top3_accuracy": 1.0,
+      "macro_f1": 0.9872
+    }
+  },
+  {
+    "tier": "Tier 5 (Extreme)",
+    "noise_std_percent": 40,
+    "observer_error_percent": 25,
+    "missingness_percent": 35,
+    "frozen_dt": {
+      "top1_accuracy": 0.9365,
+      "top3_accuracy": 0.9485,
+      "macro_f1": 0.937
+    },
+    "retrained_dt": {
+      "top1_accuracy": 0.98,
+      "top3_accuracy": 0.987,
+      "macro_f1": 0.98
+    },
+    "random_forest": {
+      "top1_accuracy": 0.985,
+      "top3_accuracy": 1.0,
+      "macro_f1": 0.985
+    }
+  }
+]

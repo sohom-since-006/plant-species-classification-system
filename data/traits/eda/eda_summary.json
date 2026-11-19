@@ -1,0 +1,56 @@
+{
+  "n_samples": 5000,
+  "n_species": 50,
+  "growth_habit_distribution": {
+    "tree": 17,
+    "herb": 13,
+    "shrub": 7,
+    "climber": 5,
+    "succulent": 4,
+    "grass": 3,
+    "aquatic": 1
+  },
+  "numeric_stats": {
+    "leaf_length_cm": {
+      "mean": 30.98,
+      "std": 57.96,
+      "median": 14.27,
+      "min": 0.73,
+      "max": 536.27
+    },
+    "leaf_width_cm": {
+      "mean": 11.1,
+      "std": 15.83,
+      "median": 5.52,
+      "min": 0.15,
+      "max": 131.67
+    },
+    "plant_height_m": {
+      "mean": 6.31,
+      "std": 7.14,
+      "median": 3.05,
+      "min": 0.19,
+      "max": 32.48
+    },
+    "petal_count": {
+      "mean": 3.9,
+      "std": 3.02,
+      "median": 5.0,
+      "min": 0.0,
+      "max": 16.0
+    }
+  },
+  "missing_counts": {
+    "plant_height_m": 236,
+    "flower_color": 413,
+    "latex_or_sap": 206,
+    "aroma_of_crushed_leaves": 352
+  },
+  "generated_figures": [
+    "01_growth_habit_distribution.png",
+    "02_leaf_dimensions_aspect_ratio.png",
+    "03_flower_color_and_petal_counts.png",
+    "04_feature_correlation_heatmap.png",
+    "05_lookalike_taxa_separability.png"
+  ]
+}

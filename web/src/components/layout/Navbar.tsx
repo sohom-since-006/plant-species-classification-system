@@ -7,6 +7,7 @@ import { BrandLogo } from '@/components/brand';
 const links = [
   { to: '/', label: 'Home' },
   { to: '/explore', label: 'Explore' },
+  { to: '/identify-traits', label: 'Traits' },
   { to: '/history', label: 'History' },
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/about', label: 'About' },

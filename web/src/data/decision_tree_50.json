@@ -1,0 +1,1787 @@
+{
+  "metadata": {
+    "name": "PlantAI Botanical Characteristic Decision Tree",
+    "version": "1.0.0",
+    "classes_count": 50,
+    "tree_depth": 17,
+    "leaf_nodes": 52,
+    "accuracy": 0.995,
+    "macro_f1": 0.995,
+    "criterion": "gini"
+  },
+  "numeric_features": [
+    "leaf_length_cm",
+    "leaf_width_cm",
+    "plant_height_m",
+    "petal_count"
+  ],
+  "categorical_features": [
+    "plant_growth_habit",
+    "leaf_type",
+    "leaf_shape",
+    "leaf_margin",
+    "leaf_arrangement",
+    "leaf_venation",
+    "flower_present",
+    "flower_color",
+    "is_composite_head",
+    "thorns_or_spines",
+    "latex_or_sap",
+    "aroma_of_crushed_leaves"
+  ],
+  "encoded_feature_names": [
+    "leaf_length_cm",
+    "leaf_width_cm",
+    "plant_height_m",
+    "petal_count",
+    "plant_growth_habit_aquatic",
+    "plant_growth_habit_climber",
+    "plant_growth_habit_grass",
+    "plant_growth_habit_herb",
+    "plant_growth_habit_shrub",
+    "plant_growth_habit_succulent",
+    "plant_growth_habit_tree",
+    "leaf_type_bipinnately_compound",
+    "leaf_type_pinnately_compound",
+    "leaf_type_scale_or_reduced",
+    "leaf_type_simple",
+    "leaf_type_trifoliolate",
+    "leaf_shape_cordate",
+    "leaf_shape_elliptic",
+    "leaf_shape_lanceolate",
+    "leaf_shape_linear",
+    "leaf_shape_oblong",
+    "leaf_shape_orbicular",
+    "leaf_shape_ovate",
+    "leaf_shape_palmate_lobed",
+    "leaf_shape_spatulate",
+    "leaf_margin_crenate",
+    "leaf_margin_dentate",
+    "leaf_margin_entire",
+    "leaf_margin_lobed",
+    "leaf_margin_pinnatisect",
+    "leaf_margin_serrate",
+    "leaf_margin_spiny",
+    "leaf_margin_undulate",
+    "leaf_arrangement_alternate",
+    "leaf_arrangement_basal_rosette",
+    "leaf_arrangement_distichous",
+    "leaf_arrangement_opposite",
+    "leaf_arrangement_spiral",
+    "leaf_arrangement_whorled",
+    "leaf_venation_absent_or_obscure",
+    "leaf_venation_palmate",
+    "leaf_venation_parallel",
+    "leaf_venation_pinnate",
+    "flower_present_inconspicuous_or_absent",
+    "flower_present_yes",
+    "flower_color_blue",
+    "flower_color_brown_or_inconspicuous",
+    "flower_color_green",
+    "flower_color_missing_or_unobserved",
+    "flower_color_orange",
+    "flower_color_pink_or_magenta",
+    "flower_color_purple_or_violet",
+    "flower_color_red_or_crimson",
+    "flower_color_white",
+    "flower_color_yellow",
+    "is_composite_head_no",
+    "is_composite_head_yes",
+    "thorns_or_spines_absent",
+    "thorns_or_spines_prickles",
+    "thorns_or_spines_spines_or_thorns_on_stem",
+    "thorns_or_spines_spiny_leaf_margins",
+    "latex_or_sap_colored_yellow_red",
+    "latex_or_sap_milky_white",
+    "latex_or_sap_missing_or_unobserved",
+    "latex_or_sap_none_apparent",
+    "latex_or_sap_sticky_resinous",
+    "latex_or_sap_watery_clear",
+    "aroma_of_crushed_leaves_aromatic_pleasant",
+    "aroma_of_crushed_leaves_citrusy",
+    "aroma_of_crushed_leaves_missing_or_unobserved",
+    "aroma_of_crushed_leaves_none_or_faint",
+    "aroma_of_crushed_leaves_pungent_or_strong",
+    "aroma_of_crushed_leaves_sweet_floral"
+  ],
+  "species_catalog": {
+    "0": {
+      "id": 0,
+      "common_name": "Tulsi",
+      "scientific_name": "Ocimum tenuiflorum",
+      "family": "Lamiaceae"
+    },
+    "1": {
+      "id": 1,
+      "common_name": "Neem",
+      "scientific_name": "Azadirachta indica",
+      "family": "Meliaceae"
+    },
+    "2": {
+      "id": 2,
+      "common_name": "Aloe vera",
+      "scientific_name": "Aloe vera",
+      "family": "Asphodelaceae"
+    },
+    "3": {
+      "id": 3,
+      "common_name": "Turmeric",
+      "scientific_name": "Curcuma longa",
+      "family": "Zingiberaceae"
+    },
+    "8": {
+      "id": 8,
+      "common_name": "Amla",
+      "scientific_name": "Phyllanthus emblica",
+      "family": "Phyllanthaceae"
+    },
+    "9": {
+      "id": 9,
+      "common_name": "Curry leaf",
+      "scientific_name": "Murraya koenigii",
+      "family": "Rutaceae"
+    },
+    "11": {
+      "id": 11,
+      "common_name": "Bael",
+      "scientific_name": "Aegle marmelos",
+      "family": "Rutaceae"
+    },
+    "14": {
+      "id": 14,
+      "common_name": "Betel",
+      "scientific_name": "Piper betle",
+      "family": "Piperaceae"
+    },
+    "15": {
+      "id": 15,
+      "common_name": "Lemongrass",
+      "scientific_name": "Cymbopogon citratus",
+      "family": "Poaceae"
+    },
+    "16": {
+      "id": 16,
+      "common_name": "Mint",
+      "scientific_name": "Mentha spicata",
+      "family": "Lamiaceae"
+    },
+    "17": {
+      "id": 17,
+      "common_name": "Peepal",
+      "scientific_name": "Ficus religiosa",
+      "family": "Moraceae"
+    },
+    "18": {
+      "id": 18,
+      "common_name": "Banyan",
+      "scientific_name": "Ficus benghalensis",
+      "family": "Moraceae"
+    },
+    "20": {
+      "id": 20,
+      "common_name": "Hibiscus",
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "family": "Malvaceae"
+    },
+    "21": {
+      "id": 21,
+      "common_name": "Marigold",
+      "scientific_name": "Tagetes erecta",
+      "family": "Asteraceae"
+    },
+    "22": {
+      "id": 22,
+      "common_name": "Jasmine",
+      "scientific_name": "Jasminum sambac",
+      "family": "Oleaceae"
+    },
+    "23": {
+      "id": 23,
+      "common_name": "Lotus",
+      "scientific_name": "Nelumbo nucifera",
+      "family": "Nelumbonaceae"
+    },
+    "24": {
+      "id": 24,
+      "common_name": "Rose",
+      "scientific_name": "Rosa indica",
+      "family": "Rosaceae"
+    },
+    "25": {
+      "id": 25,
+      "common_name": "Frangipani",
+      "scientific_name": "Plumeria rubra",
+      "family": "Apocynaceae"
+    },
+    "26": {
+      "id": 26,
+      "common_name": "Oleander",
+      "scientific_name": "Nerium oleander",
+      "family": "Apocynaceae"
+    },
+    "27": {
+      "id": 27,
+      "common_name": "Bougainvillea",
+      "scientific_name": "Bougainvillea spectabilis",
+      "family": "Nyctaginaceae"
+    },
+    "28": {
+      "id": 28,
+      "common_name": "Butterfly pea",
+      "scientific_name": "Clitoria ternatea",
+      "family": "Fabaceae"
+    },
+    "29": {
+      "id": 29,
+      "common_name": "Night jasmine",
+      "scientific_name": "Nyctanthes arbor-tristis",
+      "family": "Oleaceae"
+    },
+    "30": {
+      "id": 30,
+      "common_name": "Gulmohar",
+      "scientific_name": "Delonix regia",
+      "family": "Fabaceae"
+    },
+    "31": {
+      "id": 31,
+      "common_name": "Periwinkle",
+      "scientific_name": "Catharanthus roseus",
+      "family": "Apocynaceae"
+    },
+    "32": {
+      "id": 32,
+      "common_name": "Ixora",
+      "scientific_name": "Ixora coccinea",
+      "family": "Rubiaceae"
+    },
+    "38": {
+      "id": 38,
+      "common_name": "Amaltas",
+      "scientific_name": "Cassia fistula",
+      "family": "Fabaceae"
+    },
+    "40": {
+      "id": 40,
+      "common_name": "Mango",
+      "scientific_name": "Mangifera indica",
+      "family": "Anacardiaceae"
+    },
+    "41": {
+      "id": 41,
+      "common_name": "Coconut",
+      "scientific_name": "Cocos nucifera",
+      "family": "Arecaceae"
+    },
+    "42": {
+      "id": 42,
+      "common_name": "Banana",
+      "scientific_name": "Musa acuminata",
+      "family": "Musaceae"
+    },
+    "43": {
+      "id": 43,
+      "common_name": "Papaya",
+      "scientific_name": "Carica papaya",
+      "family": "Caricaceae"
+    },
+    "44": {
+      "id": 44,
+      "common_name": "Guava",
+      "scientific_name": "Psidium guajava",
+      "family": "Myrtaceae"
+    },
+    "45": {
+      "id": 45,
+      "common_name": "Pomegranate",
+      "scientific_name": "Punica granatum",
+      "family": "Lythraceae"
+    },
+    "47": {
+      "id": 47,
+      "common_name": "Tamarind",
+      "scientific_name": "Tamarindus indica",
+      "family": "Fabaceae"
+    },
+    "51": {
+      "id": 51,
+      "common_name": "Lemon",
+      "scientific_name": "Citrus limon",
+      "family": "Rutaceae"
+    },
+    "54": {
+      "id": 54,
+      "common_name": "Bamboo",
+      "scientific_name": "Bambusa vulgaris",
+      "family": "Poaceae"
+    },
+    "60": {
+      "id": 60,
+      "common_name": "Rice",
+      "scientific_name": "Oryza sativa",
+      "family": "Poaceae"
+    },
+    "67": {
+      "id": 67,
+      "common_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "family": "Solanaceae"
+    },
+    "68": {
+      "id": 68,
+      "common_name": "Chilli",
+      "scientific_name": "Capsicum annuum",
+      "family": "Solanaceae"
+    },
+    "70": {
+      "id": 70,
+      "common_name": "Okra",
+      "scientific_name": "Abelmoschus esculentus",
+      "family": "Malvaceae"
+    },
+    "80": {
+      "id": 80,
+      "common_name": "Money plant",
+      "scientific_name": "Epipremnum aureum",
+      "family": "Araceae"
+    },
+    "81": {
+      "id": 81,
+      "common_name": "Snake plant",
+      "scientific_name": "Dracaena trifasciata",
+      "family": "Asparagaceae"
+    },
+    "83": {
+      "id": 83,
+      "common_name": "Monstera",
+      "scientific_name": "Monstera deliciosa",
+      "family": "Araceae"
+    },
+    "85": {
+      "id": 85,
+      "common_name": "Rubber plant",
+      "scientific_name": "Ficus elastica",
+      "family": "Moraceae"
+    },
+    "87": {
+      "id": 87,
+      "common_name": "Prickly pear",
+      "scientific_name": "Opuntia ficus-indica",
+      "family": "Cactaceae"
+    },
+    "91": {
+      "id": 91,
+      "common_name": "Patharchatta",
+      "scientific_name": "Kalanchoe pinnata",
+      "family": "Crassulaceae"
+    },
+    "92": {
+      "id": 92,
+      "common_name": "Sunflower",
+      "scientific_name": "Helianthus annuus",
+      "family": "Asteraceae"
+    },
+    "97": {
+      "id": 97,
+      "common_name": "Sweet basil",
+      "scientific_name": "Ocimum basilicum",
+      "family": "Lamiaceae"
+    },
+    "108": {
+      "id": 108,
+      "common_name": "Sensitive plant",
+      "scientific_name": "Mimosa pudica",
+      "family": "Fabaceae"
+    },
+    "137": {
+      "id": 137,
+      "common_name": "Nag Champa",
+      "scientific_name": "Plumeria pudica",
+      "family": "Apocynaceae"
+    },
+    "145": {
+      "id": 145,
+      "common_name": "Crown of thorns",
+      "scientific_name": "Euphorbia milii",
+      "family": "Euphorbiaceae"
+    }
+  },
+  "root": {
+    "id": 0,
+    "is_leaf": false,
+    "feature": "leaf_shape_palmate_lobed",
+    "threshold": 0.5,
+    "left": {
+      "id": 1,
+      "is_leaf": false,
+      "feature": "leaf_type_trifoliolate",
+      "threshold": 0.5,
+      "left": {
+        "id": 2,
+        "is_leaf": false,
+        "feature": "leaf_venation_parallel",
+        "threshold": 0.5,
+        "left": {
+          "id": 3,
+          "is_leaf": false,
+          "feature": "thorns_or_spines_absent",
+          "threshold": 0.5,
+          "left": {
+            "id": 4,
+            "is_leaf": false,
+            "feature": "plant_growth_habit_shrub",
+            "threshold": 0.5,
+            "left": {
+              "id": 5,
+              "is_leaf": false,
+              "feature": "leaf_length_cm",
+              "threshold": 20.96,
+              "left": {
+                "id": 6,
+                "is_leaf": false,
+                "feature": "petal_count",
+                "threshold": 0.5,
+                "left": {
+                  "id": 7,
+                  "is_leaf": true,
+                  "predicted_id": 27,
+                  "predicted_name": "Bougainvillea",
+                  "confidence": 1.0,
+                  "samples": 80,
+                  "top_predictions": [
+                    {
+                      "species_id": 27,
+                      "common_name": "Bougainvillea",
+                      "scientific_name": "Bougainvillea spectabilis",
+                      "family": "Nyctaginaceae",
+                      "probability": 1.0
+                    }
+                  ]
+                },
+                "right": {
+                  "id": 8,
+                  "is_leaf": false,
+                  "feature": "leaf_arrangement_spiral",
+                  "threshold": 0.5,
+                  "left": {
+                    "id": 9,
+                    "is_leaf": false,
+                    "feature": "leaf_margin_crenate",
+                    "threshold": 0.5,
+                    "left": {
+                      "id": 10,
+                      "is_leaf": true,
+                      "predicted_id": 108,
+                      "predicted_name": "Sensitive plant",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 108,
+                          "common_name": "Sensitive plant",
+                          "scientific_name": "Mimosa pudica",
+                          "family": "Fabaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "right": {
+                      "id": 11,
+                      "is_leaf": true,
+                      "predicted_id": 51,
+                      "predicted_name": "Lemon",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 51,
+                          "common_name": "Lemon",
+                          "scientific_name": "Citrus limon",
+                          "family": "Rutaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "predicted_id": 51,
+                    "predicted_name": "Lemon",
+                    "confidence": 0.5
+                  },
+                  "right": {
+                    "id": 12,
+                    "is_leaf": false,
+                    "feature": "leaf_type_simple",
+                    "threshold": 0.5,
+                    "left": {
+                      "id": 13,
+                      "is_leaf": true,
+                      "predicted_id": 87,
+                      "predicted_name": "Prickly pear",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 87,
+                          "common_name": "Prickly pear",
+                          "scientific_name": "Opuntia ficus-indica",
+                          "family": "Cactaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "right": {
+                      "id": 14,
+                      "is_leaf": true,
+                      "predicted_id": 145,
+                      "predicted_name": "Crown of thorns",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 145,
+                          "common_name": "Crown of thorns",
+                          "scientific_name": "Euphorbia milii",
+                          "family": "Euphorbiaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "predicted_id": 87,
+                    "predicted_name": "Prickly pear",
+                    "confidence": 0.5
+                  },
+                  "predicted_id": 51,
+                  "predicted_name": "Lemon",
+                  "confidence": 0.25
+                },
+                "predicted_id": 27,
+                "predicted_name": "Bougainvillea",
+                "confidence": 0.2
+              },
+              "right": {
+                "id": 15,
+                "is_leaf": true,
+                "predicted_id": 2,
+                "predicted_name": "Aloe vera",
+                "confidence": 1.0,
+                "samples": 80,
+                "top_predictions": [
+                  {
+                    "species_id": 2,
+                    "common_name": "Aloe vera",
+                    "scientific_name": "Aloe vera",
+                    "family": "Asphodelaceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "predicted_id": 2,
+              "predicted_name": "Aloe vera",
+              "confidence": 0.1667
+            },
+            "right": {
+              "id": 16,
+              "is_leaf": false,
+              "feature": "leaf_width_cm",
+              "threshold": 2.79,
+              "left": {
+                "id": 17,
+                "is_leaf": true,
+                "predicted_id": 45,
+                "predicted_name": "Pomegranate",
+                "confidence": 1.0,
+                "samples": 80,
+                "top_predictions": [
+                  {
+                    "species_id": 45,
+                    "common_name": "Pomegranate",
+                    "scientific_name": "Punica granatum",
+                    "family": "Lythraceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "right": {
+                "id": 18,
+                "is_leaf": true,
+                "predicted_id": 24,
+                "predicted_name": "Rose",
+                "confidence": 1.0,
+                "samples": 80,
+                "top_predictions": [
+                  {
+                    "species_id": 24,
+                    "common_name": "Rose",
+                    "scientific_name": "Rosa indica",
+                    "family": "Rosaceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "predicted_id": 24,
+              "predicted_name": "Rose",
+              "confidence": 0.5
+            },
+            "predicted_id": 2,
+            "predicted_name": "Aloe vera",
+            "confidence": 0.125
+          },
+          "right": {
+            "id": 19,
+            "is_leaf": false,
+            "feature": "leaf_arrangement_distichous",
+            "threshold": 0.5,
+            "left": {
+              "id": 20,
+              "is_leaf": false,
+              "feature": "leaf_venation_palmate",
+              "threshold": 0.5,
+              "left": {
+                "id": 21,
+                "is_leaf": false,
+                "feature": "leaf_arrangement_spiral",
+                "threshold": 0.5,
+                "left": {
+                  "id": 22,
+                  "is_leaf": false,
+                  "feature": "plant_growth_habit_climber",
+                  "threshold": 0.5,
+                  "left": {
+                    "id": 23,
+                    "is_leaf": false,
+                    "feature": "plant_growth_habit_tree",
+                    "threshold": 0.5,
+                    "left": {
+                      "id": 24,
+                      "is_leaf": false,
+                      "feature": "leaf_margin_dentate",
+                      "threshold": 0.5,
+                      "left": {
+                        "id": 25,
+                        "is_leaf": false,
+                        "feature": "leaf_arrangement_alternate",
+                        "threshold": 0.5,
+                        "left": {
+                          "id": 26,
+                          "is_leaf": false,
+                          "feature": "plant_growth_habit_shrub",
+                          "threshold": 0.5,
+                          "left": {
+                            "id": 27,
+                            "is_leaf": false,
+                            "feature": "is_composite_head_no",
+                            "threshold": 0.5,
+                            "left": {
+                              "id": 28,
+                              "is_leaf": true,
+                              "predicted_id": 21,
+                              "predicted_name": "Marigold",
+                              "confidence": 1.0,
+                              "samples": 80,
+                              "top_predictions": [
+                                {
+                                  "species_id": 21,
+                                  "common_name": "Marigold",
+                                  "scientific_name": "Tagetes erecta",
+                                  "family": "Asteraceae",
+                                  "probability": 1.0
+                                }
+                              ]
+                            },
+                            "right": {
+                              "id": 29,
+                              "is_leaf": false,
+                              "feature": "leaf_shape_lanceolate",
+                              "threshold": 0.5,
+                              "left": {
+                                "id": 30,
+                                "is_leaf": false,
+                                "feature": "plant_growth_habit_herb",
+                                "threshold": 0.5,
+                                "left": {
+                                  "id": 31,
+                                  "is_leaf": true,
+                                  "predicted_id": 91,
+                                  "predicted_name": "Patharchatta",
+                                  "confidence": 1.0,
+                                  "samples": 80,
+                                  "top_predictions": [
+                                    {
+                                      "species_id": 91,
+                                      "common_name": "Patharchatta",
+                                      "scientific_name": "Kalanchoe pinnata",
+                                      "family": "Crassulaceae",
+                                      "probability": 1.0
+                                    }
+                                  ]
+                                },
+                                "right": {
+                                  "id": 32,
+                                  "is_leaf": false,
+                                  "feature": "flower_color_pink_or_magenta",
+                                  "threshold": 0.5,
+                                  "left": {
+                                    "id": 33,
+                                    "is_leaf": false,
+                                    "feature": "aroma_of_crushed_leaves_none_or_faint",
+                                    "threshold": 0.5,
+                                    "left": {
+                                      "id": 34,
+                                      "is_leaf": true,
+                                      "predicted_id": 97,
+                                      "predicted_name": "Sweet basil",
+                                      "confidence": 1.0,
+                                      "samples": 80,
+                                      "top_predictions": [
+                                        {
+                                          "species_id": 97,
+                                          "common_name": "Sweet basil",
+                                          "scientific_name": "Ocimum basilicum",
+                                          "family": "Lamiaceae",
+                                          "probability": 1.0
+                                        }
+                                      ]
+                                    },
+                                    "right": {
+                                      "id": 35,
+                                      "is_leaf": true,
+                                      "predicted_id": 31,
+                                      "predicted_name": "Periwinkle",
+                                      "confidence": 1.0,
+                                      "samples": 2,
+                                      "top_predictions": [
+                                        {
+                                          "species_id": 31,
+                                          "common_name": "Periwinkle",
+                                          "scientific_name": "Catharanthus roseus",
+                                          "family": "Apocynaceae",
+                                          "probability": 1.0
+                                        }
+                                      ]
+                                    },
+                                    "predicted_id": 97,
+                                    "predicted_name": "Sweet basil",
+                                    "confidence": 0.9756
+                                  },
+                                  "right": {
+                                    "id": 36,
+                                    "is_leaf": true,
+                                    "predicted_id": 31,
+                                    "predicted_name": "Periwinkle",
+                                    "confidence": 1.0,
+                                    "samples": 78,
+                                    "top_predictions": [
+                                      {
+                                        "species_id": 31,
+                                        "common_name": "Periwinkle",
+                                        "scientific_name": "Catharanthus roseus",
+                                        "family": "Apocynaceae",
+                                        "probability": 1.0
+                                      }
+                                    ]
+                                  },
+                                  "predicted_id": 31,
+                                  "predicted_name": "Periwinkle",
+                                  "confidence": 0.5
+                                },
+                                "predicted_id": 31,
+                                "predicted_name": "Periwinkle",
+                                "confidence": 0.3333
+                              },
+                              "right": {
+                                "id": 37,
+                                "is_leaf": true,
+                                "predicted_id": 16,
+                                "predicted_name": "Mint",
+                                "confidence": 1.0,
+                                "samples": 80,
+                                "top_predictions": [
+                                  {
+                                    "species_id": 16,
+                                    "common_name": "Mint",
+                                    "scientific_name": "Mentha spicata",
+                                    "family": "Lamiaceae",
+                                    "probability": 1.0
+                                  }
+                                ]
+                              },
+                              "predicted_id": 16,
+                              "predicted_name": "Mint",
+                              "confidence": 0.25
+                            },
+                            "predicted_id": 16,
+                            "predicted_name": "Mint",
+                            "confidence": 0.2
+                          },
+                          "right": {
+                            "id": 38,
+                            "is_leaf": false,
+                            "feature": "leaf_arrangement_whorled",
+                            "threshold": 0.5,
+                            "left": {
+                              "id": 39,
+                              "is_leaf": false,
+                              "feature": "petal_count",
+                              "threshold": 5.5,
+                              "left": {
+                                "id": 40,
+                                "is_leaf": true,
+                                "predicted_id": 32,
+                                "predicted_name": "Ixora",
+                                "confidence": 1.0,
+                                "samples": 80,
+                                "top_predictions": [
+                                  {
+                                    "species_id": 32,
+                                    "common_name": "Ixora",
+                                    "scientific_name": "Ixora coccinea",
+                                    "family": "Rubiaceae",
+                                    "probability": 1.0
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "id": 41,
+                                "is_leaf": true,
+                                "predicted_id": 22,
+                                "predicted_name": "Jasmine",
+                                "confidence": 1.0,
+                                "samples": 80,
+                                "top_predictions": [
+                                  {
+                                    "species_id": 22,
+                                    "common_name": "Jasmine",
+                                    "scientific_name": "Jasminum sambac",
+                                    "family": "Oleaceae",
+                                    "probability": 1.0
+                                  }
+                                ]
+                              },
+                              "predicted_id": 22,
+                              "predicted_name": "Jasmine",
+                              "confidence": 0.5
+                            },
+                            "right": {
+                              "id": 42,
+                              "is_leaf": true,
+                              "predicted_id": 26,
+                              "predicted_name": "Oleander",
+                              "confidence": 1.0,
+                              "samples": 80,
+                              "top_predictions": [
+                                {
+                                  "species_id": 26,
+                                  "common_name": "Oleander",
+                                  "scientific_name": "Nerium oleander",
+                                  "family": "Apocynaceae",
+                                  "probability": 1.0
+                                }
+                              ]
+                            },
+                            "predicted_id": 22,
+                            "predicted_name": "Jasmine",
+                            "confidence": 0.3333
+                          },
+                          "predicted_id": 16,
+                          "predicted_name": "Mint",
+                          "confidence": 0.125
+                        },
+                        "right": {
+                          "id": 43,
+                          "is_leaf": false,
+                          "feature": "leaf_width_cm",
+                          "threshold": 5.255,
+                          "left": {
+                            "id": 44,
+                            "is_leaf": true,
+                            "predicted_id": 68,
+                            "predicted_name": "Chilli",
+                            "confidence": 1.0,
+                            "samples": 80,
+                            "top_predictions": [
+                              {
+                                "species_id": 68,
+                                "common_name": "Chilli",
+                                "scientific_name": "Capsicum annuum",
+                                "family": "Solanaceae",
+                                "probability": 1.0
+                              }
+                            ]
+                          },
+                          "right": {
+                            "id": 45,
+                            "is_leaf": true,
+                            "predicted_id": 67,
+                            "predicted_name": "Tomato",
+                            "confidence": 1.0,
+                            "samples": 80,
+                            "top_predictions": [
+                              {
+                                "species_id": 67,
+                                "common_name": "Tomato",
+                                "scientific_name": "Solanum lycopersicum",
+                                "family": "Solanaceae",
+                                "probability": 1.0
+                              }
+                            ]
+                          },
+                          "predicted_id": 67,
+                          "predicted_name": "Tomato",
+                          "confidence": 0.5
+                        },
+                        "predicted_id": 16,
+                        "predicted_name": "Mint",
+                        "confidence": 0.1
+                      },
+                      "right": {
+                        "id": 46,
+                        "is_leaf": true,
+                        "predicted_id": 0,
+                        "predicted_name": "Tulsi",
+                        "confidence": 1.0,
+                        "samples": 80,
+                        "top_predictions": [
+                          {
+                            "species_id": 0,
+                            "common_name": "Tulsi",
+                            "scientific_name": "Ocimum tenuiflorum",
+                            "family": "Lamiaceae",
+                            "probability": 1.0
+                          }
+                        ]
+                      },
+                      "predicted_id": 0,
+                      "predicted_name": "Tulsi",
+                      "confidence": 0.0909
+                    },
+                    "right": {
+                      "id": 47,
+                      "is_leaf": false,
+                      "feature": "leaf_arrangement_alternate",
+                      "threshold": 0.5,
+                      "left": {
+                        "id": 48,
+                        "is_leaf": false,
+                        "feature": "leaf_shape_ovate",
+                        "threshold": 0.5,
+                        "left": {
+                          "id": 49,
+                          "is_leaf": true,
+                          "predicted_id": 44,
+                          "predicted_name": "Guava",
+                          "confidence": 1.0,
+                          "samples": 80,
+                          "top_predictions": [
+                            {
+                              "species_id": 44,
+                              "common_name": "Guava",
+                              "scientific_name": "Psidium guajava",
+                              "family": "Myrtaceae",
+                              "probability": 1.0
+                            }
+                          ]
+                        },
+                        "right": {
+                          "id": 50,
+                          "is_leaf": true,
+                          "predicted_id": 29,
+                          "predicted_name": "Night jasmine",
+                          "confidence": 1.0,
+                          "samples": 80,
+                          "top_predictions": [
+                            {
+                              "species_id": 29,
+                              "common_name": "Night jasmine",
+                              "scientific_name": "Nyctanthes arbor-tristis",
+                              "family": "Oleaceae",
+                              "probability": 1.0
+                            }
+                          ]
+                        },
+                        "predicted_id": 29,
+                        "predicted_name": "Night jasmine",
+                        "confidence": 0.5
+                      },
+                      "right": {
+                        "id": 51,
+                        "is_leaf": false,
+                        "feature": "leaf_width_cm",
+                        "threshold": 1.24,
+                        "left": {
+                          "id": 52,
+                          "is_leaf": true,
+                          "predicted_id": 8,
+                          "predicted_name": "Amla",
+                          "confidence": 1.0,
+                          "samples": 80,
+                          "top_predictions": [
+                            {
+                              "species_id": 8,
+                              "common_name": "Amla",
+                              "scientific_name": "Phyllanthus emblica",
+                              "family": "Phyllanthaceae",
+                              "probability": 1.0
+                            }
+                          ]
+                        },
+                        "right": {
+                          "id": 53,
+                          "is_leaf": false,
+                          "feature": "leaf_type_bipinnately_compound",
+                          "threshold": 0.5,
+                          "left": {
+                            "id": 54,
+                            "is_leaf": false,
+                            "feature": "leaf_type_simple",
+                            "threshold": 0.5,
+                            "left": {
+                              "id": 55,
+                              "is_leaf": false,
+                              "feature": "leaf_width_cm",
+                              "threshold": 5.02,
+                              "left": {
+                                "id": 56,
+                                "is_leaf": true,
+                                "predicted_id": 47,
+                                "predicted_name": "Tamarind",
+                                "confidence": 1.0,
+                                "samples": 80,
+                                "top_predictions": [
+                                  {
+                                    "species_id": 47,
+                                    "common_name": "Tamarind",
+                                    "scientific_name": "Tamarindus indica",
+                                    "family": "Fabaceae",
+                                    "probability": 1.0
+                                  }
+                                ]
+                              },
+                              "right": {
+                                "id": 57,
+                                "is_leaf": false,
+                                "feature": "leaf_margin_entire",
+                                "threshold": 0.5,
+                                "left": {
+                                  "id": 58,
+                                  "is_leaf": false,
+                                  "feature": "leaf_shape_ovate",
+                                  "threshold": 0.5,
+                                  "left": {
+                                    "id": 59,
+                                    "is_leaf": true,
+                                    "predicted_id": 1,
+                                    "predicted_name": "Neem",
+                                    "confidence": 0.9877,
+                                    "samples": 81,
+                                    "top_predictions": [
+                                      {
+                                        "species_id": 1,
+                                        "common_name": "Neem",
+                                        "scientific_name": "Azadirachta indica",
+                                        "family": "Meliaceae",
+                                        "probability": 0.9877
+                                      },
+                                      {
+                                        "species_id": 9,
+                                        "common_name": "Curry leaf",
+                                        "scientific_name": "Murraya koenigii",
+                                        "family": "Rutaceae",
+                                        "probability": 0.0123
+                                      }
+                                    ]
+                                  },
+                                  "right": {
+                                    "id": 60,
+                                    "is_leaf": true,
+                                    "predicted_id": 9,
+                                    "predicted_name": "Curry leaf",
+                                    "confidence": 1.0,
+                                    "samples": 79,
+                                    "top_predictions": [
+                                      {
+                                        "species_id": 9,
+                                        "common_name": "Curry leaf",
+                                        "scientific_name": "Murraya koenigii",
+                                        "family": "Rutaceae",
+                                        "probability": 1.0
+                                      }
+                                    ]
+                                  },
+                                  "predicted_id": 1,
+                                  "predicted_name": "Neem",
+                                  "confidence": 0.5
+                                },
+                                "right": {
+                                  "id": 61,
+                                  "is_leaf": true,
+                                  "predicted_id": 38,
+                                  "predicted_name": "Amaltas",
+                                  "confidence": 1.0,
+                                  "samples": 80,
+                                  "top_predictions": [
+                                    {
+                                      "species_id": 38,
+                                      "common_name": "Amaltas",
+                                      "scientific_name": "Cassia fistula",
+                                      "family": "Fabaceae",
+                                      "probability": 1.0
+                                    }
+                                  ]
+                                },
+                                "predicted_id": 1,
+                                "predicted_name": "Neem",
+                                "confidence": 0.3333
+                              },
+                              "predicted_id": 1,
+                              "predicted_name": "Neem",
+                              "confidence": 0.25
+                            },
+                            "right": {
+                              "id": 62,
+                              "is_leaf": false,
+                              "feature": "petal_count",
+                              "threshold": 2.0,
+                              "left": {
+                                "id": 63,
+                                "is_leaf": false,
+                                "feature": "leaf_shape_elliptic",
+                                "threshold": 0.5,
+                                "left": {
+                                  "id": 64,
+                                  "is_leaf": false,
+                                  "feature": "leaf_shape_cordate",
+                                  "threshold": 0.5,
+                                  "left": {
+                                    "id": 65,
+                                    "is_leaf": true,
+                                    "predicted_id": 18,
+                                    "predicted_name": "Banyan",
+                                    "confidence": 0.939,
+                                    "samples": 82,
+                                    "top_predictions": [
+                                      {
+                                        "species_id": 18,
+                                        "common_name": "Banyan",
+                                        "scientific_name": "Ficus benghalensis",
+                                        "family": "Moraceae",
+                                        "probability": 0.939
+                                      },
+                                      {
+                                        "species_id": 17,
+                                        "common_name": "Peepal",
+                                        "scientific_name": "Ficus religiosa",
+                                        "family": "Moraceae",
+                                        "probability": 0.0366
+                                      },
+                                      {
+                                        "species_id": 85,
+                                        "common_name": "Rubber plant",
+                                        "scientific_name": "Ficus elastica",
+                                        "family": "Moraceae",
+                                        "probability": 0.0244
+                                      }
+                                    ]
+                                  },
+                                  "right": {
+                                    "id": 66,
+                                    "is_leaf": true,
+                                    "predicted_id": 17,
+                                    "predicted_name": "Peepal",
+                                    "confidence": 0.9872,
+                                    "samples": 78,
+                                    "top_predictions": [
+                                      {
+                                        "species_id": 17,
+                                        "common_name": "Peepal",
+                                        "scientific_name": "Ficus religiosa",
+                                        "family": "Moraceae",
+                                        "probability": 0.9872
+                                      },
+                                      {
+                                        "species_id": 18,
+                                        "common_name": "Banyan",
+                                        "scientific_name": "Ficus benghalensis",
+                                        "family": "Moraceae",
+                                        "probability": 0.0128
+                                      }
+                                    ]
+                                  },
+                                  "predicted_id": 17,
+                                  "predicted_name": "Peepal",
+                                  "confidence": 0.5
+                                },
+                                "right": {
+                                  "id": 67,
+                                  "is_leaf": true,
+                                  "predicted_id": 85,
+                                  "predicted_name": "Rubber plant",
+                                  "confidence": 0.975,
+                                  "samples": 80,
+                                  "top_predictions": [
+                                    {
+                                      "species_id": 85,
+                                      "common_name": "Rubber plant",
+                                      "scientific_name": "Ficus elastica",
+                                      "family": "Moraceae",
+                                      "probability": 0.975
+                                    },
+                                    {
+                                      "species_id": 18,
+                                      "common_name": "Banyan",
+                                      "scientific_name": "Ficus benghalensis",
+                                      "family": "Moraceae",
+                                      "probability": 0.025
+                                    }
+                                  ]
+                                },
+                                "predicted_id": 17,
+                                "predicted_name": "Peepal",
+                                "confidence": 0.3333
+                              },
+                              "right": {
+                                "id": 68,
+                                "is_leaf": true,
+                                "predicted_id": 40,
+                                "predicted_name": "Mango",
+                                "confidence": 1.0,
+                                "samples": 80,
+                                "top_predictions": [
+                                  {
+                                    "species_id": 40,
+                                    "common_name": "Mango",
+                                    "scientific_name": "Mangifera indica",
+                                    "family": "Anacardiaceae",
+                                    "probability": 1.0
+                                  }
+                                ]
+                              },
+                              "predicted_id": 17,
+                              "predicted_name": "Peepal",
+                              "confidence": 0.25
+                            },
+                            "predicted_id": 1,
+                            "predicted_name": "Neem",
+                            "confidence": 0.125
+                          },
+                          "right": {
+                            "id": 69,
+                            "is_leaf": true,
+                            "predicted_id": 30,
+                            "predicted_name": "Gulmohar",
+                            "confidence": 1.0,
+                            "samples": 80,
+                            "top_predictions": [
+                              {
+                                "species_id": 30,
+                                "common_name": "Gulmohar",
+                                "scientific_name": "Delonix regia",
+                                "family": "Fabaceae",
+                                "probability": 1.0
+                              }
+                            ]
+                          },
+                          "predicted_id": 1,
+                          "predicted_name": "Neem",
+                          "confidence": 0.1111
+                        },
+                        "predicted_id": 1,
+                        "predicted_name": "Neem",
+                        "confidence": 0.1
+                      },
+                      "predicted_id": 1,
+                      "predicted_name": "Neem",
+                      "confidence": 0.0833
+                    },
+                    "predicted_id": 0,
+                    "predicted_name": "Tulsi",
+                    "confidence": 0.0435
+                  },
+                  "right": {
+                    "id": 70,
+                    "is_leaf": false,
+                    "feature": "petal_count",
+                    "threshold": 2.0,
+                    "left": {
+                      "id": 71,
+                      "is_leaf": false,
+                      "feature": "leaf_margin_entire",
+                      "threshold": 0.5,
+                      "left": {
+                        "id": 72,
+                        "is_leaf": true,
+                        "predicted_id": 83,
+                        "predicted_name": "Monstera",
+                        "confidence": 1.0,
+                        "samples": 80,
+                        "top_predictions": [
+                          {
+                            "species_id": 83,
+                            "common_name": "Monstera",
+                            "scientific_name": "Monstera deliciosa",
+                            "family": "Araceae",
+                            "probability": 1.0
+                          }
+                        ]
+                      },
+                      "right": {
+                        "id": 73,
+                        "is_leaf": true,
+                        "predicted_id": 80,
+                        "predicted_name": "Money plant",
+                        "confidence": 1.0,
+                        "samples": 80,
+                        "top_predictions": [
+                          {
+                            "species_id": 80,
+                            "common_name": "Money plant",
+                            "scientific_name": "Epipremnum aureum",
+                            "family": "Araceae",
+                            "probability": 1.0
+                          }
+                        ]
+                      },
+                      "predicted_id": 80,
+                      "predicted_name": "Money plant",
+                      "confidence": 0.5
+                    },
+                    "right": {
+                      "id": 74,
+                      "is_leaf": true,
+                      "predicted_id": 28,
+                      "predicted_name": "Butterfly pea",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 28,
+                          "common_name": "Butterfly pea",
+                          "scientific_name": "Clitoria ternatea",
+                          "family": "Fabaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "predicted_id": 28,
+                    "predicted_name": "Butterfly pea",
+                    "confidence": 0.3333
+                  },
+                  "predicted_id": 0,
+                  "predicted_name": "Tulsi",
+                  "confidence": 0.0385
+                },
+                "right": {
+                  "id": 75,
+                  "is_leaf": false,
+                  "feature": "leaf_length_cm",
+                  "threshold": 79.695,
+                  "left": {
+                    "id": 76,
+                    "is_leaf": false,
+                    "feature": "plant_growth_habit_tree",
+                    "threshold": 0.5,
+                    "left": {
+                      "id": 77,
+                      "is_leaf": true,
+                      "predicted_id": 137,
+                      "predicted_name": "Nag Champa",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 137,
+                          "common_name": "Nag Champa",
+                          "scientific_name": "Plumeria pudica",
+                          "family": "Apocynaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "right": {
+                      "id": 78,
+                      "is_leaf": true,
+                      "predicted_id": 25,
+                      "predicted_name": "Frangipani",
+                      "confidence": 1.0,
+                      "samples": 80,
+                      "top_predictions": [
+                        {
+                          "species_id": 25,
+                          "common_name": "Frangipani",
+                          "scientific_name": "Plumeria rubra",
+                          "family": "Apocynaceae",
+                          "probability": 1.0
+                        }
+                      ]
+                    },
+                    "predicted_id": 25,
+                    "predicted_name": "Frangipani",
+                    "confidence": 0.5
+                  },
+                  "right": {
+                    "id": 79,
+                    "is_leaf": true,
+                    "predicted_id": 42,
+                    "predicted_name": "Banana",
+                    "confidence": 1.0,
+                    "samples": 80,
+                    "top_predictions": [
+                      {
+                        "species_id": 42,
+                        "common_name": "Banana",
+                        "scientific_name": "Musa acuminata",
+                        "family": "Musaceae",
+                        "probability": 1.0
+                      }
+                    ]
+                  },
+                  "predicted_id": 25,
+                  "predicted_name": "Frangipani",
+                  "confidence": 0.3333
+                },
+                "predicted_id": 0,
+                "predicted_name": "Tulsi",
+                "confidence": 0.0345
+              },
+              "right": {
+                "id": 80,
+                "is_leaf": false,
+                "feature": "petal_count",
+                "threshold": 2.0,
+                "left": {
+                  "id": 81,
+                  "is_leaf": false,
+                  "feature": "flower_present_yes",
+                  "threshold": 0.5,
+                  "left": {
+                    "id": 82,
+                    "is_leaf": true,
+                    "predicted_id": 14,
+                    "predicted_name": "Betel",
+                    "confidence": 1.0,
+                    "samples": 80,
+                    "top_predictions": [
+                      {
+                        "species_id": 14,
+                        "common_name": "Betel",
+                        "scientific_name": "Piper betle",
+                        "family": "Piperaceae",
+                        "probability": 1.0
+                      }
+                    ]
+                  },
+                  "right": {
+                    "id": 83,
+                    "is_leaf": true,
+                    "predicted_id": 92,
+                    "predicted_name": "Sunflower",
+                    "confidence": 1.0,
+                    "samples": 80,
+                    "top_predictions": [
+                      {
+                        "species_id": 92,
+                        "common_name": "Sunflower",
+                        "scientific_name": "Helianthus annuus",
+                        "family": "Asteraceae",
+                        "probability": 1.0
+                      }
+                    ]
+                  },
+                  "predicted_id": 14,
+                  "predicted_name": "Betel",
+                  "confidence": 0.5
+                },
+                "right": {
+                  "id": 84,
+                  "is_leaf": false,
+                  "feature": "leaf_shape_ovate",
+                  "threshold": 0.5,
+                  "left": {
+                    "id": 85,
+                    "is_leaf": true,
+                    "predicted_id": 23,
+                    "predicted_name": "Lotus",
+                    "confidence": 1.0,
+                    "samples": 80,
+                    "top_predictions": [
+                      {
+                        "species_id": 23,
+                        "common_name": "Lotus",
+                        "scientific_name": "Nelumbo nucifera",
+                        "family": "Nelumbonaceae",
+                        "probability": 1.0
+                      }
+                    ]
+                  },
+                  "right": {
+                    "id": 86,
+                    "is_leaf": true,
+                    "predicted_id": 20,
+                    "predicted_name": "Hibiscus",
+                    "confidence": 1.0,
+                    "samples": 80,
+                    "top_predictions": [
+                      {
+                        "species_id": 20,
+                        "common_name": "Hibiscus",
+                        "scientific_name": "Hibiscus rosa-sinensis",
+                        "family": "Malvaceae",
+                        "probability": 1.0
+                      }
+                    ]
+                  },
+                  "predicted_id": 20,
+                  "predicted_name": "Hibiscus",
+                  "confidence": 0.5
+                },
+                "predicted_id": 14,
+                "predicted_name": "Betel",
+                "confidence": 0.25
+              },
+              "predicted_id": 0,
+              "predicted_name": "Tulsi",
+              "confidence": 0.0303
+            },
+            "right": {
+              "id": 87,
+              "is_leaf": true,
+              "predicted_id": 3,
+              "predicted_name": "Turmeric",
+              "confidence": 1.0,
+              "samples": 80,
+              "top_predictions": [
+                {
+                  "species_id": 3,
+                  "common_name": "Turmeric",
+                  "scientific_name": "Curcuma longa",
+                  "family": "Zingiberaceae",
+                  "probability": 1.0
+                }
+              ]
+            },
+            "predicted_id": 0,
+            "predicted_name": "Tulsi",
+            "confidence": 0.0294
+          },
+          "predicted_id": 0,
+          "predicted_name": "Tulsi",
+          "confidence": 0.0238
+        },
+        "right": {
+          "id": 88,
+          "is_leaf": false,
+          "feature": "leaf_type_simple",
+          "threshold": 0.5,
+          "left": {
+            "id": 89,
+            "is_leaf": true,
+            "predicted_id": 41,
+            "predicted_name": "Coconut",
+            "confidence": 1.0,
+            "samples": 80,
+            "top_predictions": [
+              {
+                "species_id": 41,
+                "common_name": "Coconut",
+                "scientific_name": "Cocos nucifera",
+                "family": "Arecaceae",
+                "probability": 1.0
+              }
+            ]
+          },
+          "right": {
+            "id": 90,
+            "is_leaf": false,
+            "feature": "leaf_arrangement_alternate",
+            "threshold": 0.5,
+            "left": {
+              "id": 91,
+              "is_leaf": false,
+              "feature": "plant_growth_habit_grass",
+              "threshold": 0.5,
+              "left": {
+                "id": 92,
+                "is_leaf": true,
+                "predicted_id": 81,
+                "predicted_name": "Snake plant",
+                "confidence": 1.0,
+                "samples": 80,
+                "top_predictions": [
+                  {
+                    "species_id": 81,
+                    "common_name": "Snake plant",
+                    "scientific_name": "Dracaena trifasciata",
+                    "family": "Asparagaceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "right": {
+                "id": 93,
+                "is_leaf": true,
+                "predicted_id": 15,
+                "predicted_name": "Lemongrass",
+                "confidence": 1.0,
+                "samples": 80,
+                "top_predictions": [
+                  {
+                    "species_id": 15,
+                    "common_name": "Lemongrass",
+                    "scientific_name": "Cymbopogon citratus",
+                    "family": "Poaceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "predicted_id": 15,
+              "predicted_name": "Lemongrass",
+              "confidence": 0.5
+            },
+            "right": {
+              "id": 94,
+              "is_leaf": false,
+              "feature": "plant_height_m",
+              "threshold": 2.37,
+              "left": {
+                "id": 95,
+                "is_leaf": true,
+                "predicted_id": 60,
+                "predicted_name": "Rice",
+                "confidence": 1.0,
+                "samples": 77,
+                "top_predictions": [
+                  {
+                    "species_id": 60,
+                    "common_name": "Rice",
+                    "scientific_name": "Oryza sativa",
+                    "family": "Poaceae",
+                    "probability": 1.0
+                  }
+                ]
+              },
+              "right": {
+                "id": 96,
+                "is_leaf": false,
+                "feature": "flower_color_green",
+                "threshold": 0.5,
+                "left": {
+                  "id": 97,
+                  "is_leaf": true,
+                  "predicted_id": 54,
+                  "predicted_name": "Bamboo",
+                  "confidence": 1.0,
+                  "samples": 80,
+                  "top_predictions": [
+                    {
+                      "species_id": 54,
+                      "common_name": "Bamboo",
+                      "scientific_name": "Bambusa vulgaris",
+                      "family": "Poaceae",
+                      "probability": 1.0
+                    }
+                  ]
+                },
+                "right": {
+                  "id": 98,
+                  "is_leaf": true,
+                  "predicted_id": 60,
+                  "predicted_name": "Rice",
+                  "confidence": 1.0,
+                  "samples": 3,
+                  "top_predictions": [
+                    {
+                      "species_id": 60,
+                      "common_name": "Rice",
+                      "scientific_name": "Oryza sativa",
+                      "family": "Poaceae",
+                      "probability": 1.0
+                    }
+                  ]
+                },
+                "predicted_id": 54,
+                "predicted_name": "Bamboo",
+                "confidence": 0.9639
+              },
+              "predicted_id": 54,
+              "predicted_name": "Bamboo",
+              "confidence": 0.5
+            },
+            "predicted_id": 15,
+            "predicted_name": "Lemongrass",
+            "confidence": 0.25
+          },
+          "predicted_id": 15,
+          "predicted_name": "Lemongrass",
+          "confidence": 0.2
+        },
+        "predicted_id": 0,
+        "predicted_name": "Tulsi",
+        "confidence": 0.0213
+      },
+      "right": {
+        "id": 99,
+        "is_leaf": true,
+        "predicted_id": 11,
+        "predicted_name": "Bael",
+        "confidence": 1.0,
+        "samples": 80,
+        "top_predictions": [
+          {
+            "species_id": 11,
+            "common_name": "Bael",
+            "scientific_name": "Aegle marmelos",
+            "family": "Rutaceae",
+            "probability": 1.0
+          }
+        ]
+      },
+      "predicted_id": 0,
+      "predicted_name": "Tulsi",
+      "confidence": 0.0208
+    },
+    "right": {
+      "id": 100,
+      "is_leaf": false,
+      "feature": "plant_growth_habit_herb",
+      "threshold": 0.5,
+      "left": {
+        "id": 101,
+        "is_leaf": true,
+        "predicted_id": 43,
+        "predicted_name": "Papaya",
+        "confidence": 1.0,
+        "samples": 80,
+        "top_predictions": [
+          {
+            "species_id": 43,
+            "common_name": "Papaya",
+            "scientific_name": "Carica papaya",
+            "family": "Caricaceae",
+            "probability": 1.0
+          }
+        ]
+      },
+      "right": {
+        "id": 102,
+        "is_leaf": true,
+        "predicted_id": 70,
+        "predicted_name": "Okra",
+        "confidence": 1.0,
+        "samples": 80,
+        "top_predictions": [
+          {
+            "species_id": 70,
+            "common_name": "Okra",
+            "scientific_name": "Abelmoschus esculentus",
+            "family": "Malvaceae",
+            "probability": 1.0
+          }
+        ]
+      },
+      "predicted_id": 43,
+      "predicted_name": "Papaya",
+      "confidence": 0.5
+    },
+    "predicted_id": 0,
+    "predicted_name": "Tulsi",
+    "confidence": 0.02
+  }
+}

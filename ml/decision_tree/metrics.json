@@ -1,0 +1,153 @@
+{
+  "dataset": {
+    "n_total": 5000,
+    "n_train": 4000,
+    "n_test": 1000,
+    "n_classes": 50,
+    "feature_count": 73
+  },
+  "best_hyperparameters": {
+    "ccp_alpha": 0.0005,
+    "criterion": "gini",
+    "max_depth": 18,
+    "min_samples_leaf": 1,
+    "min_samples_split": 8
+  },
+  "cross_validation": {
+    "folds": 5,
+    "mean_cv_accuracy": 0.9945
+  },
+  "models": {
+    "decision_tree": {
+      "accuracy": 0.995,
+      "macro_precision": 0.9952,
+      "macro_recall": 0.995,
+      "macro_f1": 0.995,
+      "tree_depth": 17,
+      "leaf_count": 52
+    },
+    "random_forest": {
+      "accuracy": 0.999,
+      "macro_precision": 0.999,
+      "macro_recall": 0.999,
+      "macro_f1": 0.999,
+      "n_estimators": 100
+    },
+    "vision_cnn_benchmark": {
+      "architecture": "EfficientNet-B0 (plant_model.v2.onnx)",
+      "modalities": "Raw RGB Imagery",
+      "full_150_species": {
+        "samples_test": 4500,
+        "top1_accuracy": 0.8388,
+        "top5_accuracy": 0.9439,
+        "macro_precision": 0.8379,
+        "macro_recall": 0.8349,
+        "macro_f1": 0.8325
+      },
+      "restricted_to_50_tree_species": {
+        "samples_test": 1564,
+        "top1_accuracy": 0.8082,
+        "top5_accuracy": 0.9367,
+        "macro_precision": 0.8332,
+        "macro_recall": 0.8078,
+        "macro_f1": 0.8142,
+        "closed_world_50_accuracy": 0.9335,
+        "closed_world_50_macro_f1": 0.9280
+      },
+      "comparability_notice": "CNN (real photographs) and Decision Tree (simulated morphological traits) operate on distinct modalities and are not directly comparable."
+    },
+    "uci_leaves_real_data_benchmark": {
+      "dataset": "UCI 100 Plant Species Leaves (ID 241)",
+      "samples": 1599,
+      "species": 100,
+      "features": 192,
+      "license": "CC BY 4.0",
+      "decision_tree_cv_acc": 0.5084,
+      "decision_tree_macro_f1": 0.5074,
+      "random_forest_cv_acc": 0.9781,
+      "random_forest_macro_f1": 0.9781
+    }
+  },
+  "top_features": [
+    {
+      "feature": "petal_count",
+      "importance": 0.1025
+    },
+    {
+      "feature": "leaf_width_cm",
+      "importance": 0.082
+    },
+    {
+      "feature": "leaf_arrangement_alternate",
+      "importance": 0.0615
+    },
+    {
+      "feature": "leaf_type_simple",
+      "importance": 0.0615
+    },
+    {
+      "feature": "leaf_shape_ovate",
+      "importance": 0.061
+    },
+    {
+      "feature": "plant_growth_habit_herb",
+      "importance": 0.041
+    },
+    {
+      "feature": "leaf_margin_entire",
+      "importance": 0.041
+    },
+    {
+      "feature": "leaf_length_cm",
+      "importance": 0.041
+    },
+    {
+      "feature": "plant_growth_habit_tree",
+      "importance": 0.041
+    },
+    {
+      "feature": "plant_growth_habit_shrub",
+      "importance": 0.041
+    },
+    {
+      "feature": "leaf_arrangement_spiral",
+      "importance": 0.041
+    },
+    {
+      "feature": "leaf_arrangement_whorled",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_venation_parallel",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_margin_dentate",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_margin_crenate",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_type_trifoliolate",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_arrangement_distichous",
+      "importance": 0.0205
+    },
+    {
+      "feature": "flower_present_yes",
+      "importance": 0.0205
+    },
+    {
+      "feature": "leaf_type_bipinnately_compound",
+      "importance": 0.0205
+    },
+    {
+      "feature": "plant_growth_habit_grass",
+      "importance": 0.0205
+    }
+  ]
+}

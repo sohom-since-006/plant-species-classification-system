@@ -34,6 +34,9 @@ function lazyWithRetry<T extends ComponentType<unknown>>(
 
 // Route-level code splitting so non-landing pages and heavy chart dependencies are isolated
 const Classify = lazyWithRetry(() => import('@/pages/Classify').then((m) => ({ default: m.Classify })));
+const IdentifyByCharacteristics = lazyWithRetry(() =>
+  import('@/pages/IdentifyByCharacteristics').then((m) => ({ default: m.IdentifyByCharacteristics })),
+);
 const Explore = lazyWithRetry(() => import('@/pages/Explore').then((m) => ({ default: m.Explore })));
 const SpeciesDetail = lazyWithRetry(() => import('@/pages/SpeciesDetail').then((m) => ({ default: m.SpeciesDetail })));
 const History = lazyWithRetry(() => import('@/pages/History').then((m) => ({ default: m.History })));
@@ -62,6 +65,14 @@ export function AppRouter() {
               element={
                 <Suspense fallback={<PageLoadingFallback />}>
                   <Classify />
+                </Suspense>
+              }
+            />
+            <Route
+              path="identify-traits"
+              element={
+                <Suspense fallback={<PageLoadingFallback />}>
+                  <IdentifyByCharacteristics />
                 </Suspense>
               }
             />
