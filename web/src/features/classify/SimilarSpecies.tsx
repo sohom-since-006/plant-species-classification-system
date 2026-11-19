@@ -2,6 +2,7 @@ import { formatPercent } from '@/lib/format';
 import { Leaf } from '@/components/icons';
 import { MOCK_LOOKALIKES } from '@/data/mockSpecies';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import { getSpeciesImagePath, handleSpeciesImageError } from '@/lib/speciesImages';
 import type { SimilarMatch } from '@/types/prediction';
 import type { Species } from '@/types/species';
 
@@ -62,28 +63,41 @@ export function SimilarSpecies({
                     className="hover:bg-white/5 transition-colors group cursor-pointer"
                     onClick={() => spec && onSelectSpecies?.(spec)}
                   >
-                    <td className="py-3.5 px-4">
-                      <div className="font-medium text-white group-hover:text-[var(--accent)] transition-colors">
-                        {spec ? spec.commonName : `Botanical Specimen (${match.speciesId})`}
-                      </div>
-                      <div className="font-heading italic text-white/60 text-xs">
-                        {spec?.scientificName}
-                        {isSameGenus && (
-                          <span className="ml-2 font-mono text-[10px] text-[var(--accent)] not-italic bg-emerald-500/10 px-1.5 py-0.5 rounded">
-                            Same Genus
-                          </span>
-                        )}
-                      </div>
-                      {(spec?.namesHindi || spec?.namesBengali) && (
-                        <div className="text-[11px] text-white/50 font-body mt-0.5">
-                          {[
-                            spec.namesHindi ? `Hindi: ${spec.namesHindi}` : null,
-                            spec.namesBengali ? `Bengali: ${spec.namesBengali}` : null,
-                          ]
-                            .filter(Boolean)
-                            .join(' • ')}
+                    <td className="py-3 px-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-lg overflow-hidden bg-black/40 border border-white/10 shrink-0">
+                          <img
+                            src={getSpeciesImagePath(match.speciesId)}
+                            alt={spec ? spec.commonName : `Specimen ${match.speciesId}`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                            onError={handleSpeciesImageError}
+                          />
                         </div>
-                      )}
+                        <div className="min-w-0">
+                          <div className="font-medium text-white group-hover:text-[var(--accent)] transition-colors truncate">
+                            {spec ? spec.commonName : `Botanical Specimen (${match.speciesId})`}
+                          </div>
+                          <div className="font-heading italic text-white/60 text-xs truncate">
+                            {spec?.scientificName}
+                            {isSameGenus && (
+                              <span className="ml-2 font-mono text-[10px] text-[var(--accent)] not-italic bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                                Same Genus
+                              </span>
+                            )}
+                          </div>
+                          {(spec?.namesHindi || spec?.namesBengali) && (
+                            <div className="text-[11px] text-white/50 font-body mt-0.5 truncate">
+                              {[
+                                spec.namesHindi ? `Hindi: ${spec.namesHindi}` : null,
+                                spec.namesBengali ? `Bengali: ${spec.namesBengali}` : null,
+                              ]
+                                .filter(Boolean)
+                                .join(' • ')}
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </td>
                     <td className="py-3.5 px-4 text-right font-mono text-white/80">
                       {formatPercent(match.ml, 1)}
@@ -174,10 +188,31 @@ export function SimilarSpecies({
               return (
                 <div
                   key={`diff-${match.speciesId}`}
-                  className="liquid-glass rounded-2xl p-4 border border-white/10 space-y-2 text-xs"
+                  className="liquid-glass rounded-2xl p-4 border border-white/10 space-y-3 text-xs"
                 >
-                  <div className="font-heading italic text-base text-white">
-                    {topSpecies.commonName} vs. {other?.commonName}
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg overflow-hidden bg-black/40 border border-white/10 shrink-0">
+                      <img
+                        src={getSpeciesImagePath(topSpecies.id)}
+                        alt={topSpecies.commonName}
+                        className="w-full h-full object-cover"
+                        onError={handleSpeciesImageError}
+                      />
+                    </div>
+                    <span className="text-white/40 font-mono text-[11px]">vs</span>
+                    {other && (
+                      <div className="w-8 h-8 rounded-lg overflow-hidden bg-black/40 border border-white/10 shrink-0">
+                        <img
+                          src={getSpeciesImagePath(other.id)}
+                          alt={other.commonName}
+                          className="w-full h-full object-cover"
+                          onError={handleSpeciesImageError}
+                        />
+                      </div>
+                    )}
+                    <div className="font-heading italic text-base text-white ml-1">
+                      {topSpecies.commonName} vs. {other?.commonName}
+                    </div>
                   </div>
                   <p className="text-white/80 leading-relaxed font-light">
                     {lookAlike.howToTellApart}

@@ -29,7 +29,7 @@ insert into public.species (
   true,
   'The flowers change color and orientation over 3 days: white and horizontal at night to attract hawk moths, then vertical and crimson by day to invite butterflies and sunbirds.',
   ARRAY['/species/112.webp']::text[],
-  '{"observer":"teaddy","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608601691/original.jpg"}'::jsonb,
+  '{"observer":"teaddy","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608601691"}'::jsonb,
   'https://en.wikipedia.org/wiki/Combretum_indicum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -84,7 +84,7 @@ insert into public.species (
   true,
   'Gloriosa climbs not with stems or aerial roots, but with the modified tips of its leaves, which coil into sensitive grasp tendrils upon touching supports.',
   ARRAY['/species/113.webp']::text[],
-  '{"observer":"Daniel Papworth","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605324039/original.jpg"}'::jsonb,
+  '{"observer":"Daniel Papworth","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605324039"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gloriosa_superba',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -139,7 +139,7 @@ insert into public.species (
   false,
   'Spanish Christian missionaries named it ''passion flower'' because floral structures symbolically resembled the Passion of Christ: 3 stigmas for 3 nails, 5 anthers for 5 wounds, and the corona for the crown of thorns.',
   ARRAY['/species/114.webp']::text[],
-  '{"observer":"Erika Mitchell","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605512434/original.jpg"}'::jsonb,
+  '{"observer":"Erika Mitchell","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605512434"}'::jsonb,
   'https://en.wikipedia.org/wiki/Passiflora_edulis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -194,7 +194,7 @@ insert into public.species (
   false,
   'Called ''Railway creeper'' across India because colonial engineers planted it alongside railway stations and track fences to suppress dust and provide year-round green floral cover.',
   ARRAY['/species/115.webp']::text[],
-  '{"observer":"s60117","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604676641/original.jpg"}'::jsonb,
+  '{"observer":"s60117","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/604676641"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ipomoea_cairica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -249,7 +249,7 @@ insert into public.species (
   false,
   'Known as ''Taralata'' (Star Vine) in Bengali due to its precise five-pointed star shape that appears to twinkle against feathery emerald foliage.',
   ARRAY['/species/116.webp']::text[],
-  '{"observer":"Carlos Domínguez-Rodríguez","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605421054/original.jpg"}'::jsonb,
+  '{"observer":"Carlos Domínguez-Rodríguez","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/605421054"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ipomoea_quamoclit',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -304,7 +304,7 @@ insert into public.species (
   true,
   'English ivy shows dramatic heterophylly: while juvenile vines climbing walls have 3–5 lobed leaves, mature branches that reach sunlight produce unlobed oval leaves and flowers.',
   ARRAY['/species/117.webp']::text[],
-  '{"observer":"Plana Baptiste","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604480891/original.jpg"}'::jsonb,
+  '{"observer":"Plana Baptiste","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/604480891"}'::jsonb,
   'https://en.wikipedia.org/wiki/Hedera_helix',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -359,7 +359,7 @@ insert into public.species (
   true,
   'The specific epithet ''cathartica'' is derived from the Greek ''katharsis'' (purging), referencing historical medicinal use as a drastic emetic and purgative.',
   ARRAY['/species/118.webp']::text[],
-  '{"observer":"capacoscar","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608518086/original.jpg"}'::jsonb,
+  '{"observer":"capacoscar","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/608518086"}'::jsonb,
   'https://en.wikipedia.org/wiki/Allamanda_cathartica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -414,7 +414,7 @@ insert into public.species (
   false,
   'Named by botanist William Balfour Baikie in honor of the late wife of Rev. William Cooper Thomson, a Scottish missionary and physician in Old Calabar, Nigeria.',
   ARRAY['/species/119.webp']::text[],
-  '{"observer":"Marlon Chavez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608957060/original.jpg"}'::jsonb,
+  '{"observer":"Marlon Chavez","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608957060"}'::jsonb,
   'https://en.wikipedia.org/wiki/Clerodendrum_thomsoniae',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -469,7 +469,7 @@ insert into public.species (
   false,
   'The genus name ''Pyrostegia'' comes from Greek ''pyr'' (fire) and ''stege'' (covering/roof), literally describing its habit of covering entire building roofs in fiery orange blossoms.',
   ARRAY['/species/120.webp']::text[],
-  '{"observer":"Christopher David Benda","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606172836/original.jpg"}'::jsonb,
+  '{"observer":"Christopher David Benda","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606172836"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pyrostegia_venusta',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -524,7 +524,7 @@ insert into public.species (
   false,
   'Native to the tea-growing hill regions of Bengal and Assam, it can grow up to 20 meters tall into forest canopy trees with tuberous roots that can weigh over 50 kilograms.',
   ARRAY['/species/121.webp']::text[],
-  '{"observer":"Chris D Thomas","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610417421/original.jpg"}'::jsonb,
+  '{"observer":"Chris D Thomas","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/610417421"}'::jsonb,
   'https://en.wikipedia.org/wiki/Thunbergia_grandiflora',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -579,7 +579,7 @@ insert into public.species (
   false,
   'Referred to as ''Chain of Love'' across the Caribbean because each delicate flowering branch ends in a tender heart-shaped spray with climbing tendrils.',
   ARRAY['/species/122.webp']::text[],
-  '{"observer":"ssnp133","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604349588/original.jpg"}'::jsonb,
+  '{"observer":"ssnp133","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/604349588"}'::jsonb,
   'https://en.wikipedia.org/wiki/Antigonon_leptopus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -634,7 +634,7 @@ insert into public.species (
   true,
   'In Bengali it is called ''Patabahar'' (Joy of Leaves) because its ever-changing multicolored foliage provides the visual impact of an eternal spring garden without flowers.',
   ARRAY['/species/123.webp']::text[],
-  '{"observer":"lianne tolentino","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608106908/original.jpg"}'::jsonb,
+  '{"observer":"lianne tolentino","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608106908"}'::jsonb,
   'https://en.wikipedia.org/wiki/Codiaeum_variegatum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -689,7 +689,7 @@ insert into public.species (
   true,
   'Syngonium undergoes complete leaf metamorphosis: young plants kept in pots remain compact arrowheads, but when allowed to climb a tall tree in the wild, leaves divide into 5–9 large separate leaflets.',
   ARRAY['/species/124.webp']::text[],
-  '{"observer":"richmondfarmer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607547565/original.jpg"}'::jsonb,
+  '{"observer":"richmondfarmer","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607547565"}'::jsonb,
   'https://en.wikipedia.org/wiki/Syngonium_podophyllum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -744,7 +744,7 @@ insert into public.species (
   true,
   'The name Philodendron comes from the Greek ''philo-'' (love) and ''dendron'' (tree), describing its natural passion for clinging lovingly to tropical rainforest tree trunks.',
   ARRAY['/species/125.webp']::text[],
-  '{"observer":"Reirei","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605673885/original.jpg"}'::jsonb,
+  '{"observer":"Reirei","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605673885"}'::jsonb,
   'https://en.wikipedia.org/wiki/Philodendron_hederaceum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -799,7 +799,7 @@ insert into public.species (
   true,
   'Flowers of Thaumatophyllum can generate their own heat through thermogenesis, heating up to 45°C (113°F) above ambient air to volatilize scents and attract pollinating scarab beetles.',
   ARRAY['/species/126.webp']::text[],
-  '{"observer":"mckaydee","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605009148/original.jpg"}'::jsonb,
+  '{"observer":"mckaydee","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605009148"}'::jsonb,
   'https://en.wikipedia.org/wiki/Thaumatophyllum_bipinnatifidum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -854,7 +854,7 @@ insert into public.species (
   true,
   'Named ''fragrans'' (fragrant) because its nocturnal blossoms release an intoxicating sweet jasmine-honey perfume that can fill an entire household.',
   ARRAY['/species/127.webp']::text[],
-  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607536014/original.jpg"}'::jsonb,
+  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607536014"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_fragrans',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -909,7 +909,7 @@ insert into public.species (
   true,
   'Despite its worldwide trade name ''Song of India'', this species is not actually native to India, but to Madagascar and the Mascarene Islands of the Indian Ocean.',
   ARRAY['/species/128.webp']::text[],
-  '{"observer":"Peter Pannam","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604403515/original.jpg"}'::jsonb,
+  '{"observer":"Peter Pannam","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/604403515"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_reflexa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -964,7 +964,7 @@ insert into public.species (
   true,
   'What is commonly called the Anthurium ''flower'' is actually a modified leaf called a spathe; the true flowers are microscopic bumps lining the central yellow pencil-like spadix.',
   ARRAY['/species/129.webp']::text[],
-  '{"observer":"Ana Carla Bastos","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606966906/original.jpg"}'::jsonb,
+  '{"observer":"Ana Carla Bastos","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606966906"}'::jsonb,
   'https://en.wikipedia.org/wiki/Anthurium_andraeanum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1019,7 +1019,7 @@ insert into public.species (
   true,
   'In nature, the flowers are pollinated by sunbirds that perch on the boat-shaped spathe; their body weight pushes down the blue petals, dusting pollen onto the bird''s feet and chest.',
   ARRAY['/species/130.webp']::text[],
-  '{"observer":"Eric Wille","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616850384/original.jpg"}'::jsonb,
+  '{"observer":"Eric Wille","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616850384"}'::jsonb,
   'https://en.wikipedia.org/wiki/Strelitzia_reginae',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1074,7 +1074,7 @@ insert into public.species (
   true,
   'Called ''Inch plant'' because the stems grow so fast they seem to gain an inch every few days, and a tiny one-inch stem cutting can root and become a full plant within weeks.',
   ARRAY['/species/131.webp']::text[],
-  '{"observer":"ch_zong","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605362482/original.jpg"}'::jsonb,
+  '{"observer":"ch_zong","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605362482"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tradescantia_zebrina',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1129,7 +1129,7 @@ insert into public.species (
   true,
   'The weeping fig is the official state tree of Bangkok, Thailand, where gigantic multi-trunked specimens shade temples and canals.',
   ARRAY['/species/132.webp']::text[],
-  '{"observer":"Vanessa Sánchez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605714058/original.jpg"}'::jsonb,
+  '{"observer":"Vanessa Sánchez","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605714058"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_benjamina',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1184,7 +1184,7 @@ insert into public.species (
   true,
   'Despite its common name ''Lace Fern'', this plant is not a true fern at all—it does not reproduce via spores, but is a flowering seed plant belonging to the Asparagus family.',
   ARRAY['/species/133.webp']::text[],
-  '{"observer":"Ben Gruhot","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604980978/original.jpg"}'::jsonb,
+  '{"observer":"Ben Gruhot","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/604980978"}'::jsonb,
   'https://en.wikipedia.org/wiki/Asparagus_setaceus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1239,7 +1239,7 @@ insert into public.species (
   false,
   'While endangered in its native wild riverbank habitats of Madagascar, it has become one of the most commercially propagated plants on planet Earth with millions grown annually in nurseries.',
   ARRAY['/species/134.webp']::text[],
-  '{"observer":"Karen McCabe","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604561585/original.jpg"}'::jsonb,
+  '{"observer":"Karen McCabe","license":"CC0","source_url":"https://www.inaturalist.org/photos/604561585"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dypsis_lutescens',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1294,7 +1294,7 @@ insert into public.species (
   true,
   'The calla lily is neither a true lily (Liliaceae) nor a calla; Swedish botanist Carl Linnaeus placed it in the genus Calla, but it was later moved to Zantedeschia, named in honor of Italian botanist Giovanni Zantedeschi.',
   ARRAY['/species/135.webp']::text[],
-  '{"observer":"asm25","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605730161/original.jpg"}'::jsonb,
+  '{"observer":"asm25","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605730161"}'::jsonb,
   'https://en.wikipedia.org/wiki/Zantedeschia_aethiopica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1349,7 +1349,7 @@ insert into public.species (
   false,
   'Across northern and central India, school children traditionally tuck Morpankhi leaf sprays inside textbook pages, affectionately believing it sharpens memory and exam performance.',
   ARRAY['/species/136.webp']::text[],
-  '{"observer":"Jacques HALLOT","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611935972/original.jpg"}'::jsonb,
+  '{"observer":"Jacques HALLOT","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611935972"}'::jsonb,
   'https://en.wikipedia.org/wiki/Platycladus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1404,7 +1404,7 @@ insert into public.species (
   true,
   'Known as ''Nag Champa'' in India because the unusual flared shape of its leaf apex closely resembles the expanded hood of a cobra (Nag).',
   ARRAY['/species/137.webp']::text[],
-  '{"observer":"Gabriel Andrade","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609746082/original.jpg"}'::jsonb,
+  '{"observer":"Gabriel Andrade","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609746082"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumeria_pudica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1459,7 +1459,7 @@ insert into public.species (
   true,
   'In Hindi it is poetically called ''Chandni'' (Moonlight) because its radiant white pinwheel blossoms appear to shine like scattered stars under a full moon.',
   ARRAY['/species/138.webp']::text[],
-  '{"observer":"daniel_oleander","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610295100/original.jpg"}'::jsonb,
+  '{"observer":"daniel_oleander","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610295100"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tabernaemontana_divaricata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1514,7 +1514,7 @@ insert into public.species (
   false,
   'Tecoma stans is the official national flower of the Bahamas and the official floral emblem of the United States Virgin Islands.',
   ARRAY['/species/139.webp']::text[],
-  '{"observer":"Claire Buxton","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610303766/original.jpg"}'::jsonb,
+  '{"observer":"Claire Buxton","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610303766"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tecoma_stans',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1569,7 +1569,7 @@ insert into public.species (
   true,
   'In indigenous African tribal hunting, the toxic sap was boiled down to create a lethal arrow poison used to bring down large game like antelopes and elephants.',
   ARRAY['/species/140.webp']::text[],
-  '{"observer":"mathias_dezetter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610914765/original.jpg"}'::jsonb,
+  '{"observer":"mathias_dezetter","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610914765"}'::jsonb,
   'https://en.wikipedia.org/wiki/Adenium_obesum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1624,7 +1624,7 @@ insert into public.species (
   true,
   'Despite its common Hindi name ''Raat ki Rani'' and English name ''Night-blooming Jasmine'', it is not a true jasmine (Oleaceae) but a member of the nightshade family (Solanaceae), closely related to tomatoes and potatoes.',
   ARRAY['/species/141.webp']::text[],
-  '{"observer":"Digvijay","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609089201/original.jpg"}'::jsonb,
+  '{"observer":"Digvijay","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609089201"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cestrum_nocturnum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1679,7 +1679,7 @@ insert into public.species (
   true,
   'Known widely across India as ''Nau Bajiya'' (9 o''clock) or ''Das Bajiya'' (10 o''clock) because its flowers open with clockwork precision as soon as the morning sun strikes the petals.',
   ARRAY['/species/142.webp']::text[],
-  '{"observer":"diana_selenelr","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606482371/original.jpg"}'::jsonb,
+  '{"observer":"diana_selenelr","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606482371"}'::jsonb,
   'https://en.wikipedia.org/wiki/Portulaca_grandiflora',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1734,7 +1734,7 @@ insert into public.species (
   true,
   'Coleus exhibits one of the most diverse arrays of leaf color variations in the entire plant kingdom, with hundreds of named varieties created through centuries of botanical breeding.',
   ARRAY['/species/143.webp']::text[],
-  '{"observer":"verbautista","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610612196/original.jpg"}'::jsonb,
+  '{"observer":"verbautista","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610612196"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coleus_scutellarioides',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1789,7 +1789,7 @@ insert into public.species (
   true,
   'Named in honor of Admiral Charles Wilkes (1798–1877), the American naval officer and explorer who commanded the historic United States Exploring Expedition to the South Pacific.',
   ARRAY['/species/144.webp']::text[],
-  '{"observer":"Mike Dikamba","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606510910/original.jpg"}'::jsonb,
+  '{"observer":"Mike Dikamba","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606510910"}'::jsonb,
   'https://en.wikipedia.org/wiki/Acalypha_wilkesiana',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1844,7 +1844,7 @@ insert into public.species (
   true,
   'Legend claims that the thorny branches of this Madagascan succulent were used to weave the crown of thorns placed on Jesus Christ during the Crucifixion, giving rise to its enduring common name.',
   ARRAY['/species/145.webp']::text[],
-  '{"observer":"bottanydot","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610229488/original.jpg"}'::jsonb,
+  '{"observer":"bottanydot","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610229488"}'::jsonb,
   'https://en.wikipedia.org/wiki/Euphorbia_milii',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1899,7 +1899,7 @@ insert into public.species (
   true,
   'The sticky glandular hairs on the calyces trap small insects, a trait historically thought to protect developing seeds or represent proto-carnivorous behavior.',
   ARRAY['/species/146.webp']::text[],
-  '{"observer":"Sascha Packheiser","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605643194/original.jpg"}'::jsonb,
+  '{"observer":"Sascha Packheiser","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605643194"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumbago_auriculata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1954,7 +1954,7 @@ insert into public.species (
   true,
   'The silky white floss attached to Calotropis seeds was traditionally gathered in rural India to stuff soft pillows and mattresses because it is naturally water-repellent and resistant to insects.',
   ARRAY['/species/147.webp']::text[],
-  '{"observer":"Pubudini Jayakody","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605374603/original.jpg"}'::jsonb,
+  '{"observer":"Pubudini Jayakody","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605374603"}'::jsonb,
   'https://en.wikipedia.org/wiki/Calotropis_gigantea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2009,7 +2009,7 @@ insert into public.species (
   true,
   'Called ''Golden dewdrop'' because the heavy clusters of bright orange-yellow berries look like shimmering golden drops of morning dew dangling along weeping branches.',
   ARRAY['/species/148.webp']::text[],
-  '{"observer":"domdom52","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608271493/original.jpg"}'::jsonb,
+  '{"observer":"domdom52","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608271493"}'::jsonb,
   'https://en.wikipedia.org/wiki/Duranta_erecta',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2064,7 +2064,7 @@ insert into public.species (
   false,
   'In India, the tree is known as ''Nagalingam'' because the central curved staminal hood mirrors a many-headed cobra (Naga) shielding the sacred Shiva Lingam resting on the floral disc.',
   ARRAY['/species/149.webp']::text[],
-  '{"observer":"coralaviles","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606483061/original.jpg"}'::jsonb,
+  '{"observer":"coralaviles","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606483061"}'::jsonb,
   'https://en.wikipedia.org/wiki/Couroupita_guianensis',
   '[]'::jsonb
 ) on conflict (id) do update set

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase, isSupabaseConfigured } from '@/lib/supabase';
 import { getAllSpecies, getSpeciesBySlug, getSpeciesById } from '@/services/speciesService';
+import { getSpeciesImagePath, getSpeciesImageCredit } from '@/lib/speciesImages';
 import type { Species } from '@/types/species';
 import type { Database } from '@/types/database';
 
@@ -28,8 +29,8 @@ export function mapDbSpeciesToClient(row: DbSpeciesRow): Species {
     toxicityNote: row.toxicity_note,
     isToxic: Boolean(row.is_toxic),
     funFact: row.fun_fact,
-    referenceImages: row.reference_images || [],
-    imageCredit: (row.image_credit as Species['imageCredit']) || null,
+    referenceImages: [getSpeciesImagePath(row.id)],
+    imageCredit: (row.image_credit as Species['imageCredit']) || getSpeciesImageCredit(row.id),
     wikipediaUrl: row.wikipedia_url,
     sources: (row.sources as unknown as Species['sources']) || [],
   };

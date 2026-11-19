@@ -7,6 +7,7 @@ import { useSpeciesListQuery } from '@/features/species/useSpeciesQueries';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { SPECIES_COUNT_LABEL } from '@/config/constants';
+import { getSpeciesImagePath, handleSpeciesImageError } from '@/lib/speciesImages';
 
 const CATEGORIES = [
   'All',
@@ -179,16 +180,14 @@ export function Explore() {
                       {/* Image banner with fixed aspect-ratio and explicit dimensions */}
                       <div className="relative w-full h-56 aspect-[16/9] bg-black/40 overflow-hidden">
                         <img
-                          src={species.referenceImages?.[0] || '/species/neutral_leaf.svg'}
+                          src={getSpeciesImagePath(species.id)}
                           alt={species.commonName}
                           width={400}
                           height={224}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                           loading="lazy"
                           decoding="async"
-                          onError={(e) => {
-                            e.currentTarget.src = '/species/neutral_leaf.svg';
-                          }}
+                          onError={handleSpeciesImageError}
                         />
                         <span className="absolute top-4 right-4 liquid-glass px-3 py-1 rounded-full text-[11px] font-mono uppercase text-[var(--accent)]">
                           {species.family}

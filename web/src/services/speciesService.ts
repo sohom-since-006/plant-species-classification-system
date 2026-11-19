@@ -1,6 +1,7 @@
 import type { Species, PlantType, Origin } from '@/types/species';
 import { supabase } from '@/lib/supabase';
 import { SPECIES_COUNT, SPECIES_COUNT_LABEL } from '@/config/constants';
+import { getSpeciesImagePath, getSpeciesImageCredit } from '@/lib/speciesImages';
 import speciesMetaRaw from '@/data/species_meta.json';
 import richSpeciesRaw from '@/data/species.json';
 
@@ -162,8 +163,8 @@ export async function fetchSpeciesById(id: number): Promise<Species> {
           toxicityNote: data.toxicity_note,
           isToxic: Boolean(data.is_toxic),
           funFact: data.fun_fact,
-          referenceImages: data.reference_images || [],
-          imageCredit: (data.image_credit as Species['imageCredit']) || null,
+          referenceImages: [getSpeciesImagePath(data.id)],
+          imageCredit: (data.image_credit as Species['imageCredit']) || getSpeciesImageCredit(data.id),
           wikipediaUrl: data.wikipedia_url,
           sources: (data.sources as unknown as Species['sources']) || [],
         };

@@ -2,6 +2,11 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import speciesJsonRaw from '@/data/species.json';
+import {
+  getSpeciesImagePath,
+  getSpeciesImageCredit,
+  NEUTRAL_LEAF_PLACEHOLDER,
+} from '@/lib/speciesImages';
 import type { Species } from '@/types/species';
 
 const speciesData = speciesJsonRaw as Record<string, Species>;
@@ -150,5 +155,32 @@ describe('Species Data & Image Integrity', () => {
       }
     }
     expect(speciesWithSources).toBe(13);
+  });
+
+  it('guarantees getSpeciesImagePath and credits resolve from local files without external image URLs', () => {
+    // Test Jamun (id 48)
+    const jamunImg = getSpeciesImagePath(48);
+    expect(jamunImg).toBe('/species/48.webp');
+    const jamunCredit = getSpeciesImageCredit(48);
+    expect(jamunCredit).toBeDefined();
+    expect(jamunCredit?.observer).toBe('Austin Smith');
+    expect(jamunCredit?.source_url).not.toMatch(/\.(jpg|jpeg|png|webp)$/i);
+    expect(jamunCredit?.source_url).toContain('inaturalist.org/photos/');
+
+    // Test fallback behavior
+    expect(getSpeciesImagePath(null)).toBe(NEUTRAL_LEAF_PLACEHOLDER);
+    expect(getSpeciesImagePath(undefined)).toBe(NEUTRAL_LEAF_PLACEHOLDER);
+    expect(getSpeciesImagePath(999)).toBe(NEUTRAL_LEAF_PLACEHOLDER);
+    expect(getSpeciesImageCredit(null)).toBeNull();
+
+    // Verify all 150 species resolve strictly to local /species/{id}.webp
+    for (let id = 0; id < 150; id++) {
+      const pathUrl = getSpeciesImagePath(id);
+      expect(pathUrl).toBe(`/species/${id}.webp`);
+      const credit = getSpeciesImageCredit(id);
+      expect(credit).toBeDefined();
+      expect(credit?.observer).toBeTruthy();
+      expect(credit?.source_url).not.toMatch(/\.(jpg|jpeg|png|webp)$/i);
+    }
   });
 });

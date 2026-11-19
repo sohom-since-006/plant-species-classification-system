@@ -10,6 +10,7 @@ import { useHistoryService } from '@/features/history/useHistoryService';
 import { getSpeciesById } from '@/services/speciesService';
 import { useToast } from '@/components/ui/useToast';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
+import { getSpeciesImagePath, handleSpeciesImageError } from '@/lib/speciesImages';
 
 export function History() {
   useDocumentTitle('Field Journal');
@@ -38,9 +39,9 @@ export function History() {
         family: sp?.family || 'Plantae',
         organ: 'Specimen Scan',
         imageUrl:
-          pred.imagePath ||
-          sp?.referenceImages?.[0] ||
-          '/species/neutral_leaf.svg',
+          pred.imagePath?.startsWith('/species/')
+            ? pred.imagePath
+            : getSpeciesImagePath(sp?.id ?? pred.speciesId),
         slug: sp?.slug,
       };
     });
@@ -194,9 +195,7 @@ export function History() {
                         alt={item.commonName}
                         className="w-full h-full object-cover"
                         loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.src = '/species/neutral_leaf.svg';
-                        }}
+                        onError={handleSpeciesImageError}
                       />
                     </div>
                     <div>

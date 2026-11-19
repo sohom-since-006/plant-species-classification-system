@@ -3,6 +3,7 @@ import { TierBadge } from '@/components/ui/TierBadge';
 import { MatchBar } from '@/components/ui/MatchBar';
 import { Info, Leaf, Lightbulb } from '@/components/icons';
 import { Stagger, StaggerItem } from '@/components/motion/Stagger';
+import { getSpeciesImagePath, handleSpeciesImageError } from '@/lib/speciesImages';
 import type { ClassificationResult } from '@/types/prediction';
 import type { Species } from '@/types/species';
 import { SPECIES_COUNT_LABEL } from '@/config/constants';
@@ -139,11 +140,23 @@ export function ResultCard({ result, topSpecies, candidateSpecies = [] }: Result
               : `Botanical Specimen (${pred.speciesId})`;
             return (
               <StaggerItem key={`${pred.speciesId}-${idx}`}>
-                <MatchBar
-                  label={displayName}
-                  value={pred.prob}
-                  showDecimals
-                />
+                <div className="flex items-center gap-2.5">
+                  <div className="w-6 h-6 rounded-md overflow-hidden bg-black/40 border border-white/10 shrink-0">
+                    <img
+                      src={getSpeciesImagePath(pred.speciesId)}
+                      alt={spec?.commonName || 'Plant'}
+                      className="w-full h-full object-cover"
+                      onError={handleSpeciesImageError}
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <MatchBar
+                      label={displayName}
+                      value={pred.prob}
+                      showDecimals
+                    />
+                  </div>
+                </div>
               </StaggerItem>
             );
           })}

@@ -5,6 +5,7 @@ import { PageHero } from '@/components/layout/PageHero';
 import { SolidButton } from '@/components/ui/SolidButton';
 import { useDocumentTitle } from '@/lib/useDocumentTitle';
 import { getSpeciesSync } from '@/services/speciesService';
+import { getSpeciesImagePath, handleSpeciesImageError } from '@/lib/speciesImages';
 import {
   classifyBotanicalTraits,
   type BotanicalTraitsInput,
@@ -1014,17 +1015,12 @@ export function IdentifyByCharacteristics() {
                   </div>
 
                   <div className="flex items-start gap-4 mb-4">
-                    {primarySpecies?.referenceImages?.[0] ? (
-                      <img
-                        src={primarySpecies.referenceImages[0]}
-                        alt={result.commonName}
-                        className="w-20 h-20 rounded-2xl object-cover border border-emerald-700/40 shrink-0"
-                      />
-                    ) : (
-                      <div className="w-20 h-20 rounded-2xl bg-emerald-900/40 flex items-center justify-center text-emerald-400 border border-emerald-700/40 shrink-0">
-                        <Leaf className="w-8 h-8" />
-                      </div>
-                    )}
+                    <img
+                      src={getSpeciesImagePath(primarySpecies?.id)}
+                      alt={result.commonName}
+                      className="w-20 h-20 rounded-2xl object-cover border border-emerald-700/40 shrink-0 bg-black/40"
+                      onError={handleSpeciesImageError}
+                    />
 
                     <div className="min-w-0 flex-1">
                       <div className="text-[11px] font-mono text-emerald-400 uppercase tracking-wider">

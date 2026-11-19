@@ -44,7 +44,7 @@
     "image_credit": {
       "observer": "Les Marches du Vivant",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/674728100"
     },
     "is_toxic": false,
     "sources": []
@@ -94,7 +94,7 @@
     "image_credit": {
       "observer": "adokania",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/688420176"
     },
     "is_toxic": false,
     "sources": []
@@ -145,7 +145,7 @@
     "image_credit": {
       "observer": "Jeeson",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/605299054"
     },
     "is_toxic": true,
     "sources": []
@@ -196,7 +196,7 @@
     "image_credit": {
       "observer": "Steve Wu",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/607138196"
     },
     "is_toxic": true,
     "sources": []
@@ -247,7 +247,7 @@
     "image_credit": {
       "observer": "陳士訓",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/607634968"
     },
     "is_toxic": true,
     "sources": []
@@ -298,7 +298,7 @@
     "image_credit": {
       "observer": "Cesar Ormazabal",
       "license": "CC-BY",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/610492086"
     },
     "is_toxic": false,
     "sources": []
@@ -349,7 +349,7 @@
     "image_credit": {
       "observer": "Stanislav Murashkin",
       "license": "CC-BY",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/605086677"
     },
     "is_toxic": true,
     "sources": [

@@ -29,7 +29,7 @@ insert into public.species (
   false,
   'Tulsi translates from Sanskrit as ''the incomparable one''. In Hindu mythology, no ritual offering to Lord Vishnu is complete without a Tulsi leaf.',
   ARRAY['/species/0.webp']::text[],
-  '{"observer":"pikun","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/685727293/original.jpg"}'::jsonb,
+  '{"observer":"pikun","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/685727293"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ocimum_tenuiflorum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -84,7 +84,7 @@ insert into public.species (
   false,
   'The United Nations named Neem the ''Tree of the 21st Century'' due to its potential to combat pests organically without chemical resistance.',
   ARRAY['/species/1.webp']::text[],
-  '{"observer":"sanahawwa","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611928069/original.jpg"}'::jsonb,
+  '{"observer":"sanahawwa","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611928069"}'::jsonb,
   'https://en.wikipedia.org/wiki/Azadirachta_indica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -139,7 +139,7 @@ insert into public.species (
   false,
   'Ancient Egyptian murals referred to Aloe vera as the ''plant of immortality'', and Cleopatra reportedly used its gel in her daily skincare regimen.',
   ARRAY['/species/2.webp']::text[],
-  '{"observer":"coralito_00","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620627610/original.jpg"}'::jsonb,
+  '{"observer":"coralito_00","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/620627610"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aloe_vera',
   '[{"name":"ASPCA Animal Poison Control & FDA (21 CFR Part 310)","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/aloe"}]'::jsonb
 ) on conflict (id) do update set
@@ -194,7 +194,7 @@ insert into public.species (
   false,
   'Turmeric has been cultivated in India for over 4,000 years, and ancient Buddhist monks dyed their traditional saffron robes using yellow turmeric extracts.',
   ARRAY['/species/3.webp']::text[],
-  '{"observer":"偷米","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/575312667/original.jpg"}'::jsonb,
+  '{"observer":"偷米","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/575312667"}'::jsonb,
   'https://en.wikipedia.org/wiki/Turmeric',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -249,7 +249,7 @@ insert into public.species (
   false,
   'During the Middle Ages in Europe, ginger was so prized as an exotic preservative and spice that a single pound of it cost as much as an entire live sheep.',
   ARRAY['/species/4.webp']::text[],
-  '{"observer":"Zuleika Peralta","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/593748869/original.jpg"}'::jsonb,
+  '{"observer":"Zuleika Peralta","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/593748869"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ginger',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -304,7 +304,7 @@ insert into public.species (
   false,
   'Its Sanskrit name Ashwagandha translates literally to ''smell of a horse'', referring both to the horse-like musky odor of the fresh root and the mythical promise of horse-like physical strength.',
   ARRAY['/species/5.webp']::text[],
-  '{"observer":"Finn Rautenbach","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609124573/original.jpg"}'::jsonb,
+  '{"observer":"Finn Rautenbach","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609124573"}'::jsonb,
   'https://en.wikipedia.org/wiki/Withania_somnifera',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -359,7 +359,7 @@ insert into public.species (
   false,
   'In Hindu mythology, drops of heavenly nectar (Amrit) spilled by Lord Indra during the war against demons splashed onto the earth and sprouted into Giloy vines.',
   ARRAY['/species/6.webp']::text[],
-  '{"observer":"Green Bull","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/724577231/original.jpg"}'::jsonb,
+  '{"observer":"Green Bull","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/724577231"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tinospora_cordifolia',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -414,7 +414,7 @@ insert into public.species (
   false,
   'Modern neurochemical studies show that bacosides A and B in Brahmi repair damaged neurons by enhancing synaptic activity and kinase transmission.',
   ARRAY['/species/7.webp']::text[],
-  '{"observer":"tahli-jade","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611571015/original.jpg"}'::jsonb,
+  '{"observer":"tahli-jade","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611571015"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bacopa_monnieri',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -469,7 +469,7 @@ insert into public.species (
   false,
   'A single fresh Amla berry contains approximately 20 times the ascorbic acid (Vitamin C) of a fresh orange, bonded to protective tannins that resist heat degradation during boiling.',
   ARRAY['/species/8.webp']::text[],
-  '{"observer":"Bikash Kumar Sahoo","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607151244/original.jpg"}'::jsonb,
+  '{"observer":"Bikash Kumar Sahoo","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607151244"}'::jsonb,
   'https://en.wikipedia.org/wiki/Phyllanthus_emblica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -524,7 +524,7 @@ insert into public.species (
   false,
   'Commercial ''curry powder'' sold in western supermarkets was a British colonial invention using turmeric and cumin and contains no real curry leaf whatsoever.',
   ARRAY['/species/9.webp']::text[],
-  '{"observer":"foaspotter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643337910/original.jpg"}'::jsonb,
+  '{"observer":"foaspotter","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/643337910"}'::jsonb,
   'https://en.wikipedia.org/wiki/Curry_tree',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -579,7 +579,7 @@ insert into public.species (
   false,
   'Moringa leaves contain seven times more Vitamin C than oranges, four times more calcium than cow''s milk, and four times more Vitamin A than carrots per equal weight.',
   ARRAY['/species/10.webp']::text[],
-  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606625114/original.jpg"}'::jsonb,
+  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606625114"}'::jsonb,
   'https://en.wikipedia.org/wiki/Moringa_oleifera',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -634,7 +634,7 @@ insert into public.species (
   false,
   'The hard woody shell of the Bael fruit is so tough that it was historically dried and polished to make snuff boxes, bowls, and measuring vessels in Indian villages.',
   ARRAY['/species/11.webp']::text[],
-  '{"observer":"Priya Priya","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/659379281/original.jpg"}'::jsonb,
+  '{"observer":"Priya Priya","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/659379281"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aegle_marmelos',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -689,7 +689,7 @@ insert into public.species (
   false,
   'Named after the hero Arjuna of the Mahabharata epic in tribute to the tree''s unmatched strength, defensive resilience, and role as a biological shield for the human heart.',
   ARRAY['/species/12.webp']::text[],
-  '{"observer":"Kailas Erande","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/673721578/original.jpg"}'::jsonb,
+  '{"observer":"Kailas Erande","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/673721578"}'::jsonb,
   'https://en.wikipedia.org/wiki/Terminalia_arjuna',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -744,7 +744,7 @@ insert into public.species (
   false,
   'According to ancient Sanskrit folklore, the Ashoka tree would burst into magnificent bloom only when tapped gently by the soft, bejeweled left foot of a virtuous maiden.',
   ARRAY['/species/13.webp']::text[],
-  '{"observer":"Sayali Bakore","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/497918591/original.jpg"}'::jsonb,
+  '{"observer":"Sayali Bakore","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/497918591"}'::jsonb,
   'https://en.wikipedia.org/wiki/Saraca_asoca',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -799,7 +799,7 @@ insert into public.species (
   false,
   'Offering a seasoned Paan leaf is one of the highest traditional gestures of hospitality in Indian culture, recorded in Marco Polo''s travelogues of the subcontinent in the 13th century.',
   ARRAY['/species/14.webp']::text[],
-  '{"observer":"連亮惟","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/691273563/original.jpg"}'::jsonb,
+  '{"observer":"連亮惟","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/691273563"}'::jsonb,
   'https://en.wikipedia.org/wiki/Betel',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -854,7 +854,7 @@ insert into public.species (
   false,
   'Lemongrass contains up to 80% citral in its volatile oils, giving it a stronger lemon aroma than actual lemon fruit peels.',
   ARRAY['/species/15.webp']::text[],
-  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605049920/original.jpg"}'::jsonb,
+  '{"observer":"Biodiversity Restoration Registry Kigamboni.","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605049920"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cymbopogon_citratus',
   '[{"name":"ASPCA Animal Poison Control","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemongrass"}]'::jsonb
 ) on conflict (id) do update set
@@ -909,7 +909,7 @@ insert into public.species (
   false,
   'Spearmint gets its common name from its pointed, spear-shaped leaf tips and floral spikes.',
   ARRAY['/species/16.webp']::text[],
-  '{"observer":"lynettescott","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643458773/original.jpg"}'::jsonb,
+  '{"observer":"lynettescott","license":"CC0","source_url":"https://www.inaturalist.org/photos/643458773"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spearmint',
   '[{"name":"ASPCA Animal Poison Control & EMA Monograph","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/mint"},{"name":"EMA European Medicines Agency Herbal Monograph","url":"https://www.ema.europa.eu/en/medicines/herbal/menthae-piperitae-aetheroleum"}]'::jsonb
 ) on conflict (id) do update set
@@ -964,7 +964,7 @@ insert into public.species (
   false,
   'The historic Jaya Sri Maha Bodhi in Sri Lanka, propagated from the original Peepal tree in Bodh Gaya, was planted in 288 BCE and is the oldest known human-planted living tree with a recorded planting date.',
   ARRAY['/species/17.webp']::text[],
-  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/625313973/original.jpg"}'::jsonb,
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/625313973"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_religiosa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1019,7 +1019,7 @@ insert into public.species (
   false,
   'The Great Banyan in Howrah, West Bengal, has a canopy circumference of over 450 meters and looks like an entire forest, yet is a single clonal specimen connected by thousands of prop roots.',
   ARRAY['/species/18.webp']::text[],
-  '{"observer":"Sushant Kumar Mishra","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626942186/original.jpg"}'::jsonb,
+  '{"observer":"Sushant Kumar Mishra","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/626942186"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_benghalensis',
   '[{"name":"ASPCA Animal Poison Control & Botanical Dermatology Database","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/fig"}]'::jsonb
 ) on conflict (id) do update set
@@ -1074,7 +1074,7 @@ insert into public.species (
   false,
   'Kalmegh is called ''Maha-tita'' in Bengali, literally meaning ''Great Bitter'', because its bitter taste is said to surpass even that of Neem.',
   ARRAY['/species/19.webp']::text[],
-  '{"observer":"Wanda G Jackson","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646347164/original.jpg"}'::jsonb,
+  '{"observer":"Wanda G Jackson","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/646347164"}'::jsonb,
   'https://en.wikipedia.org/wiki/Andrographis_paniculata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1129,7 +1129,7 @@ insert into public.species (
   false,
   'Historically known as ''Shoeblack plant'' because crushed petals were used in India and the Caribbean to blacken and polish leather shoes.',
   ARRAY['/species/20.webp']::text[],
-  '{"observer":"Silky Refina Marshellia","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632037594/original.jpg"}'::jsonb,
+  '{"observer":"Silky Refina Marshellia","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/632037594"}'::jsonb,
   'https://en.wikipedia.org/wiki/Hibiscus_rosa-sinensis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1184,7 +1184,7 @@ insert into public.species (
   false,
   'Marigold flower petals are the richest natural commercial source of lutein, an essential antioxidant for human retinal eye health.',
   ARRAY['/species/21.webp']::text[],
-  '{"observer":"Ernesto Rodriguez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632297674/original.jpg"}'::jsonb,
+  '{"observer":"Ernesto Rodriguez","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/632297674"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tagetes_erecta',
   '[{"name":"ASPCA Animal Poison Control","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/marigold"}]'::jsonb
 ) on conflict (id) do update set
@@ -1239,7 +1239,7 @@ insert into public.species (
   false,
   'Jasminum sambac is the national flower of both the Philippines (known as Sampaguita) and Indonesia (known as Melati putih).',
   ARRAY['/species/22.webp']::text[],
-  '{"observer":"Io Siu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/495037538/original.jpg"}'::jsonb,
+  '{"observer":"Io Siu","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/495037538"}'::jsonb,
   'https://en.wikipedia.org/wiki/Jasminum_sambac',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1294,7 +1294,7 @@ insert into public.species (
   false,
   'The micro-nanostructures on lotus leaves cause water droplets to roll off carrying dirt with them, giving rise to the scientific term ''the lotus effect'' for self-cleaning surfaces.',
   ARRAY['/species/23.webp']::text[],
-  '{"observer":"cgbolas","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616028444/original.jpg"}'::jsonb,
+  '{"observer":"cgbolas","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616028444"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nelumbo_nucifera',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1349,7 +1349,7 @@ insert into public.species (
   false,
   'Rose hips (the fruit of the rose plant) contain one of the highest concentrations of natural Vitamin C of any edible fruit.',
   ARRAY['/species/24.webp']::text[],
-  '{"observer":"amandrews","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606952244/original.jpg"}'::jsonb,
+  '{"observer":"amandrews","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606952244"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rose',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1404,7 +1404,7 @@ insert into public.species (
   true,
   'Frangipani flowers emit their strongest fragrance at night to lure sphinx moths, although the flowers produce no nectar, tricking their pollinators.',
   ARRAY['/species/25.webp']::text[],
-  '{"observer":"fmunoz","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/615098646/original.jpg"}'::jsonb,
+  '{"observer":"fmunoz","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/615098646"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumeria_rubra',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1459,7 +1459,7 @@ insert into public.species (
   true,
   'Oleander is so rugged and resistant to browsing herbivores due to its toxicity that it is one of the most widely planted highway barrier shrubs in the world.',
   ARRAY['/species/26.webp']::text[],
-  '{"observer":"bradwarren","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609960662/original.jpg"}'::jsonb,
+  '{"observer":"bradwarren","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609960662"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nerium_oleander',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1514,7 +1514,7 @@ insert into public.species (
   false,
   'The brightly colored ''petals'' of Bougainvillea are actually modified leaves called bracts; the true flowers are the tiny white stars nestled inside.',
   ARRAY['/species/27.webp']::text[],
-  '{"observer":"Noopur🍀","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/461875164/original.jpeg"}'::jsonb,
+  '{"observer":"Noopur🍀","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/461875164"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bougainvillea_spectabilis',
   '[{"name":"ASPCA Animal Poison Control","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/bougainvillea"}]'::jsonb
 ) on conflict (id) do update set
@@ -1569,7 +1569,7 @@ insert into public.species (
   false,
   'The vibrant blue anthocyanin pigment ternatin in Butterfly pea flowers functions as a natural pH indicator, instantly shifting from deep sapphire blue to vivid magenta when an acid like lemon juice is introduced.',
   ARRAY['/species/28.webp']::text[],
-  '{"observer":"benjaminsisko","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611136861/original.jpg"}'::jsonb,
+  '{"observer":"benjaminsisko","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611136861"}'::jsonb,
   'https://en.wikipedia.org/wiki/Clitoria_ternatea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1624,7 +1624,7 @@ insert into public.species (
   false,
   'The species name ''arbor-tristis'' means ''tree of sorrow'' because its joyful fragrant blooms drop quietly before sunrise, leaving the tree bare during daytime.',
   ARRAY['/species/29.webp']::text[],
-  '{"observer":"rushitha_jain","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/500830565/original.jpg"}'::jsonb,
+  '{"observer":"rushitha_jain","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/500830565"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nyctanthes_arbor-tristis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1679,7 +1679,7 @@ insert into public.species (
   false,
   'Although endangered in its native wild habitat of Madagascar, Delonix regia is now one of the most widely planted and beloved tropical street trees on Earth.',
   ARRAY['/species/30.webp']::text[],
-  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610597048/original.jpg"}'::jsonb,
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/610597048"}'::jsonb,
   'https://en.wikipedia.org/wiki/Delonix_regia',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1734,7 +1734,7 @@ insert into public.species (
   true,
   'Sadabahar literally means ''evergreen'' or ''always in bloom'' in Hindi, named for its extraordinary ability to flower 365 days a year even in scorching heat.',
   ARRAY['/species/31.webp']::text[],
-  '{"observer":"amynmann","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606065431/original.jpg"}'::jsonb,
+  '{"observer":"amynmann","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606065431"}'::jsonb,
   'https://en.wikipedia.org/wiki/Catharanthus_roseus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1789,7 +1789,7 @@ insert into public.species (
   false,
   'In Kerala, Ixora coccinea (known as Thechi) is a mandatory floral offering for Lord Ganesha and temple rituals.',
   ARRAY['/species/32.webp']::text[],
-  '{"observer":"Thoodi Harsha","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/624942925/original.jpg"}'::jsonb,
+  '{"observer":"Thoodi Harsha","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/624942925"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ixora_coccinea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1844,7 +1844,7 @@ insert into public.species (
   true,
   'Lantana camara has invaded over 13 million hectares of Indian forest lands, suppressing native regeneration and earning a spot among the world''s 100 worst invasive alien species.',
   ARRAY['/species/33.webp']::text[],
-  '{"observer":"Francois (Red)","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605593965/original.jpg"}'::jsonb,
+  '{"observer":"Francois (Red)","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605593965"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lantana_camara',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1899,7 +1899,7 @@ insert into public.species (
   false,
   'The crested form of Cockscomb is a stabilized genetic anomaly called fasciation, which fuses and fans out the floral stem into a rooster-like crest.',
   ARRAY['/species/34.webp']::text[],
-  '{"observer":"timmeschke","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609330812/original.jpg"}'::jsonb,
+  '{"observer":"timmeschke","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609330812"}'::jsonb,
   'https://en.wikipedia.org/wiki/Celosia_argentea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -1954,7 +1954,7 @@ insert into public.species (
   false,
   'When Crossandra''s ripe seed pods encounter water or high humidity, they burst open with an audible pop and fling seeds away, earning the moniker ''Firecracker flower''.',
   ARRAY['/species/35.webp']::text[],
-  '{"observer":"Tharuni Sangonda","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/657780650/original.jpg"}'::jsonb,
+  '{"observer":"Tharuni Sangonda","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/657780650"}'::jsonb,
   'https://en.wikipedia.org/wiki/Crossandra_infundibuliformis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2009,7 +2009,7 @@ insert into public.species (
   false,
   'Canna seeds are so exceptionally hard and dense that during the 1857 Indian rebellion, soldiers reportedly used them in place of lead shot when musket balls ran out.',
   ARRAY['/species/36.webp']::text[],
-  '{"observer":"Drew Baxter","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/612178132/original.jpg"}'::jsonb,
+  '{"observer":"Drew Baxter","license":"CC0","source_url":"https://www.inaturalist.org/photos/612178132"}'::jsonb,
   'https://en.wikipedia.org/wiki/Canna_indica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2064,7 +2064,7 @@ insert into public.species (
   false,
   'The genus name ''Impatiens'' (meaning impatient) refers to the explosive seed pods that violently shoot their seeds into the air the instant they are touched.',
   ARRAY['/species/37.webp']::text[],
-  '{"observer":"Lynn Katsoulis","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620293016/original.jpg"}'::jsonb,
+  '{"observer":"Lynn Katsoulis","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/620293016"}'::jsonb,
   'https://en.wikipedia.org/wiki/Impatiens_balsamina',
   '[{"name":"ASPCA Animal Poison Control","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/impatiens"}]'::jsonb
 ) on conflict (id) do update set
@@ -2119,7 +2119,7 @@ insert into public.species (
   false,
   'Cassia fistula is the state flower of Kerala and the national tree of Thailand (known as Ratchaphruek), where its yellow blooms represent royalty and solar majesty.',
   ARRAY['/species/38.webp']::text[],
-  '{"observer":"Aditya Bari","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616097106/original.jpg"}'::jsonb,
+  '{"observer":"Aditya Bari","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616097106"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cassia_fistula',
   '[{"name":"EMA Herbal Monograph & Ayurvedic Pharmacopoeia of India","url":"https://www.ema.europa.eu/en/medicines/herbal/sennae-fructus"}]'::jsonb
 ) on conflict (id) do update set
@@ -2174,7 +2174,7 @@ insert into public.species (
   false,
   'The historic Battle of Plassey (1757), which established British rule in India, was fought in a mango grove near the village of Palashi, named after the surrounding forests of blooming Palash trees.',
   ARRAY['/species/39.webp']::text[],
-  '{"observer":"Jordan","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609613156/original.jpg"}'::jsonb,
+  '{"observer":"Jordan","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609613156"}'::jsonb,
   'https://en.wikipedia.org/wiki/Butea_monosperma',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2229,7 +2229,7 @@ insert into public.species (
   false,
   'India produces over 40% of the world''s total mango supply, cultivating over 1,000 distinct heritage varieties including Alphonso, Dasheri, Langra, and Himsagar.',
   ARRAY['/species/40.webp']::text[],
-  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610611295/original.jpg"}'::jsonb,
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/610611295"}'::jsonb,
   'https://en.wikipedia.org/wiki/Mangifera_indica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2284,7 +2284,7 @@ insert into public.species (
   false,
   'Every single part of the coconut tree is utilized for food, shelter, fuel, or medicine, leading Sanskrit scriptures to name it Kalpavriksha (''the tree that provides all the necessities of life'').',
   ARRAY['/species/41.webp']::text[],
-  '{"observer":"Sam Rickert","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605446421/original.jpg"}'::jsonb,
+  '{"observer":"Sam Rickert","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605446421"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coconut',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2339,7 +2339,7 @@ insert into public.species (
   false,
   'Botanically speaking, the banana plant is not a tree at all, but the world''s largest perennial herbaceous plant, and the banana itself is classified as a berry.',
   ARRAY['/species/42.webp']::text[],
-  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614057334/original.jpg"}'::jsonb,
+  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/614057334"}'::jsonb,
   'https://en.wikipedia.org/wiki/Musa_acuminata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2394,7 +2394,7 @@ insert into public.species (
   false,
   'Papaya trees can be male, female, or hermaphrodite; only female and hermaphrodite trees bear fruit, with hermaphrodite flowers producing the elongated commercial papayas sold in markets.',
   ARRAY['/species/43.webp']::text[],
-  '{"observer":"Harry Hill","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608014957/original.jpg"}'::jsonb,
+  '{"observer":"Harry Hill","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608014957"}'::jsonb,
   'https://en.wikipedia.org/wiki/Papaya',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2449,7 +2449,7 @@ insert into public.species (
   false,
   'Guava fruit contains over 228 mg of Vitamin C per 100g — roughly four times the Vitamin C concentration of a typical sweet orange.',
   ARRAY['/species/44.webp']::text[],
-  '{"observer":"Roqui Bello","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611076249/original.jpg"}'::jsonb,
+  '{"observer":"Roqui Bello","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611076249"}'::jsonb,
   'https://en.wikipedia.org/wiki/Psidium_guajava',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2504,7 +2504,7 @@ insert into public.species (
   false,
   'A single pomegranate fruit can hold anywhere from 200 to more than 1,000 jewel-like arils, symbolizing abundance and fertility across many ancient civilizations.',
   ARRAY['/species/45.webp']::text[],
-  '{"observer":"謝麗霦","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609832087/original.jpg"}'::jsonb,
+  '{"observer":"謝麗霦","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/609832087"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pomegranate',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2559,7 +2559,7 @@ insert into public.species (
   false,
   'Jackfruit is the largest tree-borne fruit on the planet, with exceptional specimens reaching over 55 kilograms in weight and nearly a meter in length.',
   ARRAY['/species/46.webp']::text[],
-  '{"observer":"keirfawinat","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/620998083/original.jpg"}'::jsonb,
+  '{"observer":"keirfawinat","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/620998083"}'::jsonb,
   'https://en.wikipedia.org/wiki/Jackfruit',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2614,7 +2614,7 @@ insert into public.species (
   false,
   'The name Tamarind derives from the Arabic ''Tamar-ul-Hind'', literally translating to ''Date of India'', referencing the dark, sticky, date-like pulp inside the pods.',
   ARRAY['/species/47.webp']::text[],
-  '{"observer":"Mohamed SAOUPKAI","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616651808/original.jpg"}'::jsonb,
+  '{"observer":"Mohamed SAOUPKAI","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616651808"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tamarind',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2669,7 +2669,7 @@ insert into public.species (
   false,
   'In ancient Hindu cosmology, the Indian subcontinent was known as ''Jambudvipa'' (the Island of the Jambu Trees), named after the abundance of giant Jamun trees.',
   ARRAY['/species/48.webp']::text[],
-  '{"observer":"Austin Smith","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/619248897/original.jpg"}'::jsonb,
+  '{"observer":"Austin Smith","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/619248897"}'::jsonb,
   'https://en.wikipedia.org/wiki/Syzygium_cumini',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2724,7 +2724,7 @@ insert into public.species (
   false,
   'The milky latex tapped from wild Sapodilla trunks was the original raw ingredient for Adams Chiclets, pioneering the modern global chewing gum industry.',
   ARRAY['/species/49.webp']::text[],
-  '{"observer":"Lynette","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/659452802/original.jpg"}'::jsonb,
+  '{"observer":"Lynette","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/659452802"}'::jsonb,
   'https://en.wikipedia.org/wiki/Manilkara_zapota',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2779,7 +2779,7 @@ insert into public.species (
   false,
   'Custard apple is commonly known as ''Sitaphal'' in India, traditionally associated with Sita from the epic Ramayana.',
   ARRAY['/species/50.webp']::text[],
-  '{"observer":"Amara Malik","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626599925/original.jpg"}'::jsonb,
+  '{"observer":"Amara Malik","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/626599925"}'::jsonb,
   'https://en.wikipedia.org/wiki/Annona_squamosa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2834,7 +2834,7 @@ insert into public.species (
   false,
   'Genetic studies reveal that the cultivated lemon is actually an ancient hybrid between the sour orange (Citrus × aurantium) and the citron (Citrus medica).',
   ARRAY['/species/51.webp']::text[],
-  '{"observer":"rafa perazzolo","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/419656927/original.jpeg"}'::jsonb,
+  '{"observer":"rafa perazzolo","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/419656927"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lemon',
   '[{"name":"ASPCA Animal Poison Control & European Commission SCCS","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lemon"}]'::jsonb
 ) on conflict (id) do update set
@@ -2889,7 +2889,7 @@ insert into public.species (
   false,
   'Teak wood contains natural rubber oils and tectoquinone, making it so naturally waterproof and insect-resistant that teak ships built over 200 years ago still float soundly today.',
   ARRAY['/species/52.webp']::text[],
-  '{"observer":"Gaurav S. Soman.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644666241/original.jpg"}'::jsonb,
+  '{"observer":"Gaurav S. Soman.","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/644666241"}'::jsonb,
   'https://en.wikipedia.org/wiki/Teak',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2944,7 +2944,7 @@ insert into public.species (
   false,
   'According to Buddhist tradition, Queen Maya gave birth to Gautama Buddha under a blooming Sal tree in Lumbini garden, and Buddha passed into Parinirvana beneath a pair of Sal trees in Kushinagar.',
   ARRAY['/species/53.webp']::text[],
-  '{"observer":"Bikram Gyawali","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/83110977/original.jpeg"}'::jsonb,
+  '{"observer":"Bikram Gyawali","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/83110977"}'::jsonb,
   'https://en.wikipedia.org/wiki/Shorea_robusta',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -2999,7 +2999,7 @@ insert into public.species (
   false,
   'Certain bamboo species can grow up to 90 centimeters (almost 3 feet) in a single 24-hour period during peak monsoon season, making them the fastest-growing woody plants on Earth.',
   ARRAY['/species/54.webp']::text[],
-  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/626562692/original.jpg"}'::jsonb,
+  '{"observer":"Raja Sekhar Chimirala","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/626562692"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bambusa_vulgaris',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3054,7 +3054,7 @@ insert into public.species (
   false,
   'Betel nut chewing is one of the world''s oldest psychoactive traditions, practiced by hundreds of millions of people across South Asia and the Pacific for thousands of years.',
   ARRAY['/species/55.webp']::text[],
-  '{"observer":"eagle100","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/482626227/original.jpg"}'::jsonb,
+  '{"observer":"eagle100","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/482626227"}'::jsonb,
   'https://en.wikipedia.org/wiki/Areca_catechu',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3109,7 +3109,7 @@ insert into public.species (
   false,
   'Archaeological evidence shows date palm cultivation dating back more than 6,000 years in Mesopotamia, making it one of the oldest cultivated fruit trees in human civilization.',
   ARRAY['/species/56.webp']::text[],
-  '{"observer":"Darrell Parsons","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/622598475/original.jpg"}'::jsonb,
+  '{"observer":"Darrell Parsons","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/622598475"}'::jsonb,
   'https://en.wikipedia.org/wiki/Date_palm',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3164,7 +3164,7 @@ insert into public.species (
   false,
   'When in bloom on bare branches, a single Semal tree becomes a bustling wildlife hub, attracting dozens of bird species, fruit bats, and monkeys gorging on abundant nectar.',
   ARRAY['/species/57.webp']::text[],
-  '{"observer":"ankitha_jayanth","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/613329960/original.jpg"}'::jsonb,
+  '{"observer":"ankitha_jayanth","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/613329960"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bombax_ceiba',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3219,7 +3219,7 @@ insert into public.species (
   false,
   'The name ''Rain Tree'' comes from the phenomenon of its leaflets folding up before rainfall, allowing raindrops to pass directly through the canopy to the ground beneath.',
   ARRAY['/species/58.webp']::text[],
-  '{"observer":"Hilal Ram","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646435571/original.jpg"}'::jsonb,
+  '{"observer":"Hilal Ram","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/646435571"}'::jsonb,
   'https://en.wikipedia.org/wiki/Samanea_saman',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3274,7 +3274,7 @@ insert into public.species (
   false,
   'The Nilgiri Hills (''Blue Mountains'') in Tamil Nadu got their modern blue haze association partly from the vast plantations of blue gum eucalyptus trees introduced there in the mid-19th century.',
   ARRAY['/species/59.webp']::text[],
-  '{"observer":"felixgwj","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/612087330/original.jpg"}'::jsonb,
+  '{"observer":"felixgwj","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/612087330"}'::jsonb,
   'https://en.wikipedia.org/wiki/Eucalyptus_globulus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3329,7 +3329,7 @@ insert into public.species (
   false,
   'India is the world''s largest exporter of rice, cultivating thousands of fragrant heritage varieties including the legendary long-grain Basmati and aromatic Gobindobhog.',
   ARRAY['/species/60.webp']::text[],
-  '{"observer":"Chitra Shanker","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/577214534/original.jpg"}'::jsonb,
+  '{"observer":"Chitra Shanker","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/577214534"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rice',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3384,7 +3384,7 @@ insert into public.species (
   false,
   'Common bread wheat is an allohexaploid plant, meaning its complex genome contains six sets of chromosomes derived from three distinct ancestral wild grass species.',
   ARRAY['/species/61.webp']::text[],
-  '{"observer":"Francis Stiteler","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/650790706/original.jpg"}'::jsonb,
+  '{"observer":"Francis Stiteler","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/650790706"}'::jsonb,
   'https://en.wikipedia.org/wiki/Common_wheat',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3439,7 +3439,7 @@ insert into public.species (
   false,
   'Every single strand of silk on an ear of corn connects to a single egg inside, meaning every single kernel on a cob must be individually pollinated by a grain of airborne pollen.',
   ARRAY['/species/62.webp']::text[],
-  '{"observer":"Karol Łanocha","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/622560195/original.jpg"}'::jsonb,
+  '{"observer":"Karol Łanocha","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/622560195"}'::jsonb,
   'https://en.wikipedia.org/wiki/Maize',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3494,7 +3494,7 @@ insert into public.species (
   false,
   'India was the first country in the world to invent the process of crystallizing sugarcane juice into solid crystals (Sanskrit: ''Khanda'', origin of the English word ''candy'') over 2,500 years ago.',
   ARRAY['/species/63.webp']::text[],
-  '{"observer":"FO12071Saowanit","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/654822582/original.jpg"}'::jsonb,
+  '{"observer":"FO12071Saowanit","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/654822582"}'::jsonb,
   'https://en.wikipedia.org/wiki/Saccharum_officinarum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3549,7 +3549,7 @@ insert into public.species (
   false,
   'All true teas — black, green, white, oolong, and pu-erh — come from the very same botanical species, Camellia sinensis; the dramatic differences in flavor and color arise solely from how the leaves are oxidized and processed.',
   ARRAY['/species/64.webp']::text[],
-  '{"observer":"kusa-to-uo","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/638982674/original.jpg"}'::jsonb,
+  '{"observer":"kusa-to-uo","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/638982674"}'::jsonb,
   'https://en.wikipedia.org/wiki/Camellia_sinensis',
   '[{"name":"ASPCA Animal Poison Control & EFSA Scientific Opinion on Green Tea Catechins","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/tea"}]'::jsonb
 ) on conflict (id) do update set
@@ -3604,7 +3604,7 @@ insert into public.species (
   false,
   'Cotton fibers are practically pure natural cellulose (over 90%), arranged in hollow microscopic spirals that make them exceptionally soft, absorbent, and breathable.',
   ARRAY['/species/65.webp']::text[],
-  '{"observer":"megan_pratt1","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/632484731/original.jpg"}'::jsonb,
+  '{"observer":"megan_pratt1","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/632484731"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gossypium_hirsutum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3659,7 +3659,7 @@ insert into public.species (
   false,
   'The characteristic pungent nasal heat of mustard is only released when seeds or leaves are crushed in water, which activates the myrosinase enzyme to produce allyl isothiocyanate.',
   ARRAY['/species/66.webp']::text[],
-  '{"observer":"Emilia Sierra","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/672843970/original.jpg"}'::jsonb,
+  '{"observer":"Emilia Sierra","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/672843970"}'::jsonb,
   'https://en.wikipedia.org/wiki/Brassica_juncea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3714,7 +3714,7 @@ insert into public.species (
   false,
   'Botanically, the tomato is a true berry, but a famous 1893 US Supreme Court case (Nix v. Hedden) legally classified it as a vegetable for taxation purposes because it is eaten as part of the main meal.',
   ARRAY['/species/67.webp']::text[],
-  '{"observer":"Ajay Malik.","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610386522/original.jpg"}'::jsonb,
+  '{"observer":"Ajay Malik.","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610386522"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tomato',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3769,7 +3769,7 @@ insert into public.species (
   false,
   'The fiery heat in chillies is measured on the Scoville Heat Scale; capsaicin does not cause an actual physical burn, but tricks sensory nerve endings into signaling extreme heat to the brain.',
   ARRAY['/species/68.webp']::text[],
-  '{"observer":"chrissietinder","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/646061537/original.jpg"}'::jsonb,
+  '{"observer":"chrissietinder","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/646061537"}'::jsonb,
   'https://en.wikipedia.org/wiki/Capsicum_annuum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3824,7 +3824,7 @@ insert into public.species (
   false,
   'Botanical and linguistic records confirm that brinjal was domesticated in India over 4,000 years ago, and Sanskrit literature documents over 30 distinct historical culinary varieties.',
   ARRAY['/species/69.webp']::text[],
-  '{"observer":"Sereana Seuvou","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/652557520/original.jpg"}'::jsonb,
+  '{"observer":"Sereana Seuvou","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/652557520"}'::jsonb,
   'https://en.wikipedia.org/wiki/Eggplant',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3879,7 +3879,7 @@ insert into public.species (
   false,
   'India is the world''s undisputed king of okra production, harvesting over 60% of the entire global commercial okra crop each year.',
   ARRAY['/species/70.webp']::text[],
-  '{"observer":"kc8328thamonwan","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/654096065/original.jpg"}'::jsonb,
+  '{"observer":"kc8328thamonwan","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/654096065"}'::jsonb,
   'https://en.wikipedia.org/wiki/Okra',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3934,7 +3934,7 @@ insert into public.species (
   false,
   'Potatoes are underground modified stems (tubers), not roots; the ''eyes'' of a potato are actually dormant axillary buds capable of sprouting into new clonal plants.',
   ARRAY['/species/71.webp']::text[],
-  '{"observer":"김도윤","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/655729080/original.jpg"}'::jsonb,
+  '{"observer":"김도윤","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/655729080"}'::jsonb,
   'https://en.wikipedia.org/wiki/Potato',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -3989,7 +3989,7 @@ insert into public.species (
   false,
   'Onions make you cry because slicing cell walls mixes sulfenic acids with enzymes to create syn-propanethial-S-oxide gas, which reacts with tear-duct moisture to form mild sulfuric acid.',
   ARRAY['/species/72.webp']::text[],
-  '{"observer":"jeanelz","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609453292/original.jpg"}'::jsonb,
+  '{"observer":"jeanelz","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609453292"}'::jsonb,
   'https://en.wikipedia.org/wiki/Onion',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4044,7 +4044,7 @@ insert into public.species (
   false,
   'Every part of the coriander plant is edible — the tender leafy greens (cilantro), the flowers, the dried seeds (coriander), and even the pungent roots which form the base of Thai curry pastes.',
   ARRAY['/species/73.webp']::text[],
-  '{"observer":"Юрий","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/698502292/original.jpg"}'::jsonb,
+  '{"observer":"Юрий","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/698502292"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coriander',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4099,7 +4099,7 @@ insert into public.species (
   false,
   'The famous myth that spinach contains astronomical amounts of iron originated from a 19th-century German chemist who misplaced a decimal point, attributing tenfold the actual iron content to the leaf.',
   ARRAY['/species/74.webp']::text[],
-  '{"observer":"Thassanee Duangnin","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/573074833/original.jpg"}'::jsonb,
+  '{"observer":"Thassanee Duangnin","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/573074833"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spinach',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4154,7 +4154,7 @@ insert into public.species (
   false,
   'Dried, hollowed bottle gourds were among the world''s very first domesticated containers and floating water jugs, carried across oceans by early human navigators over 10,000 years ago.',
   ARRAY['/species/75.webp']::text[],
-  '{"observer":"Sulaiman Inuwa Muhammad","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/462897626/original.jpg"}'::jsonb,
+  '{"observer":"Sulaiman Inuwa Muhammad","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/462897626"}'::jsonb,
   'https://en.wikipedia.org/wiki/Calabash',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4209,7 +4209,7 @@ insert into public.species (
   false,
   'In Bengali cuisine, practically zero waste is generated from pumpkin: the flesh, tender climbing shoot tips (kumro shaak), yellow flowers (kumro phul bhaja), and seeds are all prized delicacies.',
   ARRAY['/species/76.webp']::text[],
-  '{"observer":"abdlkrim","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/737755455/original.jpg"}'::jsonb,
+  '{"observer":"abdlkrim","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/737755455"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cucurbita_moschata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4264,7 +4264,7 @@ insert into public.species (
   false,
   'Ancient Sanskrit texts mention cucumber cultivation under the name ''Trapusha'' over three millennia ago, confirming India as the original botanical homeland of the global cucumber.',
   ARRAY['/species/77.webp']::text[],
-  '{"observer":"dongjing123","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/498390644/original.jpeg"}'::jsonb,
+  '{"observer":"dongjing123","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/498390644"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cucumber',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4319,7 +4319,7 @@ insert into public.species (
   false,
   'Peanuts are not true nuts at all, but botanical legumes related to peas and beans, famous for their unique habit of flowering in the air and ripening their pods underground.',
   ARRAY['/species/78.webp']::text[],
-  '{"observer":"pcharris","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/563717798/original.jpg"}'::jsonb,
+  '{"observer":"pcharris","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/563717798"}'::jsonb,
   'https://en.wikipedia.org/wiki/Peanut',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4374,7 +4374,7 @@ insert into public.species (
   false,
   'Jute is the second most important natural vegetable fiber in the world after cotton, and is celebrated as ''The Golden Fiber'' for its natural golden sheen and vital economic importance.',
   ARRAY['/species/79.webp']::text[],
-  '{"observer":"Mashudu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/483759219/original.jpeg"}'::jsonb,
+  '{"observer":"Mashudu","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/483759219"}'::jsonb,
   'https://en.wikipedia.org/wiki/Corchorus_olitorius',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4429,7 +4429,7 @@ insert into public.species (
   true,
   'Golden Pothos earned the nickname ''Devil''s Ivy'' because it is nearly impossible to kill and stays vibrantly green even when neglected in windowless dark corners.',
   ARRAY['/species/80.webp']::text[],
-  '{"observer":"ELIZE JANICA AQUINO","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611198308/original.jpg"}'::jsonb,
+  '{"observer":"ELIZE JANICA AQUINO","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611198308"}'::jsonb,
   'https://en.wikipedia.org/wiki/Epipremnum_aureum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4484,7 +4484,7 @@ insert into public.species (
   true,
   'Unlike most houseplants that release oxygen only during daytime photosynthesis, the Snake Plant performs CAM photosynthesis, releasing oxygen throughout the night, making it ideal for bedrooms.',
   ARRAY['/species/81.webp']::text[],
-  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614057605/original.jpg"}'::jsonb,
+  '{"observer":"Manuel Raab","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/614057605"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_trifasciata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4539,7 +4539,7 @@ insert into public.species (
   false,
   'A single healthy mother Spider Plant can produce dozens of dangling baby plantlets simultaneously on its arching stolons, giving rise to its common name ''Hen and Chickens''.',
   ARRAY['/species/82.webp']::text[],
-  '{"observer":"Petra Holland","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644264393/original.jpg"}'::jsonb,
+  '{"observer":"Petra Holland","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/644264393"}'::jsonb,
   'https://en.wikipedia.org/wiki/Chlorophytum_comosum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4594,7 +4594,7 @@ insert into public.species (
   false,
   'The natural holes in Monstera leaves are called ''fenestrations'' (from the Latin for window); they allow hurricane winds to pass through without tearing the leaf and let sunlight filter down to lower foliage.',
   ARRAY['/species/83.webp']::text[],
-  '{"observer":"carolwest","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/614034394/original.jpg"}'::jsonb,
+  '{"observer":"carolwest","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/614034394"}'::jsonb,
   'https://en.wikipedia.org/wiki/Monstera_deliciosa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4649,7 +4649,7 @@ insert into public.species (
   true,
   'The white ''flower'' of the Peace Lily is not a true flower at all, but a modified leaf called a spathe that serves as a protective hood and billboard to guide pollinators to the tiny true flowers on the spadix.',
   ARRAY['/species/84.webp']::text[],
-  '{"observer":"Dhandara Manini","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/494014348/original.jpeg"}'::jsonb,
+  '{"observer":"Dhandara Manini","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/494014348"}'::jsonb,
   'https://en.wikipedia.org/wiki/Spathiphyllum_wallisii',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4704,7 +4704,7 @@ insert into public.species (
   false,
   'The incredible Living Root Bridges of Meghalaya, some carrying foot traffic for over 500 years, are meticulously grown and woven by indigenous Khasi villagers using the living aerial roots of Ficus elastica.',
   ARRAY['/species/85.webp']::text[],
-  '{"observer":"大坑東宣道小學","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/643533620/original.jpg"}'::jsonb,
+  '{"observer":"大坑東宣道小學","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/643533620"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_elastica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4759,7 +4759,7 @@ insert into public.species (
   true,
   'Jade plants can live for over 70 to 100 years, often passed down through multiple family generations as living family heirlooms.',
   ARRAY['/species/86.webp']::text[],
-  '{"observer":"Craig Peter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/656093496/original.jpg"}'::jsonb,
+  '{"observer":"Craig Peter","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/656093496"}'::jsonb,
   'https://en.wikipedia.org/wiki/Crassula_ovata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4814,7 +4814,7 @@ insert into public.species (
   false,
   'Prickly pear cladodes are the traditional host plant for cochineal insects (Dactylopius coccus), the historic source of natural carmine red dye used to color royal fabrics, cosmetics, and foods.',
   ARRAY['/species/87.webp']::text[],
-  '{"observer":"Melissa Sinka","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610068882/original.jpg"}'::jsonb,
+  '{"observer":"Melissa Sinka","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610068882"}'::jsonb,
   'https://en.wikipedia.org/wiki/Opuntia_ficus-indica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4869,7 +4869,7 @@ insert into public.species (
   false,
   'The popular Boston Fern originated in 1894 when a Massachusetts florist noticed a spontaneous mutation with wider, more gracefully arching and ruffled fronds among a shipment of wild sword ferns.',
   ARRAY['/species/88.webp']::text[],
-  '{"observer":"Carlos/Giancarla Ross (AnimeBirder)","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/671238935/original.jpg"}'::jsonb,
+  '{"observer":"Carlos/Giancarla Ross (AnimeBirder)","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/671238935"}'::jsonb,
   'https://en.wikipedia.org/wiki/Nephrolepis_exaltata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4924,7 +4924,7 @@ insert into public.species (
   true,
   'In China and throughout East Asia, Aglaonema has been cultivated for centuries as an auspicious good-luck plant believed to bring good fortune, prosperity, and positive chi into the home.',
   ARRAY['/species/89.webp']::text[],
-  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/631936680/original.jpg"}'::jsonb,
+  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/631936680"}'::jsonb,
   'https://en.wikipedia.org/wiki/Aglaonema_commutatum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -4979,7 +4979,7 @@ insert into public.species (
   true,
   'The name ''Dumb Cane'' refers to the horrific historical practice of punishing enslaved individuals by forcing them to chew the plant''s stems, which caused their tongues to swell so violently that they were unable to speak for days.',
   ARRAY['/species/90.webp']::text[],
-  '{"observer":"MARIA PAULINA CEBALLOS GARCIA","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"}'::jsonb,
+  '{"observer":"MARIA PAULINA CEBALLOS GARCIA","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/619101622"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dieffenbachia_seguine',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5034,7 +5034,7 @@ insert into public.species (
   true,
   'A single fallen leaf of Patharchatta can survive pinned to a bulletin board with zero soil or water for weeks while sprouting a dozen independent baby plants from its scalloped edges, earning it the title ''The Life Plant''.',
   ARRAY['/species/91.webp']::text[],
-  '{"observer":"Jenny Ju","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"}'::jsonb,
+  '{"observer":"Jenny Ju","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607830815"}'::jsonb,
   'https://en.wikipedia.org/wiki/Kalanchoe_pinnata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5089,7 +5089,7 @@ insert into public.species (
   false,
   'A single sunflower head is not a single flower, but an inflorescence of thousands of individual florets arranged in interlocking Fibonacci spirals, maximizing packing efficiency.',
   ARRAY['/species/92.webp']::text[],
-  '{"observer":"Mackenzie Goldthwait","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"}'::jsonb,
+  '{"observer":"Mackenzie Goldthwait","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610788250"}'::jsonb,
   'https://en.wikipedia.org/wiki/Helianthus_annuus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5144,7 +5144,7 @@ insert into public.species (
   false,
   'The name ''daisy'' is a contraction of the Old English ''daeges eage'' (''day''s eye''), so called because the flower opens its petals at dawn and closes them tightly at sunset.',
   ARRAY['/species/93.webp']::text[],
-  '{"observer":"drfishy62","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"}'::jsonb,
+  '{"observer":"drfishy62","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/604454576"}'::jsonb,
   'https://en.wikipedia.org/wiki/Bellis_perennis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5199,7 +5199,7 @@ insert into public.species (
   false,
   'The name Dandelion comes from the French ''dent-de-lion'', meaning ''lion''s tooth'', referencing the sharply serrated, backwards-pointing teeth along the leaf margins.',
   ARRAY['/species/94.webp']::text[],
-  '{"observer":"Nantar Kuja","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"}'::jsonb,
+  '{"observer":"Nantar Kuja","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607706609"}'::jsonb,
   'https://en.wikipedia.org/wiki/Taraxacum_officinale',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5254,7 +5254,7 @@ insert into public.species (
   false,
   'The name Lavender comes from the Latin verb ''lavare'' (to wash), because ancient Romans extensively perfumed their public thermal baths and laundry with fragrant lavender blossoms.',
   ARRAY['/species/95.webp']::text[],
-  '{"observer":"Anatole Maugendre","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg"}'::jsonb,
+  '{"observer":"Anatole Maugendre","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/683675962"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lavandula_angustifolia',
   '[{"name":"ASPCA Animal Poison Control","url":"https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/lavender"}]'::jsonb
 ) on conflict (id) do update set
@@ -5309,7 +5309,7 @@ insert into public.species (
   false,
   'The botanical name Rosmarinus translates poetically from Latin as ''dew of the sea'' (ros = dew, marinus = sea), describing its natural habitat clinging to misty coastal Mediterranean cliffs.',
   ARRAY['/species/96.webp']::text[],
-  '{"observer":"Rubén Frías","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg"}'::jsonb,
+  '{"observer":"Rubén Frías","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605953271"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rosemary',
   '[{"name":"EMA Herbal Monograph & Toxnet","url":"https://www.ema.europa.eu/en/medicines/herbal/rosmarini-aetheroleum"}]'::jsonb
 ) on conflict (id) do update set
@@ -5364,7 +5364,7 @@ insert into public.species (
   false,
   'When soaked in water for just 10 minutes, sweet basil seeds (Sabja) swell to over thirty times their original volume, forming a transparent jelly bead around each seed that cools the body during hot Indian summers.',
   ARRAY['/species/97.webp']::text[],
-  '{"observer":"UNIRSE Lidia marian,Arce aldana","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"}'::jsonb,
+  '{"observer":"UNIRSE Lidia marian,Arce aldana","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/649096372"}'::jsonb,
   'https://en.wikipedia.org/wiki/Basil',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5419,7 +5419,7 @@ insert into public.species (
   true,
   'During the peak of Dutch ''Tulip Mania'' in February 1637, a single rare ''Semper Augustus'' tulip bulb sold for the price of a luxurious grand canal house in Amsterdam before the market abruptly crashed.',
   ARRAY['/species/98.webp']::text[],
-  '{"observer":"nevinbelcher","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"}'::jsonb,
+  '{"observer":"nevinbelcher","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/644916153"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tulipa_gesneriana',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5474,7 +5474,7 @@ insert into public.species (
   true,
   'Daffodils are completely immune to garden rodents, squirrels, and deer, who instinctively avoid digging up or chewing the bulbs because of their intense toxicity.',
   ARRAY['/species/99.webp']::text[],
-  '{"observer":"Beth King","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"}'::jsonb,
+  '{"observer":"Beth King","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616918138"}'::jsonb,
   'https://en.wikipedia.org/wiki/Narcissus_pseudonarcissus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5529,7 +5529,7 @@ insert into public.species (
   true,
   'Unlike most other lilies, the Tiger Lily produces small, glossy black pea-sized aerial bulbils in the axils of its leaves, which drop to the ground and sprout into identical clones of the parent plant.',
   ARRAY['/species/100.webp']::text[],
-  '{"observer":"shaboinginator5000","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"}'::jsonb,
+  '{"observer":"shaboinginator5000","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/661561218"}'::jsonb,
   'https://en.wikipedia.org/wiki/Lilium_lancifolium',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5584,7 +5584,7 @@ insert into public.species (
   true,
   'The national flower of Mexico, Dahlias are octoploids — meaning they possess eight sets of homologous chromosomes, which accounts for their astounding diversity of flower shapes, sizes, and colors.',
   ARRAY['/species/101.webp']::text[],
-  '{"observer":"Archer Lamason","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"}'::jsonb,
+  '{"observer":"Archer Lamason","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/650700584"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dahlia_pinnata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5639,7 +5639,7 @@ insert into public.species (
   false,
   'In 2016, a bright orange Zinnia became the very first flower to bloom in space, grown aboard the International Space Station''s Veggie facility by astronaut Scott Kelly.',
   ARRAY['/species/102.webp']::text[],
-  '{"observer":"Jhoan Sebastian Cifuentes Guarin","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"}'::jsonb,
+  '{"observer":"Jhoan Sebastian Cifuentes Guarin","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/615092782"}'::jsonb,
   'https://en.wikipedia.org/wiki/Zinnia_elegans',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5694,7 +5694,7 @@ insert into public.species (
   false,
   'Spanish priests in Mexico named this flower ''Cosmos'' (from the Greek word for order, harmony, and universe) because of the remarkably orderly and even arrangement of its petals.',
   ARRAY['/species/103.webp']::text[],
-  '{"observer":"Hope Hespenheide","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"}'::jsonb,
+  '{"observer":"Hope Hespenheide","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/608251948"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cosmos_bipinnatus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5749,7 +5749,7 @@ insert into public.species (
   true,
   'Chrysanthemums naturally synthesize pyrethrins, organic compounds that attack insect nervous systems, making them nature''s own built-in bug repellent.',
   ARRAY['/species/104.webp']::text[],
-  '{"observer":"zgy","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"}'::jsonb,
+  '{"observer":"zgy","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/497928694"}'::jsonb,
   'https://en.wikipedia.org/wiki/Chrysanthemum_indicum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5804,7 +5804,7 @@ insert into public.species (
   false,
   'Gerbera is the fifth most popular cut flower in the entire world, trailing only rose, carnation, chrysanthemum, and tulip in global trade volume.',
   ARRAY['/species/105.webp']::text[],
-  '{"observer":"Les Marches du Vivant","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/674728100/original.jpg"}'::jsonb,
+  '{"observer":"Les Marches du Vivant","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/674728100"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gerbera_jamesonii',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5859,7 +5859,7 @@ insert into public.species (
   false,
   'In Assam, the flowering of Kopou Phool marks the arrival of the spring Bihu festival; according to folklore, a Bihu dancer''s hair arrangement is incomplete without this sacred fox-tail blossom.',
   ARRAY['/species/106.webp']::text[],
-  '{"observer":"adokania","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/688420176/original.jpg"}'::jsonb,
+  '{"observer":"adokania","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/688420176"}'::jsonb,
   'https://en.wikipedia.org/wiki/Rhynchostylis_retusa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5914,7 +5914,7 @@ insert into public.species (
   true,
   'Dubbed the ''Terror of Bengal'' in the early 20th century, its runaway growth clogged waterways, choked fish populations of oxygen, and halted river navigation throughout the Ganges-Brahmaputra delta.',
   ARRAY['/species/107.webp']::text[],
-  '{"observer":"Jeeson","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605299054/original.jpg"}'::jsonb,
+  '{"observer":"Jeeson","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605299054"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pontederia_crassipes',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -5969,7 +5969,7 @@ insert into public.species (
   true,
   'The rapid folding of Mimosa pudica is caused by rapid potassium and water efflux from microscopic swollen hinge cells called pulvini at the base of every leaflet and petiole.',
   ARRAY['/species/108.webp']::text[],
-  '{"observer":"Steve Wu","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607138196/original.jpg"}'::jsonb,
+  '{"observer":"Steve Wu","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607138196"}'::jsonb,
   'https://en.wikipedia.org/wiki/Mimosa_pudica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6024,7 +6024,7 @@ insert into public.species (
   true,
   'Parthenium entered India in 1955 contaminated in food-aid wheat shipments from the United States under the PL-480 program, rapidly earning the moniker ''Congress Grass''.',
   ARRAY['/species/109.webp']::text[],
-  '{"observer":"陳士訓","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607634968/original.jpg"}'::jsonb,
+  '{"observer":"陳士訓","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/607634968"}'::jsonb,
   'https://en.wikipedia.org/wiki/Parthenium_hysterophorus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6079,7 +6079,7 @@ insert into public.species (
   false,
   'The odds of finding a naturally occurring four-leaf clover (a genetic mutation of Trifolium repens) are estimated to be approximately 1 in 10,000, making it a universal symbol of extraordinary good luck.',
   ARRAY['/species/110.webp']::text[],
-  '{"observer":"Cesar Ormazabal","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610492086/original.jpg"}'::jsonb,
+  '{"observer":"Cesar Ormazabal","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/610492086"}'::jsonb,
   'https://en.wikipedia.org/wiki/Trifolium_repens',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6134,7 +6134,7 @@ insert into public.species (
   true,
   'An English oak tree can live for over 1,000 years: an old English proverb notes, ''Three hundred years growing, three hundred years living, and three hundred years dying.''',
   ARRAY['/species/111.webp']::text[],
-  '{"observer":"Stanislav Murashkin","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605086677/original.jpg"}'::jsonb,
+  '{"observer":"Stanislav Murashkin","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/605086677"}'::jsonb,
   'https://en.wikipedia.org/wiki/Quercus_robur',
   '[{"name":"EMA European Medicines Agency Herbal Monograph","url":"https://www.ema.europa.eu/en/medicines/herbal/quercus-cortex"}]'::jsonb
 ) on conflict (id) do update set
@@ -6189,7 +6189,7 @@ insert into public.species (
   true,
   'The flowers change color and orientation over 3 days: white and horizontal at night to attract hawk moths, then vertical and crimson by day to invite butterflies and sunbirds.',
   ARRAY['/species/112.webp']::text[],
-  '{"observer":"teaddy","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608601691/original.jpg"}'::jsonb,
+  '{"observer":"Daphne Georgina Faria","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/646459150"}'::jsonb,
   'https://en.wikipedia.org/wiki/Combretum_indicum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6244,7 +6244,7 @@ insert into public.species (
   true,
   'Gloriosa climbs not with stems or aerial roots, but with the modified tips of its leaves, which coil into sensitive grasp tendrils upon touching supports.',
   ARRAY['/species/113.webp']::text[],
-  '{"observer":"Daniel Papworth","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605324039/original.jpg"}'::jsonb,
+  '{"observer":"R.M","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609438662"}'::jsonb,
   'https://en.wikipedia.org/wiki/Gloriosa_superba',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6299,7 +6299,7 @@ insert into public.species (
   false,
   'Spanish Christian missionaries named it ''passion flower'' because floral structures symbolically resembled the Passion of Christ: 3 stigmas for 3 nails, 5 anthers for 5 wounds, and the corona for the crown of thorns.',
   ARRAY['/species/114.webp']::text[],
-  '{"observer":"Erika Mitchell","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605512434/original.jpg"}'::jsonb,
+  '{"observer":"Yuri Bernardino","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/611527939"}'::jsonb,
   'https://en.wikipedia.org/wiki/Passiflora_edulis',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6354,7 +6354,7 @@ insert into public.species (
   false,
   'Called ''Railway creeper'' across India because colonial engineers planted it alongside railway stations and track fences to suppress dust and provide year-round green floral cover.',
   ARRAY['/species/115.webp']::text[],
-  '{"observer":"s60117","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604676641/original.jpg"}'::jsonb,
+  '{"observer":"Natalie Allen","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/608771890"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ipomoea_cairica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6409,7 +6409,7 @@ insert into public.species (
   false,
   'Known as ''Taralata'' (Star Vine) in Bengali due to its precise five-pointed star shape that appears to twinkle against feathery emerald foliage.',
   ARRAY['/species/116.webp']::text[],
-  '{"observer":"Carlos Domínguez-Rodríguez","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605421054/original.jpg"}'::jsonb,
+  '{"observer":"Katrina D","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/617476778"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ipomoea_quamoclit',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6464,7 +6464,7 @@ insert into public.species (
   true,
   'English ivy shows dramatic heterophylly: while juvenile vines climbing walls have 3–5 lobed leaves, mature branches that reach sunlight produce unlobed oval leaves and flowers.',
   ARRAY['/species/117.webp']::text[],
-  '{"observer":"Plana Baptiste","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604480891/original.jpg"}'::jsonb,
+  '{"observer":"gianluca castagnero","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605594177"}'::jsonb,
   'https://en.wikipedia.org/wiki/Hedera_helix',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6519,7 +6519,7 @@ insert into public.species (
   true,
   'The specific epithet ''cathartica'' is derived from the Greek ''katharsis'' (purging), referencing historical medicinal use as a drastic emetic and purgative.',
   ARRAY['/species/118.webp']::text[],
-  '{"observer":"capacoscar","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608518086/original.jpg"}'::jsonb,
+  '{"observer":"yerbasanta","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/605425946"}'::jsonb,
   'https://en.wikipedia.org/wiki/Allamanda_cathartica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6574,7 +6574,7 @@ insert into public.species (
   false,
   'Named by botanist William Balfour Baikie in honor of the late wife of Rev. William Cooper Thomson, a Scottish missionary and physician in Old Calabar, Nigeria.',
   ARRAY['/species/119.webp']::text[],
-  '{"observer":"Marlon Chavez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608957060/original.jpg"}'::jsonb,
+  '{"observer":"marprk","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/647169906"}'::jsonb,
   'https://en.wikipedia.org/wiki/Clerodendrum_thomsoniae',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6629,7 +6629,7 @@ insert into public.species (
   false,
   'The genus name ''Pyrostegia'' comes from Greek ''pyr'' (fire) and ''stege'' (covering/roof), literally describing its habit of covering entire building roofs in fiery orange blossoms.',
   ARRAY['/species/120.webp']::text[],
-  '{"observer":"Christopher David Benda","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606172836/original.jpg"}'::jsonb,
+  '{"observer":"lava_chen","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/617469044"}'::jsonb,
   'https://en.wikipedia.org/wiki/Pyrostegia_venusta',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6684,7 +6684,7 @@ insert into public.species (
   false,
   'Native to the tea-growing hill regions of Bengal and Assam, it can grow up to 20 meters tall into forest canopy trees with tuberous roots that can weigh over 50 kilograms.',
   ARRAY['/species/121.webp']::text[],
-  '{"observer":"Chris D Thomas","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610417421/original.jpg"}'::jsonb,
+  '{"observer":"luzluz","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/637176214"}'::jsonb,
   'https://en.wikipedia.org/wiki/Thunbergia_grandiflora',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6739,7 +6739,7 @@ insert into public.species (
   false,
   'Referred to as ''Chain of Love'' across the Caribbean because each delicate flowering branch ends in a tender heart-shaped spray with climbing tendrils.',
   ARRAY['/species/122.webp']::text[],
-  '{"observer":"ssnp133","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604349588/original.jpg"}'::jsonb,
+  '{"observer":"Drew Baxter","license":"CC0","source_url":"https://www.inaturalist.org/photos/611046121"}'::jsonb,
   'https://en.wikipedia.org/wiki/Antigonon_leptopus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6794,7 +6794,7 @@ insert into public.species (
   true,
   'In Bengali it is called ''Patabahar'' (Joy of Leaves) because its ever-changing multicolored foliage provides the visual impact of an eternal spring garden without flowers.',
   ARRAY['/species/123.webp']::text[],
-  '{"observer":"lianne tolentino","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608106908/original.jpg"}'::jsonb,
+  '{"observer":"Lucas Santos","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/612192326"}'::jsonb,
   'https://en.wikipedia.org/wiki/Codiaeum_variegatum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6849,7 +6849,7 @@ insert into public.species (
   true,
   'Syngonium undergoes complete leaf metamorphosis: young plants kept in pots remain compact arrowheads, but when allowed to climb a tall tree in the wild, leaves divide into 5–9 large separate leaflets.',
   ARRAY['/species/124.webp']::text[],
-  '{"observer":"richmondfarmer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607547565/original.jpg"}'::jsonb,
+  '{"observer":"Josiah Londerée","license":"CC-BY","source_url":"https://www.inaturalist.org/photos/604603295"}'::jsonb,
   'https://en.wikipedia.org/wiki/Syngonium_podophyllum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6904,7 +6904,7 @@ insert into public.species (
   true,
   'The name Philodendron comes from the Greek ''philo-'' (love) and ''dendron'' (tree), describing its natural passion for clinging lovingly to tropical rainforest tree trunks.',
   ARRAY['/species/125.webp']::text[],
-  '{"observer":"Reirei","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605673885/original.jpg"}'::jsonb,
+  '{"observer":"Julieta Alzate","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/616502205"}'::jsonb,
   'https://en.wikipedia.org/wiki/Philodendron_hederaceum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -6959,7 +6959,7 @@ insert into public.species (
   true,
   'Flowers of Thaumatophyllum can generate their own heat through thermogenesis, heating up to 45°C (113°F) above ambient air to volatilize scents and attract pollinating scarab beetles.',
   ARRAY['/species/126.webp']::text[],
-  '{"observer":"mckaydee","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605009148/original.jpg"}'::jsonb,
+  '{"observer":"naturalistchu","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/639374610"}'::jsonb,
   'https://en.wikipedia.org/wiki/Thaumatophyllum_bipinnatifidum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7014,7 +7014,7 @@ insert into public.species (
   true,
   'Named ''fragrans'' (fragrant) because its nocturnal blossoms release an intoxicating sweet jasmine-honey perfume that can fill an entire household.',
   ARRAY['/species/127.webp']::text[],
-  '{"observer":"James K. Wetterer","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/607536014/original.jpg"}'::jsonb,
+  '{"observer":"anahi pato","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/626436667"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_fragrans',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7069,7 +7069,7 @@ insert into public.species (
   true,
   'Despite its worldwide trade name ''Song of India'', this species is not actually native to India, but to Madagascar and the Mascarene Islands of the Indian Ocean.',
   ARRAY['/species/128.webp']::text[],
-  '{"observer":"Peter Pannam","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604403515/original.jpg"}'::jsonb,
+  '{"observer":"iok666","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/644808915"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dracaena_reflexa',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7124,7 +7124,7 @@ insert into public.species (
   true,
   'What is commonly called the Anthurium ''flower'' is actually a modified leaf called a spathe; the true flowers are microscopic bumps lining the central yellow pencil-like spadix.',
   ARRAY['/species/129.webp']::text[],
-  '{"observer":"Ana Carla Bastos","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606966906/original.jpg"}'::jsonb,
+  '{"observer":"Raquel Lewis","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/634549786"}'::jsonb,
   'https://en.wikipedia.org/wiki/Anthurium_andraeanum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7179,7 +7179,7 @@ insert into public.species (
   true,
   'In nature, the flowers are pollinated by sunbirds that perch on the boat-shaped spathe; their body weight pushes down the blue petals, dusting pollen onto the bird''s feet and chest.',
   ARRAY['/species/130.webp']::text[],
-  '{"observer":"Eric Wille","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/616850384/original.jpg"}'::jsonb,
+  '{"observer":"Desmond vZ","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/648199393"}'::jsonb,
   'https://en.wikipedia.org/wiki/Strelitzia_reginae',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7234,7 +7234,7 @@ insert into public.species (
   true,
   'Called ''Inch plant'' because the stems grow so fast they seem to gain an inch every few days, and a tiny one-inch stem cutting can root and become a full plant within weeks.',
   ARRAY['/species/131.webp']::text[],
-  '{"observer":"ch_zong","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605362482/original.jpg"}'::jsonb,
+  '{"observer":"Irene","license":"CC0","source_url":"https://www.inaturalist.org/photos/616168350"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tradescantia_zebrina',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7289,7 +7289,7 @@ insert into public.species (
   true,
   'The weeping fig is the official state tree of Bangkok, Thailand, where gigantic multi-trunked specimens shade temples and canals.',
   ARRAY['/species/132.webp']::text[],
-  '{"observer":"Vanessa Sánchez","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605714058/original.jpg"}'::jsonb,
+  '{"observer":"rrheevaa","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/636374966"}'::jsonb,
   'https://en.wikipedia.org/wiki/Ficus_benjamina',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7344,7 +7344,7 @@ insert into public.species (
   true,
   'Despite its common name ''Lace Fern'', this plant is not a true fern at all—it does not reproduce via spores, but is a flowering seed plant belonging to the Asparagus family.',
   ARRAY['/species/133.webp']::text[],
-  '{"observer":"Ben Gruhot","license":"CC-BY","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604980978/original.jpg"}'::jsonb,
+  '{"observer":"P Valera","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/618239671"}'::jsonb,
   'https://en.wikipedia.org/wiki/Asparagus_setaceus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7399,7 +7399,7 @@ insert into public.species (
   false,
   'While endangered in its native wild riverbank habitats of Madagascar, it has become one of the most commercially propagated plants on planet Earth with millions grown annually in nurseries.',
   ARRAY['/species/134.webp']::text[],
-  '{"observer":"Karen McCabe","license":"CC0","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/604561585/original.jpg"}'::jsonb,
+  '{"observer":"carlossammy","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/628526042"}'::jsonb,
   'https://en.wikipedia.org/wiki/Dypsis_lutescens',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7454,7 +7454,7 @@ insert into public.species (
   true,
   'The calla lily is neither a true lily (Liliaceae) nor a calla; Swedish botanist Carl Linnaeus placed it in the genus Calla, but it was later moved to Zantedeschia, named in honor of Italian botanist Giovanni Zantedeschi.',
   ARRAY['/species/135.webp']::text[],
-  '{"observer":"asm25","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605730161/original.jpg"}'::jsonb,
+  '{"observer":"Miguel A. Fernández Martínez","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606857401"}'::jsonb,
   'https://en.wikipedia.org/wiki/Zantedeschia_aethiopica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7509,7 +7509,7 @@ insert into public.species (
   false,
   'Across northern and central India, school children traditionally tuck Morpankhi leaf sprays inside textbook pages, affectionately believing it sharpens memory and exam performance.',
   ARRAY['/species/136.webp']::text[],
-  '{"observer":"Jacques HALLOT","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/611935972/original.jpg"}'::jsonb,
+  '{"observer":"julianavarro04","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/650201402"}'::jsonb,
   'https://en.wikipedia.org/wiki/Platycladus',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7564,7 +7564,7 @@ insert into public.species (
   true,
   'Known as ''Nag Champa'' in India because the unusual flared shape of its leaf apex closely resembles the expanded hood of a cobra (Nag).',
   ARRAY['/species/137.webp']::text[],
-  '{"observer":"Gabriel Andrade","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609746082/original.jpg"}'::jsonb,
+  '{"observer":"Katerin Arrieta","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/626847014"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumeria_pudica',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7619,7 +7619,7 @@ insert into public.species (
   true,
   'In Hindi it is poetically called ''Chandni'' (Moonlight) because its radiant white pinwheel blossoms appear to shine like scattered stars under a full moon.',
   ARRAY['/species/138.webp']::text[],
-  '{"observer":"daniel_oleander","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610295100/original.jpg"}'::jsonb,
+  '{"observer":"Uditha Sandaruwan","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/647988152"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tabernaemontana_divaricata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7674,7 +7674,7 @@ insert into public.species (
   false,
   'Tecoma stans is the official national flower of the Bahamas and the official floral emblem of the United States Virgin Islands.',
   ARRAY['/species/139.webp']::text[],
-  '{"observer":"Claire Buxton","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610303766/original.jpg"}'::jsonb,
+  '{"observer":"Ivelisse Irizarry","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610746819"}'::jsonb,
   'https://en.wikipedia.org/wiki/Tecoma_stans',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7729,7 +7729,7 @@ insert into public.species (
   true,
   'In indigenous African tribal hunting, the toxic sap was boiled down to create a lethal arrow poison used to bring down large game like antelopes and elephants.',
   ARRAY['/species/140.webp']::text[],
-  '{"observer":"mathias_dezetter","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610914765/original.jpg"}'::jsonb,
+  '{"observer":"annemariepkb","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/606592291"}'::jsonb,
   'https://en.wikipedia.org/wiki/Adenium_obesum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7784,7 +7784,7 @@ insert into public.species (
   true,
   'Despite its common Hindi name ''Raat ki Rani'' and English name ''Night-blooming Jasmine'', it is not a true jasmine (Oleaceae) but a member of the nightshade family (Solanaceae), closely related to tomatoes and potatoes.',
   ARRAY['/species/141.webp']::text[],
-  '{"observer":"Digvijay","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/609089201/original.jpg"}'::jsonb,
+  '{"observer":"raauulmendez","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/623271716"}'::jsonb,
   'https://en.wikipedia.org/wiki/Cestrum_nocturnum',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7839,7 +7839,7 @@ insert into public.species (
   true,
   'Known widely across India as ''Nau Bajiya'' (9 o''clock) or ''Das Bajiya'' (10 o''clock) because its flowers open with clockwork precision as soon as the morning sun strikes the petals.',
   ARRAY['/species/142.webp']::text[],
-  '{"observer":"diana_selenelr","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606482371/original.jpg"}'::jsonb,
+  '{"observer":"Phumla","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/648271977"}'::jsonb,
   'https://en.wikipedia.org/wiki/Portulaca_grandiflora',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7894,7 +7894,7 @@ insert into public.species (
   true,
   'Coleus exhibits one of the most diverse arrays of leaf color variations in the entire plant kingdom, with hundreds of named varieties created through centuries of botanical breeding.',
   ARRAY['/species/143.webp']::text[],
-  '{"observer":"verbautista","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610612196/original.jpg"}'::jsonb,
+  '{"observer":"eliza2001","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/615928002"}'::jsonb,
   'https://en.wikipedia.org/wiki/Coleus_scutellarioides',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -7949,7 +7949,7 @@ insert into public.species (
   true,
   'Named in honor of Admiral Charles Wilkes (1798–1877), the American naval officer and explorer who commanded the historic United States Exploring Expedition to the South Pacific.',
   ARRAY['/species/144.webp']::text[],
-  '{"observer":"Mike Dikamba","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606510910/original.jpg"}'::jsonb,
+  '{"observer":"gmaney","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/651340915"}'::jsonb,
   'https://en.wikipedia.org/wiki/Acalypha_wilkesiana',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -8004,7 +8004,7 @@ insert into public.species (
   true,
   'Legend claims that the thorny branches of this Madagascan succulent were used to weave the crown of thorns placed on Jesus Christ during the Crucifixion, giving rise to its enduring common name.',
   ARRAY['/species/145.webp']::text[],
-  '{"observer":"bottanydot","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/610229488/original.jpg"}'::jsonb,
+  '{"observer":"smercchh","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/619900103"}'::jsonb,
   'https://en.wikipedia.org/wiki/Euphorbia_milii',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -8059,7 +8059,7 @@ insert into public.species (
   true,
   'The sticky glandular hairs on the calyces trap small insects, a trait historically thought to protect developing seeds or represent proto-carnivorous behavior.',
   ARRAY['/species/146.webp']::text[],
-  '{"observer":"Sascha Packheiser","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605643194/original.jpg"}'::jsonb,
+  '{"observer":"javiondrummond","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/609737152"}'::jsonb,
   'https://en.wikipedia.org/wiki/Plumbago_auriculata',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -8114,7 +8114,7 @@ insert into public.species (
   true,
   'The silky white floss attached to Calotropis seeds was traditionally gathered in rural India to stuff soft pillows and mattresses because it is naturally water-repellent and resistant to insects.',
   ARRAY['/species/147.webp']::text[],
-  '{"observer":"Pubudini Jayakody","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/605374603/original.jpg"}'::jsonb,
+  '{"observer":"arun kumar","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610646756"}'::jsonb,
   'https://en.wikipedia.org/wiki/Calotropis_gigantea',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -8169,7 +8169,7 @@ insert into public.species (
   true,
   'Called ''Golden dewdrop'' because the heavy clusters of bright orange-yellow berries look like shimmering golden drops of morning dew dangling along weeping branches.',
   ARRAY['/species/148.webp']::text[],
-  '{"observer":"domdom52","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/608271493/original.jpg"}'::jsonb,
+  '{"observer":"bottanydot","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/610261982"}'::jsonb,
   'https://en.wikipedia.org/wiki/Duranta_erecta',
   '[]'::jsonb
 ) on conflict (id) do update set
@@ -8224,7 +8224,7 @@ insert into public.species (
   false,
   'In India, the tree is known as ''Nagalingam'' because the central curved staminal hood mirrors a many-headed cobra (Naga) shielding the sacred Shiva Lingam resting on the floral disc.',
   ARRAY['/species/149.webp']::text[],
-  '{"observer":"coralaviles","license":"CC-BY-NC","source_url":"https://inaturalist-open-data.s3.amazonaws.com/photos/606483061/original.jpg"}'::jsonb,
+  '{"observer":"Lynette","license":"CC-BY-NC","source_url":"https://www.inaturalist.org/photos/619440195"}'::jsonb,
   'https://en.wikipedia.org/wiki/Couroupita_guianensis',
   '[]'::jsonb
 ) on conflict (id) do update set

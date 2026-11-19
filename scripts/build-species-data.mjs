@@ -158,6 +158,29 @@ export function buildAndValidateSpeciesData() {
         errors.push(`Species id ${id} not found in labels.json.`);
       }
 
+      // Strict Image Verification: Disallow external image URLs and verify local webp asset
+      for (const img of s.reference_images || []) {
+        if (typeof img !== 'string' || !img.startsWith('/species/')) {
+          errors.push(
+            `Species id ${id} has non-local reference image: '${img}'. Only local /species/{id}.webp is permitted.`
+          );
+        }
+      }
+
+      const externalImageRegex =
+        /https?:\/\/[^\s'"<>()\\]+\.(?:jpg|jpeg|png|webp|gif|svg)|https?:\/\/(?:[a-zA-Z0-9-]+\.)*(?:unsplash|pexels|pixabay|images\.)[^\s'"<>()\\]+/gi;
+      const extMatches = JSON.stringify(s).match(externalImageRegex);
+      if (extMatches) {
+        errors.push(
+          `Species id ${id} contains forbidden external image URL(s): ${extMatches.join(', ')}`
+        );
+      }
+
+      const localImgPath = path.join(rootDir, 'web/public/species', `${id}.webp`);
+      if (!fs.existsSync(localImgPath)) {
+        errors.push(`Species id ${id} is missing local WebP photo at ${localImgPath}`);
+      }
+
       // Count TODO(verify)
       const fullText = JSON.stringify(s);
       const matches = fullText.match(/TODO\(verify\)/g);
@@ -334,6 +357,14 @@ export function buildAndValidateSpeciesData() {
   // 3. Generate web/src/data/species_meta.json
   fs.writeFileSync(webSrcMetaPath, JSON.stringify(metaMap, null, 2), 'utf8');
   console.log(`Generated ${webSrcMetaPath}`);
+
+  // 4. Sync web/src/data/credits.json from web/public/species/credits.json
+  const publicCreditsPath = path.join(rootDir, 'web/public/species/credits.json');
+  const srcCreditsPath = path.join(rootDir, 'web/src/data/credits.json');
+  if (fs.existsSync(publicCreditsPath)) {
+    fs.copyFileSync(publicCreditsPath, srcCreditsPath);
+    console.log(`Synced ${srcCreditsPath}`);
+  }
 
   return {
     total: speciesMap.size,

@@ -45,7 +45,7 @@
     "image_credit": {
       "observer": "MARIA PAULINA CEBALLOS GARCIA",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/619101622/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/619101622"
     },
     "is_toxic": true,
     "sources": []
@@ -97,7 +97,7 @@
     "image_credit": {
       "observer": "Jenny Ju",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607830815/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/607830815"
     },
     "is_toxic": true,
     "sources": []
@@ -147,7 +147,7 @@
     "image_credit": {
       "observer": "Mackenzie Goldthwait",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610788250/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/610788250"
     },
     "is_toxic": false,
     "sources": []
@@ -198,7 +198,7 @@
     "image_credit": {
       "observer": "drfishy62",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604454576/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/604454576"
     },
     "is_toxic": false,
     "sources": []
@@ -249,7 +249,7 @@
     "image_credit": {
       "observer": "Nantar Kuja",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/607706609/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/607706609"
     },
     "is_toxic": false,
     "sources": []
@@ -299,7 +299,7 @@
     "image_credit": {
       "observer": "Anatole Maugendre",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/683675962/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/683675962"
     },
     "is_toxic": false,
     "sources": [
@@ -354,7 +354,7 @@
     "image_credit": {
       "observer": "Rubén Frías",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605953271/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/605953271"
     },
     "is_toxic": false,
     "sources": [
@@ -410,7 +410,7 @@
     "image_credit": {
       "observer": "UNIRSE Lidia marian,Arce aldana",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/649096372/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/649096372"
     },
     "is_toxic": false,
     "sources": []
@@ -460,7 +460,7 @@
     "image_credit": {
       "observer": "nevinbelcher",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/644916153/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/644916153"
     },
     "is_toxic": true,
     "sources": []
@@ -511,7 +511,7 @@
     "image_credit": {
       "observer": "Beth King",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616918138/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/616918138"
     },
     "is_toxic": true,
     "sources": []
@@ -561,7 +561,7 @@
     "image_credit": {
       "observer": "shaboinginator5000",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/661561218/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/661561218"
     },
     "is_toxic": true,
     "sources": []
@@ -611,7 +611,7 @@
     "image_credit": {
       "observer": "Archer Lamason",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/650700584/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/650700584"
     },
     "is_toxic": true,
     "sources": []
@@ -661,7 +661,7 @@
     "image_credit": {
       "observer": "Jhoan Sebastian Cifuentes Guarin",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/615092782/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/615092782"
     },
     "is_toxic": false,
     "sources": []
@@ -711,7 +711,7 @@
     "image_credit": {
       "observer": "Hope Hespenheide",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608251948/original.jpg"
+      "source_url": "https://www.inaturalist.org/photos/608251948"
     },
     "is_toxic": false,
     "sources": []
@@ -762,7 +762,7 @@
     "image_credit": {
       "observer": "zgy",
       "license": "CC-BY-NC",
-      "source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/497928694/original.jpeg"
+      "source_url": "https://www.inaturalist.org/photos/497928694"
     },
     "is_toxic": true,
     "sources": []

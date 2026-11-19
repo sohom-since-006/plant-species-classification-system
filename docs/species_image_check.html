@@ -1,0 +1,3589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Species Image Verification — All 150 Species</title>
+  <style>
+    :root {
+      --bg: #05130b;
+      --card-bg: rgba(16, 38, 26, 0.75);
+      --card-border: rgba(110, 231, 168, 0.18);
+      --card-hover: rgba(110, 231, 168, 0.45);
+      --accent: #6ee7a8;
+      --fg: #f4fbf6;
+      --fg-muted: #a3c9b2;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      padding: 32px 24px 64px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(12px);
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    .subtitle {
+      color: var(--fg-muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 10px 16px;
+    }
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--fg-muted);
+    }
+    .search-box {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus {
+      border-color: var(--accent);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .species-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-col;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .species-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--card-hover);
+    }
+    .card-media {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      background: #000;
+      overflow: hidden;
+    }
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .id-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+    .status-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+    .status-match {
+      background: rgba(16, 185, 129, 0.85);
+      color: #fff;
+    }
+    .status-mismatch {
+      background: rgba(239, 68, 68, 0.9);
+      color: #fff;
+    }
+    .card-body {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .family-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .common-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 2px;
+    }
+    .scientific-name {
+      font-size: 12px;
+      color: var(--fg-muted);
+      margin-bottom: 10px;
+    }
+    .credit-row {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+    }
+    .observer-label {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 140px;
+    }
+    .license-tag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 1px 4px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .source-link {
+      margin-top: 6px;
+      font-size: 11px;
+    }
+    .source-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .source-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div>
+          <h1>Plant Species Image Verification Catalog</h1>
+          <p class="subtitle">
+            All 150 species reference photographs verified against the EfficientNet-B0 neural vision classifier.
+          </p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-pill">
+          <div class="stat-value">150</div>
+          <div class="stat-label">Total Species</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-value">150 / 150 (100%)</div>
+          <div class="stat-label">Classifier Top-1 Parity</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Flagged Discrepancies</div>
+        </div>
+        <div class="stat-pill">
+          <div class="stat-value">Local WebP Only</div>
+          <div class="stat-label">Image Provenance</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+        <input
+          type="text"
+          id="search-input"
+          class="search-box"
+          placeholder="Filter species by common name, scientific name, family, or ID..."
+        />
+      </div>
+    </header>
+
+    <div class="grid" id="species-grid">
+      
+        <div class="species-card" data-id="0" data-name="tulsi (holy basil) ocimum tenuiflorum lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#000</span>
+            <img src="../web/public/species/0.webp" alt="Tulsi (Holy Basil)" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 88.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Tulsi (Holy Basil)</h3>
+            <p class="scientific-name"><em>Ocimum tenuiflorum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: pikun</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/685727293" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="1" data-name="neem azadirachta indica meliaceae">
+          <div class="card-media">
+            <span class="id-badge">#001</span>
+            <img src="../web/public/species/1.webp" alt="Neem" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Meliaceae</div>
+            <h3 class="common-name">Neem</h3>
+            <p class="scientific-name"><em>Azadirachta indica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: sanahawwa</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611928069" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="2" data-name="aloe vera aloe vera asphodelaceae">
+          <div class="card-media">
+            <span class="id-badge">#002</span>
+            <img src="../web/public/species/2.webp" alt="Aloe vera" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asphodelaceae</div>
+            <h3 class="common-name">Aloe vera</h3>
+            <p class="scientific-name"><em>Aloe vera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: coralito_00</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/620627610" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="3" data-name="turmeric curcuma longa zingiberaceae">
+          <div class="card-media">
+            <span class="id-badge">#003</span>
+            <img src="../web/public/species/3.webp" alt="Turmeric" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 92.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Zingiberaceae</div>
+            <h3 class="common-name">Turmeric</h3>
+            <p class="scientific-name"><em>Curcuma longa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 偷米</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/575312667" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="4" data-name="ginger zingiber officinale zingiberaceae">
+          <div class="card-media">
+            <span class="id-badge">#004</span>
+            <img src="../web/public/species/4.webp" alt="Ginger" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Zingiberaceae</div>
+            <h3 class="common-name">Ginger</h3>
+            <p class="scientific-name"><em>Zingiber officinale</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Zuleika Peralta</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/593748869" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="5" data-name="ashwagandha withania somnifera solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#005</span>
+            <img src="../web/public/species/5.webp" alt="Ashwagandha" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 77.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Ashwagandha</h3>
+            <p class="scientific-name"><em>Withania somnifera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Finn Rautenbach</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609124573" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="6" data-name="giloy tinospora cordifolia menispermaceae">
+          <div class="card-media">
+            <span class="id-badge">#006</span>
+            <img src="../web/public/species/6.webp" alt="Giloy" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Menispermaceae</div>
+            <h3 class="common-name">Giloy</h3>
+            <p class="scientific-name"><em>Tinospora cordifolia</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Green Bull</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/724577231" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="7" data-name="brahmi bacopa monnieri plantaginaceae">
+          <div class="card-media">
+            <span class="id-badge">#007</span>
+            <img src="../web/public/species/7.webp" alt="Brahmi" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 91.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Plantaginaceae</div>
+            <h3 class="common-name">Brahmi</h3>
+            <p class="scientific-name"><em>Bacopa monnieri</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: tahli-jade</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611571015" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="8" data-name="amla phyllanthus emblica phyllanthaceae">
+          <div class="card-media">
+            <span class="id-badge">#008</span>
+            <img src="../web/public/species/8.webp" alt="Amla" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Phyllanthaceae</div>
+            <h3 class="common-name">Amla</h3>
+            <p class="scientific-name"><em>Phyllanthus emblica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Bikash Kumar Sahoo</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/607151244" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="9" data-name="curry leaf murraya koenigii rutaceae">
+          <div class="card-media">
+            <span class="id-badge">#009</span>
+            <img src="../web/public/species/9.webp" alt="Curry leaf" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 80.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Rutaceae</div>
+            <h3 class="common-name">Curry leaf</h3>
+            <p class="scientific-name"><em>Murraya koenigii</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: foaspotter</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/643337910" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="10" data-name="moringa moringa oleifera moringaceae">
+          <div class="card-media">
+            <span class="id-badge">#010</span>
+            <img src="../web/public/species/10.webp" alt="Moringa" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moringaceae</div>
+            <h3 class="common-name">Moringa</h3>
+            <p class="scientific-name"><em>Moringa oleifera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Biodiversity Restoration Registry Kigamboni.</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/606625114" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="11" data-name="bael aegle marmelos rutaceae">
+          <div class="card-media">
+            <span class="id-badge">#011</span>
+            <img src="../web/public/species/11.webp" alt="Bael" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Rutaceae</div>
+            <h3 class="common-name">Bael</h3>
+            <p class="scientific-name"><em>Aegle marmelos</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Priya Priya</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/659379281" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="12" data-name="arjuna terminalia arjuna combretaceae">
+          <div class="card-media">
+            <span class="id-badge">#012</span>
+            <img src="../web/public/species/12.webp" alt="Arjuna" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Combretaceae</div>
+            <h3 class="common-name">Arjuna</h3>
+            <p class="scientific-name"><em>Terminalia arjuna</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Kailas Erande</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/673721578" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="13" data-name="ashoka saraca asoca fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#013</span>
+            <img src="../web/public/species/13.webp" alt="Ashoka" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Ashoka</h3>
+            <p class="scientific-name"><em>Saraca asoca</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Sayali Bakore</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/497918591" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="14" data-name="betel piper betle piperaceae">
+          <div class="card-media">
+            <span class="id-badge">#014</span>
+            <img src="../web/public/species/14.webp" alt="Betel" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Piperaceae</div>
+            <h3 class="common-name">Betel</h3>
+            <p class="scientific-name"><em>Piper betle</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 連亮惟</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/691273563" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="15" data-name="lemongrass cymbopogon citratus poaceae">
+          <div class="card-media">
+            <span class="id-badge">#015</span>
+            <img src="../web/public/species/15.webp" alt="Lemongrass" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Lemongrass</h3>
+            <p class="scientific-name"><em>Cymbopogon citratus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Biodiversity Restoration Registry Kigamboni.</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605049920" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="16" data-name="mint mentha spicata lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#016</span>
+            <img src="../web/public/species/16.webp" alt="Mint" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Mint</h3>
+            <p class="scientific-name"><em>Mentha spicata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: lynettescott</span>
+              <span class="license-tag">CC0</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/643458773" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="17" data-name="peepal ficus religiosa moraceae">
+          <div class="card-media">
+            <span class="id-badge">#017</span>
+            <img src="../web/public/species/17.webp" alt="Peepal" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moraceae</div>
+            <h3 class="common-name">Peepal</h3>
+            <p class="scientific-name"><em>Ficus religiosa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Raja Sekhar Chimirala</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/625313973" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="18" data-name="banyan ficus benghalensis moraceae">
+          <div class="card-media">
+            <span class="id-badge">#018</span>
+            <img src="../web/public/species/18.webp" alt="Banyan" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moraceae</div>
+            <h3 class="common-name">Banyan</h3>
+            <p class="scientific-name"><em>Ficus benghalensis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Sushant Kumar Mishra</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/626942186" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="19" data-name="kalmegh andrographis paniculata acanthaceae">
+          <div class="card-media">
+            <span class="id-badge">#019</span>
+            <img src="../web/public/species/19.webp" alt="Kalmegh" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Acanthaceae</div>
+            <h3 class="common-name">Kalmegh</h3>
+            <p class="scientific-name"><em>Andrographis paniculata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Wanda G Jackson</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/646347164" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="20" data-name="hibiscus hibiscus rosa-sinensis malvaceae">
+          <div class="card-media">
+            <span class="id-badge">#020</span>
+            <img src="../web/public/species/20.webp" alt="Hibiscus" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Malvaceae</div>
+            <h3 class="common-name">Hibiscus</h3>
+            <p class="scientific-name"><em>Hibiscus rosa-sinensis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Silky Refina Marshellia</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/632037594" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="21" data-name="marigold tagetes erecta asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#021</span>
+            <img src="../web/public/species/21.webp" alt="Marigold" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 83.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Marigold</h3>
+            <p class="scientific-name"><em>Tagetes erecta</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Ernesto Rodriguez</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/632297674" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="22" data-name="jasmine jasminum sambac oleaceae">
+          <div class="card-media">
+            <span class="id-badge">#022</span>
+            <img src="../web/public/species/22.webp" alt="Jasmine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 88.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Oleaceae</div>
+            <h3 class="common-name">Jasmine</h3>
+            <p class="scientific-name"><em>Jasminum sambac</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Io Siu</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/495037538" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="23" data-name="lotus nelumbo nucifera nelumbonaceae">
+          <div class="card-media">
+            <span class="id-badge">#023</span>
+            <img src="../web/public/species/23.webp" alt="Lotus" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 88.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Nelumbonaceae</div>
+            <h3 class="common-name">Lotus</h3>
+            <p class="scientific-name"><em>Nelumbo nucifera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: cgbolas</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616028444" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="24" data-name="rose rosa rosaceae">
+          <div class="card-media">
+            <span class="id-badge">#024</span>
+            <img src="../web/public/species/24.webp" alt="Rose" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 88.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Rosaceae</div>
+            <h3 class="common-name">Rose</h3>
+            <p class="scientific-name"><em>Rosa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: amandrews</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/606952244" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="25" data-name="frangipani plumeria rubra apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#025</span>
+            <img src="../web/public/species/25.webp" alt="Frangipani" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 87.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Frangipani</h3>
+            <p class="scientific-name"><em>Plumeria rubra</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: fmunoz</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/615098646" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="26" data-name="oleander nerium oleander apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#026</span>
+            <img src="../web/public/species/26.webp" alt="Oleander" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Oleander</h3>
+            <p class="scientific-name"><em>Nerium oleander</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: bradwarren</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609960662" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="27" data-name="bougainvillea bougainvillea spectabilis nyctaginaceae">
+          <div class="card-media">
+            <span class="id-badge">#027</span>
+            <img src="../web/public/species/27.webp" alt="Bougainvillea" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Nyctaginaceae</div>
+            <h3 class="common-name">Bougainvillea</h3>
+            <p class="scientific-name"><em>Bougainvillea spectabilis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Noopur🍀</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/461875164" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="28" data-name="butterfly pea clitoria ternatea fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#028</span>
+            <img src="../web/public/species/28.webp" alt="Butterfly pea" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Butterfly pea</h3>
+            <p class="scientific-name"><em>Clitoria ternatea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: benjaminsisko</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611136861" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="29" data-name="night jasmine nyctanthes arbor-tristis oleaceae">
+          <div class="card-media">
+            <span class="id-badge">#029</span>
+            <img src="../web/public/species/29.webp" alt="Night jasmine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 57.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Oleaceae</div>
+            <h3 class="common-name">Night jasmine</h3>
+            <p class="scientific-name"><em>Nyctanthes arbor-tristis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: rushitha_jain</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/500830565" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="30" data-name="gulmohar delonix regia fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#030</span>
+            <img src="../web/public/species/30.webp" alt="Gulmohar" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 68.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Gulmohar</h3>
+            <p class="scientific-name"><em>Delonix regia</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Raja Sekhar Chimirala</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610597048" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="31" data-name="periwinkle catharanthus roseus apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#031</span>
+            <img src="../web/public/species/31.webp" alt="Periwinkle" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Periwinkle</h3>
+            <p class="scientific-name"><em>Catharanthus roseus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: amynmann</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/606065431" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="32" data-name="ixora ixora coccinea rubiaceae">
+          <div class="card-media">
+            <span class="id-badge">#032</span>
+            <img src="../web/public/species/32.webp" alt="Ixora" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Rubiaceae</div>
+            <h3 class="common-name">Ixora</h3>
+            <p class="scientific-name"><em>Ixora coccinea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Thoodi Harsha</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/624942925" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="33" data-name="lantana lantana camara verbenaceae">
+          <div class="card-media">
+            <span class="id-badge">#033</span>
+            <img src="../web/public/species/33.webp" alt="Lantana" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Verbenaceae</div>
+            <h3 class="common-name">Lantana</h3>
+            <p class="scientific-name"><em>Lantana camara</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Francois (Red)</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605593965" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="34" data-name="cockscomb celosia argentea amaranthaceae">
+          <div class="card-media">
+            <span class="id-badge">#034</span>
+            <img src="../web/public/species/34.webp" alt="Cockscomb" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 56.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Amaranthaceae</div>
+            <h3 class="common-name">Cockscomb</h3>
+            <p class="scientific-name"><em>Celosia argentea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: timmeschke</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609330812" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="35" data-name="crossandra crossandra infundibuliformis acanthaceae">
+          <div class="card-media">
+            <span class="id-badge">#035</span>
+            <img src="../web/public/species/35.webp" alt="Crossandra" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Acanthaceae</div>
+            <h3 class="common-name">Crossandra</h3>
+            <p class="scientific-name"><em>Crossandra infundibuliformis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Tharuni Sangonda</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/657780650" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="36" data-name="canna canna indica cannaceae">
+          <div class="card-media">
+            <span class="id-badge">#036</span>
+            <img src="../web/public/species/36.webp" alt="Canna" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cannaceae</div>
+            <h3 class="common-name">Canna</h3>
+            <p class="scientific-name"><em>Canna indica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Drew Baxter</span>
+              <span class="license-tag">CC0</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/612178132" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="37" data-name="balsam impatiens balsamina balsaminaceae">
+          <div class="card-media">
+            <span class="id-badge">#037</span>
+            <img src="../web/public/species/37.webp" alt="Balsam" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Balsaminaceae</div>
+            <h3 class="common-name">Balsam</h3>
+            <p class="scientific-name"><em>Impatiens balsamina</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Lynn Katsoulis</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/620293016" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="38" data-name="amaltas cassia fistula fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#038</span>
+            <img src="../web/public/species/38.webp" alt="Amaltas" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 78.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Amaltas</h3>
+            <p class="scientific-name"><em>Cassia fistula</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Aditya Bari</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616097106" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="39" data-name="palash butea monosperma fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#039</span>
+            <img src="../web/public/species/39.webp" alt="Palash" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Palash</h3>
+            <p class="scientific-name"><em>Butea monosperma</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Jordan</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609613156" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="40" data-name="mango mangifera indica anacardiaceae">
+          <div class="card-media">
+            <span class="id-badge">#040</span>
+            <img src="../web/public/species/40.webp" alt="Mango" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Anacardiaceae</div>
+            <h3 class="common-name">Mango</h3>
+            <p class="scientific-name"><em>Mangifera indica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Raja Sekhar Chimirala</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610611295" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="41" data-name="coconut cocos nucifera arecaceae">
+          <div class="card-media">
+            <span class="id-badge">#041</span>
+            <img src="../web/public/species/41.webp" alt="Coconut" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Arecaceae</div>
+            <h3 class="common-name">Coconut</h3>
+            <p class="scientific-name"><em>Cocos nucifera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Sam Rickert</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605446421" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="42" data-name="banana musa acuminata musaceae">
+          <div class="card-media">
+            <span class="id-badge">#042</span>
+            <img src="../web/public/species/42.webp" alt="Banana" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 70.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Musaceae</div>
+            <h3 class="common-name">Banana</h3>
+            <p class="scientific-name"><em>Musa acuminata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Manuel Raab</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/614057334" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="43" data-name="papaya carica papaya caricaceae">
+          <div class="card-media">
+            <span class="id-badge">#043</span>
+            <img src="../web/public/species/43.webp" alt="Papaya" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 89.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Caricaceae</div>
+            <h3 class="common-name">Papaya</h3>
+            <p class="scientific-name"><em>Carica papaya</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Harry Hill</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/608014957" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="44" data-name="guava psidium guajava myrtaceae">
+          <div class="card-media">
+            <span class="id-badge">#044</span>
+            <img src="../web/public/species/44.webp" alt="Guava" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Myrtaceae</div>
+            <h3 class="common-name">Guava</h3>
+            <p class="scientific-name"><em>Psidium guajava</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Roqui Bello</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611076249" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="45" data-name="pomegranate punica granatum lythraceae">
+          <div class="card-media">
+            <span class="id-badge">#045</span>
+            <img src="../web/public/species/45.webp" alt="Pomegranate" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 91.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lythraceae</div>
+            <h3 class="common-name">Pomegranate</h3>
+            <p class="scientific-name"><em>Punica granatum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 謝麗霦</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609832087" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="46" data-name="jackfruit artocarpus heterophyllus moraceae">
+          <div class="card-media">
+            <span class="id-badge">#046</span>
+            <img src="../web/public/species/46.webp" alt="Jackfruit" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moraceae</div>
+            <h3 class="common-name">Jackfruit</h3>
+            <p class="scientific-name"><em>Artocarpus heterophyllus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: keirfawinat</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/620998083" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="47" data-name="tamarind tamarindus indica fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#047</span>
+            <img src="../web/public/species/47.webp" alt="Tamarind" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Tamarind</h3>
+            <p class="scientific-name"><em>Tamarindus indica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Mohamed SAOUPKAI</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616651808" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="48" data-name="jamun syzygium cumini myrtaceae">
+          <div class="card-media">
+            <span class="id-badge">#048</span>
+            <img src="../web/public/species/48.webp" alt="Jamun" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 87.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Myrtaceae</div>
+            <h3 class="common-name">Jamun</h3>
+            <p class="scientific-name"><em>Syzygium cumini</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Austin Smith</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/619248897" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="49" data-name="sapota manilkara zapota sapotaceae">
+          <div class="card-media">
+            <span class="id-badge">#049</span>
+            <img src="../web/public/species/49.webp" alt="Sapota" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Sapotaceae</div>
+            <h3 class="common-name">Sapota</h3>
+            <p class="scientific-name"><em>Manilkara zapota</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Lynette</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/659452802" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="50" data-name="custard apple annona squamosa annonaceae">
+          <div class="card-media">
+            <span class="id-badge">#050</span>
+            <img src="../web/public/species/50.webp" alt="Custard apple" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 86.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Annonaceae</div>
+            <h3 class="common-name">Custard apple</h3>
+            <p class="scientific-name"><em>Annona squamosa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Amara Malik</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/626599925" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="51" data-name="lemon citrus limon rutaceae">
+          <div class="card-media">
+            <span class="id-badge">#051</span>
+            <img src="../web/public/species/51.webp" alt="Lemon" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 92.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Rutaceae</div>
+            <h3 class="common-name">Lemon</h3>
+            <p class="scientific-name"><em>Citrus limon</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: rafa perazzolo</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/419656927" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="52" data-name="teak tectona grandis lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#052</span>
+            <img src="../web/public/species/52.webp" alt="Teak" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Teak</h3>
+            <p class="scientific-name"><em>Tectona grandis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Gaurav S. Soman.</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/644666241" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="53" data-name="sal shorea robusta dipterocarpaceae">
+          <div class="card-media">
+            <span class="id-badge">#053</span>
+            <img src="../web/public/species/53.webp" alt="Sal" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Dipterocarpaceae</div>
+            <h3 class="common-name">Sal</h3>
+            <p class="scientific-name"><em>Shorea robusta</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Bikram Gyawali</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/83110977" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="54" data-name="bamboo bambusa vulgaris poaceae">
+          <div class="card-media">
+            <span class="id-badge">#054</span>
+            <img src="../web/public/species/54.webp" alt="Bamboo" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Bamboo</h3>
+            <p class="scientific-name"><em>Bambusa vulgaris</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Raja Sekhar Chimirala</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/626562692" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="55" data-name="areca palm areca catechu arecaceae">
+          <div class="card-media">
+            <span class="id-badge">#055</span>
+            <img src="../web/public/species/55.webp" alt="Areca palm" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 78.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Arecaceae</div>
+            <h3 class="common-name">Areca palm</h3>
+            <p class="scientific-name"><em>Areca catechu</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: eagle100</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/482626227" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="56" data-name="date palm phoenix dactylifera arecaceae">
+          <div class="card-media">
+            <span class="id-badge">#056</span>
+            <img src="../web/public/species/56.webp" alt="Date palm" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Arecaceae</div>
+            <h3 class="common-name">Date palm</h3>
+            <p class="scientific-name"><em>Phoenix dactylifera</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Darrell Parsons</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/622598475" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="57" data-name="silk cotton bombax ceiba malvaceae">
+          <div class="card-media">
+            <span class="id-badge">#057</span>
+            <img src="../web/public/species/57.webp" alt="Silk cotton" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Malvaceae</div>
+            <h3 class="common-name">Silk cotton</h3>
+            <p class="scientific-name"><em>Bombax ceiba</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: ankitha_jayanth</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/613329960" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="58" data-name="rain tree samanea saman fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#058</span>
+            <img src="../web/public/species/58.webp" alt="Rain tree" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Rain tree</h3>
+            <p class="scientific-name"><em>Samanea saman</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Hilal Ram</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/646435571" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="59" data-name="eucalyptus eucalyptus globulus myrtaceae">
+          <div class="card-media">
+            <span class="id-badge">#059</span>
+            <img src="../web/public/species/59.webp" alt="Eucalyptus" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 86.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Myrtaceae</div>
+            <h3 class="common-name">Eucalyptus</h3>
+            <p class="scientific-name"><em>Eucalyptus globulus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: felixgwj</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/612087330" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="60" data-name="rice oryza sativa poaceae">
+          <div class="card-media">
+            <span class="id-badge">#060</span>
+            <img src="../web/public/species/60.webp" alt="Rice" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 87.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Rice</h3>
+            <p class="scientific-name"><em>Oryza sativa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Chitra Shanker</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/577214534" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="61" data-name="wheat triticum aestivum poaceae">
+          <div class="card-media">
+            <span class="id-badge">#061</span>
+            <img src="../web/public/species/61.webp" alt="Wheat" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Wheat</h3>
+            <p class="scientific-name"><em>Triticum aestivum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Francis Stiteler</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/650790706" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="62" data-name="maize zea mays poaceae">
+          <div class="card-media">
+            <span class="id-badge">#062</span>
+            <img src="../web/public/species/62.webp" alt="Maize" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 73.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Maize</h3>
+            <p class="scientific-name"><em>Zea mays</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Karol Łanocha</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/622560195" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="63" data-name="sugarcane saccharum officinarum poaceae">
+          <div class="card-media">
+            <span class="id-badge">#063</span>
+            <img src="../web/public/species/63.webp" alt="Sugarcane" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 79.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Poaceae</div>
+            <h3 class="common-name">Sugarcane</h3>
+            <p class="scientific-name"><em>Saccharum officinarum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: FO12071Saowanit</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/654822582" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="64" data-name="tea camellia sinensis theaceae">
+          <div class="card-media">
+            <span class="id-badge">#064</span>
+            <img src="../web/public/species/64.webp" alt="Tea" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Theaceae</div>
+            <h3 class="common-name">Tea</h3>
+            <p class="scientific-name"><em>Camellia sinensis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: kusa-to-uo</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/638982674" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="65" data-name="cotton gossypium hirsutum malvaceae">
+          <div class="card-media">
+            <span class="id-badge">#065</span>
+            <img src="../web/public/species/65.webp" alt="Cotton" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Malvaceae</div>
+            <h3 class="common-name">Cotton</h3>
+            <p class="scientific-name"><em>Gossypium hirsutum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: megan_pratt1</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/632484731" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="66" data-name="mustard brassica juncea brassicaceae">
+          <div class="card-media">
+            <span class="id-badge">#066</span>
+            <img src="../web/public/species/66.webp" alt="Mustard" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 91.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Brassicaceae</div>
+            <h3 class="common-name">Mustard</h3>
+            <p class="scientific-name"><em>Brassica juncea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Emilia Sierra</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/672843970" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="67" data-name="tomato solanum lycopersicum solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#067</span>
+            <img src="../web/public/species/67.webp" alt="Tomato" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Tomato</h3>
+            <p class="scientific-name"><em>Solanum lycopersicum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Ajay Malik.</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610386522" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="68" data-name="chilli capsicum annuum solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#068</span>
+            <img src="../web/public/species/68.webp" alt="Chilli" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Chilli</h3>
+            <p class="scientific-name"><em>Capsicum annuum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: chrissietinder</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/646061537" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="69" data-name="brinjal solanum melongena solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#069</span>
+            <img src="../web/public/species/69.webp" alt="Brinjal" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 82.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Brinjal</h3>
+            <p class="scientific-name"><em>Solanum melongena</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Sereana Seuvou</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/652557520" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="70" data-name="okra abelmoschus esculentus malvaceae">
+          <div class="card-media">
+            <span class="id-badge">#070</span>
+            <img src="../web/public/species/70.webp" alt="Okra" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Malvaceae</div>
+            <h3 class="common-name">Okra</h3>
+            <p class="scientific-name"><em>Abelmoschus esculentus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: kc8328thamonwan</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/654096065" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="71" data-name="potato solanum tuberosum solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#071</span>
+            <img src="../web/public/species/71.webp" alt="Potato" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 83.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Potato</h3>
+            <p class="scientific-name"><em>Solanum tuberosum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 김도윤</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/655729080" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="72" data-name="onion allium cepa amaryllidaceae">
+          <div class="card-media">
+            <span class="id-badge">#072</span>
+            <img src="../web/public/species/72.webp" alt="Onion" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Amaryllidaceae</div>
+            <h3 class="common-name">Onion</h3>
+            <p class="scientific-name"><em>Allium cepa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: jeanelz</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609453292" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="73" data-name="coriander coriandrum sativum apiaceae">
+          <div class="card-media">
+            <span class="id-badge">#073</span>
+            <img src="../web/public/species/73.webp" alt="Coriander" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apiaceae</div>
+            <h3 class="common-name">Coriander</h3>
+            <p class="scientific-name"><em>Coriandrum sativum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Юрий</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/698502292" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="74" data-name="spinach spinacia oleracea amaranthaceae">
+          <div class="card-media">
+            <span class="id-badge">#074</span>
+            <img src="../web/public/species/74.webp" alt="Spinach" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 89.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Amaranthaceae</div>
+            <h3 class="common-name">Spinach</h3>
+            <p class="scientific-name"><em>Spinacia oleracea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Thassanee Duangnin</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/573074833" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="75" data-name="bottle gourd lagenaria siceraria cucurbitaceae">
+          <div class="card-media">
+            <span class="id-badge">#075</span>
+            <img src="../web/public/species/75.webp" alt="Bottle gourd" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cucurbitaceae</div>
+            <h3 class="common-name">Bottle gourd</h3>
+            <p class="scientific-name"><em>Lagenaria siceraria</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Sulaiman Inuwa Muhammad</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/462897626" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="76" data-name="pumpkin cucurbita moschata cucurbitaceae">
+          <div class="card-media">
+            <span class="id-badge">#076</span>
+            <img src="../web/public/species/76.webp" alt="Pumpkin" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 89.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cucurbitaceae</div>
+            <h3 class="common-name">Pumpkin</h3>
+            <p class="scientific-name"><em>Cucurbita moschata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: abdlkrim</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/737755455" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="77" data-name="cucumber cucumis sativus cucurbitaceae">
+          <div class="card-media">
+            <span class="id-badge">#077</span>
+            <img src="../web/public/species/77.webp" alt="Cucumber" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 91.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cucurbitaceae</div>
+            <h3 class="common-name">Cucumber</h3>
+            <p class="scientific-name"><em>Cucumis sativus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: dongjing123</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/498390644" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="78" data-name="peanut arachis hypogaea fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#078</span>
+            <img src="../web/public/species/78.webp" alt="Peanut" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 92.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Peanut</h3>
+            <p class="scientific-name"><em>Arachis hypogaea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: pcharris</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/563717798" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="79" data-name="jute corchorus olitorius malvaceae">
+          <div class="card-media">
+            <span class="id-badge">#079</span>
+            <img src="../web/public/species/79.webp" alt="Jute" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 80.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Malvaceae</div>
+            <h3 class="common-name">Jute</h3>
+            <p class="scientific-name"><em>Corchorus olitorius</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Mashudu</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/483759219" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="80" data-name="money plant epipremnum aureum araceae">
+          <div class="card-media">
+            <span class="id-badge">#080</span>
+            <img src="../web/public/species/80.webp" alt="Money plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Money plant</h3>
+            <p class="scientific-name"><em>Epipremnum aureum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: ELIZE JANICA AQUINO</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611198308" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="81" data-name="snake plant dracaena trifasciata asparagaceae">
+          <div class="card-media">
+            <span class="id-badge">#081</span>
+            <img src="../web/public/species/81.webp" alt="Snake plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 86.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asparagaceae</div>
+            <h3 class="common-name">Snake plant</h3>
+            <p class="scientific-name"><em>Dracaena trifasciata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Manuel Raab</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/614057605" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="82" data-name="spider plant chlorophytum comosum asparagaceae">
+          <div class="card-media">
+            <span class="id-badge">#082</span>
+            <img src="../web/public/species/82.webp" alt="Spider plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asparagaceae</div>
+            <h3 class="common-name">Spider plant</h3>
+            <p class="scientific-name"><em>Chlorophytum comosum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Petra Holland</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/644264393" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="83" data-name="monstera monstera deliciosa araceae">
+          <div class="card-media">
+            <span class="id-badge">#083</span>
+            <img src="../web/public/species/83.webp" alt="Monstera" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 80.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Monstera</h3>
+            <p class="scientific-name"><em>Monstera deliciosa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: carolwest</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/614034394" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="84" data-name="peace lily spathiphyllum wallisii araceae">
+          <div class="card-media">
+            <span class="id-badge">#084</span>
+            <img src="../web/public/species/84.webp" alt="Peace lily" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Peace lily</h3>
+            <p class="scientific-name"><em>Spathiphyllum wallisii</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Dhandara Manini</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/494014348" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="85" data-name="rubber plant ficus elastica moraceae">
+          <div class="card-media">
+            <span class="id-badge">#085</span>
+            <img src="../web/public/species/85.webp" alt="Rubber plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moraceae</div>
+            <h3 class="common-name">Rubber plant</h3>
+            <p class="scientific-name"><em>Ficus elastica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 大坑東宣道小學</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/643533620" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="86" data-name="jade plant crassula ovata crassulaceae">
+          <div class="card-media">
+            <span class="id-badge">#086</span>
+            <img src="../web/public/species/86.webp" alt="Jade plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 90.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Crassulaceae</div>
+            <h3 class="common-name">Jade plant</h3>
+            <p class="scientific-name"><em>Crassula ovata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Craig Peter</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/656093496" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="87" data-name="prickly pear opuntia ficus-indica cactaceae">
+          <div class="card-media">
+            <span class="id-badge">#087</span>
+            <img src="../web/public/species/87.webp" alt="Prickly pear" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cactaceae</div>
+            <h3 class="common-name">Prickly pear</h3>
+            <p class="scientific-name"><em>Opuntia ficus-indica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Melissa Sinka</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610068882" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="88" data-name="boston fern nephrolepis exaltata nephrolepidaceae">
+          <div class="card-media">
+            <span class="id-badge">#088</span>
+            <img src="../web/public/species/88.webp" alt="Boston fern" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Nephrolepidaceae</div>
+            <h3 class="common-name">Boston fern</h3>
+            <p class="scientific-name"><em>Nephrolepis exaltata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Carlos/Giancarla Ross (AnimeBirder)</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/671238935" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="89" data-name="aglaonema aglaonema commutatum araceae">
+          <div class="card-media">
+            <span class="id-badge">#089</span>
+            <img src="../web/public/species/89.webp" alt="Aglaonema" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Aglaonema</h3>
+            <p class="scientific-name"><em>Aglaonema commutatum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: James K. Wetterer</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/631936680" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="90" data-name="dieffenbachia dieffenbachia seguine araceae">
+          <div class="card-media">
+            <span class="id-badge">#090</span>
+            <img src="../web/public/species/90.webp" alt="Dieffenbachia" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 87.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Dieffenbachia</h3>
+            <p class="scientific-name"><em>Dieffenbachia seguine</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: MARIA PAULINA CEBALLOS GARCIA</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/619101622" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="91" data-name="patharchatta / air plant kalanchoe pinnata crassulaceae">
+          <div class="card-media">
+            <span class="id-badge">#091</span>
+            <img src="../web/public/species/91.webp" alt="Patharchatta / Air plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Crassulaceae</div>
+            <h3 class="common-name">Patharchatta / Air plant</h3>
+            <p class="scientific-name"><em>Kalanchoe pinnata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Jenny Ju</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/607830815" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="92" data-name="sunflower helianthus annuus asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#092</span>
+            <img src="../web/public/species/92.webp" alt="Sunflower" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Sunflower</h3>
+            <p class="scientific-name"><em>Helianthus annuus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Mackenzie Goldthwait</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610788250" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="93" data-name="daisy bellis perennis asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#093</span>
+            <img src="../web/public/species/93.webp" alt="Daisy" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 91.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Daisy</h3>
+            <p class="scientific-name"><em>Bellis perennis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: drfishy62</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/604454576" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="94" data-name="dandelion taraxacum officinale asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#094</span>
+            <img src="../web/public/species/94.webp" alt="Dandelion" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Dandelion</h3>
+            <p class="scientific-name"><em>Taraxacum officinale</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Nantar Kuja</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/607706609" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="95" data-name="lavender lavandula angustifolia lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#095</span>
+            <img src="../web/public/species/95.webp" alt="Lavender" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 82.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Lavender</h3>
+            <p class="scientific-name"><em>Lavandula angustifolia</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Anatole Maugendre</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/683675962" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="96" data-name="rosemary salvia rosmarinus lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#096</span>
+            <img src="../web/public/species/96.webp" alt="Rosemary" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Rosemary</h3>
+            <p class="scientific-name"><em>Salvia rosmarinus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Rubén Frías</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605953271" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="97" data-name="sweet basil ocimum basilicum lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#097</span>
+            <img src="../web/public/species/97.webp" alt="Sweet basil" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 90.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Sweet basil</h3>
+            <p class="scientific-name"><em>Ocimum basilicum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: UNIRSE Lidia marian,Arce aldana</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/649096372" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="98" data-name="tulip tulipa gesneriana liliaceae">
+          <div class="card-media">
+            <span class="id-badge">#098</span>
+            <img src="../web/public/species/98.webp" alt="Tulip" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Liliaceae</div>
+            <h3 class="common-name">Tulip</h3>
+            <p class="scientific-name"><em>Tulipa gesneriana</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: nevinbelcher</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/644916153" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="99" data-name="daffodil narcissus pseudonarcissus amaryllidaceae">
+          <div class="card-media">
+            <span class="id-badge">#099</span>
+            <img src="../web/public/species/99.webp" alt="Daffodil" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 92.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Amaryllidaceae</div>
+            <h3 class="common-name">Daffodil</h3>
+            <p class="scientific-name"><em>Narcissus pseudonarcissus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Beth King</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616918138" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="100" data-name="lily lilium lancifolium liliaceae">
+          <div class="card-media">
+            <span class="id-badge">#100</span>
+            <img src="../web/public/species/100.webp" alt="Lily" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Liliaceae</div>
+            <h3 class="common-name">Lily</h3>
+            <p class="scientific-name"><em>Lilium lancifolium</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: shaboinginator5000</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/661561218" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="101" data-name="dahlia dahlia pinnata asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#101</span>
+            <img src="../web/public/species/101.webp" alt="Dahlia" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 80.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Dahlia</h3>
+            <p class="scientific-name"><em>Dahlia pinnata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Archer Lamason</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/650700584" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="102" data-name="zinnia zinnia elegans asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#102</span>
+            <img src="../web/public/species/102.webp" alt="Zinnia" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 86.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Zinnia</h3>
+            <p class="scientific-name"><em>Zinnia elegans</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Jhoan Sebastian Cifuentes Guarin</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/615092782" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="103" data-name="cosmos cosmos bipinnatus asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#103</span>
+            <img src="../web/public/species/103.webp" alt="Cosmos" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Cosmos</h3>
+            <p class="scientific-name"><em>Cosmos bipinnatus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Hope Hespenheide</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/608251948" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="104" data-name="chrysanthemum chrysanthemum indicum asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#104</span>
+            <img src="../web/public/species/104.webp" alt="Chrysanthemum" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 71.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Chrysanthemum</h3>
+            <p class="scientific-name"><em>Chrysanthemum indicum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: zgy</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/497928694" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="105" data-name="gerbera gerbera jamesonii asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#105</span>
+            <img src="../web/public/species/105.webp" alt="Gerbera" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Gerbera</h3>
+            <p class="scientific-name"><em>Gerbera jamesonii</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Les Marches du Vivant</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/674728100" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="106" data-name="foxtail orchid rhynchostylis retusa orchidaceae">
+          <div class="card-media">
+            <span class="id-badge">#106</span>
+            <img src="../web/public/species/106.webp" alt="Foxtail orchid" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 92.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Orchidaceae</div>
+            <h3 class="common-name">Foxtail orchid</h3>
+            <p class="scientific-name"><em>Rhynchostylis retusa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: adokania</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/688420176" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="107" data-name="water hyacinth pontederia crassipes pontederiaceae">
+          <div class="card-media">
+            <span class="id-badge">#107</span>
+            <img src="../web/public/species/107.webp" alt="Water hyacinth" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 88.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Pontederiaceae</div>
+            <h3 class="common-name">Water hyacinth</h3>
+            <p class="scientific-name"><em>Pontederia crassipes</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Jeeson</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605299054" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="108" data-name="sensitive plant mimosa pudica fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#108</span>
+            <img src="../web/public/species/108.webp" alt="Sensitive plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.4%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Sensitive plant</h3>
+            <p class="scientific-name"><em>Mimosa pudica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Steve Wu</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/607138196" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="109" data-name="parthenium parthenium hysterophorus asteraceae">
+          <div class="card-media">
+            <span class="id-badge">#109</span>
+            <img src="../web/public/species/109.webp" alt="Parthenium" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asteraceae</div>
+            <h3 class="common-name">Parthenium</h3>
+            <p class="scientific-name"><em>Parthenium hysterophorus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: 陳士訓</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/607634968" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="110" data-name="clover trifolium repens fabaceae">
+          <div class="card-media">
+            <span class="id-badge">#110</span>
+            <img src="../web/public/species/110.webp" alt="Clover" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fabaceae</div>
+            <h3 class="common-name">Clover</h3>
+            <p class="scientific-name"><em>Trifolium repens</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Cesar Ormazabal</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610492086" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="111" data-name="oak quercus robur fagaceae">
+          <div class="card-media">
+            <span class="id-badge">#111</span>
+            <img src="../web/public/species/111.webp" alt="Oak" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 78.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Fagaceae</div>
+            <h3 class="common-name">Oak</h3>
+            <p class="scientific-name"><em>Quercus robur</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Stanislav Murashkin</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605086677" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="112" data-name="rangoon creeper combretum indicum combretaceae">
+          <div class="card-media">
+            <span class="id-badge">#112</span>
+            <img src="../web/public/species/112.webp" alt="Rangoon creeper" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Combretaceae</div>
+            <h3 class="common-name">Rangoon creeper</h3>
+            <p class="scientific-name"><em>Combretum indicum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Daphne Georgina Faria</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/646459150" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="113" data-name="flame lily gloriosa superba colchicaceae">
+          <div class="card-media">
+            <span class="id-badge">#113</span>
+            <img src="../web/public/species/113.webp" alt="Flame lily" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Colchicaceae</div>
+            <h3 class="common-name">Flame lily</h3>
+            <p class="scientific-name"><em>Gloriosa superba</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: R.M</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609438662" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="114" data-name="passion fruit passiflora edulis passifloraceae">
+          <div class="card-media">
+            <span class="id-badge">#114</span>
+            <img src="../web/public/species/114.webp" alt="Passion fruit" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Passifloraceae</div>
+            <h3 class="common-name">Passion fruit</h3>
+            <p class="scientific-name"><em>Passiflora edulis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Yuri Bernardino</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611527939" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="115" data-name="railway creeper ipomoea cairica convolvulaceae">
+          <div class="card-media">
+            <span class="id-badge">#115</span>
+            <img src="../web/public/species/115.webp" alt="Railway creeper" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Convolvulaceae</div>
+            <h3 class="common-name">Railway creeper</h3>
+            <p class="scientific-name"><em>Ipomoea cairica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Natalie Allen</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/608771890" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="116" data-name="cypress vine ipomoea quamoclit convolvulaceae">
+          <div class="card-media">
+            <span class="id-badge">#116</span>
+            <img src="../web/public/species/116.webp" alt="Cypress vine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Convolvulaceae</div>
+            <h3 class="common-name">Cypress vine</h3>
+            <p class="scientific-name"><em>Ipomoea quamoclit</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Katrina D</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/617476778" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="117" data-name="english ivy hedera helix araliaceae">
+          <div class="card-media">
+            <span class="id-badge">#117</span>
+            <img src="../web/public/species/117.webp" alt="English ivy" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araliaceae</div>
+            <h3 class="common-name">English ivy</h3>
+            <p class="scientific-name"><em>Hedera helix</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: gianluca castagnero</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605594177" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="118" data-name="golden trumpet allamanda cathartica apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#118</span>
+            <img src="../web/public/species/118.webp" alt="Golden trumpet" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Golden trumpet</h3>
+            <p class="scientific-name"><em>Allamanda cathartica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: yerbasanta</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/605425946" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="119" data-name="bleeding heart vine clerodendrum thomsoniae lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#119</span>
+            <img src="../web/public/species/119.webp" alt="Bleeding heart vine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Bleeding heart vine</h3>
+            <p class="scientific-name"><em>Clerodendrum thomsoniae</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: marprk</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/647169906" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="120" data-name="flame vine pyrostegia venusta bignoniaceae">
+          <div class="card-media">
+            <span class="id-badge">#120</span>
+            <img src="../web/public/species/120.webp" alt="Flame vine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Bignoniaceae</div>
+            <h3 class="common-name">Flame vine</h3>
+            <p class="scientific-name"><em>Pyrostegia venusta</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: lava_chen</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/617469044" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="121" data-name="bengal clockvine thunbergia grandiflora acanthaceae">
+          <div class="card-media">
+            <span class="id-badge">#121</span>
+            <img src="../web/public/species/121.webp" alt="Bengal clockvine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Acanthaceae</div>
+            <h3 class="common-name">Bengal clockvine</h3>
+            <p class="scientific-name"><em>Thunbergia grandiflora</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: luzluz</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/637176214" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="122" data-name="coral vine antigonon leptopus polygonaceae">
+          <div class="card-media">
+            <span class="id-badge">#122</span>
+            <img src="../web/public/species/122.webp" alt="Coral vine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Polygonaceae</div>
+            <h3 class="common-name">Coral vine</h3>
+            <p class="scientific-name"><em>Antigonon leptopus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Drew Baxter</span>
+              <span class="license-tag">CC0</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/611046121" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="123" data-name="croton codiaeum variegatum euphorbiaceae">
+          <div class="card-media">
+            <span class="id-badge">#123</span>
+            <img src="../web/public/species/123.webp" alt="Croton" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Euphorbiaceae</div>
+            <h3 class="common-name">Croton</h3>
+            <p class="scientific-name"><em>Codiaeum variegatum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Lucas Santos</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/612192326" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="124" data-name="arrowhead plant syngonium podophyllum araceae">
+          <div class="card-media">
+            <span class="id-badge">#124</span>
+            <img src="../web/public/species/124.webp" alt="Arrowhead plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Arrowhead plant</h3>
+            <p class="scientific-name"><em>Syngonium podophyllum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Josiah Londerée</span>
+              <span class="license-tag">CC-BY</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/604603295" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="125" data-name="heartleaf philodendron philodendron hederaceum araceae">
+          <div class="card-media">
+            <span class="id-badge">#125</span>
+            <img src="../web/public/species/125.webp" alt="Heartleaf philodendron" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Heartleaf philodendron</h3>
+            <p class="scientific-name"><em>Philodendron hederaceum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Julieta Alzate</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616502205" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="126" data-name="tree philodendron thaumatophyllum bipinnatifidum araceae">
+          <div class="card-media">
+            <span class="id-badge">#126</span>
+            <img src="../web/public/species/126.webp" alt="Tree philodendron" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Tree philodendron</h3>
+            <p class="scientific-name"><em>Thaumatophyllum bipinnatifidum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: naturalistchu</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/639374610" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="127" data-name="corn plant dracaena fragrans asparagaceae">
+          <div class="card-media">
+            <span class="id-badge">#127</span>
+            <img src="../web/public/species/127.webp" alt="Corn plant" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.3%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asparagaceae</div>
+            <h3 class="common-name">Corn plant</h3>
+            <p class="scientific-name"><em>Dracaena fragrans</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: anahi pato</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/626436667" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="128" data-name="song of india dracaena reflexa asparagaceae">
+          <div class="card-media">
+            <span class="id-badge">#128</span>
+            <img src="../web/public/species/128.webp" alt="Song of India" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 97.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asparagaceae</div>
+            <h3 class="common-name">Song of India</h3>
+            <p class="scientific-name"><em>Dracaena reflexa</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: iok666</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/644808915" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="129" data-name="flamingo flower anthurium andraeanum araceae">
+          <div class="card-media">
+            <span class="id-badge">#129</span>
+            <img src="../web/public/species/129.webp" alt="Flamingo flower" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Flamingo flower</h3>
+            <p class="scientific-name"><em>Anthurium andraeanum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Raquel Lewis</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/634549786" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="130" data-name="bird of paradise strelitzia reginae strelitziaceae">
+          <div class="card-media">
+            <span class="id-badge">#130</span>
+            <img src="../web/public/species/130.webp" alt="Bird of paradise" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Strelitziaceae</div>
+            <h3 class="common-name">Bird of paradise</h3>
+            <p class="scientific-name"><em>Strelitzia reginae</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Desmond vZ</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/648199393" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="131" data-name="wandering dude tradescantia zebrina commelinaceae">
+          <div class="card-media">
+            <span class="id-badge">#131</span>
+            <img src="../web/public/species/131.webp" alt="Wandering dude" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 93.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Commelinaceae</div>
+            <h3 class="common-name">Wandering dude</h3>
+            <p class="scientific-name"><em>Tradescantia zebrina</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Irene</span>
+              <span class="license-tag">CC0</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/616168350" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="132" data-name="weeping fig ficus benjamina moraceae">
+          <div class="card-media">
+            <span class="id-badge">#132</span>
+            <img src="../web/public/species/132.webp" alt="Weeping fig" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Moraceae</div>
+            <h3 class="common-name">Weeping fig</h3>
+            <p class="scientific-name"><em>Ficus benjamina</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: rrheevaa</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/636374966" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="133" data-name="lace fern asparagus setaceus asparagaceae">
+          <div class="card-media">
+            <span class="id-badge">#133</span>
+            <img src="../web/public/species/133.webp" alt="Lace fern" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Asparagaceae</div>
+            <h3 class="common-name">Lace fern</h3>
+            <p class="scientific-name"><em>Asparagus setaceus</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: P Valera</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/618239671" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="134" data-name="golden cane palm dypsis lutescens arecaceae">
+          <div class="card-media">
+            <span class="id-badge">#134</span>
+            <img src="../web/public/species/134.webp" alt="Golden cane palm" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Arecaceae</div>
+            <h3 class="common-name">Golden cane palm</h3>
+            <p class="scientific-name"><em>Dypsis lutescens</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: carlossammy</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/628526042" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="135" data-name="calla lily zantedeschia aethiopica araceae">
+          <div class="card-media">
+            <span class="id-badge">#135</span>
+            <img src="../web/public/species/135.webp" alt="Calla lily" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Araceae</div>
+            <h3 class="common-name">Calla lily</h3>
+            <p class="scientific-name"><em>Zantedeschia aethiopica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Miguel A. Fernández Martínez</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/606857401" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="136" data-name="morpankhi platycladus orientalis cupressaceae">
+          <div class="card-media">
+            <span class="id-badge">#136</span>
+            <img src="../web/public/species/136.webp" alt="Morpankhi" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Cupressaceae</div>
+            <h3 class="common-name">Morpankhi</h3>
+            <p class="scientific-name"><em>Platycladus orientalis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: julianavarro04</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/650201402" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="137" data-name="nag champa plumeria pudica apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#137</span>
+            <img src="../web/public/species/137.webp" alt="Nag Champa" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Nag Champa</h3>
+            <p class="scientific-name"><em>Plumeria pudica</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Katerin Arrieta</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/626847014" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="138" data-name="crape jasmine tabernaemontana divaricata apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#138</span>
+            <img src="../web/public/species/138.webp" alt="Crape jasmine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 98.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Crape jasmine</h3>
+            <p class="scientific-name"><em>Tabernaemontana divaricata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Uditha Sandaruwan</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/647988152" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="139" data-name="yellow bells tecoma stans bignoniaceae">
+          <div class="card-media">
+            <span class="id-badge">#139</span>
+            <img src="../web/public/species/139.webp" alt="Yellow bells" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Bignoniaceae</div>
+            <h3 class="common-name">Yellow bells</h3>
+            <p class="scientific-name"><em>Tecoma stans</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Ivelisse Irizarry</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610746819" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="140" data-name="desert rose adenium obesum apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#140</span>
+            <img src="../web/public/species/140.webp" alt="Desert rose" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.1%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Desert rose</h3>
+            <p class="scientific-name"><em>Adenium obesum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: annemariepkb</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/606592291" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="141" data-name="night-blooming jasmine cestrum nocturnum solanaceae">
+          <div class="card-media">
+            <span class="id-badge">#141</span>
+            <img src="../web/public/species/141.webp" alt="Night-blooming jasmine" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.0%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Solanaceae</div>
+            <h3 class="common-name">Night-blooming jasmine</h3>
+            <p class="scientific-name"><em>Cestrum nocturnum</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: raauulmendez</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/623271716" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="142" data-name="moss rose portulaca grandiflora portulacaceae">
+          <div class="card-media">
+            <span class="id-badge">#142</span>
+            <img src="../web/public/species/142.webp" alt="Moss rose" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.2%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Portulacaceae</div>
+            <h3 class="common-name">Moss rose</h3>
+            <p class="scientific-name"><em>Portulaca grandiflora</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Phumla</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/648271977" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="143" data-name="coleus coleus scutellarioides lamiaceae">
+          <div class="card-media">
+            <span class="id-badge">#143</span>
+            <img src="../web/public/species/143.webp" alt="Coleus" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 95.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lamiaceae</div>
+            <h3 class="common-name">Coleus</h3>
+            <p class="scientific-name"><em>Coleus scutellarioides</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: eliza2001</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/615928002" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="144" data-name="copperleaf acalypha wilkesiana euphorbiaceae">
+          <div class="card-media">
+            <span class="id-badge">#144</span>
+            <img src="../web/public/species/144.webp" alt="Copperleaf" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 94.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Euphorbiaceae</div>
+            <h3 class="common-name">Copperleaf</h3>
+            <p class="scientific-name"><em>Acalypha wilkesiana</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: gmaney</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/651340915" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="145" data-name="crown of thorns euphorbia milii euphorbiaceae">
+          <div class="card-media">
+            <span class="id-badge">#145</span>
+            <img src="../web/public/species/145.webp" alt="Crown of thorns" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.7%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Euphorbiaceae</div>
+            <h3 class="common-name">Crown of thorns</h3>
+            <p class="scientific-name"><em>Euphorbia milii</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: smercchh</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/619900103" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="146" data-name="blue plumbago plumbago auriculata plumbaginaceae">
+          <div class="card-media">
+            <span class="id-badge">#146</span>
+            <img src="../web/public/species/146.webp" alt="Blue plumbago" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.5%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Plumbaginaceae</div>
+            <h3 class="common-name">Blue plumbago</h3>
+            <p class="scientific-name"><em>Plumbago auriculata</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: javiondrummond</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/609737152" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="147" data-name="crown flower calotropis gigantea apocynaceae">
+          <div class="card-media">
+            <span class="id-badge">#147</span>
+            <img src="../web/public/species/147.webp" alt="Crown flower" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.8%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Apocynaceae</div>
+            <h3 class="common-name">Crown flower</h3>
+            <p class="scientific-name"><em>Calotropis gigantea</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: arun kumar</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610646756" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="148" data-name="golden dewdrop duranta erecta verbenaceae">
+          <div class="card-media">
+            <span class="id-badge">#148</span>
+            <img src="../web/public/species/148.webp" alt="Golden dewdrop" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 96.9%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Verbenaceae</div>
+            <h3 class="common-name">Golden dewdrop</h3>
+            <p class="scientific-name"><em>Duranta erecta</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: bottanydot</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/610261982" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="species-card" data-id="149" data-name="cannonball tree couroupita guianensis lecythidaceae">
+          <div class="card-media">
+            <span class="id-badge">#149</span>
+            <img src="../web/public/species/149.webp" alt="Cannonball tree" loading="lazy" onerror="this.src='../web/public/species/neutral_leaf.svg'" />
+            <span class="status-badge status-match">
+              ✓ 99.6%
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="family-tag">Lecythidaceae</div>
+            <h3 class="common-name">Cannonball tree</h3>
+            <p class="scientific-name"><em>Couroupita guianensis</em></p>
+            <div class="credit-row">
+              <span class="observer-label">Photo: Lynette</span>
+              <span class="license-tag">CC-BY-NC</span>
+            </div>
+            <div class="source-link">
+              <a href="https://www.inaturalist.org/photos/619440195" target="_blank" rel="noopener noreferrer">View observation ↗</a>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search-input');
+    const cards = document.querySelectorAll('.species-card');
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      cards.forEach((card) => {
+        const searchTarget = card.getAttribute('data-name') + ' ' + card.getAttribute('data-id');
+        if (!query || searchTarget.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

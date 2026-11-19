@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useHistoryStore } from './useHistoryStore';
 import { getSpeciesById } from '@/services/speciesService';
+import { getSpeciesImagePath } from '@/lib/speciesImages';
 import type { ClassificationResult, SavedPrediction } from '@/types/prediction';
 
 export function useHistoryService() {
@@ -27,7 +28,7 @@ export function useHistoryService() {
           tier: result.tier,
           top3: result.top3,
           similar: result.similar,
-          imagePath: sp?.referenceImages?.[0] ?? null,
+          imagePath: topId !== null ? getSpeciesImagePath(topId) : null,
           modelVersion: result.modelVersion,
           createdAt: nowIso,
           speciesName: sp?.commonName,
