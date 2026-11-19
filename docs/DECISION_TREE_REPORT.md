@@ -22,7 +22,7 @@ Importantly, **high accuracy on simulated data measures how well the tree learne
 2. **Physical Laboratory Leaf Benchmark (UCI ID 241):** On the official UCI "One-Hundred Plant Species Leaves" dataset (1,599 real physical leaf specimens across 100 species, 192 continuous shape/margin/texture descriptors; CC BY 4.0), the Decision Tree achieved **50.84%** 5-fold CV accuracy (macro F1: 0.5074), while an ensemble Random Forest achieved **97.81%** (macro F1: 0.9781).
 3. **Physical Field Testing:** Status is **pending ($n = 0$ real measured specimens)**. The 9 template rows currently in `data/traits/field_test_template.csv` are marked `source=demo_from_trait_table`, derived from the trait table to verify the software execution pipeline, and are explicitly excluded from physical specimen or field accuracy claims.
 
-The model was serialized into a compact (~48 KB) JSON hierarchy and integrated into the React web application at `/identify-traits`. Operating 100% on-device with $< 0.1\text{ ms}$ evaluation latency, the web page provides continuous slider inputs, preset specimen loaders, and an explainable **Decision Trail** visualizing the exact taxonomic path from root to leaf node.
+The model was serialized into a compact (~48 KB) JSON hierarchy and integrated into the React web application at `/identify-traits`. Operating 100% on-device with $< 0.1\text{ ms}$ evaluation latency, the web page provides continuous slider inputs (starting unset), missing-trait skip options, progress tracking, an interactive scanning analysis phase, honest leaf-purity metric labeling, and an explainable **Decision Trail** visualizing the exact taxonomic path from root to leaf node.
 
 ---
 
@@ -363,14 +363,15 @@ The new route (`web/src/pages/IdentifyByCharacteristics.tsx`) is accessible via 
 
 **Key UI Capabilities:**
 1. **Scope Notice Banner:** Explicitly informs users: *"Decision tree covers 50 species. Use Identify by Photo for all 150."* with a direct link to the camera classifier.
-2. **Preset Specimen Buttons:** Clearly labeled as *"Demo examples, taken from the trait table:"* for Tulsi, Neem, Aloe vera, Peepal, and Sunflower.
+2. **Blank-Slate Interactive Form & Skip Policy:** Starts completely unselected with zero pre-filled traits. Continuous sliders (plant height, leaf length, leaf width, petal count) start unset (displaying 'Not set') and are activated only when moved. Every trait provides an explicit 'Not sure / skip' option; skipped traits use unbiased missing-value imputation (training population medians for continuous attributes, and unobserved category splits for discrete attributes). Requires at least 4 answered traits to activate the 'Submit / Identify' button.
 3. **Structured Input Hierarchy:** 
    * *Section 1:* Habit, Plant Height slider ($0.1\text{--}35\text{ m}$), Thorns, Latex/Sap.
    * *Section 2:* Leaf type, Shape, Margin, Phyllotaxis, Venation, Leaf Length slider ($0.5\text{--}100\text{ cm}$), Leaf Width slider ($0.2\text{--}60\text{ cm}$), live Aspect Ratio ($L/W$), and Aroma.
    * *Section 3:* Flower Presence, Flower Color picker, Petal Count stepper ($0\text{--}20$), and Composite Head toggle.
-4. **Simulation Limitation & Medical Disclaimers:** Visible notices emphasizing that simulated accuracy does not equal field certainty, and that wild plants must never be ingested based on algorithmic classification.
-5. **Data Provenance Footer:** Discloses AI compilation, Cloudflare verification blocks, and `needs_verification = yes` status across all catalog entries.
-6. **Mobile Optimization:** Fully responsive layout tested and verified at 375 px and 360 px viewports.
+4. **Honest Metric Labelling & Analysis Animation:** Replaced ambiguous '100% Confidence' with 'Leaf purity' (proportion of training specimens at the terminal leaf node) with explanatory tooltips. Submitting triggers an engaging 2.1-second scanning animation walking the tree rules (immediately bypassed when `prefers-reduced-motion` is active), with automatic outdated detection if inputs change post-prediction.
+5. **Simulation Limitation & Medical Disclaimers:** Visible notices emphasizing that simulated accuracy does not equal field certainty, and that wild plants must never be ingested based on algorithmic classification.
+6. **Data Provenance Footer:** Discloses AI compilation, Cloudflare verification blocks, and `needs_verification = yes` status across all catalog entries.
+7. **Mobile Optimization:** Fully responsive layout with sticky bottom submit/progress bar tested and verified at 375 px and 360 px viewports.
 
 ---
 

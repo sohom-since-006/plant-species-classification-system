@@ -8,22 +8,23 @@
 import treeDataDefault from '@/data/decision_tree_50.json';
 
 export interface BotanicalTraitsInput {
-  plant_growth_habit: string;
-  leaf_type: string;
-  leaf_shape: string;
-  leaf_margin: string;
-  leaf_arrangement: string;
-  leaf_venation: string;
-  leaf_length_cm: number;
-  leaf_width_cm: number;
-  plant_height_m: number;
-  flower_present: string;
-  flower_color: string;
-  petal_count: number;
-  is_composite_head: string;
-  thorns_or_spines: string;
-  latex_or_sap: string;
-  aroma_of_crushed_leaves: string;
+  plant_growth_habit?: string | null;
+  leaf_type?: string | null;
+  leaf_shape?: string | null;
+  leaf_margin?: string | null;
+  leaf_arrangement?: string | null;
+  leaf_venation?: string | null;
+  leaf_length_cm?: number | null;
+  leaf_width_cm?: number | null;
+  plant_height_m?: number | null;
+  flower_present?: string | null;
+  flower_color?: string | null;
+  petal_count?: number | null;
+  is_composite_head?: string | null;
+  thorns_or_spines?: string | null;
+  latex_or_sap?: string | null;
+  aroma_of_crushed_leaves?: string | null;
+  [key: string]: string | number | null | undefined;
 }
 
 export interface DecisionTrailStep {
@@ -50,6 +51,7 @@ export interface DecisionTreeResult {
   scientificName: string;
   family: string;
   confidence: number;
+  leafPurity: number;
   topPredictions: PredictionCandidate[];
   decisionTrail: DecisionTrailStep[];
   treeDepth: number;
@@ -98,6 +100,17 @@ const numericSet = new Set(typedTreeData.numeric_features);
 const categoricalSet = new Set(typedTreeData.categorical_features);
 
 /**
+ * Population medians calculated from the 50-species botanical trait training set.
+ * Used for unbiased imputation when a user skips or unsets a continuous numeric measurement.
+ */
+export const NUMERIC_TRAIT_MEDIANS: Record<string, number> = {
+  leaf_length_cm: 14.28,
+  leaf_width_cm: 5.52,
+  plant_height_m: 3.05,
+  petal_count: 5.0,
+};
+
+/**
  * Format a human-readable botanical rationale for a given tree split.
  */
 function formatStepExplanation(
@@ -108,12 +121,20 @@ function formatStepExplanation(
   input: BotanicalTraitsInput
 ): string {
   if (numericSet.has(feature)) {
-    const num = Number(observedVal);
+    const rawVal = input[feature as keyof BotanicalTraitsInput];
+    const isSet = typeof rawVal === 'number' && !isNaN(rawVal);
     const unit = feature.includes('_cm') ? 'cm' : feature.includes('_m') ? 'm' : '';
     const featLabel = feature
       .replace(/_/g, ' ')
       .replace(' cm', '')
       .replace(' m', '');
+
+    if (!isSet) {
+      const medianVal = NUMERIC_TRAIT_MEDIANS[feature] ?? 0.0;
+      return `${featLabel} was not specified (evaluated with median ${medianVal} ${unit} ${goesLeft ? '≤' : '>'} ${threshold} ${unit})`;
+    }
+
+    const num = Number(observedVal);
     return goesLeft
       ? `${featLabel} (${num} ${unit}) is ≤ ${threshold} ${unit}`
       : `${featLabel} (${num} ${unit}) is > ${threshold} ${unit}`;
@@ -124,7 +145,14 @@ function formatStepExplanation(
     if (feature.startsWith(`${cat}_`)) {
       const targetVal = feature.slice(cat.length + 1);
       const catLabel = cat.replace(/_/g, ' ');
-      const userSelection = String(input[cat as keyof BotanicalTraitsInput] || 'unspecified');
+      const rawChoice = input[cat as keyof BotanicalTraitsInput];
+      const isSet = Boolean(rawChoice && rawChoice !== 'not_sure' && rawChoice !== 'missing_or_unobserved');
+
+      if (!isSet) {
+        return `${catLabel} was skipped / not specified (does not match "${targetVal.replace(/_/g, ' ')}")`;
+      }
+
+      const userSelection = String(rawChoice);
       const isMatch = userSelection === targetVal;
 
       if (isMatch) {
@@ -162,8 +190,10 @@ export function classifyBotanicalTraits(
 
     if (numericSet.has(feat)) {
       const rawVal = input[feat as keyof BotanicalTraitsInput];
-      observedNum = typeof rawVal === 'number' && !isNaN(rawVal) ? rawVal : 0.0;
-      observedDisplay = observedNum;
+      const isSet = typeof rawVal === 'number' && !isNaN(rawVal);
+      const medianVal = NUMERIC_TRAIT_MEDIANS[feat] ?? 0.0;
+      observedNum = isSet ? rawVal : medianVal;
+      observedDisplay = isSet ? observedNum : `Not set (median: ${medianVal})`;
       goesLeft = observedNum <= thresh;
     } else {
       // Find categorical parent attribute
@@ -178,9 +208,11 @@ export function classifyBotanicalTraits(
       }
 
       if (parentCat) {
-        const userChoice = String(input[parentCat as keyof BotanicalTraitsInput] || '');
+        const rawChoice = input[parentCat as keyof BotanicalTraitsInput];
+        const isSet = Boolean(rawChoice && rawChoice !== 'not_sure' && rawChoice !== 'missing_or_unobserved');
+        const userChoice = isSet ? String(rawChoice) : '';
         observedNum = userChoice === targetVal ? 1.0 : 0.0;
-        observedDisplay = userChoice;
+        observedDisplay = isSet ? userChoice : 'Not set / skipped';
       } else {
         observedNum = 0.0;
         observedDisplay = 'unmatched';
@@ -235,6 +267,7 @@ export function classifyBotanicalTraits(
     scientificName: speciesMeta.scientific_name,
     family: speciesMeta.family,
     confidence: curr.confidence,
+    leafPurity: curr.confidence,
     topPredictions,
     decisionTrail: trail,
     treeDepth: depth,

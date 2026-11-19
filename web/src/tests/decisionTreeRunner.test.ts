@@ -73,5 +73,35 @@ describe('Decision Tree Client-Side Edge Runner', () => {
     expect(() => classifyBotanicalTraits(partialInput)).not.toThrow();
     const res = classifyBotanicalTraits(partialInput);
     expect(res.topPredictions.length).toBeGreaterThan(0);
+    expect(res.leafPurity).toBeDefined();
+    expect(res.leafPurity).toBe(res.confidence);
+  });
+
+  it('correctly handles blank slate inputs with only 4 specified traits without defaulting numeric values to 0.0', () => {
+    // Only 4 traits specified; all other 12 traits are unset (null / undefined / empty)
+    const sparseInput: BotanicalTraitsInput = {
+      plant_growth_habit: 'tree',
+      leaf_type: 'simple',
+      leaf_shape: 'cordate',
+      latex_or_sap: 'milky_white',
+      plant_height_m: null,
+      leaf_length_cm: null,
+      leaf_width_cm: null,
+      petal_count: null,
+      thorns_or_spines: 'not_sure',
+      aroma_of_crushed_leaves: '',
+    };
+
+    const res = classifyBotanicalTraits(sparseInput);
+    expect(res.predictedId).toBeDefined();
+    expect(res.commonName.length).toBeGreaterThan(0);
+    expect(res.decisionTrail.length).toBeGreaterThan(0);
+    expect(res.leafPurity).toBeGreaterThan(0);
+
+    // Verify trail explanation identifies skipped traits
+    const skippedStep = res.decisionTrail.find(step =>
+      step.explanation.includes('was not specified') || step.explanation.includes('was skipped')
+    );
+    expect(skippedStep).toBeDefined();
   });
 });
